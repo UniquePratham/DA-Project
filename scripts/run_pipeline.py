@@ -68,61 +68,68 @@ async def execute_observatory_pipeline(
 
         print(f"[{idx}/{limit}] {domain.domain_name} ({domain.entity_name[:35]})...", end=" ", flush=True)
 
-        simulated_html = None
-        if dry_run:
-            simulated_html = f"""
-            <html lang="hi">
-            <head>
-                <title>{domain.entity_name}</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body>
-                <h1>{domain.entity_name}</h1>
-                <p>भारत सरकार का आधिकारिक पोर्टल।</p>
-                <a href="https://digitalindia.gov.in">Digital India</a>
-                <a href="/about">About Us</a>
-                <a href="/docs/gazette.pdf">Circulars</a>
-            </body>
-            </html>
-            """
+        try:
+            simulated_html = None
+            if dry_run:
+                simulated_html = f"""
+                <html lang="hi">
+                <head>
+                    <title>{domain.entity_name}</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>
+                    <h1>{domain.entity_name}</h1>
+                    <p>भारत सरकार का आधिकारिक पोर्टल।</p>
+                    <a href="https://digitalindia.gov.in">Digital India</a>
+                    <a href="/about">About Us</a>
+                    <a href="/docs/gazette.pdf">Circulars</a>
+                </body>
+                </html>
+                """
 
-        obs = await agent.execute_domain_session(domain, crawl_id, simulated_html=simulated_html)
-        if obs:
-            observations.append(obs)
-            print(f"[OK] {obs.reliability.response_latency_ms:.0f}ms | Score: {obs.accessibility.accessibility_score:.0f} | Lang: {obs.language.detected_primary_language}")
+            obs = await agent.execute_domain_session(domain, crawl_id, simulated_html=simulated_html)
+            if obs:
+                observations.append(obs)
+                lat_str = f"{obs.reliability.response_latency_ms:.0f}ms" if obs.reliability and obs.reliability.response_latency_ms is not None else "N/A"
+                score_str = f"{obs.accessibility.accessibility_score:.0f}" if obs.accessibility and obs.accessibility.accessibility_score is not None else "N/A"
+                lang_str = obs.language.detected_primary_language if obs.language and obs.language.detected_primary_language else "unknown"
+                print(f"[OK] {lat_str} | Score: {score_str} | Lang: {lang_str}")
 
-            # Dynamic Discovery: Extract newly discovered gov links from page HTML to expand the queue
-            if not dry_run:
-                try:
-                    # Read stored HTML evidence to find new domains
-                    ev_file = settings.raw_data_dir / "html" / f"{obs.raw_evidence_ids[0]}.html"
-                    if ev_file.exists():
-                        page_html = ev_file.read_text(encoding="utf-8", errors="ignore")
-                        new_links = DomainHarvester.extract_gov_links_from_html(page_html, domain.base_url)
-                        for new_d in new_links:
-                            if new_d not in seen_domains:
-                                seen_domains.add(new_d)
-                                new_rec = GovernmentEntityRecord(
-                                    domain_name=new_d,
-                                    base_url=f"https://{new_d}",
-                                    canonical_url=f"https://{new_d}/",
-                                    government_level=GovernmentLevel.UNKNOWN,
-                                    entity_name=new_d,
-                                    status=DomainStatus.VERIFIED,
-                                    tags=["dynamically_discovered"],
-                                )
-                                registry_mgr.add_domain(new_rec)
-                                queue.append(new_rec)
-                except Exception:
-                    pass
-        else:
-            print("[UNAVAILABLE/REJECTED]")
+                # Dynamic Discovery: Extract newly discovered gov links from page HTML to expand the queue
+                if not dry_run:
+                    try:
+                        ev_file = settings.raw_data_dir / "html" / f"{obs.raw_evidence_ids[0]}.html"
+                        if ev_file.exists():
+                            page_html = ev_file.read_text(encoding="utf-8", errors="ignore")
+                            new_links = DomainHarvester.extract_gov_links_from_html(page_html, domain.base_url)
+                            for new_d in new_links:
+                                if new_d not in seen_domains:
+                                    seen_domains.add(new_d)
+                                    new_rec = GovernmentEntityRecord(
+                                        domain_name=new_d,
+                                        base_url=f"https://{new_d}",
+                                        canonical_url=f"https://{new_d}/",
+                                        government_level=GovernmentLevel.UNKNOWN,
+                                        entity_name=new_d,
+                                        status=DomainStatus.VERIFIED,
+                                        tags=["dynamically_discovered"],
+                                    )
+                                    registry_mgr.add_domain(new_rec)
+                                    queue.append(new_rec)
+                    except Exception:
+                        pass
+            else:
+                print("[UNAVAILABLE/REJECTED]")
 
-        # Incremental checkpoint export
-        if idx % checkpoint_every == 0 and observations:
-            exporter.export_release(dataset_version, observations, processed_records)
-            registry_mgr.save_to_file()
-            print(f"    --> [CHECKPOINT SAVED] {len(observations)} observations exported to data/releases/")
+            # Incremental checkpoint export
+            if idx % checkpoint_every == 0 and observations:
+                exporter.export_release(dataset_version, observations, processed_records)
+                registry_mgr.save_to_file()
+                print(f"    --> [CHECKPOINT SAVED] {len(observations)} observations exported to data/releases/")
+
+        except Exception as e:
+            print(f"[ERROR: {str(e)[:40]}]")
+            continue
 
     # Final Export
     print("\n[*] Exporting Final DataHub KGP Dataset Release...")
