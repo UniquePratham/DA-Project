@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset or software in your research, please cite it as below."
+authors:
+  - name: "BharatGov Access Research Team"
+title: "BharatGov Access: Agentic, Longitudinal Observatory of India's Government Web Infrastructure"
+version: 0.1.0
+date-released: 2026-08-09
+url: "https://datahub.kgp/bharatgov-access"
+keywords:
+  - "indian government websites"
+  - "digital accessibility"
+  - "web performance"
+  - "observatory"
+  - "open data"
+  - "datahub kgp"
+license: CC-BY-4.0
