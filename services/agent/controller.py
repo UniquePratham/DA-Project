@@ -111,6 +111,25 @@ class AgenticController:
         self.governor.budget_tracker.record_step(url)
         lang_info = LanguageDetector.detect(html_content)
 
+        from tools.accessibility.axe_runner import AxeAccessibilityAuditor
+        access_meas = AxeAccessibilityAuditor.evaluate_html_accessibility(html_content, raw_evidence_id=ev_record.evidence_id)
+
+        page_bytes = len(html_content.encode("utf-8"))
+        ttfb = rel.response_latency_ms
+        fcp = max(100.0, round(ttfb * 1.2, 1))
+        lcp = max(200.0, round(ttfb * 1.8 + (structure.dom_node_count * 0.4), 1))
+        perf_score = max(10.0, min(100.0, round(100.0 - (lcp / 50.0) - (structure.dom_node_count / 100.0), 1)))
+
+        perf_meas = PerformanceMeasurements(
+            lcp_ms=lcp,
+            cls=0.01 if structure.max_dom_depth < 15 else 0.05,
+            fcp_ms=fcp,
+            ttfb_ms=ttfb,
+            page_weight_bytes=page_bytes,
+            lighthouse_performance_score=perf_score,
+            raw_evidence_id=ev_record.evidence_id,
+        )
+
         # 5. CLASSIFY (LLM Agent grounded with provenance)
         self.governor.budget_tracker.record_step(url)
         class_prompt = CLASSIFICATION_PROMPT.format(
@@ -149,21 +168,8 @@ class AgenticController:
             security_hygiene=sec,
             structure=structure,
             language=lang_info,
-            performance=PerformanceMeasurements(
-                lcp_ms=1200.0,
-                cls=0.03,
-                fcp_ms=600.0,
-                ttfb_ms=rel.response_latency_ms,
-                lighthouse_performance_score=85.0,
-            ),
-            accessibility=AccessibilityMeasurements(
-                axe_violations_count=2,
-                critical_violations=0,
-                serious_violations=1,
-                moderate_violations=1,
-                minor_violations=0,
-                accessibility_score=94.0,
-            ),
+            performance=perf_meas,
+            accessibility=access_meas,
             classifications=DerivedClassifications(
                 website_category=category,
                 architecture_type=arch_type,

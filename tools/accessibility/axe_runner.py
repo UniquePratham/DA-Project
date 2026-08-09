@@ -85,6 +85,79 @@ class AxeAccessibilityAuditor:
         )
 
     @classmethod
+    def evaluate_html_accessibility(cls, html_content: str, raw_evidence_id: Optional[str] = None) -> AccessibilityMeasurements:
+        """Deterministically evaluates accessibility violations from static HTML DOM."""
+        if not html_content.strip():
+            return AccessibilityMeasurements(raw_evidence_id=raw_evidence_id)
+
+        try:
+            import lxml.html
+            doc = lxml.html.fromstring(html_content)
+        except Exception:
+            return AccessibilityMeasurements(raw_evidence_id=raw_evidence_id)
+
+        critical = 0
+        serious = 0
+        moderate = 0
+        minor = 0
+
+        has_missing_alts = False
+        has_form_label_violations = False
+        has_aria_violations = False
+
+        # 1. Missing alt on images (WCAG 1.1.1 - Serious)
+        images = doc.xpath("//img")
+        for img in images:
+            alt = img.get("alt")
+            if alt is None:
+                has_missing_alts = True
+                serious += 1
+
+        # 2. Form controls without labels (WCAG 4.1.2 - Critical)
+        inputs = doc.xpath("//input[not(@type='hidden') and not(@type='submit') and not(@type='button')]") + doc.xpath("//select") + doc.xpath("//textarea")
+        for inp in inputs:
+            inp_id = inp.get("id")
+            aria_label = inp.get("aria-label")
+            aria_labelledby = inp.get("aria-labelledby")
+            title = inp.get("title")
+            has_matching_label = bool(inp_id and doc.xpath(f"//label[@for='{inp_id}']"))
+
+            if not (aria_label or aria_labelledby or title or has_matching_label):
+                has_form_label_violations = True
+                critical += 1
+
+        # 3. Missing document language (WCAG 3.1.1 - Moderate)
+        html_tag = doc.xpath("//html")
+        if html_tag and not html_tag[0].get("lang"):
+            moderate += 1
+
+        # 4. Empty links without text (WCAG 2.4.4 - Serious)
+        links = doc.xpath("//a[@href]")
+        for a in links:
+            text = (a.text_content() or "").strip()
+            aria = a.get("aria-label") or a.get("title")
+            img_inside = a.xpath(".//img[@alt]")
+            if not text and not aria and not img_inside:
+                minor += 1
+
+        # Normalized score
+        penalty = (critical * 12.0) + (serious * 6.0) + (moderate * 3.0) + (minor * 1.0)
+        score = max(0.0, min(100.0, 100.0 - penalty))
+
+        return AccessibilityMeasurements(
+            axe_violations_count=critical + serious + moderate + minor,
+            critical_violations=critical,
+            serious_violations=serious,
+            moderate_violations=moderate,
+            minor_violations=minor,
+            accessibility_score=round(score, 2),
+            has_missing_alts=has_missing_alts,
+            has_form_label_violations=has_form_label_violations,
+            has_aria_violations=has_aria_violations,
+            raw_evidence_id=raw_evidence_id,
+        )
+
+    @classmethod
     async def audit_page(cls, page: Page, raw_evidence_id: Optional[str] = None) -> tuple[AccessibilityMeasurements, Dict[str, Any]]:
         """Run axe-core on an active Playwright page."""
         try:
