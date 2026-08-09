@@ -83,9 +83,12 @@ class DatasetExporter:
 
         df = pd.DataFrame(flat_records)
 
-        # 2. Export to Apache Parquet
+        # 2. Export to Apache Parquet & CSV
         parquet_path = self.releases_dir / f"{release_prefix}.parquet"
         df.to_parquet(parquet_path, index=False, compression="snappy")
+
+        csv_path = self.releases_dir / f"{release_prefix}.csv"
+        df.to_csv(csv_path, index=False)
 
         # 3. Export to JSONL (Full raw structures)
         jsonl_path = self.releases_dir / f"{release_prefix}.jsonl"
@@ -107,6 +110,7 @@ class DatasetExporter:
             "total_observations": len(observations),
             "total_domains_observed": len(set(o.domain_id for o in observations)),
             "parquet_file": parquet_path.name,
+            "csv_file": csv_path.name,
             "jsonl_file": jsonl_path.name,
             "coverage_audit_file": coverage_path.name,
             "target_platform": "DataHub KGP",
@@ -117,6 +121,7 @@ class DatasetExporter:
 
         return {
             "parquet": parquet_path,
+            "csv": csv_path,
             "jsonl": jsonl_path,
             "coverage": coverage_path,
             "manifest": manifest_path,

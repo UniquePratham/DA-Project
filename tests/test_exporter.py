@@ -64,6 +64,7 @@ def test_dataset_exporter(tmp_path):
 
     out = exporter.export_release("v0.1.0", obs, registry)
     assert out["parquet"].exists()
+    assert out["csv"].exists()
     assert out["jsonl"].exists()
     assert out["coverage"].exists()
     assert out["manifest"].exists()
