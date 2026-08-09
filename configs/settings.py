@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     # Core Environment
     environment: str = Field(default="development")
     log_level: str = Field(default="INFO")
-    data_dir: Path = Field(default=Path("./data"))
+    data_dir: Path = Field(default=Path(__file__).resolve().parent.parent / "data")
 
     # Hardware & Concurrency (Tuned for Vultr 24 vCPU / 96 GB RAM)
     cpu_workers: int = Field(default=16)
