@@ -1,0 +1,93 @@
+[
+  {
+    "domain_id": "dom-india-gov",
+    "domain_name": "india.gov.in",
+    "base_url": "https://india.gov.in",
+    "government_level": "central",
+    "entity_name": "National Portal of India",
+    "ministry_or_department": "NIC / MeitY",
+    "tags": ["national", "portal", "multilingual", "central"]
+  },
+  {
+    "domain_id": "dom-mygov",
+    "domain_name": "mygov.in",
+    "base_url": "https://www.mygov.in",
+    "government_level": "central",
+    "entity_name": "MyGov Citizen Engagement Platform",
+    "ministry_or_department": "MeitY",
+    "tags": ["citizen_engagement", "dynamic", "central"]
+  },
+  {
+    "domain_id": "dom-uidai",
+    "domain_name": "uidai.gov.in",
+    "base_url": "https://uidai.gov.in",
+    "government_level": "central",
+    "entity_name": "Unique Identification Authority of India (UIDAI)",
+    "ministry_or_department": "MeitY",
+    "tags": ["identity", "citizen_service", "central"]
+  },
+  {
+    "domain_id": "dom-mha",
+    "domain_name": "mha.gov.in",
+    "base_url": "https://www.mha.gov.in",
+    "government_level": "central",
+    "entity_name": "Ministry of Home Affairs",
+    "ministry_or_department": "Ministry of Home Affairs",
+    "tags": ["ministry", "documents", "central"]
+  },
+  {
+    "domain_id": "dom-karnataka",
+    "domain_name": "karnataka.gov.in",
+    "base_url": "https://karnataka.gov.in",
+    "government_level": "state_ut",
+    "state_or_ut": "Karnataka",
+    "entity_name": "Government of Karnataka State Portal",
+    "tags": ["state", "multilingual", "kannada"]
+  },
+  {
+    "domain_id": "dom-varanasi",
+    "domain_name": "varanasi.nic.in",
+    "base_url": "https://varanasi.nic.in",
+    "government_level": "district",
+    "state_or_ut": "Uttar Pradesh",
+    "district": "Varanasi",
+    "entity_name": "District Administration Varanasi",
+    "tags": ["district", "nic_portal", "hindi"]
+  },
+  {
+    "domain_id": "dom-cowin",
+    "domain_name": "cowin.gov.in",
+    "base_url": "https://www.cowin.gov.in",
+    "government_level": "central",
+    "entity_name": "CoWIN Vaccination Portal",
+    "ministry_or_department": "Ministry of Health and Family Welfare",
+    "tags": ["spa", "angular", "health", "central"]
+  },
+  {
+    "domain_id": "dom-incometax",
+    "domain_name": "incometax.gov.in",
+    "base_url": "https://www.incometax.gov.in",
+    "government_level": "central",
+    "entity_name": "Income Tax Department e-Filing",
+    "ministry_or_department": "Ministry of Finance",
+    "tags": ["taxation", "citizen_service", "central"]
+  },
+  {
+    "domain_id": "dom-parivahan",
+    "domain_name": "parivahan.gov.in",
+    "base_url": "https://parivahan.gov.in",
+    "government_level": "central",
+    "entity_name": "Parivahan Sewa Transport Portal",
+    "ministry_or_department": "Ministry of Road Transport and Highways",
+    "tags": ["transport", "citizen_service", "central"]
+  },
+  {
+    "domain_id": "dom-digitalindia",
+    "domain_name": "digitalindia.gov.in",
+    "base_url": "https://www.digitalindia.gov.in",
+    "government_level": "central",
+    "entity_name": "Digital India Initiative",
+    "ministry_or_department": "MeitY",
+    "tags": ["initiative", "portal", "central"]
+  }
+]

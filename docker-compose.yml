@@ -1,0 +1,142 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bharatgov_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bharatgov}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bharatgov_secure_password_change_me}
+      POSTGRES_DB: ${POSTGRES_DB:-bharatgov_access}
+      # Performance tuning for 96GB RAM Host
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    command: >
+      postgres -c shared_buffers=8GB
+               -c effective_cache_size=24GB
+               -c maintenance_work_mem=2GB
+               -c work_mem=128MB
+               -c max_connections=200
+               -c wal_buffers=64MB
+               -c checkpoint_completion_target=0.9
+               -c random_page_cost=1.1
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-bharatgov} -d ${POSTGRES_DB:-bharatgov_access}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: bharatgov_redis
+    restart: unless-stopped
+    command: redis-server --maxmemory 4gb --maxmemory-policy allkeys-lru --save 60 1 --loglevel notice
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  minio:
+    image: minio/minio:latest
+    container_name: bharatgov_minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minio_secure_password_change_me}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: bharatgov_ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        limits:
+          cpus: '8.0'
+          memory: 16G
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bharatgov_worker
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_started
+      ollama:
+        condition: service_started
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-bharatgov}:${POSTGRES_PASSWORD:-bharatgov_secure_password_change_me}@postgres:5432/${POSTGRES_DB:-bharatgov_access}
+      - REDIS_URL=redis://redis:6379/0
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - MINIO_ENDPOINT=minio:9000
+    volumes:
+      - ./data:/data
+    command: python -m services.crawler.worker
+    deploy:
+      resources:
+        limits:
+          cpus: '12.0'
+          memory: 48G
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bharatgov_api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-bharatgov}:${POSTGRES_PASSWORD:-bharatgov_secure_password_change_me}@postgres:5432/${POSTGRES_DB:-bharatgov_access}
+      - REDIS_URL=redis://redis:6379/0
+      - OLLAMA_BASE_URL=http://ollama:11434
+    volumes:
+      - ./data:/data
+    command: uvicorn services.api.main:app --host 0.0.0.0 --port 8000 --workers 4
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:
+  ollama_data:
