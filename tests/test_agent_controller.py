@@ -33,12 +33,16 @@ def test_agent_controller_session(tmp_path):
         </html>
         """
 
-        obs = await controller.execute_domain_session(domain, "crawl-agent-test", simulated_html=simulated_html)
+        obs, new_domains, subpages = await controller.execute_domain_session(domain, "crawl-agent-test", simulated_html=simulated_html)
         assert obs is not None
         assert obs.is_validated is True
         assert obs.language.detected_primary_language == "hi"
         assert obs.domain_id == domain.domain_id
         assert len(obs.classifications.provenances) >= 1
         assert obs.classifications.provenances[0].evidence_ids[0] in obs.raw_evidence_ids
+
+        # Test multi-page session
+        obs_list, multi_domains = await controller.execute_multi_page_domain_session(domain, "crawl-agent-multi", simulated_html=simulated_html)
+        assert len(obs_list) >= 1
 
     asyncio.run(run())
