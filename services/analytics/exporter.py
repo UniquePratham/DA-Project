@@ -1,4 +1,4 @@
-"""DataHub KGP Dataset Exporter producing website-level (1 row per domain) releases."""
+"""DataHub KGP Dataset Exporter producing website-level (1 row per domain) releases with rich domain & subdomain decomposition."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from collections import defaultdict
+from urllib.parse import urlparse
 
 import pandas as pd
 
@@ -13,6 +14,49 @@ from configs.settings import settings
 from schemas.observation import ObservationRecord, PageRole
 from schemas.domain import GovernmentEntityRecord
 from services.analytics.coverage import CoverageAuditor
+
+
+def decompose_domain_hierarchy(domain: str) -> Dict[str, Any]:
+    """Decomposes any government domain into subdomain, root domain, TLD type, and hierarchy level."""
+    d = domain.lower().strip().split(":")[0]
+    parts = d.split(".")
+    known_2part_tlds = {"gov.in", "nic.in", "ac.in", "edu.in", "res.in", "org.in", "co.in", "net.in"}
+
+    if d.endswith(".dc.gov.in"):
+        tld_type = ".dc.gov.in"
+        prefix = d[:-len(".dc.gov.in")].split(".")
+        root_domain = f"{prefix[-1]}.dc.gov.in"
+        subdomain = ".".join(prefix[:-1]) if len(prefix) > 1 else "root"
+        hierarchy_level = len(prefix) - 1
+    elif len(parts) >= 3 and f"{parts[-2]}.{parts[-1]}" in known_2part_tlds:
+        tld_type = f".{parts[-2]}.{parts[-1]}"
+        prefix_parts = parts[:-2]
+        if len(prefix_parts) <= 1:
+            root_domain = d
+            subdomain = "root"
+            hierarchy_level = 0
+        else:
+            root_domain = f"{prefix_parts[-1]}{tld_type}"
+            subdomain = ".".join(prefix_parts[:-1])
+            hierarchy_level = len(prefix_parts) - 1
+    else:
+        tld_type = f".{parts[-1]}" if len(parts) > 1 else ".in"
+        prefix_parts = parts[:-1]
+        if len(prefix_parts) <= 1:
+            root_domain = d
+            subdomain = "root"
+            hierarchy_level = 0
+        else:
+            root_domain = f"{prefix_parts[-1]}{tld_type}"
+            subdomain = ".".join(prefix_parts[:-1])
+            hierarchy_level = len(prefix_parts) - 1
+
+    return {
+        "subdomain": subdomain,
+        "root_domain": root_domain,
+        "tld_type": tld_type,
+        "domain_depth": hierarchy_level,
+    }
 
 
 class DatasetExporter:
@@ -32,7 +76,6 @@ class DatasetExporter:
 
         # 1. Build lookup map of registry entity records
         registry_map: Dict[str, GovernmentEntityRecord] = {r.domain_id: r for r in registry}
-        # Also index by domain_name if domain_id differs
         registry_by_name: Dict[str, GovernmentEntityRecord] = {r.domain_name.lower().strip(): r for r in registry}
 
         # 2. Group observations by domain_id
@@ -57,7 +100,6 @@ class DatasetExporter:
             # Retrieve domain metadata from registry
             entity_rec = registry_map.get(domain_id)
             if not entity_rec and homepage_obs.source_url:
-                from urllib.parse import urlparse
                 netloc = urlparse(homepage_obs.source_url).netloc.lower().split(":")[0]
                 entity_rec = registry_by_name.get(netloc)
 
@@ -66,6 +108,13 @@ class DatasetExporter:
             gov_level = entity_rec.government_level.value if entity_rec else "unknown"
             state_or_ut = entity_rec.state_or_ut if entity_rec else ("Central" if gov_level == "central" else "National")
             district = entity_rec.district if entity_rec else None
+
+            # Domain & Subdomain Hierarchy Decomposition
+            decomp = decompose_domain_hierarchy(domain_name)
+            subdomain = decomp["subdomain"]
+            root_domain = decomp["root_domain"]
+            tld_type = decomp["tld_type"]
+            domain_depth = decomp["domain_depth"]
 
             # Calculate aggregated scores across all audited pages for this website
             acc_scores = [o.accessibility.accessibility_score for o in obs_list if o.accessibility and o.accessibility.accessibility_score is not None]
@@ -85,8 +134,12 @@ class DatasetExporter:
             any_multilingual = any(o.language.is_multilingual for o in obs_list if o.language)
 
             row = {
-                # Identity & Governance
+                # 1. Identity & Detailed Domain Hierarchy
                 "domain_name": domain_name,
+                "subdomain": subdomain,
+                "root_domain": root_domain,
+                "tld_type": tld_type,
+                "domain_depth": domain_depth,
                 "base_url": entity_rec.base_url if entity_rec else f"https://{domain_name}",
                 "entity_name": entity_name,
                 "government_level": gov_level,
@@ -95,7 +148,7 @@ class DatasetExporter:
                 "website_category": homepage_obs.classifications.website_category,
                 "architecture_type": homepage_obs.classifications.architecture_type.value,
                 
-                # Overall Website Scores & Reliability
+                # 2. Overall Website Scores & Reliability
                 "overall_accessibility_score": avg_acc_score,
                 "overall_performance_score": avg_perf_score,
                 "total_pages_audited": len(obs_list),
@@ -105,7 +158,7 @@ class DatasetExporter:
                 "primary_language": homepage_obs.language.detected_primary_language,
                 "is_multilingual": any_multilingual,
 
-                # Security & Public Hygiene (Website Level)
+                # 3. Security & Public Hygiene (Website Level)
                 "has_https": homepage_obs.security_hygiene.has_https,
                 "tls_valid": homepage_obs.reliability.tls_valid,
                 "tls_version": homepage_obs.reliability.tls_version,
@@ -114,7 +167,7 @@ class DatasetExporter:
                 "has_csp": homepage_obs.security_hygiene.has_csp,
                 "security_headers_score": homepage_obs.security_hygiene.security_headers_score,
 
-                # Aggregate Complexity & Violations
+                # 4. Aggregate Complexity & Violations
                 "total_wcag_violations": total_violations,
                 "total_critical_violations": total_critical,
                 "total_serious_violations": total_serious,
@@ -123,35 +176,35 @@ class DatasetExporter:
                 "total_forms_count": total_forms,
                 "total_pdf_circulars": total_pdfs,
 
-                # Page Feature: Homepage
+                # 5. Page Feature: Homepage
                 "homepage_url": homepage_obs.canonical_url,
                 "homepage_accessibility_score": homepage_obs.accessibility.accessibility_score if homepage_obs.accessibility else None,
                 "homepage_lcp_ms": homepage_obs.performance.lcp_ms if homepage_obs.performance else None,
                 "homepage_dom_nodes": homepage_obs.structure.dom_node_count if homepage_obs.structure else None,
 
-                # Page Feature: About Page
+                # 6. Page Feature: About Page
                 "has_about_page": about_obs is not None,
                 "about_page_url": about_obs.canonical_url if about_obs else None,
                 "about_accessibility_score": about_obs.accessibility.accessibility_score if about_obs and about_obs.accessibility else None,
 
-                # Page Feature: Contact Directory
+                # 7. Page Feature: Contact Directory
                 "has_contact_page": contact_obs is not None,
                 "contact_page_url": contact_obs.canonical_url if contact_obs else None,
                 "contact_accessibility_score": contact_obs.accessibility.accessibility_score if contact_obs and contact_obs.accessibility else None,
 
-                # Page Feature: Citizen Services / Schemes
+                # 8. Page Feature: Citizen Services / Schemes
                 "has_services_page": services_obs is not None,
                 "services_page_url": services_obs.canonical_url if services_obs else None,
                 "services_accessibility_score": services_obs.accessibility.accessibility_score if services_obs and services_obs.accessibility else None,
                 "services_forms_count": services_obs.structure.forms_count if services_obs and services_obs.structure else 0,
 
-                # Page Feature: Gazette / Circulars / Orders
+                # 9. Page Feature: Gazette / Circulars / Orders
                 "has_circulars_page": circulars_obs is not None,
                 "circulars_page_url": circulars_obs.canonical_url if circulars_obs else None,
                 "circulars_accessibility_score": circulars_obs.accessibility.accessibility_score if circulars_obs and circulars_obs.accessibility else None,
                 "circulars_pdf_count": circulars_obs.structure.pdf_links_count if circulars_obs and circulars_obs.structure else 0,
 
-                # Provenance & Metadata
+                # 10. Provenance & Metadata
                 "domain_id": domain_id,
                 "crawl_id": homepage_obs.crawl_id,
                 "dataset_version": dataset_version,
@@ -186,7 +239,7 @@ class DatasetExporter:
         manifest = {
             "dataset_name": "BharatGov Access",
             "dataset_version": dataset_version,
-            "description": "Agentic, Longitudinal Observatory of India's Government Web Infrastructure (Website Level)",
+            "description": "Agentic, Longitudinal Observatory of India's Government Web Infrastructure (Website Level with Domain Hierarchy)",
             "dataset_granularity": "1 row per unique government website / domain",
             "total_unique_websites": len(website_rows),
             "total_page_observations": len(observations),

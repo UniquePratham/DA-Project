@@ -73,6 +73,10 @@ def test_dataset_exporter(tmp_path):
     df = pd.read_parquet(out["parquet"])
     assert len(df) == 1
     assert df["domain_name"].iloc[0] == "india.gov.in"
+    assert df["subdomain"].iloc[0] == "root"
+    assert df["root_domain"].iloc[0] == "india.gov.in"
+    assert df["tld_type"].iloc[0] == ".gov.in"
+    assert df["domain_depth"].iloc[0] == 0
     assert df["overall_accessibility_score"].iloc[0] == 95.0
     assert df["total_pages_audited"].iloc[0] == 1
     assert df["homepage_url"].iloc[0] == "https://india.gov.in/"

@@ -7,17 +7,21 @@ This document details the exact schema, types, descriptions, and feature definit
 
 ---
 
-## 1. Identity & Governance Structure
+## 1. Identity & Domain Hierarchy Structure
 
 | Column Name | Type | Description | Example |
 |---|---|---|---|
-| `domain_name` | String | Canonical government hostname | `up.gov.in`, `varanasi.nic.in` |
-| `base_url` | String | Root URL for the domain | `https://up.gov.in` |
-| `entity_name` | String | Official administrative entity name | `Government of Uttar Pradesh Portal` |
+| `domain_name` | String | Full canonical government hostname | `police.up.gov.in`, `varanasi.nic.in` |
+| `subdomain` | String | Extracted sub-domain prefix (`root` if top-level) | `police`, `varanasi`, `rodelhi`, `root` |
+| `root_domain` | String | Parent root domain for hierarchical clustering | `up.gov.in`, `nic.in`, `kvs.gov.in`, `aiims.edu` |
+| `tld_type` | String | Top-level domain type | `.gov.in`, `.nic.in`, `.ac.in`, `.edu.in`, `.res.in` |
+| `domain_depth`| Integer | Hierarchy depth ($0 = \text{apex}, 1 = \text{subdomain}, 2 = \text{nested}$) | `0`, `1`, `2` |
+| `base_url` | String | Root URL for the domain | `https://police.up.gov.in` |
+| `entity_name` | String | Official administrative entity name | `Police Department (UP)` |
 | `government_level` | String | Governance tier (`central`, `state_ut`, `district`, `autonomous_body`, `local_body`, `psu`) | `state_ut` |
 | `state_or_ut` | String | State or Union Territory | `Uttar Pradesh` |
 | `district` | String | District name (if applicable) | `Varanasi` |
-| `website_category` | String | AI-classified administrative function | `district_administration`, `ministry`, `health_service` |
+| `website_category` | String | AI-classified administrative function | `law_enforcement`, `district_administration`, `ministry` |
 | `architecture_type` | String | Web framework / CMS architecture | `wordpress`, `angular_spa`, `drupal`, `static_html` |
 
 ---
