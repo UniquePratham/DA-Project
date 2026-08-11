@@ -69,8 +69,10 @@ def test_dataset_exporter(tmp_path):
     assert out["coverage"].exists()
     assert out["manifest"].exists()
 
-    # Read back parquet and verify
+    # Read back parquet and verify website-level row
     df = pd.read_parquet(out["parquet"])
     assert len(df) == 1
-    assert df["source_url"].iloc[0] == "https://india.gov.in"
-    assert df["accessibility_score"].iloc[0] == 95.0
+    assert df["domain_name"].iloc[0] == "india.gov.in"
+    assert df["overall_accessibility_score"].iloc[0] == 95.0
+    assert df["total_pages_audited"].iloc[0] == 1
+    assert df["homepage_url"].iloc[0] == "https://india.gov.in/"

@@ -1,7 +1,8 @@
 """High-Throughput Parallel Master Orchestrator Pipeline for BharatGov Access Observatory.
 
-Utilizes 16 concurrent async workers, multi-page deep auditing per domain,
-and dynamic in-memory hyperlink expansion to collect 10,000+ to 50,000+ observations.
+Operates at the WEBSITE level (1 row per unique government website/domain),
+extracting multi-page features (homepage, about, contact, citizen services, circulars)
+across thousands of verified central, state, district, and academic portals.
 """
 
 from __future__ import annotations
@@ -30,17 +31,17 @@ from services.analytics.exporter import DatasetExporter
 
 async def execute_observatory_pipeline(
     dry_run: bool = False,
-    limit_observations: int = 10000,
+    limit_websites: int = 3000,
     max_pages_per_domain: int = 4,
     concurrency: int = 16,
-    dataset_version: str = "1.0.0",
-    checkpoint_every: int = 50,
+    dataset_version: str = "2.0.0",
+    checkpoint_every: int = 25,
 ) -> Dict[str, Any]:
     print("=" * 80)
-    print(" 🏛️  BharatGov Access - Large-Scale Observatory Pipeline")
+    print(" 🏛️  BharatGov Access - Large-Scale Website Observatory Pipeline")
     print(f" Mode: {'DRY RUN (Simulated)' if dry_run else 'LIVE PRODUCTION (Polite Concurrent Crawl)'}")
-    print(f" Concurrency Workers: {concurrency} | Max Pages/Domain: {max_pages_per_domain + 1}")
-    print(f" Target Observations: {limit_observations:,} | Dataset Version: {dataset_version}")
+    print(f" Target Unique Websites: {limit_websites:,} | Concurrency Workers: {concurrency}")
+    print(f" Multi-Page Depth: Up to {max_pages_per_domain + 1} pages/site | Dataset Version: {dataset_version}")
     print("=" * 80)
 
     settings.ensure_dirs()
@@ -76,9 +77,8 @@ async def execute_observatory_pipeline(
         nonlocal observations, processed_records
 
         while True:
-            # Stop condition
             async with lock:
-                if len(observations) >= limit_observations or (queue.empty() and len(processed_records) > 0):
+                if len(processed_records) >= limit_websites or (queue.empty() and len(processed_records) > 0):
                     break
 
             try:
@@ -88,7 +88,7 @@ async def execute_observatory_pipeline(
 
             async with lock:
                 processed_records.append(domain)
-                current_domain_idx = len(processed_records)
+                current_site_idx = len(processed_records)
 
             simulated_html = None
             if dry_run:
@@ -140,13 +140,13 @@ async def execute_observatory_pipeline(
                     # Progress logging
                     lat_str = f"{domain_obs_list[0].reliability.response_latency_ms:.0f}ms" if domain_obs_list and domain_obs_list[0].reliability and domain_obs_list[0].reliability.response_latency_ms is not None else "N/A"
                     score_str = f"{domain_obs_list[0].accessibility.accessibility_score:.0f}" if domain_obs_list and domain_obs_list[0].accessibility and domain_obs_list[0].accessibility.accessibility_score is not None else "N/A"
-                    print(f"[{len(observations):,}/{limit_observations:,} Obs | W{worker_id}] {domain.domain_name} ({len(domain_obs_list)} pgs) -> [OK] {lat_str} | Score: {score_str} | Queue: {queue.qsize():,}", flush=True)
+                    print(f"[{current_site_idx:,}/{limit_websites:,} Websites | W{worker_id}] {domain.domain_name} ({len(domain_obs_list)} pgs) -> [OK] {lat_str} | Score: {score_str} | Queue: {queue.qsize():,}", flush=True)
 
                     # Incremental Checkpoint Save
-                    if len(observations) > 0 and len(observations) % checkpoint_every < len(domain_obs_list):
+                    if current_site_idx > 0 and current_site_idx % checkpoint_every == 0:
                         exporter.export_release(dataset_version, observations, processed_records)
                         registry_mgr.save_to_file()
-                        print(f"    --> [CHECKPOINT SAVED] {len(observations):,} observations & {len(processed_records):,} domains exported to data/releases/\n", flush=True)
+                        print(f"    --> [CHECKPOINT SAVED] {current_site_idx:,} unique websites ({len(observations):,} page audits) exported to data/releases/\n", flush=True)
 
             except Exception as e:
                 print(f"[W{worker_id}] {domain.domain_name} -> [ERROR: {str(e)[:40]}]", flush=True)
@@ -157,21 +157,20 @@ async def execute_observatory_pipeline(
     workers = [asyncio.create_task(worker_task(w_id)) for w_id in range(1, concurrency + 1)]
     await asyncio.gather(*workers)
 
-    # Final Export
-    print("\n[*] Exporting Final DataHub KGP Dataset Release...")
+    # Final Export (1 row per website)
+    print("\n[*] Exporting Final DataHub KGP Website-Level Dataset Release...")
     release_files = exporter.export_release(dataset_version, observations, processed_records)
     registry_mgr.save_to_file()
 
     print("=" * 80)
     print(" 🚀 Pipeline Execution Complete!")
-    print(f"  - Total Discovered Domains: {len(seen_domains):,}")
-    print(f"  - Total Inspected Domains:  {len(processed_records):,}")
-    print(f"  - Total Validated Obs:      {len(observations):,}")
-    print(f"  - Parquet Release:          {release_files['parquet']}")
-    print(f"  - CSV Release:              {release_files['csv']}")
-    print(f"  - JSONL Stream:             {release_files['jsonl']}")
-    print(f"  - Coverage Audit:           {release_files['coverage']}")
-    print(f"  - DataHub Manifest:         {release_files['manifest']}")
+    print(f"  - Total Unique Websites in Dataset: {len(processed_records):,}")
+    print(f"  - Total Multi-Page Observations:    {len(observations):,}")
+    print(f"  - Parquet Release (1 row/site):     {release_files['parquet']}")
+    print(f"  - CSV Release (1 row/site):         {release_files['csv']}")
+    print(f"  - JSONL Stream:                     {release_files['jsonl']}")
+    print(f"  - Coverage Audit:                   {release_files['coverage']}")
+    print(f"  - DataHub Manifest:                 {release_files['manifest']}")
     print("=" * 80)
 
     return {
@@ -179,27 +178,27 @@ async def execute_observatory_pipeline(
         "dataset_version": dataset_version,
         "total_seeds": total_seeds,
         "total_discovered": len(seen_domains),
-        "inspected": len(processed_records),
+        "inspected_websites": len(processed_records),
         "validated_observations": len(observations),
         "files": {k: str(v) for k, v in release_files.items()},
     }
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run Large-Scale BharatGov Access Observatory Pipeline")
+    parser = argparse.ArgumentParser(description="Run Large-Scale BharatGov Access Website Observatory Pipeline")
     parser.add_argument("--dry-run", action="store_true", default=False, help="Run with simulated offline fixtures")
     parser.add_argument("--live", action="store_true", default=True, help="Run live polite network collection")
-    parser.add_argument("--limit", type=int, default=10000, help="Target observations limit (default: 10000)")
+    parser.add_argument("--limit", "--limit-websites", dest="limit", type=int, default=3000, help="Target unique websites limit (default: 3000)")
     parser.add_argument("--pages-per-domain", type=int, default=4, help="Max subpages per domain (default: 4)")
     parser.add_argument("--workers", type=int, default=16, help="Concurrent worker tasks (default: 16)")
-    parser.add_argument("--version", type=str, default="1.0.0", help="Dataset release version (default: 1.0.0)")
-    parser.add_argument("--checkpoint", type=int, default=50, help="Save release checkpoint every N observations (default: 50)")
+    parser.add_argument("--version", type=str, default="2.0.0", help="Dataset release version (default: 2.0.0)")
+    parser.add_argument("--checkpoint", type=int, default=25, help="Save release checkpoint every N websites (default: 25)")
     args = parser.parse_args()
 
     dry_run = args.dry_run
     res = asyncio.run(execute_observatory_pipeline(
         dry_run=dry_run,
-        limit_observations=args.limit,
+        limit_websites=args.limit,
         max_pages_per_domain=args.pages_per_domain,
         concurrency=args.workers,
         dataset_version=args.version,
