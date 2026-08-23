@@ -1,4 +1,4 @@
-"""DOM structural inspector and framework marker detector."""
+"""DOM structural inspector, GIGW accessibility feature auditor, and framework marker detector."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from schemas.observation import WebStructureMeasurements, ArchitectureType
 
 
 class DOMInspector:
-    """Extracts structural measurements and framework markers from HTML/DOM."""
+    """Extracts structural measurements, GIGW accessibility features, and framework markers from HTML/DOM."""
 
     FRAMEWORK_SIGNATURES = {
         ArchitectureType.WORDPRESS: [
@@ -79,13 +79,22 @@ class DOMInspector:
         external_count = 0
         pdf_count = 0
 
+        has_grievance = False
+        has_payment = False
+        has_mobile = False
+        has_social = False
+        has_skip_content = False
+        has_screen_reader = False
+
         for a in links:
             href = (a.get("href") or "").strip()
-            if not href or href.startswith("#") or href.startswith("javascript:"):
+            text = (a.text_content() or "").strip().lower()
+            if not href or href.startswith("javascript:"):
                 continue
 
             full_url = urljoin(base_url, href)
             parsed_href = urlparse(full_url)
+            lower_href = href.lower()
 
             if parsed_href.path.lower().endswith(".pdf"):
                 pdf_count += 1
@@ -95,12 +104,52 @@ class DOMInspector:
             else:
                 external_count += 1
 
-        # 3. Structural Elements
+            # Feature detection from links
+            if any(k in lower_href or k in text for k in ["cpgrams", "jansunwai", "grievance", "samadhan"]):
+                has_grievance = True
+
+            if any(k in lower_href or k in text for k in ["sbiepay", "razorpay", "echallan", "treasury", "paytm", "billdesk", "payment"]):
+                has_payment = True
+
+            if any(k in lower_href for k in ["play.google.com", "apps.apple.com"]) or "umang" in lower_href:
+                has_mobile = True
+
+            if any(k in lower_href for k in ["twitter.com", "x.com", "facebook.com", "youtube.com", "instagram.com"]):
+                has_social = True
+
+            if "skip to main content" in text or "skip to content" in text or href in ["#main-content", "#content", "#main"]:
+                has_skip_content = True
+
+            if "screen reader" in text or "accessibility statement" in text:
+                has_screen_reader = True
+
+        # 3. Structural & Form Elements
         forms_count = len(doc.xpath("//form"))
         tables_count = len(doc.xpath("//table"))
         images_count = len(doc.xpath("//img"))
         script_tags_count = len(doc.xpath("//script"))
         stylesheet_tags_count = len(doc.xpath("//link[@rel='stylesheet']") + doc.xpath("//style"))
+
+        # Search Bar Detection
+        has_search = len(doc.xpath("//input[@type='search']") + doc.xpath("//input[contains(@name, 'search') or contains(@id, 'search') or contains(@placeholder, 'search') or contains(@placeholder, 'खोज')]")) > 0
+
+        # GIGW Font Resize & Contrast Controls
+        has_font_resize = len(doc.xpath("//*[contains(@class, 'font') or contains(@id, 'font') or contains(@class, 'text-size') or contains(text(), 'A+') or contains(text(), 'A-')]")) > 0
+        has_contrast = len(doc.xpath("//*[contains(@class, 'contrast') or contains(@id, 'contrast') or contains(@class, 'theme') or contains(@title, 'Contrast')]")) > 0
+
+        # ARIA Landmarks Count
+        landmarks = (
+            doc.xpath("//main | //nav | //header | //footer | //aside") +
+            doc.xpath("//*[@role='banner' or @role='main' or @role='navigation' or @role='contentinfo']")
+        )
+        aria_landmarks_count = len(landmarks)
+
+        # GIGW Accessibility Score (0 - 100)
+        gigw_score = 0.0
+        if has_skip_content: gigw_score += 25.0
+        if has_font_resize: gigw_score += 25.0
+        if has_contrast: gigw_score += 25.0
+        if has_screen_reader or aria_landmarks_count > 0: gigw_score += 25.0
 
         # 4. Framework Detection
         detected_frameworks = cls.detect_frameworks(html_content)
@@ -118,4 +167,15 @@ class DOMInspector:
             script_tags_count=script_tags_count,
             stylesheet_tags_count=stylesheet_tags_count,
             detected_frameworks=detected_frameworks,
+            has_font_resize_buttons=has_font_resize,
+            has_contrast_toggle=has_contrast,
+            has_skip_to_content=has_skip_content,
+            has_screen_reader_access=has_screen_reader,
+            gigw_accessibility_score=gigw_score,
+            has_search_bar=has_search,
+            has_grievance_portal=has_grievance,
+            has_payment_gateway=has_payment,
+            has_mobile_app_links=has_mobile,
+            has_social_media_links=has_social,
+            aria_landmarks_count=aria_landmarks_count,
         )

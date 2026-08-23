@@ -67,6 +67,7 @@ def test_dataset_exporter(tmp_path):
     assert out["csv"].exists()
     assert out["jsonl"].exists()
     assert out["coverage"].exists()
+    assert out["benchmarks"].exists()
     assert out["manifest"].exists()
 
     # Read back parquet and verify website-level row
@@ -78,5 +79,7 @@ def test_dataset_exporter(tmp_path):
     assert df["tld_type"].iloc[0] == ".gov.in"
     assert df["domain_depth"].iloc[0] == 0
     assert df["overall_accessibility_score"].iloc[0] == 95.0
+    assert df["reachability_status"].iloc[0] == "REACHABLE_200"
+    assert "feature_richness_score" in df.columns
     assert df["total_pages_audited"].iloc[0] == 1
     assert df["homepage_url"].iloc[0] == "https://india.gov.in/"

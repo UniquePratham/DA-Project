@@ -113,6 +113,18 @@ class WebStructureMeasurements(BaseModel):
     script_tags_count: int = Field(ge=0, default=0)
     stylesheet_tags_count: int = Field(ge=0, default=0)
     detected_frameworks: List[str] = Field(default_factory=list)
+    # GIGW & Public Service Feature Flags
+    has_font_resize_buttons: bool = False
+    has_contrast_toggle: bool = False
+    has_skip_to_content: bool = False
+    has_screen_reader_access: bool = False
+    gigw_accessibility_score: float = Field(ge=0.0, le=100.0, default=0.0)
+    has_search_bar: bool = False
+    has_grievance_portal: bool = False
+    has_payment_gateway: bool = False
+    has_mobile_app_links: bool = False
+    has_social_media_links: bool = False
+    aria_landmarks_count: int = Field(ge=0, default=0)
 
 
 class SecurityHygieneMeasurements(BaseModel):
