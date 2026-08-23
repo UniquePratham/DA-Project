@@ -21,6 +21,11 @@ class DomainHarvester:
         re.compile(r"\.ac\.in$", re.I),
         re.compile(r"\.res\.in$", re.I),
         re.compile(r"\.edu\.in$", re.I),
+        re.compile(r"\.drdo\.in$", re.I),
+        re.compile(r"\.cdac\.in$", re.I),
+        re.compile(r"\.ernet\.in$", re.I),
+        re.compile(r"\.mil\.in$", re.I),
+        re.compile(r"aiims\.edu$", re.I),
     ]
 
     @classmethod

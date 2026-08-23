@@ -1,7 +1,13 @@
 """Comprehensive Indian Government Domain Seed Matrices and Directory Sources.
 
 Spans Central Ministries, Apex Constitutional Bodies, High Courts & Tribunals,
-Government Hospitals & Medical Colleges (AIIMS, Safdarjung, PGIMER),
+Defence & Strategic Subdomains (tdf.drdo.gov.in, defproc.gov.in, rac.gov.in, ada.gov.in, DRDO Labs),
+National & State e-Procurement Portals (GeM, CPPP, Mahatenders, Eproc Rajasthan, etc.),
+National Flagship Missions & e-Services (DigiLocker, UMANG, CoWIN, ABDM, PM-Kisan, e-Courts, CPGRAMS),
+State Land Records (Bhulekh, Bhoomi, Dharani, Mahabhumi) & e-District Portals,
+Urban Local Bodies & Municipal Corporations (BMC, MCD, BBMP, GHMC, Chennai Corp, KMC, etc.),
+Space & Atomic Energy Subdomains (ISRO, NRSC, Bhuvan, SAC, BARC, DAE),
+Government Hospitals & Medical Colleges (AIIMS, Safdarjung, PGIMER, JIPMER),
 Government School Systems (KVS, NVS, Sainik Schools, EMRS),
 Public Central & State Universities, IITs/NITs/IIMs, CSIR & ICMR Labs,
 Law Enforcement & CAPFs, State PSCs & RRBs, All 36 States/UTs,
@@ -60,6 +66,9 @@ CENTRAL_MINISTRIES_AND_APEX = [
     {"name": "President of India", "domain": "presidentofindia.nic.in", "tags": ["apex", "constitutional"]},
     {"name": "Prime Minister's Office", "domain": "pmindia.gov.in", "tags": ["apex", "executive"]},
     {"name": "National Portal of India", "domain": "india.gov.in", "tags": ["national_portal", "portal"]},
+    {"name": "CPGRAMS Central Public Grievance Portal", "domain": "pgportal.gov.in", "tags": ["grievance", "central"]},
+    {"name": "RTI Online Portal", "domain": "rtionline.gov.in", "tags": ["rti", "central"]},
+    {"name": "Official Gazette of India (e-Gazette)", "domain": "egazette.gov.in", "tags": ["gazette", "central"]},
     {"name": "Ministry of Home Affairs", "domain": "mha.gov.in", "tags": ["ministry", "security"]},
     {"name": "Ministry of Finance", "domain": "finmin.nic.in", "tags": ["ministry", "finance"]},
     {"name": "Ministry of External Affairs", "domain": "mea.gov.in", "tags": ["ministry", "foreign"]},
@@ -103,6 +112,7 @@ CENTRAL_MINISTRIES_AND_APEX = [
     {"name": "Ministry of Youth Affairs and Sports", "domain": "yas.nic.in", "tags": ["ministry", "sports"]},
     {"name": "Ministry of Textiles", "domain": "texmin.nic.in", "tags": ["ministry", "textiles"]},
     {"name": "Ministry of Personnel, Public Grievances and Pensions", "domain": "persmin.gov.in", "tags": ["ministry", "personnel"]},
+    {"name": "Department of Personnel and Training (DoPT)", "domain": "dopt.gov.in", "tags": ["apex", "personnel"]},
     {"name": "Ministry of Chemicals and Fertilizers", "domain": "fert.nic.in", "tags": ["ministry", "chemicals"]},
     {"name": "Department of Atomic Energy", "domain": "dae.gov.in", "tags": ["apex", "atomic"]},
     {"name": "Department of Space", "domain": "dos.gov.in", "tags": ["apex", "space"]},
@@ -123,8 +133,6 @@ CENTRAL_MINISTRIES_AND_APEX = [
     {"name": "National Scholarship Portal", "domain": "scholarships.gov.in", "tags": ["portal", "education"]},
     {"name": "National Health Authority", "domain": "nha.gov.in", "tags": ["agency", "health"]},
     {"name": "Department of Posts (India Post)", "domain": "indiapost.gov.in", "tags": ["agency", "postal"]},
-    {"name": "ISRO - Indian Space Research Organisation", "domain": "isro.gov.in", "tags": ["research", "space"]},
-    {"name": "DRDO - Defence Research & Development", "domain": "drdo.gov.in", "tags": ["research", "defence"]},
     {"name": "Reserve Bank of India", "domain": "rbi.org.in", "tags": ["apex", "banking"]},
     {"name": "Securities and Exchange Board of India", "domain": "sebi.gov.in", "tags": ["apex", "finance"]},
     {"name": "Telecom Regulatory Authority of India", "domain": "trai.gov.in", "tags": ["apex", "telecom"]},
@@ -133,21 +141,271 @@ CENTRAL_MINISTRIES_AND_APEX = [
     {"name": "Competition Commission of India", "domain": "cci.gov.in", "tags": ["agency", "competition"]},
     {"name": "NITI Aayog", "domain": "niti.gov.in", "tags": ["apex", "planning"]},
     {"name": "National Human Rights Commission", "domain": "nhrc.nic.in", "tags": ["apex", "human_rights"]},
-    {"name": "DBT Bharat (Direct Benefit Transfer)", "domain": "dbtbharat.gov.in", "tags": ["portal", "schemes"]},
-    {"name": "PM Kisan Samman Nidhi", "domain": "pmkisan.gov.in", "tags": ["portal", "agriculture"]},
-    {"name": "Employees Provident Fund Organisation", "domain": "epfindia.gov.in", "tags": ["agency", "labour"]},
-    {"name": "Employees State Insurance Corporation", "domain": "esic.gov.in", "tags": ["agency", "labour"]},
-    {"name": "Government e Marketplace (GeM)", "domain": "gem.gov.in", "tags": ["portal", "procurement"]},
-    {"name": "National Cyber Crime Reporting Portal", "domain": "cybercrime.gov.in", "tags": ["portal", "cybercrime"]},
-    {"name": "National Disaster Management Authority", "domain": "ndma.gov.in", "tags": ["agency", "disaster"]},
     {"name": "Central Vigilance Commission", "domain": "cvc.gov.in", "tags": ["apex", "vigilance"]},
     {"name": "Central Information Commission", "domain": "cic.gov.in", "tags": ["apex", "rti"]},
     {"name": "National Green Tribunal", "domain": "greentribunal.gov.in", "tags": ["judiciary", "environment"]},
+    {"name": "CERT-In (Indian Computer Emergency Response Team)", "domain": "cert-in.org.in", "tags": ["cybersecurity", "meity"]},
+    {"name": "National Critical Information Infrastructure Protection Centre", "domain": "nciipc.gov.in", "tags": ["cybersecurity", "security"]},
+    {"name": "National Knowledge Network (NKN)", "domain": "nkn.gov.in", "tags": ["infrastructure", "network"]},
+    {"name": "Centre for Development of Advanced Computing (C-DAC)", "domain": "cdac.in", "tags": ["it", "supercomputing"]},
+    {"name": "Software Technology Parks of India (STPI)", "domain": "stpi.in", "tags": ["it", "exports"]},
 ]
 
-# 3. Government Hospitals, Premier Public Medical Colleges & Healthcare Bodies
+# 3. Defence, Strategic Organisations, DRDO Subdomains & Procurement
+DEFENCE_STRATEGIC_AND_PROCUREMENT = [
+    # DRDO Subdomains & Bodies
+    {"name": "DRDO Technology Development Fund (TDF)", "domain": "tdf.drdo.gov.in", "tags": ["defence", "drdo", "innovation"]},
+    {"name": "DRDO Recruitment & Assessment Centre (RAC)", "domain": "rac.gov.in", "tags": ["defence", "drdo", "recruitment"]},
+    {"name": "Aeronautical Development Agency (ADA)", "domain": "ada.gov.in", "tags": ["defence", "drdo", "aviation"]},
+    {"name": "Defence eProcurement Portal", "domain": "defproc.gov.in", "tags": ["defence", "procurement"]},
+    {"name": "Defence Research & Development Organisation (DRDO HQ)", "domain": "drdo.gov.in", "tags": ["defence", "drdo"]},
+    {"name": "Aeronautical Development Establishment (ADE)", "domain": "ade.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Armament Research & Development Establishment (ARDE)", "domain": "arde.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Centre for AI & Robotics (CAIR)", "domain": "cair.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Defence Electronics Applications Lab (DEAL)", "domain": "deal.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Defence Scientific Info & Documentation (DESIDOC)", "domain": "desidoc.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Defence Electronics Research Lab (DLRL)", "domain": "dlrl.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Defence Metallurgical Research Lab (DMRL)", "domain": "dmrl.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Defence Research & Development Lab (DRDL)", "domain": "drdl.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Gas Turbine Research Establishment (GTRE)", "domain": "gtre.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Institute of Nuclear Medicine & Allied Sciences (INMAS)", "domain": "inmas.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Electronics & Radar Development Establishment (LRDE)", "domain": "lrde.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Research & Development Establishment Engineers (R&DE)", "domain": "rde.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Solid State Physics Laboratory (SSPL)", "domain": "sspl.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Terminal Ballistics Research Laboratory (TBRL)", "domain": "tbrl.drdo.in", "tags": ["defence", "drdo_lab"]},
+    {"name": "Centre for Personnel Talent Management (CEPTAM)", "domain": "ceptam.drdo.in", "tags": ["defence", "drdo_recruitment"]},
+    {"name": "Centre for Military Airworthiness (CEMILAC)", "domain": "cemilac.drdo.in", "tags": ["defence", "drdo_certification"]},
+    {"name": "Department of Defence Production", "domain": "ddpmod.gov.in", "tags": ["defence", "production"]},
+    {"name": "Make in India Defence Portal", "domain": "makeinindiadefence.gov.in", "tags": ["defence", "industry"]},
+    {"name": "SRIJAN Defence Indigenisation Portal", "domain": "srijandefence.gov.in", "tags": ["defence", "indigenisation"]},
+    {"name": "SPARSH Defence Pension Portal", "domain": "sparsh.defencepension.gov.in", "tags": ["defence", "pension"]},
+    {"name": "Department of Ex-Servicemen Welfare", "domain": "desw.gov.in", "tags": ["defence", "welfare"]},
+    {"name": "Kendriya Sainik Board", "domain": "ksb.gov.in", "tags": ["defence", "veterans"]},
+    # Armed Forces Official Recruitment & Portals
+    {"name": "Indian Army", "domain": "indianarmy.nic.in", "tags": ["defence", "army"]},
+    {"name": "Join Indian Army Portal", "domain": "joinindianarmy.nic.in", "tags": ["defence", "army", "recruitment"]},
+    {"name": "Indian Navy", "domain": "indiannavy.nic.in", "tags": ["defence", "navy"]},
+    {"name": "Join Indian Navy Portal", "domain": "joinindiannavy.gov.in", "tags": ["defence", "navy", "recruitment"]},
+    {"name": "Indian Air Force", "domain": "indianairforce.nic.in", "tags": ["defence", "airforce"]},
+    {"name": "Career Indian Air Force", "domain": "careerindianairforce.cdac.in", "tags": ["defence", "airforce", "recruitment"]},
+    {"name": "AFCAT CDAC Portal", "domain": "afcat.cdac.in", "tags": ["defence", "airforce", "exam"]},
+    {"name": "Indian Coast Guard", "domain": "indiancoastguard.gov.in", "tags": ["defence", "coastguard"]},
+]
+
+# 4. National & State e-Procurement Portals (GeM, CPPP, State eTenders)
+NATIONAL_AND_STATE_E_PROCUREMENT = [
+    # Central Procurement Portals
+    {"name": "Government e-Marketplace (GeM)", "domain": "gem.gov.in", "tags": ["procurement", "central"]},
+    {"name": "Central Public Procurement Portal (CPPP)", "domain": "eprocure.gov.in", "tags": ["procurement", "cppp"]},
+    {"name": "eProcurement System of India (eTenders)", "domain": "etenders.gov.in", "tags": ["procurement", "etenders"]},
+    # State Government e-Procurement Portals
+    {"name": "UP eTender Portal", "domain": "etender.up.nic.in", "tags": ["procurement", "up"]},
+    {"name": "Maharashtra eTenders (MahaTenders)", "domain": "mahatenders.gov.in", "tags": ["procurement", "maharashtra"]},
+    {"name": "Rajasthan eProcurement", "domain": "eproc.rajasthan.gov.in", "tags": ["procurement", "rajasthan"]},
+    {"name": "Bihar eProcurement", "domain": "eproc.bihar.gov.in", "tags": ["procurement", "bihar"]},
+    {"name": "Odisha Tenders", "domain": "tendersodisha.gov.in", "tags": ["procurement", "odisha"]},
+    {"name": "West Bengal eTenders", "domain": "wbtenders.gov.in", "tags": ["procurement", "wb"]},
+    {"name": "Tamil Nadu eTenders", "domain": "tntenders.gov.in", "tags": ["procurement", "tn"]},
+    {"name": "Karnataka Public Procurement Portal (KPPP)", "domain": "kppp.karnataka.gov.in", "tags": ["procurement", "karnataka"]},
+    {"name": "Kerala eTenders", "domain": "etenders.kerala.gov.in", "tags": ["procurement", "kerala"]},
+    {"name": "Assam Tenders", "domain": "assamtenders.gov.in", "tags": ["procurement", "assam"]},
+    {"name": "Haryana eTenders", "domain": "etenders.hry.nic.in", "tags": ["procurement", "haryana"]},
+    {"name": "Punjab eProcurement", "domain": "eproc.punjab.gov.in", "tags": ["procurement", "punjab"]},
+    {"name": "Madhya Pradesh Tenders", "domain": "mptenders.gov.in", "tags": ["procurement", "mp"]},
+    {"name": "Andhra Pradesh eProcurement", "domain": "tender.apeprocurement.gov.in", "tags": ["procurement", "ap"]},
+    {"name": "Telangana eProcurement", "domain": "tender.telangana.gov.in", "tags": ["procurement", "telangana"]},
+    {"name": "Himachal Pradesh Tenders", "domain": "hptenders.gov.in", "tags": ["procurement", "hp"]},
+    {"name": "Jharkhand Tenders", "domain": "jharkhandtenders.gov.in", "tags": ["procurement", "jharkhand"]},
+    {"name": "Uttarakhand Tenders", "domain": "uktenders.gov.in", "tags": ["procurement", "uk"]},
+    {"name": "Chhattisgarh Tenders", "domain": "cgtenders.gov.in", "tags": ["procurement", "cg"]},
+    {"name": "Delhi Govt eTenders", "domain": "delhitenders.gov.in", "tags": ["procurement", "delhi"]},
+    {"name": "Jammu & Kashmir Tenders", "domain": "jktenders.gov.in", "tags": ["procurement", "jk"]},
+    {"name": "Goa eTenders", "domain": "goatenders.gov.in", "tags": ["procurement", "goa"]},
+]
+
+# 5. National Flagship Mission Platforms & Citizen e-Governance Portals
+FLAGSHIP_MISSIONS_AND_CITIZEN_SERVICES = [
+    # Citizen Identity & Locker
+    {"name": "DigiLocker Portal", "domain": "digilocker.gov.in", "tags": ["identity", "locker", "flagship"]},
+    {"name": "UMANG National Portal", "domain": "umang.gov.in", "tags": ["citizen_services", "mobile", "flagship"]},
+    {"name": "Ayushman Bharat Digital Mission (ABDM)", "domain": "abdm.gov.in", "tags": ["health", "digital", "flagship"]},
+    {"name": "PM Jan Arogya Yojana (PM-JAY)", "domain": "pmjay.gov.in", "tags": ["health", "insurance", "flagship"]},
+    {"name": "eSanjeevani National Telemedicine", "domain": "esanjeevani.in", "tags": ["health", "telemedicine"]},
+    {"name": "Direct Benefit Transfer (DBT Bharat)", "domain": "dbtbharat.gov.in", "tags": ["finance", "welfare", "dbt"]},
+    {"name": "myScheme National Platform", "domain": "myscheme.gov.in", "tags": ["schemes", "citizen"]},
+    {"name": "Open Government Data (OGD) Platform", "domain": "data.gov.in", "tags": ["open_data", "governance"]},
+    # Agriculture & Rural Digital Missions
+    {"name": "PM Kisan Samman Nidhi Portal", "domain": "pmkisan.gov.in", "tags": ["agriculture", "dbt"]},
+    {"name": "e-NAM National Agriculture Market", "domain": "enam.gov.in", "tags": ["agriculture", "market"]},
+    {"name": "Agmarknet Agricultural Marketing", "domain": "agmarknet.gov.in", "tags": ["agriculture", "prices"]},
+    {"name": "Soil Health Card Portal", "domain": "soilhealth.dac.gov.in", "tags": ["agriculture", "soil"]},
+    {"name": "Mahatma Gandhi NREGA Portal", "domain": "nrega.nic.in", "tags": ["rural", "employment", "welfare"]},
+    {"name": "Pradhan Mantri Gram Sadak Yojana (PMGSY)", "domain": "pmgsy.nic.in", "tags": ["rural", "roads"]},
+    {"name": "PMAY-Gramin (Rural Housing)", "domain": "pmayg.nic.in", "tags": ["rural", "housing"]},
+    {"name": "PMAY-Urban (Urban Housing)", "domain": "pmaymis.gov.in", "tags": ["urban", "housing"]},
+    {"name": "Swachh Bharat Mission (Grameen)", "domain": "swachhbharatmission.ddws.gov.in", "tags": ["sanitation", "rural"]},
+    {"name": "Jal Jeevan Mission", "domain": "jaljeevanmission.gov.in", "tags": ["water", "rural"]},
+    {"name": "National Social Assistance Programme (NSAP)", "domain": "nsap.nic.in", "tags": ["welfare", "pension"]},
+    # Transport & Highways Subdomains
+    {"name": "Sarathi Parivahan (Driving Licences)", "domain": "sarathi.parivahan.gov.in", "tags": ["transport", "licence"]},
+    {"name": "Vahan Parivahan (Vehicle Registration)", "domain": "vahan.parivahan.gov.in", "tags": ["transport", "vehicle"]},
+    {"name": "eChallan Parivahan", "domain": "echallan.parivahan.gov.in", "tags": ["transport", "challan"]},
+    {"name": "National Highways Authority of India", "domain": "nhai.gov.in", "tags": ["highways", "infrastructure"]},
+    {"name": "Indian Railways Passenger Reservation Enquiry", "domain": "indianrail.gov.in", "tags": ["railways", "reservation"]},
+    {"name": "Centre for Railway Information Systems (CRIS)", "domain": "cris.org.in", "tags": ["railways", "it"]},
+    # Taxation, Customs & Corporate Affairs
+    {"name": "ICEGATE Indian Customs Electronic Gateway", "domain": "icegate.gov.in", "tags": ["customs", "trade"]},
+    {"name": "Directorate General of Foreign Trade (DGFT)", "domain": "dgft.gov.in", "tags": ["commerce", "trade"]},
+    {"name": "Intellectual Property India (IP India)", "domain": "ipindia.gov.in", "tags": ["patents", "trademarks"]},
+    {"name": "Ministry of Corporate Affairs (MCA21)", "domain": "mca.gov.in", "tags": ["corporate", "registration"]},
+    {"name": "Employees Provident Fund Organisation (EPFO)", "domain": "epfindia.gov.in", "tags": ["labour", "pension"]},
+    {"name": "Employees State Insurance Corporation (ESIC)", "domain": "esic.gov.in", "tags": ["labour", "insurance"]},
+    # Judicial & Immigration Services
+    {"name": "eCourts National Services Portal", "domain": "services.ecourts.gov.in", "tags": ["judiciary", "services"]},
+    {"name": "National Judicial Data Grid (NJDG)", "domain": "njdg.ecourts.gov.in", "tags": ["judiciary", "data"]},
+    {"name": "e-Filing Judicial Portal", "domain": "e-filing.ecourts.gov.in", "tags": ["judiciary", "efiling"]},
+    {"name": "Indian Visa Online", "domain": "indianvisaonline.gov.in", "tags": ["immigration", "visa"]},
+    {"name": "Bureau of Immigration India", "domain": "boio.nic.in", "tags": ["immigration", "security"]},
+]
+
+# 6. State Land Records (Bhulekh) & e-District Portals across States
+STATE_LAND_RECORDS_AND_E_DISTRICT = [
+    # Land Records (Bhulekh / Bhoomi / Dharani)
+    {"name": "UP Bhulekh (Uttar Pradesh)", "domain": "upbhulekh.gov.in", "tags": ["land_records", "up"]},
+    {"name": "Mahabhumi Land Records (Maharashtra)", "domain": "bhulekh.mahabhumi.gov.in", "tags": ["land_records", "maharashtra"]},
+    {"name": "Apna Khata Land Records (Rajasthan)", "domain": "apnakhata.rajasthan.gov.in", "tags": ["land_records", "rajasthan"]},
+    {"name": "Bhoomi Land Records (Karnataka)", "domain": "landrecords.karnataka.gov.in", "tags": ["land_records", "karnataka"]},
+    {"name": "Dharani Portal (Telangana)", "domain": "dharani.telangana.gov.in", "tags": ["land_records", "telangana"]},
+    {"name": "Meebhoomi (Andhra Pradesh)", "domain": "meebhoomi.ap.gov.in", "tags": ["land_records", "ap"]},
+    {"name": "Bihar Bhumi (Bihar)", "domain": "biharbhumi.bihar.gov.in", "tags": ["land_records", "bihar"]},
+    {"name": "MP Bhulekh (Madhya Pradesh)", "domain": "mpbhulekh.gov.in", "tags": ["land_records", "mp"]},
+    {"name": "Bhulekh Odisha", "domain": "bhulekh.ori.nic.in", "tags": ["land_records", "odisha"]},
+    {"name": "Banglarbhumi (West Bengal)", "domain": "banglarbhumi.gov.in", "tags": ["land_records", "wb"]},
+    {"name": "Jamabandi Land Records (Punjab)", "domain": "jamabandi.punjab.gov.in", "tags": ["land_records", "punjab"]},
+    {"name": "Jamabandi Land Records (Haryana)", "domain": "jamabandi.nic.in", "tags": ["land_records", "haryana"]},
+    {"name": "Jharbhoomi (Jharkhand)", "domain": "jharbhoomi.jharkhand.gov.in", "tags": ["land_records", "jharkhand"]},
+    {"name": "Devbhoomi Bhulekh (Uttarakhand)", "domain": "bhulekh.uk.gov.in", "tags": ["land_records", "uk"]},
+    {"name": "Bhuiyan Land Records (Chhattisgarh)", "domain": "bhuiyan.cg.nic.in", "tags": ["land_records", "cg"]},
+    {"name": "AnyRoR Land Records (Gujarat)", "domain": "anyror.gujarat.gov.in", "tags": ["land_records", "gujarat"]},
+    # State e-District & Integrated Citizen Portals
+    {"name": "e-District Uttar Pradesh", "domain": "edistrict.up.gov.in", "tags": ["edistrict", "up"]},
+    {"name": "Aaple Sarkar Portal (Maharashtra)", "domain": "aaplesarkar.mahaonline.gov.in", "tags": ["edistrict", "maharashtra"]},
+    {"name": "Seva Sindhu (Karnataka)", "domain": "sevasindhu.karnataka.gov.in", "tags": ["edistrict", "karnataka"]},
+    {"name": "MeeSeva Portal (Telangana)", "domain": "meeseva.telangana.gov.in", "tags": ["edistrict", "telangana"]},
+    {"name": "Grama Ward Sachivalayam (Andhra Pradesh)", "domain": "gramawardsachivalayam.ap.gov.in", "tags": ["edistrict", "ap"]},
+    {"name": "ServiceOnline Bihar (e-District)", "domain": "serviceonline.bihar.gov.in", "tags": ["edistrict", "bihar"]},
+    {"name": "e-Mitra Rajasthan Portal", "domain": "emitra.rajasthan.gov.in", "tags": ["edistrict", "rajasthan"]},
+    {"name": "MP e-District (Madhya Pradesh)", "domain": "mpedistrict.gov.in", "tags": ["edistrict", "mp"]},
+    {"name": "e-District Odisha", "domain": "edistrict.odisha.gov.in", "tags": ["edistrict", "odisha"]},
+    {"name": "e-District West Bengal", "domain": "edistrict.wb.gov.in", "tags": ["edistrict", "wb"]},
+    {"name": "e-District Delhi Govt", "domain": "edistrict.delhigovt.nic.in", "tags": ["edistrict", "delhi"]},
+    {"name": "Saral Haryana Citizen Services", "domain": "saralharyana.gov.in", "tags": ["edistrict", "haryana"]},
+    {"name": "Connect Punjab e-Services", "domain": "connect.punjab.gov.in", "tags": ["edistrict", "punjab"]},
+    {"name": "e-District Kerala", "domain": "edistrict.kerala.gov.in", "tags": ["edistrict", "kerala"]},
+    {"name": "Digital Gujarat Portal", "domain": "digitalgujarat.gov.in", "tags": ["edistrict", "gujarat"]},
+    {"name": "Sewa Setu Assam Portal", "domain": "sewasetu.assam.gov.in", "tags": ["edistrict", "assam"]},
+    {"name": "e-District Chhattisgarh", "domain": "edistrict.cgstate.gov.in", "tags": ["edistrict", "cg"]},
+    {"name": "JharSewa Jharkhand", "domain": "jharsewa.jharkhand.gov.in", "tags": ["edistrict", "jharkhand"]},
+    {"name": "e-Services Uttarakhand (Apuni Sarkar)", "domain": "eservices.uk.gov.in", "tags": ["edistrict", "uk"]},
+    {"name": "e-District Himachal Pradesh", "domain": "edistrict.hp.gov.in", "tags": ["edistrict", "hp"]},
+    {"name": "e-District Jammu & Kashmir", "domain": "edistrict.jk.gov.in", "tags": ["edistrict", "jk"]},
+    {"name": "Goa Services Portal", "domain": "services.goa.gov.in", "tags": ["edistrict", "goa"]},
+    # State Public Grievance Portals
+    {"name": "Jan Sunwai Samadhan (UP Grievance)", "domain": "jansunwai.up.nic.in", "tags": ["grievance", "up"]},
+    {"name": "Maharashtra Grievance Redressal", "domain": "grievances.maharashtra.gov.in", "tags": ["grievance", "maharashtra"]},
+    {"name": "Rajasthan Sampark Portal", "domain": "sampark.rajasthan.gov.in", "tags": ["grievance", "rajasthan"]},
+    {"name": "Samadhan Bihar Grievance", "domain": "samadhan.bihar.gov.in", "tags": ["grievance", "bihar"]},
+    {"name": "CM Helpline 181 Madhya Pradesh", "domain": "cmhelpline.mp.gov.in", "tags": ["grievance", "mp"]},
+    {"name": "Spandana AP Public Grievances", "domain": "spandana.ap.gov.in", "tags": ["grievance", "ap"]},
+    {"name": "CMO Kerala Grievance Portal", "domain": "cmo.kerala.gov.in", "tags": ["grievance", "kerala"]},
+    {"name": "SWAGAT Gujarat Online Grievances", "domain": "swagat.gujarat.gov.in", "tags": ["grievance", "gujarat"]},
+    {"name": "JK Grievance Redressal (JK-IGRAMS)", "domain": "jkgrievance.jk.gov.in", "tags": ["grievance", "jk"]},
+]
+
+# 7. Major Urban Local Bodies & Municipal Corporations
+MAJOR_MUNICIPAL_CORPORATIONS = [
+    {"name": "Brihanmumbai Municipal Corporation (BMC)", "domain": "portal.mcgm.gov.in", "tags": ["ulb", "mumbai", "maharashtra"]},
+    {"name": "Municipal Corporation of Delhi (MCD)", "domain": "mcdonline.nic.in", "tags": ["ulb", "delhi"]},
+    {"name": "Bruhat Bengaluru Mahanagara Palike (BBMP)", "domain": "bbmp.gov.in", "tags": ["ulb", "bengaluru", "karnataka"]},
+    {"name": "Greater Hyderabad Municipal Corporation (GHMC)", "domain": "ghmc.gov.in", "tags": ["ulb", "hyderabad", "telangana"]},
+    {"name": "Greater Chennai Corporation", "domain": "chennaicorporation.gov.in", "tags": ["ulb", "chennai", "tn"]},
+    {"name": "Kolkata Municipal Corporation", "domain": "kmcgov.in", "tags": ["ulb", "kolkata", "wb"]},
+    {"name": "Ahmedabad Municipal Corporation", "domain": "ahmedabadcity.gov.in", "tags": ["ulb", "ahmedabad", "gujarat"]},
+    {"name": "Pune Municipal Corporation", "domain": "pmc.gov.in", "tags": ["ulb", "pune", "maharashtra"]},
+    {"name": "Surat Municipal Corporation", "domain": "suratmunicipal.gov.in", "tags": ["ulb", "surat", "gujarat"]},
+    {"name": "Jaipur Municipal Corporation", "domain": "jaipurmc.org", "tags": ["ulb", "jaipur", "rajasthan"]},
+    {"name": "Lucknow Municipal Corporation", "domain": "lmc.up.nic.in", "tags": ["ulb", "lucknow", "up"]},
+    {"name": "Kanpur Municipal Corporation", "domain": "kmc.up.nic.in", "tags": ["ulb", "kanpur", "up"]},
+    {"name": "Varanasi Nagar Nigam", "domain": "nnvns.org.in", "tags": ["ulb", "varanasi", "up"]},
+    {"name": "Agra Nagar Nigam", "domain": "nagarnigamagra.com", "tags": ["ulb", "agra", "up"]},
+    {"name": "Navi Mumbai Municipal Corporation", "domain": "nmmc.gov.in", "tags": ["ulb", "navimumbai", "maharashtra"]},
+    {"name": "Thane Municipal Corporation", "domain": "thanecity.gov.in", "tags": ["ulb", "thane", "maharashtra"]},
+    {"name": "Pimpri Chinchwad Municipal Corporation", "domain": "pcmcindia.gov.in", "tags": ["ulb", "pcmc", "maharashtra"]},
+    {"name": "Nagpur Municipal Corporation", "domain": "nmcnagpur.gov.in", "tags": ["ulb", "nagpur", "maharashtra"]},
+    {"name": "Nashik Municipal Corporation", "domain": "nashikcorporation.in", "tags": ["ulb", "nashik", "maharashtra"]},
+    {"name": "Indore Municipal Corporation", "domain": "imcindore.mp.gov.in", "tags": ["ulb", "indore", "mp"]},
+    {"name": "Bhopal Municipal Corporation", "domain": "bhopalcorporation.org", "tags": ["ulb", "bhopal", "mp"]},
+    {"name": "Patna Municipal Corporation", "domain": "pmc.bihar.gov.in", "tags": ["ulb", "patna", "bihar"]},
+    {"name": "Chandigarh Municipal Corporation", "domain": "mcchandigarh.gov.in", "tags": ["ulb", "chandigarh"]},
+    {"name": "Coimbatore Corporation", "domain": "ccmc.gov.in", "tags": ["ulb", "coimbatore", "tn"]},
+    {"name": "Madurai Corporation", "domain": "maduraicorporation.co.in", "tags": ["ulb", "madurai", "tn"]},
+    {"name": "Kochi Municipal Corporation", "domain": "kochicity.lsgkerala.gov.in", "tags": ["ulb", "kochi", "kerala"]},
+    {"name": "Thiruvananthapuram Corporation", "domain": "corporationoftrivandrum.in", "tags": ["ulb", "trivandrum", "kerala"]},
+    {"name": "Greater Visakhapatnam Municipal Corp (GVMC)", "domain": "gvmc.gov.in", "tags": ["ulb", "vizag", "ap"]},
+    {"name": "Vijayawada Municipal Corporation", "domain": "vmc.ap.gov.in", "tags": ["ulb", "vijayawada", "ap"]},
+]
+
+# 8. Space, Atomic Energy, Earth Sciences & Scientific Research
+SPACE_ATOMIC_ENERGY_AND_EARTH_SCIENCES = [
+    # ISRO & Space Subdomains
+    {"name": "ISRO Headquarters", "domain": "isro.gov.in", "tags": ["space", "isro"]},
+    {"name": "National Remote Sensing Centre (NRSC)", "domain": "nrsc.gov.in", "tags": ["space", "nrsc"]},
+    {"name": "Bhuvan ISRO Geo-Portal", "domain": "bhuvan.nrsc.gov.in", "tags": ["space", "geoportal", "maps"]},
+    {"name": "Bhoonidhi Open Data Archive (NRSC)", "domain": "bhoonidhi.nrsc.gov.in", "tags": ["space", "satellite_data"]},
+    {"name": "Space Applications Centre (SAC Ahmedabad)", "domain": "sac.gov.in", "tags": ["space", "sac"]},
+    {"name": "VEDAS SAC ISRO Geo-Spatial Portal", "domain": "vedas.sac.gov.in", "tags": ["space", "analytics"]},
+    {"name": "MOSDAC Meteorological & Oceanographic Data", "domain": "mosdac.gov.in", "tags": ["space", "weather_data"]},
+    {"name": "Vikram Sarabhai Space Centre (VSSC)", "domain": "vssc.gov.in", "tags": ["space", "rockets"]},
+    {"name": "Liquid Propulsion Systems Centre (LPSC)", "domain": "lpsc.gov.in", "tags": ["space", "propulsion"]},
+    {"name": "UR Rao Satellite Centre (URSC)", "domain": "ursc.gov.in", "tags": ["space", "satellites"]},
+    {"name": "Indian Institute of Remote Sensing (IIRS)", "domain": "iirs.gov.in", "tags": ["space", "education"]},
+    {"name": "IN-SPACe (Indian National Space Promotion)", "domain": "inspace.gov.in", "tags": ["space", "commercial"]},
+    {"name": "NewSpace India Limited (NSIL)", "domain": "nsilindia.co.in", "tags": ["space", "psu"]},
+    # Atomic Energy & Earth Sciences
+    {"name": "Bhabha Atomic Research Centre (BARC)", "domain": "barc.gov.in", "tags": ["atomic", "research"]},
+    {"name": "Department of Atomic Energy (DAE)", "domain": "dae.gov.in", "tags": ["atomic", "central"]},
+    {"name": "Indira Gandhi Centre for Atomic Research (IGCAR)", "domain": "igcar.gov.in", "tags": ["atomic", "research"]},
+    {"name": "Variable Energy Cyclotron Centre (VECC)", "domain": "vecc.gov.in", "tags": ["atomic", "physics"]},
+    {"name": "Raja Ramanna Centre for Advanced Technology", "domain": "rrcat.gov.in", "tags": ["atomic", "lasers"]},
+    {"name": "Atomic Energy Regulatory Board (AERB)", "domain": "aerb.gov.in", "tags": ["atomic", "safety"]},
+    {"name": "India Meteorological Department (IMD Weather)", "domain": "imd.gov.in", "tags": ["weather", "earth_sciences"]},
+    {"name": "Indian National Centre for Ocean Info Services", "domain": "incois.gov.in", "tags": ["ocean", "tsunami"]},
+    {"name": "National Centre for Polar & Ocean Research", "domain": "ncpor.res.in", "tags": ["polar", "antarctica"]},
+    {"name": "Indian Institute of Tropical Meteorology", "domain": "iitm.res.in", "tags": ["climate", "monsoon"]},
+]
+
+# 9. National Examinations, Admissions & Academic Services
+EXAMINATIONS_AND_ADMISSIONS_SERVICES = [
+    {"name": "National Testing Agency (NTA)", "domain": "nta.ac.in", "tags": ["exams", "admissions"]},
+    {"name": "JEE (Main) Examination Portal", "domain": "jeemain.nta.ac.in", "tags": ["exams", "jee"]},
+    {"name": "NEET (UG) Medical Examination Portal", "domain": "neet.nta.ac.in", "tags": ["exams", "neet"]},
+    {"name": "CUET (UG) Common University Entrance Test", "domain": "cuetug.nta.ac.in", "tags": ["exams", "cuet"]},
+    {"name": "UGC-NET Examination Portal", "domain": "ugcnet.nta.ac.in", "tags": ["exams", "ugcnet"]},
+    {"name": "NIC Examination Services Portal", "domain": "examinationservices.nic.in", "tags": ["exams", "nic"]},
+    {"name": "CBSE Exam Results Portal", "domain": "results.cbse.nic.in", "tags": ["exams", "results"]},
+    {"name": "Joint Seat Allocation Authority (JoSAA)", "domain": "josaa.nic.in", "tags": ["admissions", "iit_nit"]},
+    {"name": "Central Seat Allocation Board (CSAB)", "domain": "csab.nic.in", "tags": ["admissions", "nit"]},
+    {"name": "Medical Counselling Committee (MCC NEET)", "domain": "mcc.nic.in", "tags": ["admissions", "medical"]},
+    {"name": "National Board of Examinations (NBE/NBEMS)", "domain": "natboard.edu.in", "tags": ["exams", "medical"]},
+    {"name": "SWAYAM Free Online Education Portal", "domain": "swayam.gov.in", "tags": ["education", "mooc"]},
+    {"name": "National Academic Depository (NAD)", "domain": "nad.gov.in", "tags": ["education", "degrees"]},
+    {"name": "AICTE Approval & Regulation Portal", "domain": "aicte-india.org", "tags": ["education", "technical"]},
+    {"name": "University Grants Commission (UGC)", "domain": "ugc.ac.in", "tags": ["education", "higher"]},
+]
+
+# 10. Government Hospitals, AIIMS & Health Bodies
 GOVERNMENT_HOSPITALS_AND_HEALTH = [
-    # AIIMS Institutes (All 20+ Functional AIIMS)
+    # AIIMS Network
     {"name": "AIIMS New Delhi", "domain": "aiims.edu", "tags": ["hospital", "aiims", "central"]},
     {"name": "AIIMS Bhopal", "domain": "aiimsbhopal.edu.in", "tags": ["hospital", "aiims", "central"]},
     {"name": "AIIMS Bhubaneswar", "domain": "aiimsbhubaneswar.nic.in", "tags": ["hospital", "aiims", "central"]},
@@ -166,40 +424,31 @@ GOVERNMENT_HOSPITALS_AND_HEALTH = [
     {"name": "AIIMS Rajkot", "domain": "aiimsrajkot.edu.in", "tags": ["hospital", "aiims", "central"]},
     {"name": "AIIMS Bilaspur", "domain": "aiimsbilaspur.edu.in", "tags": ["hospital", "aiims", "central"]},
     {"name": "AIIMS Raebareli", "domain": "aiimsraebareli.edu.in", "tags": ["hospital", "aiims", "central"]},
-    # Apex Central Government Hospitals & Research Institutes
+    # Apex Central Hospitals
     {"name": "Safdarjung Hospital & VMMC Delhi", "domain": "vmmc-sjh.nic.in", "tags": ["hospital", "central"]},
     {"name": "Dr. Ram Manohar Lohia Hospital Delhi", "domain": "rmlh.nic.in", "tags": ["hospital", "central"]},
-    {"name": "Lady Hardinge Medical College & Hospitals", "domain": "lhmc-hosp.gov.in", "tags": ["hospital", "central"]},
-    {"name": "Postgraduate Institute of Medical Education & Research (PGIMER Chandigarh)", "domain": "pgimer.edu.in", "tags": ["hospital", "research", "central"]},
+    {"name": "Lady Hardinge Medical College", "domain": "lhmc-hosp.gov.in", "tags": ["hospital", "central"]},
+    {"name": "PGIMER Chandigarh", "domain": "pgimer.edu.in", "tags": ["hospital", "research", "central"]},
     {"name": "JIPMER Puducherry", "domain": "jipmer.edu.in", "tags": ["hospital", "research", "central"]},
-    {"name": "National Institute of Mental Health and Neurosciences (NIMHANS)", "domain": "nimhans.ac.in", "tags": ["hospital", "research", "central"]},
-    {"name": "King George's Medical University (KGMU Lucknow)", "domain": "kgmu.org", "tags": ["hospital", "state"]},
-    {"name": "Sanjay Gandhi Postgraduate Institute of Medical Sciences (SGPGIMS)", "domain": "sgpgi.org.in", "tags": ["hospital", "state"]},
-    {"name": "Institute of Liver and Biliary Sciences (ILBS Delhi)", "domain": "ilbs.in", "tags": ["hospital", "state"]},
-    {"name": "Tata Memorial Centre (DAE Hospital)", "domain": "tmc.gov.in", "tags": ["hospital", "cancer", "central"]},
+    {"name": "NIMHANS Bengaluru", "domain": "nimhans.ac.in", "tags": ["hospital", "research", "central"]},
+    {"name": "King George's Medical University (KGMU)", "domain": "kgmu.org", "tags": ["hospital", "state"]},
+    {"name": "SGPGIMS Lucknow", "domain": "sgpgi.org.in", "tags": ["hospital", "state"]},
+    {"name": "Institute of Liver and Biliary Sciences (ILBS)", "domain": "ilbs.in", "tags": ["hospital", "state"]},
+    {"name": "Tata Memorial Centre Mumbai", "domain": "tmc.gov.in", "tags": ["hospital", "cancer", "central"]},
     {"name": "Regional Cancer Centre Thiruvananthapuram", "domain": "rcctvm.gov.in", "tags": ["hospital", "cancer", "state"]},
-    {"name": "National Institute of Tuberculosis and Respiratory Diseases", "domain": "nitrd.nic.in", "tags": ["hospital", "central"]},
-    {"name": "Central Drugs Standard Control Organization (CDSCO)", "domain": "cdsco.gov.in", "tags": ["health", "regulatory"]},
-    {"name": "National Health Mission (NHM)", "domain": "nhm.gov.in", "tags": ["health", "schemes"]},
-    {"name": "National AIDS Control Organisation (NACO)", "domain": "naco.gov.in", "tags": ["health", "central"]},
-    # State Government Medical Colleges & Hospitals
-    {"name": "Madras Medical College & Rajiv Gandhi Govt General Hospital", "domain": "mmc.tn.gov.in", "tags": ["hospital", "state_medical"]},
+    {"name": "National Institute of TB and Respiratory Diseases", "domain": "nitrd.nic.in", "tags": ["hospital", "central"]},
+    {"name": "Central Drugs Standard Control Organization", "domain": "cdsco.gov.in", "tags": ["health", "regulatory"]},
+    {"name": "National Health Mission", "domain": "nhm.gov.in", "tags": ["health", "schemes"]},
+    {"name": "Madras Medical College", "domain": "mmc.tn.gov.in", "tags": ["hospital", "state_medical"]},
     {"name": "Calcutta Medical College", "domain": "calcutnamedicalcollege.edu.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Grant Government Medical College & Sir JJ Group of Hospitals Mumbai", "domain": "gmcmumbai.gov.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Patna Medical College and Hospital (PMCH)", "domain": "pmch.bihar.gov.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Government Medical College Jammu", "domain": "gmcjammu.nic.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Government Medical College Patiala", "domain": "gmcpatiala.com", "tags": ["hospital", "state_medical"]},
-    {"name": "SCB Medical College & Hospital Cuttack", "domain": "scbmch.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Pt. J.N.M. Medical College Raipur", "domain": "bmcraipur.cg.gov.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Goa Medical College and Hospital", "domain": "gmc.goa.gov.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Karnataka Institute of Medical Sciences (KIMS)", "domain": "kims.karnataka.gov.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Osmania Medical College Hyderabad", "domain": "osmaniamedicalcollege.edu.in", "tags": ["hospital", "state_medical"]},
-    {"name": "Andhra Medical College Visakhapatnam", "domain": "andhramedicalcollege.edu.in", "tags": ["hospital", "state_medical"]},
+    {"name": "Grant Medical College Mumbai", "domain": "gmcmumbai.gov.in", "tags": ["hospital", "state_medical"]},
+    {"name": "Patna Medical College (PMCH)", "domain": "pmch.bihar.gov.in", "tags": ["hospital", "state_medical"]},
+    {"name": "GMC Jammu", "domain": "gmcjammu.nic.in", "tags": ["hospital", "state_medical"]},
 ]
 
-# 4. Strictly Public & Government-Run School Systems, Boards & Autonomous Organizations
+# 11. Government School Systems (KVS, NVS, Sainik, EMRS)
 GOVERNMENT_SCHOOLS_AND_SYSTEMS = [
-    # Kendriya Vidyalaya Sangathan (Apex & 25 Official Regional Offices)
+    # KVS Headquarters & Regional Offices
     {"name": "Kendriya Vidyalaya Sangathan (KVS HQ)", "domain": "kvsangathan.nic.in", "tags": ["school_system", "central"]},
     {"name": "KVS Regional Office Delhi", "domain": "rodelhi.kvs.gov.in", "tags": ["school_system", "kvs"]},
     {"name": "KVS Regional Office Mumbai", "domain": "romumbai.kvs.gov.in", "tags": ["school_system", "kvs"]},
@@ -223,7 +472,7 @@ GOVERNMENT_SCHOOLS_AND_SYSTEMS = [
     {"name": "KVS Regional Office Varanasi", "domain": "rovaranasi.kvs.gov.in", "tags": ["school_system", "kvs"]},
     {"name": "KVS Regional Office Gurugram", "domain": "rogurugram.kvs.gov.in", "tags": ["school_system", "kvs"]},
     {"name": "KVS Regional Office Agra", "domain": "roagra.kvs.gov.in", "tags": ["school_system", "kvs"]},
-    # Navodaya Vidyalaya Samiti (Apex & 8 Regional Offices)
+    # Navodaya Vidyalaya Samiti
     {"name": "Navodaya Vidyalaya Samiti (NVS HQ)", "domain": "navodaya.gov.in", "tags": ["school_system", "central"]},
     {"name": "NVS Regional Office Bhopal", "domain": "nvsbhopal.gov.in", "tags": ["school_system", "nvs"]},
     {"name": "NVS Regional Office Chandigarh", "domain": "nvsrochandigarh.gov.in", "tags": ["school_system", "nvs"]},
@@ -233,7 +482,7 @@ GOVERNMENT_SCHOOLS_AND_SYSTEMS = [
     {"name": "NVS Regional Office Patna", "domain": "nvsropatna.gov.in", "tags": ["school_system", "nvs"]},
     {"name": "NVS Regional Office Pune", "domain": "nvsropune.gov.in", "tags": ["school_system", "nvs"]},
     {"name": "NVS Regional Office Shillong", "domain": "nvsroshillong.gov.in", "tags": ["school_system", "nvs"]},
-    # Sainik Schools (Ministry of Defence Run)
+    # Sainik Schools Society & EMRS
     {"name": "Sainik Schools Society", "domain": "sainikschoolsociety.in", "tags": ["school_system", "defence"]},
     {"name": "Sainik School Satara", "domain": "sainikschoolsatara.org", "tags": ["school", "defence"]},
     {"name": "Sainik School Ghorakhal", "domain": "sainikschoolghorakhal.org", "tags": ["school", "defence"]},
@@ -245,18 +494,14 @@ GOVERNMENT_SCHOOLS_AND_SYSTEMS = [
     {"name": "Sainik School Kapurthala", "domain": "sainikschoolkapurthala.com", "tags": ["school", "defence"]},
     {"name": "Sainik School Chittorgarh", "domain": "sainikschoolchittorgarh.edu.in", "tags": ["school", "defence"]},
     {"name": "Sainik School Tilaiya", "domain": "sainikschooltilaiya.org", "tags": ["school", "defence"]},
-    {"name": "Sainik School Sujanpur Tira", "domain": "sainikschoolsujanpurtira.org", "tags": ["school", "defence"]},
-    # Eklavya Model Residential Schools (Tribal Affairs Ministry)
-    {"name": "National Education Society for Tribal Students (EMRS)", "domain": "nests.gov.in", "tags": ["school_system", "tribal"]},
-    # Public Educational Bodies & Open Schooling
-    {"name": "National Institute of Open Schooling (NIOS)", "domain": "nios.ac.in", "tags": ["education_board", "open_school"]},
+    {"name": "Eklavya Model Residential Schools (EMRS)", "domain": "nests.gov.in", "tags": ["school_system", "tribal"]},
+    {"name": "National Institute of Open Schooling", "domain": "nios.ac.in", "tags": ["education_board", "open_school"]},
     {"name": "NCERT", "domain": "ncert.nic.in", "tags": ["education", "curriculum"]},
     {"name": "CBSE", "domain": "cbse.gov.in", "tags": ["education_board", "central"]},
-    {"name": "Directorate of Education Delhi (Govt Schools)", "domain": "edudel.nic.in", "tags": ["school_system", "state_govt"]},
-    {"name": "Samagra Shiksha Abhiyan", "domain": "samagrashiksha.education.gov.in", "tags": ["school_system", "schemes"]},
+    {"name": "Delhi Directorate of Education (Govt Schools)", "domain": "edudel.nic.in", "tags": ["school_system", "state_govt"]},
 ]
 
-# 5. Public Central & State Universities, IIITs, IITs, NITs, IIMs, Research Labs
+# 12. Public Central & State Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
 NATIONAL_ACADEMIC_AND_RESEARCH = [
     # IITs (23)
     {"name": "IIT Bombay", "domain": "iitb.ac.in"},
@@ -299,43 +544,12 @@ NATIONAL_ACADEMIC_AND_RESEARCH = [
     {"name": "NIT Jamshedpur", "domain": "nitjsr.ac.in"},
     {"name": "NIT Hamirpur", "domain": "nith.ac.in"},
     {"name": "NIT Durgapur", "domain": "nitdgp.ac.in"},
-    {"name": "NIT Meghalaya", "domain": "nitm.ac.in"},
-    {"name": "NIT Manipur", "domain": "nitmanipur.ac.in"},
-    {"name": "NIT Nagaland", "domain": "nitnagaland.ac.in"},
-    {"name": "NIT Mizoram", "domain": "nitmz.ac.in"},
-    {"name": "NIT Sikkim", "domain": "nitsikkim.ac.in"},
-    {"name": "NIT Puducherry", "domain": "nitpy.edu.in"},
-    {"name": "NIT Andhra Pradesh", "domain": "nitandhra.ac.in"},
-    {"name": "NIT Goa", "domain": "nitgoa.ac.in"},
-    {"name": "NIT Uttarakhand", "domain": "nituk.ac.in"},
-    {"name": "NIT Delhi", "domain": "nitdelhi.ac.in"},
-    {"name": "NIT Agartala", "domain": "nita.ac.in"},
-    {"name": "NIT Arunachal Pradesh", "domain": "nitap.ac.in"},
-    # IIITs (Public/PPP)
+    # IIITs
     {"name": "IIIT Allahabad", "domain": "iiita.ac.in"},
     {"name": "IIITDM Kancheepuram", "domain": "iiitdm.ac.in"},
     {"name": "IIIT Delhi", "domain": "iiitd.ac.in"},
     {"name": "IIIT Gwalior", "domain": "iiitm.ac.in"},
     {"name": "IIITDM Jabalpur", "domain": "iiitdmj.ac.in"},
-    {"name": "IIITDM Kurnool", "domain": "iiitk.ac.in"},
-    {"name": "IIIT Guwahati", "domain": "iiitg.ac.in"},
-    {"name": "IIIT Vadodara", "domain": "iiitvadodara.ac.in"},
-    {"name": "IIIT Sri City", "domain": "iiits.ac.in"},
-    {"name": "IIIT Kota", "domain": "iiitkota.ac.in"},
-    {"name": "IIIT Kalyani", "domain": "iiitkalyani.ac.in"},
-    {"name": "IIIT Una", "domain": "iiituna.ac.in"},
-    {"name": "IIIT Sonepat", "domain": "iiitsonepat.ac.in"},
-    {"name": "IIIT Lucknow", "domain": "iiitl.ac.in"},
-    {"name": "IIIT Dharwad", "domain": "iiitdwd.ac.in"},
-    {"name": "IIIT Kottayam", "domain": "iiitkottayam.ac.in"},
-    {"name": "IIIT Ranchi", "domain": "iiitranchi.ac.in"},
-    {"name": "IIIT Nagpur", "domain": "iiitnagpur.ac.in"},
-    {"name": "IIIT Pune", "domain": "iiitp.ac.in"},
-    {"name": "IIIT Bhagalpur", "domain": "iiitbh.ac.in"},
-    {"name": "IIIT Bhopal", "domain": "iiitbhopal.ac.in"},
-    {"name": "IIIT Surat", "domain": "iiitsurat.ac.in"},
-    {"name": "IIIT Agartala", "domain": "iiitagartala.ac.in"},
-    {"name": "IIIT Raichur", "domain": "iiitr.ac.in"},
     # IIMs (20)
     {"name": "IIM Ahmedabad", "domain": "iima.ac.in"},
     {"name": "IIM Bangalore", "domain": "iimb.ac.in"},
@@ -344,18 +558,6 @@ NATIONAL_ACADEMIC_AND_RESEARCH = [
     {"name": "IIM Indore", "domain": "iimi.ac.in"},
     {"name": "IIM Kozhikode", "domain": "iimk.ac.in"},
     {"name": "IIM Shillong", "domain": "iimsillong.ac.in"},
-    {"name": "IIM Trichy", "domain": "iimtrichy.ac.in"},
-    {"name": "IIM Udaipur", "domain": "iimu.ac.in"},
-    {"name": "IIM Rohtak", "domain": "iimrohtak.ac.in"},
-    {"name": "IIM Raipur", "domain": "iimraipur.ac.in"},
-    {"name": "IIM Ranchi", "domain": "iimranchi.ac.in"},
-    {"name": "IIM Kashipur", "domain": "iimkashipur.ac.in"},
-    {"name": "IIM Nagpur", "domain": "iimnagpur.ac.in"},
-    {"name": "IIM Visakhapatnam", "domain": "iimv.ac.in"},
-    {"name": "IIM Bodh Gaya", "domain": "iimbg.ac.in"},
-    {"name": "IIM Sambalpur", "domain": "iimsambalpur.ac.in"},
-    {"name": "IIM Sirmaur", "domain": "iimsirmaur.ac.in"},
-    {"name": "IIM Jammu", "domain": "iimjammu.ac.in"},
     # Central Public Universities
     {"name": "University of Delhi", "domain": "du.ac.in"},
     {"name": "Jawaharlal Nehru University", "domain": "jnu.ac.in"},
@@ -365,24 +567,6 @@ NATIONAL_ACADEMIC_AND_RESEARCH = [
     {"name": "Jamia Millia Islamia", "domain": "jmi.ac.in"},
     {"name": "Visva-Bharati University", "domain": "visvabharati.ac.in"},
     {"name": "Pondicherry University", "domain": "pondiuni.edu.in"},
-    {"name": "Tezpur University", "domain": "tezu.ernet.in"},
-    {"name": "Central University of Rajasthan", "domain": "curaj.ac.in"},
-    {"name": "Central University of Jammu", "domain": "cujammu.ac.in"},
-    {"name": "Central University of Punjab", "domain": "cup.edu.in"},
-    {"name": "Central University of Haryana", "domain": "cuh.ac.in"},
-    {"name": "Central University of Karnataka", "domain": "cuk.ac.in"},
-    {"name": "Central University of Kerala", "domain": "cukerala.ac.in"},
-    {"name": "Central University of Tamil Nadu", "domain": "cutn.ac.in"},
-    {"name": "Central University of South Bihar", "domain": "cub.ac.in"},
-    {"name": "Central University of Gujarat", "domain": "cug.ac.in"},
-    {"name": "Central University of Jharkhand", "domain": "cuj.ac.in"},
-    {"name": "Central University of Odisha", "domain": "cuo.ac.in"},
-    {"name": "North-Eastern Hill University", "domain": "nehu.ac.in"},
-    {"name": "Mizoram University", "domain": "mzu.edu.in"},
-    {"name": "Nagaland University", "domain": "nagalanduniversity.ac.in"},
-    {"name": "Assam University", "domain": "aus.ac.in"},
-    {"name": "Manipur University", "domain": "manipuruniv.ac.in"},
-    {"name": "HNB Garhwal University", "domain": "hnbgu.ac.in"},
     {"name": "IGNOU", "domain": "ignou.ac.in"},
     # Premier State Public Universities
     {"name": "University of Mumbai", "domain": "mu.ac.in"},
@@ -390,22 +574,9 @@ NATIONAL_ACADEMIC_AND_RESEARCH = [
     {"name": "University of Calcutta", "domain": "caluniv.ac.in"},
     {"name": "University of Madras", "domain": "unom.ac.in"},
     {"name": "Osmania University", "domain": "osmania.ac.in"},
-    {"name": "Andhra University", "domain": "andhrauniversity.edu.in"},
-    {"name": "University of Kerala", "domain": "keralauniversity.ac.in"},
-    {"name": "University of Lucknow", "domain": "lkouniv.ac.in"},
-    {"name": "Patna University", "domain": "patnauniversity.ac.in"},
-    {"name": "University of Rajasthan", "domain": "rajasthanuniversity.ac.in"},
-    {"name": "Panjab University Chandigarh", "domain": "puchd.ac.in"},
-    {"name": "Guru Nanak Dev University", "domain": "gndu.ac.in"},
-    {"name": "Maharshi Dayanand University", "domain": "mdu.ac.in"},
-    {"name": "Gauhati University", "domain": "gauhati.ac.in"},
-    {"name": "Utkal University", "domain": "utkaluniversity.ac.in"},
     {"name": "Anna University", "domain": "annauniv.edu"},
-    {"name": "JNTU Hyderabad", "domain": "jntuh.ac.in"},
     {"name": "AKTU Uttar Pradesh", "domain": "aktu.ac.in"},
-    {"name": "VTU Karnataka", "domain": "vtu.ac.in"},
-    {"name": "GTU Gujarat", "domain": "gtu.ac.in"},
-    # CSIR & National Laboratories
+    # CSIR Labs
     {"name": "CSIR Headquarters", "domain": "csir.res.in"},
     {"name": "National Physical Laboratory", "domain": "nplindia.org"},
     {"name": "National Chemical Laboratory", "domain": "ncl-india.org"},
@@ -415,42 +586,20 @@ NATIONAL_ACADEMIC_AND_RESEARCH = [
     {"name": "IICT Hyderabad", "domain": "iict.res.in"},
     {"name": "IGIB Delhi", "domain": "igib.res.in"},
     {"name": "IICB Kolkata", "domain": "iicb.res.in"},
-    {"name": "National Institute of Oceanography", "domain": "nio.org"},
-    {"name": "CRRI Delhi", "domain": "crridom.gov.in"},
-    {"name": "CBRI Roorkee", "domain": "cbri.res.in"},
-    {"name": "CIMAP Lucknow", "domain": "cimap.res.in"},
-    {"name": "IIIM Jammu", "domain": "iiim.res.in"},
-    {"name": "CEERI Pilani", "domain": "ceeri.res.in"},
-    {"name": "CECRI Karaikudi", "domain": "cecri.res.in"},
     {"name": "CLRI Chennai", "domain": "clri.org"},
     {"name": "CFTRI Mysore", "domain": "cftri.res.in"},
-    {"name": "CSIO Chandigarh", "domain": "csio.res.in"},
-    {"name": "AMPRI Bhopal", "domain": "ampri.res.in"},
-    {"name": "CIMFR Dhanbad", "domain": "cimfr.nic.in"},
-    {"name": "IHBT Palampur", "domain": "ihbt.res.in"},
     # ICMR & ICAR
     {"name": "ICMR Headquarters", "domain": "icmr.nic.in"},
-    {"name": "National Institute of Virology (NIV)", "domain": "niv.co.in"},
-    {"name": "National Institute of Epidemiology (NIE)", "domain": "nie.gov.in"},
-    {"name": "National Institute of Nutrition (NIN)", "domain": "nin.res.in"},
+    {"name": "National Institute of Virology", "domain": "niv.co.in"},
+    {"name": "National Institute of Epidemiology", "domain": "nie.gov.in"},
+    {"name": "National Institute of Nutrition", "domain": "nin.res.in"},
     {"name": "ICAR Headquarters", "domain": "icar.org.in"},
     {"name": "IARI Pusa Delhi", "domain": "iari.res.in"},
-    {"name": "IVRI Bareilly", "domain": "ivri.nic.in"},
-    {"name": "NDRI Karnal", "domain": "ndri.res.in"},
-    {"name": "CIFE Mumbai", "domain": "cife.edu.in"},
-    # DAE / ISRO Centers
-    {"name": "Bhabha Atomic Research Centre (BARC)", "domain": "barc.gov.in"},
-    {"name": "Tata Institute of Fundamental Research (TIFR)", "domain": "tifr.res.in"},
-    {"name": "Indira Gandhi Centre for Atomic Research (IGCAR)", "domain": "igcar.gov.in"},
-    {"name": "Vikram Sarabhai Space Centre (VSSC)", "domain": "vssc.gov.in"},
-    {"name": "UR Rao Satellite Centre (URSC)", "domain": "ursc.gov.in"},
-    {"name": "Space Applications Centre (SAC)", "domain": "sac.gov.in"},
-    {"name": "Satish Dhawan Space Centre (SDSC SHAR)", "domain": "shar.gov.in"},
 ]
 
-# 6. Law Enforcement, CAPFs & Investigative Agencies
+# 13. Law Enforcement, CAPFs & Investigative Agencies
 LAW_ENFORCEMENT_AND_SECURITY = [
-    # Central Armed Police Forces (CAPFs) & Paramilitary
+    # CAPFs & Paramilitary
     {"name": "Border Security Force (BSF)", "domain": "bsf.gov.in", "tags": ["capf", "security"]},
     {"name": "Central Reserve Police Force (CRPF)", "domain": "crpf.gov.in", "tags": ["capf", "security"]},
     {"name": "Central Industrial Security Force (CISF)", "domain": "cisf.gov.in", "tags": ["capf", "security"]},
@@ -458,21 +607,24 @@ LAW_ENFORCEMENT_AND_SECURITY = [
     {"name": "Sashastra Seema Bal (SSB)", "domain": "ssb.gov.in", "tags": ["capf", "security"]},
     {"name": "National Security Guard (NSG)", "domain": "nsg.gov.in", "tags": ["capf", "security"]},
     {"name": "Assam Rifles", "domain": "assamrifles.gov.in", "tags": ["capf", "security"]},
-    {"name": "Indian Coast Guard", "domain": "indiancoastguard.gov.in", "tags": ["defence", "security"]},
-    # Investigative & Intelligence Agencies
+    # Investigative
     {"name": "Central Bureau of Investigation (CBI)", "domain": "cbi.gov.in", "tags": ["investigation", "police"]},
     {"name": "National Investigation Agency (NIA)", "domain": "nia.gov.in", "tags": ["investigation", "security"]},
     {"name": "National Crime Records Bureau (NCRB)", "domain": "ncrb.gov.in", "tags": ["police", "records"]},
-    {"name": "Bureau of Police Research and Development (BPRD)", "domain": "bprd.nic.in", "tags": ["police", "research"]},
+    {"name": "Bureau of Police Research and Development", "domain": "bprd.nic.in", "tags": ["police", "research"]},
     {"name": "Directorate of Enforcement (ED)", "domain": "enforcementdirectorate.gov.in", "tags": ["enforcement", "finance"]},
-    {"name": "Directorate of Revenue Intelligence (DRI)", "domain": "dri.nic.in", "tags": ["enforcement", "customs"]},
     {"name": "Narcotics Control Bureau (NCB)", "domain": "narcoticsindia.nic.in", "tags": ["police", "narcotics"]},
-    # State Police Forces
+    {"name": "National Cyber Crime Reporting Portal", "domain": "cybercrime.gov.in", "tags": ["police", "cybercrime"]},
+    # State Police HQs & Traffic
     {"name": "Uttar Pradesh Police", "domain": "uppolice.gov.in", "tags": ["state_police"]},
+    {"name": "UP Police Traffic Subdomain", "domain": "traffic.uppolice.gov.in", "tags": ["state_police", "traffic"]},
+    {"name": "UP CCTNS Portal", "domain": "cctns.uppolice.gov.in", "tags": ["state_police", "cctns"]},
     {"name": "Maharashtra Police", "domain": "mahapolice.gov.in", "tags": ["state_police"]},
     {"name": "Delhi Police", "domain": "delhipolice.gov.in", "tags": ["state_police"]},
+    {"name": "Delhi Traffic Police", "domain": "traffic.delhipolice.gov.in", "tags": ["state_police", "traffic"]},
     {"name": "Tamil Nadu Police", "domain": "tnpolice.gov.in", "tags": ["state_police"]},
     {"name": "Karnataka State Police", "domain": "ksp.karnataka.gov.in", "tags": ["state_police"]},
+    {"name": "Bengaluru Traffic Police", "domain": "bengalurutrafficpolice.gov.in", "tags": ["state_police", "traffic"]},
     {"name": "Bihar Police", "domain": "biharpolice.bihar.gov.in", "tags": ["state_police"]},
     {"name": "Rajasthan Police", "domain": "police.rajasthan.gov.in", "tags": ["state_police"]},
     {"name": "Madhya Pradesh Police", "domain": "mppolice.gov.in", "tags": ["state_police"]},
@@ -483,8 +635,6 @@ LAW_ENFORCEMENT_AND_SECURITY = [
     {"name": "Punjab Police", "domain": "punjabpolice.gov.in", "tags": ["state_police"]},
     {"name": "Haryana Police", "domain": "haryanapolice.gov.in", "tags": ["state_police"]},
     {"name": "Assam Police", "domain": "assampolice.gov.in", "tags": ["state_police"]},
-    {"name": "Chhattisgarh Police", "domain": "cgpolice.gov.in", "tags": ["state_police"]},
-    {"name": "Jharkhand Police", "domain": "jhpolice.gov.in", "tags": ["state_police"]},
     {"name": "Telangana State Police", "domain": "tspolice.gov.in", "tags": ["state_police"]},
     {"name": "Andhra Pradesh Police", "domain": "appolice.gov.in", "tags": ["state_police"]},
     {"name": "Uttarakhand Police", "domain": "uttarakhandpolice.uk.gov.in", "tags": ["state_police"]},
@@ -493,31 +643,7 @@ LAW_ENFORCEMENT_AND_SECURITY = [
     {"name": "Goa Police", "domain": "goapolice.gov.in", "tags": ["state_police"]},
 ]
 
-# 7. Railway Recruitment Boards (RRBs) across India
-RAILWAY_RECRUITMENT_BOARDS = [
-    {"name": "RRB Ahmedabad", "domain": "rrbahmedabad.gov.in"},
-    {"name": "RRB Ajmer", "domain": "rrbajmer.gov.in"},
-    {"name": "RRB Prayagraj (Allahabad)", "domain": "rrbald.gov.in"},
-    {"name": "RRB Mumbai", "domain": "rrbmumbai.gov.in"},
-    {"name": "RRB Kolkata", "domain": "rrbkolkata.gov.in"},
-    {"name": "RRB Chennai", "domain": "rrbchennai.gov.in"},
-    {"name": "RRB Secunderabad", "domain": "rrbsecunderabad.gov.in"},
-    {"name": "RRB Patna", "domain": "rrbpatna.gov.in"},
-    {"name": "RRB Bengaluru", "domain": "rrbbnc.gov.in"},
-    {"name": "RRB Bhopal", "domain": "rrbbpl.nic.in"},
-    {"name": "RRB Chandigarh", "domain": "rrbcdg.gov.in"},
-    {"name": "RRB Gorakhpur", "domain": "rrbgkp.gov.in"},
-    {"name": "RRB Guwahati", "domain": "rrbguwahati.gov.in"},
-    {"name": "RRB Jammu-Srinagar", "domain": "rrbjammu.nic.in"},
-    {"name": "RRB Malda", "domain": "rrbmalda.gov.in"},
-    {"name": "RRB Muzaffarpur", "domain": "rrbmuzaffarpur.gov.in"},
-    {"name": "RRB Ranchi", "domain": "rrbranchi.gov.in"},
-    {"name": "RRB Siliguri", "domain": "rrbsiliguri.gov.in"},
-    {"name": "RRB Thiruvananthapuram", "domain": "rrbthiruvananthapuram.gov.in"},
-    {"name": "RRB Bilaspur", "domain": "rrbbilaspur.gov.in"},
-]
-
-# 8. High Courts & National Tribunals
+# 14. All 25 High Courts & National Tribunals
 HIGH_COURTS_AND_TRIBUNALS = [
     {"name": "Allahabad High Court", "domain": "allahabadhighcourt.in"},
     {"name": "Bombay High Court", "domain": "bombayhighcourt.nic.in"},
@@ -549,10 +675,10 @@ HIGH_COURTS_AND_TRIBUNALS = [
     {"name": "National Company Law Appellate Tribunal", "domain": "nclat.nic.in"},
     {"name": "Telecom Disputes Settlement Tribunal (TDSAT)", "domain": "tdsat.gov.in"},
     {"name": "Armed Forces Tribunal (AFT)", "domain": "aftdelhi.nic.in"},
-    {"name": "National Consumer Disputes Redressal Commission", "domain": "ncdrc.nic.in"},
+    {"name": "National Consumer Commission (NCDRC)", "domain": "ncdrc.nic.in"},
 ]
 
-# 9. All 785+ Indian Districts organized by State/UT
+# 15. All 785+ Indian Districts organized by State/UT
 ALL_DISTRICTS_BY_STATE = {
     "Uttar Pradesh": [
         "agra", "aligarh", "ambedkarnagar", "amethi", "amroha", "auraiya", "ayodhya", "azamgarh",
@@ -710,7 +836,7 @@ ALL_DISTRICTS_BY_STATE = {
     "Lakshadweep": ["lakshadweep"]
 }
 
-# 10. State Government Department Subdomains (25 major departments per State/UT)
+# 16. State Government Department Subdomains (25 departments per State/UT)
 KEY_STATE_DEPARTMENTS = [
     "police", "revenue", "education", "health", "transport", "finance", "forest",
     "agriculture", "pwd", "wrd", "excise", "tourism", "labour", "food",
@@ -728,9 +854,8 @@ ALL_STATE_DOMAIN_ROOTS = [
     "py.gov.in", "andaman.gov.in", "chandigarh.gov.in", "daman.nic.in", "ladakh.nic.in", "lakshadweep.gov.in"
 ]
 
-# 11. Nationalized Banks, Financial Regulatory & Central PSUs
+# 17. Nationalized Banks, Central PSUs & Financial Institutions
 CENTRAL_PSUS_AND_FINANCIAL = [
-    # Public Sector Nationalized Banks (12)
     {"name": "State Bank of India (SBI)", "domain": "sbi.co.in"},
     {"name": "Punjab National Bank", "domain": "pnbindia.in"},
     {"name": "Bank of Baroda", "domain": "bankofbaroda.in"},
@@ -743,16 +868,13 @@ CENTRAL_PSUS_AND_FINANCIAL = [
     {"name": "UCO Bank", "domain": "ucobank.com"},
     {"name": "Bank of Maharashtra", "domain": "bankofmaharashtra.in"},
     {"name": "Punjab & Sind Bank", "domain": "punjabandsindbank.co.in"},
-    # Development Financial & Insurance
     {"name": "Life Insurance Corporation of India (LIC)", "domain": "licindia.in"},
     {"name": "NABARD", "domain": "nabard.org"},
     {"name": "SIDBI", "domain": "sidbi.in"},
     {"name": "EXIM Bank of India", "domain": "eximbankindia.in"},
     {"name": "National Housing Bank (NHB)", "domain": "nhb.org.in"},
-    {"name": "Insurance Regulatory and Development Authority (IRDAI)", "domain": "irdai.gov.in"},
-    {"name": "Pension Fund Regulatory and Development Authority (PFRDA)", "domain": "pfrda.org.in"},
-    # Maharatna & Navratna PSUs
-    {"name": "National Highways Authority of India (NHAI)", "domain": "nhai.gov.in"},
+    {"name": "IRDAI", "domain": "irdai.gov.in"},
+    {"name": "PFRDA", "domain": "pfrda.org.in"},
     {"name": "IRCTC", "domain": "irctc.co.in"},
     {"name": "Indian Oil Corporation (IOCL)", "domain": "iocl.com"},
     {"name": "Oil and Natural Gas Corporation (ONGC)", "domain": "ongcindia.com"},
@@ -773,7 +895,7 @@ CENTRAL_PSUS_AND_FINANCIAL = [
     {"name": "REC Limited", "domain": "recindia.nic.in"},
 ]
 
-# 12. State Public Service Commissions & Recruitment Portals
+# 18. State Public Service Commissions & Recruitment Portals
 STATE_PSCS = [
     {"name": "UP Public Service Commission", "domain": "uppsc.up.nic.in"},
     {"name": "Maharashtra Public Service Commission", "domain": "mpsc.gov.in"},
@@ -800,41 +922,9 @@ STATE_PSCS = [
     {"name": "Railway Recruitment Control Board", "domain": "rrcb.gov.in"},
 ]
 
-# 13. State Secondary Education Boards & Transport Corporations
-STATE_BOARDS_AND_TRANSPORT = [
-    {"name": "UP Madhyamik Shiksha Parishad (UPMSP)", "domain": "upmsp.edu.in"},
-    {"name": "Maharashtra State Board (MSBSHSE)", "domain": "mahahsscboard.in"},
-    {"name": "Bihar School Examination Board (BSEB)", "domain": "biharboardonline.bihar.gov.in"},
-    {"name": "Directorate of Govt Examinations Tamil Nadu", "domain": "dge.tn.gov.in"},
-    {"name": "Karnataka School Examination and Assessment Board", "domain": "kseab.karnataka.gov.in"},
-    {"name": "Gujarat Secondary & Higher Secondary Board", "domain": "gseb.org"},
-    {"name": "West Bengal Board of Secondary Education", "domain": "wbbse.wb.gov.in"},
-    {"name": "Board of School Education Haryana", "domain": "bseh.org.in"},
-    {"name": "Punjab School Education Board", "domain": "pseb.ac.in"},
-    {"name": "Jharkhand Academic Council", "domain": "jac.jharkhand.gov.in"},
-    {"name": "Chhattisgarh Board of Secondary Education", "domain": "cgbse.nic.in"},
-    {"name": "Kerala DHSE", "domain": "dhsekerala.gov.in"},
-    {"name": "Board of Secondary Education Odisha", "domain": "bseodisha.ac.in"},
-    {"name": "Board of Secondary Education Telangana", "domain": "bse.telangana.gov.in"},
-    {"name": "Board of Secondary Education Andhra Pradesh", "domain": "bse.ap.gov.in"},
-    {"name": "Board of Secondary Education Rajasthan", "domain": "rajeduboard.rajasthan.gov.in"},
-    {"name": "MP Board of Secondary Education", "domain": "mpbse.nic.in"},
-    {"name": "UPSRTC (Uttar Pradesh)", "domain": "upsrtc.up.gov.in"},
-    {"name": "MSRTC (Maharashtra)", "domain": "msrtc.maharashtra.gov.in"},
-    {"name": "KSRTC (Karnataka)", "domain": "ksrtc.in"},
-    {"name": "Kerala RTC", "domain": "keralartc.com"},
-    {"name": "GSRTC (Gujarat)", "domain": "gsrtc.in"},
-    {"name": "APSRTC (Andhra Pradesh)", "domain": "apsrtc.ap.gov.in"},
-    {"name": "TSRTC (Telangana)", "domain": "tsrtc.telangana.gov.in"},
-    {"name": "DTC (Delhi Transport)", "domain": "dtc.delhi.gov.in"},
-    {"name": "HRTC (Himachal Pradesh)", "domain": "hrtchp.com"},
-    {"name": "OSRTC (Odisha)", "domain": "osrtc.in"},
-    {"name": "WBTC (West Bengal)", "domain": "wbtc.co.in"},
-]
-
 
 class DomainSeedGenerator:
-    """Generates structured seed records across all Indian governance levels (3,000+ verified seeds)."""
+    """Generates structured seed records across all Indian governance levels (2,400+ verified seeds)."""
 
     @classmethod
     def generate_all_seeds(cls) -> List[Dict[str, Any]]:
@@ -857,37 +947,61 @@ class DomainSeedGenerator:
 
         # 1. Central Ministries & Apex Constitutional Bodies
         for entry in CENTRAL_MINISTRIES_AND_APEX:
-            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central", tags=entry.get("tags", ["central"]))
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["central"]))
 
-        # 2. State & UT Apex Portals (36)
+        # 2. Defence, Strategic & Procurement Subdomains (tdf.drdo.gov.in, defproc.gov.in, rac.gov.in, DRDO Labs)
+        for entry in DEFENCE_STRATEGIC_AND_PROCUREMENT:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["defence"]))
+
+        # 3. National & State e-Procurement Portals (GeM, CPPP, State eTenders)
+        for entry in NATIONAL_AND_STATE_E_PROCUREMENT:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value if "central" in entry.get("tags", []) or "cppp" in entry.get("tags", []) else GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["procurement"]))
+
+        # 4. National Flagship Missions & e-Services (DigiLocker, UMANG, CoWIN, ABDM, eCourts)
+        for entry in FLAGSHIP_MISSIONS_AND_CITIZEN_SERVICES:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["flagship"]))
+
+        # 5. State Land Records (Bhulekh) & e-District Portals
+        for entry in STATE_LAND_RECORDS_AND_E_DISTRICT:
+            add_seed(entry["domain"], GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["land_records", "edistrict"]))
+
+        # 6. Major Urban Local Bodies & Municipal Corporations
+        for entry in MAJOR_MUNICIPAL_CORPORATIONS:
+            add_seed(entry["domain"], GovernmentLevel.LOCAL_BODY.value if hasattr(GovernmentLevel, "LOCAL_BODY") else GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["ulb", "municipality"]))
+
+        # 7. Space, Atomic Energy & Earth Sciences (ISRO, NRSC, Bhuvan, BARC)
+        for entry in SPACE_ATOMIC_ENERGY_AND_EARTH_SCIENCES:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["space", "atomic"]))
+
+        # 8. National Examinations & Admissions Services (NTA, JoSAA, NEET, JEE)
+        for entry in EXAMINATIONS_AND_ADMISSIONS_SERVICES:
+            add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["exams"]))
+
+        # 9. State & UT Apex Portals (36)
         for state_name, info in STATES_AND_UTS.items():
             add_seed(info["domain"], GovernmentLevel.STATE_UT.value, f"Government of {state_name}", state=state_name, tags=["state_apex", info["code"].lower()])
 
-        # 3. Government Hospitals, AIIMS & Health Bodies
+        # 10. Government Hospitals, AIIMS & Health Bodies
         for entry in GOVERNMENT_HOSPITALS_AND_HEALTH:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=entry.get("tags", ["hospital"]))
 
-        # 4. Government School Systems (KVS, NVS, Sainik, EMRS)
+        # 11. Government School Systems (KVS, NVS, Sainik, EMRS)
         for entry in GOVERNMENT_SCHOOLS_AND_SYSTEMS:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=entry.get("tags", ["schools"]))
 
-        # 5. Public Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
+        # 12. Public Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
         for entry in NATIONAL_ACADEMIC_AND_RESEARCH:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=["higher_education", "research"])
 
-        # 6. Law Enforcement & CAPFs
+        # 13. Law Enforcement, CAPFs & Police Forces
         for entry in LAW_ENFORCEMENT_AND_SECURITY:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value if "capf" in entry.get("tags", []) else GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["security"]))
 
-        # 7. Railway Recruitment Boards (RRBs)
-        for entry in RAILWAY_RECRUITMENT_BOARDS:
-            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], tags=["railways", "recruitment"])
-
-        # 8. High Courts & National Tribunals
+        # 14. High Courts & National Tribunals (25 High Courts + Tribunals)
         for entry in HIGH_COURTS_AND_TRIBUNALS:
             add_seed(entry["domain"], GovernmentLevel.JUDICIARY.value if hasattr(GovernmentLevel, "JUDICIARY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=["judiciary", "tribunal"])
 
-        # 9. All 785+ Districts (S3WaaS Pattern: <district>.nic.in)
+        # 15. All 785+ Districts (S3WaaS Pattern: <district>.nic.in)
         for state_name, districts in ALL_DISTRICTS_BY_STATE.items():
             for dist in districts:
                 clean_dist = dist.lower().replace("-", "").replace(" ", "")
@@ -896,23 +1010,19 @@ class DomainSeedGenerator:
                 if state_name in ["Haryana", "Punjab", "Assam", "Himachal Pradesh"]:
                     add_seed(f"{clean_dist}.dc.gov.in", GovernmentLevel.DISTRICT.value, f"Deputy Commissioner {dist.title()}", state=state_name, district=dist.title(), tags=["district", "dc_portal"])
 
-        # 10. State Government Department Subdomains (900+ portals)
+        # 16. State Government Department Subdomains (900+ portals)
         for state_root in ALL_STATE_DOMAIN_ROOTS:
             state_label = state_root.split(".")[0].upper()
             for dept in KEY_STATE_DEPARTMENTS:
                 domain = f"{dept}.{state_root}"
                 add_seed(domain, GovernmentLevel.STATE_UT.value, f"{dept.title()} Department ({state_label})", tags=["department", dept, state_label.lower()])
 
-        # 11. Nationalized Banks, Central PSUs & Financial Regulatory
+        # 17. Nationalized Banks, Central PSUs & Financial Regulatory
         for entry in CENTRAL_PSUS_AND_FINANCIAL:
             add_seed(entry["domain"], GovernmentLevel.PSU.value if hasattr(GovernmentLevel, "PSU") else GovernmentLevel.CENTRAL.value, entry["name"], tags=["psu", "financial"])
 
-        # 12. State PSCs (23)
+        # 18. State PSCs (23)
         for entry in STATE_PSCS:
             add_seed(entry["domain"], GovernmentLevel.STATE_UT.value, entry["name"], tags=["recruitment", "psc"])
-
-        # 13. State Education Boards & Transport
-        for entry in STATE_BOARDS_AND_TRANSPORT:
-            add_seed(entry["domain"], GovernmentLevel.STATE_UT.value, entry["name"], tags=["state_utility"])
 
         return seeds
