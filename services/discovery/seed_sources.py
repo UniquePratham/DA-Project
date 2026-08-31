@@ -1,17 +1,25 @@
 """Comprehensive Indian Government Domain Seed Matrices and Directory Sources.
 
 Spans Central Ministries, Apex Constitutional Bodies, High Courts & Tribunals,
-Defence & Strategic Subdomains (tdf.drdo.gov.in, defproc.gov.in, rac.gov.in, ada.gov.in, DRDO Labs),
+EPFO Subdomains (unifiedportal-mem.epfindia.gov.in, unifiedportal-emp, passbook, epfigms),
+Labour, ESIC & Employment Portals (insurance.esic.in, shramsuvidha, eshram, ncs),
+UIDAI Aadhaar Subdomains (myaadhaar, resident, ssup, appointments, bhuvan-aadhaar),
+Income Tax & CBDT (eportal, tdscpc/TRACES, ais, facelessassessment, tin-nsdl),
+GST & CBIC (services.gst, einvoice1, einvoice2, ewaybillgst, icegate, aces),
+MCA & Corporate Ecosystem (v3.mca.gov.in, ipindia, search.ipindia, ibbi, sfio, cci),
+Parivahan & Transport Subdomains (sarathi, vahan, echallan, checkpost, nrservices, nhai, ihmcl),
+Indian Railways Subdomains (irctc, indianrail, fois, ntes, cris, ireps, hrms, railmadad, all 21 RRBs),
+Defence & Strategic Subdomains (tdf.drdo.gov.in, defproc.gov.in, rac.gov.in, ada.gov.in, 15+ DRDO Labs),
 National & State e-Procurement Portals (GeM, CPPP, Mahatenders, Eproc Rajasthan, etc.),
 National Flagship Missions & e-Services (DigiLocker, UMANG, CoWIN, ABDM, PM-Kisan, e-Courts, CPGRAMS),
 State Land Records (Bhulekh, Bhoomi, Dharani, Mahabhumi) & e-District Portals,
+State e-Treasury, DISCOMs, Transport Corporations & Development Authorities,
 Urban Local Bodies & Municipal Corporations (BMC, MCD, BBMP, GHMC, Chennai Corp, KMC, etc.),
-Space & Atomic Energy Subdomains (ISRO, NRSC, Bhuvan, SAC, BARC, DAE),
+Space & Atomic Energy Subdomains (ISRO, NRSC, Bhuvan, SAC, BARC, DAE, NPCIL),
 Government Hospitals & Medical Colleges (AIIMS, Safdarjung, PGIMER, JIPMER),
 Government School Systems (KVS, NVS, Sainik Schools, EMRS),
 Public Central & State Universities, IITs/NITs/IIMs, CSIR & ICMR Labs,
-Law Enforcement & CAPFs, State PSCs & RRBs, All 36 States/UTs,
-900+ State Department Portals, 785+ Districts, Municipalities, and Nationalized PSUs.
+Law Enforcement & CAPFs, State PSCs, All 36 States/UTs, 900+ State Depts, and 785+ Districts.
 """
 
 from __future__ import annotations
@@ -120,18 +128,11 @@ CENTRAL_MINISTRIES_AND_APEX = [
     {"name": "Supreme Court of India", "domain": "sci.gov.in", "tags": ["apex", "judiciary"]},
     {"name": "Comptroller and Auditor General of India", "domain": "cag.gov.in", "tags": ["apex", "audit"]},
     {"name": "Union Public Service Commission", "domain": "upsc.gov.in", "tags": ["apex", "recruitment"]},
+    {"name": "Staff Selection Commission (SSC)", "domain": "ssc.nic.in", "tags": ["apex", "recruitment"]},
     {"name": "Unique Identification Authority of India", "domain": "uidai.gov.in", "tags": ["agency", "identity"]},
-    {"name": "Income Tax Department", "domain": "incometax.gov.in", "tags": ["agency", "taxation"]},
-    {"name": "Goods and Services Tax Network", "domain": "gst.gov.in", "tags": ["agency", "taxation"]},
     {"name": "National Informatics Centre", "domain": "nic.in", "tags": ["agency", "infrastructure"]},
     {"name": "Digital India", "domain": "digitalindia.gov.in", "tags": ["portal", "it"]},
     {"name": "MyGov India", "domain": "mygov.in", "tags": ["portal", "citizen_engagement"]},
-    {"name": "Parivahan Sewa", "domain": "parivahan.gov.in", "tags": ["portal", "transport"]},
-    {"name": "CoWIN Portal", "domain": "cowin.gov.in", "tags": ["portal", "health", "spa"]},
-    {"name": "Passport Seva Portal", "domain": "passportindia.gov.in", "tags": ["portal", "passport"]},
-    {"name": "e-Courts Services", "domain": "ecourts.gov.in", "tags": ["portal", "judiciary"]},
-    {"name": "National Scholarship Portal", "domain": "scholarships.gov.in", "tags": ["portal", "education"]},
-    {"name": "National Health Authority", "domain": "nha.gov.in", "tags": ["agency", "health"]},
     {"name": "Department of Posts (India Post)", "domain": "indiapost.gov.in", "tags": ["agency", "postal"]},
     {"name": "Reserve Bank of India", "domain": "rbi.org.in", "tags": ["apex", "banking"]},
     {"name": "Securities and Exchange Board of India", "domain": "sebi.gov.in", "tags": ["apex", "finance"]},
@@ -151,7 +152,128 @@ CENTRAL_MINISTRIES_AND_APEX = [
     {"name": "Software Technology Parks of India (STPI)", "domain": "stpi.in", "tags": ["it", "exports"]},
 ]
 
-# 3. Defence, Strategic Organisations, DRDO Subdomains & Procurement
+# 3. EPFO & Labour / Social Security Subdomain Matrix
+EPFO_AND_LABOUR_SERVICES = [
+    # EPFO Subdomains
+    {"name": "EPFO Unified Member Portal (UAN / Passbook / Claims)", "domain": "unifiedportal-mem.epfindia.gov.in", "tags": ["epfo", "uan", "member", "flagship"]},
+    {"name": "EPFO Unified Employer Portal", "domain": "unifiedportal-emp.epfindia.gov.in", "tags": ["epfo", "employer"]},
+    {"name": "EPFO Member Passbook Portal", "domain": "passbook.epfindia.gov.in", "tags": ["epfo", "passbook"]},
+    {"name": "EPFO Management Information System (MIS)", "domain": "mis.epfindia.gov.in", "tags": ["epfo", "mis"]},
+    {"name": "EPFiGMS (EPFO Grievance Management System)", "domain": "epfigms.gov.in", "tags": ["epfo", "grievance"]},
+    {"name": "Employees Provident Fund Organisation (HQ)", "domain": "epfindia.gov.in", "tags": ["epfo", "hq"]},
+    {"name": "EPFO International Workers Unit", "domain": "iwu.epfindia.gov.in", "tags": ["epfo", "international"]},
+    # ESIC Subdomains & Portals
+    {"name": "Employees State Insurance Corporation (HQ)", "domain": "esic.gov.in", "tags": ["esic", "labour"]},
+    {"name": "ESIC Portal (NIC)", "domain": "esic.nic.in", "tags": ["esic", "insurance"]},
+    {"name": "ESIC Insured Persons (IP) Portal", "domain": "insurance.esic.in", "tags": ["esic", "citizen"]},
+    {"name": "ESIC Dhanwantri Hospital Management", "domain": "dhanwantri.esic.in", "tags": ["esic", "health"]},
+    # Ministry of Labour e-Governance Platforms
+    {"name": "Unified Shram Suvidha Portal", "domain": "shramsuvidha.gov.in", "tags": ["labour", "compliance"]},
+    {"name": "e-Shram National Database for Unorganised Workers", "domain": "eshram.gov.in", "tags": ["labour", "welfare", "flagship"]},
+    {"name": "National Career Service Portal (NCS)", "domain": "ncs.gov.in", "tags": ["labour", "employment"]},
+    {"name": "Samadhan Labour Dispute Portal", "domain": "samadhan.labour.gov.in", "tags": ["labour", "dispute"]},
+    {"name": "Chief Labour Commissioner (Central)", "domain": "clc.gov.in", "tags": ["labour", "enforcement"]},
+    {"name": "Directorate General of Mines Safety (DGMS)", "domain": "dgms.gov.in", "tags": ["labour", "mining_safety"]},
+    {"name": "Directorate General of Employment (DGE)", "domain": "dge.gov.in", "tags": ["labour", "employment"]},
+    {"name": "Pradhan Mantri Shram Yogi Maandhan (PM-SYM)", "domain": "pmsym.in", "tags": ["labour", "pension"]},
+    {"name": "V.V. Giri National Labour Institute", "domain": "vvgnli.gov.in", "tags": ["labour", "research"]},
+]
+
+# 4. UIDAI (Aadhaar) Subdomain Matrix
+UIDAI_AADHAAR_ECOSYSTEM = [
+    {"name": "UIDAI Official Portal", "domain": "uidai.gov.in", "tags": ["aadhaar", "identity"]},
+    {"name": "MyAadhaar Citizen Portal", "domain": "myaadhaar.uidai.gov.in", "tags": ["aadhaar", "citizen_portal"]},
+    {"name": "UIDAI Resident Portal", "domain": "resident.uidai.gov.in", "tags": ["aadhaar", "resident"]},
+    {"name": "Aadhaar Appointment Booking", "domain": "appointments.uidai.gov.in", "tags": ["aadhaar", "booking"]},
+    {"name": "Self Service Update Portal (SSUP)", "domain": "ssup.uidai.gov.in", "tags": ["aadhaar", "update"]},
+    {"name": "Tathya Document Verification", "domain": "tathya.uidai.gov.in", "tags": ["aadhaar", "verification"]},
+    {"name": "Bhuvan Aadhaar Seva Kendra Locator", "domain": "bhuvan-aadhaar.nrsc.gov.in", "tags": ["aadhaar", "gis"]},
+    {"name": "e-Aadhaar Download Portal", "domain": "eaadhaar.uidai.gov.in", "tags": ["aadhaar", "download"]},
+]
+
+# 5. Income Tax, CBDT & Tax Administration
+INCOME_TAX_AND_CBDT_ECOSYSTEM = [
+    {"name": "Income Tax e-Filing 2.0 Portal", "domain": "incometax.gov.in", "tags": ["taxation", "incometax", "efiling"]},
+    {"name": "Income Tax e-Portal Login", "domain": "eportal.incometax.gov.in", "tags": ["taxation", "login"]},
+    {"name": "TRACES (TDS Centralized Processing Cell)", "domain": "tdscpc.gov.in", "tags": ["taxation", "tds"]},
+    {"name": "Annual Information Statement (AIS) Portal", "domain": "ais.incometax.gov.in", "tags": ["taxation", "ais"]},
+    {"name": "Central Board of Direct Taxes (CBDT)", "domain": "incometaxindia.gov.in", "tags": ["taxation", "cbdt"]},
+    {"name": "National Faceless Assessment Centre", "domain": "facelessassessment.incometax.gov.in", "tags": ["taxation", "faceless"]},
+]
+
+# 6. GST, CBIC & Customs Administration
+GST_AND_CBIC_ECOSYSTEM = [
+    {"name": "Goods and Services Tax (GST) Portal", "domain": "gst.gov.in", "tags": ["gst", "taxation"]},
+    {"name": "GST Public Services Portal", "domain": "services.gst.gov.in", "tags": ["gst", "services"]},
+    {"name": "e-Invoice Portal 1 (NIC)", "domain": "einvoice1.gst.gov.in", "tags": ["gst", "einvoice"]},
+    {"name": "e-Invoice Portal 2", "domain": "einvoice2.gst.gov.in", "tags": ["gst", "einvoice"]},
+    {"name": "National e-Way Bill Portal", "domain": "ewaybillgst.gov.in", "tags": ["gst", "ewaybill"]},
+    {"name": "Central Board of Indirect Taxes and Customs (CBIC)", "domain": "cbic.gov.in", "tags": ["customs", "cbic"]},
+    {"name": "ICEGATE Indian Customs Electronic Gateway", "domain": "icegate.gov.in", "tags": ["customs", "icegate"]},
+    {"name": "CBIC GST Portal", "domain": "cbic-gst.gov.in", "tags": ["gst", "cbic"]},
+    {"name": "ACES Central Excise & Service Tax", "domain": "aces.gov.in", "tags": ["excise", "aces"]},
+]
+
+# 7. MCA, Patents & Corporate Regulatory Subdomains
+MCA_AND_CORPORATE_ECOSYSTEM = [
+    {"name": "Ministry of Corporate Affairs (MCA21)", "domain": "mca.gov.in", "tags": ["corporate", "registration"]},
+    {"name": "MCA Version 3 Services Portal", "domain": "v3.mca.gov.in", "tags": ["corporate", "mca_v3"]},
+    {"name": "Intellectual Property India (IP India)", "domain": "ipindia.gov.in", "tags": ["patents", "trademarks"]},
+    {"name": "IP India Services (Trademark / Patent Search)", "domain": "ipindiaservices.gov.in", "tags": ["patents", "ip_search"]},
+    {"name": "Public Search for Trade Marks", "domain": "search.ipindia.gov.in", "tags": ["trademarks", "search"]},
+    {"name": "Insolvency and Bankruptcy Board of India (IBBI)", "domain": "ibbi.gov.in", "tags": ["insolvency", "corporate"]},
+    {"name": "Serious Fraud Investigation Office (SFIO)", "domain": "sfio.gov.in", "tags": ["investigation", "fraud"]},
+    {"name": "Investor Education and Protection Fund (IEPF)", "domain": "iepf.gov.in", "tags": ["investors", "protection"]},
+]
+
+# 8. Parivahan & Transport Subdomain Ecosystem
+PARIVAHAN_AND_TRANSPORT_ECOSYSTEM = [
+    {"name": "Parivahan Sewa Portal", "domain": "parivahan.gov.in", "tags": ["transport", "parivahan"]},
+    {"name": "Sarathi Parivahan (Driving Licences)", "domain": "sarathi.parivahan.gov.in", "tags": ["transport", "sarathi"]},
+    {"name": "Vahan Parivahan (Vehicle Registration)", "domain": "vahan.parivahan.gov.in", "tags": ["transport", "vahan"]},
+    {"name": "eChallan Parivahan System", "domain": "echallan.parivahan.gov.in", "tags": ["transport", "echallan"]},
+    {"name": "National Checkpost Border Tax Portal", "domain": "checkpost.parivahan.gov.in", "tags": ["transport", "checkpost"]},
+    {"name": "National Highways Authority of India (NHAI)", "domain": "nhai.gov.in", "tags": ["highways", "infrastructure"]},
+    {"name": "Indian Highway Management Company (FASTag)", "domain": "ihmcl.co.in", "tags": ["highways", "fastag"]},
+    {"name": "National Register Services (MoRTH)", "domain": "nrservices.nic.in", "tags": ["transport", "nr"]},
+]
+
+# 9. Indian Railways Ecosystem & 21 RRBs
+INDIAN_RAILWAYS_AND_RRBS = [
+    {"name": "Ministry of Railways", "domain": "indianrailways.gov.in", "tags": ["railways", "ministry"]},
+    {"name": "Indian Railway Catering & Tourism (IRCTC)", "domain": "irctc.co.in", "tags": ["railways", "booking"]},
+    {"name": "Passenger Reservation Enquiry (NTES/PNR)", "domain": "indianrail.gov.in", "tags": ["railways", "pnr"]},
+    {"name": "Freight Operations Information System (FOIS)", "domain": "fois.indianrail.gov.in", "tags": ["railways", "freight"]},
+    {"name": "National Train Enquiry System (NTES)", "domain": "ntes.indianrail.gov.in", "tags": ["railways", "train_status"]},
+    {"name": "Centre for Railway Information Systems (CRIS)", "domain": "cris.org.in", "tags": ["railways", "it"]},
+    {"name": "Indian Railways E-Procurement System (IREPS)", "domain": "ireps.gov.in", "tags": ["railways", "procurement"]},
+    {"name": "Rail Madad Grievance Redressal", "domain": "railmadad.indianrailways.gov.in", "tags": ["railways", "grievance"]},
+    {"name": "Railway Recruitment Control Board", "domain": "rrcb.gov.in", "tags": ["railways", "recruitment"]},
+    # 21 Railway Recruitment Boards (RRBs)
+    {"name": "RRB Allahabad (Prayagraj)", "domain": "rrbald.gov.in"},
+    {"name": "RRB Mumbai", "domain": "rrbmumbai.gov.in"},
+    {"name": "RRB Kolkata", "domain": "rrbkolkata.gov.in"},
+    {"name": "RRB Chandigarh", "domain": "rrbcdg.gov.in"},
+    {"name": "RRB Chennai", "domain": "rrbchennai.gov.in"},
+    {"name": "RRB Patna", "domain": "rrbpatna.gov.in"},
+    {"name": "RRB Secunderabad", "domain": "rrbsecunderabad.nic.in"},
+    {"name": "RRB Ajmer", "domain": "rrbajmer.gov.in"},
+    {"name": "RRB Bangalore", "domain": "rrbbnc.gov.in"},
+    {"name": "RRB Bhopal", "domain": "rrbbhopal.gov.in"},
+    {"name": "RRB Bhubaneswar", "domain": "rrbbbs.gov.in"},
+    {"name": "RRB Guwahati", "domain": "rrbguwahati.gov.in"},
+    {"name": "RRB Gorakhpur", "domain": "rrbgkp.gov.in"},
+    {"name": "RRB Jammu-Srinagar", "domain": "rrbjammu.nic.in"},
+    {"name": "RRB Malda", "domain": "rrbmalda.gov.in"},
+    {"name": "RRB Muzaffarpur", "domain": "rrbmuzaffarpur.gov.in"},
+    {"name": "RRB Ranchi", "domain": "rrbranchi.gov.in"},
+    {"name": "RRB Siliguri", "domain": "rrbsiliguri.gov.in"},
+    {"name": "RRB Thiruvananthapuram", "domain": "rrbthiruvananthapuram.gov.in"},
+    {"name": "RRB Ahmedabad", "domain": "rrbahmedabad.gov.in"},
+    {"name": "RRB Bilaspur", "domain": "rrbbilaspur.gov.in"},
+]
+
+# 10. Defence, Strategic Organisations, DRDO Subdomains & Procurement
 DEFENCE_STRATEGIC_AND_PROCUREMENT = [
     # DRDO Subdomains & Bodies
     {"name": "DRDO Technology Development Fund (TDF)", "domain": "tdf.drdo.gov.in", "tags": ["defence", "drdo", "innovation"]},
@@ -192,7 +314,7 @@ DEFENCE_STRATEGIC_AND_PROCUREMENT = [
     {"name": "Indian Coast Guard", "domain": "indiancoastguard.gov.in", "tags": ["defence", "coastguard"]},
 ]
 
-# 4. National & State e-Procurement Portals (GeM, CPPP, State eTenders)
+# 11. National & State e-Procurement Portals (GeM, CPPP, State eTenders)
 NATIONAL_AND_STATE_E_PROCUREMENT = [
     # Central Procurement Portals
     {"name": "Government e-Marketplace (GeM)", "domain": "gem.gov.in", "tags": ["procurement", "central"]},
@@ -223,9 +345,9 @@ NATIONAL_AND_STATE_E_PROCUREMENT = [
     {"name": "Goa eTenders", "domain": "goatenders.gov.in", "tags": ["procurement", "goa"]},
 ]
 
-# 5. National Flagship Mission Platforms & Citizen e-Governance Portals
+# 12. National Flagship Mission Platforms & Citizen e-Governance Portals
 FLAGSHIP_MISSIONS_AND_CITIZEN_SERVICES = [
-    # Citizen Identity & Locker
+    # Citizen Identity & Services
     {"name": "DigiLocker Portal", "domain": "digilocker.gov.in", "tags": ["identity", "locker", "flagship"]},
     {"name": "UMANG National Portal", "domain": "umang.gov.in", "tags": ["citizen_services", "mobile", "flagship"]},
     {"name": "Ayushman Bharat Digital Mission (ABDM)", "domain": "abdm.gov.in", "tags": ["health", "digital", "flagship"]},
@@ -246,29 +368,17 @@ FLAGSHIP_MISSIONS_AND_CITIZEN_SERVICES = [
     {"name": "Swachh Bharat Mission (Grameen)", "domain": "swachhbharatmission.ddws.gov.in", "tags": ["sanitation", "rural"]},
     {"name": "Jal Jeevan Mission", "domain": "jaljeevanmission.gov.in", "tags": ["water", "rural"]},
     {"name": "National Social Assistance Programme (NSAP)", "domain": "nsap.nic.in", "tags": ["welfare", "pension"]},
-    # Transport & Highways Subdomains
-    {"name": "Sarathi Parivahan (Driving Licences)", "domain": "sarathi.parivahan.gov.in", "tags": ["transport", "licence"]},
-    {"name": "Vahan Parivahan (Vehicle Registration)", "domain": "vahan.parivahan.gov.in", "tags": ["transport", "vehicle"]},
-    {"name": "eChallan Parivahan", "domain": "echallan.parivahan.gov.in", "tags": ["transport", "challan"]},
-    {"name": "National Highways Authority of India", "domain": "nhai.gov.in", "tags": ["highways", "infrastructure"]},
-    {"name": "Indian Railways Passenger Reservation Enquiry", "domain": "indianrail.gov.in", "tags": ["railways", "reservation"]},
-    {"name": "Centre for Railway Information Systems (CRIS)", "domain": "cris.org.in", "tags": ["railways", "it"]},
-    # Taxation, Customs & Corporate Affairs
-    {"name": "ICEGATE Indian Customs Electronic Gateway", "domain": "icegate.gov.in", "tags": ["customs", "trade"]},
-    {"name": "Directorate General of Foreign Trade (DGFT)", "domain": "dgft.gov.in", "tags": ["commerce", "trade"]},
-    {"name": "Intellectual Property India (IP India)", "domain": "ipindia.gov.in", "tags": ["patents", "trademarks"]},
-    {"name": "Ministry of Corporate Affairs (MCA21)", "domain": "mca.gov.in", "tags": ["corporate", "registration"]},
-    {"name": "Employees Provident Fund Organisation (EPFO)", "domain": "epfindia.gov.in", "tags": ["labour", "pension"]},
-    {"name": "Employees State Insurance Corporation (ESIC)", "domain": "esic.gov.in", "tags": ["labour", "insurance"]},
-    # Judicial & Immigration Services
+    # Judicial & Legal Services
     {"name": "eCourts National Services Portal", "domain": "services.ecourts.gov.in", "tags": ["judiciary", "services"]},
     {"name": "National Judicial Data Grid (NJDG)", "domain": "njdg.ecourts.gov.in", "tags": ["judiciary", "data"]},
     {"name": "e-Filing Judicial Portal", "domain": "e-filing.ecourts.gov.in", "tags": ["judiciary", "efiling"]},
+    {"name": "District Courts of India (eCourts)", "domain": "districts.ecourts.gov.in", "tags": ["judiciary", "districts"]},
+    {"name": "Virtual Courts Portal", "domain": "virtualcourts.gov.in", "tags": ["judiciary", "virtual"]},
     {"name": "Indian Visa Online", "domain": "indianvisaonline.gov.in", "tags": ["immigration", "visa"]},
     {"name": "Bureau of Immigration India", "domain": "boio.nic.in", "tags": ["immigration", "security"]},
 ]
 
-# 6. State Land Records (Bhulekh) & e-District Portals across States
+# 13. State Land Records (Bhulekh) & e-District Portals across States
 STATE_LAND_RECORDS_AND_E_DISTRICT = [
     # Land Records (Bhulekh / Bhoomi / Dharani)
     {"name": "UP Bhulekh (Uttar Pradesh)", "domain": "upbhulekh.gov.in", "tags": ["land_records", "up"]},
@@ -322,7 +432,7 @@ STATE_LAND_RECORDS_AND_E_DISTRICT = [
     {"name": "JK Grievance Redressal (JK-IGRAMS)", "domain": "jkgrievance.jk.gov.in", "tags": ["grievance", "jk"]},
 ]
 
-# 7. Major Urban Local Bodies & Municipal Corporations
+# 14. Major Urban Local Bodies & Municipal Corporations
 MAJOR_MUNICIPAL_CORPORATIONS = [
     {"name": "Brihanmumbai Municipal Corporation (BMC)", "domain": "portal.mcgm.gov.in", "tags": ["ulb", "mumbai", "maharashtra"]},
     {"name": "Municipal Corporation of Delhi (MCD)", "domain": "mcdonline.nic.in", "tags": ["ulb", "delhi"]},
@@ -355,7 +465,7 @@ MAJOR_MUNICIPAL_CORPORATIONS = [
     {"name": "Vijayawada Municipal Corporation", "domain": "vmc.ap.gov.in", "tags": ["ulb", "vijayawada", "ap"]},
 ]
 
-# 8. Space, Atomic Energy, Earth Sciences & Scientific Research
+# 15. Space, Atomic Energy, Earth Sciences & Scientific Research
 SPACE_ATOMIC_ENERGY_AND_EARTH_SCIENCES = [
     # ISRO & Space Subdomains
     {"name": "ISRO Headquarters", "domain": "isro.gov.in", "tags": ["space", "isro"]},
@@ -378,18 +488,23 @@ SPACE_ATOMIC_ENERGY_AND_EARTH_SCIENCES = [
     {"name": "Variable Energy Cyclotron Centre (VECC)", "domain": "vecc.gov.in", "tags": ["atomic", "physics"]},
     {"name": "Raja Ramanna Centre for Advanced Technology", "domain": "rrcat.gov.in", "tags": ["atomic", "lasers"]},
     {"name": "Atomic Energy Regulatory Board (AERB)", "domain": "aerb.gov.in", "tags": ["atomic", "safety"]},
+    {"name": "Nuclear Power Corporation of India (NPCIL)", "domain": "npcil.nic.in", "tags": ["atomic", "power"]},
+    {"name": "Nuclear Fuel Complex (NFC)", "domain": "nfc.gov.in", "tags": ["atomic", "fuel"]},
+    {"name": "Heavy Water Board (HWB)", "domain": "hwb.gov.in", "tags": ["atomic", "water"]},
+    {"name": "Atomic Minerals Directorate (AMD)", "domain": "amd.gov.in", "tags": ["atomic", "minerals"]},
     {"name": "India Meteorological Department (IMD Weather)", "domain": "imd.gov.in", "tags": ["weather", "earth_sciences"]},
     {"name": "Indian National Centre for Ocean Info Services", "domain": "incois.gov.in", "tags": ["ocean", "tsunami"]},
     {"name": "National Centre for Polar & Ocean Research", "domain": "ncpor.res.in", "tags": ["polar", "antarctica"]},
     {"name": "Indian Institute of Tropical Meteorology", "domain": "iitm.res.in", "tags": ["climate", "monsoon"]},
 ]
 
-# 9. National Examinations, Admissions & Academic Services
+# 16. National Examinations, Admissions & Academic Services
 EXAMINATIONS_AND_ADMISSIONS_SERVICES = [
     {"name": "National Testing Agency (NTA)", "domain": "nta.ac.in", "tags": ["exams", "admissions"]},
     {"name": "JEE (Main) Examination Portal", "domain": "jeemain.nta.ac.in", "tags": ["exams", "jee"]},
     {"name": "NEET (UG) Medical Examination Portal", "domain": "neet.nta.ac.in", "tags": ["exams", "neet"]},
     {"name": "CUET (UG) Common University Entrance Test", "domain": "cuetug.nta.ac.in", "tags": ["exams", "cuet"]},
+    {"name": "CUET (PG) Common University Entrance Test", "domain": "cuetpg.nta.ac.in", "tags": ["exams", "cuet_pg"]},
     {"name": "UGC-NET Examination Portal", "domain": "ugcnet.nta.ac.in", "tags": ["exams", "ugcnet"]},
     {"name": "NIC Examination Services Portal", "domain": "examinationservices.nic.in", "tags": ["exams", "nic"]},
     {"name": "CBSE Exam Results Portal", "domain": "results.cbse.nic.in", "tags": ["exams", "results"]},
@@ -398,12 +513,19 @@ EXAMINATIONS_AND_ADMISSIONS_SERVICES = [
     {"name": "Medical Counselling Committee (MCC NEET)", "domain": "mcc.nic.in", "tags": ["admissions", "medical"]},
     {"name": "National Board of Examinations (NBE/NBEMS)", "domain": "natboard.edu.in", "tags": ["exams", "medical"]},
     {"name": "SWAYAM Free Online Education Portal", "domain": "swayam.gov.in", "tags": ["education", "mooc"]},
+    {"name": "SWAYAM Prabha DTH Channels Portal", "domain": "swayamprabha.gov.in", "tags": ["education", "dth"]},
+    {"name": "DIKSHA National Teacher Education Portal", "domain": "diksha.gov.in", "tags": ["education", "diksha"]},
     {"name": "National Academic Depository (NAD)", "domain": "nad.gov.in", "tags": ["education", "degrees"]},
+    {"name": "Academic Bank of Credits (ABC)", "domain": "abc.gov.in", "tags": ["education", "credits"]},
+    {"name": "Samarth Higher Education ERP", "domain": "samarth.edu.in", "tags": ["education", "samarth"]},
+    {"name": "National Digital Library of India (NDLI)", "domain": "ndl.gov.in", "tags": ["education", "library"]},
+    {"name": "Shodhganga Theses Repository", "domain": "shodhganga.inflibnet.ac.in", "tags": ["education", "research"]},
+    {"name": "INFLIBNET Centre", "domain": "inflibnet.ac.in", "tags": ["education", "library_network"]},
     {"name": "AICTE Approval & Regulation Portal", "domain": "aicte-india.org", "tags": ["education", "technical"]},
     {"name": "University Grants Commission (UGC)", "domain": "ugc.ac.in", "tags": ["education", "higher"]},
 ]
 
-# 10. Government Hospitals, AIIMS & Health Bodies
+# 17. Government Hospitals, AIIMS & Health Bodies
 GOVERNMENT_HOSPITALS_AND_HEALTH = [
     # AIIMS Network
     {"name": "AIIMS New Delhi", "domain": "aiims.edu", "tags": ["hospital", "aiims", "central"]},
@@ -446,7 +568,7 @@ GOVERNMENT_HOSPITALS_AND_HEALTH = [
     {"name": "GMC Jammu", "domain": "gmcjammu.nic.in", "tags": ["hospital", "state_medical"]},
 ]
 
-# 11. Government School Systems (KVS, NVS, Sainik, EMRS)
+# 18. Government School Systems (KVS, NVS, Sainik, EMRS)
 GOVERNMENT_SCHOOLS_AND_SYSTEMS = [
     # KVS Headquarters & Regional Offices
     {"name": "Kendriya Vidyalaya Sangathan (KVS HQ)", "domain": "kvsangathan.nic.in", "tags": ["school_system", "central"]},
@@ -501,7 +623,7 @@ GOVERNMENT_SCHOOLS_AND_SYSTEMS = [
     {"name": "Delhi Directorate of Education (Govt Schools)", "domain": "edudel.nic.in", "tags": ["school_system", "state_govt"]},
 ]
 
-# 12. Public Central & State Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
+# 19. Public Central & State Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
 NATIONAL_ACADEMIC_AND_RESEARCH = [
     # IITs (23)
     {"name": "IIT Bombay", "domain": "iitb.ac.in"},
@@ -597,7 +719,7 @@ NATIONAL_ACADEMIC_AND_RESEARCH = [
     {"name": "IARI Pusa Delhi", "domain": "iari.res.in"},
 ]
 
-# 13. Law Enforcement, CAPFs & Investigative Agencies
+# 20. Law Enforcement, CAPFs & Investigative Agencies
 LAW_ENFORCEMENT_AND_SECURITY = [
     # CAPFs & Paramilitary
     {"name": "Border Security Force (BSF)", "domain": "bsf.gov.in", "tags": ["capf", "security"]},
@@ -643,7 +765,7 @@ LAW_ENFORCEMENT_AND_SECURITY = [
     {"name": "Goa Police", "domain": "goapolice.gov.in", "tags": ["state_police"]},
 ]
 
-# 14. All 25 High Courts & National Tribunals
+# 21. All 25 High Courts & National Tribunals
 HIGH_COURTS_AND_TRIBUNALS = [
     {"name": "Allahabad High Court", "domain": "allahabadhighcourt.in"},
     {"name": "Bombay High Court", "domain": "bombayhighcourt.nic.in"},
@@ -678,7 +800,7 @@ HIGH_COURTS_AND_TRIBUNALS = [
     {"name": "National Consumer Commission (NCDRC)", "domain": "ncdrc.nic.in"},
 ]
 
-# 15. All 785+ Indian Districts organized by State/UT
+# 22. All 785+ Indian Districts organized by State/UT
 ALL_DISTRICTS_BY_STATE = {
     "Uttar Pradesh": [
         "agra", "aligarh", "ambedkarnagar", "amethi", "amroha", "auraiya", "ayodhya", "azamgarh",
@@ -836,7 +958,7 @@ ALL_DISTRICTS_BY_STATE = {
     "Lakshadweep": ["lakshadweep"]
 }
 
-# 16. State Government Department Subdomains (25 departments per State/UT)
+# 23. State Government Department Subdomains (25 departments per State/UT)
 KEY_STATE_DEPARTMENTS = [
     "police", "revenue", "education", "health", "transport", "finance", "forest",
     "agriculture", "pwd", "wrd", "excise", "tourism", "labour", "food",
@@ -854,7 +976,7 @@ ALL_STATE_DOMAIN_ROOTS = [
     "py.gov.in", "andaman.gov.in", "chandigarh.gov.in", "daman.nic.in", "ladakh.nic.in", "lakshadweep.gov.in"
 ]
 
-# 17. Nationalized Banks, Central PSUs & Financial Institutions
+# 24. Nationalized Banks, Central PSUs & Financial Institutions
 CENTRAL_PSUS_AND_FINANCIAL = [
     {"name": "State Bank of India (SBI)", "domain": "sbi.co.in"},
     {"name": "Punjab National Bank", "domain": "pnbindia.in"},
@@ -875,7 +997,6 @@ CENTRAL_PSUS_AND_FINANCIAL = [
     {"name": "National Housing Bank (NHB)", "domain": "nhb.org.in"},
     {"name": "IRDAI", "domain": "irdai.gov.in"},
     {"name": "PFRDA", "domain": "pfrda.org.in"},
-    {"name": "IRCTC", "domain": "irctc.co.in"},
     {"name": "Indian Oil Corporation (IOCL)", "domain": "iocl.com"},
     {"name": "Oil and Natural Gas Corporation (ONGC)", "domain": "ongcindia.com"},
     {"name": "NTPC Limited", "domain": "ntpc.co.in"},
@@ -895,7 +1016,7 @@ CENTRAL_PSUS_AND_FINANCIAL = [
     {"name": "REC Limited", "domain": "recindia.nic.in"},
 ]
 
-# 18. State Public Service Commissions & Recruitment Portals
+# 25. State Public Service Commissions & Recruitment Portals
 STATE_PSCS = [
     {"name": "UP Public Service Commission", "domain": "uppsc.up.nic.in"},
     {"name": "Maharashtra Public Service Commission", "domain": "mpsc.gov.in"},
@@ -918,13 +1039,11 @@ STATE_PSCS = [
     {"name": "Uttarakhand Public Service Commission", "domain": "psc.uk.gov.in"},
     {"name": "Himachal Pradesh Public Service Commission", "domain": "hppsc.hp.gov.in"},
     {"name": "Delhi Subordinate Services Selection Board", "domain": "dsssb.delhi.gov.in"},
-    {"name": "Staff Selection Commission (SSC)", "domain": "ssc.nic.in"},
-    {"name": "Railway Recruitment Control Board", "domain": "rrcb.gov.in"},
 ]
 
 
 class DomainSeedGenerator:
-    """Generates structured seed records across all Indian governance levels (2,400+ verified seeds)."""
+    """Generates structured seed records across all Indian governance levels (2,500+ verified seeds)."""
 
     @classmethod
     def generate_all_seeds(cls) -> List[Dict[str, Any]]:
@@ -949,59 +1068,87 @@ class DomainSeedGenerator:
         for entry in CENTRAL_MINISTRIES_AND_APEX:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["central"]))
 
-        # 2. Defence, Strategic & Procurement Subdomains (tdf.drdo.gov.in, defproc.gov.in, rac.gov.in, DRDO Labs)
+        # 2. EPFO & Labour / Social Security Subdomain Matrix (unifiedportal-mem, passbook, epfigms, esic)
+        for entry in EPFO_AND_LABOUR_SERVICES:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["epfo", "labour"]))
+
+        # 3. UIDAI (Aadhaar) Subdomain Matrix
+        for entry in UIDAI_AADHAAR_ECOSYSTEM:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["aadhaar"]))
+
+        # 4. Income Tax, CBDT & Tax Administration
+        for entry in INCOME_TAX_AND_CBDT_ECOSYSTEM:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["taxation"]))
+
+        # 5. GST, CBIC & Customs Administration
+        for entry in GST_AND_CBIC_ECOSYSTEM:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["gst"]))
+
+        # 6. MCA, Patents & Corporate Regulatory Subdomains
+        for entry in MCA_AND_CORPORATE_ECOSYSTEM:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["corporate"]))
+
+        # 7. Parivahan & Transport Subdomain Ecosystem
+        for entry in PARIVAHAN_AND_TRANSPORT_ECOSYSTEM:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["transport"]))
+
+        # 8. Indian Railways Ecosystem & 21 RRBs
+        for entry in INDIAN_RAILWAYS_AND_RRBS:
+            add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["railways"]))
+
+        # 9. Defence, Strategic & Procurement Subdomains (tdf.drdo.gov.in, defproc.gov.in, rac.gov.in, 15+ DRDO Labs)
         for entry in DEFENCE_STRATEGIC_AND_PROCUREMENT:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["defence"]))
 
-        # 3. National & State e-Procurement Portals (GeM, CPPP, State eTenders)
+        # 10. National & State e-Procurement Portals (GeM, CPPP, State eTenders)
         for entry in NATIONAL_AND_STATE_E_PROCUREMENT:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value if "central" in entry.get("tags", []) or "cppp" in entry.get("tags", []) else GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["procurement"]))
 
-        # 4. National Flagship Missions & e-Services (DigiLocker, UMANG, CoWIN, ABDM, eCourts)
+        # 11. National Flagship Missions & e-Services (DigiLocker, UMANG, CoWIN, ABDM, eCourts)
         for entry in FLAGSHIP_MISSIONS_AND_CITIZEN_SERVICES:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["flagship"]))
 
-        # 5. State Land Records (Bhulekh) & e-District Portals
+        # 12. State Land Records (Bhulekh) & e-District Portals
         for entry in STATE_LAND_RECORDS_AND_E_DISTRICT:
             add_seed(entry["domain"], GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["land_records", "edistrict"]))
 
-        # 6. Major Urban Local Bodies & Municipal Corporations
+        # 13. Major Urban Local Bodies & Municipal Corporations
         for entry in MAJOR_MUNICIPAL_CORPORATIONS:
             add_seed(entry["domain"], GovernmentLevel.LOCAL_BODY.value if hasattr(GovernmentLevel, "LOCAL_BODY") else GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["ulb", "municipality"]))
 
-        # 7. Space, Atomic Energy & Earth Sciences (ISRO, NRSC, Bhuvan, BARC)
+        # 14. Space, Atomic Energy & Earth Sciences (ISRO, NRSC, Bhuvan, BARC, NPCIL)
         for entry in SPACE_ATOMIC_ENERGY_AND_EARTH_SCIENCES:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["space", "atomic"]))
 
-        # 8. National Examinations & Admissions Services (NTA, JoSAA, NEET, JEE)
+        # 15. National Examinations & Admissions Services (NTA, JoSAA, NEET, JEE, Samarth)
         for entry in EXAMINATIONS_AND_ADMISSIONS_SERVICES:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], state="Central Government", tags=entry.get("tags", ["exams"]))
 
-        # 9. State & UT Apex Portals (36)
+        # 16. State & UT Apex Portals (36)
         for state_name, info in STATES_AND_UTS.items():
             add_seed(info["domain"], GovernmentLevel.STATE_UT.value, f"Government of {state_name}", state=state_name, tags=["state_apex", info["code"].lower()])
 
-        # 10. Government Hospitals, AIIMS & Health Bodies
+        # 17. Government Hospitals, AIIMS & Health Bodies
         for entry in GOVERNMENT_HOSPITALS_AND_HEALTH:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=entry.get("tags", ["hospital"]))
 
-        # 11. Government School Systems (KVS, NVS, Sainik, EMRS)
+        # 18. Government School Systems (KVS, NVS, Sainik, EMRS)
         for entry in GOVERNMENT_SCHOOLS_AND_SYSTEMS:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=entry.get("tags", ["schools"]))
 
-        # 12. Public Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
+        # 19. Public Universities, IITs, NITs, IIMs, CSIR & ICMR Labs
         for entry in NATIONAL_ACADEMIC_AND_RESEARCH:
             add_seed(entry["domain"], GovernmentLevel.AUTONOMOUS_BODY.value if hasattr(GovernmentLevel, "AUTONOMOUS_BODY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=["higher_education", "research"])
 
-        # 13. Law Enforcement, CAPFs & Police Forces
+        # 20. Law Enforcement, CAPFs & Police Forces
         for entry in LAW_ENFORCEMENT_AND_SECURITY:
             add_seed(entry["domain"], GovernmentLevel.CENTRAL.value if "capf" in entry.get("tags", []) else GovernmentLevel.STATE_UT.value, entry["name"], tags=entry.get("tags", ["security"]))
 
-        # 14. High Courts & National Tribunals (25 High Courts + Tribunals)
+        # 21. High Courts & National Tribunals (25 High Courts + Tribunals)
         for entry in HIGH_COURTS_AND_TRIBUNALS:
             add_seed(entry["domain"], GovernmentLevel.JUDICIARY.value if hasattr(GovernmentLevel, "JUDICIARY") else GovernmentLevel.CENTRAL.value, entry["name"], tags=["judiciary", "tribunal"])
 
-        # 15. All 785+ Districts (S3WaaS Pattern: <district>.nic.in)
+        # 22. All 785+ Districts (S3WaaS Pattern: <district>.nic.in)
         for state_name, districts in ALL_DISTRICTS_BY_STATE.items():
             for dist in districts:
                 clean_dist = dist.lower().replace("-", "").replace(" ", "")
@@ -1010,18 +1157,18 @@ class DomainSeedGenerator:
                 if state_name in ["Haryana", "Punjab", "Assam", "Himachal Pradesh"]:
                     add_seed(f"{clean_dist}.dc.gov.in", GovernmentLevel.DISTRICT.value, f"Deputy Commissioner {dist.title()}", state=state_name, district=dist.title(), tags=["district", "dc_portal"])
 
-        # 16. State Government Department Subdomains (900+ portals)
+        # 23. State Government Department Subdomains (900+ portals)
         for state_root in ALL_STATE_DOMAIN_ROOTS:
             state_label = state_root.split(".")[0].upper()
             for dept in KEY_STATE_DEPARTMENTS:
                 domain = f"{dept}.{state_root}"
                 add_seed(domain, GovernmentLevel.STATE_UT.value, f"{dept.title()} Department ({state_label})", tags=["department", dept, state_label.lower()])
 
-        # 17. Nationalized Banks, Central PSUs & Financial Regulatory
+        # 24. Nationalized Banks, Central PSUs & Financial Regulatory
         for entry in CENTRAL_PSUS_AND_FINANCIAL:
             add_seed(entry["domain"], GovernmentLevel.PSU.value if hasattr(GovernmentLevel, "PSU") else GovernmentLevel.CENTRAL.value, entry["name"], tags=["psu", "financial"])
 
-        # 18. State PSCs (23)
+        # 25. State PSCs (21)
         for entry in STATE_PSCS:
             add_seed(entry["domain"], GovernmentLevel.STATE_UT.value, entry["name"], tags=["recruitment", "psc"])
 

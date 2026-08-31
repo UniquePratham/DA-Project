@@ -26,6 +26,7 @@ class DomainHarvester:
         re.compile(r"\.ernet\.in$", re.I),
         re.compile(r"\.mil\.in$", re.I),
         re.compile(r"aiims\.edu$", re.I),
+        re.compile(r"\.esic\.in$", re.I),
     ]
 
     @classmethod
