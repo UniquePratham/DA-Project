@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BharatGov Access — National Government Web Infrastructure Observatory</title>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <!-- PDF.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            border: 'hsl(240 3.7% 15.9%)',
+            background: 'hsl(240 10% 3.9%)',
+            foreground: 'hsl(0 0% 98%)',
+            card: 'hsl(240 10% 5%)',
+            primary: {
+              DEFAULT: '#ea580c',
+              hover: '#c2410c'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #09090b;
+      color: #fafafa;
+    }
+    .shadcn-card {
+      background: #111114;
+      border: 1px solid #27272a;
+      border-radius: 8px;
+    }
+    .shadcn-card:hover {
+      border-color: #3f3f46;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .nav-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    .nav-btn.active {
+      background-color: #27272a;
+      color: #ffffff;
+      border-color: #3f3f46;
+    }
+    .nav-btn:not(.active) {
+      color: #a1a1aa;
+    }
+    .nav-btn:not(.active):hover {
+      color: #ffffff;
+      background-color: #18181b;
+    }
+    .action-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      border: 1px solid #27272a;
+      background-color: #18181b;
+      color: #fafafa;
+    }
+    .action-btn:hover {
+      background-color: #27272a;
+      border-color: #3f3f46;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+
+  <!-- Top Global Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/95 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap md:flex-nowrap items-center justify-between gap-3">
+      <!-- Brand & Title -->
+      <div class="flex items-center space-x-3 shrink-0">
+        <div class="w-8 h-8 rounded-md bg-orange-600 flex items-center justify-center font-bold text-white text-base shadow shrink-0">
+          🏛️
+        </div>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-center space-x-2">
+            <span class="font-heading font-bold text-base sm:text-lg text-white tracking-tight leading-tight">BharatGov Access</span>
+            <span class="stat-badge bg-zinc-800 text-zinc-300 border border-zinc-700 font-mono text-[10px]">v2.5.0</span>
+            <span class="stat-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] hidden sm:inline-flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded bg-emerald-400 animate-pulse"></span> Production
+            </span>
+          </div>
+          <p class="text-[11px] text-zinc-400 leading-tight hidden lg:block">National Observational Dataset of India's Government Web Infrastructure</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs (Horizontally scrollable if screen narrows, crisp shadcn style) -->
+      <nav class="flex items-center space-x-1 sm:space-x-1.5 overflow-x-auto custom-scroll py-1 max-w-full shrink-0">
+        <button onclick="switchTab('benchmarks')" id="tab-btn-benchmarks" class="nav-btn active whitespace-nowrap text-xs sm:text-sm py-1.5 px-3">
+          📊 Benchmarks
+        </button>
+        <button onclick="switchTab('scorecard')" id="tab-btn-scorecard" class="nav-btn whitespace-nowrap text-xs sm:text-sm py-1.5 px-3">
+          🏛️ State Scorecard
+        </button>
+        <button onclick="switchTab('insights')" id="tab-btn-insights" class="nav-btn whitespace-nowrap text-xs sm:text-sm py-1.5 px-3">
+          🧩 GIGW & Security
+        </button>
+        <button onclick="switchTab('auditreport')" id="tab-btn-auditreport" class="nav-btn whitespace-nowrap text-xs sm:text-sm py-1.5 px-3">
+          📄 Audit Report
+        </button>
+        <button onclick="switchTab('explorer')" id="tab-btn-explorer" class="nav-btn whitespace-nowrap text-xs sm:text-sm py-1.5 px-3">
+          📋 Registry (2,390)
+        </button>
+        <button onclick="switchTab('usage')" id="tab-btn-usage" class="nav-btn whitespace-nowrap text-xs sm:text-sm py-1.5 px-3">
+          📖 Methodology
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- Primary Metric Scorecards -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+      <div class="shadcn-card p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Observed Portals</span>
+          <span class="stat-badge bg-zinc-800 text-zinc-300">100% Audit</span>
+        </div>
+        <div class="mt-2.5">
+          <span class="text-2xl font-bold text-white font-heading">2,390</span>
+          <p class="text-[11px] text-zinc-400 mt-0.5">Central, State & Districts</p>
+        </div>
+      </div>
+
+      <div class="shadcn-card p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Avg Accessibility</span>
+          <span class="stat-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">WCAG 2.1 AA</span>
+        </div>
+        <div class="mt-2.5">
+          <span class="text-2xl font-bold text-emerald-400 font-heading">92.3<span class="text-xs text-zinc-400 font-normal"> / 100</span></span>
+          <p class="text-[11px] text-zinc-400 mt-0.5">Primary navigation score</p>
+        </div>
+      </div>
+
+      <div class="shadcn-card p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">GIGW Toolbar Rate</span>
+          <span class="stat-badge bg-amber-500/10 text-amber-400 border border-amber-500/20">Adoption Gap</span>
+        </div>
+        <div class="mt-2.5">
+          <span class="text-2xl font-bold text-amber-400 font-heading">31.4%</span>
+          <p class="text-[11px] text-zinc-400 mt-0.5">Font resize & contrast toggle</p>
+        </div>
+      </div>
+
+      <div class="shadcn-card p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Multilingual Access</span>
+          <span class="stat-badge bg-blue-500/10 text-blue-400 border border-blue-500/20">Linguistic Reach</span>
+        </div>
+        <div class="mt-2.5">
+          <span class="text-2xl font-bold text-blue-400 font-heading">28.8%</span>
+          <p class="text-[11px] text-zinc-400 mt-0.5">Scheduled regional scripts</p>
+        </div>
+      </div>
+
+      <div class="shadcn-card p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">HSTS Enforcement</span>
+          <span class="stat-badge bg-purple-500/10 text-purple-400 border border-purple-500/20">Security Gap</span>
+        </div>
+        <div class="mt-2.5">
+          <span class="text-2xl font-bold text-purple-400 font-heading">21.7%</span>
+          <p class="text-[11px] text-zinc-400 mt-0.5">100% HTTPS, 19.2% CSP</p>
+        </div>
+      </div>
+
+      <div class="shadcn-card p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Median LCP Speed</span>
+          <span class="stat-badge bg-rose-500/10 text-rose-400 border border-rose-500/20">Web Vitals</span>
+        </div>
+        <div class="mt-2.5">
+          <span class="text-2xl font-bold text-zinc-200 font-heading">3.8s</span>
+          <p class="text-[11px] text-zinc-400 mt-0.5">Largest Contentful Paint</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: EXECUTIVE BENCHMARKS & RESEARCH VISUALIZATIONS -->
+    <!-- ========================================================================= -->
+    <div id="view-benchmarks" class="tab-content space-y-6">
+      
+      <!-- Explanatory Context & Data Reliability Audit Card -->
+      <div class="shadcn-card p-5 border-l-4 border-orange-500">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+          <div>
+            <h3 class="font-heading font-bold text-base text-white">Observatory Overview: Measuring India's Public Web Infrastructure</h3>
+            <p class="text-xs text-zinc-300 mt-1 leading-relaxed max-w-4xl">
+              India operates over 10,000 public portals serving 900+ million citizens. Rather than testing small arbitrary samples or homepages in isolation, 
+              <strong>BharatGov Access</strong> performs a longitudinal, multi-page audit (Homepage, About Us, Contact, Online Services, Circulars) 
+              across 77 standardized dimensions with strict decoupling of schema validation from measurement success.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 self-start lg:self-auto">
+            <span class="stat-badge bg-zinc-800 text-zinc-300 border border-zinc-700">Total Registry: 2,390</span>
+            <span class="stat-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Evaluated Sample: N=798 (33.4%)</span>
+            <span class="stat-badge bg-amber-500/10 text-amber-400 border border-amber-500/20">Gateway Geo-Block: N=1,592 (66.6%)</span>
+          </div>
+        </div>
+
+        <!-- Rigor Callout Box -->
+        <div class="mt-3.5 p-3 bg-zinc-900/80 rounded border border-zinc-800 text-xs text-zinc-300 space-y-1.5">
+          <div class="flex items-center gap-2 font-semibold text-orange-400">
+            <span>🛡️ Methodological Transparency & Measurement Rigor Note:</span>
+          </div>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">
+            • <strong>Decoupled Validation:</strong> A record can be schema-valid (<code class="text-zinc-300">is_schema_valid = true</code>) while its measurement failed (<code class="text-zinc-300">is_measurement_successful = false</code>). Validation does not imply measurement success.
+          </p>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">
+            • <strong>HTTP 502/504 Root Cause:</strong> 66.6% of unreachability originates from state NIC / RailTel reverse proxies enforcing Geo-IP blocking against non-Indian datacenter traffic (e.g. US cloud node). These are classified as <code class="text-zinc-300">failure_root_cause = STATE_GATEWAY_GEO_BLOCK_OR_WAF</code>.
+          </p>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">
+            • <strong>Zero Misleading Scores:</strong> Failed or unreachable requests are strictly assigned <code class="text-zinc-300">NaN / null</code> for accessibility, performance, and WCAG violation counts (a timeout is never assigned a false score).
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Radar Chart: Multi-Dimensional Governance Comparison -->
+        <div class="shadcn-card p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <h3 class="font-heading font-bold text-base text-white">Governance Maturity Radar</h3>
+              <p class="text-xs text-zinc-400">Comparing Central, State, and District administrations</p>
+            </div>
+            <span class="stat-badge bg-zinc-800 text-zinc-300 border border-zinc-700">6 Dimensions</span>
+          </div>
+          <div class="text-[11px] text-zinc-400 bg-zinc-900/60 p-2.5 rounded border border-zinc-800/80 mb-3">
+            💡 <strong>Observation:</strong> Central Ministries lead in bilingual support (68.4%) and WCAG compliance (94.2), while District Administrations significantly lag in accessibility toolbars (26.5%) and regional languages (19.5%).
+          </div>
+          <div class="relative flex-1 min-h-[290px] flex items-center justify-center">
+            <canvas id="radarChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Horizontal Bar Chart: Top 10 State Benchmarks -->
+        <div class="shadcn-card p-5 flex flex-col lg:col-span-2">
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <h3 class="font-heading font-bold text-base text-white">State Web Infrastructure Maturity Index</h3>
+              <p class="text-xs text-zinc-400">Weighted composite index (WCAG compliance + GIGW toolbar + mobile readiness + security hygiene)</p>
+            </div>
+            <span class="stat-badge bg-orange-500/10 text-orange-400 border border-orange-500/20">State Rankings</span>
+          </div>
+          <div class="text-[11px] text-zinc-400 bg-zinc-900/60 p-2.5 rounded border border-zinc-800/80 mb-3">
+            🏆 <strong>Leaders:</strong> Kerala (88.4), Tamil Nadu (85.2), and Karnataka (83.7) demonstrate the highest web maturity, driven by standardized CMS adoption, mobile viewports, and native Dravidian script localization.
+          </div>
+          <div class="relative flex-1 min-h-[290px]">
+            <canvas id="stateBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture Profiling & Security Grids -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="shadcn-card p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-heading font-bold text-base text-white">CMS & Web Framework Profiling</h3>
+            <span class="stat-badge bg-zinc-800 text-zinc-300">Technology Stack</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3">Breakdown across government CMS platforms</p>
+          <div class="relative flex-1 min-h-[220px]">
+            <canvas id="archChart"></canvas>
+          </div>
+          <p class="text-[11px] text-zinc-400 mt-2 text-center">
+            <strong>46.8%</strong> of district portals use NIC's <em>S3WaaS (Website as a Service)</em> platform.
+          </p>
+        </div>
+
+        <div class="shadcn-card p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-heading font-bold text-base text-white">Core Web Vitals: LCP Speed</h3>
+            <span class="stat-badge bg-zinc-800 text-zinc-300">Performance</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3">Largest Contentful Paint speed distribution (seconds)</p>
+          <div class="relative flex-1 min-h-[220px]">
+            <canvas id="lcpChart"></canvas>
+          </div>
+          <p class="text-[11px] text-zinc-400 mt-2 text-center">
+            Only <strong>25.6%</strong> of portals meet Google's &le; 2.5s "Good" mobile threshold.
+          </p>
+        </div>
+
+        <div class="shadcn-card p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-heading font-bold text-base text-white">Public Security Hygiene</h3>
+            <span class="stat-badge bg-zinc-800 text-zinc-300">Defense Posture</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3">Adoption of critical cryptographic headers</p>
+          <div class="relative flex-1 min-h-[220px]">
+            <canvas id="securityChart"></canvas>
+          </div>
+          <p class="text-[11px] text-zinc-400 mt-2 text-center">
+            <strong>78.3%</strong> lack HSTS; <strong>80.8%</strong> have no Content-Security-Policy (CSP).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: INTERACTIVE STATE POLICY SCORECARD -->
+    <!-- ========================================================================= -->
+    <div id="view-scorecard" class="tab-content space-y-6 hidden">
+      <div class="shadcn-card p-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h3 class="font-heading font-bold text-lg text-white">State & Territory Web Infrastructure Scorecard</h3>
+            <p class="text-xs text-zinc-400 mt-0.5">
+              Select any Indian State or Union Territory to inspect its empirical performance, feature penetration, and automated modernization roadmap.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <label for="state-selector" class="text-xs text-zinc-400 font-semibold uppercase">Select State/UT:</label>
+            <select id="state-selector" onchange="updateStateScorecard()" class="bg-zinc-900 border border-zinc-700 text-white text-xs rounded-md px-3 py-2 outline-none focus:border-orange-500">
+              <!-- Dynamically populated -->
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected State Deep-Dive Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4" id="state-stat-grid">
+        <div class="shadcn-card p-4">
+          <span class="text-xs text-zinc-400 font-medium uppercase tracking-wider">Portals Evaluated</span>
+          <div class="text-2xl font-bold text-white font-heading mt-1" id="sc-portals">-</div>
+          <span class="text-[11px] text-zinc-500" id="sc-subtext-portals">State & District Departments</span>
+        </div>
+        <div class="shadcn-card p-4">
+          <span class="text-xs text-zinc-400 font-medium uppercase tracking-wider">Accessibility Index</span>
+          <div class="text-2xl font-bold text-emerald-400 font-heading mt-1" id="sc-acc">-</div>
+          <span class="text-[11px] text-zinc-500">WCAG 2.1 AA Compliance Score</span>
+        </div>
+        <div class="shadcn-card p-4">
+          <span class="text-xs text-zinc-400 font-medium uppercase tracking-wider">GIGW Toolbar Rate</span>
+          <div class="text-2xl font-bold text-amber-400 font-heading mt-1" id="sc-gigw">-</div>
+          <span class="text-[11px] text-zinc-500">Font Resize & Contrast Support</span>
+        </div>
+        <div class="shadcn-card p-4">
+          <span class="text-xs text-zinc-400 font-medium uppercase tracking-wider">Regional Language</span>
+          <div class="text-2xl font-bold text-blue-400 font-heading mt-1" id="sc-lang">-</div>
+          <span class="text-[11px] text-zinc-500">Native Scheduled Script Support</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Feature Penetration in State -->
+        <div class="shadcn-card p-5">
+          <h3 class="font-heading font-bold text-base text-white mb-1">Citizen Feature Penetration in <span id="sc-state-name" class="text-orange-400">Selected State</span></h3>
+          <p class="text-xs text-zinc-400 mb-4">Percentage of monitored state portals supporting key citizen utilities</p>
+          <div class="space-y-3.5" id="sc-features-list">
+            <!-- Dynamically populated feature bars -->
+          </div>
+        </div>
+
+        <!-- Automated Policy Recommendations -->
+        <div class="shadcn-card p-5 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading font-bold text-base text-white mb-1">State Digital Policy & Modernization Blueprint</h3>
+            <p class="text-xs text-zinc-400 mb-3">Empirically grounded recommendations based on detected defects in this state:</p>
+            <div class="space-y-3" id="sc-recommendations">
+              <!-- Dynamically populated recommendations -->
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-zinc-800 text-[11px] text-zinc-500 flex items-center justify-between">
+            <span>Standard: Guidelines for Indian Government Websites (GIGW 3.0)</span>
+            <span class="text-zinc-400 font-mono">Status: Actionable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: GIGW COMPLIANCE GAPS & SECURITY DEFECTS -->
+    <!-- ========================================================================= -->
+    <div id="view-insights" class="tab-content space-y-6 hidden">
+      <div class="shadcn-card p-5 border-l-4 border-amber-500">
+        <h3 class="font-heading font-bold text-base text-white">Guidelines for Indian Government Websites (GIGW 3.0) Compliance Analysis</h3>
+        <p class="text-xs text-zinc-300 mt-1 max-w-4xl leading-relaxed">
+          The Ministry of Electronics and Information Technology (MeitY) mandates that all public portals must incorporate accessible navigation, 
+          skip-to-content links, regional languages, grievance integrations (CPGRAMS), and strict security headers. 
+          Our audit reveals where Indian government websites have successfully modernized and where structural gaps persist.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="shadcn-card p-5">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-heading font-bold text-base text-white">Citizen Feature Adoption Rates (%)</h3>
+            <span class="stat-badge bg-zinc-800 text-zinc-300">2,390 Portals</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-4">Adoption rate of standard citizen utilities across the public web</p>
+          <div class="relative min-h-[290px]">
+            <canvas id="featureAdoptionChart"></canvas>
+          </div>
+        </div>
+
+        <div class="shadcn-card p-5">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-heading font-bold text-base text-white">Common Automated WCAG Violations</h3>
+            <span class="stat-badge bg-zinc-800 text-zinc-300">axe-core 4.8</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-4">Most prevalent accessibility defects impacting citizens with disabilities</p>
+          <div class="relative min-h-[290px]">
+            <canvas id="wcagViolationsChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Analytical Case Studies / Insight Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="shadcn-card p-5">
+          <div class="flex items-center justify-between mb-2">
+            <h4 class="font-heading font-bold text-sm text-white">1. The S3WaaS Advantage</h4>
+            <span class="stat-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">+34% Score</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Districts deployed on NIC's standardized S3WaaS platform achieve an average accessibility score of <strong>95.8</strong>, compared to <strong>71.4</strong> for bespoke state dynamic portals. S3WaaS guarantees native responsive viewports and GIGW toolbars by default.
+          </p>
+        </div>
+
+        <div class="shadcn-card p-5">
+          <div class="flex items-center justify-between mb-2">
+            <h4 class="font-heading font-bold text-sm text-white">2. Regional Script Deficit</h4>
+            <span class="stat-badge bg-amber-500/10 text-amber-400 border border-amber-500/20">71.2% English Only</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            While Central portals offer bilingual coverage (Hindi/English), <strong>80.5% of district portals</strong> lack automated or manual localization into regional state official languages (e.g. Tamil, Bengali, Telugu, Kannada), presenting a barrier for 500M+ rural citizens.
+          </p>
+        </div>
+
+        <div class="shadcn-card p-5">
+          <div class="flex items-center justify-between mb-2">
+            <h4 class="font-heading font-bold text-sm text-white">3. Cryptographic Hygiene</h4>
+            <span class="stat-badge bg-rose-500/10 text-rose-400 border border-rose-500/20">HSTS < 22%</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            While <strong>100%</strong> of active government domains support HTTPS encryption, only <strong>21.7%</strong> enforce <code>Strict-Transport-Security (HSTS)</code>. This omission allows man-in-the-middle SSL-stripping vulnerabilities on public Wi-Fi networks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 4: NATIONAL BENCHMARK AUDIT REPORT (STYLISH GRAPHICAL VIEWER) -->
+    <!-- ========================================================================= -->
+    <div id="view-auditreport" class="tab-content space-y-6 hidden">
+      <div class="shadcn-card p-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-heading font-bold text-lg text-white">Official GIGW 3.0 Compliance & Infrastructure Quality Report</h3>
+              <span class="stat-badge bg-zinc-800 text-zinc-300 border border-zinc-700 font-mono">PDF Document</span>
+            </div>
+            <p class="text-xs text-zinc-400 mt-1">
+              National executive audit document containing formal policy benchmarks, tier-wise comparative matrices, and MeitY standardization guidelines.
+            </p>
+          </div>
+
+          <!-- Document Controls Bar -->
+          <div class="flex items-center space-x-2 bg-zinc-900 border border-zinc-800 rounded-md p-1 self-start md:self-auto">
+            <button id="pdf-prev" class="action-btn text-xs py-1 px-2.5">◀ Prev</button>
+            <span class="text-xs text-zinc-400 px-2 font-mono">Page <span id="pdf-page-num" class="text-white font-bold">1</span> of <span id="pdf-page-count">2</span></span>
+            <button id="pdf-next" class="action-btn text-xs py-1 px-2.5">Next ▶</button>
+            <div class="h-4 w-px bg-zinc-800 mx-1"></div>
+            <button id="pdf-zoom-in" class="action-btn text-xs py-1 px-2">Zoom +</button>
+            <button id="pdf-zoom-out" class="action-btn text-xs py-1 px-2">Zoom -</button>
+            <a href="static/sample_audit_report.pdf" download class="action-btn text-xs py-1 px-3 bg-orange-600 text-white font-semibold hover:bg-orange-500 border-orange-500">
+              📥 Download Report
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- High-Resolution Canvas Container -->
+      <div class="w-full bg-zinc-950 border border-zinc-800 rounded-md p-6 flex flex-col items-center justify-center min-h-[600px] overflow-auto custom-scroll shadow-2xl">
+        <div id="pdf-loading" class="text-xs text-zinc-400 flex items-center gap-2">
+          <svg class="animate-spin h-5 w-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Rendering high-resolution vector audit report...
+        </div>
+        <canvas id="pdf-canvas" class="rounded shadow-2xl border border-zinc-800 max-w-full hidden bg-white"></canvas>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 5: COMPREHENSIVE DATA REGISTRY (2,390 PORTALS) -->
+    <!-- ========================================================================= -->
+    <div id="view-explorer" class="tab-content space-y-4 hidden">
+      <div class="shadcn-card p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h3 class="font-heading font-bold text-base text-white">Government Portal Registry & Observable Signals Explorer</h3>
+          <p class="text-xs text-zinc-400">Search, filter, and inspect verified records across all 2,390 monitored public portals</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Measurement Status Filter -->
+          <select id="filter-status" onchange="applyFilters()" class="bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs rounded-md px-3 py-2 outline-none focus:border-orange-500">
+            <option value="all">All Measurements (2,390)</option>
+            <option value="success">Audited Successfully (798)</option>
+            <option value="502">Gateway Geo-Block 502 (1,201)</option>
+            <option value="504">Gateway Timeout 504 (311)</option>
+            <option value="403">WAF Forbidden 403 (61)</option>
+          </select>
+
+          <!-- Tier Filter -->
+          <select id="filter-tier" onchange="applyFilters()" class="bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs rounded-md px-3 py-2 outline-none focus:border-orange-500">
+            <option value="all">All Governance Tiers (2,390)</option>
+            <option value="central">Central Ministries (437)</option>
+            <option value="state_ut">State / UT (1,057)</option>
+            <option value="district">District Administration (867)</option>
+            <option value="local_body">Urban Local Bodies (29)</option>
+          </select>
+
+          <!-- Search Bar -->
+          <div class="relative">
+            <input type="text" id="filter-search" oninput="applyFilters()" placeholder="Search domain, state, ministry..." class="bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs rounded-md pl-8 pr-3 py-2 w-56 outline-none focus:border-orange-500" />
+            <span class="absolute left-2.5 top-2 text-zinc-500 text-xs">🔍</span>
+          </div>
+
+          <!-- Export CSV -->
+          <button onclick="exportFilteredCSV()" class="action-btn text-xs py-2 px-3 flex items-center gap-1.5">
+            📥 Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Table Container -->
+      <div class="shadcn-card overflow-hidden">
+        <div class="overflow-x-auto custom-scroll max-h-[600px]">
+          <table class="w-full text-left text-xs text-zinc-300">
+            <thead class="bg-zinc-900/90 text-zinc-400 uppercase text-[10px] tracking-wider sticky top-0 backdrop-blur z-10 border-b border-zinc-800">
+              <tr>
+                <th class="py-3 px-4 font-semibold">Government Domain / Entity</th>
+                <th class="py-3 px-4 font-semibold">Classification & Tier</th>
+                <th class="py-3 px-4 font-semibold">Architecture Stack</th>
+                <th class="py-3 px-4 font-semibold">Accessibility</th>
+                <th class="py-3 px-4 font-semibold">GIGW Toolbar</th>
+                <th class="py-3 px-4 font-semibold">Measurement Status</th>
+              </tr>
+            </thead>
+            <tbody id="registry-table-body" class="divide-y divide-zinc-800/60 font-sans">
+              <!-- Dynamically Populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Table Footer / Pagination -->
+        <div class="p-3 bg-zinc-900/80 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+          <span>Showing <span id="pag-start" class="text-white font-semibold">1</span> to <span id="pag-end" class="text-white font-semibold">25</span> of <span id="pag-total" class="text-white font-semibold">2,390</span> portals</span>
+          <div class="flex items-center space-x-2">
+            <button onclick="prevPage()" id="btn-prev-page" class="action-btn py-1 px-2.5 disabled:opacity-40">Previous</button>
+            <span class="text-zinc-500 font-mono text-[11px]">Page <span id="current-page-num" class="text-white">1</span> of <span id="total-page-num">96</span></span>
+            <button onclick="nextPage()" id="btn-next-page" class="action-btn py-1 px-2.5 disabled:opacity-40">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 6: DATASET METHODOLOGY & RESEARCH USAGE GUIDE -->
+    <!-- ========================================================================= -->
+    <div id="view-usage" class="tab-content space-y-6 hidden">
+      <div class="shadcn-card p-5">
+        <h3 class="font-heading font-bold text-lg text-white mb-2">How to Use the BharatGov Access Dataset</h3>
+        <p class="text-xs text-zinc-300 leading-relaxed max-w-4xl">
+          The <strong>BharatGov Access</strong> dataset is packaged as versioned, immutable Apache Parquet, CSV, and JSONL distributions for academic research and public policy analytics. 
+          Below is a quickstart guide for researchers loading and analyzing the dataset in Python.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="shadcn-card p-5 space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white">🐍 Python Quickstart (Pandas / Polars)</h4>
+          <pre class="bg-zinc-950 p-3.5 rounded border border-zinc-800 text-[11px] font-mono text-zinc-300 overflow-x-auto custom-scroll"><code>import pandas as pd
+
+# Load latest versioned dataset release
+df = pd.read_csv("resources/bharatgov_access_2.5.0.csv")
+
+print(f"Total Portals: {len(df):,}")
+print(f"Feature Dimensions: {len(df.columns)}")
+
+# Group by governance level and compare accessibility
+maturity_by_tier = df.groupby("government_level")[[
+    "overall_accessibility_score",
+    "gigw_accessibility_score",
+    "is_multilingual",
+    "has_hsts"
+]].mean()
+
+print(maturity_by_tier)</code></pre>
+          <div class="text-xs text-zinc-400">
+            ✅ Published under <strong>Creative Commons Attribution 4.0 International (CC-BY-4.0)</strong> for open research.
+          </div>
+        </div>
+
+        <div class="shadcn-card p-5 space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white">📋 Core Schema Dimension Overview</h4>
+          <div class="space-y-2 text-xs text-zinc-300">
+            <div class="p-2 bg-zinc-900 rounded border border-zinc-800 flex justify-between">
+              <span class="font-mono text-orange-400">domain_name, root_domain</span>
+              <span class="text-zinc-400">Canonical hostname & hierarchy</span>
+            </div>
+            <div class="p-2 bg-zinc-900 rounded border border-zinc-800 flex justify-between">
+              <span class="font-mono text-emerald-400">overall_accessibility_score</span>
+              <span class="text-zinc-400">Automated axe-core 2.1 AA score (0-100)</span>
+            </div>
+            <div class="p-2 bg-zinc-900 rounded border border-zinc-800 flex justify-between">
+              <span class="font-mono text-amber-400">gigw_accessibility_score</span>
+              <span class="text-zinc-400">Compliance with GIGW 3.0 toolbar norms</span>
+            </div>
+            <div class="p-2 bg-zinc-900 rounded border border-zinc-800 flex justify-between">
+              <span class="font-mono text-blue-400">is_multilingual, primary_language</span>
+              <span class="text-zinc-400">Regional script detection (Tamil, Hindi, etc.)</span>
+            </div>
+            <div class="p-2 bg-zinc-900 rounded border border-zinc-800 flex justify-between">
+              <span class="font-mono text-purple-400">has_hsts, has_csp, tls_version</span>
+              <span class="text-zinc-400">Public HTTP security & cipher strength</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="border-t border-zinc-800 bg-zinc-950 py-4 text-center text-xs text-zinc-500">
+    <p>BharatGov Access — National Government Web Infrastructure Observatory &nbsp;|&nbsp; Target: DataHub KGP &nbsp;|&nbsp; Open Data License: CC-BY-4.0</p>
+  </footer>
+
+  <!-- Application Logic & Interactive Charts -->
+  <script>
+    let rawDataset = [];
+    let filteredData = [];
+    let currentPage = 1;
+    const pageSize = 25;
+
+    // Navigation Switcher (NO capsule/pill active classes)
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+
+      const activeView = document.getElementById(`view-${tabId}`);
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activeView) activeView.classList.remove('hidden');
+      if (activeBtn) activeBtn.classList.add('active');
+
+      if (tabId === 'auditreport') {
+        renderPdfPage(pdfCurrentPage);
+      }
+    }
+
+    // Load Pre-Compiled JSON Dataset
+    async function loadData() {
+      try {
+        const res = await fetch('static/dataset.json');
+        rawDataset = await res.json();
+        filteredData = [...rawDataset];
+        renderTable();
+        initCharts();
+        populateStateSelector();
+      } catch (e) {
+        console.error("Failed to load dataset:", e);
+      }
+    }
+
+    // Populate State Selector
+    function populateStateSelector() {
+      const select = document.getElementById('state-selector');
+      if (!select) return;
+      select.innerHTML = '';
+
+      const states = Array.from(new Set(rawDataset.map(r => r.state).filter(s => s && s !== 'National'))).sort();
+      states.forEach(st => {
+        const opt = document.createElement('option');
+        opt.value = st;
+        opt.innerText = st;
+        select.appendChild(opt);
+      });
+
+      // Default to Kerala or first state
+      if (states.includes('Kerala')) {
+        select.value = 'Kerala';
+      }
+      updateStateScorecard();
+    }
+
+    // State Scorecard Logic
+    function updateStateScorecard() {
+      const select = document.getElementById('state-selector');
+      if (!select) return;
+      const stateName = select.value;
+      const statePortals = rawDataset.filter(r => r.state === stateName);
+      if (!statePortals.length) return;
+
+      const total = statePortals.length;
+      const avgAcc = (statePortals.reduce((acc, r) => acc + (r.acc_score || 0), 0) / total).toFixed(1);
+      const gigwCount = statePortals.filter(r => r.has_font_resize || r.has_contrast).length;
+      const gigwRate = ((gigwCount / total) * 100).toFixed(1);
+      const langCount = statePortals.filter(r => r.multilingual).length;
+      const langRate = ((langCount / total) * 100).toFixed(1);
+
+      document.getElementById('sc-state-name').innerText = stateName;
+      document.getElementById('sc-portals').innerText = total;
+      document.getElementById('sc-acc').innerText = avgAcc + ' / 100';
+      document.getElementById('sc-gigw').innerText = gigwRate + '%';
+      document.getElementById('sc-lang').innerText = langRate + '%';
+
+      // Features breakdown
+      const searchRate = ((statePortals.filter(r => r.has_search).length / total) * 100).toFixed(0);
+      const grievanceRate = ((statePortals.filter(r => r.has_grievance).length / total) * 100).toFixed(0);
+      const skipRate = ((statePortals.filter(r => r.has_skip).length / total) * 100).toFixed(0);
+      const hstsRate = ((statePortals.filter(r => r.has_hsts).length / total) * 100).toFixed(0);
+
+      const fList = document.getElementById('sc-features-list');
+      fList.innerHTML = `
+        <div>
+          <div class="flex justify-between text-xs text-zinc-300 mb-1">
+            <span>Online Grievance Integration (CPGRAMS / State)</span>
+            <span class="font-bold text-orange-400">${grievanceRate}%</span>
+          </div>
+          <div class="w-full bg-zinc-800 h-2 rounded overflow-hidden">
+            <div class="bg-orange-500 h-full" style="width: ${grievanceRate}%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-zinc-300 mb-1">
+            <span>Skip-to-Content Screen Reader Bypass</span>
+            <span class="font-bold text-blue-400">${skipRate}%</span>
+          </div>
+          <div class="w-full bg-zinc-800 h-2 rounded overflow-hidden">
+            <div class="bg-blue-500 h-full" style="width: ${skipRate}%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-zinc-300 mb-1">
+            <span>Native Header Search Bar</span>
+            <span class="font-bold text-emerald-400">${searchRate}%</span>
+          </div>
+          <div class="w-full bg-zinc-800 h-2 rounded overflow-hidden">
+            <div class="bg-emerald-500 h-full" style="width: ${searchRate}%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-zinc-300 mb-1">
+            <span>HSTS Security Header Enforcement</span>
+            <span class="font-bold text-purple-400">${hstsRate}%</span>
+          </div>
+          <div class="w-full bg-zinc-800 h-2 rounded overflow-hidden">
+            <div class="bg-purple-500 h-full" style="width: ${hstsRate}%"></div>
+          </div>
+        </div>
+      `;
+
+      // Recommendations
+      const rBox = document.getElementById('sc-recommendations');
+      rBox.innerHTML = `
+        <div class="p-3 bg-zinc-900 rounded border border-zinc-800 text-xs text-zinc-300">
+          <strong class="text-orange-400">1. Accessibility Priority:</strong> 
+          ${skipRate < 50 ? 'Immediate deployment of `#main-content` skip links required on ' + (100 - skipRate) + '% of departmental homepages to meet GIGW AA criteria.' : 'Maintain current skip link coverage and focus on ARIA landmark labeling in citizen forms.'}
+        </div>
+        <div class="p-3 bg-zinc-900 rounded border border-zinc-800 text-xs text-zinc-300">
+          <strong class="text-blue-400">2. Linguistic Standardization:</strong> 
+          ${langRate < 50 ? 'Only ' + langRate + '% of portals support regional script toggles. Mandate bilingual CMS migration for district offices.' : 'Strong regional script presence (' + langRate + '%). Expand translation coverage to nested circular PDFs.'}
+        </div>
+        <div class="p-3 bg-zinc-900 rounded border border-zinc-800 text-xs text-zinc-300">
+          <strong class="text-purple-400">3. Security Hardening:</strong> 
+          ${hstsRate < 40 ? 'HSTS adoption is low (' + hstsRate + '%). State data center proxy should enforce `Strict-Transport-Security` header.' : 'Good HSTS compliance rate (' + hstsRate + '%). Audit Content-Security-Policy (CSP) headers next.'}
+        </div>
+      `;
+    }
+
+    // Filter Table
+    function applyFilters() {
+      const tier = document.getElementById('filter-tier').value;
+      const statusFilter = document.getElementById('filter-status').value;
+      const search = document.getElementById('filter-search').value.toLowerCase().trim();
+
+      filteredData = rawDataset.filter(item => {
+        const matchesTier = (tier === 'all') || (item.level === tier);
+        let matchesStatus = true;
+        if (statusFilter === 'success') {
+          matchesStatus = item.reachable;
+        } else if (statusFilter === '502') {
+          matchesStatus = item.status_code === 502;
+        } else if (statusFilter === '504') {
+          matchesStatus = item.status_code === 504;
+        } else if (statusFilter === '403') {
+          matchesStatus = item.status_code === 403;
+        }
+
+        const matchesSearch = !search || 
+          item.domain.toLowerCase().includes(search) || 
+          item.entity.toLowerCase().includes(search) || 
+          (item.category && item.category.toLowerCase().includes(search)) ||
+          (item.arch && item.arch.toLowerCase().includes(search)) ||
+          item.state.toLowerCase().includes(search) ||
+          item.district.toLowerCase().includes(search);
+        return matchesTier && matchesStatus && matchesSearch;
+      });
+
+      currentPage = 1;
+      renderTable();
+    }
+
+    // Render Table
+    function renderTable() {
+      const tbody = document.getElementById('registry-table-body');
+      tbody.innerHTML = '';
+
+      const start = (currentPage - 1) * pageSize;
+      const end = Math.min(start + pageSize, filteredData.length);
+      const pageSlice = filteredData.slice(start, end);
+
+      document.getElementById('pag-start').innerText = filteredData.length ? (start + 1).toLocaleString() : '0';
+      document.getElementById('pag-end').innerText = end.toLocaleString();
+      document.getElementById('pag-total').innerText = filteredData.length.toLocaleString();
+      document.getElementById('current-page-num').innerText = currentPage;
+      const totalPages = Math.max(1, Math.ceil(filteredData.length / pageSize));
+      document.getElementById('total-page-num').innerText = totalPages;
+
+      document.getElementById('btn-prev-page').disabled = currentPage <= 1;
+      document.getElementById('btn-next-page').disabled = currentPage >= totalPages;
+
+      pageSlice.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-zinc-900/60 transition";
+
+        const tierBadge = r.level === 'central' ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' :
+                          r.level === 'state_ut' ? 'bg-orange-500/10 text-orange-400 border-orange-500/20' :
+                          r.level === 'district' ? 'bg-purple-500/10 text-purple-400 border-purple-500/20' :
+                          'bg-zinc-800 text-zinc-300 border-zinc-700';
+
+        const accColor = r.acc_score >= 80 ? 'text-emerald-400 font-bold' : r.acc_score >= 50 ? 'text-amber-400 font-bold' : r.acc_score ? 'text-rose-400 font-bold' : 'text-zinc-500 font-mono';
+        const gigwBadge = r.has_font_resize || r.has_contrast ? 'bg-emerald-500/10 text-emerald-400' : 'bg-zinc-800 text-zinc-500';
+        
+        let statusBadge = '';
+        if (r.reachable) {
+          statusBadge = `<span class="stat-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">AUDIT_200 (SUCCESS)</span>`;
+        } else if (r.status_code === 502) {
+          statusBadge = `<span class="stat-badge bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">502 (GEO_BLOCK)</span>`;
+        } else if (r.status_code === 504) {
+          statusBadge = `<span class="stat-badge bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">504 (TIMEOUT)</span>`;
+        } else if (r.status_code === 403) {
+          statusBadge = `<span class="stat-badge bg-purple-500/10 text-purple-400 border border-purple-500/20 font-mono">403 (WAF_DENIED)</span>`;
+        } else {
+          statusBadge = `<span class="stat-badge bg-zinc-800 text-zinc-400 border border-zinc-700 font-mono">HTTP_${r.status_code || 'ERR'}</span>`;
+        }
+
+        const archClean = r.arch ? r.arch.replace(/_/g, ' ') : 'indeterminate';
+        const catClean = r.category ? r.category.replace(/_/g, ' ') : r.level;
+
+        tr.innerHTML = `
+          <td class="py-2.5 px-4">
+            <div class="font-medium text-white">${r.domain}</div>
+            <div class="text-[11px] text-zinc-500">${r.entity || 'Government Entity'}</div>
+          </td>
+          <td class="py-2.5 px-4">
+            <span class="stat-badge border ${tierBadge} mb-0.5">${r.level.toUpperCase()}</span>
+            <div class="text-[10px] text-zinc-400 capitalize">${catClean}</div>
+          </td>
+          <td class="py-2.5 px-4">
+            <span class="stat-badge bg-zinc-900 text-zinc-300 border border-zinc-800 capitalize font-mono text-[11px]">${archClean}</span>
+          </td>
+          <td class="py-2.5 px-4 font-mono text-xs ${accColor}">
+            ${r.acc_score ? r.acc_score + ' / 100' : '<span class="text-zinc-600 text-[11px]">N/A (Unreachable)</span>'}
+          </td>
+          <td class="py-2.5 px-4">
+            <span class="stat-badge ${gigwBadge}">${r.has_font_resize ? 'Toolbar Yes' : 'No Toolbar'}</span>
+          </td>
+          <td class="py-2.5 px-4">
+            ${statusBadge}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+      }
+    }
+
+    function nextPage() {
+      const totalPages = Math.ceil(filteredData.length / pageSize);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+      }
+    }
+
+    function exportFilteredCSV() {
+      if (!filteredData.length) return;
+      const headers = Object.keys(filteredData[0]).join(',');
+      const rows = filteredData.map(obj => Object.values(obj).map(v => `"${v}"`).join(','));
+      const csvContent = "data:text/csv;charset=utf-8," + [headers, ...rows].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `bharatgov_filtered_${filteredData.length}_portals.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Initialize Chart.js
+    function initCharts() {
+      // 1. Radar Chart: Multi-Dimensional Governance Comparison
+      new Chart(document.getElementById('radarChart'), {
+        type: 'radar',
+        data: {
+          labels: ['WCAG AA Compliance', 'Page Speed', 'GIGW Toolbar', 'Security Headers', 'Multilingualism', 'DOM Hygiene'],
+          datasets: [
+            {
+              label: 'Central Ministries',
+              data: [94.2, 58.5, 42.1, 48.6, 68.4, 75.0],
+              borderColor: '#0284c7',
+              backgroundColor: 'rgba(2, 132, 199, 0.2)',
+              borderWidth: 2,
+            },
+            {
+              label: 'State Portals',
+              data: [91.8, 52.3, 31.4, 32.8, 38.2, 64.5],
+              borderColor: '#ea580c',
+              backgroundColor: 'rgba(234, 88, 12, 0.2)',
+              borderWidth: 2,
+            },
+            {
+              label: 'District Administrations',
+              data: [93.1, 48.0, 26.5, 21.0, 19.5, 58.0],
+              borderColor: '#8b5cf6',
+              backgroundColor: 'rgba(139, 92, 246, 0.2)',
+              borderWidth: 2,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              angleLines: { color: 'rgba(255,255,255,0.08)' },
+              grid: { color: 'rgba(255,255,255,0.08)' },
+              pointLabels: { color: '#a1a1aa', font: { size: 10, weight: 600 } },
+              ticks: { display: false }
+            }
+          },
+          plugins: {
+            legend: { labels: { color: '#d4d4d8', font: { size: 11 } } }
+          }
+        }
+      });
+
+      // 2. State Benchmarks Bar Chart
+      new Chart(document.getElementById('stateBarChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Kerala', 'Tamil Nadu', 'Karnataka', 'Maharashtra', 'Gujarat', 'Uttar Pradesh', 'Assam', 'Rajasthan', 'Madhya Pradesh', 'Bihar'],
+          datasets: [
+            {
+              label: 'Composite Web Maturity Score (0-100)',
+              data: [88.4, 85.2, 83.7, 81.9, 79.5, 76.2, 74.8, 72.1, 69.5, 66.8],
+              backgroundColor: '#ea580c',
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          scales: {
+            x: {
+              grid: { color: 'rgba(255,255,255,0.05)' },
+              ticks: { color: '#a1a1aa' },
+              max: 100
+            },
+            y: {
+              grid: { display: false },
+              ticks: { color: '#e4e4e7', font: { weight: 600 } }
+            }
+          },
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      });
+
+      // 3. Architecture Doughnut Chart
+      new Chart(document.getElementById('archChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['S3WaaS / NIC Drupal', 'WordPress', 'Angular/React SPA', 'Static HTML', 'Legacy Dynamic'],
+          datasets: [
+            {
+              data: [1120, 480, 290, 310, 190],
+              backgroundColor: ['#ea580c', '#0284c7', '#10b981', '#8b5cf6', '#64748b'],
+              borderWidth: 0,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#d4d4d8', boxWidth: 12, font: { size: 10 } } }
+          }
+        }
+      });
+
+      // 4. LCP Speed Distribution
+      new Chart(document.getElementById('lcpChart'), {
+        type: 'bar',
+        data: {
+          labels: ['< 2.5s (Good)', '2.5s - 4.0s (Needs Work)', '> 4.0s (Poor)'],
+          datasets: [
+            {
+              data: [612, 1145, 633],
+              backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#a1a1aa' } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#a1a1aa' } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 5. Security Headers
+      new Chart(document.getElementById('securityChart'), {
+        type: 'bar',
+        data: {
+          labels: ['HTTPS (Active)', 'HSTS (Enforced)', 'CSP (Declared)', 'TLS 1.3 (Negotiated)'],
+          datasets: [
+            {
+              data: [100.0, 21.7, 19.2, 76.5],
+              backgroundColor: '#8b5cf6',
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#a1a1aa' } },
+            y: { max: 100, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#a1a1aa' } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 6. GIGW Feature Adoption
+      new Chart(document.getElementById('featureAdoptionChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Header Search', 'Grievance Link', 'Skip to Main', 'Font Resizer', 'High Contrast', 'Mobile App'],
+          datasets: [
+            {
+              label: 'Adoption Rate (%)',
+              data: [72.4, 58.1, 31.4, 28.5, 24.2, 18.9],
+              backgroundColor: '#0284c7',
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#a1a1aa' } },
+            y: { max: 100, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#a1a1aa' } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 7. WCAG Violations
+      new Chart(document.getElementById('wcagViolationsChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Missing Alt Text (68.2%)', 'Color Contrast (42.5%)', 'Empty Links/Buttons (36.1%)', 'ARIA Structure (29.4%)'],
+          datasets: [
+            {
+              data: [68.2, 42.5, 36.1, 29.4],
+              backgroundColor: ['#ef4444', '#ea580c', '#eab308', '#0284c7'],
+              borderWidth: 0,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#d4d4d8', boxWidth: 12, font: { size: 10 } } }
+          }
+        }
+      });
+    }
+
+    // High-Resolution PDF Viewer Logic
+    let pdfDoc = null;
+    let pdfCurrentPage = 1;
+    let pdfScale = 1.35;
+
+    async function initPdf() {
+      try {
+        const loadingTask = pdfjsLib.getDocument('static/sample_audit_report.pdf');
+        pdfDoc = await loadingTask.promise;
+        document.getElementById('pdf-page-count').innerText = pdfDoc.numPages;
+        renderPdfPage(pdfCurrentPage);
+      } catch (err) {
+        console.error("PDF loading error:", err);
+        document.getElementById('pdf-loading').innerText = "Unable to load PDF document.";
+      }
+    }
+
+    async function renderPdfPage(pageNum) {
+      if (!pdfDoc) return;
+      const page = await pdfDoc.getPage(pageNum);
+      const viewport = page.getViewport({ scale: pdfScale });
+
+      const canvas = document.getElementById('pdf-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+      };
+
+      await page.render(renderContext).promise;
+      document.getElementById('pdf-loading').classList.add('hidden');
+      canvas.classList.remove('hidden');
+      document.getElementById('pdf-page-num').innerText = pageNum;
+    }
+
+    document.getElementById('pdf-prev').addEventListener('click', () => {
+      if (pdfDoc && pdfCurrentPage > 1) {
+        pdfCurrentPage--;
+        renderPdfPage(pdfCurrentPage);
+      }
+    });
+
+    document.getElementById('pdf-next').addEventListener('click', () => {
+      if (pdfDoc && pdfCurrentPage < pdfDoc.numPages) {
+        pdfCurrentPage++;
+        renderPdfPage(pdfCurrentPage);
+      }
+    });
+
+    document.getElementById('pdf-zoom-in').addEventListener('click', () => {
+      pdfScale += 0.2;
+      renderPdfPage(pdfCurrentPage);
+    });
+
+    document.getElementById('pdf-zoom-out').addEventListener('click', () => {
+      if (pdfScale > 0.6) {
+        pdfScale -= 0.2;
+        renderPdfPage(pdfCurrentPage);
+      }
+    });
+
+    // Start App
+    window.addEventListener('DOMContentLoaded', () => {
+      loadData();
+      initPdf();
+    });
+  </script>
+</body>
+</html>

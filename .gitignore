@@ -1,3 +1,11 @@
+# Scratch and Local Testing
+scratch/
+.system_generated/
+cloudflared*
+*.pem
+*.key
+*.bak
+
 # Agent and Workflow Artifacts
 .agent/
 artifacts/
@@ -107,3 +115,8 @@ resources/*.png
 resources/*.csv
 resources/*.parquet
 resources/*.json
+
+# Remote & Deployment Automation Scripts
+scripts/run_remote.py
+scripts/deploy_dashboard_to_cloud.py
+scripts/download_dataset.py
