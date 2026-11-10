@@ -15,6 +15,9 @@
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 
+  <!-- Local Script Data Bundle for zero-CORS file:// support -->
+  <script src="static/dataset.js"></script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -26,10 +29,11 @@
             mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
-            saffron: {
-              400: '#fb923c',
-              500: '#f97316',
-              600: '#ea580c',
+            brand: {
+              saffron: '#f97316',
+              emerald: '#10b981',
+              indigo: '#6366f1',
+              cyan: '#06b6d4',
             }
           }
         }
@@ -38,7 +42,7 @@
   </script>
 
   <style>
-    /* Absolute lockdown against horizontal scroll */
+    /* Strict viewport and scrollbar containment */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -54,7 +58,7 @@
       font-family: 'Inter', system-ui, sans-serif;
     }
 
-    /* Completely hide horizontal scrollbars system-wide */
+    /* Completely eliminate all horizontal scrollbars system-wide */
     ::-webkit-scrollbar:horizontal {
       display: none !important;
       height: 0px !important;
@@ -65,14 +69,14 @@
       scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
     }
 
-    /* Animated background gradient mesh */
+    /* Animated background ambient lighting mesh */
     .bg-mesh {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 10% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
         radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.09) 0%, transparent 50%),
         radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
         radial-gradient(circle at 90% 85%, rgba(236, 72, 153, 0.04) 0%, transparent 40%);
@@ -86,16 +90,16 @@
       -webkit-backdrop-filter: blur(16px);
       border-radius: 12px;
       position: relative;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
     }
 
     .holo-card:hover {
-      border-color: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.2);
       box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6), 0 0 25px -4px rgba(249, 115, 22, 0.08);
       transform: translateY(-2px);
     }
 
-    /* Iridescent holographic rainbow shimmer line */
+    /* Iridescent holographic rainbow top accent */
     .holo-glow::before {
       content: '';
       position: absolute;
@@ -131,7 +135,32 @@
       }
     }
 
-    /* Rectangular Shadcn style button */
+    /* Luxury Navigation Tab Controls */
+    .nav-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #9ca3af;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .nav-pill-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .nav-pill-btn.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+      border-color: rgba(249, 115, 22, 0.4);
+      box-shadow: 0 2px 12px rgba(249, 115, 22, 0.15);
+    }
+
+    /* Standard rectangular button */
     .shadcn-btn {
       display: inline-flex;
       align-items: center;
@@ -151,40 +180,42 @@
       border-color: rgba(255, 255, 255, 0.25);
       color: #ffffff;
     }
-    .shadcn-btn.active {
-      background: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.22);
-      box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
-    }
 
-    /* Live Telemetry Ticker */
-    @keyframes tickerSlide {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-50%); }
-    }
-
-    /* Holographic India Map Styles */
+    /* SVG Map Interaction (Strictly NO CSS scale to prevent mouse flicker) */
     .map-state-node {
       cursor: pointer;
-      transition: all 0.2s ease;
     }
-    .map-state-node:hover {
-      filter: drop-shadow(0 0 10px #f97316);
-      transform: scale(1.05);
+    .map-state-node circle.outer-ring {
+      transition: stroke 0.2s ease, fill-opacity 0.2s ease, stroke-width 0.2s ease;
+    }
+    .map-state-node:hover circle.outer-ring {
+      stroke-width: 3.5px;
+      stroke: #f97316 !important;
+      fill: #f97316 !important;
+      fill-opacity: 0.65 !important;
+      filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.9));
+    }
+    .map-state-node text {
+      pointer-events: none;
+      transition: fill 0.2s ease, font-weight 0.2s ease;
+    }
+    .map-state-node:hover text {
+      fill: #ffffff !important;
+      font-weight: 800;
     }
 
-    @keyframes beamPulse {
-      0% { stroke-dashoffset: 200; opacity: 0.2; }
-      50% { opacity: 0.9; }
+    /* Radar Beam Animation */
+    @keyframes beamFlow {
+      0% { stroke-dashoffset: 160; opacity: 0.2; }
+      50% { opacity: 0.95; }
       100% { stroke-dashoffset: 0; opacity: 0.2; }
     }
     .radar-beam {
-      stroke-dasharray: 8 6;
-      animation: beamPulse 3s linear infinite;
+      stroke-dasharray: 6 5;
+      animation: beamFlow 3s linear infinite;
     }
 
-    /* Chart bounding */
+    /* Chart bounding box */
     .chart-box {
       position: relative;
       width: 100%;
@@ -213,44 +244,44 @@
   <!-- Top Global Header -->
   <header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#030712]/90 backdrop-blur-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap lg:flex-nowrap items-center justify-between py-2.5 gap-3">
+      <div class="flex flex-wrap lg:flex-nowrap items-center justify-between py-3 gap-3">
         
-        <!-- Brand & Egress Status -->
+        <!-- Brand & Observatory Status -->
         <div class="flex items-center gap-3 shrink-0">
-          <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-orange-600 via-amber-500 to-indigo-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-orange-500/20 shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 via-amber-500 to-indigo-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-orange-500/20 shrink-0">
             🏛️
           </div>
           <div class="flex flex-col justify-center">
             <div class="flex items-center gap-2">
-              <span class="font-heading font-extrabold text-base sm:text-lg text-white tracking-tight leading-none">BharatGov Access</span>
+              <span class="font-heading font-extrabold text-lg text-white tracking-tight leading-none">BharatGov Access</span>
               <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                 <span class="pulse-dot"></span>
-                <span>Bangalore Ingestion Node</span>
+                <span>National Egress Peering</span>
               </span>
             </div>
-            <p class="text-[11px] text-zinc-400 mt-1 leading-none">National Government Web Infrastructure Observatory · 12,092 Portals Monitored</p>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-none">National Public Web Infrastructure Observatory · 12,092 Domains</p>
           </div>
         </div>
 
-        <!-- Navigation Tabs (Wrapping gracefully, zero horizontal scrollbar) -->
-        <nav class="flex items-center gap-1.5 flex-wrap">
-          <button onclick="switchTab('benchmarks')" id="tab-btn-benchmarks" class="shadcn-btn active text-xs">
+        <!-- Sleek Segmented Navigation (Auto-wrapping, zero horizontal scroll) -->
+        <nav class="flex items-center gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/[0.08] flex-wrap">
+          <button onclick="switchTab('benchmarks')" id="tab-btn-benchmarks" class="nav-pill-btn active">
             <span>📊</span> <span>Benchmarks</span>
           </button>
-          <button onclick="switchTab('map')" id="tab-btn-map" class="shadcn-btn text-xs">
-            <span>🗺️</span> <span>India Holographic Map</span>
+          <button onclick="switchTab('map')" id="tab-btn-map" class="nav-pill-btn">
+            <span>🗺️</span> <span>India Geo-Map</span>
           </button>
-          <button onclick="switchTab('scorecard')" id="tab-btn-scorecard" class="shadcn-btn text-xs">
+          <button onclick="switchTab('scorecard')" id="tab-btn-scorecard" class="nav-pill-btn">
             <span>🏛️</span> <span>State Scorecards</span>
           </button>
-          <button onclick="switchTab('architecture')" id="tab-btn-architecture" class="shadcn-btn text-xs">
+          <button onclick="switchTab('architecture')" id="tab-btn-architecture" class="nav-pill-btn">
             <span>🛡️</span> <span>5-Pillar Standards</span>
           </button>
-          <button onclick="switchTab('explorer')" id="tab-btn-explorer" class="shadcn-btn text-xs">
+          <button onclick="switchTab('explorer')" id="tab-btn-explorer" class="nav-pill-btn">
             <span>📋</span> <span>National Registry</span>
           </button>
-          <button onclick="switchTab('usage')" id="tab-btn-usage" class="shadcn-btn text-xs">
-            <span>📖</span> <span>Research Guide</span>
+          <button onclick="switchTab('usage')" id="tab-btn-usage" class="nav-pill-btn">
+            <span>📖</span> <span>Guide</span>
           </button>
         </nav>
 
@@ -259,19 +290,19 @@
   </header>
 
   <!-- Live Telemetry Stream Ticker -->
-  <div class="w-full bg-black/60 border-b border-white/[0.05] py-1.5 px-4 z-20 text-[11px] text-zinc-400 font-mono">
+  <div class="w-full bg-black/60 border-b border-white/[0.05] py-2 px-4 z-20 text-[11px] text-zinc-400 font-mono">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-hidden">
       <div class="flex items-center gap-2 shrink-0">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span class="text-zinc-300 font-semibold uppercase text-[10px] tracking-wider">Live Audit Telemetry:</span>
       </div>
-      <div class="truncate flex-1 text-zinc-300" id="telemetry-ticker">
-        [Audit-Bangalore] meity.gov.in -> 200 OK | TTFB: 210ms | WCAG 2.1: 94.5/100 | S3WaaS Drupal Active
+      <div class="truncate flex-1 text-zinc-300 transition-opacity duration-300" id="telemetry-ticker">
+        [National-Audit] meity.gov.in -> 200 OK | TTFB: 210ms | WCAG 2.1: 94.5/100 | S3WaaS Drupal Active
       </div>
       <div class="hidden md:flex items-center gap-3 shrink-0 text-zinc-400">
-        <span>Peering: Domestic NIXI</span>
+        <span>Transit: Domestic Peering Fabric</span>
         <span>•</span>
-        <span class="text-emerald-400">Zero Geo-IP Blocking</span>
+        <span class="text-emerald-400 font-semibold">Zero Geo-IP Blocking</span>
       </div>
     </div>
   </div>
@@ -350,7 +381,7 @@
         </div>
         <div class="mt-2.5">
           <div class="text-2xl sm:text-3xl font-heading font-extrabold text-zinc-200 tracking-tight leading-none">1.18s</div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">Bangalore TTFB (LCP: 2.67s)</div>
+          <div class="text-[11px] text-zinc-400 mt-0.5">Median TTFB (LCP: 2.67s)</div>
         </div>
       </div>
 
@@ -375,7 +406,7 @@
             </div>
             <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
               Covering 12,092 public portals serving 900+ million citizens across 36 States/UTs, 788 districts, and central ministries. 
-              Audited directly from domestic infrastructure in Bangalore to eliminate foreign Geo-IP edge drops and measure authentic citizen-experienced web quality under W3C (WCAG 2.1 AA) and MeitY (GIGW 3.0) standards.
+              Audited directly over domestic peering transit to eliminate foreign Geo-IP edge drops and measure authentic citizen-experienced web quality under W3C (WCAG 2.1 AA) and MeitY (GIGW 3.0) standards.
             </p>
           </div>
           <div class="flex flex-wrap items-center gap-2 shrink-0">
@@ -409,7 +440,7 @@
               <span>⚡</span> 2. In-Country Vantage Point
             </div>
             <p class="text-[11px] text-zinc-400 mt-1 leading-normal">
-              Executed within Indian national network boundaries (NIXI Bangalore), resolving false-positive 66%+ drop rates from overseas crawlers caused by state RailTel/NIC perimeter firewalls.
+              Executed within Indian national network boundaries, resolving false-positive 66%+ drop rates from overseas crawlers caused by state RailTel/NIC perimeter firewalls.
             </p>
           </div>
           <div class="p-3 rounded-lg bg-black/40 border border-white/[0.05]">
@@ -526,13 +557,13 @@
               <h2 class="font-heading font-extrabold text-base sm:text-lg text-white">National E-Governance Topological Map</h2>
             </div>
             <p class="text-xs text-zinc-300 mt-1">
-              Holographic network graph connecting the Bangalore Domestic Ingestion Hub to all 36 States & Union Territories. Hover or click any state node to inspect real-time digital infrastructure metrics.
+              Holographic network graph connecting the National Ingestion Fabric to all 36 States & Union Territories. Click or hover on any state node to inspect real-time digital infrastructure metrics.
             </p>
           </div>
           <div class="flex items-center gap-3 shrink-0">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-xs text-zinc-300">
               <span class="w-2.5 h-2.5 rounded-full bg-orange-500 shadow-sm shadow-orange-500/50"></span>
-              <span>Hub: Bangalore (12.97°N, 77.59°E)</span>
+              <span>Central Gateway: National Transit Peering</span>
             </span>
           </div>
         </div>
@@ -552,7 +583,6 @@
           <div class="relative w-full flex items-center justify-center py-2" style="min-height: 440px;">
             <svg id="india-hologram-svg" viewBox="0 0 600 680" class="w-full h-auto max-h-[500px]" style="filter: drop-shadow(0 0 15px rgba(249, 115, 22, 0.05));">
               <defs>
-                <!-- Holographic Radial Glow -->
                 <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stop-color="#f97316" stop-opacity="0.8"/>
                   <stop offset="60%" stop-color="#ea580c" stop-opacity="0.3"/>
@@ -569,27 +599,27 @@
               <path d="M 230 40 L 290 60 L 330 90 L 340 140 L 400 160 L 480 180 L 530 190 L 570 210 L 580 240 L 540 260 L 490 260 L 460 280 L 410 270 L 370 310 L 380 380 L 350 440 L 310 500 L 280 570 L 250 630 L 220 570 L 190 490 L 140 430 L 110 370 L 90 320 L 110 260 L 140 220 L 180 170 L 190 120 Z" 
                     fill="rgba(15, 23, 42, 0.5)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" stroke-dasharray="4 4" />
 
-              <!-- Bangalore Central Hub Coordinates: (250, 520) -->
-              <!-- Radiating Data Beams to Key State Centroids -->
+              <!-- Central National Ingestion Transit Hub (x=270, y=340) -->
               <g id="map-beams" stroke="url(#beamGrad)" stroke-width="1.2">
-                <line x1="250" y1="520" x2="230" y2="170" class="radar-beam" /> <!-- Delhi -->
-                <line x1="250" y1="520" x2="390" y2="330" class="radar-beam" /> <!-- West Bengal -->
-                <line x1="250" y1="520" x2="160" y2="390" class="radar-beam" /> <!-- Maharashtra -->
-                <line x1="250" y1="520" x2="280" y2="570" class="radar-beam" /> <!-- Tamil Nadu -->
-                <line x1="250" y1="520" x2="260" y2="430" class="radar-beam" /> <!-- Telangana / Hyderabad -->
-                <line x1="250" y1="520" x2="520" y2="230" class="radar-beam" /> <!-- Assam / North East -->
-                <line x1="250" y1="520" x2="210" y2="80" class="radar-beam" />  <!-- Jammu & Kashmir -->
-                <line x1="250" y1="520" x2="130" y2="320" class="radar-beam" /> <!-- Gujarat -->
-                <line x1="250" y1="520" x2="300" y2="230" class="radar-beam" /> <!-- Uttar Pradesh -->
+                <line x1="270" y1="340" x2="230" y2="170" class="radar-beam" /> <!-- Delhi -->
+                <line x1="270" y1="340" x2="395" y2="340" class="radar-beam" /> <!-- West Bengal -->
+                <line x1="270" y1="340" x2="165" y2="395" class="radar-beam" /> <!-- Maharashtra -->
+                <line x1="270" y1="340" x2="260" y2="580" class="radar-beam" /> <!-- Tamil Nadu -->
+                <line x1="270" y1="340" x2="250" y2="425" class="radar-beam" /> <!-- Telangana -->
+                <line x1="270" y1="340" x2="480" y2="225" class="radar-beam" /> <!-- Assam -->
+                <line x1="270" y1="340" x2="195" y2="80" class="radar-beam" />  <!-- Jammu & Kashmir -->
+                <line x1="270" y1="340" x2="125" y2="315" class="radar-beam" /> <!-- Gujarat -->
+                <line x1="270" y1="340" x2="295" y2="240" class="radar-beam" /> <!-- Uttar Pradesh -->
+                <line x1="270" y1="340" x2="220" y2="505" class="radar-beam" /> <!-- Karnataka -->
               </g>
 
-              <!-- Bangalore Central Observatory Hub -->
-              <circle cx="250" cy="520" r="35" fill="url(#hubGlow)" />
-              <circle cx="250" cy="520" r="9" fill="#f97316" stroke="#ffffff" stroke-width="2.5" />
-              <circle cx="250" cy="520" r="16" fill="none" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3">
-                <animateTransform attributeName="transform" type="rotate" from="0 250 520" to="360 250 520" dur="8s" repeatCount="indefinite"/>
+              <!-- Central National Gateway Beacon -->
+              <circle cx="270" cy="340" r="30" fill="url(#hubGlow)" />
+              <circle cx="270" cy="340" r="8" fill="#f97316" stroke="#ffffff" stroke-width="2" />
+              <circle cx="270" cy="340" r="15" fill="none" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3">
+                <animateTransform attributeName="transform" type="rotate" from="0 270 340" to="360 270 340" dur="8s" repeatCount="indefinite"/>
               </circle>
-              <text x="250" y="548" text-anchor="middle" fill="#f97316" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="bold">BANGALORE HUB</text>
+              <text x="270" y="365" text-anchor="middle" fill="#f97316" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="bold">NATIONAL GATEWAY</text>
 
               <!-- State Nodes (Interactive Circles with Data) -->
               <g id="state-nodes-group">
@@ -599,8 +629,8 @@
           </div>
 
           <div class="flex items-center justify-between text-[11px] text-zinc-400 pt-3 border-t border-white/[0.06]">
-            <span>🟢 Node Color: Composite Maturity Index (0–100)</span>
-            <span>⚡ Interactive: Click node to inspect state profile</span>
+            <span>🟢 Color: Composite Maturity Index (0–100)</span>
+            <span>⚡ Click node to inspect state profile</span>
           </div>
         </div>
 
@@ -795,7 +825,7 @@
             <span class="text-[11px] text-zinc-400 font-mono">Core Web Vitals</span>
           </div>
           <h4 class="font-heading font-bold text-base text-white">Performance & Latency</h4>
-          <p class="text-xs text-zinc-400 leading-normal">Measures time-to-first-byte (TTFB) and estimated LCP responsive delivery over domestic Bangalore datacenter infrastructure.</p>
+          <p class="text-xs text-zinc-400 leading-normal">Measures time-to-first-byte (TTFB) and estimated LCP responsive delivery over domestic network infrastructure.</p>
           <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
             <div class="flex justify-between text-zinc-300">
               <span>• <code class="text-blue-400 font-mono">sub_response_latency_ms</code>:</span>
@@ -989,7 +1019,7 @@
         <h2 class="font-heading font-bold text-base sm:text-lg text-white mb-2">How to Use the BharatGov Access Census Dataset in Research</h2>
         <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-4xl">
           The <strong>BharatGov Access</strong> dataset is packaged as versioned, immutable Apache Parquet, CSV, and JSON records covering <strong>12,092 government portals</strong>. 
-          Audited directly over domestic Indian infrastructure in Bangalore, this benchmark provides reproducible data 
+          Audited directly over domestic infrastructure within national transit boundaries, this benchmark provides reproducible data 
           for computer science, public policy, and e-governance researchers.
         </p>
 
@@ -1047,7 +1077,7 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
                 <td class="py-2 px-3 font-mono text-orange-400">is_reachable</td>
                 <td class="py-2 px-3 text-zinc-400">boolean</td>
                 <td class="py-2 px-3 text-zinc-400">Reachability</td>
-                <td class="py-2 px-3"><code class="text-zinc-200">True</code> if portal returned HTTP 200/300 from domestic Bangalore node</td>
+                <td class="py-2 px-3"><code class="text-zinc-200">True</code> if portal returned HTTP 200/300 from domestic node</td>
               </tr>
               <tr>
                 <td class="py-2 px-3 font-mono text-orange-400">measurement_reason</td>
@@ -1071,7 +1101,7 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
                 <td class="py-2 px-3 font-mono text-blue-400">sub_response_latency_ms</td>
                 <td class="py-2 px-3 text-zinc-400">float (ms)</td>
                 <td class="py-2 px-3 text-blue-400">Pillar 2: Performance</td>
-                <td class="py-2 px-3">Network Round-Trip Time / Time to First Byte (TTFB) measured from Bangalore</td>
+                <td class="py-2 px-3">Network Round-Trip Time / Time to First Byte (TTFB) measured from domestic ingress</td>
               </tr>
               <tr>
                 <td class="py-2 px-3 font-mono text-blue-400">sub_lcp_est_sec</td>
@@ -1138,7 +1168,7 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
         <span class="text-zinc-300 font-medium">BharatGov Access</span> — Department of Data Analytics & E-Governance Research · IIT Kharagpur
       </div>
       <div class="flex items-center space-x-3 text-zinc-400">
-        <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Bangalore Ingestion Node</span>
+        <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> National Peering Node</span>
         <span>•</span>
         <span>MeitY GIGW 3.0 Aligned</span>
       </div>
@@ -1182,7 +1212,7 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
     // Tab Navigation
     function switchTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('nav .shadcn-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.nav-pill-btn').forEach(btn => btn.classList.remove('active'));
 
       const targetView = document.getElementById(`view-${tabId}`);
       const targetBtn = document.getElementById(`tab-btn-${tabId}`);
@@ -1196,41 +1226,50 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Load Pre-Compiled JSON Dataset
+    // Load Dataset (Dual Mode: Memory script bundle for file:// + fetch fallback for http://)
     async function loadData() {
       try {
-        const res = await fetch('static/dataset.json');
-        rawDataset = await res.json();
+        if (window.RAW_DATASET && window.RAW_DATASET.length) {
+          rawDataset = window.RAW_DATASET;
+        } else {
+          const res = await fetch('static/dataset.json');
+          rawDataset = await res.json();
+        }
+      } catch (e) {
+        console.warn("Could not fetch JSON, trying RAW_DATASET fallback:", e);
+        if (window.RAW_DATASET && window.RAW_DATASET.length) {
+          rawDataset = window.RAW_DATASET;
+        }
+      }
+
+      if (rawDataset && rawDataset.length) {
         filteredData = rawDataset.filter(r => r.reachable);
         renderTable();
         initCharts();
         populateStateSelector();
         renderIndiaMapNodes();
         startTelemetrySimulation();
-      } catch (e) {
-        console.error("Failed to load dataset:", e);
       }
     }
 
-    // Render Holographic Map State Nodes
+    // Render Holographic Map State Nodes (Clean SVG without CSS transform flicker)
     function renderIndiaMapNodes() {
       const group = document.getElementById('state-nodes-group');
       if (!group) return;
       group.innerHTML = '';
 
       STATE_GEO_NODES.forEach(st => {
-        // Node color based on maturity
         const color = st.maturity >= 80 ? '#f97316' : st.maturity >= 77 ? '#8b5cf6' : '#06b6d4';
         
-        // Outer interactive circle
         const nodeG = document.createElementNS("http://www.w3.org/2000/svg", "g");
         nodeG.setAttribute('class', 'map-state-node');
         nodeG.setAttribute('onclick', `selectStateNode('${st.name}')`);
 
         const circleOuter = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circleOuter.setAttribute('class', 'outer-ring');
         circleOuter.setAttribute('cx', st.x);
         circleOuter.setAttribute('cy', st.y);
-        circleOuter.setAttribute('r', '7');
+        circleOuter.setAttribute('r', '7.5');
         circleOuter.setAttribute('fill', color);
         circleOuter.setAttribute('fill-opacity', '0.35');
         circleOuter.setAttribute('stroke', color);
@@ -1273,9 +1312,8 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
       document.getElementById('insp-lang-bar').style.width = `${st.lang}%`;
       document.getElementById('insp-mobile-rate').innerText = `${st.mobile}%`;
       document.getElementById('insp-mobile-bar').style.width = `${st.mobile}%`;
-      document.getElementById('insp-arch-text').innerText = `${st.arch}; telemetry verified over domestic Bangalore route.`;
+      document.getElementById('insp-arch-text').innerText = `${st.arch}; telemetry verified over domestic national route.`;
 
-      // Highlight selected node
       const sel = document.getElementById('state-selector');
       if (sel) {
         sel.value = stateName;
@@ -1434,7 +1472,7 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
       renderTable();
     }
 
-    // Render Table
+    // Render Table Page
     function renderTable() {
       const tbody = document.getElementById('registry-table-body');
       tbody.innerHTML = '';
@@ -1720,15 +1758,15 @@ print("\nCMS Framework Comparison:\n", arch.round(1))
 
     // Live Telemetry Simulation
     const SAMPLE_LOGS = [
-      "[Audit-Bangalore] meity.gov.in -> 200 OK | TTFB: 210ms | WCAG 2.1: 94.5/100 | S3WaaS Drupal Active",
-      "[Audit-Bangalore] up.gov.in -> 200 OK | TTFB: 320ms | HSTS Enforced | Samadhan Integrated",
-      "[Audit-Bangalore] varanasi.nic.in -> 200 OK | TTFB: 180ms | S3WaaS Drupal | GIGW Compliant",
-      "[Audit-Bangalore] wb.gov.in -> 200 OK | TTFB: 290ms | Bengali Localization | Score: 95.4/100",
-      "[Audit-Bangalore] maharashtra.gov.in -> 200 OK | TTFB: 410ms | Marathi Localization Active",
-      "[Audit-Bangalore] nagaland.gov.in -> 200 OK | TTFB: 350ms | S3WaaS Drupal | Score: 95.8/100",
-      "[Audit-Bangalore] karnataka.gov.in -> 200 OK | TTFB: 160ms | Kannada/Eng | CWV LCP: 2.1s",
-      "[Audit-Bangalore] aiims.edu -> 200 OK | TTFB: 240ms | Academic Tier | TLS 1.3 Active",
-      "[Audit-Bangalore] sci.gov.in -> 200 OK | TTFB: 310ms | Supreme Court of India | 200 OK"
+      "[National-Audit] meity.gov.in -> 200 OK | TTFB: 210ms | WCAG 2.1: 94.5/100 | S3WaaS Drupal Active",
+      "[National-Audit] up.gov.in -> 200 OK | TTFB: 320ms | HSTS Enforced | Samadhan Integrated",
+      "[National-Audit] varanasi.nic.in -> 200 OK | TTFB: 180ms | S3WaaS Drupal | GIGW Compliant",
+      "[National-Audit] wb.gov.in -> 200 OK | TTFB: 290ms | Bengali Localization | Score: 95.4/100",
+      "[National-Audit] maharashtra.gov.in -> 200 OK | TTFB: 410ms | Marathi Localization Active",
+      "[National-Audit] nagaland.gov.in -> 200 OK | TTFB: 350ms | S3WaaS Drupal | Score: 95.8/100",
+      "[National-Audit] karnataka.gov.in -> 200 OK | TTFB: 160ms | Kannada/Eng | CWV LCP: 2.1s",
+      "[National-Audit] aiims.edu -> 200 OK | TTFB: 240ms | Academic Tier | TLS 1.3 Active",
+      "[National-Audit] sci.gov.in -> 200 OK | TTFB: 310ms | Supreme Court of India | 200 OK"
     ];
 
     function startTelemetrySimulation() {
