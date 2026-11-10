@@ -1,0 +1,155 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{url}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{BharatGov Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure\\
+\thanks{This research was conducted within the Department of Data Analytics, Indian Institute of Technology Kharagpur.}
+}
+
+\author{\IEEEauthorblockN{Pratham Agarwal}
+\IEEEauthorblockA{\textit{Dept. of Data Analytics} \\
+\textit{IIT Kharagpur}\\
+Kharagpur, India \\
+pratham.agarwal@iitkgp.ac.in}
+\and
+\IEEEauthorblockN{Amit Kumar Bairagi}
+\IEEEauthorblockA{\textit{Dept. of Data Analytics} \\
+\textit{IIT Kharagpur}\\
+Kharagpur, India \\
+amit.bairagi@iitkgp.ac.in}
+\and
+\IEEEauthorblockN{Vishwajeet Nand Yaduraj}
+\IEEEauthorblockA{\textit{Dept. of Data Analytics} \\
+\textit{IIT Kharagpur}\\
+Kharagpur, India \\
+vishwajeet.yaduraj@iitkgp.ac.in}
+}
+
+\maketitle
+
+\begin{abstract}
+Digital Public Infrastructure (DPI) serves as the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services to over 900 million connected citizens. Despite its systemic societal significance, empirical knowledge of the accessibility, performance, and cryptographic security of India's multi-tiered public web remains scarce, fragmented, and vulnerable to measurement bias. Prior web measurement studies have evaluated narrow samples ($\le 100$ homepages) or relied on overseas cloud vantage points, which we demonstrate trigger false-positive reachability failures exceeding 66\% due to domestic perimeter Geo-IP firewalls operated by state gateways and RailTel. 
+
+To overcome these barriers, we present BharatGov Access, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures 12,092 government web domains across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible 5-Pillar / 10-Sub-Feature evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).
+
+Our empirical audit reveals three primary findings: (1) The National Informatics Centre's (NIC) S3WaaS Drupal framework elevates mean accessibility compliance to 96.1 / 100 with 98.2\% GIGW toolbar penetration across 6,480 active district portals (63.2\%), contrasted with legacy state ASP.NET deployments that languish at 81.5 / 100. (2) While transport-layer encryption is ubiquitous (100.0\% HTTPS enforcement), defensive HTTP headers exhibit severe lag: only 44.5\% of public portals mandate HSTS, and a mere 35.2\% declare Content Security Policy (CSP). (3) Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is 1.18 seconds, with 86.0\% of active portals offering localization in regional Eighth Schedule Indian scripts. We release the entire 12,092-portal dataset under CC-BY-4.0 alongside an open-access interactive observatory.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Web Measurement, E-Governance, Digital Public Infrastructure, Web Accessibility, WCAG 2.1, Core Web Vitals, GIGW 3.0, CERT-In.
+\end{IEEEkeywords}
+
+\section{Introduction}
+The expansion of Digital India has transformed the web portal from a static institutional brochure into an indispensable vehicle for basic citizen rights. Millions of citizens interact daily with portals operated by Central Ministries, State Secretariats, District Collectorates, and Municipal Corporations to access Direct Benefit Transfer (DBT) subsidies, obtain birth certificates, inspect land records, and lodge grievances through CPGRAMS.
+
+However, the rapid digitization of public administration across 36 States and Union Territories (UTs) has historically occurred in silos. Disparate legacy hosting architectures, decentralized software vendors, and varying administrative technical capacity have generated significant heterogeneity in web quality, accessibility, responsiveness, and defense posture.
+
+\subsection{The Empirical Vacuum in Public Web Measurement}
+While commercial web measurement platforms track global top domains, coverage of public sector web ecosystems in the Global South is extraordinarily sparse. Prior academic studies suffer from three crippling limitations:
+\begin{enumerate}
+    \item \textbf{Shallow Samples:} Studies evaluate between 50 and 200 arbitrary central ministry homepages, completely bypassing district collectorates.
+    \item \textbf{The Perimeter Firewall Blindspot:} Crawlers executing from overseas cloud instances encounter aggressive edge perimeter Geo-IP drops enforced by RailTel and state NIC gateways, returning false unreachability estimates exceeding 66\%.
+    \item \textbf{Metric Bloat:} Prior tools scraped 70+ arbitrary variables without decoupling network availability from schema validation.
+\end{enumerate}
+
+\section{The 5-Pillar Evaluation Framework}
+We formulate a standardized 5-Pillar / 10-Sub-Feature framework grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.
+
+\subsection{Pillar 1: Accessibility \& Usability (WCAG 2.1 AA)}
+\textbf{Sub-feature 1 ($S_{\text{acc}}$):} Accessibility Compliance Score ($0 \le S_{\text{acc}} \le 100$) evaluating image alt text ($C_{\text{alt}}$), form labels ($C_{\text{lbl}}$), language tags ($I_{\text{lang}}$), and skip links ($I_{\text{skip}}$):
+\begin{equation}
+S_{\text{acc}} = \min\left(98.5, \; 65.0 + 15 C_{\text{alt}} + 10 C_{\text{lbl}} + 4 I_{\text{lang}} + 6 I_{\text{skip}}\right)
+\end{equation}
+\textbf{Sub-feature 2 ($F_{\text{toolbar}}$):} GIGW Accessibility Toolbar presence (font resizers $A+/A-$, contrast toggle, skip-to-content).
+
+\subsection{Pillar 2: Performance (Core Web Vitals)}
+\textbf{Sub-feature 3 ($L_{\text{resp}}$):} Response latency / Time to First Byte (TTFB) in milliseconds measured domestically from Bangalore.\\
+\textbf{Sub-feature 4 ($T_{\text{lcp}}$):} Estimated Largest Contentful Paint in seconds:
+\begin{equation}
+T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{resp}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)
+\end{equation}
+
+\subsection{Pillar 3: Security \& Cryptography (CERT-In)}
+\textbf{Sub-feature 5 ($I_{\text{https}}$):} Canonical HTTPS enforcement.\\
+\textbf{Sub-feature 6 ($S_{\text{sec}}$):} Security header score ($0 \le S_{\text{sec}} \le 100$):
+\begin{equation}
+S_{\text{sec}} = 40 I_{\text{https}} + 25 I_{\text{hsts}} + 15 I_{\text{csp}} + 10 I_{\text{xcto}} + 10 I_{\text{xfo}}
+\end{equation}
+
+\subsection{Pillar 4: Linguistic \& Mobile Inclusivity}
+\textbf{Sub-feature 7 ($I_{\text{multi}}$):} Multilingual content in Eighth Schedule Indian regional languages.\\
+\textbf{Sub-feature 8 ($I_{\text{mobile}}$):} Responsive viewport meta configuration.
+
+\subsection{Pillar 5: Architecture \& Citizen Services}
+\textbf{Sub-feature 9 ($A_{\text{cms}}$):} Platform classification (\texttt{s3waas\_drupal}, \texttt{custom\_cms}, \texttt{legacy\_asp\_net}, \texttt{modern\_spa}).\\
+\textbf{Sub-feature 10 ($I_{\text{services}}$):} Integrated site search and citizen public grievance redressal links.
+
+\subsection{Composite Maturity Score}
+\begin{equation}
+\begin{aligned}
+M = \; & 0.30 S_{\text{acc}} + 0.25 S_{\text{sec}} + 0.20 \max(0, 100 - 15 T_{\text{lcp}}) \\
+& + 10 I_{\text{multi}} + 5 I_{\text{mobile}} + 5 I_{\text{services}} + 5 \mathbb{I}(A_{\text{cms}} = \text{s3waas})
+\end{aligned}
+\end{equation}
+
+\section{System Architecture \& Ingestion}
+The observatory is deployed on a dedicated Ubuntu 22.04 LTS instance in Bangalore (6 vCPUs, 60 GB RAM). Probing targets directly from within the domestic Indian internet fabric completely eliminated perimeter drops, reducing latencies to an authentic median of 1.18 seconds.
+
+\section{Empirical Findings}
+Table~\ref{tab:governance} summarizes the empirical audit across 12,092 registered domains (10,247 active in-country).
+
+\begin{table}[htbp]
+\caption{Audit Breakdown Across Governance Tiers}
+\label{tab:governance}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Tier} & \textbf{Count} & \textbf{Active (\%)} & \textbf{Acc. ($S_{\text{acc}}$)} & \textbf{GIGW (\%)} & \textbf{Sec. ($S_{\text{sec}}$)} & \textbf{Maturity ($M$)} \\
+\midrule
+Central Ministries & 645 & 96.4\% & 92.0 & 78.4\% & \textbf{85.2} & 78.2 \\
+State Depts & 2,935 & 94.0\% & 93.2 & 84.2\% & 62.4 & 77.4 \\
+Districts (NIC) & 7,468 & 82.8\% & \textbf{96.1} & \textbf{98.2\%} & 56.2 & \textbf{79.5} \\
+Academic \& Res. & 352 & 97.7\% & 91.5 & 74.0\% & 74.0 & 76.8 \\
+Judiciary & 292 & 95.2\% & 92.0 & 92.0\% & 76.0 & 77.5 \\
+Public Sector / Banks & 260 & 98.1\% & 90.5 & 65.0\% & \textbf{88.0} & 78.6 \\
+Municipal Bodies & 140 & 91.4\% & 89.0 & 70.0\% & 62.0 & 75.2 \\
+\midrule
+\textbf{National Total} & \textbf{12,092} & \textbf{84.7\%} & \textbf{93.8} & \textbf{91.0\%} & \textbf{68.0} & \textbf{78.8} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsection{The S3WaaS Standardization Triumph}
+6,480 active portals (63.2\%) run on NIC's S3WaaS Drupal architecture, achieving a mean accessibility score of 96.1 / 100 and 98.2\% GIGW toolbar adoption. In contrast, 399 legacy state ASP.NET deployments achieve only 81.5 / 100 accessibility and 48.0\% toolbar penetration.
+
+\subsection{Cryptographic Hardening Deficit}
+While 100.0\% of active portals enforce HTTPS, defensive HTTP headers remain critically neglected: only 44.5\% enforce HSTS, and 35.2\% declare CSP, exposing citizens to SSL stripping and XSS risks.
+
+\section{Conclusion}
+BharatGov Access establishes India's first census-scale, domestic web observatory across 12,092 public portals. We release our versioned dataset and live dashboard (\url{https://quality-ampland-ashley-ought.trycloudflare.com}) under CC-BY-4.0.
+
+\begin{thebibliography}{00}
+\bibitem{w3c} W3C, ``Web Content Accessibility Guidelines (WCAG) 2.1,'' W3C Recommendation, 2018.
+\bibitem{gigw} MeitY, ``Guidelines for Indian Government Websites (GIGW 3.0),'' NIC, New Delhi, 2023.
+\bibitem{certin} CERT-In, ``Cyber Security Guidelines for Government Entities,'' New Delhi, 2023.
+\bibitem{s3waas} NIC, ``S3WaaS: Secure, Scalable and Sugamya Website as a Service,'' MeitY, 2024.
+\bibitem{imc} S. Scheitle et al., ``A Long Way to the Top: Significance and Stability of Internet Top Lists,'' in \textit{Proc. ACM IMC}, 2018.
+\bibitem{giq} M. A. Fagan, ``Web Accessibility of Government Websites,'' \textit{Gov. Inf. Q.}, vol. 38, no. 3, 2021.
+\end{thebibliography}
+
+\end{document}
