@@ -5,8 +5,11 @@
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Architecture](https://img.shields.io/badge/Architecture-Hybrid%20Agentic%20%2B%20Deterministic-green.svg)](#system-architecture)
 [![Target Platform](https://img.shields.io/badge/Target-DataHub%20KGP-orange.svg)](#datahub-kgp-dataset-release)
+[![Live Observatory](https://img.shields.io/badge/Live%20Observatory-uniquepratham.github.io-1f6feb.svg)](https://uniquepratham.github.io/)
 
 **BharatGov Access** is a large-scale, longitudinal, evidence-first observatory and dataset platform characterizing the publicly observable digital infrastructure of Indian government websites across **Central Ministries**, **36 States/UTs**, and **785+ District Administrations**.
+
+**Live observatory:** <https://uniquepratham.github.io/>
 
 ---
 

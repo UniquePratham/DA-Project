@@ -215,11 +215,40 @@ both themes. Verified by the `a11y` suite.
 
 ## 6. Live Cloud Deployment & Infrastructure
 
+The observatory is hosted twice, from the same `dashboard/` source. Both hosts
+serve the identical static build; neither needs a build step.
+
+### A. Primary — GitHub Pages (permanent, no tunnel)
+
+* **URL:** `https://uniquepratham.github.io/` (Status: HTTP 200 OK)
+* **Source:** the `dashboard/` directory of this repository, published by
+  `.github/workflows/pages.yml`.
+* **Why this is primary:** GitHub Pages is permanent, HTTPS-enforced, and has no
+  process to keep alive. A Quick Tunnel URL changes every time `cloudflared`
+  restarts, so it cannot be printed on a slide or a paper.
+* **Deploy:** push to `main`. The workflow copies `dashboard/` to `_site/`,
+  drops the Flask dev server, writes `.nojekyll`, asserts the critical assets
+  exist, and publishes. A failed asset assertion fails the build rather than
+  shipping an unstyled page.
+* **Verify:** `python scripts/verify_dashboard.py` runs against the local file;
+  the live host is checked with the same assertions in a browser.
+
+### B. Secondary — Cloudflare Tunnel on the Vultr node
+
 * **Cloud Node:** Deployed domestically inside India (Ubuntu 22.04 LTS, 6 vCPUs, 60 GB RAM, 350 GB NVMe).
 * **Remote Path:** `/opt/bharatgov-bangalore/dashboard/`
-* **Daemon Process:** `python3 -m http.server 8088`
-* **Live Tunnel:** Cloudflare Quick Tunnel  
-  **URL:** `https://quality-ampland-ashley-ought.trycloudflare.com` (Status: HTTP 200 OK)
+* **Live Tunnel:** Cloudflare Quick Tunnel
+  **URL:** `https://weeks-privacy-transcription-improved.trycloudflare.com` (Status: HTTP 200 OK)
+* **Supervision:** two systemd units, both `enabled` and `active`:
+  * `bharatgov-dashboard.service` — `python3 -m http.server 8088 --bind 127.0.0.1`
+  * `bharatgov-tunnel.service` — `cloudflared tunnel --url http://127.0.0.1:8088`
+  Both restart on failure and start on boot. The origin binds to loopback only,
+  so the tunnel is the sole ingress.
+* **Caveat:** a Quick Tunnel hostname is ephemeral. It changes when the tunnel
+  restarts, so treat the GitHub Pages URL as the citable one. A stable
+  `access.<domain>` hostname requires a Cloudflare-managed zone plus a named
+  tunnel (`cloudflared tunnel create` + `cloudflared tunnel route dns`), which
+  needs account credentials that are deliberately not stored in this repository.
 * **File Sync Workflow:** Files are synchronized from local to remote via Paramiko SFTP. Temporary sync scripts must be deleted immediately after execution and never committed to Git.
 * **Deploying the rebuilt dashboard:** the new dashboard is fully static and needs no build step. Upload `dashboard/index.html` plus the whole `dashboard/static/` directory (including `fonts/`, `india_map.js`, `app.css`, `app.js`, `logo-mark.svg`, `favicon.svg`). The old single-file dashboard had no external assets; this one does, so a partial upload will render unstyled.
 
