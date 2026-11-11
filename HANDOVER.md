@@ -260,7 +260,7 @@ serve the identical static build; neither needs a build step.
 > **CRITICAL SECURITY REQUIREMENT: ZERO CREDENTIALS IN GIT**  
 > Never stage, commit, or push any server passwords, root credentials, private SSH keys, or server IP addresses to the Git repository. An automated pre-commit scan is in place:
 > ```powershell
-> python -c "forbidden=['REDACTED_ROTATE_THIS_PASSWORD','REDACTED_SERVER_IP']; ..."
+> python -c "forbidden=['<ROOT_PASSWORD>','<SERVER_IP>']; ..."
 > ```
 > Always ensure `git status` shows a clean tree before pushing.
 
