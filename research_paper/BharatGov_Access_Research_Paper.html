@@ -119,12 +119,16 @@ pre {
   border: 0.5pt solid #ddd;
   border-left: 2pt solid #a63a1e;
   padding: 5pt 6pt;
-  margin: 6pt 0;
+  /* Centre the block itself; the ASCII art inside stays left-aligned so its
+     columns line up. Without `fit-content` the block fills both columns and the
+     narrower diagram appears stranded against the left edge. */
+  margin: 6pt auto;
+  width: fit-content;
+  max-width: 100%;
   overflow: visible;
   white-space: pre;
   break-inside: avoid;
   text-align: left;
-  max-width: 100%;
   box-sizing: border-box;
   /* Architecture diagrams are wider than a single column, so they span both. */
   column-span: all;
@@ -255,12 +259,14 @@ a { color: #111; text-decoration: none; }
 2. <strong>The Perimeter Firewall Blindspot (Geo-IP Bias):</strong> Crawlers executing from overseas cloud instances (e.g., AWS us-east-1 or GCP us-central1) encounter aggressive edge perimeter Geo-IP drops enforced by RailTel, state National Informatics Centre (NIC) gates, and state data center (SDC) firewalls. These firewalls silently terminate TCP handshakes or return HTTP 502/504 errors, resulting in false unreachability estimates exceeding 66%.
 3. <strong>Metric Bloat and Measurement Conflation:</strong> Many tools harvest 70+ arbitrary, uncalibrated variables, assigning misleading "zero scores" to unreachable domains rather than decoupling schema validation from network availability.</p>
 <h3>B. Research Contributions</h3>
-<p>To address these challenges, this study makes the following contributions:
-- <strong>Large Auditable Domain Registry:</strong> We construct an auditable public domain registry comprising <strong>14,489 government portals</strong> covering 7 distinct governance tiers, every one of them discovered from an auditable source rather than inferred from a naming convention.
-- <strong>Domestic In-Country Vantage Point:</strong> We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, using a domestic vantage point to reduce the risk of location-dependent reachability bias.
-- <strong>5-Pillar Standardized Methodology:</strong> We eliminate feature bloat by formulating a 5-Pillar / 12-Variable evaluation schema grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.
-- <strong>Empirical Findings on S3WaaS:</strong> We present the first large-scale empirical validation of NIC’s S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.
-- <strong>Open Data &amp; Live Observatory:</strong> We deploy a public, interactive web dashboard (<code>https://uniquepratham.github.io/DA-Project/</code>) and release versioned Apache Parquet datasets for reproducibility.</p>
+<p>To address these challenges, this study makes the following contributions:</p>
+<ul>
+<li><strong>Large Auditable Domain Registry:</strong> We construct an auditable public domain registry comprising <strong>14,489 government and public-sector web domains</strong> covering 7 distinct governance tiers, every one of them discovered from an auditable source rather than inferred from a naming convention.</li>
+<li><strong>Domestic In-Country Vantage Point:</strong> We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, using a domestic vantage point to reduce the risk of location-dependent reachability bias.</li>
+<li><strong>5-Pillar Standardized Methodology:</strong> We eliminate feature bloat by formulating a 5-Pillar / 12-Variable evaluation schema grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.</li>
+<li><strong>Empirical Findings on S3WaaS:</strong> We present the first large-scale empirical validation of NIC’s S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.</li>
+<li><strong>Open Data &amp; Live Observatory:</strong> We deploy a public, interactive web dashboard (<code>https://uniquepratham.github.io/DA-Project/</code>) and release versioned Apache Parquet datasets for reproducibility.</li>
+</ul>
 <hr>
 <h2>II. Related Work &amp; Background</h2>
 <h3>A. Web Accessibility &amp; GIGW Standards</h3>
@@ -412,21 +418,21 @@ a { color: #111; text-decoration: none; }
 <p>To enable comparative governance analysis, we define a normalized composite maturity index ($0 \le M \le 100$):
 $$
 \begin{aligned}
-M = {} &amp; 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \
-       &amp; + 0.20 \cdot \max(0,\; 100 - 15 \cdot T_{\text{lcp}}) \
-       &amp; + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} \
-       &amp; + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})
+M = {} & 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \\
+       & + 0.20 \cdot \max(0,\; 100 - 15 \cdot T_{\text{lcp}}) \\
+       & + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} \\
+       & + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})
 \end{aligned}
 $$</p>
-<p>The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0.</p>
+<p>The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to the range [0, 100].</p>
 <p>Two properties of this index should be stated plainly. First, the weights are a <strong>design choice</strong>, not an empirical result: they encode our judgement that accessibility and security matter most. A reader who disagrees can recompute $M$ from the released per-pillar columns, which is why every component is published separately rather than only as a composite. Second, the composite is dominated by accessibility, which is uniformly high across the census, so it compresses differences between tiers. Section V therefore reports the pillars individually and treats the composite as a summary, not a verdict.</p>
 <p>The formula is exposed as <code>bharatgov_access.maturity_index()</code> so a reader can score a portal they measured themselves with the same methodology.</p>
 <hr>
 <h2>IV. Measurement System Architecture</h2>
 <pre><code> ┌────────────────────────────────────────────────────────────────────────┐
- │                      National Registry (N = 14,489)                    │
- │    Central Ministries (645) · State Depts (2,935) · Districts (7,468)   │
- │   Academic (352) · Judiciary (292) · PSUs (260) · Municipalities (140)  │
+ │                      Discovered Registry (N = 14,489)                  │
+ │    State Depts (7,340) · Academic (6,771) · Judiciary (203)            │
+ │    Central (60) · Districts (62) · Municipalities (30) · PSUs (23)     │
  └───────────────────────────────────┬────────────────────────────────────┘
                                      │
                                      ▼
@@ -450,7 +456,7 @@ $$</p>
  ┌────────────────────────────────────────────────────────────────────────┐
  │                     Versioned Open Data Release                        │
  │       • Apache Parquet (Columnar) · CSV · JSON (CC-BY-4.0)             │
- │       • Live Dashboard Observatory (trycloudflare.com tunnel)          │
+ │       • Live Observatory (uniquepratham.github.io/DA-Project)          │
  └────────────────────────────────────────────────────────────────────────┘
 </code></pre>
 <h3>A. In-Country Vantage Point</h3>
@@ -460,7 +466,7 @@ $$</p>
 <p>To ensure academic integrity, BharatGov Access strictly decouples <strong>Schema Registration</strong> from <strong>Measurement Success</strong>. When a portal is unreachable or its DNS lease has expired, the observatory assigns explicit status diagnostic codes (<code>DNS Inactive</code>, <code>504 Timeout</code>, <code>502 Bad Gateway</code>, <code>403 WAF Challenge</code>) and records sub-feature metrics as <code>null</code> / <code>NaN</code>, preventing the propagation of artificial zero scores.</p>
 <hr>
 <h2>V. Empirical Findings &amp; Analysis</h2>
-<p>The census dataset comprises <strong>14,489 government web domains</strong>, of which <strong>7,542 (52.1%)</strong> responded to a live HTTP request and are analysed here. Table I provides a comprehensive breakdown across administrative levels.</p>
+<p>The discovered registry comprises <strong>14,489 government and public-sector web domains</strong>, of which <strong>7,542 (52.1%)</strong> responded to a live HTTP request and are analysed here. Table I provides a comprehensive breakdown across administrative levels.</p>
 <h3>TABLE I: Comprehensive Breakdown Across Governance Tiers</h3>
 <p>All figures are computed from the released dataset (<code>bharatgov_access_clean.parquet</code>) over reachable portals only. Reproduce with <code>bharatgov tiers</code>.</p>
 <table class="wide">

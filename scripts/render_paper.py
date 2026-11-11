@@ -137,12 +137,16 @@ pre {
   border: 0.5pt solid #ddd;
   border-left: 2pt solid #a63a1e;
   padding: 5pt 6pt;
-  margin: 6pt 0;
+  /* Centre the block itself; the ASCII art inside stays left-aligned so its
+     columns line up. Without `fit-content` the block fills both columns and the
+     narrower diagram appears stranded against the left edge. */
+  margin: 6pt auto;
+  width: fit-content;
+  max-width: 100%;
   overflow: visible;
   white-space: pre;
   break-inside: avoid;
   text-align: left;
-  max-width: 100%;
   box-sizing: border-box;
   /* Architecture diagrams are wider than a single column, so they span both. */
   column-span: all;
@@ -304,15 +308,45 @@ def promote_wide_tables(html: str) -> str:
     return html
 
 
+def protect_math(text: str) -> tuple[str, dict[str, str]]:
+    """Swap math blocks for placeholders before Markdown runs.
+
+    Python-Markdown treats a backslash as an escape character, so the ``\\\\``
+    row separator inside a LaTeX ``aligned`` environment collapses to a single
+    backslash and the equation renders as one unbroken line. Stashing the math
+    first and restoring it afterwards keeps the LaTeX byte-exact.
+    """
+    store: dict[str, str] = {}
+
+    def stash(match: re.Match[str]) -> str:
+        key = f"\x00MATH{len(store)}\x00"
+        store[key] = match.group(0)
+        return key
+
+    # Display math first, then inline, so the display delimiters win.
+    text = re.sub(r"\$\$.*?\$\$", stash, text, flags=re.S)
+    text = re.sub(r"(?<!\$)\$(?!\$)[^$\n]+?\$", stash, text)
+    return text, store
+
+
+def restore_math(html: str, store: dict[str, str]) -> str:
+    for key, value in store.items():
+        html = html.replace(key, value)
+    return html
+
+
 def build_html() -> str:
     raw = SOURCE.read_text(encoding="utf-8")
     masthead, body = split_front_matter(raw)
+
+    body, math_store = protect_math(body)
 
     rendered = markdown.markdown(
         body,
         extensions=["tables", "fenced_code", "sane_lists", "attr_list"],
         output_format="html5",
     )
+    rendered = restore_math(rendered, math_store)
     rendered = promote_wide_tables(rendered)
 
     # Pull the abstract into its own spanning block.

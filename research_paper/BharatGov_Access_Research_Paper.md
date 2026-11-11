@@ -37,7 +37,8 @@ While commercial web measurement platforms (such as HTTP Archive and Chrome User
 
 ### B. Research Contributions
 To address these challenges, this study makes the following contributions:
-- **Large Auditable Domain Registry:** We construct an auditable public domain registry comprising **14,489 government portals** covering 7 distinct governance tiers, every one of them discovered from an auditable source rather than inferred from a naming convention.
+
+- **Large Auditable Domain Registry:** We construct an auditable public domain registry comprising **14,489 government and public-sector web domains** covering 7 distinct governance tiers, every one of them discovered from an auditable source rather than inferred from a naming convention.
 - **Domestic In-Country Vantage Point:** We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, using a domestic vantage point to reduce the risk of location-dependent reachability bias.
 - **5-Pillar Standardized Methodology:** We eliminate feature bloat by formulating a 5-Pillar / 12-Variable evaluation schema grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.
 - **Empirical Findings on S3WaaS:** We present the first large-scale empirical validation of NIC’s S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.
@@ -148,7 +149,7 @@ M = {} & 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \\
 \end{aligned}
 $$
 
-The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0.
+The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to the range [0, 100].
 
 Two properties of this index should be stated plainly. First, the weights are a **design choice**, not an empirical result: they encode our judgement that accessibility and security matter most. A reader who disagrees can recompute $M$ from the released per-pillar columns, which is why every component is published separately rather than only as a composite. Second, the composite is dominated by accessibility, which is uniformly high across the census, so it compresses differences between tiers. Section V therefore reports the pillars individually and treats the composite as a summary, not a verdict.
 
@@ -160,9 +161,9 @@ The formula is exposed as `bharatgov_access.maturity_index()` so a reader can sc
 
 ```
  ┌────────────────────────────────────────────────────────────────────────┐
- │                      National Registry (N = 14,489)                    │
- │    Central Ministries (645) · State Depts (2,935) · Districts (7,468)   │
- │   Academic (352) · Judiciary (292) · PSUs (260) · Municipalities (140)  │
+ │                      Discovered Registry (N = 14,489)                  │
+ │    State Depts (7,340) · Academic (6,771) · Judiciary (203)            │
+ │    Central (60) · Districts (62) · Municipalities (30) · PSUs (23)     │
  └───────────────────────────────────┬────────────────────────────────────┘
                                      │
                                      ▼
@@ -186,7 +187,7 @@ The formula is exposed as `bharatgov_access.maturity_index()` so a reader can sc
  ┌────────────────────────────────────────────────────────────────────────┐
  │                     Versioned Open Data Release                        │
  │       • Apache Parquet (Columnar) · CSV · JSON (CC-BY-4.0)             │
- │       • Live Dashboard Observatory (trycloudflare.com tunnel)          │
+ │       • Live Observatory (uniquepratham.github.io/DA-Project)          │
  └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -202,7 +203,7 @@ To ensure academic integrity, BharatGov Access strictly decouples **Schema Regis
 
 ## V. Empirical Findings & Analysis
 
-The census dataset comprises **14,489 government web domains**, of which **7,542 (52.1%)** responded to a live HTTP request and are analysed here. Table I provides a comprehensive breakdown across administrative levels.
+The discovered registry comprises **14,489 government and public-sector web domains**, of which **7,542 (52.1%)** responded to a live HTTP request and are analysed here. Table I provides a comprehensive breakdown across administrative levels.
 
 ### TABLE I: Comprehensive Breakdown Across Governance Tiers
 All figures are computed from the released dataset (`bharatgov_access_clean.parquet`) over reachable portals only. Reproduce with `bharatgov tiers`.
