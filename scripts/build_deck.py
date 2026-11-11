@@ -708,7 +708,7 @@ def build(f: dict) -> str:
 <span style="color:#e08a5f">import</span> bharatgov_access <span style="color:#e08a5f">as</span> bga
 
 bga.load()                  <span style="color:#7a6d63"># {f['total']:,} domains</span>
-bga.load(reachable=<span style="color:#e08a5f">True</span>)  <span style="color:#7a6d63"># 10,247 live</span>
+bga.load(reachable=<span style="color:#e08a5f">True</span>)  <span style="color:#7a6d63"># {f['live']:,} live</span>
 bga.tier_summary()          <span style="color:#7a6d63"># Table I</span>
 bga.architecture_summary()  <span style="color:#7a6d63"># Table II</span>
 bga.state_ranking()         <span style="color:#7a6d63"># Section V-C</span></pre>
