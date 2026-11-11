@@ -47,6 +47,7 @@
     modern_spa: 'Modern SPA',
     legacy_asp_net: 'Legacy ASP.NET',
     wordpress: 'WordPress',
+    drupal: 'Drupal',
     indeterminate_unreachable: 'Not fingerprinted',
   };
 
@@ -671,7 +672,7 @@
       })
       .join('');
 
-    svg.innerHTML = paths;
+    svg.innerHTML = paths + '<path class="map-selected-outline" d="" aria-hidden="true"></path>';
 
     const ramp = $('#map-legend-ramp');
     if (ramp) {
@@ -723,6 +724,18 @@
     $$('.map-state').forEach((path) => {
       path.setAttribute('aria-pressed', path.dataset.state === name ? 'true' : 'false');
     });
+
+    // Draw the selection outline as a single overlay path on top of every state,
+    // so shared borders are never clipped by a neighbouring polygon.
+    const outline = $('.map-selected-outline');
+    const selected = $$('.map-state').find((p) => p.dataset.state === name);
+    if (outline && selected) {
+      outline.setAttribute('d', selected.getAttribute('d'));
+      outline.classList.remove('is-drawing');
+      // Force reflow so the draw-on animation restarts on every selection.
+      void outline.getBoundingClientRect();
+      outline.classList.add('is-drawing');
+    }
 
     $('#dossier-name').textContent = stat.name;
     $('#dossier-rank').innerHTML = `Rank <b>${stat.rank}</b> of ${state.stats.states.length}`;

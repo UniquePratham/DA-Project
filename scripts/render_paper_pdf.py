@@ -225,7 +225,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <strong>Pratham Agarwal</strong>, <strong>Amit Kumar Bairagi</strong>, and <strong>Vishwajeet Nand Yaduraj</strong>
   </div>
   <div class="affil">
-    Department of Data Analytics, Indian Institute of Technology Kharagpur, West Bengal 721302, India
+    Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India
   </div>
   <div class="email">
     Correspondence: {pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in
@@ -575,7 +575,7 @@ def main():
             print_background=True,
             display_header_footer=True,
             header_template="<div></div>",
-            footer_template='<div style="font-size: 8pt; font-family: serif; width: 100%; text-align: center; color: #444;">Department of Data Analytics, IIT Kharagpur — BharatGov Access Research Benchmark | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
+            footer_template='<div style="font-size: 8pt; font-family: serif; width: 100%; text-align: center; color: #444;">Department of Computer Science and Engineering, IIT Kharagpur &mdash; Data Analytics &mdash; BharatGov Access | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
         )
         browser.close()
     

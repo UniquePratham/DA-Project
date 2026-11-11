@@ -885,22 +885,66 @@ a:hover {
 
 .map-state {
   stroke: var(--paper);
-  stroke-width: 0.8;
+  stroke-width: 0.5;
   stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
   cursor: pointer;
-  transition: fill var(--dur) var(--ease);
+  transition: fill 180ms ease, opacity 180ms ease, filter 150ms ease;
 }
 
 .map-state:hover,
 .map-state:focus-visible {
   stroke: var(--ink);
-  stroke-width: 1.5;
+  stroke-width: 1.2;
+  filter: brightness(1.06);
   outline: none;
 }
 
 .map-state[aria-pressed='true'] {
+  stroke: var(--paper);
+  stroke-width: 0.5;
+}
+
+/* Selection outline is a separate overlay path so it is never clipped by a
+   neighbouring polygon drawn later in document order. */
+.map-selected-outline {
+  fill: none;
   stroke: var(--ink);
-  stroke-width: 1.9;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+  shape-rendering: geometricPrecision;
+  opacity: 0;
+}
+
+.map-selected-outline.is-drawing {
+  animation: map-outline-in 240ms var(--ease) forwards;
+}
+
+@keyframes map-outline-in {
+  from {
+    opacity: 0;
+    stroke-width: 5;
+  }
+  to {
+    opacity: 1;
+    stroke-width: 2.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-selected-outline.is-drawing {
+    animation: none;
+    opacity: 1;
+  }
+  .map-state {
+    transition: none;
+  }
+  .map-state:hover,
+  .map-state:focus-visible {
+    filter: none;
+  }
 }
 
 .map-state--empty {

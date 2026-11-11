@@ -131,17 +131,21 @@ code {
 
 pre {
   font-family: "Consolas", "Courier New", monospace;
-  font-size: 7.2pt;
-  line-height: 1.28;
+  font-size: 6.4pt;
+  line-height: 1.25;
   background: #f7f7f7;
   border: 0.5pt solid #ddd;
   border-left: 2pt solid #a63a1e;
   padding: 5pt 6pt;
   margin: 6pt 0;
-  overflow: hidden;
+  overflow: visible;
   white-space: pre;
   break-inside: avoid;
   text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* Architecture diagrams are wider than a single column, so they span both. */
+  column-span: all;
 }
 
 pre code { background: none; padding: 0; font-size: inherit; }
@@ -184,7 +188,16 @@ table.wide {
 /* ------------------------------------------------------------------- math */
 
 .katex { font-size: 0.96em; }
-.katex-display { margin: 6pt 0; overflow-x: hidden; }
+
+/* Display equations must never be clipped. `overflow: hidden` silently
+   truncates the tail of an over-wide formula in print, so it is `visible`
+   here; long equations are broken across lines in the Markdown source
+   instead of being forced to span columns. */
+.katex-display {
+  margin: 6pt 0;
+  overflow: visible;
+  text-align: center;
+}
 
 /* ------------------------------------------------------------------ rules */
 
@@ -268,7 +281,7 @@ def split_front_matter(text: str) -> tuple[str, str]:
 
     masthead = (
         '<header class="masthead">'
-        '<div class="venue">Department of Data Analytics &middot; IIT Kharagpur &middot; 2026</div>'
+        '<div class="venue">Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; 2026</div>'
         f"<h1>{title}</h1>"
         f'<div class="authors">{", ".join(authors)}</div>'
         f'<div class="affiliation">{"<br>".join(affiliation)}</div>'

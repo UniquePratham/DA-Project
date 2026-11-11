@@ -1,0 +1,4958 @@
+[
+ {
+  "domain_name": "aaplesarkar.mahaonline.gov.in",
+  "entity_name": "Aaple Sarkar Portal (Maharashtra)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "abc.gov.in",
+  "entity_name": "Academic Bank of Credits (ABC)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "abdm.gov.in",
+  "entity_name": "Ayushman Bharat Digital Mission (ABDM)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aces.gov.in",
+  "entity_name": "ACES Central Excise & Service Tax",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ada.gov.in",
+  "entity_name": "Aeronautical Development Agency (ADA)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ade.drdo.in",
+  "entity_name": "Aeronautical Development Establishment (ADE)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aerb.gov.in",
+  "entity_name": "Atomic Energy Regulatory Board (AERB)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "afcat.cdac.in",
+  "entity_name": "AFCAT CDAC Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aftdelhi.nic.in",
+  "entity_name": "Armed Forces Tribunal (AFT)",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "agmarknet.gov.in",
+  "entity_name": "Agmarknet Agricultural Marketing",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "agricoop.nic.in",
+  "entity_name": "Ministry of Agriculture and Farmers Welfare",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ahmedabadcity.gov.in",
+  "entity_name": "Ahmedabad Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aicte-india.org",
+  "entity_name": "AICTE Approval & Regulation Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiims.edu",
+  "entity_name": "AIIMS New Delhi",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsbathinda.edu.in",
+  "entity_name": "AIIMS Bathinda",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsbhopal.edu.in",
+  "entity_name": "AIIMS Bhopal",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsbhubaneswar.nic.in",
+  "entity_name": "AIIMS Bhubaneswar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsbibinagar.edu.in",
+  "entity_name": "AIIMS Bibinagar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsbilaspur.edu.in",
+  "entity_name": "AIIMS Bilaspur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsdeoghar.edu.in",
+  "entity_name": "AIIMS Deoghar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsgorakhpur.edu.in",
+  "entity_name": "AIIMS Gorakhpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsguwahati.ac.in",
+  "entity_name": "AIIMS Guwahati",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsjodhpur.edu.in",
+  "entity_name": "AIIMS Jodhpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimskalyani.edu.in",
+  "entity_name": "AIIMS Kalyani",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsmangalagiri.edu.in",
+  "entity_name": "AIIMS Mangalagiri",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsnagpur.edu.in",
+  "entity_name": "AIIMS Nagpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimspatna.edu.in",
+  "entity_name": "AIIMS Patna",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsraebareli.edu.in",
+  "entity_name": "AIIMS Raebareli",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsraipur.edu.in",
+  "entity_name": "AIIMS Raipur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsrajkot.edu.in",
+  "entity_name": "AIIMS Rajkot",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aiimsrishikesh.edu.in",
+  "entity_name": "AIIMS Rishikesh",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ais.incometax.gov.in",
+  "entity_name": "Annual Information Statement (AIS) Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "aktu.ac.in",
+  "entity_name": "AKTU Uttar Pradesh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "allahabadhighcourt.in",
+  "entity_name": "Allahabad High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "amd.gov.in",
+  "entity_name": "Atomic Minerals Directorate (AMD)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "amu.ac.in",
+  "entity_name": "Aligarh Muslim University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "andaman.gov.in",
+  "entity_name": "Andaman and Nicobar Islands State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Andaman and Nicobar Islands",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "annauniv.edu",
+  "entity_name": "Anna University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "anyror.gujarat.gov.in",
+  "entity_name": "AnyRoR Land Records (Gujarat)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ap.gov.in",
+  "entity_name": "Andhra Pradesh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Andhra Pradesh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "apnakhata.rajasthan.gov.in",
+  "entity_name": "Apna Khata Land Records (Rajasthan)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "appointments.uidai.gov.in",
+  "entity_name": "Aadhaar Appointment Booking",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "appolice.gov.in",
+  "entity_name": "Andhra Pradesh Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "apsc.nic.in",
+  "entity_name": "Assam Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "arde.drdo.in",
+  "entity_name": "Armament Research & Development Establishment (ARDE)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "arunachalpradesh.gov.in",
+  "entity_name": "Arunachal Pradesh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Arunachal Pradesh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "assam.gov.in",
+  "entity_name": "Assam State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Assam",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "assampolice.gov.in",
+  "entity_name": "Assam Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "assamrifles.gov.in",
+  "entity_name": "Assam Rifles",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "assamtenders.gov.in",
+  "entity_name": "Assam Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "banglarbhumi.gov.in",
+  "entity_name": "Banglarbhumi (West Bengal)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bankofbaroda.in",
+  "entity_name": "Bank of Baroda",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bankofindia.co.in",
+  "entity_name": "Bank of India",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bankofmaharashtra.in",
+  "entity_name": "Bank of Maharashtra",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "barc.gov.in",
+  "entity_name": "Bhabha Atomic Research Centre (BARC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bbmp.gov.in",
+  "entity_name": "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bel-india.in",
+  "entity_name": "Bharat Electronics Limited (BEL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bengalurutrafficpolice.gov.in",
+  "entity_name": "Bengaluru Traffic Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bharatpetroleum.in",
+  "entity_name": "Bharat Petroleum (BPCL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhel.in",
+  "entity_name": "Bharat Heavy Electricals Limited (BHEL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhoonidhi.nrsc.gov.in",
+  "entity_name": "Bhoonidhi Open Data Archive (NRSC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhopalcorporation.org",
+  "entity_name": "Bhopal Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhu.ac.in",
+  "entity_name": "Banaras Hindu University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhuiyan.cg.nic.in",
+  "entity_name": "Bhuiyan Land Records (Chhattisgarh)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhulekh.mahabhumi.gov.in",
+  "entity_name": "Mahabhumi Land Records (Maharashtra)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhulekh.ori.nic.in",
+  "entity_name": "Bhulekh Odisha",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhulekh.uk.gov.in",
+  "entity_name": "Devbhoomi Bhulekh (Uttarakhand)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhuvan-aadhaar.nrsc.gov.in",
+  "entity_name": "Bhuvan Aadhaar Seva Kendra Locator",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bhuvan.nrsc.gov.in",
+  "entity_name": "Bhuvan ISRO Geo-Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bihar.gov.in",
+  "entity_name": "Bihar State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Bihar",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "biharbhumi.bihar.gov.in",
+  "entity_name": "Bihar Bhumi (Bihar)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "biharpolice.bihar.gov.in",
+  "entity_name": "Bihar Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bis.gov.in",
+  "entity_name": "Bureau of Indian Standards",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "boio.nic.in",
+  "entity_name": "Bureau of Immigration India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bombayhighcourt.nic.in",
+  "entity_name": "Bombay High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bprd.nic.in",
+  "entity_name": "Bureau of Police Research and Development",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bpsc.bih.nic.in",
+  "entity_name": "Bihar Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "bsf.gov.in",
+  "entity_name": "Border Security Force (BSF)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cag.gov.in",
+  "entity_name": "Comptroller and Auditor General of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cair.drdo.in",
+  "entity_name": "Centre for AI & Robotics (CAIR)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "calcutnamedicalcollege.edu.in",
+  "entity_name": "Calcutta Medical College",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "calcuttahighcourt.gov.in",
+  "entity_name": "Calcutta High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "caluniv.ac.in",
+  "entity_name": "University of Calcutta",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "canarabank.com",
+  "entity_name": "Canara Bank",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "careerindianairforce.cdac.in",
+  "entity_name": "Career Indian Air Force",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cbi.gov.in",
+  "entity_name": "Central Bureau of Investigation (CBI)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cbic-gst.gov.in",
+  "entity_name": "CBIC GST Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cbic.gov.in",
+  "entity_name": "Central Board of Indirect Taxes and Customs (CBIC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cbse.gov.in",
+  "entity_name": "CBSE",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cci.gov.in",
+  "entity_name": "Competition Commission of India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ccmb.res.in",
+  "entity_name": "CCMB Hyderabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ccmc.gov.in",
+  "entity_name": "Coimbatore Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cctns.uppolice.gov.in",
+  "entity_name": "UP CCTNS Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cdac.in",
+  "entity_name": "Centre for Development of Advanced Computing (C-DAC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cdri.res.in",
+  "entity_name": "Central Drug Research Institute",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cdsco.gov.in",
+  "entity_name": "Central Drugs Standard Control Organization",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cemilac.drdo.in",
+  "entity_name": "Centre for Military Airworthiness (CEMILAC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "centralbankofindia.co.in",
+  "entity_name": "Central Bank of India",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ceptam.drdo.in",
+  "entity_name": "Centre for Personnel Talent Management (CEPTAM)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cert-in.org.in",
+  "entity_name": "CERT-In (Indian Computer Emergency Response Team)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cftri.res.in",
+  "entity_name": "CFTRI Mysore",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cgat.gov.in",
+  "entity_name": "Central Administrative Tribunal (CAT)",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cgstate.gov.in",
+  "entity_name": "Chhattisgarh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Chhattisgarh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cgtenders.gov.in",
+  "entity_name": "Chhattisgarh Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "chandigarh.gov.in",
+  "entity_name": "Chandigarh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Chandigarh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "checkpost.parivahan.gov.in",
+  "entity_name": "National Checkpost Border Tax Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "chennaicorporation.gov.in",
+  "entity_name": "Greater Chennai Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cic.gov.in",
+  "entity_name": "Central Information Commission",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cisf.gov.in",
+  "entity_name": "Central Industrial Security Force (CISF)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "civilaviation.gov.in",
+  "entity_name": "Ministry of Civil Aviation",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "clc.gov.in",
+  "entity_name": "Chief Labour Commissioner (Central)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "clri.org",
+  "entity_name": "CLRI Chennai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cmhelpline.mp.gov.in",
+  "entity_name": "CM Helpline 181 Madhya Pradesh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cmo.kerala.gov.in",
+  "entity_name": "CMO Kerala Grievance Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "coal.nic.in",
+  "entity_name": "Ministry of Coal",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "coalindia.in",
+  "entity_name": "Coal India Limited",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "commerce.gov.in",
+  "entity_name": "Ministry of Commerce and Industry",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "concorindia.co.in",
+  "entity_name": "Container Corporation of India (CONCOR)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "connect.punjab.gov.in",
+  "entity_name": "Connect Punjab e-Services",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "corporationoftrivandrum.in",
+  "entity_name": "Thiruvananthapuram Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cris.org.in",
+  "entity_name": "Centre for Railway Information Systems (CRIS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "crpf.gov.in",
+  "entity_name": "Central Reserve Police Force (CRPF)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "csab.nic.in",
+  "entity_name": "Central Seat Allocation Board (CSAB)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "csir.res.in",
+  "entity_name": "CSIR Headquarters",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cuetpg.nta.ac.in",
+  "entity_name": "CUET (PG) Common University Entrance Test",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cuetug.nta.ac.in",
+  "entity_name": "CUET (UG) Common University Entrance Test",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cvc.gov.in",
+  "entity_name": "Central Vigilance Commission",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "cybercrime.gov.in",
+  "entity_name": "National Cyber Crime Reporting Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dae.gov.in",
+  "entity_name": "Department of Atomic Energy",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "daman.nic.in",
+  "entity_name": "Dadra and Nagar Haveli and Daman and Diu State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Dadra and Nagar Haveli and Daman and Diu",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "data.gov.in",
+  "entity_name": "Open Government Data (OGD) Platform",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dbtbharat.gov.in",
+  "entity_name": "Direct Benefit Transfer (DBT Bharat)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ddpmod.gov.in",
+  "entity_name": "Department of Defence Production",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "deal.drdo.in",
+  "entity_name": "Defence Electronics Applications Lab (DEAL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "defproc.gov.in",
+  "entity_name": "Defence eProcurement Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "delhi.gov.in",
+  "entity_name": "Delhi State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Delhi",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "delhihighcourt.nic.in",
+  "entity_name": "Delhi High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "delhipolice.gov.in",
+  "entity_name": "Delhi Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "delhitenders.gov.in",
+  "entity_name": "Delhi Govt eTenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "desidoc.drdo.in",
+  "entity_name": "Defence Scientific Info & Documentation (DESIDOC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "desw.gov.in",
+  "entity_name": "Department of Ex-Servicemen Welfare",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dge.gov.in",
+  "entity_name": "Directorate General of Employment (DGE)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dgms.gov.in",
+  "entity_name": "Directorate General of Mines Safety (DGMS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dhanwantri.esic.in",
+  "entity_name": "ESIC Dhanwantri Hospital Management",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dharani.telangana.gov.in",
+  "entity_name": "Dharani Portal (Telangana)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "digilocker.gov.in",
+  "entity_name": "DigiLocker Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "digitalgujarat.gov.in",
+  "entity_name": "Digital Gujarat Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "digitalindia.gov.in",
+  "entity_name": "Digital India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "diksha.gov.in",
+  "entity_name": "DIKSHA National Teacher Education Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "districts.ecourts.gov.in",
+  "entity_name": "District Courts of India (eCourts)",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dlrl.drdo.in",
+  "entity_name": "Defence Electronics Research Lab (DLRL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dmrl.drdo.in",
+  "entity_name": "Defence Metallurgical Research Lab (DMRL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dopt.gov.in",
+  "entity_name": "Department of Personnel and Training (DoPT)",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dos.gov.in",
+  "entity_name": "Department of Space",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dot.gov.in",
+  "entity_name": "Ministry of Communications",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "drdl.drdo.in",
+  "entity_name": "Defence Research & Development Lab (DRDL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "drdo.gov.in",
+  "entity_name": "Defence Research & Development Organisation (DRDO HQ)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dsssb.delhi.gov.in",
+  "entity_name": "Delhi Subordinate Services Selection Board",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "dst.gov.in",
+  "entity_name": "Ministry of Science and Technology",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "du.ac.in",
+  "entity_name": "University of Delhi",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "e-filing.ecourts.gov.in",
+  "entity_name": "e-Filing Judicial Portal",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eaadhaar.uidai.gov.in",
+  "entity_name": "e-Aadhaar Download Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "echallan.parivahan.gov.in",
+  "entity_name": "eChallan Parivahan System",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eci.gov.in",
+  "entity_name": "Election Commission of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.cgstate.gov.in",
+  "entity_name": "e-District Chhattisgarh",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.delhigovt.nic.in",
+  "entity_name": "e-District Delhi Govt",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.hp.gov.in",
+  "entity_name": "e-District Himachal Pradesh",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.jk.gov.in",
+  "entity_name": "e-District Jammu & Kashmir",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.kerala.gov.in",
+  "entity_name": "e-District Kerala",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.odisha.gov.in",
+  "entity_name": "e-District Odisha",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.up.gov.in",
+  "entity_name": "e-District Uttar Pradesh",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edistrict.wb.gov.in",
+  "entity_name": "e-District West Bengal",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "education.gov.in",
+  "entity_name": "Ministry of Education",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "edudel.nic.in",
+  "entity_name": "Delhi Directorate of Education (Govt Schools)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "egazette.gov.in",
+  "entity_name": "Official Gazette of India (e-Gazette)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "einvoice1.gst.gov.in",
+  "entity_name": "e-Invoice Portal 1 (NIC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "einvoice2.gst.gov.in",
+  "entity_name": "e-Invoice Portal 2",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "emitra.rajasthan.gov.in",
+  "entity_name": "e-Mitra Rajasthan Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "enam.gov.in",
+  "entity_name": "e-NAM National Agriculture Market",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "enforcementdirectorate.gov.in",
+  "entity_name": "Directorate of Enforcement (ED)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "epfigms.gov.in",
+  "entity_name": "EPFiGMS (EPFO Grievance Management System)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "epfindia.gov.in",
+  "entity_name": "Employees Provident Fund Organisation (HQ)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eportal.incometax.gov.in",
+  "entity_name": "Income Tax e-Portal Login",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eproc.bihar.gov.in",
+  "entity_name": "Bihar eProcurement",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eproc.punjab.gov.in",
+  "entity_name": "Punjab eProcurement",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eproc.rajasthan.gov.in",
+  "entity_name": "Rajasthan eProcurement",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eprocure.gov.in",
+  "entity_name": "Central Public Procurement Portal (CPPP)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "esanjeevani.in",
+  "entity_name": "eSanjeevani National Telemedicine",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eservices.uk.gov.in",
+  "entity_name": "e-Services Uttarakhand (Apuni Sarkar)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eshram.gov.in",
+  "entity_name": "e-Shram National Database for Unorganised Workers",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "esic.gov.in",
+  "entity_name": "Employees State Insurance Corporation (HQ)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "esic.nic.in",
+  "entity_name": "ESIC Portal (NIC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "etender.up.nic.in",
+  "entity_name": "UP eTender Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "etenders.gov.in",
+  "entity_name": "eProcurement System of India (eTenders)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "etenders.hry.nic.in",
+  "entity_name": "Haryana eTenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "etenders.kerala.gov.in",
+  "entity_name": "Kerala eTenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ewaybillgst.gov.in",
+  "entity_name": "National e-Way Bill Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "examinationservices.nic.in",
+  "entity_name": "NIC Examination Services Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "eximbankindia.in",
+  "entity_name": "EXIM Bank of India",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "facelessassessment.incometax.gov.in",
+  "entity_name": "National Faceless Assessment Centre",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "fert.nic.in",
+  "entity_name": "Ministry of Chemicals and Fertilizers",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "finmin.nic.in",
+  "entity_name": "Ministry of Finance",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "fois.indianrail.gov.in",
+  "entity_name": "Freight Operations Information System (FOIS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "fssai.gov.in",
+  "entity_name": "Food Safety and Standards Authority of India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gailonline.com",
+  "entity_name": "GAIL (India) Limited",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gem.gov.in",
+  "entity_name": "Government e-Marketplace (GeM)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ghconline.gov.in",
+  "entity_name": "Gauhati High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ghmc.gov.in",
+  "entity_name": "Greater Hyderabad Municipal Corporation (GHMC)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gmcjammu.nic.in",
+  "entity_name": "GMC Jammu",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gmcmumbai.gov.in",
+  "entity_name": "Grant Medical College Mumbai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "goa.gov.in",
+  "entity_name": "Goa State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Goa",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "goapolice.gov.in",
+  "entity_name": "Goa Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "goatenders.gov.in",
+  "entity_name": "Goa eTenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gpsc.gujarat.gov.in",
+  "entity_name": "Gujarat Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gramawardsachivalayam.ap.gov.in",
+  "entity_name": "Grama Ward Sachivalayam (Andhra Pradesh)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "greentribunal.gov.in",
+  "entity_name": "National Green Tribunal",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "grievances.maharashtra.gov.in",
+  "entity_name": "Maharashtra Grievance Redressal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gst.gov.in",
+  "entity_name": "Goods and Services Tax (GST) Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gtre.drdo.in",
+  "entity_name": "Gas Turbine Research Establishment (GTRE)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gujarathighcourt.nic.in",
+  "entity_name": "Gujarat High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gujaratindia.gov.in",
+  "entity_name": "Gujarat State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Gujarat",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gujaratpolice.gov.in",
+  "entity_name": "Gujarat Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "gvmc.gov.in",
+  "entity_name": "Greater Visakhapatnam Municipal Corp (GVMC)",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hal-india.co.in",
+  "entity_name": "Hindustan Aeronautics Limited (HAL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "haryana.gov.in",
+  "entity_name": "Haryana State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Haryana",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "haryanapolice.gov.in",
+  "entity_name": "Haryana Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hc.ap.nic.in",
+  "entity_name": "Andhra Pradesh High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hckerala.gov.in",
+  "entity_name": "Kerala High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hcmimphal.nic.in",
+  "entity_name": "Manipur High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hcraj.nic.in",
+  "entity_name": "Rajasthan High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hcs.gov.in",
+  "entity_name": "Sikkim High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "heavyindustries.gov.in",
+  "entity_name": "Ministry of Heavy Industries",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "highcourt.cg.gov.in",
+  "entity_name": "Chhattisgarh High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "highcourtchd.gov.in",
+  "entity_name": "Punjab and Haryana High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "highcourtofuttarakhand.gov.in",
+  "entity_name": "Uttarakhand High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "himachal.nic.in",
+  "entity_name": "Himachal Pradesh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Himachal Pradesh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hindustanpetroleum.com",
+  "entity_name": "Hindustan Petroleum (HPCL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hphighcourt.nic.in",
+  "entity_name": "Himachal Pradesh High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hppolice.nic.in",
+  "entity_name": "Himachal Pradesh Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hppsc.hp.gov.in",
+  "entity_name": "Himachal Pradesh Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hpsc.gov.in",
+  "entity_name": "Haryana Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hptenders.gov.in",
+  "entity_name": "Himachal Pradesh Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "hwb.gov.in",
+  "entity_name": "Heavy Water Board (HWB)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iari.res.in",
+  "entity_name": "IARI Pusa Delhi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ibbi.gov.in",
+  "entity_name": "Insolvency and Bankruptcy Board of India (IBBI)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "icar.org.in",
+  "entity_name": "ICAR Headquarters",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "icegate.gov.in",
+  "entity_name": "ICEGATE Indian Customs Electronic Gateway",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "icmr.nic.in",
+  "entity_name": "ICMR Headquarters",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iepf.gov.in",
+  "entity_name": "Investor Education and Protection Fund (IEPF)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "igcar.gov.in",
+  "entity_name": "Indira Gandhi Centre for Atomic Research (IGCAR)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "igib.res.in",
+  "entity_name": "IGIB Delhi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ignou.ac.in",
+  "entity_name": "IGNOU",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ihmcl.co.in",
+  "entity_name": "Indian Highway Management Company (FASTag)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iicb.res.in",
+  "entity_name": "IICB Kolkata",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iict.res.in",
+  "entity_name": "IICT Hyderabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiita.ac.in",
+  "entity_name": "IIIT Allahabad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiitd.ac.in",
+  "entity_name": "IIIT Delhi",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiitdm.ac.in",
+  "entity_name": "IIITDM Kancheepuram",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiitdmj.ac.in",
+  "entity_name": "IIITDM Jabalpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiitm.ac.in",
+  "entity_name": "IIIT Gwalior",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iima.ac.in",
+  "entity_name": "IIM Ahmedabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iimb.ac.in",
+  "entity_name": "IIM Bangalore",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iimcal.ac.in",
+  "entity_name": "IIM Calcutta",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iimi.ac.in",
+  "entity_name": "IIM Indore",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iimk.ac.in",
+  "entity_name": "IIM Kozhikode",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiml.ac.in",
+  "entity_name": "IIM Lucknow",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iimsillong.ac.in",
+  "entity_name": "IIM Shillong",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iirs.gov.in",
+  "entity_name": "Indian Institute of Remote Sensing (IIRS)",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitb.ac.in",
+  "entity_name": "IIT Bombay",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitbbs.ac.in",
+  "entity_name": "IIT Bhubaneswar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitbhilai.ac.in",
+  "entity_name": "IIT Bhilai",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitbhu.ac.in",
+  "entity_name": "IIT BHU",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitd.ac.in",
+  "entity_name": "IIT Delhi",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitdh.ac.in",
+  "entity_name": "IIT Dharwad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitg.ac.in",
+  "entity_name": "IIT Guwahati",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitgn.ac.in",
+  "entity_name": "IIT Gandhinagar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitgoa.ac.in",
+  "entity_name": "IIT Goa",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iith.ac.in",
+  "entity_name": "IIT Hyderabad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iiti.ac.in",
+  "entity_name": "IIT Indore",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitism.ac.in",
+  "entity_name": "IIT ISM Dhanbad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitj.ac.in",
+  "entity_name": "IIT Jodhpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitjammu.ac.in",
+  "entity_name": "IIT Jammu",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitk.ac.in",
+  "entity_name": "IIT Kanpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitkgp.ac.in",
+  "entity_name": "IIT Kharagpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitm.ac.in",
+  "entity_name": "IIT Madras",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitm.res.in",
+  "entity_name": "Indian Institute of Tropical Meteorology",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitmandi.ac.in",
+  "entity_name": "IIT Mandi",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitp.ac.in",
+  "entity_name": "IIT Patna",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitpkd.ac.in",
+  "entity_name": "IIT Palakkad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitr.ac.in",
+  "entity_name": "IIT Roorkee",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iitrpr.ac.in",
+  "entity_name": "IIT Ropar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iittp.ac.in",
+  "entity_name": "IIT Tirupati",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ilbs.in",
+  "entity_name": "Institute of Liver and Biliary Sciences (ILBS)",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "imcindore.mp.gov.in",
+  "entity_name": "Indore Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "imd.gov.in",
+  "entity_name": "India Meteorological Department (IMD Weather)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "incois.gov.in",
+  "entity_name": "Indian National Centre for Ocean Info Services",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "incometax.gov.in",
+  "entity_name": "Income Tax e-Filing 2.0 Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "incometaxindia.gov.in",
+  "entity_name": "Central Board of Direct Taxes (CBDT)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "india.gov.in",
+  "entity_name": "National Portal of India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indiaculture.gov.in",
+  "entity_name": "Ministry of Culture",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indianairforce.nic.in",
+  "entity_name": "Indian Air Force",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indianarmy.nic.in",
+  "entity_name": "Indian Army",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indianbank.in",
+  "entity_name": "Indian Bank",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indiancoastguard.gov.in",
+  "entity_name": "Indian Coast Guard",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indiannavy.nic.in",
+  "entity_name": "Indian Navy",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indianrail.gov.in",
+  "entity_name": "Passenger Reservation Enquiry (NTES/PNR)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indianrailways.gov.in",
+  "entity_name": "Ministry of Railways",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indianvisaonline.gov.in",
+  "entity_name": "Indian Visa Online",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "indiapost.gov.in",
+  "entity_name": "Department of Posts (India Post)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "inflibnet.ac.in",
+  "entity_name": "INFLIBNET Centre",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "inmas.drdo.in",
+  "entity_name": "Institute of Nuclear Medicine & Allied Sciences (INMAS)",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "inspace.gov.in",
+  "entity_name": "IN-SPACe (Indian National Space Promotion)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "insurance.esic.in",
+  "entity_name": "ESIC Insured Persons (IP) Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iob.in",
+  "entity_name": "Indian Overseas Bank",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iocl.com",
+  "entity_name": "Indian Oil Corporation (IOCL)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ipindia.gov.in",
+  "entity_name": "Intellectual Property India (IP India)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ipindiaservices.gov.in",
+  "entity_name": "IP India Services (Trademark / Patent Search)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "irctc.co.in",
+  "entity_name": "Indian Railway Catering & Tourism (IRCTC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "irdai.gov.in",
+  "entity_name": "IRDAI",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ireps.gov.in",
+  "entity_name": "Indian Railways E-Procurement System (IREPS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "isro.gov.in",
+  "entity_name": "ISRO Headquarters",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "itbpolice.nic.in",
+  "entity_name": "Indo-Tibetan Border Police (ITBP)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "iwu.epfindia.gov.in",
+  "entity_name": "EPFO International Workers Unit",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jaipurmc.org",
+  "entity_name": "Jaipur Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jaljeevanmission.gov.in",
+  "entity_name": "Jal Jeevan Mission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jalshakti-dowr.gov.in",
+  "entity_name": "Ministry of Jal Shakti",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jamabandi.nic.in",
+  "entity_name": "Jamabandi Land Records (Haryana)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jamabandi.punjab.gov.in",
+  "entity_name": "Jamabandi Land Records (Punjab)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jansunwai.up.nic.in",
+  "entity_name": "Jan Sunwai Samadhan (UP Grievance)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jeemain.nta.ac.in",
+  "entity_name": "JEE (Main) Examination Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jharbhoomi.jharkhand.gov.in",
+  "entity_name": "Jharbhoomi (Jharkhand)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jharkhand.gov.in",
+  "entity_name": "Jharkhand State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Jharkhand",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jharkhandhighcourt.nic.in",
+  "entity_name": "Jharkhand High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jharkhandtenders.gov.in",
+  "entity_name": "Jharkhand Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jharsewa.jharkhand.gov.in",
+  "entity_name": "JharSewa Jharkhand",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jipmer.edu.in",
+  "entity_name": "JIPMER Puducherry",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jk.gov.in",
+  "entity_name": "Jammu and Kashmir State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Jammu and Kashmir",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jkgrievance.jk.gov.in",
+  "entity_name": "JK Grievance Redressal (JK-IGRAMS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jkhighcourt.nic.in",
+  "entity_name": "Jammu & Kashmir High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jkpolice.gov.in",
+  "entity_name": "Jammu & Kashmir Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jktenders.gov.in",
+  "entity_name": "Jammu & Kashmir Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jmi.ac.in",
+  "entity_name": "Jamia Millia Islamia",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jnu.ac.in",
+  "entity_name": "Jawaharlal Nehru University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "joinindianarmy.nic.in",
+  "entity_name": "Join Indian Army Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "joinindiannavy.gov.in",
+  "entity_name": "Join Indian Navy Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "josaa.nic.in",
+  "entity_name": "Joint Seat Allocation Authority (JoSAA)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "jpsc.gov.in",
+  "entity_name": "Jharkhand Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "karnataka.gov.in",
+  "entity_name": "Karnataka State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Karnataka",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "karnatakahiighcourt.kar.nic.in",
+  "entity_name": "Karnataka High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kerala.gov.in",
+  "entity_name": "Kerala State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Kerala",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "keralapolice.gov.in",
+  "entity_name": "Kerala Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "keralapsc.gov.in",
+  "entity_name": "Kerala Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kgmu.org",
+  "entity_name": "King George's Medical University (KGMU)",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kmc.up.nic.in",
+  "entity_name": "Kanpur Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kmcgov.in",
+  "entity_name": "Kolkata Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kochicity.lsgkerala.gov.in",
+  "entity_name": "Kochi Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kppp.karnataka.gov.in",
+  "entity_name": "Karnataka Public Procurement Portal (KPPP)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kpsc.kar.nic.in",
+  "entity_name": "Karnataka Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ksb.gov.in",
+  "entity_name": "Kendriya Sainik Board",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ksp.karnataka.gov.in",
+  "entity_name": "Karnataka State Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "kvsangathan.nic.in",
+  "entity_name": "Kendriya Vidyalaya Sangathan (KVS HQ)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "labour.gov.in",
+  "entity_name": "Ministry of Labour and Employment",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ladakh.nic.in",
+  "entity_name": "Ladakh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Ladakh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "lakshadweep.gov.in",
+  "entity_name": "Lakshadweep State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Lakshadweep",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "landrecords.karnataka.gov.in",
+  "entity_name": "Bhoomi Land Records (Karnataka)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "lawmin.gov.in",
+  "entity_name": "Ministry of Law and Justice",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "lhmc-hosp.gov.in",
+  "entity_name": "Lady Hardinge Medical College",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "licindia.in",
+  "entity_name": "Life Insurance Corporation of India (LIC)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "lmc.up.nic.in",
+  "entity_name": "Lucknow Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "lpsc.gov.in",
+  "entity_name": "Liquid Propulsion Systems Centre (LPSC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "lrde.drdo.in",
+  "entity_name": "Electronics & Radar Development Establishment (LRDE)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "madrashighcourt.nic.in",
+  "entity_name": "Madras High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "maduraicorporation.co.in",
+  "entity_name": "Madurai Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mahapolice.gov.in",
+  "entity_name": "Maharashtra Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "maharashtra.gov.in",
+  "entity_name": "Maharashtra State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Maharashtra",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mahatenders.gov.in",
+  "entity_name": "Maharashtra eTenders (MahaTenders)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "makeinindiadefence.gov.in",
+  "entity_name": "Make in India Defence Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "manipur.gov.in",
+  "entity_name": "Manipur State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Manipur",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mca.gov.in",
+  "entity_name": "Ministry of Corporate Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mcc.nic.in",
+  "entity_name": "Medical Counselling Committee (MCC NEET)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mcchandigarh.gov.in",
+  "entity_name": "Chandigarh Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mcdonline.nic.in",
+  "entity_name": "Municipal Corporation of Delhi (MCD)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mea.gov.in",
+  "entity_name": "Ministry of External Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "meebhoomi.ap.gov.in",
+  "entity_name": "Meebhoomi (Andhra Pradesh)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "meeseva.telangana.gov.in",
+  "entity_name": "MeeSeva Portal (Telangana)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "meghalaya.gov.in",
+  "entity_name": "Meghalaya State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Meghalaya",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "meghalayahighcourt.nic.in",
+  "entity_name": "Meghalaya High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "meity.gov.in",
+  "entity_name": "Ministry of Electronics and Information Technology",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mha.gov.in",
+  "entity_name": "Ministry of Home Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mines.gov.in",
+  "entity_name": "Ministry of Mines",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "minorityaffairs.gov.in",
+  "entity_name": "Ministry of Minority Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mis.epfindia.gov.in",
+  "entity_name": "EPFO Management Information System (MIS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mizoram.gov.in",
+  "entity_name": "Mizoram State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Mizoram",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mmc.tn.gov.in",
+  "entity_name": "Madras Medical College",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mnit.ac.in",
+  "entity_name": "MNIT Jaipur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mnnit.ac.in",
+  "entity_name": "MNNIT Allahabad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mnre.gov.in",
+  "entity_name": "Ministry of New and Renewable Energy",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mod.gov.in",
+  "entity_name": "Ministry of Defence",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "moef.gov.in",
+  "entity_name": "Ministry of Environment, Forest and Climate Change",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mofpi.gov.in",
+  "entity_name": "Ministry of Food Processing Industries",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mohfw.gov.in",
+  "entity_name": "Ministry of Health and Family Welfare",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mohua.gov.in",
+  "entity_name": "Ministry of Housing and Urban Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mopng.gov.in",
+  "entity_name": "Ministry of Petroleum and Natural Gas",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "morth.nic.in",
+  "entity_name": "Ministry of Road Transport and Highways",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mosdac.gov.in",
+  "entity_name": "MOSDAC Meteorological & Oceanographic Data",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mospi.gov.in",
+  "entity_name": "Ministry of Statistics and Programme Implementation",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mp.gov.in",
+  "entity_name": "Madhya Pradesh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Madhya Pradesh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mpa.gov.in",
+  "entity_name": "Ministry of Parliamentary Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mpbhulekh.gov.in",
+  "entity_name": "MP Bhulekh (Madhya Pradesh)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mpedistrict.gov.in",
+  "entity_name": "MP e-District (Madhya Pradesh)",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mphc.gov.in",
+  "entity_name": "Madhya Pradesh High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mppolice.gov.in",
+  "entity_name": "Madhya Pradesh Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mppsc.mp.gov.in",
+  "entity_name": "MP Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mpsc.gov.in",
+  "entity_name": "Maharashtra Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mptenders.gov.in",
+  "entity_name": "Madhya Pradesh Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "msde.gov.in",
+  "entity_name": "Ministry of Skill Development and Entrepreneurship",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "msme.gov.in",
+  "entity_name": "Ministry of Micro, Small and Medium Enterprises",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mu.ac.in",
+  "entity_name": "University of Mumbai",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "myaadhaar.uidai.gov.in",
+  "entity_name": "MyAadhaar Citizen Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "mygov.in",
+  "entity_name": "MyGov India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "myscheme.gov.in",
+  "entity_name": "myScheme National Platform",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nabard.org",
+  "entity_name": "NABARD",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nad.gov.in",
+  "entity_name": "National Academic Depository (NAD)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nagaland.gov.in",
+  "entity_name": "Nagaland State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Nagaland",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nagarnigamagra.com",
+  "entity_name": "Agra Nagar Nigam",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "narcoticsindia.nic.in",
+  "entity_name": "Narcotics Control Bureau (NCB)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nashikcorporation.in",
+  "entity_name": "Nashik Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "natboard.edu.in",
+  "entity_name": "National Board of Examinations (NBE/NBEMS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "navodaya.gov.in",
+  "entity_name": "Navodaya Vidyalaya Samiti (NVS HQ)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ncdrc.nic.in",
+  "entity_name": "National Consumer Commission (NCDRC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ncert.nic.in",
+  "entity_name": "NCERT",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nciipc.gov.in",
+  "entity_name": "National Critical Information Infrastructure Protection Centre",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ncl-india.org",
+  "entity_name": "National Chemical Laboratory",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nclat.nic.in",
+  "entity_name": "National Company Law Appellate Tribunal",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nclt.gov.in",
+  "entity_name": "National Company Law Tribunal (NCLT)",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ncpor.res.in",
+  "entity_name": "National Centre for Polar & Ocean Research",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ncrb.gov.in",
+  "entity_name": "National Crime Records Bureau (NCRB)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ncs.gov.in",
+  "entity_name": "National Career Service Portal (NCS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ndl.gov.in",
+  "entity_name": "National Digital Library of India (NDLI)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "neeri.res.in",
+  "entity_name": "NEERI Nagpur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "neet.nta.ac.in",
+  "entity_name": "NEET (UG) Medical Examination Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nests.gov.in",
+  "entity_name": "Eklavya Model Residential Schools (EMRS)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nfc.gov.in",
+  "entity_name": "Nuclear Fuel Complex (NFC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nhai.gov.in",
+  "entity_name": "National Highways Authority of India (NHAI)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nhb.org.in",
+  "entity_name": "National Housing Bank (NHB)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nhm.gov.in",
+  "entity_name": "National Health Mission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nhrc.nic.in",
+  "entity_name": "National Human Rights Commission",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nia.gov.in",
+  "entity_name": "National Investigation Agency (NIA)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nic.in",
+  "entity_name": "National Informatics Centre",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nie.gov.in",
+  "entity_name": "National Institute of Epidemiology",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nimhans.ac.in",
+  "entity_name": "NIMHANS Bengaluru",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nin.res.in",
+  "entity_name": "National Institute of Nutrition",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nios.ac.in",
+  "entity_name": "National Institute of Open Schooling",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitc.ac.in",
+  "entity_name": "NIT Calicut",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitdgp.ac.in",
+  "entity_name": "NIT Durgapur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nith.ac.in",
+  "entity_name": "NIT Hamirpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "niti.gov.in",
+  "entity_name": "NITI Aayog",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitj.ac.in",
+  "entity_name": "NIT Jalandhar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitjsr.ac.in",
+  "entity_name": "NIT Jamshedpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitk.ac.in",
+  "entity_name": "NIT Surathkal",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitp.ac.in",
+  "entity_name": "NIT Patna",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitrd.nic.in",
+  "entity_name": "National Institute of TB and Respiratory Diseases",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitrkl.ac.in",
+  "entity_name": "NIT Rourkela",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitrr.ac.in",
+  "entity_name": "NIT Raipur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nits.ac.in",
+  "entity_name": "NIT Silchar",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitt.edu",
+  "entity_name": "NIT Trichy",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nitw.ac.in",
+  "entity_name": "NIT Warangal",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "niv.co.in",
+  "entity_name": "National Institute of Virology",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "njdg.ecourts.gov.in",
+  "entity_name": "National Judicial Data Grid (NJDG)",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nkn.gov.in",
+  "entity_name": "National Knowledge Network (NKN)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nmcnagpur.gov.in",
+  "entity_name": "Nagpur Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nmdc.co.in",
+  "entity_name": "NMDC Limited",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nmmc.gov.in",
+  "entity_name": "Navi Mumbai Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nnvns.org.in",
+  "entity_name": "Varanasi Nagar Nigam",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "npcil.nic.in",
+  "entity_name": "Nuclear Power Corporation of India (NPCIL)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nplindia.org",
+  "entity_name": "National Physical Laboratory",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nrega.nic.in",
+  "entity_name": "Mahatma Gandhi NREGA Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nrsc.gov.in",
+  "entity_name": "National Remote Sensing Centre (NRSC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nrservices.nic.in",
+  "entity_name": "National Register Services (MoRTH)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nsap.nic.in",
+  "entity_name": "National Social Assistance Programme (NSAP)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nsg.gov.in",
+  "entity_name": "National Security Guard (NSG)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nsilindia.co.in",
+  "entity_name": "NewSpace India Limited (NSIL)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nta.ac.in",
+  "entity_name": "National Testing Agency (NTA)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ntes.indianrail.gov.in",
+  "entity_name": "National Train Enquiry System (NTES)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ntpc.co.in",
+  "entity_name": "NTPC Limited",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsbhopal.gov.in",
+  "entity_name": "NVS Regional Office Bhopal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsrochandigarh.gov.in",
+  "entity_name": "NVS Regional Office Chandigarh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsrohyderabad.gov.in",
+  "entity_name": "NVS Regional Office Hyderabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsrojaipur.gov.in",
+  "entity_name": "NVS Regional Office Jaipur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsrolucknow.gov.in",
+  "entity_name": "NVS Regional Office Lucknow",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsropatna.gov.in",
+  "entity_name": "NVS Regional Office Patna",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsropune.gov.in",
+  "entity_name": "NVS Regional Office Pune",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "nvsroshillong.gov.in",
+  "entity_name": "NVS Regional Office Shillong",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "odisha.gov.in",
+  "entity_name": "Odisha State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Odisha",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "odishapolice.gov.in",
+  "entity_name": "Odisha Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "oil-india.com",
+  "entity_name": "Oil India Limited",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ongcindia.com",
+  "entity_name": "Oil and Natural Gas Corporation (ONGC)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "opsc.gov.in",
+  "entity_name": "Odisha Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "orissahighcourt.nic.in",
+  "entity_name": "Orissa High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "osmania.ac.in",
+  "entity_name": "Osmania University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "panchayat.gov.in",
+  "entity_name": "Ministry of Panchayati Raj",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "parivahan.gov.in",
+  "entity_name": "Parivahan Sewa Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "passbook.epfindia.gov.in",
+  "entity_name": "EPFO Member Passbook Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "patnahighcourt.gov.in",
+  "entity_name": "Patna High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pcmcindia.gov.in",
+  "entity_name": "Pimpri Chinchwad Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "persmin.gov.in",
+  "entity_name": "Ministry of Personnel, Public Grievances and Pensions",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pfcindia.com",
+  "entity_name": "Power Finance Corporation (PFC)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pfrda.org.in",
+  "entity_name": "PFRDA",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pgimer.edu.in",
+  "entity_name": "PGIMER Chandigarh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pgportal.gov.in",
+  "entity_name": "CPGRAMS Central Public Grievance Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmayg.nic.in",
+  "entity_name": "PMAY-Gramin (Rural Housing)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmaymis.gov.in",
+  "entity_name": "PMAY-Urban (Urban Housing)",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmc.bihar.gov.in",
+  "entity_name": "Patna Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmc.gov.in",
+  "entity_name": "Pune Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmch.bihar.gov.in",
+  "entity_name": "Patna Medical College (PMCH)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmgsy.nic.in",
+  "entity_name": "Pradhan Mantri Gram Sadak Yojana (PMGSY)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmindia.gov.in",
+  "entity_name": "Prime Minister's Office",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmjay.gov.in",
+  "entity_name": "PM Jan Arogya Yojana (PM-JAY)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmkisan.gov.in",
+  "entity_name": "PM Kisan Samman Nidhi Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pmsym.in",
+  "entity_name": "Pradhan Mantri Shram Yogi Maandhan (PM-SYM)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pnbindia.in",
+  "entity_name": "Punjab National Bank",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "police.rajasthan.gov.in",
+  "entity_name": "Rajasthan Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "pondiuni.edu.in",
+  "entity_name": "Pondicherry University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "portal.mcgm.gov.in",
+  "entity_name": "Brihanmumbai Municipal Corporation (BMC)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "powergrid.in",
+  "entity_name": "Power Grid Corporation of India",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "powermin.gov.in",
+  "entity_name": "Ministry of Power",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ppsc.gov.in",
+  "entity_name": "Punjab Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "presidentofindia.nic.in",
+  "entity_name": "President of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "psc.ap.gov.in",
+  "entity_name": "Andhra Pradesh Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "psc.cg.gov.in",
+  "entity_name": "Chhattisgarh Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "psc.uk.gov.in",
+  "entity_name": "Uttarakhand Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "punjab.gov.in",
+  "entity_name": "Punjab State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Punjab",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "punjabandsindbank.co.in",
+  "entity_name": "Punjab & Sind Bank",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "punjabpolice.gov.in",
+  "entity_name": "Punjab Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "py.gov.in",
+  "entity_name": "Puducherry State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Puducherry",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rac.gov.in",
+  "entity_name": "DRDO Recruitment & Assessment Centre (RAC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "railmadad.indianrailways.gov.in",
+  "entity_name": "Rail Madad Grievance Redressal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rajasthan.gov.in",
+  "entity_name": "Rajasthan State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Rajasthan",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rbi.org.in",
+  "entity_name": "Reserve Bank of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rcctvm.gov.in",
+  "entity_name": "Regional Cancer Centre Thiruvananthapuram",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rde.drdo.in",
+  "entity_name": "Research & Development Establishment Engineers (R&DE)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "recindia.nic.in",
+  "entity_name": "REC Limited",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "resident.uidai.gov.in",
+  "entity_name": "UIDAI Resident Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "results.cbse.nic.in",
+  "entity_name": "CBSE Exam Results Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rmlh.nic.in",
+  "entity_name": "Dr. Ram Manohar Lohia Hospital Delhi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "roagra.kvs.gov.in",
+  "entity_name": "KVS Regional Office Agra",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "roahmedabad.kvs.gov.in",
+  "entity_name": "KVS Regional Office Ahmedabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "robengaluru.kvs.gov.in",
+  "entity_name": "KVS Regional Office Bengaluru",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "robhopal.kvs.gov.in",
+  "entity_name": "KVS Regional Office Bhopal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rochandigarh.kvs.gov.in",
+  "entity_name": "KVS Regional Office Chandigarh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rochennai.kvs.gov.in",
+  "entity_name": "KVS Regional Office Chennai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rodehradun.kvs.gov.in",
+  "entity_name": "KVS Regional Office Dehradun",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rodelhi.kvs.gov.in",
+  "entity_name": "KVS Regional Office Delhi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "roernakulam.kvs.gov.in",
+  "entity_name": "KVS Regional Office Ernakulam",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rogauhati.kvs.gov.in",
+  "entity_name": "KVS Regional Office Guwahati",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rogurugram.kvs.gov.in",
+  "entity_name": "KVS Regional Office Gurugram",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rohyderabad.kvs.gov.in",
+  "entity_name": "KVS Regional Office Hyderabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rojabalpur.kvs.gov.in",
+  "entity_name": "KVS Regional Office Jabalpur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rojaipur.kvs.gov.in",
+  "entity_name": "KVS Regional Office Jaipur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rokolkata.kvs.gov.in",
+  "entity_name": "KVS Regional Office Kolkata",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rolucknow.kvs.gov.in",
+  "entity_name": "KVS Regional Office Lucknow",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "romumbai.kvs.gov.in",
+  "entity_name": "KVS Regional Office Mumbai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ropatna.kvs.gov.in",
+  "entity_name": "KVS Regional Office Patna",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "roraipur.kvs.gov.in",
+  "entity_name": "KVS Regional Office Raipur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "roranchi.kvs.gov.in",
+  "entity_name": "KVS Regional Office Ranchi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rosilchar.kvs.gov.in",
+  "entity_name": "KVS Regional Office Silchar",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rovaranasi.kvs.gov.in",
+  "entity_name": "KVS Regional Office Varanasi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rpsc.rajasthan.gov.in",
+  "entity_name": "Rajasthan Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbahmedabad.gov.in",
+  "entity_name": "RRB Ahmedabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbajmer.gov.in",
+  "entity_name": "RRB Ajmer",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbald.gov.in",
+  "entity_name": "RRB Allahabad (Prayagraj)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbbbs.gov.in",
+  "entity_name": "RRB Bhubaneswar",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbbhopal.gov.in",
+  "entity_name": "RRB Bhopal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbbilaspur.gov.in",
+  "entity_name": "RRB Bilaspur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbbnc.gov.in",
+  "entity_name": "RRB Bangalore",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbcdg.gov.in",
+  "entity_name": "RRB Chandigarh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbchennai.gov.in",
+  "entity_name": "RRB Chennai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbgkp.gov.in",
+  "entity_name": "RRB Gorakhpur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbguwahati.gov.in",
+  "entity_name": "RRB Guwahati",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbjammu.nic.in",
+  "entity_name": "RRB Jammu-Srinagar",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbkolkata.gov.in",
+  "entity_name": "RRB Kolkata",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbmalda.gov.in",
+  "entity_name": "RRB Malda",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbmumbai.gov.in",
+  "entity_name": "RRB Mumbai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbmuzaffarpur.gov.in",
+  "entity_name": "RRB Muzaffarpur",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbpatna.gov.in",
+  "entity_name": "RRB Patna",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbranchi.gov.in",
+  "entity_name": "RRB Ranchi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbsecunderabad.nic.in",
+  "entity_name": "RRB Secunderabad",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbsiliguri.gov.in",
+  "entity_name": "RRB Siliguri",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrbthiruvananthapuram.gov.in",
+  "entity_name": "RRB Thiruvananthapuram",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrcat.gov.in",
+  "entity_name": "Raja Ramanna Centre for Advanced Technology",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rrcb.gov.in",
+  "entity_name": "Railway Recruitment Control Board",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rtionline.gov.in",
+  "entity_name": "RTI Online Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "rural.nic.in",
+  "entity_name": "Ministry of Rural Development",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sac.gov.in",
+  "entity_name": "Space Applications Centre (SAC Ahmedabad)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sail.co.in",
+  "entity_name": "Steel Authority of India (SAIL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolamaravathinagar.edu.in",
+  "entity_name": "Sainik School Amaravathinagar",
+  "government_level": "urban_local_body",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolchittorgarh.edu.in",
+  "entity_name": "Sainik School Chittorgarh",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolghorakhal.org",
+  "entity_name": "Sainik School Ghorakhal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolkapurthala.com",
+  "entity_name": "Sainik School Kapurthala",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolkorukonda.org",
+  "entity_name": "Sainik School Korukonda",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolkunjpura.org",
+  "entity_name": "Sainik School Kunjpura",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolnagrota.com",
+  "entity_name": "Sainik School Nagrota",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolrewa.nic.in",
+  "entity_name": "Sainik School Rewa",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolsatara.org",
+  "entity_name": "Sainik School Satara",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschoolsociety.in",
+  "entity_name": "Sainik Schools Society",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sainikschooltilaiya.org",
+  "entity_name": "Sainik School Tilaiya",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "samadhan.bihar.gov.in",
+  "entity_name": "Samadhan Bihar Grievance",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "samadhan.labour.gov.in",
+  "entity_name": "Samadhan Labour Dispute Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "samarth.edu.in",
+  "entity_name": "Samarth Higher Education ERP",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sampark.rajasthan.gov.in",
+  "entity_name": "Rajasthan Sampark Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "saralharyana.gov.in",
+  "entity_name": "Saral Haryana Citizen Services",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sarathi.parivahan.gov.in",
+  "entity_name": "Sarathi Parivahan (Driving Licences)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sbi.co.in",
+  "entity_name": "State Bank of India (SBI)",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sci.gov.in",
+  "entity_name": "Supreme Court of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "search.ipindia.gov.in",
+  "entity_name": "Public Search for Trade Marks",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sebi.gov.in",
+  "entity_name": "Securities and Exchange Board of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "serviceonline.bihar.gov.in",
+  "entity_name": "ServiceOnline Bihar (e-District)",
+  "government_level": "district",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "services.ecourts.gov.in",
+  "entity_name": "eCourts National Services Portal",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "services.goa.gov.in",
+  "entity_name": "Goa Services Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "services.gst.gov.in",
+  "entity_name": "GST Public Services Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sevasindhu.karnataka.gov.in",
+  "entity_name": "Seva Sindhu (Karnataka)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sewasetu.assam.gov.in",
+  "entity_name": "Sewa Setu Assam Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sfio.gov.in",
+  "entity_name": "Serious Fraud Investigation Office (SFIO)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sgpgi.org.in",
+  "entity_name": "SGPGIMS Lucknow",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "shipmin.gov.in",
+  "entity_name": "Ministry of Ports, Shipping and Waterways",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "shodhganga.inflibnet.ac.in",
+  "entity_name": "Shodhganga Theses Repository",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "shramsuvidha.gov.in",
+  "entity_name": "Unified Shram Suvidha Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sidbi.in",
+  "entity_name": "SIDBI",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sikkim.gov.in",
+  "entity_name": "Sikkim State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Sikkim",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "socialjustice.gov.in",
+  "entity_name": "Ministry of Social Justice and Empowerment",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "soilhealth.dac.gov.in",
+  "entity_name": "Soil Health Card Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "spandana.ap.gov.in",
+  "entity_name": "Spandana AP Public Grievances",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sparsh.defencepension.gov.in",
+  "entity_name": "SPARSH Defence Pension Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "srijandefence.gov.in",
+  "entity_name": "SRIJAN Defence Indigenisation Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ssb.gov.in",
+  "entity_name": "Sashastra Seema Bal (SSB)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ssc.nic.in",
+  "entity_name": "Staff Selection Commission (SSC)",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "sspl.drdo.in",
+  "entity_name": "Solid State Physics Laboratory (SSPL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ssup.uidai.gov.in",
+  "entity_name": "Self Service Update Portal (SSUP)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "stpi.in",
+  "entity_name": "Software Technology Parks of India (STPI)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "suratmunicipal.gov.in",
+  "entity_name": "Surat Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "svnit.ac.in",
+  "entity_name": "SVNIT Surat",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "swachhbharatmission.ddws.gov.in",
+  "entity_name": "Swachh Bharat Mission (Grameen)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "swagat.gujarat.gov.in",
+  "entity_name": "SWAGAT Gujarat Online Grievances",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "swayam.gov.in",
+  "entity_name": "SWAYAM Free Online Education Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "swayamprabha.gov.in",
+  "entity_name": "SWAYAM Prabha DTH Channels Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tathya.uidai.gov.in",
+  "entity_name": "Tathya Document Verification",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tbrl.drdo.in",
+  "entity_name": "Terminal Ballistics Research Laboratory (TBRL)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tdf.drdo.gov.in",
+  "entity_name": "DRDO Technology Development Fund (TDF)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tdsat.gov.in",
+  "entity_name": "Telecom Disputes Settlement Tribunal (TDSAT)",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tdscpc.gov.in",
+  "entity_name": "TRACES (TDS Centralized Processing Cell)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "telangana.gov.in",
+  "entity_name": "Telangana State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Telangana",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tender.apeprocurement.gov.in",
+  "entity_name": "Andhra Pradesh eProcurement",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tender.telangana.gov.in",
+  "entity_name": "Telangana eProcurement",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tendersodisha.gov.in",
+  "entity_name": "Odisha Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "texmin.nic.in",
+  "entity_name": "Ministry of Textiles",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "thanecity.gov.in",
+  "entity_name": "Thane Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tmc.gov.in",
+  "entity_name": "Tata Memorial Centre Mumbai",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tn.gov.in",
+  "entity_name": "Tamil Nadu State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Tamil Nadu",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tnpolice.gov.in",
+  "entity_name": "Tamil Nadu Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tnpsc.gov.in",
+  "entity_name": "Tamil Nadu Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tntenders.gov.in",
+  "entity_name": "Tamil Nadu eTenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tourism.gov.in",
+  "entity_name": "Ministry of Tourism",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "traffic.delhipolice.gov.in",
+  "entity_name": "Delhi Traffic Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "traffic.uppolice.gov.in",
+  "entity_name": "UP Police Traffic Subdomain",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "trai.gov.in",
+  "entity_name": "Telecom Regulatory Authority of India",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tribal.nic.in",
+  "entity_name": "Ministry of Tribal Affairs",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tripura.gov.in",
+  "entity_name": "Tripura State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Tripura",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tripurahighcourt.nic.in",
+  "entity_name": "Tripura High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tshc.gov.in",
+  "entity_name": "Telangana High Court",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tspolice.gov.in",
+  "entity_name": "Telangana State Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "tspsc.gov.in",
+  "entity_name": "Telangana State Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ucobank.com",
+  "entity_name": "UCO Bank",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ugc.ac.in",
+  "entity_name": "University Grants Commission (UGC)",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ugcnet.nta.ac.in",
+  "entity_name": "UGC-NET Examination Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uidai.gov.in",
+  "entity_name": "Unique Identification Authority of India",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uk.gov.in",
+  "entity_name": "Uttarakhand State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Uttarakhand",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uktenders.gov.in",
+  "entity_name": "Uttarakhand Tenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "umang.gov.in",
+  "entity_name": "UMANG National Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "unifiedportal-emp.epfindia.gov.in",
+  "entity_name": "EPFO Unified Employer Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "unifiedportal-mem.epfindia.gov.in",
+  "entity_name": "EPFO Unified Member Portal (UAN / Passbook / Claims)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "unionbankofindia.co.in",
+  "entity_name": "Union Bank of India",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "unipune.ac.in",
+  "entity_name": "Savitribai Phule Pune University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "unom.ac.in",
+  "entity_name": "University of Madras",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uohyd.ac.in",
+  "entity_name": "University of Hyderabad",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "up.gov.in",
+  "entity_name": "Uttar Pradesh State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "Uttar Pradesh",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "upbhulekh.gov.in",
+  "entity_name": "UP Bhulekh (Uttar Pradesh)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uppolice.gov.in",
+  "entity_name": "Uttar Pradesh Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uppsc.up.nic.in",
+  "entity_name": "UP Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "upsc.gov.in",
+  "entity_name": "Union Public Service Commission",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "ursc.gov.in",
+  "entity_name": "UR Rao Satellite Centre (URSC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "uttarakhandpolice.uk.gov.in",
+  "entity_name": "Uttarakhand Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "v3.mca.gov.in",
+  "entity_name": "MCA Version 3 Services Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vahan.parivahan.gov.in",
+  "entity_name": "Vahan Parivahan (Vehicle Registration)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vecc.gov.in",
+  "entity_name": "Variable Energy Cyclotron Centre (VECC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vedas.sac.gov.in",
+  "entity_name": "VEDAS SAC ISRO Geo-Spatial Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "virtualcourts.gov.in",
+  "entity_name": "Virtual Courts Portal",
+  "government_level": "judiciary",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "visvabharati.ac.in",
+  "entity_name": "Visva-Bharati University",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vmc.ap.gov.in",
+  "entity_name": "Vijayawada Municipal Corporation",
+  "government_level": "public_sector",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vmmc-sjh.nic.in",
+  "entity_name": "Safdarjung Hospital & VMMC Delhi",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vnit.ac.in",
+  "entity_name": "VNIT Nagpur",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vssc.gov.in",
+  "entity_name": "Vikram Sarabhai Space Centre (VSSC)",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "vvgnli.gov.in",
+  "entity_name": "V.V. Giri National Labour Institute",
+  "government_level": "academic_research",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "wb.gov.in",
+  "entity_name": "West Bengal State Portal",
+  "government_level": "state_ut",
+  "state_or_ut": "West Bengal",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "wbpolice.gov.in",
+  "entity_name": "West Bengal Police",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "wbpsc.gov.in",
+  "entity_name": "West Bengal Public Service Commission",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "wbtenders.gov.in",
+  "entity_name": "West Bengal eTenders",
+  "government_level": "state_ut",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "wcd.nic.in",
+  "entity_name": "Ministry of Women and Child Development",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ },
+ {
+  "domain_name": "yas.nic.in",
+  "entity_name": "Ministry of Youth Affairs and Sports",
+  "government_level": "central",
+  "state_or_ut": "National / Central",
+  "district": "N/A"
+ }
+]

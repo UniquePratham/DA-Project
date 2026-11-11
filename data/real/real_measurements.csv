@@ -1,0 +1,709 @@
+domain_name,final_url,status_code,is_reachable,measurement_reason,sub_accessibility_score,sub_has_gigw_toolbar,sub_response_latency_ms,sub_lcp_est_sec,sub_https_enforced,sub_security_headers_score,sub_is_multilingual,sub_mobile_responsive,sub_cms_architecture,sub_has_citizen_services,observatory_maturity_score,html_bytes,sha256
+aces.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+ade.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+agricoop.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+aerb.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+abdm.gov.in,https://abdm.gov.in/,200,True,HTTP 200,95.0,False,120.8,0.19,True,100.0,False,True,custom_dynamic_cms,True,82.9,925,084d6d7b52d77b0305aa3d4938f3679858d2b677483ec1fdc0777245dc24311c
+ada.gov.in,https://ada.gov.in/,200,True,HTTP 200,71.1,True,140.0,0.69,True,85.0,False,False,custom_dynamic_cms,True,65.5,74238,89d7ae23bf578aff6a4fb5e26b161955eee230a4639f940e7e96d82fd889bc71
+agmarknet.gov.in,https://agmarknet.gov.in/,200,True,HTTP 200,95.0,False,264.3,0.4,True,100.0,False,True,custom_dynamic_cms,False,77.3,1003,3e0cb2e3319515fde36799add6b0d7c9a1bc716c2a73f6822ad60730e5a39a33
+aaplesarkar.mahaonline.gov.in,https://aaplesarkar.mahaonline.gov.in/,200,True,HTTP 200,84.1,True,332.1,3.65,True,20.0,False,True,legacy_asp_net,True,49.3,484413,c616ded3e5ee6d074349488d9b8fd52e992ac13ec722bcae7985d1b69ce43b17
+abc.gov.in,https://www.abc.gov.in:443/,200,True,HTTP 200,100.0,True,452.9,1.07,True,100.0,False,True,custom_dynamic_cms,True,81.8,59416,6b07f6b6b46032e1edc43db9231ff5f1ea51bf9674a36192af314f8f162ddc56
+aiims.edu,https://aiims.edu/index.php/en,200,True,HTTP 200,82.5,True,407.5,2.08,True,20.0,False,False,legacy_asp_net,True,48.5,226193,731782847b0f553b5a7ae3b3cc3dbcf8dcf900c56a6f64edc9693b76307418ee
+aiimsbathinda.edu.in,https://aiimsbathinda.edu.in/,200,True,HTTP 200,75.0,True,543.7,1.93,True,70.0,True,True,legacy_asp_net,True,74.2,170734,c09633cfc7099b5093c0277c73c0391ff6bad770b7cb40337a78ef71151ee857
+aiimsbilaspur.edu.in,https://aiimsbilaspur.edu.in/,200,True,HTTP 200,100.0,True,410.8,1.87,True,100.0,True,True,drupal,True,89.4,193273,bbab299c27bcf2af2e1ad5124b41c0800aed3e20badd3016e0bbc90d31adbfe3
+aiimskalyani.edu.in,https://aiimskalyani.edu.in/,200,True,HTTP 200,95.0,False,144.4,0.24,True,0.0,False,True,custom_dynamic_cms,False,52.8,3318,6c323c23c121e26d8e2ee63f6cdaa74150b6af875b48a0c8620d1c6c5c61cdbf
+aiimsjodhpur.edu.in,https://aiimsjodhpur.edu.in/,200,True,HTTP 200,86.2,True,314.7,0.97,True,100.0,False,True,modern_spa,True,78.0,76968,ccb582578c8178c43fb1250805bb6d2578a7b3ca5b704a3dc1fad5f411da068f
+aiimsguwahati.ac.in,https://aiimsguwahati.ac.in/,200,True,HTTP 200,94.5,True,505.9,1.7,True,100.0,False,True,legacy_asp_net,True,78.2,144788,efdcab57476431fc1e3172972a589d9a08c7f0bf1a826999f47d689e3e92fa0c
+aiimsdeoghar.edu.in,https://www.aiimsdeoghar.edu.in/,200,True,HTTP 200,80.0,True,843.8,1.97,True,0.0,False,True,custom_dynamic_cms,True,48.1,108057,3638fed09a36d12206dfc8d381f128ad1901c48b1ff5811ee0ca37660fd0ff86
+aiimspatna.edu.in,https://aiimspatna.edu.in/,307,True,HTTP 307,90.0,False,170.3,0.26,True,0.0,False,False,custom_dynamic_cms,False,46.2,1387,a3b4b8b422a3a13d63aee400ed55ea596f73e2b50878db54fe704a0e1c6ad13a
+ahmedabadcity.gov.in,,,False,TLS error: SSLError,,,,,,,,,,,,,
+aiimsnagpur.edu.in,https://aiimsnagpur.edu.in/,200,True,HTTP 200,71.0,True,331.0,2.31,True,0.0,False,True,custom_dynamic_cms,True,44.4,277816,6e58921b46439eb370c3f8677d835fe03346743b0212561022f252b099242120
+afcat.cdac.in,https://afcat.cdac.in/AFCAT,404,False,HTTP 404,,,1682.3,,,,,,,,,,
+ais.incometax.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+aiimsbhubaneswar.nic.in,https://aiimsbhubaneswar.nic.in/,200,True,HTTP 200,84.9,True,1439.3,8.57,True,70.0,True,True,wordpress,True,63.0,984239,16a718e29d04a81422aebe7850fbadcb37bef13135e041e629ff776635ba830c
+aiimsbhopal.edu.in,https://www.aiimsbhopal.edu.in/,200,True,HTTP 200,93.5,True,1968.5,4.12,True,100.0,True,True,drupal,True,80.7,179197,8e6f65e6eb25717b8538ec892684561d7432b8a036cc571749c49eedf221ca99
+allahabadhighcourt.in,https://allahabadhighcourt.in/,200,True,HTTP 200,69.2,True,380.6,0.74,True,90.0,False,True,custom_dynamic_cms,True,71.0,26061,82b7a0e3116f696f7f7e03b311a9f4634cefcca7c2f9882aafa3d5737afa37d3
+aiimsgorakhpur.edu.in,https://aiimsgorakhpur.edu.in/,200,True,HTTP 200,75.4,True,1949.5,27.71,True,0.0,False,True,wordpress,True,32.6,3806664,69233ed9e6afce7f5cea6f0ece630b903b7e7fa3ea0470746128d9eed3a91601
+aiimsraipur.edu.in,https://aiimsraipur.edu.in/,200,True,HTTP 200,99.3,True,1562.2,3.63,True,100.0,False,True,legacy_asp_net,True,73.9,197458,da54a96d80d12512864f9a4d6a658779f7cd42ef3d8e48013ee37b766a2836c4
+annauniv.edu,https://annauniv.edu/,200,True,HTTP 200,76.8,True,377.2,8.13,True,0.0,False,True,legacy_asp_net,True,33.0,1162125,319e307e009b1ec17990b1532e4ae03ebd6b24c35216372258967d869b24564f
+aiimsraebareli.edu.in,https://aiimsrbl.edu.in,200,True,HTTP 200,91.8,True,2113.6,3.93,True,0.0,False,True,modern_spa,True,45.8,116304,bd5e8bd049069a785bafc8c881e0a77ca7cf75099826dfc75a5149ab45c7a34e
+aiimsrishikesh.edu.in,https://aiimsrishikesh.edu.in/a1_1/,200,True,HTTP 200,67.4,True,2463.7,5.22,True,100.0,False,True,wordpress,True,59.6,233818,13e2db522674763656e30c4fe3d6dda86268bf76b3bedc7a419cf13d2300cec2
+amu.ac.in,https://www.amu.ac.in/,200,True,HTTP 200,88.9,True,1861.1,4.43,True,25.0,False,True,legacy_asp_net,True,49.6,252121,7311fe65f28f20d645cfb37068e92489cbb8b9293baf73d85c118db776dfd8c0
+apnakhata.rajasthan.gov.in,https://apnakhata.rajasthan.gov.in/,200,True,HTTP 200,85.0,True,234.4,0.57,True,100.0,False,True,legacy_asp_net,False,73.8,33616,c4d57f1f0daaaac56dafc931b4e6f58604a10375a2ce742cc420ae606714b7dd
+appolice.gov.in,https://appolice.gov.in/,200,True,HTTP 200,95.0,False,159.5,0.24,True,100.0,False,True,custom_dynamic_cms,False,77.8,661,b0db626a30b1eb8e806e36ffd459658abe9245b3cbc94406b011aea6ddf21a15
+ap.gov.in,https://ap.gov.in/,200,True,HTTP 200,95.0,False,1551.7,2.34,True,0.0,False,True,custom_dynamic_cms,False,46.5,1527,e73c72706d8cffb56628ef36d5d2f62af1d0a515c723d049c353afbdc6d41bf2
+arde.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+arunachalpradesh.gov.in,https://arunachalpradesh.gov.in/,200,True,HTTP 200,90.3,True,334.4,1.25,True,100.0,False,True,legacy_asp_net,True,78.3,115388,73b3056f677507ad5aaf1e449ac7d8ba7a687ed77e4c25950a6e45a10346909e
+aiimsmangalagiri.edu.in,https://www.aiimsmangalagiri.edu.in/,200,True,HTTP 200,66.0,True,4662.5,8.11,True,0.0,False,True,wordpress,True,29.8,171317,5159630e67a7fb5de726dec7e62de6261f66f7e6f94b2973df027028e1aac95a
+assampolice.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+aiimsrajkot.edu.in,https://www.aiimsrajkot.edu.in/,200,True,HTTP 200,95.0,False,10607.7,15.92,True,100.0,False,True,modern_spa,False,58.5,879,5fb2f05a6e00b291fc3a89a846d54e88f65baca45d44fd304b532a4593918295
+aicte-india.org,,,False,DNS or connection failure,,,,,,,,,,,,,
+assamtenders.gov.in,https://assamtenders.gov.in/,200,True,HTTP 200,90.0,False,495.8,0.74,True,100.0,False,False,custom_dynamic_cms,False,69.8,147,20610444477536ba46109e0aae6b9941759e1859807b3364ee624cdff9282a78
+banglarbhumi.gov.in,,,False,TLS error: SSLError,,,,,,,,,,,,,
+bankofbaroda.in,https://bankofbaroda.bank.in/,200,True,HTTP 200,95.0,True,442.8,9.16,True,100.0,False,False,custom_dynamic_cms,False,53.5,1304380,995569a29f8f117ae1cb4cceb0fa5d9f77a757708d91a491200e2c95702d0eb6
+bankofindia.co.in,https://bankofindia.co.in/,403,False,HTTP 403,,,145.0,,,,,,,,,,
+bankofmaharashtra.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bbmp.gov.in,https://bbmp.gov.in/,200,True,HTTP 200,95.0,False,37.4,0.1,True,0.0,False,True,custom_dynamic_cms,False,53.2,666,da90fc95c583d15a812ec18d6feede7d5ac23aa880df3e5bf2f6fa7f422ab596
+barc.gov.in,https://barc.gov.in/,200,True,HTTP 200,100.0,True,245.1,0.7,True,60.0,True,True,modern_spa,False,77.9,50799,940885f4a70b5b5f1e16fd1ac89b4631d93314222a6fe9fd705f18e3bd417567
+bengalurutrafficpolice.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bharatpetroleum.in,https://bharatpetroleum.in/,403,False,HTTP 403,,,25.9,,,,,,,,,,
+bhel.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bhoonidhi.nrsc.gov.in,https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html,200,True,HTTP 200,77.0,True,218.6,0.57,True,100.0,False,True,custom_dynamic_cms,False,71.4,36872,561c4c1dd0e1ca140cd0aebdc84031f885ccd421118fd74b1993a5efa595f96e
+bhopalcorporation.org,,,False,DNS or connection failure,,,,,,,,,,,,,
+bhu.ac.in,https://bhu.ac.in/Site/Home/1_2_7047_Main-Site,200,True,HTTP 200,65.8,True,577.9,1.2,True,100.0,False,True,modern_spa,True,71.1,50408,90aee8c96722ab44aba9261bff93d334a2d95db064f6a7f69feaf8c477e726aa
+bel-india.in,https://bel-india.in/,200,True,HTTP 200,99.5,True,2053.3,6.39,True,70.0,False,True,wordpress,True,58.2,507666,59490bb550fcdf04f0274d5d1fef726248df6cb03b689863282c4fb5719482e2
+anyror.gujarat.gov.in,https://anyror.gujarat.gov.in/,200,True,HTTP 200,75.6,True,14360.4,21.7,True,45.0,False,True,legacy_asp_net,False,38.9,24245,b2f0eb3b74b26d99feeaaaac3175825403252fea694cf331db823ee15f951a81
+bhulekh.ori.nic.in,https://bhulekh.ori.nic.in/RoRView.aspx,200,True,HTTP 200,70.0,True,530.8,1.05,True,35.0,False,False,legacy_asp_net,False,46.6,38948,60e3558f6dc26273afda8c27930d99bd3ab4765a9444f148f88db9092edc56e7
+andaman.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bhuvan-aadhaar.nrsc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bhuvan.nrsc.gov.in,https://bhuvan.nrsc.gov.in/ngmaps,200,True,HTTP 200,95.0,False,626.0,1.01,True,100.0,False,True,modern_spa,False,75.5,11045,44b160048a622aa4e1750b707d8ff702358dabde27d3e91d32983a044d25e5a4
+bihar.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+biharbhumi.bihar.gov.in,https://biharbhumi.bihar.gov.in/,200,True,HTTP 200,90.0,False,292.0,0.44,True,25.0,False,False,custom_dynamic_cms,False,51.9,198,3c0596f439ecfdf818d6029a6f620b6c2d0c584361ae25435755a0cfed1d7b8d
+biharpolice.bihar.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bhulekh.mahabhumi.gov.in,https://bhulekh.mahabhumi.gov.in/,200,True,HTTP 200,73.3,True,4836.2,7.73,True,60.0,False,True,legacy_asp_net,False,42.0,72968,dbe91610e2bf81a1e929355ba57b2933a30cfc005be43b5e60d6ed886be29861
+boio.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+aftdelhi.nic.in,,,False,Timeout,,,,,,,,,,,,,
+bprd.nic.in,https://bprd.mha.gov.in/,200,True,HTTP 200,83.4,True,681.4,1.82,True,100.0,True,True,legacy_asp_net,True,84.6,121819,a1f015af754fb44935099bb14c9dc8ec5b1d795a41ac0ba0eef24fe29d6588af
+bhuiyan.cg.nic.in,https://bhuiyan.cg.nic.in/,200,True,HTTP 200,94.1,True,11711.4,18.11,True,100.0,False,True,legacy_asp_net,False,58.2,83257,da3312974389c7e156c8c3e28ba2d15e1a1997b77b16333c72419e418ce3dce4
+bsf.gov.in,https://www.bsf.gov.in/,403,False,HTTP 403,,,314.5,,,,,,,,,,
+aktu.ac.in,,,False,Timeout,,,,,,,,,,,,,
+cair.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+calcutnamedicalcollege.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+aiimsbibinagar.edu.in,,,False,Timeout,,,,,,,,,,,,,
+caluniv.ac.in,https://caluniv.ac.in/,307,True,HTTP 307,90.0,False,296.7,0.45,True,65.0,False,False,custom_dynamic_cms,False,61.9,1387,31ef270077f5655bb0f0bd56e53dadcd2c0ca29a087e628cf2b10d6018a873f0
+calcuttahighcourt.gov.in,https://calcuttahighcourt.gov.in/,200,True,HTTP 200,77.3,True,982.8,1.89,True,100.0,False,True,custom_dynamic_cms,False,67.5,63522,5350bcf81bbdf91cecae0300f7e164966f80c199b5f657e85233f54d07b6270e
+canarabank.com,https://www.canarabank.bank.in:443/,200,True,HTTP 200,99.3,True,587.8,4.53,True,100.0,True,True,modern_spa,True,81.2,559945,91133d9c0da7998ba06060fd30048f95d7bd2fbf5979bd4e55d34870fd6b790d
+cbi.gov.in,https://cbi.gov.in/,200,True,HTTP 200,85.5,True,471.7,2.08,True,100.0,True,True,custom_dynamic_cms,True,84.4,211152,5f0ee32efdba2d68312e6e455a14d13ecbfe02286a5d20b37e91f1cc5b46c0f8
+cbic-gst.gov.in,https://cbic-gst.gov.in/,200,True,HTTP 200,93.3,True,75.7,0.69,True,90.0,True,True,custom_dynamic_cms,True,88.4,88830,ea797bf24570fac1a6bea81e4ed0471d9989a3104f51d147fac301f5fe692616
+appointments.uidai.gov.in,,,False,Timeout,,,,,,,,,,,,,
+cbic.gov.in,https://www.cbic.gov.in,200,True,HTTP 200,95.0,False,273.7,0.46,True,100.0,False,True,custom_dynamic_cms,False,77.1,7481,59fb807bb5668c96feb556462dbac7370149a7b4fd6199fe32da93855c552d68
+careerindianairforce.cdac.in,https://careerindianairforce.cdac.in/,200,True,HTTP 200,80.0,True,1579.2,2.46,True,75.0,False,True,custom_dynamic_cms,False,60.4,13421,8884cbe72fd9494196e6a529cd94b703033a60fb85bbe4339ff62a6e5f616b1f
+cag.gov.in,https://cag.gov.in/en,200,True,HTTP 200,99.8,True,2949.4,6.7,True,100.0,False,True,legacy_asp_net,True,64.9,349187,d1c6339122a35f3c2b07add8aa787a044efdd2bf8118e2ff6c44facd76629bc6
+apsc.nic.in,,,False,Timeout,,,,,,,,,,,,,
+cctns.uppolice.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+ccmc.gov.in,https://ccmc.gov.in/,200,True,HTTP 200,69.5,True,251.6,1.41,True,100.0,True,True,legacy_asp_net,True,81.6,158484,6385c06d2e3c7bc397b445f07bca0a348451a2815ed8fe8035701f4aa66b5593
+cci.gov.in,https://cci.gov.in/,200,True,HTTP 200,62.1,True,704.7,1.52,True,100.0,True,True,custom_dynamic_cms,True,79.1,70569,4e02f9204eb94cfdae7529891403861b87f331608d494f22b2d2e9db4d3ec377
+cbse.gov.in,https://www.cbse.gov.in/,200,True,HTTP 200,75.0,True,1327.5,2.03,True,100.0,True,True,custom_dynamic_cms,False,76.4,6080,28cab80272d1b5bfc3efb642e8e78deef51efadefa36abc2ffad13bf599b340c
+cemilac.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+assam.gov.in,,,False,Timeout,,,,,,,,,,,,,
+ceptam.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+assamrifles.gov.in,,,False,Timeout,,,,,,,,,,,,,
+cert-in.org.in,https://cert-in.org.in/,200,True,HTTP 200,95.0,False,182.9,0.28,True,100.0,False,False,custom_dynamic_cms,False,72.7,447,056383dd1ceba2678b8cd66facd351e4c6d74229eedf0bdebcba4c459b54272f
+cdsco.gov.in,https://cdsco.gov.in/opencms/opencms/en/Home/,200,True,HTTP 200,87.4,True,804.6,1.85,True,100.0,False,True,modern_spa,True,75.7,98694,91d2db0339f30a6608f86b60dea387d9dc9d1027861213ac9bca65b963f9294f
+cftri.res.in,https://cftri.res.in/,200,True,HTTP 200,93.3,True,258.1,1.33,True,60.0,True,True,drupal,True,79.0,144512,0090225bd1070fc2400cc4da44b5044919c0ae916fd98dac195fb47c759e7a78
+cgtenders.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+cgat.gov.in,https://cgat.gov.in/,200,True,HTTP 200,95.0,False,320.7,0.49,True,60.0,False,True,custom_dynamic_cms,False,67.0,1440,5df084960fc6e272e1e60ff6dc58a5015b6c2a8ef6e764dbf12c87c3fe8e6518
+chandigarh.gov.in,https://chandigarh.gov.in/,200,True,HTTP 200,84.1,True,218.6,0.79,True,100.0,True,True,legacy_asp_net,True,87.9,71371,55c0669441f1e435ea926ff941649a7ef041183f5c3f8651777a4d2873e71070
+centralbankofindia.co.in,https://centralbank.bank.in/en,200,True,HTTP 200,96.0,True,768.2,2.61,True,100.0,False,True,drupal,True,76.0,224531,84d00b4e1641176bec71de6152a07a24849b065894da5f075d695dd5c58ba2e2
+cgstate.gov.in,https://cgstate.gov.in/hi,200,True,HTTP 200,85.9,True,369.7,1.73,True,100.0,True,True,legacy_asp_net,True,85.6,179889,4b6f5d131adfaf16c51e8f06d2a56310a1cf5813cb322ea2080d886a9a222566
+chennaicorporation.gov.in,https://chennaicorporation.gov.in/,200,True,HTTP 200,95.0,False,214.3,0.39,True,0.0,False,False,custom_dynamic_cms,False,47.3,11286,e6b0249fc8b54b7d7529d4650085985478bd55f4881bc4710fe291495feef15e
+checkpost.parivahan.gov.in,https://checkpost.parivahan.gov.in/checkpost/faces/login.xhtml?faces-redirect=true/,500,False,HTTP 500,,,414.1,,,,,,,,,,
+ccmb.res.in,https://www.ccmb.res.in/,200,True,HTTP 200,91.8,True,2215.6,5.85,True,0.0,True,True,wordpress,False,45.0,388838,2d04c421fa16ac27289a617e3bd23c20ca1002756e192786d42e021484226d29
+cic.gov.in,https://cic.gov.in/,200,True,HTTP 200,89.4,True,354.9,1.03,True,100.0,False,True,drupal,True,78.7,75995,476550d626ab948c44158ca4d5e52a5714c5a940bf221f5cf7c4cecb60a7ebb2
+cisf.gov.in,https://cisf.mha.gov.in/cisf_dbim_hindi/index.php,200,True,HTTP 200,84.7,False,420.8,1.22,True,100.0,True,True,custom_dynamic_cms,True,86.8,89678,6d6a2bab74142d77c6ad73a3fdbf52e56258eee1944a21da6adbaed881cc312d
+civilaviation.gov.in,https://www.civilaviation.gov.in/,200,True,HTTP 200,100.0,True,375.9,2.03,True,70.0,True,True,drupal,True,81.4,225576,1e327f8d6a13f62b0df517ad38078e093ec7d07c064a7457b2475a8b34742c97
+clc.gov.in,https://clc.gov.in/,200,True,HTTP 200,89.3,True,297.5,0.83,True,50.0,False,True,wordpress,True,66.8,59371,154ba8a621740ab4aabc63706524e73c987c8213ca7189b982593a9242e8468e
+coalindia.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+clri.org,https://clri.org/,200,True,HTTP 200,76.7,True,282.7,4.78,True,20.0,True,True,legacy_asp_net,False,48.7,668423,f736cf727b5c939471e9c87453e212c03be268689f205289e8bf3bda277b8c9c
+cmhelpline.mp.gov.in,https://cmhelpline.mp.gov.in/,200,True,HTTP 200,88.1,True,284.1,1.66,True,0.0,False,True,legacy_asp_net,True,51.4,188925,b0d8eeb106c42901c86dfc9540fa2a59979a26025902ce49fc4a967d205f9601
+connect.punjab.gov.in,https://connect.punjab.gov.in/,200,True,HTTP 200,95.0,True,88.9,0.24,True,100.0,False,True,custom_dynamic_cms,True,82.8,16535,009b7660438915505ada94f08a342c98103d5b86905495667bd69f9c1a459aef
+coal.nic.in,https://coal.nic.in/,200,True,HTTP 200,87.5,True,313.1,1.02,True,90.0,True,True,drupal,True,85.7,84621,2383fabe7ced1ea28039809c2b2d613dc865c67601dbcb7410f27914c52eddfd
+concorindia.co.in,https://www.concorindia.co.in/,200,True,HTTP 200,95.0,False,287.1,0.44,True,75.0,False,True,modern_spa,False,70.9,1106,bb776a5d66f59092b700ba42094c1af8bcaf980d2c0367512d6925ece5320390
+cdri.res.in,https://cdri.res.in/,200,True,HTTP 200,94.5,True,2545.4,5.07,True,100.0,False,True,legacy_asp_net,True,68.1,192114,885c89921a0422f644c7f1f3eeebe991693f00ede124eb4de6f860af5538e319
+commerce.gov.in,https://www.commerce.gov.in/,200,True,HTTP 200,95.0,False,369.9,0.62,True,70.0,False,True,custom_dynamic_cms,False,69.1,9271,748593b6b998095808932fa2be5156a09bfc8cfe8289e22d98f351a5e96fdb92
+bis.gov.in,https://www.bis.gov.in/?lang=hi,200,True,HTTP 200,95.0,True,12553.4,22.69,True,100.0,True,True,wordpress,True,73.5,593106,c505739fb8425c8d48bbd8f4a25443f57e1e34ce4252ed82525a8358da56be95
+csab.nic.in,https://csab.nic.in/,200,True,HTTP 200,100.0,True,374.7,1.11,True,100.0,False,True,s3waas_drupal,True,86.7,84536,20903e6948cfda3b67430185e419f5445378aa47acf426c294ecd90d92747e8e
+cuetug.nta.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+cris.org.in,https://cris.org.in/,200,True,HTTP 200,92.9,True,574.9,2.39,True,70.0,True,True,drupal,True,78.2,234750,801f560a89ae99c386a5429436e28814f9b09c84d8227e67b66a33ec05612ea3
+cvc.gov.in,https://cvc.gov.in/,200,True,HTTP 200,95.0,False,205.0,0.32,True,100.0,False,True,custom_dynamic_cms,False,77.5,1285,f99640db35ac838825aa3859c091feca6b7f5f5e1133cc706cf4025ffc6238b6
+crpf.gov.in,https://crpf.mha.gov.in/,200,True,HTTP 200,81.3,False,777.6,2.07,True,100.0,True,True,custom_dynamic_cms,True,83.2,139104,750c09a5ff23c49c498da1077fa83c5ffe534e65c896886e55abfbfcf734d8ad
+cybercrime.gov.in,https://cybercrime.gov.in/,200,True,HTTP 200,95.0,True,221.9,0.44,True,100.0,False,True,custom_dynamic_cms,False,77.2,16739,3262121eb58665d8c2119b5ac1fe747e2a7f07fcb50a49d438f6a304f233b1f4
+dae.gov.in,https://dae.gov.in/,200,True,HTTP 200,100.0,True,351.7,2.0,True,100.0,True,True,s3waas_drupal,True,94.0,225557,412615fe472d84f10ffcb1a4c8a26dea7c48176b9cff3bed305e68a79c51d03a
+data.gov.in,https://www.data.gov.in/,200,True,HTTP 200,95.0,True,509.6,9.63,True,100.0,False,True,custom_dynamic_cms,False,58.5,1362196,39ef8c0d6a3e2840b7b8cd4303656b4cce2fb1ab48449e0b68f1cec8ed5f0331
+ddpmod.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+deal.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+defproc.gov.in,https://defproc.gov.in/nicgep/app,200,True,HTTP 200,68.9,False,423.1,0.97,True,100.0,False,False,custom_dynamic_cms,False,62.8,51238,2d6af1adec33da1c2e0bd9cc5fcfc00cf9fb7b5812fe87efef4ee9c59bf9748d
+delhi.gov.in,https://delhi.gov.in/,200,True,HTTP 200,88.3,True,978.7,1.82,True,100.0,False,True,drupal,True,76.0,53844,cdda13f8b17689e78ca36175614fa12d5fa389c612a8d9f78d5330a13e999f4b
+delhihighcourt.nic.in,https://delhihighcourt.nic.in/web/,200,True,HTTP 200,90.7,True,260.6,1.06,True,70.0,True,True,drupal,True,81.5,103266,2a14e40bd4bbf6485e1d1bb9181c16e961ff7ab025c2885b3cc08284464d0f7b
+delhipolice.gov.in,https://delhipolice.gov.in/,200,True,HTTP 200,99.8,True,294.1,1.57,True,0.0,False,True,legacy_asp_net,True,55.2,173800,dedddac46426fe0c25f3646a26472ef1b2b23ce8c3a25b543ed214884b6fa748
+delhitenders.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+desidoc.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+desw.gov.in,https://desw.gov.in/,200,True,HTTP 200,89.3,True,175.9,0.77,True,35.0,True,True,s3waas_drupal,True,78.2,77074,4d7e89fd13939c4b1d868a13476508f64e0d31da8eb9af46b1c62af5cc07c6a7
+dge.gov.in,https://dge.gov.in/,200,True,HTTP 200,99.4,True,343.8,1.41,True,65.0,True,True,drupal,True,81.8,136979,aa59310c8623e0e77c84394ab171a526f3774d344a6b31552c332a240621c509
+daman.nic.in,https://daman.nic.in/,200,True,HTTP 200,90.0,False,3542.4,5.31,True,0.0,False,False,custom_dynamic_cms,False,31.1,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+dhanwantri.esic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+amd.gov.in,,,False,Timeout,,,,,,,,,,,,,
+dgms.gov.in,https://dgms.gov.in/,200,True,HTTP 200,93.9,True,870.6,2.29,True,90.0,True,True,custom_dynamic_cms,True,83.8,151275,692c4c088d3deeab58a524134a3967e0984dd8f77693437629b7b5359048045a
+digilocker.gov.in,https://www.digilocker.gov.in:443/,200,True,HTTP 200,100.0,True,405.6,1.01,True,100.0,False,True,custom_dynamic_cms,False,77.0,60951,6f1fe23ba47c8a950a762bfc3857625e623de506219d8da0c1daa38a0916b064
+digitalgujarat.gov.in,https://digitalgujarat.gov.in/,403,False,HTTP 403,,,274.9,,,,,,,,,,
+digitalindia.gov.in,https://digitalindia.gov.in/,403,False,HTTP 403,,,245.5,,,,,,,,,,
+diksha.gov.in,https://diksha.gov.in/,200,True,HTTP 200,83.6,True,1349.2,3.13,True,100.0,True,True,custom_dynamic_cms,False,75.7,170627,b9d6454242b0dd08efaa95f1dc71b53b28bb730414173e86c5d9ace46a21bfd4
+dlrl.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+dmrl.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+dopt.gov.in,https://dopt.gov.in/,200,True,HTTP 200,95.0,False,297.8,0.47,True,100.0,False,True,modern_spa,False,77.1,4076,7d571f2c146e66698ff091f0abaa7c2f67fe6810416021e806bd1dd6fb7577b3
+dos.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+dot.gov.in,https://www.dot.gov.in/,200,True,HTTP 200,95.0,False,403.7,0.63,True,100.0,False,True,modern_spa,False,76.6,3847,5ea8a1a95fa6992403edbd1ca40787adca088ae92ef7724620cdf602e775159e
+drdl.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+drdo.gov.in,https://xn--m1b0a2bb8esed.xn--11b7cb3a6a.xn--h2brj9c/drdo/hi/,200,True,HTTP 200,95.0,True,707.6,3.7,True,100.0,True,True,drupal,True,82.4,405439,5e93a9e19b45018d3e581a2d67ebbcebc460685a82775e5f8188c3284f9dd275
+dsssb.delhi.gov.in,https://dsssb.delhi.gov.in/,200,True,HTTP 200,90.1,True,727.7,1.61,True,100.0,False,True,drupal,True,77.2,78973,838e7899444246f08fa82de789d2c83289c5725ad7f998ca2b733fb5901fe3c8
+dst.gov.in,https://www.dst.gov.in/,200,True,HTTP 200,95.0,False,333.9,0.56,True,100.0,False,True,modern_spa,False,76.8,8346,6423edb38743938fc634d10a0259ed7a3ac4a2d3fa99d481be22f3a7ef19e1b6
+cmo.kerala.gov.in,https://cmo.kerala.gov.in/,200,True,HTTP 200,80.3,True,10074.7,15.38,True,100.0,False,True,custom_dynamic_cms,True,59.1,41659,9f84701b52439c902ea8d61d8a4255af13266bdc6ade0234d788fc64514a5b00
+e-filing.ecourts.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+eaadhaar.uidai.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+du.ac.in,https://www.du.ac.in/,200,True,HTTP 200,74.0,False,725.4,6.0,True,0.0,False,True,legacy_asp_net,True,34.2,754652,1f969a4dd8f021d523709a9ed70e7b418d9094dbad7d8824adfbf4d53d460596
+eci.gov.in,https://www.eci.gov.in/,200,True,HTTP 200,95.0,False,443.1,0.67,True,100.0,False,True,custom_dynamic_cms,False,76.5,1279,5408e031bcebcd4e0b8d5212b9015bde2e91680a385285d9a057ee2892029246
+bhulekh.uk.gov.in,,,False,TLS error: ConnectTimeout,,,,,,,,,,,,,
+edistrict.delhigovt.nic.in,https://edistrict.delhigovt.nic.in/,200,True,HTTP 200,95.0,True,422.3,0.95,True,100.0,False,True,legacy_asp_net,True,80.7,48549,784054409c80f20d1ec64dd392e9a57b6d2a3385780d77106b63529acc731eb0
+cuetpg.nta.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+edistrict.jk.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+corporationoftrivandrum.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+edistrict.kerala.gov.in,https://edistrict.kerala.gov.in/,200,True,HTTP 200,75.0,True,225.0,0.6,True,35.0,True,True,custom_dynamic_cms,True,69.5,40152,e3e98863ac5e20a70654aae6e8d634072eab4120fb7fb6cedabb2c0b8383ecc1
+edistrict.hp.gov.in,https://edistrict.hp.gov.in/HPeDistrict/,200,True,HTTP 200,82.5,True,506.5,0.78,True,0.0,False,True,legacy_asp_net,False,47.4,3204,5955d30ce970e61bf7a5f8c28e6b1f5511911d671109e7cf3ec83347d9e57a67
+edistrict.wb.gov.in,https://edistrict.wb.gov.in/,200,True,HTTP 200,95.0,True,236.5,0.48,True,60.0,False,True,custom_dynamic_cms,False,67.1,19033,6552867bd9ac4f6aef578526d33505e840ddf7645799d94a38583f07d4c82ea9
+bombayhighcourt.nic.in,,,False,Timeout,,,,,,,,,,,,,
+education.gov.in,https://www.education.gov.in/,200,True,HTTP 200,95.0,False,418.9,0.67,True,100.0,False,True,modern_spa,False,76.5,6912,3d417f73f747b4e7dde226a5cd75491a38b393475844cd8c74e94424e1baffc0
+dbtbharat.gov.in,https://dbtbharat.gov.in/,200,True,HTTP 200,90.0,True,12022.4,18.67,True,100.0,False,True,legacy_asp_net,False,57.0,98075,3fdeef6e580ba354df432c0918527ad89339ee1a9da9eb846c135ef7765b0b69
+egazette.gov.in,https://egazette.gov.in/(S(p0n40xhf13h10xx3omlrfoob))/default.aspx,200,True,HTTP 200,70.0,True,802.6,1.65,True,90.0,False,False,legacy_asp_net,False,58.5,68777,e2c387aea9e6e74021387914170f9bfe36e00c7c906438699ffb46111a7d0683
+edudel.nic.in,https://edudel.nic.in/,200,True,HTTP 200,67.5,True,1899.4,2.99,True,100.0,False,True,legacy_asp_net,True,66.3,21107,821a3cce12cfa07ac7b05aaaee95a2e02d62d7b52362cb45209bff2e9472d43a
+emitra.rajasthan.gov.in,https://emitra.rajasthan.gov.in/,200,True,HTTP 200,95.0,True,236.9,0.46,True,60.0,False,True,custom_dynamic_cms,False,67.1,16713,d8723172fd6123c26f9dfd9481f34a0e2d2deac18c440ce81d296c16337314ff
+enam.gov.in,https://enam.gov.in/,200,True,HTTP 200,81.7,True,188.6,0.6,True,100.0,True,True,legacy_asp_net,False,82.7,49080,691318854171c1850354923cb463c66bda201dd5f91ccb666c44938f3bb8e836
+einvoice1.gst.gov.in,https://einvoice1.gst.gov.in/,200,True,HTTP 200,86.6,False,3595.6,5.65,True,100.0,False,True,custom_dynamic_cms,False,59.0,38716,beb3176005acfbdbe252f6838df60f5052a7d72805d578359a49ab8589eaacce
+epfigms.gov.in,https://epfigms.gov.in/,200,True,HTTP 200,70.0,False,256.2,0.52,True,90.0,False,True,custom_dynamic_cms,True,71.9,21099,191e8168723a78e4cd6dc608981a39a2ba044e6f383d3ab270cf45117880fe1e
+echallan.parivahan.gov.in,https://echallan.parivahan.gov.in/,200,True,HTTP 200,66.5,True,8122.2,12.52,True,70.0,False,True,s3waas_drupal,False,47.5,51029,abf49bfc152447c771e8b2d080392ac0c6389fc1d448efdc4b122acd78e777b5
+eportal.incometax.gov.in,https://eportal.incometax.gov.in/iec/foservices/,200,True,HTTP 200,95.0,True,536.7,0.85,True,90.0,False,True,custom_dynamic_cms,False,73.5,7068,8bee089028357c0977a774b3e243abde9ee50ccb7e81eee8fe5e7f63d4c07a59
+eproc.bihar.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+bpsc.bih.nic.in,,,False,Timeout,,,,,,,,,,,,,
+eproc.punjab.gov.in,https://eproc.punjab.gov.in/,200,True,HTTP 200,90.0,False,259.0,0.39,True,100.0,False,False,custom_dynamic_cms,False,70.8,163,a6a6d14f904832bda6e66ad25750ddc1215db072aa3b837eeea96413d1a663a8
+eproc.rajasthan.gov.in,https://eproc.rajasthan.gov.in/,200,True,HTTP 200,90.0,False,137.9,0.21,True,100.0,False,False,custom_dynamic_cms,False,71.4,165,08caa8f018bb81c3b32d6f17cfbfebf6390338d2445d9527b15ce866ba66d909
+esanjeevani.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+eservices.uk.gov.in,https://eservices.uk.gov.in/,200,True,HTTP 200,95.0,False,132.4,0.23,True,70.0,False,True,modern_spa,False,70.3,4169,04f2fdba25d77524ff099d9df8d45d1559e59f1012cbc4d52eeb2d309da7ddbe
+enforcementdirectorate.gov.in,https://enforcementdirectorate.gov.in/,200,True,HTTP 200,94.5,True,3618.4,6.72,True,100.0,True,False,custom_dynamic_cms,False,63.3,198437,80e5d377a68ec18734010edb236a6c76747af27e7a159a2f0c1568c05b46bde9
+eshram.gov.in,https://eshram.gov.in/,200,True,HTTP 200,95.0,True,193.7,0.35,True,15.0,False,True,custom_dynamic_cms,False,56.2,8475,9daf20fdc564c72821f915e3150179dd859b78e4f8c085f99b71d62f53f98365
+eprocure.gov.in,https://eprocure.gov.in/,200,True,HTTP 200,90.0,False,602.3,0.9,True,50.0,False,False,custom_dynamic_cms,False,56.8,167,e47fa45014ecea35f1b0d9de4725cf9cceb59562bef5bc527a98578c3951a11f
+etender.up.nic.in,https://etender.up.nic.in/,200,True,HTTP 200,90.0,False,272.0,0.41,True,100.0,False,False,custom_dynamic_cms,False,70.8,112,119a0ad8d4d5b7e0a794b8a67f71443e17e1c499c186ac2672aefc0bdd1babc6
+etenders.gov.in,https://etenders.gov.in/,200,True,HTTP 200,90.0,False,148.2,0.22,True,100.0,False,False,custom_dynamic_cms,False,71.3,141,d31e30181dfa7605b8f1cb6db8c2be540c00f5cb0376aca0c64678b03ebda692
+etenders.hry.nic.in,https://etenders.hry.nic.in/,200,True,HTTP 200,90.0,False,317.3,0.48,True,100.0,False,False,custom_dynamic_cms,False,70.6,159,1f13cae049685c212dcd556e7c6d40b45148469b102fd7b8cfd4a54f9f1850ea
+etenders.kerala.gov.in,https://etenders.kerala.gov.in/,200,True,HTTP 200,90.0,False,370.4,0.56,True,100.0,False,False,custom_dynamic_cms,False,70.3,161,31609a2e2bcbd5149528cc0bce3459a4e79d2041f1475c2162671b3131ff41f5
+ewaybillgst.gov.in,https://ewaybillgst.gov.in/,200,True,HTTP 200,95.0,True,238.8,0.71,True,100.0,False,True,legacy_asp_net,True,81.4,54245,4a5e23d3473ccda5820a66a072d1dcca2a4ff0b741ba6c29c640e833d36ec3af
+examinationservices.nic.in,https://examinationservices.nic.in/,200,True,HTTP 200,90.0,True,217.0,0.33,True,100.0,False,False,custom_dynamic_cms,False,71.0,917,addbd17cbd7c83a4f8f24f7c0d29b643836b67af3f00c8635ceddc027a23ea7a
+eximbankindia.in,https://www.eximbankindia.in/,200,True,HTTP 200,89.9,True,673.0,2.02,True,70.0,False,True,drupal,True,68.4,155607,8b9e16a1142f57573188fab687d01b56b1a92a55be8b6be7e45e6359eaef6f59
+facelessassessment.incometax.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+fert.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+finmin.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+fois.indianrail.gov.in,https://fois.indianrail.gov.in/,200,True,HTTP 200,90.0,False,230.4,0.35,True,100.0,False,False,custom_dynamic_cms,False,71.0,119,b3f8cb14966272eb2c98f1ed8095aa6be65d1e3a25746496290a6e979f7e377a
+fssai.gov.in,https://fssai.gov.in/,200,True,HTTP 200,95.0,False,245.6,0.37,True,100.0,False,True,custom_dynamic_cms,False,77.4,949,acfcb5169ed5f9822913c12cfeca4e846c4576569729312a0ce94dd52a7a0544
+cdac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+gem.gov.in,https://gem.gov.in/,200,True,HTTP 200,98.8,True,257.8,1.42,True,55.0,True,True,custom_dynamic_cms,True,79.1,159432,3beb6be517c19a66efc6a509cf8ee8a1a7812b25ccdc5582f07d196e7e09d371
+gailonline.com,https://www.gailonline.com/,200,True,HTTP 200,80.9,True,659.7,1.65,True,90.0,False,True,legacy_asp_net,True,71.8,101203,1cd7e32a2c26a71f88f553a5040ed8ba3de68cc2a5371b06c95bece176f7175e
+ghconline.gov.in,https://ghconline.gov.in/,200,True,HTTP 200,85.9,True,810.1,2.35,True,0.0,False,True,wordpress,False,43.7,173691,1090dd71ed9901a6b57794169f2267ee0c959709ca1e7bddacab2329ea154385
+gmcjammu.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+gmcmumbai.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+goa.gov.in,https://www.goa.gov.in/,200,True,HTTP 200,92.5,True,614.1,1.82,True,100.0,False,True,wordpress,True,77.3,137291,662ca91bf47e3c666a045514f8fa816b78eba2fee26428d15efe11b972be52ef
+ghmc.gov.in,https://ghmc.gov.in/,200,True,HTTP 200,78.9,True,1568.5,3.03,True,60.0,False,True,legacy_asp_net,True,59.6,103983,061ba75d572459c4358c30c6711b9b8c7adfd783a943f73f36345a11a2fd5620
+goatenders.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+gpsc.gujarat.gov.in,https://gpsc.gujarat.gov.in/,200,True,HTTP 200,100.0,True,544.3,3.96,True,70.0,False,True,legacy_asp_net,False,60.6,483102,22c803ef60df964c58494f76b866a30821b2efc2995dd9a794ccb480dd665214
+dharani.telangana.gov.in,,,False,Timeout,,,,,,,,,,,,,
+districts.ecourts.gov.in,,,False,Timeout,,,,,,,,,,,,,
+greentribunal.gov.in,https://www.greentribunal.gov.in/,200,True,HTTP 200,81.2,True,4876.9,7.97,True,100.0,True,True,s3waas_drupal,True,74.4,99783,cf0cc9ee8c77338026b39366ae6282dfe99bc70a7d64fe7b4c6225f5c7c6d52b
+edistrict.cgstate.gov.in,,,False,Timeout,,,,,,,,,,,,,
+gtre.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+gujarathighcourt.nic.in,https://gujarathighcourt.nic.in/,200,True,HTTP 200,89.5,True,291.4,0.82,True,100.0,True,True,drupal,True,89.4,58120,23b7c9475c5b926806453e2faddcfd738416ac0a466d802ab6c1dc916f4cbf2a
+gujaratindia.gov.in,https://gujaratindia.gov.in/Index,200,True,HTTP 200,91.0,True,430.9,2.15,True,100.0,False,True,legacy_asp_net,True,75.8,230511,5df6cc5b9e895ccbae33ff4d0072d8c9577c01a411788c7eb1858bb2abe1c216
+gujaratpolice.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+gvmc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+edistrict.up.gov.in,,,False,Timeout,,,,,,,,,,,,,
+haryana.gov.in,https://www.haryana.gov.in,200,True,HTTP 200,100.0,True,452.5,1.65,True,100.0,True,True,s3waas_drupal,True,95.0,149216,5a76034a2af4f22203843bc92ff99c7826bedab123485ec50d4f25ac7e9f5fa9
+gst.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+hc.ap.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+hckerala.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+gramawardsachivalayam.ap.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+hcmimphal.nic.in,https://hcmimphal.nic.in/,200,True,HTTP 200,94.8,True,173.2,2.71,True,90.0,False,False,s3waas_drupal,False,67.8,376197,a5f0547e25ec64aa45f5dfebfda8e3f5c93752299c5bd9526bac552424f5cdef
+haryanapolice.gov.in,https://haryanapolice.gov.in/,200,True,HTTP 200,81.0,True,520.6,1.21,True,100.0,False,True,legacy_asp_net,True,75.7,66476,df41d3082dea6a48c28a1efaa0bf38598a3af6cc82a42654947bf42b3da35115
+hcraj.nic.in,https://hcraj.nic.in/hcraj/,200,True,HTTP 200,87.7,True,446.6,1.28,True,90.0,False,True,legacy_asp_net,True,75.0,93135,aae516de7e024deb44dfa0fbcbdaddf0d89259a8cc5ea1dcc3c07269b60cf380
+hcs.gov.in,https://hcs.gov.in/hcs/,200,True,HTTP 200,100.0,True,572.9,1.59,True,35.0,False,True,drupal,True,64.0,112767,1fd5689b91834ef0eec8d3a2a2f083f2ea173c5083a49dce923996379eeddf9a
+highcourt.cg.gov.in,https://highcourt.cg.gov.in/,200,True,HTTP 200,81.7,True,280.3,1.02,True,100.0,True,True,custom_dynamic_cms,True,86.5,91448,cdfa9587905b089a7990a353c576bce9d208a4c9afe579db2855e71227c35895
+highcourtchd.gov.in,https://highcourtchd.gov.in/,200,True,HTTP 200,92.5,True,328.1,1.29,True,100.0,True,True,legacy_asp_net,True,88.9,122752,716c65b5f7600f7bb3212e15fe98648faf1fd599c92365b97a2638873acd3482
+highcourtofuttarakhand.gov.in,https://highcourtofuttarakhand.gov.in/,200,True,HTTP 200,100.0,True,395.9,1.73,True,100.0,True,True,s3waas_drupal,True,94.8,175274,3bf0131f3808b69bf4903533df54eb1ced69237062374a99e4d90d1e030c65b0
+himachal.nic.in,https://himachal.nic.in/,200,True,HTTP 200,98.9,True,492.3,1.4,True,100.0,False,True,s3waas_drupal,True,85.5,100963,73674af38d56f04d11d730aea5d784f96429869a942edefc3c40dfcd8dfe69de
+hindustanpetroleum.com,https://www.hindustanpetroleum.com/,200,True,HTTP 200,95.0,True,544.3,1.83,True,75.0,False,True,legacy_asp_net,True,71.8,156231,b178f881beb58505c96cdc2205cb0b86821a9fb071e86eaa755f3050b9260d35
+hppolice.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+hphighcourt.nic.in,https://hphighcourt.nic.in/,200,True,HTTP 200,95.0,False,230.0,0.37,True,70.0,False,True,custom_dynamic_cms,False,69.9,3965,31d9c865ff1ba197e3a78dd4bde451df5c257b60f0b4e14fe74905c36771c5ad
+hal-india.co.in,https://hal-india.co.in/,200,True,HTTP 200,95.0,True,3448.0,5.3,True,100.0,False,True,custom_dynamic_cms,False,62.6,20027,62fdeb4986ec3da8c0134815460d92c04637eca8ddef556f355d02f1e1ebf4e7
+hptenders.gov.in,https://hptenders.gov.in/,200,True,HTTP 200,90.0,False,226.7,0.34,True,100.0,False,False,custom_dynamic_cms,False,71.0,179,d9b6209fa307eba017184855f287f5477f14c7fe3ee2c8ee9ba14c65afb2a951
+hwb.gov.in,https://hwb.gov.in/,200,True,HTTP 200,99.3,True,246.0,0.84,True,45.0,False,True,drupal,True,68.5,72341,5d4976821916a64e59a38585cb1d5c63473620fe125dd037f0811e727f2a9697
+einvoice2.gst.gov.in,,,False,Timeout,,,,,,,,,,,,,
+ibbi.gov.in,https://ibbi.gov.in/,200,True,HTTP 200,70.0,True,602.2,11.32,True,100.0,True,True,custom_dynamic_cms,True,66.0,1600372,b79e41c07c893e752a54f3d52f00474fbaa3816cff2b5651cfbed06b6d86cca1
+epfindia.gov.in,,,False,Timeout,,,,,,,,,,,,,
+iari.res.in,https://iari.res.in/en/index.php,200,True,HTTP 200,89.6,True,968.1,2.4,True,70.0,True,True,legacy_asp_net,True,77.2,145323,40838b4c49907d1d6f4b1eb38c9c7b874b8e92bbea166ca4f65dc65be067587a
+icmr.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iepf.gov.in,https://www.iepf.gov.in/,403,False,HTTP 403,,,516.1,,,,,,,,,,
+igcar.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+icegate.gov.in,https://www.icegate.gov.in,200,True,HTTP 200,99.6,True,1076.0,2.32,True,100.0,True,True,drupal,True,87.9,108580,a201b7374f94bbac93d4a682e83f097f2af87a761c6a5a653deaeff0f00f54c5
+igib.res.in,https://igib.res.in/,200,True,HTTP 200,95.0,True,613.1,1.51,True,70.0,False,True,custom_dynamic_cms,False,66.5,90986,c35c4dc57f9bb02120ed17f3c1975d7a5be50ed0b6d9f52567cbe6f50ad91225
+ignou.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+edistrict.odisha.gov.in,https://edistrict.odisha.gov.in/,200,True,HTTP 200,70.6,True,31307.0,48.48,True,100.0,False,True,custom_dynamic_cms,True,56.2,233257,7dd91be0dc760b408c63fed69a276e7025c756d2ac236a122ce0dbd062151bcf
+esic.nic.in,,,False,Timeout,,,,,,,,,,,,,
+icar.org.in,https://icar.org.in/,200,True,HTTP 200,99.5,True,2257.5,4.23,True,100.0,True,True,drupal,True,82.2,129462,21904adf542aeb190c63516ce8c5ab2b4019dc8a47f35aef03aba5b2f83e1d36
+esic.gov.in,https://esic.gov.in/,200,True,HTTP 200,100.0,True,25295.1,38.6,True,35.0,True,True,legacy_asp_net,True,58.8,100208,225ebf39fc9c3cce8e232994272087d602f3d3ccbcf936dc22d953417063c837
+heavyindustries.gov.in,https://heavyindustries.gov.in/en,200,True,HTTP 200,94.9,True,6181.3,11.48,True,100.0,True,True,custom_dynamic_cms,True,73.5,338581,456ae5b4fed960875d483aeddfc38cb62850610274596b7a3d753d04e2d7d392
+iiita.ac.in,https://iiita.ac.in/,200,True,HTTP 200,100.0,True,489.8,1.59,True,35.0,False,True,drupal,True,64.0,131345,461c33f0cadb4ad3ba984817e32e9397a86ef890f69a268c90206bfd518b5c5f
+iiitd.ac.in,https://iiitd.ac.in/,200,True,HTTP 200,74.4,True,351.5,1.87,True,35.0,False,True,s3waas_drupal,True,60.5,206350,ce1e1ee3f9c7831a789f71a803989fb62f4b2302749ab781fea3afbe0f3fdb84
+iiitdmj.ac.in,https://iiitdmj.ac.in/,200,True,HTTP 200,65.2,True,260.4,1.46,True,65.0,False,True,legacy_asp_net,True,61.4,164740,392e1413ad4191f2c2adb1ce1e53c8d1f221470b3bbad8dac29cff020a8cde5e
+iimb.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+ihmcl.co.in,https://ihmcl.co.in/,200,True,HTTP 200,69.3,True,1670.7,5.42,True,0.0,True,True,wordpress,True,44.5,448152,9b21088069f288354c3e02aff0ffcdefc001119ab5975874012af62f9e92d609
+iimi.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iima.ac.in,https://iima.ac.in/,200,True,HTTP 200,91.0,True,679.7,1.86,True,90.0,False,True,drupal,True,74.2,128962,4af6c97e794cdeb9e9019a9010e370981dd115dbb9b5039638c9952416c7e654
+iiitdm.ac.in,https://iiitdm.ac.in/,200,True,HTTP 200,76.2,False,1722.2,4.25,True,0.0,False,True,custom_dynamic_cms,False,35.1,256406,9062f91d1ea81940efc2fef90eb33fe78d317393aa4f98c7df9667c5b92bf85a
+iimsillong.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iimk.ac.in,https://iimk.ac.in/,200,True,HTTP 200,90.6,True,1933.0,3.81,True,60.0,False,True,wordpress,True,60.7,139777,8a1a72b1ba88236864335b56880a38b9c10abc70996a13284fa7a573141ea7e1
+iiitm.ac.in,https://iiitm.ac.in/,200,True,HTTP 200,96.2,True,2339.2,4.34,True,100.0,False,True,custom_dynamic_cms,True,70.8,128309,02f21fcf54b0e430fc2aae98e57a6884352c03348b5be23be667050df656c514
+iitb.ac.in,https://iitb.ac.in/,200,True,HTTP 200,100.0,True,187.4,2.44,True,90.0,False,True,drupal,False,70.2,331931,95d385f62e551ccc01f104bb6dee4296506a042bab8697e1e6ae2eb570d2efc8
+iitbhilai.ac.in,https://iitbhilai.ac.in/,200,True,HTTP 200,83.9,True,794.4,1.54,True,0.0,True,False,custom_dynamic_cms,True,55.6,53216,d49fd9e3c52f3390ad6700ec06858dba0d13dccc225dc77978a3dfa477f4ea2b
+iitbhu.ac.in,https://iitbhu.ac.in/,200,True,HTTP 200,97.5,True,319.8,1.47,True,70.0,False,True,drupal,True,72.3,152276,4bf51985d49049891ea7130b89cfad9753902e53a9c97a9e78e11cd1dee161ba
+goapolice.gov.in,,,False,Timeout,,,,,,,,,,,,,
+iitd.ac.in,https://home.iitd.ac.in/,200,True,HTTP 200,86.1,True,690.0,2.86,True,100.0,True,True,custom_dynamic_cms,True,82.2,281042,537a59fd15db1bc5808fc69e15832edcc509622e4a6164215b261cf11a3451a3
+iitg.ac.in,https://iitg.ac.in/,200,True,HTTP 200,62.3,True,664.5,2.12,True,45.0,True,True,custom_dynamic_cms,True,63.6,171830,6e8b832e1376f20dde236f6fcf2cd0a457fbae79939388fe2946baabb6bb373a
+csir.res.in,,,False,Timeout,,,,,,,,,,,,,
+iimcal.ac.in,https://www.iimcal.ac.in/,200,True,HTTP 200,91.8,True,5095.6,8.96,True,100.0,True,True,drupal,True,72.5,202262,b5c5090a0f17c21413928113c9282eb04e8e78503e9460ce5bcb9530366750ff
+iitgn.ac.in,https://iitgn.ac.in/,403,False,HTTP 403,,,61.9,,,,,,,,,,
+iith.ac.in,https://iith.ac.in/,200,True,HTTP 200,93.3,True,287.4,1.42,True,100.0,False,True,custom_dynamic_cms,True,78.7,152232,267fa78557c9109890be2d1fde0bdaf7e6ccdc81ea8b2ef6f0a0afe12a4f897b
+iitism.ac.in,https://iitism.ac.in/,200,True,HTTP 200,67.5,True,828.6,2.19,True,100.0,False,True,custom_dynamic_cms,True,68.7,145866,f4c71b313f30c04acc1de90b89ea8f558007923e364877c2fe15b743a7ac3746
+iitgoa.ac.in,https://iitgoa.ac.in/,200,True,HTTP 200,95.0,True,1230.4,2.82,True,70.0,False,True,wordpress,True,67.5,149970,a8cfcfdb696f5d6c32f6c27b89a676806e2ee896f3e95dca58c3d858d4822a1a
+iiti.ac.in,https://www.iiti.ac.in/,200,True,HTTP 200,95.0,True,1367.3,3.05,True,0.0,True,True,wordpress,True,59.4,154037,a0a3c7a658674bfc230c18b68f1aa4f05ff41955c7df71a9308eec0a6f262a0d
+iitj.ac.in,https://iitj.ac.in/,503,False,HTTP 503,,,576.1,,,,,,,,,,
+iitjammu.ac.in,https://iitjammu.ac.in/,200,True,HTTP 200,95.0,False,618.7,0.98,True,100.0,False,True,custom_dynamic_cms,False,75.6,8333,bb2a14fc02bd74e851fe474f6e6bd315cbb61e7d80bb94fae0f52ab8a9bf9c28
+iitm.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iitm.res.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iitkgp.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iitmandi.ac.in,https://iitmandi.ac.in/,200,True,HTTP 200,84.0,True,258.7,1.03,True,100.0,False,True,custom_dynamic_cms,True,77.1,98608,78a2172da6d537d1af5af9a6d13b42d5a928e8b643574add517572c0fbf683c8
+iitp.ac.in,https://iitp.ac.in/,200,True,HTTP 200,95.0,False,796.3,2.09,True,0.0,False,True,modern_spa,True,52.2,137316,57202565d21f8c6287c63b51ea4fa73f5f31ef5d6cc96fa6841d74937a1a1145
+iitpkd.ac.in,https://iitpkd.ac.in/,200,True,HTTP 200,76.4,False,646.4,1.66,True,60.0,True,True,drupal,True,72.9,106443,7cf8d708b79d24938dc70a1dd793c251fec27bb83ade4acef95e9f9e2630d6ed
+iitr.ac.in,https://iitr.ac.in/,200,True,HTTP 200,84.8,False,336.1,4.62,True,0.0,False,True,legacy_asp_net,True,41.6,632589,e25b67f3d9a1ae1d4018166446571fd5556cf4cef42bce3e0f25a16cb6c9d771
+iittp.ac.in,https://iittp.ac.in/,200,True,HTTP 200,95.0,False,59.6,0.1,True,0.0,False,True,custom_dynamic_cms,False,53.2,1831,409728b616f434f42dfcd913d35a371c52bc4c6ce5b6e73e6fd63d1dbdb87c64
+iitrpr.ac.in,https://iitrpr.ac.in/,200,True,HTTP 200,95.0,False,492.7,0.75,True,75.0,False,True,modern_spa,False,70.0,933,f902a3d55ba1792169cdf7d109a4825c7ee011b88dacff513657dd8bcdea143e
+iiml.ac.in,https://iiml.ac.in/,200,True,HTTP 200,95.8,True,8373.5,13.49,True,70.0,False,True,drupal,True,56.2,142754,638916575272af357a6e9c8aa9e7469c4e4e89f5345d91e23b31eb28a4ccc156
+ilbs.in,https://www.ilbs.in/,200,True,HTTP 200,68.4,True,611.1,2.17,True,15.0,False,True,legacy_asp_net,True,47.8,192218,6680da14b58ed16311b64b9cf76bf1928bb115e67206d5e182e21fef227d801c
+imcindore.mp.gov.in,https://imcindore.mp.gov.in/,200,True,HTTP 200,95.0,False,1004.7,1.85,True,0.0,False,True,modern_spa,True,53.0,52351,4b22e70615140f8e29b2db2364d0e605b7e72456d7b59fa40b828b938ef8e047
+incometax.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+iitk.ac.in,https://iitk.ac.in/,200,True,HTTP 200,95.0,True,3268.1,5.97,True,100.0,True,True,drupal,True,75.6,164377,3390f4de4780d3add4ee9996165643efa7e802565c81f3a1b9f11dbfadeef619
+incometaxindia.gov.in,https://www.incometaxindia.gov.in/,403,False,HTTP 403,,,347.8,,,,,,,,,,
+india.gov.in,https://www.india.gov.in/,200,True,HTTP 200,97.8,True,314.0,3.54,True,85.0,False,True,legacy_asp_net,True,70.0,471386,f094bc73fda036405ec6f8ece811c55e9acb01fdbbe94546f2f58a952fb07762
+grievances.maharashtra.gov.in,,,False,Timeout,,,,,,,,,,,,,
+iict.res.in,https://iict.res.in/,200,True,HTTP 200,97.6,True,12212.9,18.74,True,25.0,True,True,custom_dynamic_cms,False,50.5,64456,14a5d0418b4fc9e52c8642fa49271b9770ffff0773ce3d8c5500f4dbb67e3926
+indianarmy.nic.in,https://indianarmy.nic.in/,200,True,HTTP 200,77.3,True,471.4,1.02,True,100.0,False,True,legacy_asp_net,False,70.1,48545,3c7ef56a347b781946f13caa72da5f14bcca5d28504886b90fb528e591e9755f
+indianbank.in,https://indianbank.bank.in/en/,200,True,HTTP 200,89.1,True,374.7,2.59,True,90.0,True,True,legacy_asp_net,True,81.5,311021,2f57da7b17f6ba2442c1b7b2c9e6bc4275fa3da58b79bf700e91afc3ede2b474
+incois.gov.in,https://incois.gov.in/,200,True,HTTP 200,90.0,False,2674.2,4.01,True,20.0,False,False,custom_dynamic_cms,False,40.0,95,40bd62c8cbf1fbe09ad5d9a99d9d01bd73d2f2f0fe276466d18f6ed9f8a07d1f
+indianrail.gov.in,https://www.indianrail.gov.in/enquiry/StaticPages/StaticEnquiry.jsp?StaticPage=index.html,200,True,HTTP 200,75.0,False,522.1,0.87,True,75.0,False,True,custom_dynamic_cms,False,63.6,13973,1199928c6b0c28904bf9b85bfa6711f1dcb96b2cf97faf55c40923d1df5b0026
+indianrailways.gov.in,https://indianrailways.gov.in/,200,True,HTTP 200,92.6,True,402.4,1.28,True,100.0,False,True,legacy_asp_net,True,78.9,104094,ae8d15f33c87f54c84fd3f4a2322f3dfe81093922e44df276db796ee0b4b0edb
+indianvisaonline.gov.in,https://indianvisaonline.gov.in/,200,True,HTTP 200,88.8,False,296.0,0.56,True,60.0,False,True,custom_dynamic_cms,False,65.0,18333,395eb00fa4cbcc2bc33564d650357cdf74a6ff9b6b2ab1a8cdc3afef7913ea6a
+indiapost.gov.in,https://www.indiapost.gov.in/,200,True,HTTP 200,89.3,True,478.6,3.23,True,100.0,False,True,legacy_asp_net,True,72.1,386051,db817483aef973a5f5c556603c7f729b2e685c72224d37e55b198ee4c192a68d
+inflibnet.ac.in,https://www.inflibnet.ac.in/,200,True,HTTP 200,75.7,True,3795.5,6.73,True,45.0,False,True,custom_dynamic_cms,False,39.0,159319,96c0f0f060cb6c4651090484f322c68a7e27955e72e46a43a3267e5c2a93d66f
+inmas.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+inspace.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+insurance.esic.in,https://insurance.esic.in/,200,True,HTTP 200,90.0,True,2296.8,3.72,True,0.0,False,True,custom_dynamic_cms,True,45.8,42823,ba6a0124a01529a5879be19b2be605f716c6ddd97ac680a95ceeb949ef23f706
+hpsc.gov.in,,,False,Timeout,,,,,,,,,,,,,
+hppsc.hp.gov.in,,,False,TLS error: ConnectTimeout,,,,,,,,,,,,,
+iocl.com,https://iocl.com/,307,True,HTTP 307,90.0,False,191.9,0.3,True,0.0,False,False,custom_dynamic_cms,False,46.1,1303,46f86ef7072a1dbcd00f9218761d7997dcb36b5bacf670fb237da0529d0e2869
+ipindiaservices.gov.in,https://ipindiaservices.gov.in/,200,True,HTTP 200,90.0,True,121.1,0.19,True,100.0,False,False,legacy_asp_net,False,71.4,1873,4357b47338cae0a2bb0f9a5b21e16678405cb9d9cc90955421f5f00d745ba0ce
+ipindia.gov.in,https://ipindia.gov.in/,200,True,HTTP 200,95.0,True,422.2,6.87,True,100.0,True,True,legacy_asp_net,False,68.5,957683,cdd63210eea1ac48de512e619fd9b273bb3066abcec116f6ba7c91d58c767082
+irctc.co.in,https://www.irctc.co.in/nget/,403,False,HTTP 403,,,355.7,,,,,,,,,,
+iob.in,https://www.iob.bank.in/en/,200,True,HTTP 200,90.0,True,1042.8,7.67,True,100.0,False,True,modern_spa,True,62.0,938461,f34ad5b8c556a8d9633198a34250892ce1ab0153514a7adad6b6df6ae49d6bd0
+irdai.gov.in,https://irdai.gov.in/,200,True,HTTP 200,97.0,True,268.2,2.81,True,90.0,False,True,custom_dynamic_cms,True,73.2,369572,bab889d634875421d2012b046e9e7aea7f14fa2016bc6db9fafdfad410a58d4f
+ireps.gov.in,https://ireps.gov.in/,200,True,HTTP 200,97.8,True,375.4,1.3,True,100.0,True,True,custom_dynamic_cms,True,90.4,113828,f5100ba09f34728f147f522ab83bbca0107d5165dcf35b22c77c5fae43530d71
+iwu.epfindia.gov.in,https://iwu.epfindia.gov.in/,404,False,HTTP 404,,,285.2,,,,,,,,,,
+jaipurmc.org,https://jaipurmc.org/,200,True,HTTP 200,76.9,True,228.9,1.91,True,70.0,False,True,legacy_asp_net,True,64.8,240004,b47e48ff531d604d4097c0e4e2f9859f89fc34f50ce5c1d7c32ccb6eb9b8b8e8
+itbpolice.nic.in,https://www.itbp.mha.gov.in/,200,True,HTTP 200,94.6,True,611.7,2.15,True,100.0,True,True,s3waas_drupal,True,91.9,189959,21d30ada70e2e40faf2909d2f017b68356cb277bbdafdb839b7f88a20bdd3935
+isro.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+jalshakti-dowr.gov.in,https://www.jalshakti-dowr.gov.in/,200,True,HTTP 200,95.0,False,335.2,0.55,True,100.0,False,True,modern_spa,False,76.8,7558,f94883d7277ceb7f0a36d109ce79f9186ecb9b2b7891230ca22a950ed45cbbf4
+jamabandi.punjab.gov.in,https://jamabandi.punjab.gov.in/,200,True,HTTP 200,90.0,True,306.7,0.72,True,100.0,False,True,legacy_asp_net,True,79.8,40295,f2d0f3e62561902301c84521c70f3e2dc425d61d407282e3a9428c916a0c38c1
+iicb.res.in,,,False,Timeout,,,,,,,,,,,,,
+jeemain.nta.ac.in,https://jeemain.nta.ac.in/,502,False,HTTP 502,,,71.4,,,,,,,,,,
+jharbhoomi.jharkhand.gov.in,https://jharbhoomi.jharkhand.gov.in/,200,True,HTTP 200,74.4,True,453.8,1.06,True,70.0,False,False,legacy_asp_net,False,56.6,57853,b522c1e45f862b208703883bb8514273a08b746aa026ad4d8e2cb966fd792ed6
+jansunwai.up.nic.in,https://jansunwai.up.nic.in/,200,True,HTTP 200,92.2,True,1366.1,2.41,True,90.0,False,True,custom_dynamic_cms,True,72.9,54896,f7736d4a7f32c2f92275c596f7d0f62cfeb54698efeae610c6f76a2bef0841ee
+jharkhand.gov.in,https://jharkhand.gov.in/,200,True,HTTP 200,77.7,True,500.9,2.54,True,60.0,False,True,legacy_asp_net,False,55.7,274917,78fa0659fd69e8d9934176b6d89822dc86d76f4e8c5fe692d90b98c20f8b0418
+jharkhandtenders.gov.in,https://jharkhandtenders.gov.in/,200,True,HTTP 200,90.0,False,252.8,0.38,True,100.0,False,False,custom_dynamic_cms,False,70.9,164,bb253183b3aefea8f4f38821e81050d17b2664a71cd766ff7f14c055d7bd434b
+jharkhandhighcourt.nic.in,https://jharkhandhighcourt.nic.in/,200,True,HTTP 200,98.6,True,951.6,7.45,True,100.0,True,True,custom_dynamic_cms,False,69.6,924485,8d5e226ce734c290e2a993517e04209d1c796e5dd7461572944882ce89ae56cc
+iirs.gov.in,,,False,Timeout,,,,,,,,,,,,,
+iitbbs.ac.in,http://iitbbs.ac.in/,403,False,HTTP 403,,,25535.1,,,,,,,,,,
+jkgrievance.jk.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+jaljeevanmission.gov.in,https://jaljeevanmission.gov.in/,200,True,HTTP 200,98.9,True,8251.2,14.08,True,70.0,False,True,drupal,False,52.2,261056,3820e578552c6807d7efb41eb6fce6dea7ec2cee7141c665ae58aca55fb28ad5
+jipmer.edu.in,https://jipmer.edu.in/,200,True,HTTP 200,86.0,True,5374.6,8.95,True,35.0,False,True,s3waas_drupal,True,49.5,136501,235033f3a9ac1279aabab2430563d2122d147290747b9b50bb1ce91293b7a482
+jktenders.gov.in,https://jktenders.gov.in/,200,True,HTTP 200,90.0,False,244.1,0.37,True,100.0,False,False,custom_dynamic_cms,False,70.9,163,aa115bc9fe17b89cc60512a58d993178ace69305325fa71bbf938758173d281c
+jmi.ac.in,https://jmi.ac.in/,200,True,HTTP 200,100.0,True,677.1,1.82,True,25.0,False,True,custom_dynamic_cms,True,60.8,123932,f4bfdfe1d44bb7ac81f9b56851e1f7bc69fdcccb58a5446b4c38e48b9576acab
+iitdh.ac.in,https://iitdh.ac.in/,200,True,HTTP 200,69.0,True,27088.0,42.6,True,60.0,False,True,drupal,False,40.7,302692,50bb62566c760fdbb95fe3d56097128385774b7d16c3f5073a01bc7b11667666
+joinindianarmy.nic.in,https://joinindianarmy.nic.in/Authentication.aspx,200,True,HTTP 200,95.0,True,231.4,0.42,True,100.0,False,False,legacy_asp_net,True,77.2,11148,a3daad3ad43a0184ac2e47a82aadeac0a9d50cdbedda729f8a69a6e7aadc13c6
+jnu.ac.in,https://jnu.ac.in/,200,True,HTTP 200,98.4,True,366.0,1.4,True,100.0,False,True,drupal,True,80.3,131183,574b69990cc23d9e8fcc8d5016cbe271fea13dc7276f69da30a3af5f736aee6a
+joinindiannavy.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+josaa.nic.in,https://josaa.nic.in/,200,True,HTTP 200,100.0,True,349.9,1.13,True,100.0,False,True,s3waas_drupal,True,86.6,92201,e76ec5e125d4c2bd63509ec1646d32a0605433eb094da86cabaf1ee683c90c0d
+jpsc.gov.in,https://jpsc.gov.in/,200,True,HTTP 200,79.3,True,811.7,1.44,True,100.0,False,False,custom_dynamic_cms,True,69.5,34835,2c6d48b9e9978f3cabf03b1802000ef234b4488f57dda35209f79b870a05bc5c
+karnatakahiighcourt.kar.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+karnataka.gov.in,https://karnataka.gov.in/,200,True,HTTP 200,84.4,True,1168.4,3.8,True,100.0,True,True,wordpress,True,78.9,314531,0d1ae31ea5bbce0e279e816c6748021d606a6b5b921d33ffcbfbb81d2780354a
+imd.gov.in,,,False,Timeout,,,,,,,,,,,,,
+indiaculture.gov.in,,,False,Timeout,,,,,,,,,,,,,
+jharsewa.jharkhand.gov.in,https://jharsewa.jharkhand.gov.in/,200,True,HTTP 200,75.8,True,10543.3,16.53,True,100.0,False,True,custom_dynamic_cms,True,57.7,109845,69d70827c68f396e66d380bff89119f29d34777cb70fb61131a2b08de4ef14b8
+kmc.up.nic.in,https://kmc.up.nic.in/,200,True,HTTP 200,76.7,True,301.8,0.75,True,100.0,False,True,legacy_asp_net,True,75.8,45215,51727e6f1fd96ef0e2d315b06f8c2f9e20b73746fcb65604579ccad9ce5c514f
+kmcgov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+kochicity.lsgkerala.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+kppp.karnataka.gov.in,https://kppp.karnataka.gov.in/,200,True,HTTP 200,95.0,True,128.4,0.26,True,90.0,False,True,custom_dynamic_cms,False,75.2,9707,3741fa26c12cf4c60afa9c919eca493f810297e1f98b84f3c82f3f914e474a64
+keralapolice.gov.in,https://keralapolice.gov.in/,200,True,HTTP 200,83.8,False,2318.4,5.95,True,80.0,False,True,custom_dynamic_cms,True,57.3,379605,cbf5ff2c5de2e1a22ccfadb18e15151cc8e74c3552d32f182b0ca1e533e57f19
+indiancoastguard.gov.in,,,False,Timeout,,,,,,,,,,,,,
+indiannavy.nic.in,,,False,Timeout,,,,,,,,,,,,,
+ksb.gov.in,https://ksb.gov.in/,200,True,HTTP 200,100.0,True,499.2,1.2,True,85.0,True,True,legacy_asp_net,True,87.7,69310,6126fcbcd512e4432f5dc1cdadef9a3c1b8a57cdbe126a9252eb05489d532644
+labour.gov.in,https://www.labour.gov.in/,200,True,HTTP 200,95.0,False,288.2,0.49,True,100.0,False,True,modern_spa,False,77.0,8114,c84bcdef0944949ff09b5b3361511eadf19519b23a7db29d0bd3ee9d2e4fc3fa
+ladakh.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+ksp.karnataka.gov.in,https://ksp.karnataka.gov.in/,200,True,HTTP 200,63.0,True,540.5,2.79,True,70.0,True,True,legacy_asp_net,True,68.0,304478,439892f17e49f5a8fed0ff64802bb077037d155fc07c05fbd837de3078061224
+kvsangathan.nic.in,https://kvs.gov.in,200,True,HTTP 200,82.2,True,637.6,2.53,True,75.0,True,True,s3waas_drupal,True,80.8,242412,d925ad1820d7a96da1f3b09992a0512fd1693c38b0a597ace5b662ba05f3c1c2
+lakshadweep.gov.in,https://lakshadweep.gov.in/,200,True,HTTP 200,87.0,True,309.5,1.8,True,100.0,True,True,s3waas_drupal,True,90.7,205213,ce9e4b3da83e6001e0ca819f61032ebfff3b21a87e36e70e184a2d2942b776fb
+landrecords.karnataka.gov.in,https://landrecords.karnataka.gov.in/,200,True,HTTP 200,94.6,True,211.6,0.74,True,35.0,True,True,legacy_asp_net,False,69.9,65272,e0679d091e0e268ae9ca6013e02ae81bc8ffe069909e341a6afe9903c2e6033e
+licindia.in,https://licindia.in/,200,True,HTTP 200,89.7,True,135.5,2.36,True,100.0,True,True,modern_spa,True,84.8,331178,a0b88a6f4362f3ce9c6504a774ed526e609f0c9698489372f5a6cf891222e27e
+lawmin.gov.in,https://www.lawmin.gov.in/,200,True,HTTP 200,95.0,False,422.0,0.69,True,100.0,False,True,modern_spa,False,76.4,8112,f9ea5af8081b8173400f924752145a3df3ffa75f3dbf803833dee2709643e1a2
+lpsc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+lrde.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+madrashighcourt.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+jkhighcourt.nic.in,https://jkhighcourt.nic.in/,200,True,HTTP 200,76.1,True,9991.5,16.1,True,100.0,False,True,legacy_asp_net,True,57.8,170296,6e9e371a8510919b1ab1739be363763acbb2c7ceba75f6a984661e97cc517418
+lmc.up.nic.in,https://lmc.up.nic.in/,200,True,HTTP 200,70.0,True,459.3,1.18,True,100.0,False,True,legacy_asp_net,True,72.5,76057,88deb75acccedaca0ac4c8f174b8fc8556346b0d0b2ad5b0dba86de4adf8e6f6
+mahapolice.gov.in,https://mahapolice.gov.in/,200,True,HTTP 200,72.3,True,226.6,2.01,True,80.0,False,True,legacy_asp_net,True,65.7,255961,c3884e7a53f5a5bde07c004d1b84c1ed85f229ae9f43a601fd490db504d93a2f
+maharashtra.gov.in,https://maharashtra.gov.in/,200,True,HTTP 200,84.1,False,309.8,4.24,True,100.0,False,True,custom_dynamic_cms,False,62.5,579637,d77e735838472581ccfc3d7b45e2f18cc3c274ee35c03e4c71f74a9bb78eac6c
+mahatenders.gov.in,https://mahatenders.gov.in/,200,True,HTTP 200,90.0,False,313.9,0.47,True,100.0,False,False,custom_dynamic_cms,False,70.6,113,81c0f389cbcec6be9ebc2ae651844c7b4c3f03950eb41aceaa596964cb2b831d
+kgmu.org,https://kgmu.org/,200,True,HTTP 200,81.8,True,3580.9,6.3,True,35.0,False,True,custom_dynamic_cms,True,44.4,143370,25a265bcd44a71c085d3b6298096677ab0aa9a11682f4bf58a7d42521ad29b7f
+mca.gov.in,https://www.mca.gov.in/,403,False,HTTP 403,,,74.0,,,,,,,,,,
+manipur.gov.in,https://manipur.gov.in/,200,True,HTTP 200,82.7,True,447.9,1.19,True,100.0,False,True,wordpress,True,76.2,79307,74350d2339a8776d646360b7d3b61ee8afdb2c2e93c9232aa8d5e18c153281dc
+mcc.nic.in,https://mcc.nic.in/,200,True,HTTP 200,100.0,True,179.4,0.8,True,100.0,False,True,s3waas_drupal,True,87.6,81457,a2d6bb4542934823b67a7bb35b3d3ee04569dbf9e613c16fd46363bcf4e6abb5
+mcdonline.nic.in,https://mcdonline.nic.in/,200,True,HTTP 200,90.0,False,238.6,0.36,True,100.0,False,False,custom_dynamic_cms,False,70.9,95,d9a7b0577147fbe1636b46e111d46b94404867693af0961421039720d3ef1aa7
+mea.gov.in,https://www.mea.gov.in:443/,403,False,HTTP 403,,,221.3,,,,,,,,,,
+meebhoomi.ap.gov.in,https://meebhoomi.ap.gov.in/,200,True,HTTP 200,87.1,True,197.1,0.84,True,100.0,False,True,custom_dynamic_cms,False,73.6,83516,b1a3b4433c7e4a8c13fe79c87e147acb597307ae0c711ceca7d2c1a67b8bbbb7
+meeseva.telangana.gov.in,https://meeseva.telangana.gov.in/meeseva/,200,True,HTTP 200,84.6,True,206.3,0.45,True,20.0,True,True,custom_dynamic_cms,True,69.0,21445,d4204e03be189028546a7d4becf42aba39cf49e8de3564f833b1a3b31e821031
+meghalaya.gov.in,https://meghalaya.gov.in/,200,True,HTTP 200,100.0,True,311.9,0.86,True,100.0,False,True,drupal,True,82.4,60573,a875fd105019ac4019cd7e58c6e03d8cb43405db1a5ddde4143cd01bb3d5ada3
+indianairforce.nic.in,https://indianairforce.nic.in/,200,True,HTTP 200,95.0,True,29793.0,226.92,True,90.0,False,True,custom_dynamic_cms,True,61.0,27990332,144eb612d01b34669f75dee560329e54417337cb600b4ecaec5f33fb16e91fc9
+mcchandigarh.gov.in,https://mcchandigarh.gov.in/,200,True,HTTP 200,68.2,True,1552.4,3.09,True,90.0,False,True,legacy_asp_net,True,63.7,116973,1af9619c0a22172784fadfeabf72dfe0abb8a0938639ef704944eb16133cf5ae
+meghalayahighcourt.nic.in,https://meghalayahighcourt.nic.in/,200,True,HTTP 200,92.8,True,459.1,1.22,True,100.0,False,True,drupal,True,79.2,81737,f18ce9adef745d5e5374bdfd55c23e12f131eca5e646e9a0c6fd032c4320d918
+meity.gov.in,https://www.meity.gov.in/,200,True,HTTP 200,95.0,False,449.2,0.7,True,100.0,False,True,modern_spa,False,76.4,3292,9353e6bbd2043bd961aac327df7fdc5a1c125af801bc0115538e51a018fd54db
+mines.gov.in,https://mines.gov.in/webportal/,200,True,HTTP 200,95.0,True,214.7,0.46,True,60.0,False,True,custom_dynamic_cms,False,67.1,21063,c445a18b08d89429b2bdfc5c9d64eb930619d6d1d41a8eeb47ccfc8263de2d95
+mis.epfindia.gov.in,https://mis.epfindia.gov.in/,404,False,HTTP 404,,,200.8,,,,,,,,,,
+mha.gov.in,https://xn--i1b5bzbybhfo5c8b4bxh.xn--11b7cb3a6a.xn--h2brj9c/,200,True,HTTP 200,100.0,True,562.0,1.49,True,60.0,False,True,wordpress,True,70.5,98807,db0478b42153977169c0bf7e27ece96ac9bd51706dd94554685e609d6aee872a
+minorityaffairs.gov.in,https://minorityaffairs.gov.in/,200,True,HTTP 200,90.7,True,425.4,1.41,True,100.0,True,True,custom_dynamic_cms,True,88.0,118898,8453bb1f989e73d317d7c76f3badc344d264184db587e14c12e9e9ca4480a221
+mizoram.gov.in,https://mizoram.gov.in/,200,True,HTTP 200,95.0,False,178.9,0.28,True,60.0,False,True,custom_dynamic_cms,False,67.7,1402,60eeeed9283a136f0bd3026d15caf4d1ff326b697f5339f03bbec28ea4e35b4d
+mmc.tn.gov.in,https://mmc.tn.gov.in/en/,200,True,HTTP 200,78.5,True,367.8,3.41,True,45.0,True,True,custom_dynamic_cms,False,59.6,438899,d2331a35296043165fef250b3b8c8669981ae7163d417da9b036be957caf482d
+mnre.gov.in,https://mnre.gov.in/,200,True,HTTP 200,95.0,False,281.4,0.45,True,100.0,False,True,modern_spa,False,77.2,4076,7d571f2c146e66698ff091f0abaa7c2f67fe6810416021e806bd1dd6fb7577b3
+mnnit.ac.in,https://mnnit.ac.in/,200,True,HTTP 200,73.8,True,594.5,1.73,True,0.0,False,True,custom_dynamic_cms,True,46.9,128317,c558fd61fd94cf7b6d1c2317d5e9e0e4c1d9f324d8df621196edbba727481c27
+mnit.ac.in,https://mnit.ac.in/,200,True,HTTP 200,94.0,True,726.8,2.98,True,35.0,False,True,custom_dynamic_cms,True,58.0,290372,6d15f66766f3b21a0b37eae4d1ef577b48812079256d9168fc3f4929e88e0b87
+mod.gov.in,https://www.mod.gov.in/,200,True,HTTP 200,95.0,False,400.9,0.65,True,100.0,False,True,modern_spa,False,76.5,8114,744583a06fc5664dbba85b326d6d40316b95ef905db8cfe138b2de788c049904
+mohfw.gov.in,https://www.mohfw.gov.in/,200,True,HTTP 200,95.0,False,384.5,0.62,True,100.0,False,True,modern_spa,False,76.6,6912,7e11a5f4077bab24654daa9fe95d7190922f2c02d3a9470a668b9e4b78a701c1
+mohua.gov.in,https://www.mohua.gov.in/,200,True,HTTP 200,95.0,False,251.6,0.43,True,100.0,False,True,modern_spa,False,77.2,8344,a70c76245fc7ad2aa3eb51e27881370705779f3d90cfd843accc2c85f7057757
+moef.gov.in,https://moef.gov.in/,200,True,HTTP 200,85.0,False,1206.8,6.44,True,70.0,True,True,custom_dynamic_cms,True,63.7,711698,5e80a254efd56def73117351593a232c3ba1654e8e38c2a5148599c6558fad68
+mofpi.gov.in,https://mofpi.gov.in/,200,True,HTTP 200,96.7,True,1292.7,3.92,True,100.0,False,True,legacy_asp_net,True,72.2,304157,95161d355358189d6d9dc1499a44d0bbee88bc4ef8daee540ef5f4ad7c7a8121
+morth.nic.in,http://morth.gov.in/,200,True,HTTP 200,95.0,True,287.0,0.7,False,75.0,False,True,custom_dynamic_cms,False,70.2,40934,65b1cb775cbd290d39f0f8ab991441dba0b42be27c9d4913e2d176f6ffc3e99f
+mospi.gov.in,https://mospi.gov.in/,200,True,HTTP 200,95.0,False,211.4,0.33,True,100.0,False,True,modern_spa,False,77.5,2644,bafae051e988f70f69831cc8ba57e0ddb0aa8e936a5a4e687d4807aea1ed9cbf
+mopng.gov.in,https://mopng.gov.in/hi,200,True,HTTP 200,87.9,True,765.2,3.42,True,0.0,True,True,legacy_asp_net,True,56.1,348801,1178a77179e1a4b2ac27fc0151d301cefe3afe7e24f689c330ff0bc2151cbfb8
+mosdac.gov.in,https://mosdac.gov.in/,200,True,HTTP 200,88.5,True,834.0,1.67,True,90.0,True,True,drupal,True,84.0,63623,0c707c5a4bd684ec8543637d11194fb62e25f2766bba54ac953683b7fda038f5
+mpa.gov.in,https://www.mpa.gov.in/,200,True,HTTP 200,95.0,False,447.4,0.7,True,100.0,False,True,modern_spa,False,76.4,3847,5ea8a1a95fa6992403edbd1ca40787adca088ae92ef7724620cdf602e775159e
+mpedistrict.gov.in,https://mpedistrict.gov.in/,200,True,HTTP 200,95.0,False,309.8,0.47,True,45.0,False,False,legacy_asp_net,False,58.3,1331,edb13b260bdd6a9b17cfe3453f1918e50aa47e031b53f3bc1821fa5815802641
+mphc.gov.in,https://mphc.gov.in/,200,True,HTTP 200,90.0,True,693.9,2.01,True,0.0,False,True,custom_dynamic_cms,False,46.0,148277,48f219df5e7a030de13b616c945f65d4442af104a907e9239b2c4357ae9f1ddb
+jamabandi.nic.in,,,False,Timeout,,,,,,,,,,,,,
+mppsc.mp.gov.in,https://mppsc.mp.gov.in/,200,True,HTTP 200,78.9,True,426.5,1.01,True,90.0,True,True,legacy_asp_net,True,83.1,57305,cf648431f54a34e8f8881a98972fb1ca5b5e88c994a2bb4ff412c5c3aa13c3a7
+mpsc.gov.in,https://mpsc.gov.in/,200,True,HTTP 200,95.0,False,155.7,0.26,True,90.0,False,True,custom_dynamic_cms,False,75.2,4363,8e3ace2edb83d802632b99e87c7a66596efa94af7f90f7140dfea7aa55f677c5
+mptenders.gov.in,https://mptenders.gov.in/,200,True,HTTP 200,90.0,False,282.9,0.43,True,100.0,False,False,custom_dynamic_cms,False,70.7,110,51695440464798a6d1a45b1820dd9cd977e6cec636be0ff799bd146caf150a53
+msde.gov.in,https://www.msde.gov.in/,200,True,HTTP 200,95.0,False,433.2,0.7,True,100.0,False,True,modern_spa,False,76.4,7230,ba6102278f2a3004487aa6001fb1ab43f92a2fb9c0b9abd87704015c8ddfcd9f
+kerala.gov.in,https://kerala.gov.in/,200,True,HTTP 200,88.9,False,15643.1,24.61,True,100.0,True,True,s3waas_drupal,False,71.7,175734,f4196679c0937d0f1bf08290fe65778af4a2da3742654b0755eca45f1c92e615
+msme.gov.in,https://www.msme.gov.in/,200,True,HTTP 200,95.0,False,445.5,0.72,True,100.0,False,True,modern_spa,False,76.3,8345,1d397109de3d0da8910397b8d7ca89c1851b9817fc62591a0b097d496f505c63
+keralapsc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+mygov.in,https://www.mygov.in/,200,True,HTTP 200,93.3,True,304.8,1.88,True,100.0,False,True,drupal,True,77.3,218901,607b5ca078f335693b9151519802681c6ca2bc3120c2428b3169daaca16152a4
+mu.ac.in,https://mu.ac.in/,200,True,HTTP 200,87.5,True,2239.5,5.63,True,0.0,False,True,legacy_asp_net,True,39.4,349073,6c9894e022f75c5c8746867eea7556412e016699aad76ac27b9033c4fdd4efd6
+nabard.org,https://nabard.org/,404,False,HTTP 404,,,246.3,,,,,,,,,,
+myscheme.gov.in,https://www.myscheme.gov.in:443/,200,True,HTTP 200,95.0,True,702.8,1.59,True,100.0,False,True,modern_spa,False,73.7,82249,085e5acab024c2694e5bce895a6ce411fc889b33c02f6ed7db51ca682c71e1d6
+jk.gov.in,,,False,Timeout,,,,,,,,,,,,,
+nagaland.gov.in,https://nagaland.gov.in/,200,True,HTTP 200,85.0,True,396.3,1.17,True,80.0,False,True,custom_dynamic_cms,True,72.0,88195,7be6c2b24888578519ffbbba4577bdd330b283d6c7939260946949b4a7e21139
+nagarnigamagra.com,https://nagarnigamagra.com/,200,True,HTTP 200,82.5,True,537.6,1.65,True,0.0,False,True,wordpress,True,49.8,130334,e2ed4f4d5217ea21a1b3523570c28d64e88064274f0933e335ff3d2cbd017126
+nad.gov.in,https://nad.gov.in/,200,True,HTTP 200,81.6,True,1121.7,1.9,True,100.0,False,True,custom_dynamic_cms,True,73.8,33241,64c9f04e8d452ec5dd936d0c38e43cac655d596dc00ec716968c71990e2c03ad
+nashikcorporation.in,https://nashikcorporation.in/,200,True,HTTP 200,90.0,False,209.9,0.32,True,0.0,False,False,custom_dynamic_cms,False,46.0,114,6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023
+narcoticsindia.nic.in,https://ncb.mha.gov.in,200,True,HTTP 200,95.0,True,522.0,0.85,True,100.0,False,True,modern_spa,True,81.0,10429,ca6e924fba72e46070ed1535c4dafddeeecd29c7b3c36a8c362bacced938bd24
+ncdrc.nic.in,https://ncdrc.nic.in/,200,True,HTTP 200,95.0,False,255.8,0.39,True,100.0,False,True,custom_dynamic_cms,False,77.3,687,97c0b665de712f73322640ab8c229d178b1747b6def7cd6c1554d425d3b55465
+ncert.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+natboard.edu.in,https://natboard.edu.in/,403,False,HTTP 403,,,568.9,,,,,,,,,,
+ncl-india.org,,,False,DNS or connection failure,,,,,,,,,,,,,
+nclat.nic.in,https://nclat.nic.in/,200,True,HTTP 200,100.0,True,343.4,1.03,True,100.0,True,True,drupal,True,91.9,78532,d7e6419ac48451192d96d96754b75af0cf3d3e5852808ee89bef94096a8cc65d
+nclt.gov.in,https://nclt.gov.in/,200,True,HTTP 200,79.5,True,327.0,1.04,True,100.0,False,True,drupal,True,75.7,84401,58b92f1c1939f81813891148b083a7084bdf69a38e51195d205ac4a6ddbbdfda
+jkpolice.gov.in,,,False,Timeout,,,,,,,,,,,,,
+ncrb.gov.in,https://www.ncrb.mha.gov.in/,200,True,HTTP 200,93.3,True,628.2,1.8,True,100.0,True,True,custom_dynamic_cms,True,87.6,131664,9bf9b30656c95d090d15b9239e1131cb4a10b8cedf3e58892a256ce8e5152409
+navodaya.gov.in,https://navodaya.gov.in/nvs/,200,True,HTTP 200,95.0,False,3741.6,5.62,True,100.0,False,True,custom_dynamic_cms,False,61.6,884,41cfcd0594d03e1a6e9183a37874f907b3e2bfbf16199da86f0713aa9dad621e
+ncs.gov.in,https://ncs.gov.in/,200,True,HTTP 200,76.2,True,210.6,2.28,True,0.0,False,True,legacy_asp_net,True,46.0,302397,d6cab22d97913638a53e4dcb4d782c21b6485abc4a98f609dc0178e3c12d9801
+ncpor.res.in,https://ncpor.res.in/,200,True,HTTP 200,78.6,True,2713.8,4.3,True,20.0,False,False,custom_dynamic_cms,False,35.7,35015,207902533a4810edb6de449093156a04e87ed7eaa59e06daaf4cd56115d55689
+neet.nta.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nests.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+neeri.res.in,https://neeri.res.in/,200,True,HTTP 200,90.4,True,421.8,3.78,True,100.0,True,True,custom_dynamic_cms,False,75.8,482690,3e6703cd91b66eebfd84ff106d57031b445925c1cb32d52991df7bfe9b12c88d
+nfc.gov.in,https://nfc.gov.in/,200,True,HTTP 200,100.0,True,541.2,1.23,True,45.0,False,True,custom_dynamic_cms,False,62.6,64538,79f2543badad3d7d34df84675f2a96d75a222c556b6a2724a03bec02cdc94de0
+nhai.gov.in,https://nhai.gov.in/,200,True,HTTP 200,95.0,True,224.0,0.37,True,100.0,False,True,custom_dynamic_cms,False,77.4,4528,032b4183e44012796e2c46012420684ba89700624fe31107283f9277814f9bb3
+nhm.gov.in,https://nhm.gov.in/,200,True,HTTP 200,77.6,True,396.1,1.88,True,90.0,False,True,custom_dynamic_cms,False,65.1,197389,8ee75a40e52b87866b9dfff81d33eb9ed938fb3ee304f2f07d9604f5608c6ea1
+nhrc.nic.in,https://nhrc.nic.in/,200,True,HTTP 200,79.6,True,1002.3,4.57,True,100.0,False,True,legacy_asp_net,True,65.2,470926,7199d862eb208bbeaf7e76b8f0106828b61602a4b3a0a58e3583902db17b2872
+nhb.org.in,https://www.nhb.org.in/,200,True,HTTP 200,88.0,True,1862.6,3.79,True,100.0,True,True,wordpress,True,80.0,153198,fd0ee1d5bd5d428caf0679e8ab56493ae6cdb051a0e1868e4fecb40d8f30db89
+nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nia.gov.in,https://nia.mha.gov.in/,200,True,HTTP 200,99.6,True,1564.6,3.15,True,100.0,True,True,drupal,True,85.4,122770,6b55b8c3787c87de02745ad537a12a600280406be9721def28c291aea470c808
+kpsc.kar.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nin.res.in,https://nin.res.in/,200,True,HTTP 200,94.4,False,125.7,0.74,True,70.0,False,True,custom_dynamic_cms,True,73.6,84233,2fe45676e186b4ea715b4ddee2ff1688bfefdd8f3587adb23cfa40519f8ef9b4
+nios.ac.in,https://nios.ac.in/,200,True,HTTP 200,93.2,True,286.0,1.29,True,0.0,False,False,legacy_asp_net,True,49.1,132622,0adb68666372c113e6195eeb53d9907b9fda64eb09357d9e0a14c91f1b7b5193
+nitc.ac.in,https://nitc.ac.in/,200,True,HTTP 200,76.2,True,212.9,2.13,True,70.0,False,True,custom_dynamic_cms,True,64.0,277591,00d606cb30db9629c1e9d7250cfdd4a6fc287b952159a3fe2cfdd6a1480866b0
+lhmc-hosp.gov.in,,,False,Timeout,,,,,,,,,,,,,
+nitdgp.ac.in,https://nitdgp.ac.in/,200,True,HTTP 200,86.1,False,379.4,0.96,True,90.0,True,True,custom_dynamic_cms,True,85.5,59775,b4b6375f96f7ccfc5e35082db3519ba7a659b09231babaae9e13c3a9787f6958
+maduraicorporation.co.in,,,False,Timeout,,,,,,,,,,,,,
+niti.gov.in,https://www.niti.gov.in/,200,True,HTTP 200,100.0,True,260.8,1.2,True,100.0,False,True,drupal,True,81.4,124465,1701ea007c04ca6bbc5cccc1d4f33cb3b9f12412beac6493da9b8ee2ba645563
+nitj.ac.in,https://nitj.ac.in/,200,True,HTTP 200,88.3,True,236.0,0.89,True,0.0,False,True,custom_dynamic_cms,False,48.8,81622,fb01f7188e8380fc3edfb8aa0493cad73667c0b5b6bb6ed8de8116266777032f
+nitjsr.ac.in,https://nitjsr.ac.in/,200,True,HTTP 200,95.0,False,206.4,0.32,True,100.0,False,True,custom_dynamic_cms,False,77.5,1803,f4b13935be1a0880b08b38aa9a53f59639dc61f2b80a03f375b8f89a9de082b9
+nitp.ac.in,https://nitp.ac.in/,200,True,HTTP 200,93.9,False,185.5,1.42,True,100.0,False,True,legacy_asp_net,True,78.9,174689,32e2e91aac5d8a71d02c2d32d9a0e4fda6f6841c2122ffc1e34f5c73f2ccda3f
+makeinindiadefence.gov.in,,,False,Timeout,,,,,,,,,,,,,
+nitrkl.ac.in,https://www.nitrkl.ac.in/,200,True,HTTP 200,92.8,True,473.1,1.5,True,70.0,False,True,legacy_asp_net,True,70.8,121114,37b64e317b4b363a0b210040b7f0b9ab525bac0e8eec434749588dbb1c01d111
+nitk.ac.in,https://www.nitk.ac.in/,200,True,HTTP 200,94.7,True,1007.0,15.4,True,30.0,False,True,custom_dynamic_cms,True,45.9,2133723,7df8df88f4e6861453e57aa917d95c11c308e9418203070ab30ae00d1d086cec
+nits.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nitrr.ac.in,https://nitrr.ac.in/,200,True,HTTP 200,75.5,True,169.1,0.83,True,0.0,False,True,legacy_asp_net,False,45.2,88558,97557889030baf1db6070b5bfaf589cbc7371c1763b563e52f0bd824bc6e372c
+nitw.ac.in,https://nitw.ac.in/,200,True,HTTP 200,95.0,True,131.2,0.24,True,0.0,False,True,modern_spa,False,52.8,6763,37972a090ef89d65fc940a9f11b31d9b0813f9009f47cea100c8422982f280c6
+niv.co.in,https://niv.co.in/,200,True,HTTP 200,100.0,True,107.4,0.41,True,30.0,False,True,wordpress,True,66.3,37829,5511512a4745ab36b21204ec6455a5d3f7bc80def668b29a62396e96bd348ac3
+nitt.edu,https://nitt.edu/home/,200,True,HTTP 200,95.4,True,481.6,1.16,True,45.0,True,True,custom_dynamic_cms,True,76.4,67353,691c4d1ca282039eea5cb06de335aebad882bc29d97470db8da93ca29ba93ced
+nith.ac.in,https://nith.ac.in/,200,True,HTTP 200,83.0,True,2145.8,4.98,True,20.0,False,True,custom_dynamic_cms,False,40.0,271192,9adce87cb599c08723000ead215c9b687581ef97cc99223452603516cb73c6f3
+nkn.gov.in,https://nkn.gov.in/,200,True,HTTP 200,94.7,True,421.1,1.22,True,100.0,True,True,custom_dynamic_cms,True,89.8,89813,b12b9ecceb97569b738e3a6c12023afc24519f1b88363d8bbdb97dc4077f8b8c
+nie.gov.in,https://nie.gov.in/,200,True,HTTP 200,78.7,True,6649.3,10.73,True,100.0,False,True,custom_dynamic_cms,False,53.6,115539,ec75ca0723d499d29770ce764dc3924ec5a874416de017c87132baf58f14b0de
+nmdc.co.in,https://www.nmdc.co.in/,200,True,HTTP 200,95.0,True,458.0,0.71,True,100.0,False,True,custom_dynamic_cms,False,76.4,3345,c1cee4c1a902f21f8bc80580418ce034fd73282a69093394b54c5e20a67f5209
+nmmc.gov.in,https://nmmc.gov.in/,200,True,HTTP 200,95.0,True,161.3,0.76,True,100.0,False,True,custom_dynamic_cms,True,81.2,78904,68014f0cd3c3c9268dd2e6d5f3ce62e2de75cdc8f4a7db2c54606803bfbdbd5a
+njdg.ecourts.gov.in,https://njdg.ecourts.gov.in/njdg_v3/,200,True,HTTP 200,91.2,True,1107.2,2.96,True,100.0,False,True,modern_spa,True,73.5,199168,cea52cbc5246a80b9dc54dc481eddc516d1e4b090204cd61ca72b719678aef46
+npcil.nic.in,https://npcil.nic.in/Content/Hindi/index.aspx,200,True,HTTP 200,78.6,True,569.7,1.66,True,100.0,False,True,legacy_asp_net,False,68.6,124106,f00ab4b68a1b59f3dace8cc9b52ac536099a27d019963bf5b2f52ebe7b03cd46
+nnvns.org.in,https://nnvns.org.in/nnvns/index.php?lang=en,200,True,HTTP 200,86.7,True,780.4,1.77,True,55.0,False,True,legacy_asp_net,True,64.5,91541,594739ad2256310c442f5d8dacf037a92094abb058226deb3532369c1c31206e
+nrsc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nrservices.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nsap.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nrega.nic.in,https://nrega.nic.in/,200,True,HTTP 200,90.0,False,245.6,0.37,True,0.0,False,False,custom_dynamic_cms,False,45.9,453,0bb659b4a1d6ce4024d65f4cf92b9d072a46db808f7f1c2c0125299cd29c0460
+nmcnagpur.gov.in,https://nmcnagpur.gov.in/,200,True,HTTP 200,98.5,True,1734.0,4.33,True,100.0,False,True,custom_dynamic_cms,True,71.6,266168,9dd6804e0f0f91547f8098fc1078278d00d6532634fbbc1315a7496534e5cd55
+nsilindia.co.in,https://www.nsilindia.co.in/,200,True,HTTP 200,75.9,True,194.3,0.53,True,35.0,False,True,custom_dynamic_cms,False,54.9,37356,8e8e2b22ffa9f4d49aaf6f77edf497d3433b3edf93c08892248ae3fe6ef86b2a
+ntes.indianrail.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nta.ac.in,https://nta.ac.in/,200,True,HTTP 200,63.2,True,163.6,4.99,True,45.0,False,True,s3waas_drupal,True,50.2,728394,5fec1605f616d2712931e1e8b99aa86ec0330359f3333b008f87a7986da58bda
+nvsbhopal.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsrochandigarh.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsrohyderabad.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsrojaipur.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsrolucknow.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsropatna.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsropune.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+nvsroshillong.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+odisha.gov.in,https://odisha.gov.in/,200,True,HTTP 200,95.0,True,512.9,2.01,True,60.0,True,True,drupal,True,77.5,190418,3bca808dae657733cd1a1915acaab33aab76bffc4ec6b08a81ca3b7e721c1a66
+nimhans.ac.in,https://www.nimhans.ac.in/,200,True,HTTP 200,90.9,True,8344.2,13.33,True,70.0,False,True,modern_spa,False,49.8,124424,5ce6926798042a65bc6c73aead4fedb2f118d37726c4598a40198bb167e59f3b
+ntpc.co.in,"https://validate.perfdrive.com/?ssa=dd78c890-37bb-41e3-a6c9-a555aff3d103&ssb=91397214045&ssc=https%3A%2F%2Fntpc.co.in%2F&ssi=d0a86e30-cs5n-4dbe-9ecd-14ef6ad99344&ssk=botmanager_support@radware.com&ssm=12308855348317039104079084592708&ssn=7073c1e1240239548e901f1e8f0e8b9e68d932e565bb-6729-471c-967cfb&sso=c87af246-2a0374ea4e74d244ae9c838be166e4909ed5247df4652519&ssp=30198769611794336193179439860127827&ssq=38197917769388773242077693075680981613877&ssr=MTM5Ljg0LjIyMy4yMjc=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/128.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwMjZhNDZlYjUtODczOC00OWVhLWJlZjctNTAxNjQxMmYyZmY2MS0xNzk0Mzc3NjkzNzA2MC0wMGQ3MTA3MGY4N2Q0Mzk4ZTFjMTAiLCJfX3V6bWYiOiI3ZjkwMDAzMmU1NjViYi02NzI5LTQ3MWMtOTI0Ni0yYTAzNzRlYTRlNzQxLTE3OTQzNzc2OTM3MDYwLTAwNWFkNTIwY2ZlMzNjOWFlYzAxMCIsInJkIjoibnRwYy5jby5pbiJ9",200,True,HTTP 200,87.5,False,1856.4,2.88,True,0.0,False,True,custom_dynamic_cms,False,42.6,15033,2d252f71f7ec69e2496e87b935e6a883da05a14e59f744bc6502b16cb35e86d5
+mp.gov.in,,,False,TLS error: ConnectionError,,,,,,,,,,,,,
+ongcindia.com,https://ongcindia.com/,200,True,HTTP 200,91.0,True,454.3,1.57,True,100.0,True,True,modern_spa,True,87.6,136389,b813f5ecc5c990d826986fa1a0ef52d122be04bacfd361ac870c9c8953fd9efb
+mpbhulekh.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+orissahighcourt.nic.in,https://orissahighcourt.nic.in/,200,True,HTTP 200,95.9,True,194.5,1.19,True,100.0,True,False,legacy_asp_net,True,85.2,138613,7278e9d6fca99cc1dfd237c058124c61364a5b38c9b70330f5bac1d90df2dbfd
+nplindia.org,https://www.nplindia.in/,200,True,HTTP 200,93.5,True,3709.5,7.97,True,100.0,True,True,wordpress,False,68.0,369302,327aa6b04e94003679342961c642072e7ec99b40f3615aa661512f056b29d678
+osmania.ac.in,https://osmania.ac.in/,200,True,HTTP 200,80.2,False,427.7,3.05,True,0.0,False,True,legacy_asp_net,True,44.9,369673,149d63f520b6307ef412ade7b2cf5f4c75822dcb1fe5ce49f50ddff0bfcbadb4
+opsc.gov.in,https://opsc.gov.in/Public/OPSC/Default.aspx,200,True,HTTP 200,100.0,True,994.0,1.78,True,20.0,False,True,legacy_asp_net,False,54.7,43976,ae29f8bbbd8f3749ead59b80940bb09b1e1e0669a750b61619856e2172961f48
+panchayat.gov.in,https://panchayat.gov.in/,200,True,HTTP 200,89.4,True,664.0,3.36,True,100.0,True,True,s3waas_drupal,True,86.7,362358,73752a894708e18498815a7824216bfdf35011c16567ab621deb80415a59f262
+oil-india.com,https://www.oil-india.com/,200,True,HTTP 200,100.0,True,1648.0,3.38,True,90.0,True,True,drupal,True,82.4,139961,94ebaf6f639b47fb0a8855e891dcc1079a4e15d4b104252ea75fce7de51c3b58
+parivahan.gov.in,https://parivahan.gov.in/,200,True,HTTP 200,100.0,True,635.3,2.88,True,100.0,True,True,drupal,False,81.4,296093,265463c39a2fee94ae5c3c20a755a5b5c70cb5756ed55cc4499f41aa92cf27fd
+mppolice.gov.in,,,False,Timeout,,,,,,,,,,,,,
+passbook.epfindia.gov.in,https://passbook.epfindia.gov.in/MemberPassBook/login,200,True,HTTP 200,85.3,False,515.4,0.96,True,70.0,False,True,custom_dynamic_cms,False,65.2,29471,7de0148d0b6d49cce8e49d2b82890cc776adaefdba246eaf34b2289c8caeb8de
+pgimer.edu.in,https://pgimer.edu.in/,200,True,HTTP 200,90.0,False,142.7,0.22,True,30.0,False,False,custom_dynamic_cms,False,53.8,446,a3051d771b8f190a3086cef1c8674df7920c26ac39099a256383d1aa74ecca01
+patnahighcourt.gov.in,https://patnahighcourt.gov.in/,200,True,HTTP 200,97.1,True,533.4,1.43,True,100.0,False,False,legacy_asp_net,False,69.8,97040,f695be43f4d15127286b56ab905b4b29467b6f66491129b756062e0a6af63471
+pmayg.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+pfrda.org.in,https://pfrda.org.in/,200,True,HTTP 200,100.0,True,399.6,4.56,True,100.0,True,True,modern_spa,False,76.3,608718,9411d4b6666ab1f4e16fb9de712cb92b15ce1df9ff535dba0e259520c95f8c74
+pmaymis.gov.in,https://pmaymis.gov.in/,200,True,HTTP 200,65.5,True,411.9,1.04,True,0.0,False,True,legacy_asp_net,True,46.5,64212,b7ef6230a34ee5ed89274d1f2f6b7ce8a02bcf6d460f1a89d86ce4bdcd7a44bd
+pmc.bihar.gov.in,https://pmc.bihar.gov.in/,200,True,HTTP 200,84.1,True,384.5,1.15,True,100.0,False,True,legacy_asp_net,True,76.8,87538,ce6773c6dde7faf66d153f22707660c4f77053f1aabf2c64a2531e5f587c8f28
+pmch.bihar.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+pmc.gov.in,https://www.pmc.gov.in,200,True,HTTP 200,95.0,False,2770.3,4.35,True,100.0,True,True,modern_spa,True,80.5,29501,13fbd3fe0df593bea20a75470b384b4193cc141a965e541e7f77c4f246a9f160
+myaadhaar.uidai.gov.in,,,False,Timeout,,,,,,,,,,,,,
+pmindia.gov.in,https://www.pmindia.gov.in/en/,200,True,HTTP 200,98.3,True,642.4,1.48,True,100.0,False,True,wordpress,False,75.0,78971,5325bb90651092a0401a48444031e44d6b34ff8292811c481b61a72e69a52896
+pmkisan.gov.in,https://pmkisan.gov.in/,200,True,HTTP 200,94.6,True,232.6,0.78,True,70.0,False,True,legacy_asp_net,True,73.5,66742,4e78a622c8a9b34e06c27974bb6e19fe4e257b6e60bd911499521a292c0504b1
+pmsym.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+persmin.gov.in,https://persmin.gov.in/,200,True,HTTP 200,90.4,True,5046.3,7.69,True,100.0,False,True,custom_dynamic_cms,True,62.1,18639,8ea8f79603c5d4b21ed876f8ac4d2e6e2dd3f1f9ba25e6d81b020664d38bac04
+police.rajasthan.gov.in,https://police.rajasthan.gov.in/,200,True,HTTP 200,95.0,True,323.6,0.84,True,50.0,False,True,custom_dynamic_cms,False,63.5,53826,8066a124cc2ea5dcd7b3b1ec2d26ec71207f476fbe38f437a91f5db1b12ddaf9
+pgportal.gov.in,https://pgportal.gov.in/,200,True,HTTP 200,91.0,True,5346.7,8.2,True,70.0,True,True,legacy_asp_net,True,64.8,28104,dd244a734e9d32931794d033450a332d9576fbe9e8e0d7452611af5b485f8a0f
+portal.mcgm.gov.in,https://portal.mcgm.gov.in:443/irj/portal/anonymous,200,True,HTTP 200,73.8,True,367.9,1.84,True,0.0,False,True,legacy_asp_net,True,46.6,198445,698d2eda1a4defbbd852016d68b6bb6c2e6c05d5195db6b2b616f9c092cc10df
+nciipc.gov.in,,,False,Timeout,,,,,,,,,,,,,
+powermin.gov.in,https://www.powermin.gov.in/,200,True,HTTP 200,95.0,False,594.7,0.95,True,100.0,False,True,modern_spa,False,75.7,8347,1819447d9403ea8a35ffabff561f4f82d40942a09c6c9fb1e0ea5a5fd7599605
+ppsc.gov.in,https://ppsc.gov.in/,200,True,HTTP 200,74.5,True,602.0,7.91,True,75.0,True,True,legacy_asp_net,False,56.1,1075919,ea5a80af7fe408265584c6de4a8382e2df6658cc8b8068a9cd2d8186b22fc6bb
+presidentofindia.nic.in,https://presidentofindia.nic.in/,200,True,HTTP 200,97.7,True,444.3,1.4,True,100.0,False,True,drupal,True,80.1,113012,b80afce01733347b6ad5242c9a60e7a634769930a8b9ce4690857a2b458f7c31
+pondiuni.edu.in,https://www.pondiuni.edu.in/,200,True,HTTP 200,81.0,True,4879.6,10.27,True,0.0,False,True,wordpress,True,34.3,453634,320b4b165fc2b353e2392421bc4dfa2e354bba1a11048aea797de37dc73281c6
+psc.cg.gov.in,https://psc.cg.gov.in/,200,True,HTTP 200,85.7,True,308.9,0.96,True,100.0,True,True,modern_spa,False,82.8,76110,ee7d3695ce338ac547d01228a433e82cd77e65dcc36fdda04cfb833b3593586b
+ndl.gov.in,,,False,Timeout,,,,,,,,,,,,,
+punjab.gov.in,,,False,TLS error: SSLError,,,,,,,,,,,,,
+punjabandsindbank.co.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+pnbindia.in,https://pnb.bank.in/,200,True,HTTP 200,99.9,True,7433.6,13.61,True,100.0,False,True,legacy_asp_net,True,65.0,377654,cba3e547efb5f906c625ea40305a7e3c8af4175a6b2fae13aa2d6e708dbf84fa
+psc.uk.gov.in,https://psc.uk.gov.in/,200,True,HTTP 200,68.8,True,1836.7,3.61,True,90.0,True,True,custom_dynamic_cms,True,72.3,131071,c7536bbdaf160fe54fe0acab73f3b53d4f56b565bdb3ea003f49a4f68a625ea1
+rac.gov.in,https://rac.gov.in/index.php?lang=en&id=0,200,True,HTTP 200,78.8,True,402.1,1.06,True,100.0,False,True,custom_dynamic_cms,True,75.5,69927,665a38fcad7eba91bdcd6b63dba76a04b559b775e947f14e42db0269df28a428
+railmadad.indianrailways.gov.in,https://railmadad.indianrailways.gov.in/madad/final/home.jsp,200,True,HTTP 200,92.5,True,436.5,1.03,True,100.0,True,True,custom_dynamic_cms,True,89.7,57861,1c94251ee00f7bdfb643e24857cec0e471df7ec047c7194a8cf812b0e4ddd3d6
+rajasthan.gov.in,https://rajasthan.gov.in/,200,True,HTTP 200,93.3,True,319.2,0.88,True,30.0,True,True,modern_spa,True,72.8,62387,ad9603b1cd7313c02dd19cee85e13e821a415bf70a195e86c3357a5f16715ff6
+rbi.org.in,https://rbi.org.in/,200,True,HTTP 200,100.0,True,897.3,2.35,True,70.0,True,True,legacy_asp_net,True,80.5,153858,1212d1db69973ae18784d515bd1fec33281d361898b0f5046365757d11ecf0a0
+nitrd.nic.in,,,False,Timeout,,,,,,,,,,,,,
+rde.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+recindia.nic.in,https://recindia.com,200,True,HTTP 200,96.1,True,1395.8,3.87,True,100.0,True,True,custom_dynamic_cms,False,77.2,273528,1692c39a5efd260f33eca2d0dd56de0d0eb55d89b474dab6745bbf7e2c56ea38
+resident.uidai.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+results.cbse.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rcctvm.gov.in,https://rcctvm.gov.in/,200,True,HTTP 200,84.5,True,5973.8,9.95,True,100.0,True,True,custom_dynamic_cms,True,70.3,152006,e2e4c02b6c85ee23887f269a79b5b221ed38e7437b4aa0b3cded9e98884f297b
+nsg.gov.in,,,False,Timeout,,,,,,,,,,,,,
+roahmedabad.kvs.gov.in,https://roahmedabad.kvs.gov.in/,200,True,HTTP 200,95.0,True,473.4,2.31,True,100.0,True,True,s3waas_drupal,True,91.6,245872,ca3b5fbe571aa8d70693c11b005ba14f0fc79ba78959abf2b51c16f7f16991e9
+robengaluru.kvs.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+robhopal.kvs.gov.in,https://robhopal.kvs.gov.in/,200,True,HTTP 200,94.8,True,369.1,2.06,True,100.0,True,True,s3waas_drupal,True,92.3,230868,51c1c56a626f8afdf92a389667268ae2b6e05745cb07ae384780ac2a13fc6302
+odishapolice.gov.in,,,False,Timeout,,,,,,,,,,,,,
+py.gov.in,https://py.gov.in/,200,True,HTTP 200,92.1,True,10452.7,16.34,True,100.0,False,True,s3waas_drupal,True,67.6,101909,aded9b8f4283dc960aec8e717987e3d5c057a0dc2dc416aaf9be785a422e18c4
+roagra.kvs.gov.in,https://roagra.kvs.gov.in/,200,True,HTTP 200,94.3,True,1785.3,4.2,True,100.0,True,True,s3waas_drupal,True,85.7,233123,63dca84efea185e801fe44cfd9749be446b12d611bb02403ba04225581b7a1ea
+rochennai.kvs.gov.in,https://rochennai.kvs.gov.in/,200,True,HTTP 200,94.0,True,320.2,2.01,True,100.0,True,True,s3waas_drupal,True,92.2,234207,79dd21e6479bafaea7e9a5e78a6e484827feac2c824914629dbf5d52ce43ba11
+rochandigarh.kvs.gov.in,https://rochandigarh.kvs.gov.in/,200,True,HTTP 200,94.8,True,442.5,2.17,True,100.0,True,True,s3waas_drupal,True,91.9,231597,d358e8a3b017818efc7cec91358cd2506300386d676b4fe3e1fc4b9259865a82
+rogauhati.kvs.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rodehradun.kvs.gov.in,https://rodehradun.kvs.gov.in/,200,True,HTTP 200,94.4,True,391.4,2.46,True,100.0,True,True,s3waas_drupal,True,90.9,288366,c56e9300d1fdef0d1bd0a55de271f8c494f14258bfeb1826ee96b230dec74715
+rodelhi.kvs.gov.in,https://rodelhi.kvs.gov.in/,200,True,HTTP 200,94.5,True,458.1,2.42,True,100.0,True,True,s3waas_drupal,True,91.1,266241,5073b34597c87ebbb013d3590782810cf375283d55791a9fc2b3c3c26315ab2c
+roernakulam.kvs.gov.in,https://roernakulam.kvs.gov.in/,200,True,HTTP 200,94.8,True,434.5,2.27,True,100.0,True,True,s3waas_drupal,True,91.6,248832,94440c4e6302a1108560125e7bef246a30985b951b6e4cb6eaa4d23a17035f2a
+rohyderabad.kvs.gov.in,https://rohyderabad.kvs.gov.in/,200,True,HTTP 200,95.0,True,328.1,2.09,True,100.0,True,True,s3waas_drupal,True,92.2,245781,30768b98f5e03c612d6f3286115a75e9187958baba6522a91ac0ef7a0854fb2b
+rogurugram.kvs.gov.in,https://rogurugram.kvs.gov.in/,200,True,HTTP 200,94.8,True,494.2,2.17,True,100.0,True,True,s3waas_drupal,True,91.9,219801,024eba4227c40bb0c84fef2c58f54095a11b0ae69755053c2458646a34d9a913
+rojabalpur.kvs.gov.in,https://rojabalpur.kvs.gov.in/,200,True,HTTP 200,95.0,True,409.7,2.01,True,100.0,True,True,s3waas_drupal,True,92.5,214411,db525dffd04a6f49eab3669a4fce5df1614d3ebc7cb0a42c237a441f2cc71646
+rojaipur.kvs.gov.in,https://rojaipur.kvs.gov.in/,200,True,HTTP 200,94.8,True,421.7,2.2,True,100.0,True,True,s3waas_drupal,True,91.8,241236,668f3c083d277bd95c7b0972695237a6574df1c7fd5289bf679354d9e8b88f95
+rokolkata.kvs.gov.in,https://rokolkata.kvs.gov.in/,200,True,HTTP 200,95.0,True,361.0,2.05,True,100.0,True,True,s3waas_drupal,True,92.3,231535,5d6aef5e84dda94173df3150a2e6956ea573d0f10ee6a168af5f5b4c4ba61b64
+rolucknow.kvs.gov.in,https://rolucknow.kvs.gov.in/,200,True,HTTP 200,94.8,True,412.1,2.12,True,100.0,True,True,s3waas_drupal,True,92.1,231205,1970d3c7ed82b1a6bb7d00cbf57db39209f638d4b659f31e9c7e3aba73448c5b
+ropatna.kvs.gov.in,https://ropatna.kvs.gov.in/,200,True,HTTP 200,94.6,True,421.7,2.2,True,100.0,True,True,s3waas_drupal,True,91.8,241313,bf8320fa41a62f3e50341fda78fa36384c09cd540c3f4749c3f2c279882f0265
+romumbai.kvs.gov.in,https://romumbai.kvs.gov.in/,200,True,HTTP 200,94.8,True,537.6,2.36,True,100.0,True,True,s3waas_drupal,True,91.4,238308,fd714fd1a4110f405cf1d57855d0bd2733e84c25720ab3d0d52580c51323b078
+roraipur.kvs.gov.in,https://roraipur.kvs.gov.in/,200,True,HTTP 200,94.8,True,403.1,2.15,True,100.0,True,True,s3waas_drupal,True,92.0,237720,0c3591b94bc2d3cd81be912cdf3d22c9174a17bf86a3e6d363da2b6672e796a4
+roranchi.kvs.gov.in,https://roranchi.kvs.gov.in/,200,True,HTTP 200,95.0,True,374.8,2.06,True,100.0,True,True,s3waas_drupal,True,92.3,229735,5908bcba5c5fb6e25c843fecc80ba8a9676599c2900b0dac46d447e18f83b21d
+rosilchar.kvs.gov.in,https://rosilchar.kvs.gov.in/,200,True,HTTP 200,83.5,True,336.9,1.97,True,100.0,True,True,s3waas_drupal,True,89.1,224574,1363a88e653402ec6f74926fcce471c5cbc0afc4ca24f476511d65bab4663e76
+rovaranasi.kvs.gov.in,https://rovaranasi.kvs.gov.in/,200,True,HTTP 200,94.5,True,466.5,2.28,True,100.0,True,True,s3waas_drupal,True,91.5,242480,bcfcb1842cf01dc323322209baba1d0da9d0110ca7cf805d97f1b0570824948e
+rpsc.rajasthan.gov.in,https://rpsc.rajasthan.gov.in/,200,True,HTTP 200,95.0,False,465.3,2.18,True,100.0,False,True,legacy_asp_net,True,77.0,228088,656a2bec48f6bf7a98c8d24a11137bf6748bac64bdd9de280051d8e186142119
+rrbbbs.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrbald.gov.in,https://rrbald.gov.in/,200,True,HTTP 200,95.0,False,188.2,0.29,True,0.0,False,True,custom_dynamic_cms,False,52.6,1942,409e463ac42748b231b409c16f03c3118e95bcb5ca6f3fe039720421b54f16a3
+pfcindia.com,,,False,Timeout,,,,,,,,,,,,,
+rrbbnc.gov.in,https://rrbbnc.gov.in/,200,True,HTTP 200,70.0,True,148.3,0.3,True,90.0,False,False,legacy_asp_net,False,62.6,12523,560600f81f1a211a434c198a242e4d32b3cf395e649971b0828125d92599036e
+pcmcindia.gov.in,,,False,Timeout,,,,,,,,,,,,,
+psc.ap.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrbbhopal.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrbcdg.gov.in,https://rrb.indianrailways.gov.in/chandigarh,200,True,HTTP 200,88.2,True,596.5,1.92,True,100.0,False,True,legacy_asp_net,False,70.7,158243,75080605bf790e0ca423fb1a72b3e9fd33a723d72a29392baea67b06e6148b42
+rrbchennai.gov.in,https://rrb.indianrailways.gov.in/chennai,200,True,HTTP 200,88.2,True,572.4,1.91,True,100.0,False,True,legacy_asp_net,False,70.7,161718,2782569a3b4a2da2d10421029630517205cc22425cdd2765cea126744306c08c
+pmgsy.nic.in,,,False,Timeout,,,,,,,,,,,,,
+rrbgkp.gov.in,https://rrb.indianrailways.gov.in/gorakhpur,200,True,HTTP 200,88.2,True,595.8,1.92,True,100.0,False,True,legacy_asp_net,False,70.7,157223,baec4973ee432f292532474778825890a58563bbc62cd2f23c67230418a67173
+rrbkolkata.gov.in,https://rrb.indianrailways.gov.in/kolkata,200,True,HTTP 200,88.2,True,554.3,1.86,True,100.0,False,True,legacy_asp_net,False,70.9,157780,f1ee4faf419d8ef6fd3eca3238dda42d961b4f818f13f4a621783d79c09ccc94
+rrbmalda.gov.in,https://rrb.indianrailways.gov.in/malda,200,True,HTTP 200,88.2,True,526.4,1.79,True,100.0,False,True,legacy_asp_net,False,71.1,153751,c8175db4ed7e65b6d90312e29f9296d30bf3cfc3389673410687171f6b5934e4
+rrbmumbai.gov.in,https://rrb.indianrailways.gov.in/mumbai,200,True,HTTP 200,88.2,True,571.5,1.9,True,100.0,False,True,legacy_asp_net,False,70.8,159605,0230712ccfd22cac992daf76d881dcbded04c5de4a27805d796eb628264035e7
+rrbranchi.gov.in,https://rrbranchi.gov.in/,200,True,HTTP 200,95.0,True,243.3,0.38,True,60.0,False,True,custom_dynamic_cms,False,67.4,2156,6b89f787ae98092a684a7223e2d7dbbd9d9b45c1b127fba3f4ffb87bffca3908
+rrbmuzaffarpur.gov.in,https://rrb.indianrailways.gov.in/muzaffarpur,200,True,HTTP 200,88.2,True,951.3,2.46,True,100.0,False,True,legacy_asp_net,False,69.1,159359,d0116f9f74bb6675de1eac621ab1fcdb3703203602415ae40decf4f5ade65df1
+rrbpatna.gov.in,https://rrb.indianrailways.gov.in/patna,200,True,HTTP 200,88.2,True,1012.1,2.55,True,100.0,False,True,legacy_asp_net,False,68.8,157741,7b8ceffee3ffb8819feef711b9e6bfd1b6afe0b802a20be59988fc243e74b86c
+rrbthiruvananthapuram.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrbsiliguri.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrcat.gov.in,https://rrcat.gov.in/,403,False,HTTP 403,,,128.3,,,,,,,,,,
+rtionline.gov.in,https://rtionline.gov.in/,200,True,HTTP 200,90.0,True,185.2,0.41,True,100.0,False,False,custom_dynamic_cms,True,75.8,20605,d56e4cfb5fb2b94b7b3ec613e2a3a903d8c043240852287af83f823e6b8b31db
+rural.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sac.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sail.co.in,https://sail.co.in/,200,True,HTTP 200,95.4,True,453.5,1.35,True,70.0,True,True,drupal,True,82.1,103292,88c97833f29f26a2ba985327fec3609fc6ad2b76d5e7cf45b7805a102fdf6fa4
+pmjay.gov.in,,,False,Timeout,,,,,,,,,,,,,
+sainikschoolchittorgarh.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sainikschoolghorakhal.org,,,False,DNS or connection failure,,,,,,,,,,,,,
+sainikschoolkapurthala.com,,,False,DNS or connection failure,,,,,,,,,,,,,
+rmlh.nic.in,https://rmlh.mohfw.gov.in/,200,True,HTTP 200,90.0,False,9326.6,21.51,True,70.0,False,True,legacy_asp_net,False,49.5,1155676,6cff0a8ce99f83225ae2c2ff53f911b4da027b3546bf08d7b1e801569a03ab41
+sainikschoolkunjpura.org,,,False,DNS or connection failure,,,,,,,,,,,,,
+sainikschoolnagrota.com,https://sainikschoolnagrota.com/,200,True,HTTP 200,77.2,True,192.2,1.51,True,30.0,False,True,s3waas_drupal,False,56.1,188185,09a1c11c12de407cb9192edb33d24d31fec9ac5b4e6d68124b17f495058c56de
+sainikschoolrewa.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sainikschoolsatara.org,,,False,DNS or connection failure,,,,,,,,,,,,,
+sainikschoolkorukonda.org,https://www.sainikschoolkorukonda.org/,200,True,HTTP 200,79.6,True,666.4,1.4,True,65.0,False,True,wordpress,True,65.9,61571,e6c6c73b3030f40d6e11fd3ac26db245e4a9d7c9fdc0b387321d7070997fc9b2
+sainikschoolsociety.in,https://sainikschoolsociety.in/,200,True,HTTP 200,88.8,True,792.6,1.95,True,0.0,False,True,legacy_asp_net,False,45.8,117197,e839ab849f734097d16e50a8f78a7fa52cb87c1878a5bacb5b799710a9a0dc67
+samadhan.bihar.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+samadhan.labour.gov.in,https://samadhan.labour.gov.in/,200,True,HTTP 200,95.0,False,149.3,0.25,True,100.0,False,True,modern_spa,True,82.8,4039,5620023b4b5d20b1532f235f2f037cfe68312b3c9d6168fe65ef380164225a2c
+samarth.edu.in,https://samarth.edu.in/,403,False,HTTP 403,,,149.2,,,,,,,,,,
+sainikschoolamaravathinagar.edu.in,https://sainikschoolamaravathinagar.edu.in/,200,True,HTTP 200,83.7,True,2095.4,3.92,True,0.0,False,True,legacy_asp_net,True,43.4,119658,c931948394cd1576e2ff1e5a34f4705ecaff52c4a7d3d75e57aa1ba6d12fb3f1
+sampark.rajasthan.gov.in,https://sampark.rajasthan.gov.in/,200,True,HTTP 200,95.0,False,180.9,0.33,True,0.0,False,True,custom_dynamic_cms,True,57.5,8510,fc97d42043b5e3db93c7a521b266aea01ad4ffda52e651e23c84583fe760905a
+saralharyana.gov.in,https://saralharyana.gov.in/,200,True,HTTP 200,81.4,True,145.6,1.11,True,100.0,False,True,custom_dynamic_cms,True,76.1,136630,5b9d375f728546fae0b3713746b8ba5c70ed8a215341afeea180a977c78a427c
+sarathi.parivahan.gov.in,https://sarathi.parivahan.gov.in/sarathiservice/,200,True,HTTP 200,90.0,False,315.4,0.48,True,90.0,False,False,custom_dynamic_cms,False,68.1,573,b1376d276345942b2bb47f2e60a072cdd18a162ff9136c47343bf7a0a43a602f
+powergrid.in,,,False,Timeout,,,,,,,,,,,,,
+sbi.co.in,https://sbi.co.in/redirect/,200,True,HTTP 200,95.0,True,468.1,0.73,True,65.0,False,True,custom_dynamic_cms,False,67.6,4297,928c1e2014d7940545b77e107665426eda2a6dce922311358bff9c1096ab35b2
+search.ipindia.gov.in,https://search.ipindia.gov.in/,200,True,HTTP 200,96.0,True,120.0,0.3,True,100.0,False,True,custom_dynamic_cms,True,82.9,19122,a1874ae6392af9bf4caef31f2e01f7280d42e448515c49a97b1ba1d2d98149c4
+sci.gov.in,https://www.sci.gov.in,200,True,HTTP 200,81.8,True,369.8,1.77,True,100.0,True,True,s3waas_drupal,True,89.2,186054,cf796d20b57d41b370cf2bc0f37b0ffab359ca595edb3489d1b2fc2aff4aa93c
+sainikschooltilaiya.org,https://sainikschooltilaiya.org/,200,True,HTTP 200,75.4,True,1994.7,3.52,True,0.0,False,True,wordpress,False,37.1,81009,5c6629e44c7d2883dbe76f151325772c16d61077351626991ce9ccb3a7c40495
+services.goa.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sebi.gov.in,https://www.sebi.gov.in/,200,True,HTTP 200,80.0,True,370.6,0.92,True,70.0,True,True,custom_dynamic_cms,True,78.7,55585,f6e1644431ae946cbd1c6f5971facf6a6ed7a7fa7a6c9cf28254c17f4d050770
+services.gst.gov.in,https://services.gst.gov.in/services/login,200,True,HTTP 200,95.0,False,229.2,0.38,True,0.0,False,True,custom_dynamic_cms,False,52.4,4900,2859232390fe3281a7fffa4a6f227bfca4a9d9e0d38bcbe3b6a947f9cc778835
+services.ecourts.gov.in,https://services.ecourts.gov.in/ecourtindia_v6/,200,True,HTTP 200,94.8,True,451.8,1.4,True,70.0,True,True,modern_spa,True,81.7,110361,f4fc17f72ec588e13954f416aa3719dfadf5a66d4b62c885084d3c65e99cf05d
+sevasindhu.karnataka.gov.in,https://sevasindhu.karnataka.gov.in/Sevasindhu/Kannada?ReturnUrl=%2F,200,True,HTTP 200,93.9,True,225.8,1.76,True,45.0,True,True,legacy_asp_net,True,74.1,217630,6c6b09a3f7f94bf176184a4433a6584b40374279332ecbaf18b715ad803560f9
+sgpgi.org.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sfio.gov.in,https://sfio.gov.in/,200,True,HTTP 200,100.0,True,348.2,1.47,True,100.0,True,True,s3waas_drupal,True,95.6,145199,6693d3c4e47e155dc781846fc0249d58b0a507ec9a0140adb689170f5ea62005
+shipmin.gov.in,https://shipmin.gov.in/,200,True,HTTP 200,86.7,True,295.3,1.3,True,100.0,True,True,s3waas_drupal,True,92.1,131431,96035948fa2eca5a9e9707d4f56f0e1a7535e344be099aeb589e44661b1e4781
+shodhganga.inflibnet.ac.in,https://shodhganga.inflibnet.ac.in/,200,True,HTTP 200,75.0,False,193.8,0.34,True,0.0,False,True,custom_dynamic_cms,False,46.5,7540,adda1992f188ccfb2cdc38b4cbb6f94425136375f2f77ad23ce530ffc0f3c7ae
+shramsuvidha.gov.in,https://shramsuvidha.gov.in/,200,True,HTTP 200,95.0,False,126.8,0.21,True,100.0,False,True,custom_dynamic_cms,False,77.9,3415,87a239b5756ff5fa74e25260cf86f2f5e28f4a272334874a02422a3fb2b354d9
+serviceonline.bihar.gov.in,https://serviceonline.bihar.gov.in/,200,True,HTTP 200,70.0,True,1187.7,9.03,True,85.0,True,True,legacy_asp_net,False,57.2,1113195,1b90cf9b870bb0690a3a41d99d88b543ba6960ddc0c19eba02e99cca043c7bfb
+socialjustice.gov.in,https://socialjustice.gov.in/,200,True,HTTP 200,95.0,True,275.0,0.49,True,60.0,False,True,custom_dynamic_cms,False,67.0,12043,94d7e8b6512f8957bc39cddd91d356a7fff62e4934b9029b1fe4172b712ab0d0
+soilhealth.dac.gov.in,https://soilhealth.dac.gov.in/,200,True,HTTP 200,95.0,False,157.9,0.24,True,70.0,False,True,custom_dynamic_cms,False,70.3,657,e119dd3bf10691c5c98049a0022ffd3892ea10c1b4801d5663a0ace631b09f17
+sidbi.in,https://www.sidbi.in/en/,200,True,HTTP 200,91.4,True,681.5,2.71,True,100.0,False,True,custom_dynamic_cms,True,74.3,259302,71914a05d1fa8e00e43911efdc39d3eac8aa8be756c9bb788b081d7751a21c8a
+sparsh.defencepension.gov.in,https://sparsh.defencepension.gov.in/,200,True,HTTP 200,92.1,True,411.3,1.84,True,100.0,True,True,custom_dynamic_cms,True,87.1,187476,17b28e2f7fec9071b28a06fc216a15ab599911e78c7a75b255f2b4dfc3f8c386
+punjabpolice.gov.in,,,False,TLS error: ConnectTimeout,,,,,,,,,,,,,
+sikkim.gov.in,https://www.sikkim.gov.in/,200,True,HTTP 200,78.1,True,4310.1,7.21,True,75.0,False,True,custom_dynamic_cms,True,52.2,113720,1fb7679d3c31297e46b4546effd09a2a854e5bae6cf60b8d10bc36324518fd32
+ssb.gov.in,https://ssb.mha.gov.in/,200,True,HTTP 200,88.2,True,2493.9,4.49,True,100.0,True,True,drupal,True,78.0,114542,a39ec74ca6b6697e1a165a453f8031edb743d9e9d63e5dffd668d2044646dd6f
+sspl.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+ssup.uidai.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+stpi.in,https://xn--m1bet8dtc8dtcb.xn--h2brj9c/hi,200,True,HTTP 200,95.0,True,183.3,1.72,True,100.0,True,True,drupal,True,88.3,221481,344d17c303dfc233d34231c107f5dc66d609f4e8f26462841b22e1c9e4fc2597
+spandana.ap.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+suratmunicipal.gov.in,https://www.suratmunicipal.gov.in/,200,True,HTTP 200,93.6,True,5167.6,8.65,True,45.0,False,True,legacy_asp_net,True,49.3,137429,083afa8d6cf83ef7023dcf383dd488df7c317e5226f70d06c617ace80624c9db
+svnit.ac.in,https://svnit.ac.in/,200,True,HTTP 200,100.0,True,196.1,2.52,True,100.0,False,True,wordpress,True,77.4,342460,c77ebfc64e6ad4c912cef85f639f7a0c48dd99eede8a22cb2b29c016144ab5c1
+swagat.gujarat.gov.in,https://swagat.gujarat.gov.in/,200,True,HTTP 200,91.2,True,281.7,0.7,True,100.0,False,True,legacy_asp_net,True,80.3,42393,ea1b0cc480ab878f999d31c628bc36f8bd6167835d2bc05df79b2710d7cbc65b
+swachhbharatmission.ddws.gov.in,https://swachhbharatmission.ddws.gov.in/,200,True,HTTP 200,93.0,True,845.4,1.7,True,100.0,False,True,legacy_asp_net,True,77.8,66641,c02b0209aaa1898a3f8e194d1b40ef81d869659920888e2791ff6d82eea235f8
+swayam.gov.in,https://swayam.gov.in/,200,True,HTTP 200,93.1,False,490.5,1.07,True,90.0,False,True,s3waas_drupal,True,82.2,51474,9621f980f8ca944060415d4181320d649e8e6fc90eb9abd246a73ce682293c7e
+rrbahmedabad.gov.in,,,False,Timeout,,,,,,,,,,,,,
+tbrl.drdo.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrbajmer.gov.in,,,False,Timeout,,,,,,,,,,,,,
+swayamprabha.gov.in,https://swayamprabha.gov.in/,200,True,HTTP 200,82.3,True,4030.3,6.47,True,45.0,False,True,custom_dynamic_cms,False,41.5,64539,910a28ee52e6925778ae3921e44cea8eabb1d31e9b2d3d505d0cddbd441f2604
+tdscpc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+tdsat.gov.in,https://tdsat.gov.in/,200,True,HTTP 200,93.3,True,210.7,0.61,True,100.0,False,True,custom_dynamic_cms,True,81.2,45879,3e9d11a6b312b316072f2eda345c642886d188121b262c6d7c0a6b310a62f42b
+rrbbilaspur.gov.in,,,False,Timeout,,,,,,,,,,,,,
+tender.telangana.gov.in,https://tender.telangana.gov.in/,200,True,HTTP 200,75.0,False,200.0,0.31,True,20.0,False,False,custom_dynamic_cms,False,46.6,1110,2020f8a8d3c37ff41761cbfbc2266e83fe26632f011689f4d54443ddcc082866
+rrbguwahati.gov.in,,,False,Timeout,,,,,,,,,,,,,
+tendersodisha.gov.in,https://tendersodisha.gov.in/,200,True,HTTP 200,90.0,False,290.5,0.44,True,100.0,False,False,custom_dynamic_cms,False,70.7,173,5a58b61bd8f35c56bb5fa67422870c7cfaa0e9339638f62a65add947fffe935d
+texmin.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+rrbjammu.nic.in,,,False,Timeout,,,,,,,,,,,,,
+tmc.gov.in,https://tmc.gov.in/,200,True,HTTP 200,78.0,True,356.8,0.75,True,45.0,False,True,custom_dynamic_cms,False,57.4,32866,d0a41282de359168a18a5e3662a34fbcbfde25c65d577faff7ab900a04d0cbb4
+thanecity.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+tnpolice.gov.in,https://tnpolice.gov.in/,200,True,HTTP 200,90.0,False,222.5,0.33,True,0.0,False,False,custom_dynamic_cms,False,46.0,125,c97f587ecdb16821c807bf246078d4c4609d93e3518b10b6a13c83131e584a7e
+tn.gov.in,https://www.tn.gov.in/,200,True,HTTP 200,87.8,True,362.4,1.17,True,100.0,True,True,modern_spa,True,87.8,96707,0704a03b7edf4cc82e1eef3d4c1f033e08061a274a708d276c1a3809cb237380
+tntenders.gov.in,https://tntenders.gov.in/,200,True,HTTP 200,90.0,False,232.2,0.35,True,100.0,False,False,custom_dynamic_cms,False,71.0,145,ee00f6df498d8b4dc96101cb8213330433fd27d3180a5749fbc6db46db488fdd
+tnpsc.gov.in,https://tnpsc.gov.in/,200,True,HTTP 200,95.0,True,475.9,1.34,True,90.0,True,True,legacy_asp_net,True,87.0,95936,33e6dcbaf8146e66df71cdbdb5b0f6785a78316d041efd80bfb28e02b5fc3845
+traffic.delhipolice.gov.in,https://traffic.delhipolice.gov.in/,200,True,HTTP 200,70.3,True,409.5,1.45,True,35.0,True,True,s3waas_drupal,True,70.5,127935,c7a9477b944dd8c88e44f9920987e7647b3ddbdd06fa8464962f00a10a5e8f8c
+tourism.gov.in,https://www.tourism.gov.in/,200,True,HTTP 200,95.0,False,643.2,1.02,True,100.0,False,True,modern_spa,False,75.4,8345,75cb203c53b9067b676a14bb098b1707e322d1efce789bc18cec1fb2a148b38d
+rrbsecunderabad.nic.in,,,False,Timeout,,,,,,,,,,,,,
+telangana.gov.in,https://www.telangana.gov.in/,200,True,HTTP 200,88.1,True,2476.2,5.5,True,100.0,False,True,wordpress,True,64.9,274820,1c9ed993810c18784b0f02d0cc1993af53b603dcdddcf0e13c9442985d968bbc
+tribal.nic.in,https://tribal.nic.in/ResourcesHindi/Homeh.aspx,200,True,HTTP 200,95.0,True,451.3,1.28,True,60.0,False,True,legacy_asp_net,True,69.7,93113,f85a0e218e03f3d06060aedc5fea88c713a5dddb2d6b3d1b51146ae5532773a9
+tripurahighcourt.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+tshc.gov.in,https://tshc.gov.in/,200,True,HTTP 200,100.0,True,128.3,0.66,True,100.0,False,True,custom_dynamic_cms,False,78.0,71456,e7433c914cd34f5a8d30ce80bcce5dfabaf6a3444416686b547e08e33c00c957
+rrcb.gov.in,,,False,Timeout,,,,,,,,,,,,,
+ucobank.com,https://ucobank.com/en/,200,True,HTTP 200,96.3,True,1115.4,4.47,True,100.0,True,True,modern_spa,False,75.5,429249,55760e6f62535fce958c95845a6dea72c4a49d5ebcce207f1e40b97180fa6c4d
+tripura.gov.in,https://tripura.gov.in/,200,True,HTTP 200,93.3,True,2138.9,4.62,True,100.0,False,True,drupal,True,69.1,216914,42fab3a6dd4de0151e2abfd7468d9e4109e29ef9e2a31e664710336126622d22
+ugcnet.nta.ac.in,https://ugcnet.nta.ac.in/,200,True,HTTP 200,85.0,True,79.7,0.48,True,0.0,True,True,custom_dynamic_cms,False,59.1,54652,b1caa4833674f760d79fcfc6c80a874ab92727e76760af0caf80e6b770079250
+uidai.gov.in,https://uidai.gov.in/en,200,True,HTTP 200,79.1,True,41.1,3.69,True,100.0,True,True,modern_spa,False,72.7,557404,b4f4c4c3472e36280afd3d4abbf65e150b40a323d8dcb2f6893a1fa2b10c020d
+ugc.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+sewasetu.assam.gov.in,,,False,Timeout,,,,,,,,,,,,,
+uktenders.gov.in,https://uktenders.gov.in/,200,True,HTTP 200,90.0,False,190.3,0.29,True,100.0,False,False,custom_dynamic_cms,False,71.1,187,228e6fd3584bc1c140688acb62feaa1bf973475f90fdf62c1da947a339b6d53e
+unifiedportal-emp.epfindia.gov.in,https://unifiedportal-emp.epfindia.gov.in/epfo/,200,True,HTTP 200,91.4,True,337.1,0.73,True,100.0,False,True,custom_dynamic_cms,False,75.2,34050,81853cc9e87b88109d6732dd9b0fa62cdd3140ecbe02b05d4b166952e262edea
+umang.gov.in,https://web.umang.gov.in/,200,True,HTTP 200,95.0,True,1196.6,2.01,True,100.0,False,True,custom_dynamic_cms,False,72.5,33118,5e1446c5fb5ef10604e60b88e436a0d000e468edfd091dec5cc4bcf23712e718
+srijandefence.gov.in,,,False,Timeout,,,,,,,,,,,,,
+unipune.ac.in,https://unipune.ac.in/,200,True,HTTP 200,93.1,True,106.8,0.91,True,0.0,False,False,legacy_asp_net,True,50.2,115846,f51a7fcf49825f9b6ca19fc8186eac97a26dc8ad25b8f4dd67424b547993859f
+unom.ac.in,https://unom.ac.in/,200,True,HTTP 200,77.2,True,552.3,3.03,True,25.0,True,True,legacy_asp_net,False,55.3,338112,bfdf47dfb02b51a6b1b25c5082e3573f5e018a988cf1c28324e4ae4af6882ac2
+uohyd.ac.in,https://uohyd.ac.in/,200,True,HTTP 200,93.0,True,292.5,1.99,True,100.0,False,True,modern_spa,True,76.9,237561,cd32c0ae7ac8dbc40cda6b974b765e9e08ae7d3452e4c91f1776b5739d964662
+ssc.nic.in,,,False,Timeout,,,,,,,,,,,,,
+upbhulekh.gov.in,https://upbhulekh.gov.in/,200,True,HTTP 200,95.0,True,265.8,0.43,True,100.0,False,True,custom_dynamic_cms,False,77.2,5509,9044d77dba39ae111c17f5f6230cdb6fb2b701b66c7cc55ff5d22e49e2e32634
+tender.apeprocurement.gov.in,https://tender.apeprocurement.gov.in/,200,True,HTTP 200,75.0,False,13100.6,19.66,True,20.0,False,False,custom_dynamic_cms,False,27.5,721,f717b284e7e35b0cf361cd001afa4dc87b01102137d3335ac0e21b9a0b8287e7
+uppsc.up.nic.in,https://uppsc.up.nic.in/,200,True,HTTP 200,73.3,True,512.1,1.84,True,100.0,True,True,legacy_asp_net,True,81.5,164067,82f381bb635cb474859c7b0644ff955be544618866141d34260e6015b7ae4a1b
+upsc.gov.in,https://www.upsc.gov.in,200,True,HTTP 200,85.4,True,427.5,1.33,True,100.0,True,True,s3waas_drupal,True,91.6,105139,dee97c3f2948030bb2ab4a3520549d819f6549f25876ab1786d5d7200b9c7ba6
+ursc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+tspsc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+v3.mca.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+vahan.parivahan.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+vecc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+vedas.sac.gov.in,https://vedas.sac.gov.in/en/,200,True,HTTP 200,100.0,True,235.6,0.89,True,90.0,False,True,custom_dynamic_cms,False,74.8,83154,319d6781053387b8b1ced0017c565bc4049886949d006d5aab0dfadd1a8149a7
+virtualcourts.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+visvabharati.ac.in,https://www.visvabharati.ac.in/,200,True,HTTP 200,70.0,False,158.0,0.25,True,0.0,False,False,custom_dynamic_cms,False,40.2,2060,c8b86a4f67a057c1149cac6c17c6eb3474245516bf011a358176409029631ca6
+tathya.uidai.gov.in,,,False,Timeout,,,,,,,,,,,,,
+vmc.ap.gov.in,https://vmc.ap.gov.in/,503,False,HTTP 503,,,5115.1,,,,,,,,,,
+tdf.drdo.gov.in,,,False,Timeout,,,,,,,,,,,,,
+vssc.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+vvgnli.gov.in,https://vvgnli.gov.in/,200,True,HTTP 200,87.5,True,524.0,1.8,True,100.0,True,True,drupal,True,85.8,156171,52e4dd4dacfb5e9efb95caff5da07fe58debf18b99ae632525a8ddfc5bc77b6d
+wb.gov.in,https://wb.gov.in/,200,True,HTTP 200,98.9,True,257.5,0.99,True,25.0,False,True,legacy_asp_net,True,63.0,93173,47f58bebdac4ca97a6544b0396909d8d16f01f658167e60580381bbccbfea348
+wbpolice.gov.in,,,False,TLS error: SSLError,,,,,,,,,,,,,
+traffic.uppolice.gov.in,,,False,Timeout,,,,,,,,,,,,,
+wbtenders.gov.in,https://wbtenders.gov.in/,200,True,HTTP 200,90.0,False,311.8,0.47,True,100.0,False,False,custom_dynamic_cms,False,70.6,140,7fb8a1046f7824933f255a86e35264a72cd26102c60174b9b855a50ef26a36d6
+wcd.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+uk.gov.in,,,False,TLS error: ConnectTimeout,,,,,,,,,,,,,
+vnit.ac.in,https://vnit.ac.in/,200,True,HTTP 200,86.4,True,6116.0,12.09,True,0.0,False,True,wordpress,True,35.9,448162,710dd1a8e299446700b75af68c2cab1e72cb0037ff1f518638da3407c5d0cafd
+unifiedportal-mem.epfindia.gov.in,,,False,Timeout,,,,,,,,,,,,,
+up.gov.in,,,False,Timeout,,,,,,,,,,,,,
+uppolice.gov.in,,,False,Timeout,,,,,,,,,,,,,
+unionbankofindia.co.in,,,False,DNS or connection failure,,,,,,,,,,,,,
+uttarakhandpolice.uk.gov.in,,,False,TLS error: ConnectTimeout,,,,,,,,,,,,,
+vmmc-sjh.nic.in,,,False,Timeout,,,,,,,,,,,,,
+wbpsc.gov.in,,,False,Timeout,,,,,,,,,,,,,
+yas.nic.in,,,False,Timeout,,,,,,,,,,,,,
+tspolice.gov.in,,,False,TLS error: ConnectTimeout,,,,,,,,,,,,,
+trai.gov.in,,,False,DNS or connection failure,,,,,,,,,,,,,

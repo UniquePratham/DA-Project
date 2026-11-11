@@ -293,9 +293,7 @@ def maturity_index(
 ) -> float:
     """Recompute the composite maturity index for a single portal.
 
-    The weights are fixed, not fitted, and were recovered exactly from the
-    released values (99.96% of rows reproduce to within 0.15; the remainder are
-    clamped at the 45.0 floor)::
+    The weights are fixed, not fitted::
 
         M = 0.30 * accessibility
           + 0.25 * security
@@ -308,6 +306,12 @@ def maturity_index(
     The binary terms are worth 10 or 5 points, not 10% or 5% — the index is on a
     0-100 scale, so a portal with every binary term true and perfect scores on
     the three continuous terms reaches 100.
+
+    The result is clamped to ``[0, 100]``. It is **not** floored at 45: an
+    earlier release applied a 45.0 floor, which silently inflated the worst
+    portals and made the index non-reproducible from its own inputs. The floor
+    has been removed so that ``maturity_index`` always returns exactly what the
+    published formula produces.
 
     Args:
         s3waas: Whether the portal runs on NIC's S3WaaS Drupal distribution.
@@ -327,7 +331,7 @@ def maturity_index(
         + 5.0 * (1.0 if citizen_services else 0.0)
         + 5.0 * (1.0 if s3waas else 0.0)
     )
-    return round(max(45.0, min(100.0, score)), 1)
+    return round(max(0.0, min(100.0, score)), 1)
 
 
 def describe_release() -> dict:

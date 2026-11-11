@@ -24,8 +24,8 @@ pip install bharatgov-access
 ```python
 import bharatgov_access as bga
 
-df = bga.load()                  # 12,092 domains, 20 typed columns
-live = bga.load(reachable=True)  # 10,247 that answered in-country
+df = bga.load()                  # 14,489 domains, 20 typed columns
+live = bga.load(reachable=True)  # 7,542 that answered in-country
 
 bga.tier_summary()               # Table I of the paper
 bga.architecture_summary()       # Table II of the paper

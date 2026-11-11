@@ -472,26 +472,26 @@ def build(f: dict) -> str:
 
     <div style="margin-top:6mm">
       <div class="kicker">A census of India&rsquo;s public web</div>
-      <h1>12,092 government portals, measured from inside the country.</h1>
+      <h1>{f['total']:,} government portals, measured from inside the country.</h1>
     </div>
 
     <p class="lede" style="margin-top:6mm">
-      The first census-scale observatory of India&rsquo;s public digital infrastructure, audited
-      from domestic peering transit against WCAG&nbsp;2.1&nbsp;AA, Core Web Vitals, CERT-In
-      hardening and GIGW&nbsp;3.0.
+      An in-country observatory of India&rsquo;s public digital infrastructure, measured
+      from domestic peering transit with axe-core&nbsp;4.x, real TLS handshakes, the OWASP
+      Secure Headers directive set, and headless-Chromium mobile rendering.
     </p>
 
     <div class="byline" style="margin-top:5mm">
       <b>Pratham Agarwal</b> &middot; <b>Amit Kumar Bairagi</b> &middot; <b>Vishwajeet Nand Yaduraj</b><br>
-      Department of Data Analytics, IIT Kharagpur
+      Department of Computer Science and Engineering, IIT Kharagpur &middot; Data Analytics
     </div>
   </div>
 
   <div class="stats">
     <div class="stat"><span class="k">Domains</span><div class="v">{f['total']:,}</div><div class="n">Seven governance tiers</div></div>
     <div class="stat"><span class="k">Reachable</span><div class="v">{f['live']:,}<small> &middot; {f['reach']:.1f}%</small></div><div class="n">Measured in-country</div></div>
-    <div class="stat"><span class="k">Mean accessibility</span><div class="v">{f['acc']:.1f}<small> / 100</small></div><div class="n">WCAG 2.1 AA structural</div></div>
-    <div class="stat"><span class="k">Mean security</span><div class="v">{f['sec']:.1f}<small> / 100</small></div><div class="n">CERT-In header hardening</div></div>
+    <div class="stat"><span class="k">Mean accessibility</span><div class="v">{f['acc']:.1f}<small> / 100</small></div><div class="n">axe-core WCAG 2.1 AA</div></div>
+    <div class="stat"><span class="k">Mean security</span><div class="v">{f['sec']:.1f}<small> / 100</small></div><div class="n">OWASP header directives</div></div>
   </div>
 </section>
 
@@ -554,15 +554,15 @@ def build(f: dict) -> str:
   </div>
 
   <div class="body">
-    <h2>Accessibility is solved. Security is not.</h2>
+    <h2>Accessibility is uniformly mediocre. Security is worse.</h2>
 
     <div class="split split--narrow" style="margin-top:1mm; flex:1 1 auto; min-height:0">
       <div style="display:flex; flex-direction:column">
         <p style="font-size:9.8pt">
-          The composite index weights accessibility at 30 per cent, security at 25, speed at 20,
-          and the three binary reach terms at 10, 5 and 5. District administrations lead on
-          accessibility because they inherit NIC&rsquo;s S3WaaS template; higher education and
-          public sector lead on security because they run their own edge.
+          A real axe-core 4.x audit of 454 portals finds a mean of <b>3.53 WCAG violations</b>
+          per portal, and only <b>4.8%</b> pass with none. The composite index weights
+          accessibility at 30 per cent, security at 25, speed at 20, and the three binary
+          reach terms at 10, 5 and 5.
         </p>
 
         <div style="margin-top:5mm">
@@ -613,7 +613,7 @@ def build(f: dict) -> str:
 
         <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:auto">
           <div class="stat"><span class="k">GIGW toolbar</span><div class="v">{f['gigw']:.1f}<small>%</small></div><div class="n">Font and contrast controls</div></div>
-          <div class="stat"><span class="k">Scheduled language</span><div class="v">{f['multi']:.1f}<small>%</small></div><div class="n">Eighth Schedule scripts</div></div>
+          <div class="stat"><span class="k">Scheduled language</span><div class="v">{f['multi']:.1f}<small>%</small></div><div class="n">Indic script detected</div></div>
           <div class="stat"><span class="k">Mobile viewport</span><div class="v">{f['mobile']:.1f}<small>%</small></div><div class="n">width=device-width</div></div>
         </div>
       </div>
@@ -707,7 +707,7 @@ def build(f: dict) -> str:
 
 <span style="color:#e08a5f">import</span> bharatgov_access <span style="color:#e08a5f">as</span> bga
 
-bga.load()                  <span style="color:#7a6d63"># 12,092 domains</span>
+bga.load()                  <span style="color:#7a6d63"># {f['total']:,} domains</span>
 bga.load(reachable=<span style="color:#e08a5f">True</span>)  <span style="color:#7a6d63"># 10,247 live</span>
 bga.tier_summary()          <span style="color:#7a6d63"># Table I</span>
 bga.architecture_summary()  <span style="color:#7a6d63"># Table II</span>
@@ -751,7 +751,7 @@ bga.state_ranking()         <span style="color:#7a6d63"># Section V-C</span></pr
 
   <div class="foot">
     <span>CC-BY-4.0 &middot; Parquet, CSV, JSON</span>
-    <span>Department of Data Analytics &middot; IIT Kharagpur</span>
+    <span>Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; Data Analytics</span>
   </div>
 </section>
 

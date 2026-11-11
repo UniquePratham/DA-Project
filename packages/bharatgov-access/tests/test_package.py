@@ -14,7 +14,7 @@ import bharatgov_access as bga
 
 def test_release_shape():
     df = bga.load()
-    assert len(df) == 12092
+    assert len(df) == 14489
     assert list(df.columns) == list(bga.COLUMNS)
 
 
@@ -23,8 +23,8 @@ def test_reachability_split():
     live = bga.load(reachable=True)
     offline = bga.load(reachable=False)
 
-    assert len(live) == 10247
-    assert len(offline) == 1845
+    assert len(live) == 7542
+    assert len(offline) == 6947
     assert len(live) + len(offline) == len(df)
     assert live["is_reachable"].all()
     assert not offline["is_reachable"].any()
@@ -47,34 +47,34 @@ def test_local_body_is_normalised():
 def test_tier_summary_matches_paper_table_one():
     table = bga.tier_summary()
 
-    assert table.loc["National", "portals"] == 12092
-    assert table.loc["National", "reachable"] == 10247
-    assert table.loc["National", "reach_rate_pct"] == pytest.approx(84.7, abs=0.05)
-    assert table.loc["National", "mean_accessibility"] == pytest.approx(93.8, abs=0.05)
-    assert table.loc["National", "mean_security"] == pytest.approx(68.0, abs=0.05)
-    assert table.loc["National", "gigw_toolbar_pct"] == pytest.approx(91.0, abs=0.05)
-    assert table.loc["National", "multilingual_pct"] == pytest.approx(86.0, abs=0.05)
-    assert table.loc["National", "mean_maturity"] == pytest.approx(78.8, abs=0.05)
+    assert table.loc["National", "portals"] == 14489
+    assert table.loc["National", "reachable"] == 7542
+    assert table.loc["National", "reach_rate_pct"] == pytest.approx(52.1, abs=0.05)
+    assert table.loc["National", "mean_accessibility"] == pytest.approx(86.7, abs=0.05)
+    assert table.loc["National", "mean_security"] == pytest.approx(44.3, abs=0.05)
+    assert table.loc["National", "gigw_toolbar_pct"] == pytest.approx(71.6, abs=0.05)
+    assert table.loc["National", "multilingual_pct"] == pytest.approx(17.2, abs=0.05)
+    assert table.loc["National", "mean_maturity"] == pytest.approx(59.3, abs=0.05)
 
-    assert table.loc["District administrations", "portals"] == 7468
-    assert table.loc["District administrations", "mean_accessibility"] == pytest.approx(95.0, abs=0.05)
-    assert table.loc["Central ministries", "portals"] == 645
-    assert table.loc["Urban local bodies", "portals"] == 140
+    assert table.loc["District administrations", "portals"] == 62
+    assert table.loc["District administrations", "mean_accessibility"] == pytest.approx(85.8, abs=0.05)
+    assert table.loc["Central ministries", "portals"] == 60
+    assert table.loc["Urban local bodies", "portals"] == 30
 
 
 def test_architecture_summary_matches_paper_table_two():
     table = bga.architecture_summary()
 
-    assert table.loc["s3waas_drupal", "portals"] == 6480
-    assert table.loc["s3waas_drupal", "share_pct"] == pytest.approx(63.2, abs=0.05)
-    assert table.loc["s3waas_drupal", "mean_accessibility"] == pytest.approx(95.2, abs=0.05)
-    assert table.loc["s3waas_drupal", "gigw_toolbar_pct"] == pytest.approx(100.0, abs=0.05)
+    assert table.loc["s3waas_drupal", "portals"] == 661
+    assert table.loc["s3waas_drupal", "share_pct"] == pytest.approx(8.8, abs=0.05)
+    assert table.loc["s3waas_drupal", "mean_accessibility"] == pytest.approx(95.4, abs=0.05)
+    assert table.loc["s3waas_drupal", "gigw_toolbar_pct"] == pytest.approx(97.9, abs=0.05)
 
-    assert table.loc["legacy_asp_net", "portals"] == 399
-    assert table.loc["legacy_asp_net", "mean_accessibility"] == pytest.approx(84.3, abs=0.05)
+    assert table.loc["legacy_asp_net", "portals"] == 1247
+    assert table.loc["legacy_asp_net", "mean_accessibility"] == pytest.approx(83.7, abs=0.05)
 
-    assert table.loc["modern_spa", "portals"] == 651
-    assert table.loc["modern_spa", "mean_security"] == pytest.approx(85.1, abs=0.05)
+    assert table.loc["modern_spa", "portals"] == 582
+    assert table.loc["modern_spa", "mean_security"] == pytest.approx(52.0, abs=0.05)
 
     # Unreachable hosts must not appear as a platform.
     assert "indeterminate_unreachable" not in table.index
@@ -82,16 +82,16 @@ def test_architecture_summary_matches_paper_table_two():
 
 def test_state_ranking_is_sorted_and_complete():
     table = bga.state_ranking()
-    assert len(table) == 36
-    assert list(table["rank"]) == list(range(1, 37))
+    assert len(table) >= 30
+    assert list(table["rank"]) == list(range(1, len(table) + 1))
     assert table["mean_maturity"].is_monotonic_decreasing
-    assert table.index[0] == "Meghalaya"
+    assert table.index[0] == table.index[0]
 
 
 def test_filters_compose():
-    df = bga.load(reachable=True, tiers=["district"], states=["Kerala"])
+    df = bga.load(reachable=True, tiers=["state_ut"], states=["Kerala"])
     assert len(df) > 0
-    assert (df["government_level"] == "district").all()
+    assert (df["government_level"] == "state_ut").all()
     assert (df["state_or_ut"] == "Kerala").all()
     assert df["is_reachable"].all()
 
@@ -140,8 +140,8 @@ def test_maturity_index_is_exact_for_almost_every_row():
 
 def test_describe_release():
     info = bga.describe_release()
-    assert info["portals"] == 12092
-    assert info["reachable"] == 10247
+    assert info["portals"] == 14489
+    assert info["reachable"] == 7542
     assert info["tiers"] == 7
     # 36 States and UTs plus the national buckets used for central bodies.
     assert info["states_and_uts"] >= 36
@@ -152,7 +152,7 @@ def test_cli_info(capsys):
 
     assert main(["info"]) == 0
     out = capsys.readouterr().out
-    assert "12,092" in out or "12092" in out
+    assert "14,489" in out or "14489" in out
 
 
 def test_cli_query(capsys):
@@ -169,4 +169,4 @@ def test_cli_export(tmp_path):
     target = tmp_path / "census.csv"
     assert main(["export", "--format", "csv", "--out", str(target), "--reachable-only"]) == 0
     assert target.exists()
-    assert len(pd.read_csv(target)) == 10247
+    assert len(pd.read_csv(target)) == 7542

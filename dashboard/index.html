@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BharatGov Access — National Web Infrastructure Observatory</title>
-<meta name="description" content="A census-scale measurement of 12,092 Indian government web domains, audited from inside the country against WCAG 2.1 AA, Core Web Vitals, CERT-In hardening and GIGW 3.0.">
+<meta name="description" content="A measured census of Indian government web domains, audited from inside the country with axe-core 4.x, real TLS handshakes, the OWASP Secure Headers directive set, and headless-Chromium mobile rendering.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="static/app.css">
 <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
@@ -22,8 +22,8 @@
   <div class="shell">
     <div class="masthead__top">
       <span>BharatGov Access</span>
-      <span class="hide-sm">Department of Data Analytics &middot; IIT Kharagpur</span>
-      <span>Release 2026.11</span>
+      <span class="hide-sm">Department of Computer Science and Engineering &middot; IIT Kharagpur</span>
+      <span>Data Analytics</span>
     </div>
 
     <div class="masthead__main">
@@ -123,12 +123,12 @@
         <div class="band__cell">
           <span class="band__label">Mean accessibility</span>
           <div class="band__value"><span data-bind="acc">&mdash;</span><span class="band__unit">/ 100</span></div>
-          <p class="band__note">WCAG 2.1 AA structural checks across reachable portals.</p>
+          <p class="band__note">axe-core 4.x WCAG 2.1 AA audit across reachable portals.</p>
         </div>
         <div class="band__cell">
           <span class="band__label">Mean security headers</span>
           <div class="band__value"><span data-bind="sec">&mdash;</span><span class="band__unit">/ 100</span></div>
-          <p class="band__note">CERT-In hardening: HSTS, CSP, frame and MIME policy.</p>
+          <p class="band__note">OWASP Secure Headers: HSTS, CSP, frame, MIME, referrer, permissions.</p>
         </div>
       </div>
 
@@ -196,7 +196,7 @@
         <section class="section">
           <div class="section__head">
             <h2 class="section__title">Hardening and platform</h2>
-            <span class="section__note">CERT-In &middot; CMS fingerprint</span>
+            <span class="section__note">OWASP headers &middot; CMS fingerprint</span>
           </div>
           <div class="split split--even">
             <figure class="figure">
@@ -568,7 +568,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
             <ul class="colophon__list">
               <li>WCAG 2.1 Level AA</li>
               <li>MeitY GIGW 3.0</li>
-              <li>CERT-In header guidance</li>
+              <li>OWASP Secure Headers Project</li>
               <li>Core Web Vitals thresholds</li>
             </ul>
           </div>
@@ -577,7 +577,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
             <p class="colophon__body" style="margin-top:0">
               Agarwal, P., Bairagi, A. K., &amp; Yaduraj, V. N. (2026).
               <em>BharatGov Access: a census-scale observatory of Indian public web infrastructure.</em>
-              Department of Data Analytics, IIT Kharagpur.
+              Department of Computer Science and Engineering, IIT Kharagpur.
             </p>
           </div>
           <div>
@@ -604,7 +604,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
         <div class="colophon__title">BharatGov Access</div>
         <p class="colophon__body">
           A longitudinal observatory of India&rsquo;s public web infrastructure, maintained by the
-          Department of Data Analytics at IIT Kharagpur. Measurements are taken from inside the domestic
+          Department of Computer Science and Engineering at IIT Kharagpur. Measurements are taken from inside the domestic
           peering fabric so that perimeter firewalls are not mistaken for outages.
         </p>
       </div>
@@ -622,13 +622,13 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
         <ul class="colophon__list">
           <li>WCAG 2.1 AA</li>
           <li>GIGW 3.0</li>
-          <li>CERT-In</li>
+          <li>OWASP Secure Headers</li>
           <li>Core Web Vitals</li>
         </ul>
       </div>
     </div>
     <div class="colophon__foot">
-      <span>Release 2026.11 &middot; Checkpoint 2</span>
+      <span>National Observatory</span>
       <span>Measured in-country &middot; no overseas vantage points</span>
     </div>
   </div>
@@ -639,7 +639,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
 
 <div class="palette" id="palette" hidden>
   <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Search domains">
-    <input class="palette__input" id="palette-input" type="text" placeholder="Search 12,092 domains, entities and districts&hellip;" autocomplete="off" spellcheck="false">
+    <input class="palette__input" id="palette-input" type="text" placeholder="Search domains, entities and districts&hellip;" autocomplete="off" spellcheck="false">
     <ul class="palette__list" id="palette-list" role="listbox" aria-label="Results"></ul>
   </div>
 </div>

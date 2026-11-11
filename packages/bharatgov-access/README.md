@@ -111,7 +111,7 @@ print(live["sub_security_headers_score"].describe().round(1))
   title       = {BharatGov Access: A Census-Scale In-Country Web Observatory
                  and Empirical Benchmark of India's Public Digital Infrastructure},
   author      = {Agarwal, Pratham and Bairagi, Amit Kumar and Yaduraj, Vishwajeet Nand},
-  institution = {Department of Data Analytics, IIT Kharagpur},
+  institution = {Department of Computer Science and Engineering, IIT Kharagpur},
   year        = {2026},
   number      = {DA-2026-G12}
 }

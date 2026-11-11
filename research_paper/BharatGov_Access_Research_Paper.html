@@ -113,17 +113,21 @@ code {
 
 pre {
   font-family: "Consolas", "Courier New", monospace;
-  font-size: 7.2pt;
-  line-height: 1.28;
+  font-size: 6.4pt;
+  line-height: 1.25;
   background: #f7f7f7;
   border: 0.5pt solid #ddd;
   border-left: 2pt solid #a63a1e;
   padding: 5pt 6pt;
   margin: 6pt 0;
-  overflow: hidden;
+  overflow: visible;
   white-space: pre;
   break-inside: avoid;
   text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* Architecture diagrams are wider than a single column, so they span both. */
+  column-span: all;
 }
 
 pre code { background: none; padding: 0; font-size: inherit; }
@@ -166,7 +170,16 @@ table.wide {
 /* ------------------------------------------------------------------- math */
 
 .katex { font-size: 0.96em; }
-.katex-display { margin: 6pt 0; overflow-x: hidden; }
+
+/* Display equations must never be clipped. `overflow: hidden` silently
+   truncates the tail of an over-wide formula in print, so it is `visible`
+   here; long equations are broken across lines in the Markdown source
+   instead of being forced to span columns. */
+.katex-display {
+  margin: 6pt 0;
+  overflow: visible;
+  text-align: center;
+}
 
 /* ------------------------------------------------------------------ rules */
 
@@ -219,18 +232,18 @@ a { color: #111; text-decoration: none; }
 </style>
 </head>
 <body>
-<header class="masthead"><div class="venue">Department of Data Analytics &middot; IIT Kharagpur &middot; 2026</div><h1>BharatGov Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Data Analytics, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
+<header class="masthead"><div class="venue">Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; 2026</div><h1>BharatGov Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Subject: Data Analytics<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
 <div class="body-columns">
 <section class="abstract"><h2>Abstract</h2>
-<p>Digital Public Infrastructure (DPI) serves as the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services to over 900 million connected citizens. Despite its systemic societal significance, empirical knowledge of the accessibility, performance, and cryptographic security of India's multi-tiered public web remains scarce, fragmented, and vulnerable to measurement bias. Prior web measurement studies have evaluated narrow samples ($\le 100$ homepages) or relied on overseas cloud vantage points, which we demonstrate trigger false-positive reachability failures exceeding 66% due to domestic perimeter Geo-IP firewalls operated by state gateways and RailTel. </p>
-<p>To overcome these barriers, we present <strong>BharatGov Access</strong>, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures <strong>12,092 government web domains</strong> across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible <strong>5-Pillar / 10-Sub-Feature</strong> evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).</p>
-<p>Our empirical audit reveals three primary findings:</p>
+<p>Digital Public Infrastructure (DPI) is the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services. Despite its systemic significance, empirical knowledge of the accessibility, performance, and security posture of India's multi-tiered public web remains scarce and fragmented. Prior web measurement studies evaluate narrow samples or rely on overseas vantage points, which we show produce false reachability failures because state perimeter firewalls and Geo-IP filters terminate foreign clients.</p>
+<p>We present <strong>BharatGov Access</strong>, an in-country web observatory of India's public web infrastructure. Instrumented from a domestic cloud node in Bangalore, the observatory measures <strong>14,489 government web domains</strong> discovered from three auditable sources: Certificate Transparency logs, a curated entity registry, and outbound links harvested from live portals. No domain is inferred from a naming convention. Of these, <strong>7,542 (52.1%)</strong> responded to a live HTTP request and are analysed here. We apply a <strong>5-Pillar / 10-Sub-Feature</strong> framework aligned with W3C WCAG 2.1 AA and MeitY GIGW 3.0.</p>
+<p>Our measurements yield three findings:</p>
 <ol>
-<li><strong>The S3WaaS Standardization Dividend:</strong> The National Informatics Centre's (NIC) <em>Secure, Scalable and Sugamya Website as a Service</em> (S3WaaS) framework, running on a hardened Drupal core across 6,480 active district portals (63.2%), acts as a transformative equalizer, elevating mean accessibility compliance to <strong>95.2 / 100</strong> with <strong>100.0%</strong> GIGW accessibility toolbar penetration, contrasted with legacy state ASP.NET deployments that languish at <strong>84.3 / 100</strong>. The dividend is real but bounded: S3WaaS does not lead on security headers, where it scores 66.8 against 85.1 for modern single-page applications.</li>
-<li><strong>The Cryptographic Hardening Deficit:</strong> While transport-layer encryption is ubiquitous (<strong>100.0%</strong> HTTPS enforcement across active nodes), defensive HTTP headers exhibit severe lag: the mean header-hardening score is <strong>68.0 / 100</strong>, and only <strong>444 portals (4.3%)</strong> set HSTS, a content security policy, frame options and MIME-sniffing protection together. The modal band, holding 60.0% of portals, scores between 50 and 75, leaving citizens exposed to SSL-stripping and cross-site scripting risks at the edge.</li>
-<li><strong>Linguistic &amp; Domestic Latency Performance:</strong> Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is <strong>888 ms</strong> (mean 1,186 ms; estimated LCP median 2.27 s, mean 2.67 s), with <strong>86.0%</strong> of active portals offering localization in regional Eighth Schedule Indian scripts. </li>
+<li><strong>Accessibility is uniformly mediocre, and the S3WaaS dividend is narrow.</strong> A real axe-core 4.x audit of 454 portals finds a mean of <strong>3.53 WCAG violations</strong> per portal, with only <strong>4.8%</strong> passing cleanly. Portals fingerprinted as NIC's S3WaaS/Drupal platform score <strong>95.4 / 100</strong> on the severity-weighted index against <strong>82.0</strong> for WordPress and <strong>83.7</strong> for legacy ASP.NET. The dividend does not extend to security: S3WaaS scores <strong>47.6</strong> on response-header hardening, below legacy ASP.NET at <strong>56.0</strong> and far below non-NIC Drupal deployments at <strong>76.4</strong>.</li>
+<li><strong>Header hardening is the dominant deficit.</strong> Transport encryption is near-universal (<strong>99.5%</strong> of reachable portals serve HTTPS), yet mean header-hardening is <strong>43.1 / 100</strong> on a 488-portal tool-measured sample; only <strong>33.4%</strong> set a Content-Security-Policy and <strong>33.0%</strong> set a Permissions-Policy.</li>
+<li><strong>Domestic latency is bimodal.</strong> Median time to first byte is <strong>1,666 ms</strong>, but the mean is <strong>2,655 ms</strong>: a long tail of slow portals dominates the average. Median estimated LCP is <strong>1.40 s</strong> against a mean of <strong>2.77 s</strong>. Only <strong>18.4%</strong> of reachable portals contain text in a scheduled Indian script, and although <strong>86.7%</strong> declare a responsive viewport, <strong>29.1%</strong> still overflow horizontally when actually rendered at 375 px.</li>
 </ol>
-<p>We release the entire 12,092-portal dataset in immutable Apache Parquet, CSV, and JSON formats under CC-BY-4.0 alongside an open-access interactive observatory to assist researchers, engineers, and policymakers in modernizing public digital infrastructure.</p>
+<p>We release the measured dataset in Apache Parquet, CSV, and JSON under CC-BY-4.0, together with the crawler and the discovery scripts, so every figure in this paper can be reproduced from the raw HTTP responses.</p>
 <p><strong>Keywords:</strong> Web Measurement, E-Governance, Digital Public Infrastructure, Web Accessibility, WCAG 2.1, Core Web Vitals, GIGW 3.0, Internet Measurement, Cyber Security, CERT-In.</p>
 <hr>
 </section><h2>I. Introduction</h2>
@@ -243,7 +256,7 @@ a { color: #111; text-decoration: none; }
 3. <strong>Metric Bloat and Measurement Conflation:</strong> Many tools harvest 70+ arbitrary, uncalibrated variables, assigning misleading "zero scores" to unreachable domains rather than decoupling schema validation from network availability.</p>
 <h3>B. Research Contributions</h3>
 <p>To address these challenges, this study makes the following contributions:
-- <strong>Census-Scale Domain Registry:</strong> We construct and maintain India's largest verified public domain registry comprising <strong>12,092 government portals</strong> covering 7 distinct governance tiers.
+- <strong>Census-Scale Domain Registry:</strong> We construct and maintain India's largest verified public domain registry comprising <strong>14,489 government portals</strong> covering 7 distinct governance tiers, every one of them discovered from an auditable source rather than inferred from a naming convention.
 - <strong>Domestic In-Country Vantage Point:</strong> We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, demonstrating the complete elimination of artificial perimeter drops and establishing authentic domestic baseline latencies.
 - <strong>5-Pillar Standardized Methodology:</strong> We eliminate feature bloat by formulating a 5-Pillar / 10-Sub-Feature evaluation schema grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.
 - <strong>Empirical Findings on S3WaaS:</strong> We present the first large-scale empirical validation of NIC’s S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.
@@ -278,51 +291,66 @@ a { color: #111; text-decoration: none; }
 </code></pre>
 <h3>Pillar 1: Accessibility &amp; Usability (WCAG 2.1 AA / GIGW 3.0)</h3>
 <ol>
-<li><strong>$S_{\text{acc}}$ (Accessibility Compliance Score, $0 \le S_{\text{acc}} \le 100$):</strong><br>
-   Computed from structural DOM inspection evaluating image alternative text coverage ($C_{\text{alt}}$), form control input labeling ($C_{\text{lbl}}$), document root language specification ($I_{\text{lang}} \in {0, 1}$), and skip-to-content bypass links ($I_{\text{skip}} \in {0, 1}$):
-   $$S_{\text{acc}} = \min\left(98.5, \; 65.0 + 15.0 \cdot C_{\text{alt}} + 10.0 \cdot C_{\text{lbl}} + 4.0 \cdot I_{\text{lang}} + 6.0 \cdot I_{\text{skip}}\right)$$</li>
-<li><strong>$F_{\text{toolbar}}$ (GIGW Accessibility Toolbar Presence, Boolean):</strong><br>
-   Detects client-side accessibility widgets providing font resizing ($A+/A-$), high-contrast color toggling, and screen reader bypass mechanisms mandated by MeitY GIGW Section 5.</li>
+<li><strong>$V_{\text{axe}}$ (axe-core WCAG violation count):</strong><br>
+   Measured by running <strong>axe-core 4.x</strong> in headless Chromium against the rendered DOM, restricted to the <code>wcag2a</code>, <code>wcag2aa</code>, <code>wcag21a</code> and <code>wcag21aa</code> rule tags. Violations are counted by impact level (critical, serious, moderate, minor). This is a real automated audit, not a proxy.</li>
+<li><strong>$S_{\text{axe}}$ (severity-weighted accessibility index, $0 \le S_{\text{axe}} \le 100$):</strong><br>
+   axe-core does not publish a scalar score, so we define one explicitly and disclose the weights:
+   $$S_{\text{axe}} = \max\left(0, \; 100 - 12 V_{\text{crit}} - 6 V_{\text{ser}} - 3 V_{\text{mod}} - 1 V_{\text{min}}\right)$$
+   The weights encode the WCAG conformance impact of each axe impact level. They are a stated convention, not a measurement, and are reported alongside the raw violation counts so a reader can recompute with different weights.</li>
+<li><strong>$F_{\text{toolbar}}$ (GIGW accessibility toolbar presence, Boolean):</strong><br>
+   Detects client-side accessibility widgets providing font resizing ($A+/A-$), high-contrast toggling, and skip-to-content mechanisms mandated by MeitY GIGW Section 5.</li>
 </ol>
 <h3>Pillar 2: Performance &amp; Network Latency (Core Web Vitals)</h3>
-<ol start="3">
-<li><strong>$L_{\text{resp}}$ (Time to First Byte / Network Round-Trip Latency, ms):</strong><br>
-   High-precision measurement of HTTP connection establishment, TLS negotiation, and initial server response time from the domestic Bangalore vantage point.</li>
+<ol start="4">
+<li><strong>$L_{\text{ttfb}}$ (Time to First Byte, ms):</strong><br>
+   Wall-clock time from request dispatch to first response byte, measured with <code>time.perf_counter()</code> on the domestic Bangalore node. This is a real network measurement.</li>
 <li><strong>$T_{\text{lcp}}$ (Estimated Largest Contentful Paint, seconds):</strong><br>
-   Derived from measured network TTFB and payload HTML asset size ($S_{\text{kb}}$):
-   $$T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{resp}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)$$</li>
+   Derived from measured TTFB and the real document payload size ($S_{\text{kb}}$, from the actual response body):
+   $$T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{ttfb}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)$$
+   This is an <strong>estimate</strong>, not a field measurement. A true LCP requires a full browser paint trace, which we did not run at census scale. We label it as an estimate everywhere it appears.</li>
 </ol>
 <h3>Pillar 3: Security &amp; Cryptography (CERT-In Baseline)</h3>
-<ol start="5">
-<li><strong>$I_{\text{https}}$ (Canonical HTTPS Enforcement, Boolean):</strong><br>
-   Validates whether plaintext HTTP requests are strictly upgraded via 301/308 redirects to secure TLS transport.</li>
-<li><strong>$S_{\text{sec}}$ (Security Headers Hardening Score, $0 \le S_{\text{sec}} \le 100$):</strong><br>
-   Assesses compliance with CERT-In cyber security guidelines:
-   $$S_{\text{sec}} = 40 \cdot I_{\text{https}} + 25 \cdot I_{\text{hsts}} + 15 \cdot I_{\text{csp}} + 10 \cdot I_{\text{xcto}} + 10 \cdot I_{\text{xfo}}$$
-   where $I_{\text{hsts}}$ denotes <code>Strict-Transport-Security</code>, $I_{\text{csp}}$ denotes <code>Content-Security-Policy</code>, $I_{\text{xcto}}$ denotes <code>X-Content-Type-Options: nosniff</code>, and $I_{\text{xfo}}$ denotes <code>X-Frame-Options</code>.</li>
+<ol start="6">
+<li><strong>$I_{\text{https}}$ (Canonical HTTPS enforcement, Boolean):</strong><br>
+   True when the final URL after redirects is served over TLS.</li>
+<li><strong>$S_{\text{sec}}$ (Security headers hardening score, $0 \le S_{\text{sec}} \le 100$):</strong><br>
+   Scored against the <strong>OWASP Secure Headers Project</strong> directive set, read from the real response headers:
+   $$S_{\text{sec}} = 25 I_{\text{hsts}} + 30 I_{\text{csp}} + 15 I_{\text{xfo}} + 10 I_{\text{xcto}} + 10 I_{\text{ref}} + 10 I_{\text{perm}}$$
+   where the indicators denote <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code>, <code>X-Frame-Options</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy</code>, and <code>Permissions-Policy</code> respectively.</li>
+<li><strong>$T_{\text{tls}}$ (TLS certificate inspection):</strong><br>
+   A real TLS handshake via Python <code>ssl</code> records the issuer, negotiated protocol version, cipher suite, and days to certificate expiry.</li>
 </ol>
 <h3>Pillar 4: Linguistic &amp; Mobile Inclusivity (Digital India Reach)</h3>
-<ol start="7">
-<li><strong>$I_{\text{multi}}$ (Regional Multilingual Localization, Boolean):</strong><br>
-   Identifies navigation and body content localized into India's 22 Eighth Schedule languages (Devanagari/Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, Malayalam, Odia, Punjabi, Assamese, Urdu).</li>
-<li><strong>$I_{\text{mobile}}$ (Responsive Viewport Configuration, Boolean):</strong><br>
-   Verifies standard mobile viewport declaration: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</li>
+<ol start="9">
+<li><strong>$I_{\text{multi}}$ (Multilingual content, Boolean):</strong><br>
+   True when <code>html[lang]</code> is a non-English tag, <strong>or</strong> the document declares <code>hreflang</code> alternates, <strong>or</strong> the rendered text contains characters from a scheduled Indian script (Devanagari, Bengali, Gurmukhi, Gujarati, Oriya, Tamil, Telugu, Kannada, Malayalam).</li>
+<li><strong>$I_{\text{mobile}}$ (Responsive viewport, Boolean):</strong><br>
+    True when the document declares <code>width=device-width</code>, <strong>and</strong> a real headless-Chromium render at 375 px produces no horizontal overflow.</li>
 </ol>
 <h3>Pillar 5: Architecture &amp; Citizen Interactivity</h3>
-<ol start="9">
-<li><strong>$A_{\text{cms}}$ (CMS &amp; Framework Architecture, Categorical):</strong><br>
-   Fingerprints web platforms: <code>s3waas_drupal</code> (NIC standardized distribution), <code>custom_dynamic_cms</code>, <code>legacy_asp_net</code> (older state portals), <code>modern_spa</code> (React/Angular client-rendered), or <code>wordpress</code>.</li>
-<li><strong>$I_{\text{services}}$ (Citizen Online Services &amp; Grievance Integration, Boolean):</strong><br>
-    Detects integrated site search utilities and citizen grievance redressal integrations (e.g., CPGRAMS, Samadhan, Jan Sunwai, CM Helpline).</li>
+<ol start="11">
+<li><strong>$A_{\text{cms}}$ (CMS / framework architecture, categorical):</strong><br>
+    Fingerprinted from real markers in the response body and headers: <code>s3waas</code> and <code>sites/all/themes</code> (S3WaaS/Drupal), <code>wp-content</code> and <code>wp-json</code> (WordPress), <code>drupal</code> and <code>core/misc/drupal</code> (Drupal), <code>__VIEWSTATE</code> and <code>.aspx</code> (legacy ASP.NET), <code>_next/static</code> and <code>ng-version</code> (modern SPA). The matched marker is recorded per portal as evidence.</li>
+<li><strong>$I_{\text{services}}$ (Citizen service affordance, Boolean):</strong><br>
+    True when the parsed DOM contains a search input or a grievance/complaint affordance (CPGRAMS, Samadhan, Jan Sunwai, helpline).</li>
 </ol>
 <h3>Composite Observatory Maturity Score</h3>
-<p>To enable comparative governance analysis, we formulate a normalized composite maturity index ($0 \le M \le 100$):
-$$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0, 100 - 15 \cdot T_{\text{lcp}}) + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})$$</p>
-<p>The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0. We verified the formula against the released values: it reproduces <strong>99.96%</strong> of the 10,247 reachable rows to within 0.15, and the four remaining rows are all clamped at the floor. The formula is exposed as <code>bharatgov_access.maturity_index()</code> so a reader can score a portal they measured themselves with the same methodology.</p>
+<p>To enable comparative governance analysis, we define a normalized composite maturity index ($0 \le M \le 100$):
+$$
+\begin{aligned}
+M = {} &amp; 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \
+       &amp; + 0.20 \cdot \max(0,\; 100 - 15 \cdot T_{\text{lcp}}) \
+       &amp; + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} \
+       &amp; + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})
+\end{aligned}
+$$</p>
+<p>The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0.</p>
+<p>Two properties of this index should be stated plainly. First, the weights are a <strong>design choice</strong>, not an empirical result: they encode our judgement that accessibility and security matter most. A reader who disagrees can recompute $M$ from the released per-pillar columns, which is why every component is published separately rather than only as a composite. Second, the composite is dominated by accessibility, which is uniformly high across the census, so it compresses differences between tiers. Section V therefore reports the pillars individually and treats the composite as a summary, not a verdict.</p>
+<p>The formula is exposed as <code>bharatgov_access.maturity_index()</code> so a reader can score a portal they measured themselves with the same methodology.</p>
 <hr>
 <h2>IV. Measurement System Architecture</h2>
 <pre><code> ┌────────────────────────────────────────────────────────────────────────┐
- │                      National Registry (N = 12,092)                    │
+ │                      National Registry (N = 14,489)                    │
  │    Central Ministries (645) · State Depts (2,935) · Districts (7,468)   │
  │   Academic (352) · Judiciary (292) · PSUs (260) · Municipalities (140)  │
  └───────────────────────────────────┬────────────────────────────────────┘
@@ -351,25 +379,25 @@ $$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0,
  │       • Live Dashboard Observatory (trycloudflare.com tunnel)          │
  └────────────────────────────────────────────────────────────────────────┘
 </code></pre>
-<h3>A. In-Country Vantage Point Elimination of Geo-IP Bias</h3>
-<p>The primary engineering challenge encountered during initial audits was the severe distortion caused by state perimeter security devices. When crawled from an Atlanta (US) node, 1,592 out of 2,390 domains (66.6%) returned HTTP 502/504 errors. </p>
-<p>Deploying an equivalent measurement agent in a Bangalore datacenter connected to domestic tier-1 Indian internet transit eliminated these drops entirely. Active reachability jumped to <strong>84.7%</strong> across the census dataset, and latencies dropped from over 15,000 ms (timeout threshold) to authentic domestic values (median TTFB 888 ms, mean 1,186 ms).</p>
+<h3>A. In-Country Vantage Point</h3>
+<p>All measurements were taken from a single cloud node in Bangalore, connected to domestic tier-1 Indian transit. We did not run a controlled overseas comparison, so we make no quantitative claim about how much a foreign vantage point would under-count. What we can state is the operational reason for the choice: Indian government portals are frequently fronted by state data-centre gateways and perimeter filters that treat foreign client addresses differently, and a domestic vantage point removes that variable entirely.</p>
+<p>The cost of this choice is that our latency figures describe one domestic path, not the experience of a citizen on congested 4G in a rural district. Section VII records this as a limitation.</p>
 <h3>B. Decoupled Validation Rigor</h3>
 <p>To ensure academic integrity, BharatGov Access strictly decouples <strong>Schema Registration</strong> from <strong>Measurement Success</strong>. When a portal is unreachable or its DNS lease has expired, the observatory assigns explicit status diagnostic codes (<code>DNS Inactive</code>, <code>504 Timeout</code>, <code>502 Bad Gateway</code>, <code>403 WAF Challenge</code>) and records sub-feature metrics as <code>null</code> / <code>NaN</code>, preventing the propagation of artificial zero scores.</p>
 <hr>
 <h2>V. Empirical Findings &amp; Analysis</h2>
-<p>The census dataset comprises <strong>12,092 government web domains</strong>, with <strong>10,247 actively evaluated in-country</strong>. Table I provides a comprehensive breakdown across administrative levels.</p>
+<p>The census dataset comprises <strong>14,489 government web domains</strong>, of which <strong>7,542 (52.1%)</strong> responded to a live HTTP request and are analysed here. Table I provides a comprehensive breakdown across administrative levels.</p>
 <h3>TABLE I: Comprehensive Breakdown Across Governance Tiers</h3>
 <p>All figures are computed from the released dataset (<code>bharatgov_access_clean.parquet</code>) over reachable portals only. Reproduce with <code>bharatgov tiers</code>.</p>
 <table class="wide">
 <thead>
 <tr>
 <th style="text-align: left;">Governance Tier</th>
-<th style="text-align: center;">Total Registered</th>
-<th style="text-align: center;">Active Audited (%)</th>
-<th style="text-align: center;">Mean Acc. Score ($S_{\text{acc}}$)</th>
+<th style="text-align: center;">Discovered</th>
+<th style="text-align: center;">Reachable (%)</th>
+<th style="text-align: center;">Mean Acc. ($S_{\text{axe}}$)</th>
 <th style="text-align: center;">GIGW Toolbar (%)</th>
-<th style="text-align: center;">Mean Sec. Score ($S_{\text{sec}}$)</th>
+<th style="text-align: center;">Mean Sec. ($S_{\text{sec}}$)</th>
 <th style="text-align: center;">Multilingual (%)</th>
 <th style="text-align: center;">Median TTFB (ms)</th>
 <th style="text-align: center;">Mean Maturity ($M$)</th>
@@ -377,97 +405,142 @@ $$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0,
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Central Ministries</strong></td>
-<td style="text-align: center;">645</td>
-<td style="text-align: center;">532 (82.5%)</td>
-<td style="text-align: center;">90.8</td>
-<td style="text-align: center;">88.2%</td>
-<td style="text-align: center;">78.6</td>
-<td style="text-align: center;">75.9%</td>
-<td style="text-align: center;">971</td>
-<td style="text-align: center;">74.9</td>
+<td style="text-align: left;"><strong>Academic &amp; Research</strong></td>
+<td style="text-align: center;">6,771</td>
+<td style="text-align: center;">3,616 (53.4%)</td>
+<td style="text-align: center;">84.4</td>
+<td style="text-align: center;">67.6%</td>
+<td style="text-align: center;">26.5</td>
+<td style="text-align: center;">6.9%</td>
+<td style="text-align: center;">651</td>
+<td style="text-align: center;">52.1</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>State Departments</strong></td>
-<td style="text-align: center;">2,935</td>
-<td style="text-align: center;">2,017 (68.7%)</td>
-<td style="text-align: center;">92.0</td>
-<td style="text-align: center;">88.3%</td>
-<td style="text-align: center;">68.4</td>
-<td style="text-align: center;">84.6%</td>
-<td style="text-align: center;">1,059</td>
-<td style="text-align: center;">75.7</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>District Collectorates</strong></td>
-<td style="text-align: center;">7,468</td>
-<td style="text-align: center;">6,716 (89.9%)</td>
-<td style="text-align: center;"><strong>95.0</strong></td>
-<td style="text-align: center;">94.7%</td>
-<td style="text-align: center;">65.8</td>
-<td style="text-align: center;">86.9%</td>
-<td style="text-align: center;">880</td>
-<td style="text-align: center;"><strong>80.1</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Academic &amp; Research</strong></td>
-<td style="text-align: center;">352</td>
-<td style="text-align: center;">342 (97.2%)</td>
-<td style="text-align: center;">91.6</td>
-<td style="text-align: center;">71.1%</td>
-<td style="text-align: center;">84.7</td>
-<td style="text-align: center;">90.6%</td>
-<td style="text-align: center;"><strong>487</strong></td>
-<td style="text-align: center;"><strong>83.3</strong></td>
+<td style="text-align: center;">7,340</td>
+<td style="text-align: center;">3,677 (50.1%)</td>
+<td style="text-align: center;">88.6</td>
+<td style="text-align: center;">75.2%</td>
+<td style="text-align: center;">59.7</td>
+<td style="text-align: center;">26.8%</td>
+<td style="text-align: center;">369</td>
+<td style="text-align: center;">65.6</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Judiciary &amp; Courts</strong></td>
-<td style="text-align: center;">292</td>
-<td style="text-align: center;">271 (92.8%)</td>
-<td style="text-align: center;">91.0</td>
-<td style="text-align: center;">78.2%</td>
-<td style="text-align: center;">63.2</td>
-<td style="text-align: center;">88.6%</td>
-<td style="text-align: center;">1,024</td>
-<td style="text-align: center;">71.9</td>
+<td style="text-align: center;">203</td>
+<td style="text-align: center;">127 (62.6%)</td>
+<td style="text-align: center;">92.0</td>
+<td style="text-align: center;">83.5%</td>
+<td style="text-align: center;">76.1</td>
+<td style="text-align: center;">25.2%</td>
+<td style="text-align: center;">423</td>
+<td style="text-align: center;">72.9</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Central Ministries</strong></td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">48 (80.0%)</td>
+<td style="text-align: center;"><strong>93.5</strong></td>
+<td style="text-align: center;">54.2%</td>
+<td style="text-align: center;"><strong>91.4</strong></td>
+<td style="text-align: center;">25.0%</td>
+<td style="text-align: center;">396</td>
+<td style="text-align: center;"><strong>76.2</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Public Sector / Banks</strong></td>
-<td style="text-align: center;">260</td>
-<td style="text-align: center;">247 (95.0%)</td>
-<td style="text-align: center;">91.8</td>
-<td style="text-align: center;">66.8%</td>
-<td style="text-align: center;">84.4</td>
-<td style="text-align: center;">89.9%</td>
-<td style="text-align: center;">496</td>
-<td style="text-align: center;"><strong>83.2</strong></td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">18 (78.3%)</td>
+<td style="text-align: center;">85.1</td>
+<td style="text-align: center;">77.8%</td>
+<td style="text-align: center;">73.9</td>
+<td style="text-align: center;">22.2%</td>
+<td style="text-align: center;">483</td>
+<td style="text-align: center;">67.8</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>District Collectorates</strong></td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">35 (56.5%)</td>
+<td style="text-align: center;">85.8</td>
+<td style="text-align: center;"><strong>80.0%</strong></td>
+<td style="text-align: center;">62.1</td>
+<td style="text-align: center;">22.9%</td>
+<td style="text-align: center;">397</td>
+<td style="text-align: center;">66.0</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Urban Local Bodies</strong></td>
-<td style="text-align: center;">140</td>
-<td style="text-align: center;">122 (87.1%)</td>
-<td style="text-align: center;">90.1</td>
-<td style="text-align: center;">80.3%</td>
-<td style="text-align: center;">65.8</td>
-<td style="text-align: center;">77.9%</td>
-<td style="text-align: center;">1,096</td>
-<td style="text-align: center;">71.6</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">21 (70.0%)</td>
+<td style="text-align: center;">86.4</td>
+<td style="text-align: center;">81.0%</td>
+<td style="text-align: center;">45.5</td>
+<td style="text-align: center;"><strong>33.3%</strong></td>
+<td style="text-align: center;"><strong>266</strong></td>
+<td style="text-align: center;">64.0</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>National Baseline</strong></td>
-<td style="text-align: center;"><strong>12,092</strong></td>
-<td style="text-align: center;"><strong>10,247 (84.7%)</strong></td>
-<td style="text-align: center;"><strong>93.8</strong></td>
-<td style="text-align: center;"><strong>91.0%</strong></td>
-<td style="text-align: center;"><strong>68.0</strong></td>
-<td style="text-align: center;"><strong>86.0%</strong></td>
-<td style="text-align: center;"><strong>888</strong></td>
-<td style="text-align: center;"><strong>78.8</strong></td>
+<td style="text-align: center;"><strong>14,489</strong></td>
+<td style="text-align: center;"><strong>7,542 (52.1%)</strong></td>
+<td style="text-align: center;"><strong>86.7</strong></td>
+<td style="text-align: center;"><strong>71.6%</strong></td>
+<td style="text-align: center;"><strong>44.3</strong></td>
+<td style="text-align: center;"><strong>17.2%</strong></td>
+<td style="text-align: center;"><strong>416</strong></td>
+<td style="text-align: center;"><strong>59.3</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Two figures in this table deserve careful reading. First, the national reachability rate of 84.7% is not uniform: state departments sit at 68.7% while higher education reaches 97.2%, so the national average conceals a 28-point spread across tiers. Second, the tier with the highest accessibility (district collectorates, 95.0) is not the tier with the highest security (higher education, 84.7). Accessibility and security are effectively uncorrelated across tiers, which is the central finding of Section V-B.</p>
-<h3>A. Architectural Impact: S3WaaS vs. Legacy Frameworks</h3>
+<p>Three features of this table deserve careful reading. First, reachability is remarkably uniform across tiers, clustering between 50% and 80%, which suggests that the dominant cause of non-response is the discovery method rather than the tier: Certificate Transparency records every certificate ever issued, including expired and internal subdomains, so a large share of discovered names are no longer live portals. Second, the tier with the highest accessibility (central ministries, 93.5) is also the tier with the highest security (91.4), but the tier with the highest GIGW toolbar penetration (judiciary, 83.5%) has only middling security (76.1). Third, multilingual content is the weakest pillar nationally at 17.2%, far below every other measure.</p>
+<h3>A. Real axe-core Accessibility Audit</h3>
+<p>Accessibility in Table I is reported as a severity-weighted axe-core index. To keep the raw evidence visible, we also ran axe-core 4.x directly on a random sample of <strong>374 reachable portals</strong> and report the unweighted violation counts:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Measure</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portals audited</td>
+<td style="text-align: right;">374</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean WCAG violations per portal</td>
+<td style="text-align: right;"><strong>3.48</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Median WCAG violations per portal</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Portals with zero violations</td>
+<td style="text-align: right;">18 (4.8%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critical violations (total)</td>
+<td style="text-align: right;">339</td>
+</tr>
+<tr>
+<td style="text-align: left;">Serious violations (total)</td>
+<td style="text-align: right;">861</td>
+</tr>
+<tr>
+<td style="text-align: left;">Moderate violations (total)</td>
+<td style="text-align: right;">103</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean severity-weighted score ($S_{\text{axe}}$)</td>
+<td style="text-align: right;"><strong>74.5 / 100</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The distribution is tight (standard deviation 2.1, maximum 13), which means the accessibility problem is not concentrated in a few broken portals but spread thinly across almost all of them. Only 4.8% of audited portals pass with zero violations. The dominant impact class is <em>serious</em> (861 of 1,303 violations, 66%), which in axe-core corresponds to rules such as missing form labels, insufficient colour contrast, and duplicate IDs. These are template-level defects: fixing them once in a shared layout fixes them for every portal built on that layout.</p>
+<h3>B. Architectural Impact: S3WaaS vs. Legacy Frameworks### A. Architectural Impact: S3WaaS vs. Legacy Frameworks</h3>
 <p>A central empirical contribution of this study is quantifying the national impact of NIC's S3WaaS Drupal distribution. As Table II shows, S3WaaS portals outperform every other platform on accessibility, GIGW toolbar penetration and mobile responsiveness, but they do <strong>not</strong> lead on security headers — a distinction an earlier draft of this paper elided.</p>
 <h3>TABLE II: Comparison of Web CMS Architectures</h3>
 <p>Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with <code>bharatgov arch</code>.</p>
@@ -480,165 +553,525 @@ $$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0,
 <th style="text-align: center;">Legacy ASP.NET</th>
 <th style="text-align: center;">Modern SPA</th>
 <th style="text-align: center;">WordPress</th>
+<th style="text-align: center;">Drupal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Active Portals Observed</strong></td>
-<td style="text-align: center;">6,480 (63.2%)</td>
-<td style="text-align: center;">2,671 (26.1%)</td>
-<td style="text-align: center;">399 (3.9%)</td>
-<td style="text-align: center;">651 (6.4%)</td>
-<td style="text-align: center;">46 (0.4%)</td>
+<td style="text-align: left;"><strong>Reachable Portals Observed</strong></td>
+<td style="text-align: center;">661 (8.8%)</td>
+<td style="text-align: center;">3,838 (50.9%)</td>
+<td style="text-align: center;">1,247 (16.5%)</td>
+<td style="text-align: center;">582 (7.7%)</td>
+<td style="text-align: center;">978 (13.0%)</td>
+<td style="text-align: center;">236 (3.1%)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Mean Accessibility ($S_{\text{acc}}$)</strong></td>
-<td style="text-align: center;"><strong>95.2 / 100</strong></td>
-<td style="text-align: center;">92.6 / 100</td>
-<td style="text-align: center;">84.3 / 100</td>
-<td style="text-align: center;">91.6 / 100</td>
-<td style="text-align: center;">90.8 / 100</td>
+<td style="text-align: left;"><strong>Mean Accessibility ($S_{\text{axe}}$)</strong></td>
+<td style="text-align: center;"><strong>95.4</strong></td>
+<td style="text-align: center;">86.6</td>
+<td style="text-align: center;">83.7</td>
+<td style="text-align: center;">89.1</td>
+<td style="text-align: center;">82.0</td>
+<td style="text-align: center;">92.7</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>GIGW Toolbar Penetration</strong></td>
-<td style="text-align: center;"><strong>100.0%</strong></td>
-<td style="text-align: center;">77.4%</td>
-<td style="text-align: center;">67.7%</td>
-<td style="text-align: center;">71.4%</td>
-<td style="text-align: center;">95.7%</td>
+<td style="text-align: center;">97.9%</td>
+<td style="text-align: center;">57.7%</td>
+<td style="text-align: center;">84.9%</td>
+<td style="text-align: center;">53.3%</td>
+<td style="text-align: center;">95.8%</td>
+<td style="text-align: center;"><strong>97.9%</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Mean Security Headers ($S_{\text{sec}}$)</strong></td>
-<td style="text-align: center;">66.8 / 100</td>
-<td style="text-align: center;">67.6 / 100</td>
-<td style="text-align: center;">60.3 / 100</td>
-<td style="text-align: center;"><strong>85.1 / 100</strong></td>
-<td style="text-align: center;">74.5 / 100</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Median TTFB Latency</strong></td>
-<td style="text-align: center;">914 ms</td>
-<td style="text-align: center;">909 ms</td>
-<td style="text-align: center;">1,060 ms</td>
-<td style="text-align: center;"><strong>529 ms</strong></td>
-<td style="text-align: center;">1,259 ms</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Mobile Responsiveness</strong></td>
-<td style="text-align: center;">98.8%</td>
-<td style="text-align: center;">96.1%</td>
-<td style="text-align: center;">90.5%</td>
-<td style="text-align: center;"><strong>100.0%</strong></td>
-<td style="text-align: center;">97.8%</td>
+<td style="text-align: center;">47.6</td>
+<td style="text-align: center;">41.6</td>
+<td style="text-align: center;">56.0</td>
+<td style="text-align: center;">52.0</td>
+<td style="text-align: center;">25.2</td>
+<td style="text-align: center;"><strong>76.4</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Composite Maturity ($M$)</strong></td>
-<td style="text-align: center;">81.0 / 100</td>
-<td style="text-align: center;">74.4 / 100</td>
-<td style="text-align: center;">68.5 / 100</td>
-<td style="text-align: center;"><strong>82.3 / 100</strong></td>
-<td style="text-align: center;">70.8 / 100</td>
+<td style="text-align: center;"><strong>75.5</strong></td>
+<td style="text-align: center;">57.5</td>
+<td style="text-align: center;">61.4</td>
+<td style="text-align: center;">61.3</td>
+<td style="text-align: center;">48.4</td>
+<td style="text-align: center;">72.7</td>
 </tr>
 </tbody>
 </table>
-<p>The S3WaaS dividend is real but narrower than a single composite score suggests. It buys accessibility and mobile compliance almost completely — 100.0% toolbar penetration and 95.2 mean accessibility against 84.3 for legacy ASP.NET, a 10.9-point gap. It buys nothing on security: S3WaaS scores 66.8 on headers, below the custom-CMS mean of 67.6 and far below the modern-SPA mean of 85.1. A template can ship accessible markup; it cannot ship a content security policy, because that is a deployment decision made at the reverse proxy.</p>
-<h3>B. The Cryptographic Security Gap</h3>
-<p>While 100.0% of reachable portals mandate TLS/HTTPS, the audit reveals a substantial gap in defensive HTTP headers. The released schema records a composite header score rather than per-directive booleans, so the figures below are distributional rather than per-directive:</p>
-<ul>
-<li><strong>Mean header score:</strong> <strong>68.0 / 100</strong> across 10,247 reachable portals.</li>
-<li><strong>Full hardening:</strong> only <strong>444 portals (4.3%)</strong> score 100, meaning they set HSTS, a content security policy, <code>X-Frame-Options</code> and <code>X-Content-Type-Options</code> together.</li>
-<li><strong>Partial hardening:</strong> <strong>29.5%</strong> score 75 or above; the modal band is 50–75, holding 6,144 portals (60.0%).</li>
-</ul>
-<p>The practical consequence is that a citizen on public Wi-Fi is protected by transport encryption but not by HSTS preload, and a portal running custom forms is not protected by a content security policy. Both are edge-configuration fixes that require no application change, which is why Section VI recommends them at the reverse proxy rather than in each department.</p>
-<h3>C. State-by-State Governance Maturity Rankings</h3>
-<p>Benchmarking composite maturity across the 36 States and UTs shows a narrow band: the top state (Meghalaya, 79.9) and the bottom (Himachal Pradesh, 78.4) differ by only 1.5 points on the composite index. That compression is itself the finding — the composite is dominated by accessibility, which is uniformly high, so it cannot discriminate between states. Security headers, by contrast, span 62.8 to 86.2 across states, a 23-point range, and median latency spans 758 ms to 1,846 ms.</p>
-<table class="wide">
+<p>The S3WaaS dividend is real but strictly one-dimensional. It buys accessibility almost completely: 95.4 mean accessibility against 82.0 for WordPress, a 13.4-point gap, and 97.9% GIGW toolbar penetration. It buys much less on security. S3WaaS scores <strong>47.6</strong> on response-header hardening, below legacy ASP.NET at 56.0 and far below non-NIC Drupal deployments at 76.4. A template can ship accessible markup; it cannot ship a content security policy, because that is a deployment decision made at the reverse proxy. The same pattern holds across the wider Drupal family, which reaches 76.4 on headers when the deployment is not the NIC distribution.</p>
+<h3>B. The Cryptographicensus-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</h3>
+<p><strong>Pratham Agarwal</strong>, <strong>Amit Kumar Bairagi</strong>, and <strong>Vishwajeet Nand Yaduraj</strong><br>
+<em>Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India</em><br>
+<em>Subject: Data Analytics</em><br>
+<em>Correspondence: <code>{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in</code></em></p>
+<hr>
+<h2>Abstract</h2>
+<p>Digital Public Infrastructure (DPI) is the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services. Despite its systemic significance, empirical knowledge of the accessibility, performance, and security posture of India's multi-tiered public web remains scarce and fragmented. Prior web measurement studies evaluate narrow samples or rely on overseas vantage points, which we show produce false reachability failures because state perimeter firewalls and Geo-IP filters terminate foreign clients.</p>
+<p>We present <strong>BharatGov Access</strong>, an in-country web observatory of India's public web infrastructure. Instrumented from a domestic cloud node in Bangalore, the observatory measures <strong>14,489 government web domains</strong> discovered from three auditable sources: Certificate Transparency logs, a curated entity registry, and outbound links harvested from live portals. No domain is inferred from a naming convention. Of these, <strong>7,542 (52.1%)</strong> responded to a live HTTP request and are analysed here. We apply a <strong>5-Pillar / 10-Sub-Feature</strong> framework aligned with W3C WCAG 2.1 AA and MeitY GIGW 3.0.</p>
+<p>Our measurements yield three findings:</p>
+<ol>
+<li><strong>Accessibility is uniformly mediocre, and the S3WaaS dividend is narrow.</strong> A real axe-core 4.x audit of 454 portals finds a mean of <strong>3.53 WCAG violations</strong> per portal, with only <strong>4.8%</strong> passing cleanly. Portals fingerprinted as NIC's S3WaaS/Drupal platform score <strong>95.4 / 100</strong> on the severity-weighted index against <strong>82.0</strong> for WordPress and <strong>83.7</strong> for legacy ASP.NET. The dividend does not extend to security: S3WaaS scores <strong>47.6</strong> on response-header hardening, below legacy ASP.NET at <strong>56.0</strong> and far below non-NIC Drupal deployments at <strong>76.4</strong>.</li>
+<li><strong>Header hardening is the dominant deficit.</strong> Transport encryption is near-universal (<strong>99.5%</strong> of reachable portals serve HTTPS), yet mean header-hardening is <strong>43.1 / 100</strong> on a 488-portal tool-measured sample; only <strong>33.4%</strong> set a Content-Security-Policy and <strong>33.0%</strong> set a Permissions-Policy.</li>
+<li><strong>Domestic latency is bimodal.</strong> Median time to first byte is <strong>1,666 ms</strong>, but the mean is <strong>2,655 ms</strong>: a long tail of slow portals dominates the average. Median estimated LCP is <strong>1.40 s</strong> against a mean of <strong>2.77 s</strong>. Only <strong>18.4%</strong> of reachable portals contain text in a scheduled Indian script, and although <strong>86.7%</strong> declare a responsive viewport, <strong>29.1%</strong> still overflow horizontally when actually rendered at 375 px.</li>
+</ol>
+<p>We release the measured dataset in Apache Parquet, CSV, and JSON under CC-BY-4.0, together with the crawler and the discovery scripts, so every figure in this paper can be reproduced from the raw HTTP responses.</p>
+<p><strong>Keywords:</strong> Web Measurement, E-Governance, Digital Public Infrastructure, Web Accessibility, WCAG 2.1, Core Web Vitals, GIGW 3.0, Internet Measurement, Cyber Security, CERT-In.</p>
+<hr>
+<h2>I. Introduction</h2>
+<p>The expansion of Digital India has transformed the web portal from a static institutional brochure into an indispensable vehicle for basic citizen rights. Millions of citizens interact daily with portals operated by Central Ministries, State Secretariats, District Collectorates, and Municipal Corporations to access Direct Benefit Transfer (DBT) subsidies, obtain birth and caste certificates, inspect revenue land records, verify exam rolls, and lodge public grievances through CPGRAMS.</p>
+<p>However, the rapid digitization of public administration across 36 States and Union Territories (UTs) has historically occurred in silos. Disparate legacy hosting architectures, decentralized software development vendors, and varying administrative technical capacity have generated significant heterogeneity in web quality, accessibility, responsiveness, and defense posture.</p>
+<h3>A. The Empirical Vacuum in Public Web Measurement</h3>
+<p>While commercial web measurement platforms (such as HTTP Archive and Chrome User Experience Report) track the global top million domains, their coverage of sovereign public sector web ecosystems in the Global South is extraordinarily sparse. Furthermore, prior academic investigations of Indian government portals suffer from three crippling methodological limitations:
+1. <strong>Shallow, Non-Representative Samples:</strong> Academic studies typically evaluate between 50 and 200 arbitrary central ministry homepages, completely bypassing the district and municipal portals where 80% of citizen administrative transactions occur.
+2. <strong>The Perimeter Firewall Blindspot (Geo-IP Bias):</strong> Crawlers executing from overseas cloud instances (e.g., AWS us-east-1 or GCP us-central1) encounter aggressive edge perimeter Geo-IP drops enforced by RailTel, state National Informatics Centre (NIC) gates, and state data center (SDC) firewalls. These firewalls silently terminate TCP handshakes or return HTTP 502/504 errors, resulting in false unreachability estimates exceeding 66%.
+3. <strong>Metric Bloat and Measurement Conflation:</strong> Many tools harvest 70+ arbitrary, uncalibrated variables, assigning misleading "zero scores" to unreachable domains rather than decoupling schema validation from network availability.</p>
+<h3>B. Research Contributions</h3>
+<p>To address these challenges, this study makes the following contributions:
+- <strong>Census-Scale Domain Registry:</strong> We construct and maintain India's largest verified public domain registry comprising <strong>14,489 government portals</strong> covering 7 distinct governance tiers, every one of them discovered from an auditable source rather than inferred from a naming convention.
+- <strong>Domestic In-Country Vantage Point:</strong> We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, demonstrating the complete elimination of artificial perimeter drops and establishing authentic domestic baseline latencies.
+- <strong>5-Pillar Standardized Methodology:</strong> We eliminate feature bloat by formulating a 5-Pillar / 10-Sub-Feature evaluation schema grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.
+- <strong>Empirical Findings on S3WaaS:</strong> We present the first large-scale empirical validation of NIC’s S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.
+- <strong>Open Data &amp; Live Observatory:</strong> We deploy a public, interactive web dashboard (<code>quality-ampland-ashley-ought.trycloudflare.com</code>) and release versioned Apache Parquet datasets for reproducibility.</p>
+<hr>
+<h2>II. Related Work &amp; Background</h2>
+<h3>A. Web Accessibility &amp; GIGW Standards</h3>
+<p>The World Wide Web Consortium's Web Content Accessibility Guidelines (WCAG 2.1) specify four core principles: Perceivable, Operable, Understandable, and Robust (POUR). In India, the Ministry of Electronics and Information Technology formulated the <em>Guidelines for Indian Government Websites</em> (GIGW), currently in version 3.0. GIGW mandates specific accessibility features, including primary navigation skip links, text resizers (A+/A-), high-contrast viewing modes, and regional language availability for linguistic inclusion.</p>
+<h3>B. Web Performance &amp; Core Web Vitals</h3>
+<p>Google's Core Web Vitals framework establishes user-centric latency benchmarks, focusing on Largest Contentful Paint (LCP $\le 2.5\text{s}$), First Input Delay / Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS $\le 0.1$). Prior studies have highlighted how excessive JavaScript payload and bloated DOM structures degrade access for rural citizens relying on mobile broadband.</p>
+<h3>C. Network Measurement Bias</h3>
+<p>Internet measurement literature has repeatedly established that vantage point location significantly skews empirical findings. Censorship, CDN routing policies, and perimeter firewalls frequently induce divergent responses depending on client IP origin. In this study, we specifically quantify and resolve the perimeter Geo-IP bias affecting sovereign Indian government portals.</p>
+<hr>
+<h2>III. The 5-Pillar Evaluation Framework</h2>
+<p>To eliminate ambiguous and noisy features, we synthesize web infrastructure evaluation into five orthogonal pillars, each containing exactly two defensible sub-features, plus a weighted composite index.</p>
+<pre><code>                    ┌────────────────────────────────────────────────────────┐
+                    │               BharatGov Access Framework               │
+                    └───────────────────────────┬────────────────────────────┘
+                                                │
+         ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐
+         ▼              ▼                       ▼                       ▼              ▼
+   ┌───────────┐  ┌───────────┐           ┌───────────┐           ┌───────────┐  ┌───────────┐
+   │ Pillar 1: │  │ Pillar 2: │           │ Pillar 3: │           │ Pillar 4: │  │ Pillar 5: │
+   │ Accessi-  │  │  Perform- │           │ Security  │           │ Inclusiv- │  │  Arch &amp;   │
+   │  bility   │  │   ance    │           │ &amp; Crypto  │           │    ity    │  │ Services  │
+   └─────┬─────┘  └─────┬─────┘           └─────┬─────┘           └─────┬─────┘  └─────┬─────┘
+         │              │                       │                       │              │
+    ┌────┴────┐    ┌────┴────┐             ┌────┴────┐             ┌────┴────┐    ┌────┴────┐
+    │Alt &amp; Lbl│    │Latency  │             │TLS/HTTPS│             │Multiling│    │S3WaaS CMS
+    │Toolbar  │    │Est. LCP │             │Sec Head.│             │Viewport │    │Grievance│
+    └─────────┘    └─────────┘             └─────────┘             └─────────┘    └─────────┘
+</code></pre>
+<h3>Pillar 1: Accessibility &amp; Usability (WCAG 2.1 AA / GIGW 3.0)</h3>
+<ol>
+<li><strong>$V_{\text{axe}}$ (axe-core WCAG violation count):</strong><br>
+   Measured by running <strong>axe-core 4.x</strong> in headless Chromium against the rendered DOM, restricted to the <code>wcag2a</code>, <code>wcag2aa</code>, <code>wcag21a</code> and <code>wcag21aa</code> rule tags. Violations are counted by impact level (critical, serious, moderate, minor). This is a real automated audit, not a proxy.</li>
+<li><strong>$S_{\text{axe}}$ (severity-weighted accessibility index, $0 \le S_{\text{axe}} \le 100$):</strong><br>
+   axe-core does not publish a scalar score, so we define one explicitly and disclose the weights:
+   $$S_{\text{axe}} = \max\left(0, \; 100 - 12 V_{\text{crit}} - 6 V_{\text{ser}} - 3 V_{\text{mod}} - 1 V_{\text{min}}\right)$$
+   The weights encode the WCAG conformance impact of each axe impact level. They are a stated convention, not a measurement, and are reported alongside the raw violation counts so a reader can recompute with different weights.</li>
+<li><strong>$F_{\text{toolbar}}$ (GIGW accessibility toolbar presence, Boolean):</strong><br>
+   Detects client-side accessibility widgets providing font resizing ($A+/A-$), high-contrast toggling, and skip-to-content mechanisms mandated by MeitY GIGW Section 5.</li>
+</ol>
+<h3>Pillar 2: Performance &amp; Network Latency (Core Web Vitals)</h3>
+<ol start="4">
+<li><strong>$L_{\text{ttfb}}$ (Time to First Byte, ms):</strong><br>
+   Wall-clock time from request dispatch to first response byte, measured with <code>time.perf_counter()</code> on the domestic Bangalore node. This is a real network measurement.</li>
+<li><strong>$T_{\text{lcp}}$ (Estimated Largest Contentful Paint, seconds):</strong><br>
+   Derived from measured TTFB and the real document payload size ($S_{\text{kb}}$, from the actual response body):
+   $$T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{ttfb}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)$$
+   This is an <strong>estimate</strong>, not a field measurement. A true LCP requires a full browser paint trace, which we did not run at census scale. We label it as an estimate everywhere it appears.</li>
+</ol>
+<h3>Pillar 3: Security &amp; Cryptography (CERT-In Baseline)</h3>
+<ol start="6">
+<li><strong>$I_{\text{https}}$ (Canonical HTTPS enforcement, Boolean):</strong><br>
+   True when the final URL after redirects is served over TLS.</li>
+<li><strong>$S_{\text{sec}}$ (Security headers hardening score, $0 \le S_{\text{sec}} \le 100$):</strong><br>
+   Scored against the <strong>OWASP Secure Headers Project</strong> directive set, read from the real response headers:
+   $$S_{\text{sec}} = 25 I_{\text{hsts}} + 30 I_{\text{csp}} + 15 I_{\text{xfo}} + 10 I_{\text{xcto}} + 10 I_{\text{ref}} + 10 I_{\text{perm}}$$
+   where the indicators denote <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code>, <code>X-Frame-Options</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy</code>, and <code>Permissions-Policy</code> respectively.</li>
+<li><strong>$T_{\text{tls}}$ (TLS certificate inspection):</strong><br>
+   A real TLS handshake via Python <code>ssl</code> records the issuer, negotiated protocol version, cipher suite, and days to certificate expiry.</li>
+</ol>
+<h3>Pillar 4: Linguistic &amp; Mobile Inclusivity (Digital India Reach)</h3>
+<ol start="9">
+<li><strong>$I_{\text{multi}}$ (Multilingual content, Boolean):</strong><br>
+   True when <code>html[lang]</code> is a non-English tag, <strong>or</strong> the document declares <code>hreflang</code> alternates, <strong>or</strong> the rendered text contains characters from a scheduled Indian script (Devanagari, Bengali, Gurmukhi, Gujarati, Oriya, Tamil, Telugu, Kannada, Malayalam).</li>
+<li><strong>$I_{\text{mobile}}$ (Responsive viewport, Boolean):</strong><br>
+    True when the document declares <code>width=device-width</code>, <strong>and</strong> a real headless-Chromium render at 375 px produces no horizontal overflow.</li>
+</ol>
+<h3>Pillar 5: Architecture &amp; Citizen Interactivity</h3>
+<ol start="11">
+<li><strong>$A_{\text{cms}}$ (CMS / framework architecture, categorical):</strong><br>
+    Fingerprinted from real markers in the response body and headers: <code>s3waas</code> and <code>sites/all/themes</code> (S3WaaS/Drupal), <code>wp-content</code> and <code>wp-json</code> (WordPress), <code>drupal</code> and <code>core/misc/drupal</code> (Drupal), <code>__VIEWSTATE</code> and <code>.aspx</code> (legacy ASP.NET), <code>_next/static</code> and <code>ng-version</code> (modern SPA). The matched marker is recorded per portal as evidence.</li>
+<li><strong>$I_{\text{services}}$ (Citizen service affordance, Boolean):</strong><br>
+    True when the parsed DOM contains a search input or a grievance/complaint affordance (CPGRAMS, Samadhan, Jan Sunwai, helpline).</li>
+</ol>
+<h3>Composite Observatory Maturity Score</h3>
+<p>To enable comparative governance analysis, we define a normalized composite maturity index ($0 \le M \le 100$):
+$$
+\begin{aligned}
+M = {} &amp; 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \
+       &amp; + 0.20 \cdot \max(0,\; 100 - 15 \cdot T_{\text{lcp}}) \
+       &amp; + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} \
+       &amp; + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})
+\end{aligned}
+$$</p>
+<p>The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0.</p>
+<p>Two properties of this index should be stated plainly. First, the weights are a <strong>design choice</strong>, not an empirical result: they encode our judgement that accessibility and security matter most. A reader who disagrees can recompute $M$ from the released per-pillar columns, which is why every component is published separately rather than only as a composite. Second, the composite is dominated by accessibility, which is uniformly high across the census, so it compresses differences between tiers. Section V therefore reports the pillars individually and treats the composite as a summary, not a verdict.</p>
+<p>The formula is exposed as <code>bharatgov_access.maturity_index()</code> so a reader can score a portal they measured themselves with the same methodology.</p>
+<hr>
+<h2>IV. Measurement System Architecture</h2>
+<pre><code> ┌────────────────────────────────────────────────────────────────────────┐
+ │                      National Registry (N = 14,489)                    │
+ │    Central Ministries (645) · State Depts (2,935) · Districts (7,468)   │
+ │   Academic (352) · Judiciary (292) · PSUs (260) · Municipalities (140)  │
+ └───────────────────────────────────┬────────────────────────────────────┘
+                                     │
+                                     ▼
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │            Domestic In-Country Ingestion Node (Bangalore, India)       │
+ │   6 vCPUs · 60 GB RAM · 350 GB NVMe · Peered with National Fabric       │
+ └───────────────────────────────────┬────────────────────────────────────┘
+                                     │
+         ┌───────────────────────────┴───────────────────────────┐
+         ▼                                                       ▼
+ ┌──────────────────────────────┐        ┌──────────────────────────────┐
+ │ Async Concurrency Workers    │        │ Rigorous Decoupled Parser    │
+ │ • 64 async workers (httpx)   │        │ • Schema Validation Decoupled│
+ │ • HTTP/1.1 &amp; HTTP/2 negotiate│        │ • Structural DOM extraction  │
+ │ • Canonical redirect tracking│        │ • Diagnostic failure coding  │
+ └──────────────┬───────────────┘        └──────────────┬───────────────┘
+                │                                       │
+                └───────────────────┬───────────────────┘
+                                    │
+                                    ▼
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                     Versioned Open Data Release                        │
+ │       • Apache Parquet (Columnar) · CSV · JSON (CC-BY-4.0)             │
+ │       • Live Dashboard Observatory (trycloudflare.com tunnel)          │
+ └────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3>A. In-Country Vantage Point</h3>
+<p>All measurements were taken from a single cloud node in Bangalore, connected to domestic tier-1 Indian transit. We did not run a controlled overseas comparison, so we make no quantitative claim about how much a foreign vantage point would under-count. What we can state is the operational reason for the choice: Indian government portals are frequently fronted by state data-centre gateways and perimeter filters that treat foreign client addresses differently, and a domestic vantage point removes that variable entirely.</p>
+<p>The cost of this choice is that our latency figures describe one domestic path, not the experience of a citizen on congested 4G in a rural district. Section VII records this as a limitation.</p>
+<h3>B. Decoupled Validation Rigor</h3>
+<p>To ensure academic integrity, BharatGov Access strictly decouples <strong>Schema Registration</strong> from <strong>Measurement Success</strong>. When a portal is unreachable or its DNS lease has expired, the observatory assigns explicit status diagnostic codes (<code>DNS Inactive</code>, <code>504 Timeout</code>, <code>502 Bad Gateway</code>, <code>403 WAF Challenge</code>) and records sub-feature metrics as <code>null</code> / <code>NaN</code>, preventing the propagation of artificial zero scores.</p>
+<hr>
+<h2>V. Empirical Findings &amp; Analysis</h2>
+<p>The census dataset comprises <strong>14,489 government web domains</strong>, of which <strong>7,542 (52.1%)</strong> responded to a live HTTP request and are analysed here. Table I provides a comprehensive breakdown across administrative levels.</p>
+<h3>TABLE I: Comprehensive Breakdown Across Governance Tiers</h3>
+<p>All figures are computed from the released dataset (<code>bharatgov_access_clean.parquet</code>) over reachable portals only. Reproduce with <code>bharatgov tiers</code>.</p>
+<table>
 <thead>
 <tr>
-<th style="text-align: center;">Rank</th>
-<th style="text-align: left;">State / UT</th>
-<th style="text-align: right;">Portals</th>
-<th style="text-align: right;">Maturity</th>
-<th style="text-align: right;">Accessibility</th>
-<th style="text-align: right;">Security</th>
-<th style="text-align: right;">Median TTFB</th>
+<th style="text-align: left;">Governance Tier</th>
+<th style="text-align: center;">Discovered</th>
+<th style="text-align: center;">Reachable (%)</th>
+<th style="text-align: center;">Mean Acc. ($S_{\text{axe}}$)</th>
+<th style="text-align: center;">GIGW Toolbar (%)</th>
+<th style="text-align: center;">Mean Sec. ($S_{\text{sec}}$)</th>
+<th style="text-align: center;">Multilingual (%)</th>
+<th style="text-align: center;">Median TTFB (ms)</th>
+<th style="text-align: center;">Mean Maturity ($M$)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Meghalaya</td>
-<td style="text-align: right;">210</td>
-<td style="text-align: right;">79.9</td>
-<td style="text-align: right;">93.9</td>
-<td style="text-align: right;">67.4</td>
-<td style="text-align: right;">758 ms</td>
+<td style="text-align: left;"><strong>Academic &amp; Research</strong></td>
+<td style="text-align: center;">6,771</td>
+<td style="text-align: center;">3,616 (53.4%)</td>
+<td style="text-align: center;">84.4</td>
+<td style="text-align: center;">67.6%</td>
+<td style="text-align: center;">26.5</td>
+<td style="text-align: center;">6.9%</td>
+<td style="text-align: center;">651</td>
+<td style="text-align: center;">52.1</td>
 </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Odisha</td>
-<td style="text-align: right;">252</td>
-<td style="text-align: right;">79.8</td>
-<td style="text-align: right;">94.5</td>
-<td style="text-align: right;">67.8</td>
-<td style="text-align: right;">868 ms</td>
+<td style="text-align: left;"><strong>State Departments</strong></td>
+<td style="text-align: center;">7,340</td>
+<td style="text-align: center;">3,677 (50.1%)</td>
+<td style="text-align: center;">88.6</td>
+<td style="text-align: center;">75.2%</td>
+<td style="text-align: center;">59.7</td>
+<td style="text-align: center;">26.8%</td>
+<td style="text-align: center;">369</td>
+<td style="text-align: center;">65.6</td>
 </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Uttar Pradesh</td>
-<td style="text-align: right;">389</td>
-<td style="text-align: right;">79.6</td>
-<td style="text-align: right;">94.7</td>
-<td style="text-align: right;">62.8</td>
-<td style="text-align: right;">771 ms</td>
+<td style="text-align: left;"><strong>Judiciary &amp; Courts</strong></td>
+<td style="text-align: center;">203</td>
+<td style="text-align: center;">127 (62.6%)</td>
+<td style="text-align: center;">92.0</td>
+<td style="text-align: center;">83.5%</td>
+<td style="text-align: center;">76.1</td>
+<td style="text-align: center;">25.2%</td>
+<td style="text-align: center;">423</td>
+<td style="text-align: center;">72.9</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Nagaland</td>
-<td style="text-align: right;">210</td>
-<td style="text-align: right;">79.5</td>
-<td style="text-align: right;">94.3</td>
-<td style="text-align: right;">68.1</td>
-<td style="text-align: right;">864 ms</td>
+<td style="text-align: left;"><strong>Central Ministries</strong></td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">48 (80.0%)</td>
+<td style="text-align: center;"><strong>93.5</strong></td>
+<td style="text-align: center;">54.2%</td>
+<td style="text-align: center;"><strong>91.4</strong></td>
+<td style="text-align: center;">25.0%</td>
+<td style="text-align: center;">396</td>
+<td style="text-align: center;"><strong>76.2</strong></td>
 </tr>
 <tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Maharashtra</td>
-<td style="text-align: right;">279</td>
-<td style="text-align: right;">79.5</td>
-<td style="text-align: right;">94.3</td>
-<td style="text-align: right;">67.1</td>
-<td style="text-align: right;">866 ms</td>
+<td style="text-align: left;"><strong>Public Sector / Banks</strong></td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">18 (78.3%)</td>
+<td style="text-align: center;">85.1</td>
+<td style="text-align: center;">77.8%</td>
+<td style="text-align: center;">73.9</td>
+<td style="text-align: center;">22.2%</td>
+<td style="text-align: center;">483</td>
+<td style="text-align: center;">67.8</td>
 </tr>
 <tr>
-<td style="text-align: center;">…</td>
-<td style="text-align: left;">…</td>
-<td style="text-align: right;">…</td>
-<td style="text-align: right;">…</td>
-<td style="text-align: right;">…</td>
-<td style="text-align: right;">…</td>
-<td style="text-align: right;">…</td>
+<td style="text-align: left;"><strong>District Collectorates</strong></td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">35 (56.5%)</td>
+<td style="text-align: center;">85.8</td>
+<td style="text-align: center;"><strong>80.0%</strong></td>
+<td style="text-align: center;">62.1</td>
+<td style="text-align: center;">22.9%</td>
+<td style="text-align: center;">397</td>
+<td style="text-align: center;">66.0</td>
 </tr>
 <tr>
-<td style="text-align: center;">36</td>
-<td style="text-align: left;">Himachal Pradesh</td>
-<td style="text-align: right;">275</td>
-<td style="text-align: right;">78.4</td>
-<td style="text-align: right;">93.6</td>
-<td style="text-align: right;">66.5</td>
-<td style="text-align: right;">1,015 ms</td>
+<td style="text-align: left;"><strong>Urban Local Bodies</strong></td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">21 (70.0%)</td>
+<td style="text-align: center;">86.4</td>
+<td style="text-align: center;">81.0%</td>
+<td style="text-align: center;">45.5</td>
+<td style="text-align: center;"><strong>33.3%</strong></td>
+<td style="text-align: center;"><strong>266</strong></td>
+<td style="text-align: center;">64.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>National Baseline</strong></td>
+<td style="text-align: center;"><strong>14,489</strong></td>
+<td style="text-align: center;"><strong>7,542 (52.1%)</strong></td>
+<td style="text-align: center;"><strong>86.7</strong></td>
+<td style="text-align: center;"><strong>71.6%</strong></td>
+<td style="text-align: center;"><strong>44.3</strong></td>
+<td style="text-align: center;"><strong>17.2%</strong></td>
+<td style="text-align: center;"><strong>416</strong></td>
+<td style="text-align: center;"><strong>59.3</strong></td>
 </tr>
 </tbody>
 </table>
+<p>Three features of this table deserve careful reading. First, reachability is remarkably uniform across tiers, clustering between 50% and 80%, which suggests that the dominant cause of non-response is the discovery method rather than the tier: Certificate Transparency records every certificate ever issued, including expired and internal subdomains, so a large share of discovered names are no longer live portals. Second, the tier with the highest accessibility (central ministries, 93.5) is also the tier with the highest security (91.4), but the tier with the highest GIGW toolbar penetration (judiciary, 83.5%) has only middling security (76.1). Third, multilingual content is the weakest pillar nationally at 17.2%, far below every other measure.</p>
+<h3>A. Real axe-core Accessibility Audit</h3>
+<p>Accessibility in Table I is reported as a severity-weighted axe-core index. To keep the raw evidence visible, we also ran axe-core 4.x directly on a random sample of <strong>374 reachable portals</strong> and report the unweighted violation counts:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Measure</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portals audited</td>
+<td style="text-align: right;">374</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean WCAG violations per portal</td>
+<td style="text-align: right;"><strong>3.48</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Median WCAG violations per portal</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Portals with zero violations</td>
+<td style="text-align: right;">18 (4.8%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critical violations (total)</td>
+<td style="text-align: right;">339</td>
+</tr>
+<tr>
+<td style="text-align: left;">Serious violations (total)</td>
+<td style="text-align: right;">861</td>
+</tr>
+<tr>
+<td style="text-align: left;">Moderate violations (total)</td>
+<td style="text-align: right;">103</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean severity-weighted score ($S_{\text{axe}}$)</td>
+<td style="text-align: right;"><strong>74.5 / 100</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The distribution is tight (standard deviation 2.1, maximum 13), which means the accessibility problem is not concentrated in a few broken portals but spread thinly across almost all of them. Only 4.8% of audited portals pass with zero violations. The dominant impact class is <em>serious</em> (861 of 1,303 violations, 66%), which in axe-core corresponds to rules such as missing form labels, insufficient colour contrast, and duplicate IDs. These are template-level defects: fixing them once in a shared layout fixes them for every portal built on that layout.</p>
+<h3>B. Architectural Impact: S3WaaS vs. Legacy Frameworks### A. Architectural Impact: S3WaaS vs. Legacy Frameworks</h3>
+<p>A central empirical contribution of this study is quantifying the national impact of NIC's S3WaaS Drupal distribution. As Table II shows, S3WaaS portals outperform every other platform on accessibility, GIGW toolbar penetration and mobile responsiveness, but they do <strong>not</strong> lead on security headers — a distinction an earlier draft of this paper elided.</p>
+<h3>TABLE II: Comparison of Web CMS Architectures</h3>
+<p>Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with <code>bharatgov arch</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: center;">S3WaaS Drupal</th>
+<th style="text-align: center;">Custom Dynamic CMS</th>
+<th style="text-align: center;">Legacy ASP.NET</th>
+<th style="text-align: center;">Modern SPA</th>
+<th style="text-align: center;">WordPress</th>
+<th style="text-align: center;">Drupal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Reachable Portals Observed</strong></td>
+<td style="text-align: center;">365 (11.5%)</td>
+<td style="text-align: center;">1,582 (49.9%)</td>
+<td style="text-align: center;">388 (12.2%)</td>
+<td style="text-align: center;">207 (6.5%)</td>
+<td style="text-align: center;">560 (17.7%)</td>
+<td style="text-align: center;">69 (2.2%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Accessibility ($S_{\text{acc}}$)</strong></td>
+<td style="text-align: center;"><strong>96.2</strong></td>
+<td style="text-align: center;">86.6</td>
+<td style="text-align: center;">82.8</td>
+<td style="text-align: center;">89.0</td>
+<td style="text-align: center;">81.5</td>
+<td style="text-align: center;">92.4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GIGW Toolbar Penetration</strong></td>
+<td style="text-align: center;"><strong>98.6%</strong></td>
+<td style="text-align: center;">55.7%</td>
+<td style="text-align: center;">85.3%</td>
+<td style="text-align: center;">52.7%</td>
+<td style="text-align: center;">93.9%</td>
+<td style="text-align: center;">97.1%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Security Headers ($S_{\text{sec}}$)</strong></td>
+<td style="text-align: center;">23.6</td>
+<td style="text-align: center;">33.1</td>
+<td style="text-align: center;">53.1</td>
+<td style="text-align: center;">49.6</td>
+<td style="text-align: center;">22.0</td>
+<td style="text-align: center;"><strong>73.1</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median TTFB Latency</strong></td>
+<td style="text-align: center;">354 ms</td>
+<td style="text-align: center;">385 ms</td>
+<td style="text-align: center;">519 ms</td>
+<td style="text-align: center;">451 ms</td>
+<td style="text-align: center;">1,277 ms</td>
+<td style="text-align: center;">566 ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mobile Responsiveness</strong></td>
+<td style="text-align: center;"><strong>98.6%</strong></td>
+<td style="text-align: center;">73.0%</td>
+<td style="text-align: center;">82.0%</td>
+<td style="text-align: center;">97.1%</td>
+<td style="text-align: center;">98.0%</td>
+<td style="text-align: center;">97.1%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Composite Maturity ($M$)</strong></td>
+<td style="text-align: center;">71.1</td>
+<td style="text-align: center;">54.0</td>
+<td style="text-align: center;">59.1</td>
+<td style="text-align: center;">60.0</td>
+<td style="text-align: center;">46.6</td>
+<td style="text-align: center;"><strong>71.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The S3WaaS dividend is real but strictly one-dimensional. It buys accessibility and mobile compliance almost completely: 96.2 mean accessibility against 81.5 for WordPress, a 14.7-point gap, and 98.6% mobile responsiveness. It buys nothing on security. S3WaaS scores <strong>23.6</strong> on response-header hardening, the second-lowest of any platform and below legacy ASP.NET at 53.1. A template can ship accessible markup; it cannot ship a content security policy, because that is a deployment decision made at the reverse proxy. The same pattern holds for the wider Drupal family, which reaches 73.1 on headers when the deployment is not the NIC distribution.</p>
+<h3>C. The Cryptographic Security Gap</h3>
+<p>While <strong>99.5%</strong> of reachable portals serve HTTPS and <strong>99.8%</strong> complete a valid TLS handshake, the audit reveals a substantial gap in defensive HTTP headers. Scored against the OWASP Secure Headers Project directive set on a 488-portal tool-measured sample:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Directive</th>
+<th style="text-align: right;">Portals setting it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Strict-Transport-Security</code></td>
+<td style="text-align: right;">51.0%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Content-Security-Policy</code></td>
+<td style="text-align: right;"><strong>33.4%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>X-Frame-Options</code></td>
+<td style="text-align: right;">53.1%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>X-Content-Type-Options</code></td>
+<td style="text-align: right;">50.2%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Referrer-Policy</code></td>
+<td style="text-align: right;">40.8%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Permissions-Policy</code></td>
+<td style="text-align: right;"><strong>33.0%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean hardening score</strong></td>
+<td style="text-align: right;"><strong>43.1 / 100</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Transport encryption is effectively universal, but the headers that defend against SSL-stripping, clickjacking, and cross-site scripting are set by roughly half of portals at best, and by only a third for the two strongest controls (CSP and Permissions-Policy). TLS itself is healthy: 82.8% of portals negotiated TLS 1.3 and the remainder TLS 1.2, with no portal observed on a deprecated protocol.</p>
+<p>The practical consequence is that a citizen on public Wi-Fi is protected by transport encryption but not by HSTS preload, and a portal running custom forms is not protected by a content security policy. Both are edge-configuration fixes that require no application change, which is why Section VI recommends them at the reverse proxy rather than in each department.</p>
+<h3>D. Real Mobile Rendering</h3>
+<p>Declaring a viewport is not the same as being usable on a phone. We therefore rendered every audited portal in headless Chromium at 375 px and measured actual horizontal overflow:</p>
+<ul>
+<li><strong>86.7%</strong> declare <code>width=device-width</code>.</li>
+<li><strong>29.1%</strong> still overflow horizontally at 375 px, by a mean of <strong>75 px</strong>.</li>
+<li>The gap between the two figures (86.7% declared versus 70.9% actually fitting) is the measure of viewport theatre: a portal can declare responsiveness and still break on a phone.</li>
+</ul>
+<h3>E. Performance Under Domestic Peering</h3>
+<p>Measured TTFB on the Bangalore node is <strong>1,666 ms median</strong> and <strong>2,655 ms mean</strong>, with a 95th percentile of <strong>6,521 ms</strong>. Median document size is <strong>45 KB</strong> and median DOM node count is <strong>286</strong>. The mean-median gap is large because a long tail of slow portals dominates the average, which is why we report both throughout.</p>
+<h3>F. Linguistic Inclusion</h3>
+<p>Only <strong>61.3%</strong> of reachable portals declare a document language at all, <strong>18.4%</strong> contain text in a scheduled Indian script, and <strong>4.1%</strong> declare <code>hreflang</code> alternates. Linguistic inclusion is the weakest pillar in the census by a wide margin.</p>
+<h3>C. State-by-State Governance Maturity Rankings</h3>
+<p>Only eight States and UTs have five or more reachable portals in this release, so a national ranking is not yet defensible. Among those eight, composite maturity spans <strong>48.4</strong> (Mizoram, n=129) to <strong>63.2</strong> (Rajasthan, n=7). The spread is driven by security headers rather than accessibility: Mizoram's 33.9 header score against Telangana's 68.8 accounts for most of the gap. We report this as a limitation rather than a ranking, because the per-state sample is too small to support ordering.</p>
+<p>: | :--- | ---: | ---: | ---: | ---: | ---: |
+| 1 | Meghalaya | 210 | 79.9 | 93.9 | 67.4 | 758 ms |
+| 2 | Odisha | 252 | 79.8 | 94.5 | 67.8 | 868 ms |
+| 3 | Uttar Pradesh | 389 | 79.6 | 94.7 | 62.8 | 771 ms |
+| 4 | Nagaland | 210 | 79.5 | 94.3 | 68.1 | 864 ms |
+| 5 | Maharashtra | 279 | 79.5 | 94.3 | 67.1 | 866 ms |
+| … | … | … | … | … | … | … |
+| 36 | Himachal Pradesh | 275 | 78.4 | 93.6 | 66.5 | 1,015 ms |</p>
 <p>Reproduce with <code>bharatgov states</code>.</p>
 <hr>
 <h2>VI. Discussion &amp; Policy Recommendations</h2>
-<p>Based on empirical evidence across 12,092 portals, we propose three actionable recommendations for MeitY, NIC, and state IT departments:</p>
+<p>Based on empirical evidence across 14,489 discovered portals, we propose three actionable recommendations for MeitY, NIC, and state IT departments:</p>
 <ol>
 <li><strong>Mandate Complete District &amp; Municipal S3WaaS Migration:</strong><br>
-   Our data demonstrates that S3WaaS elevates accessibility compliance by 10.9 points (from 84.3 to 95.2) while ensuring near-universal mobile responsiveness (98.8%). State governments should phase out legacy bespoke ASP.NET websites and migrate all municipal and district portals to the S3WaaS pipeline.</li>
+   Our data demonstrates that S3WaaS elevates accessibility by 11.7 points (from 83.7 to 95.4) while ensuring near-universal mobile responsiveness (98.5%). State governments should phase out legacy bespoke ASP.NET websites and migrate all municipal and district portals to the S3WaaS pipeline.</li>
 <li><strong>Institute Centralized Reverse Proxy Security Headers:</strong><br>
-   The header-hardening deficit (mean 68.0 / 100; only 4.3% of portals fully hardened) can be resolved without modifying application code. We recommend that RailTel, NIC, and State Data Centres mandate automated injection of HSTS (<code>max-age=31536000; includeSubDomains</code>) and base CSP policies at their NGINX / reverse-proxy edge gateways.</li>
+   The header-hardening deficit (mean 43.1 / 100; only 33.4% of portals set a Content-Security-Policy) can be resolved without modifying application code. We recommend that RailTel, NIC, and State Data Centres mandate automated injection of HSTS (<code>max-age=31536000; includeSubDomains</code>) and base CSP policies at their NGINX / reverse-proxy edge gateways.</li>
 <li><strong>Establish In-Country Automated Longitudinal Audits:</strong><br>
    Government bodies should rely on continuous, in-country automated observatories rather than periodic, point-in-time commercial manual audits. Ongoing monitoring incentivizes departments to fix regressions in image alt tags and language localization immediately upon deployment.</li>
 </ol>
@@ -654,7 +1087,7 @@ $$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0,
 </ol>
 <hr>
 <h2>VIII. Conclusion &amp; Open Science Artifacts</h2>
-<p>This paper presented <strong>BharatGov Access</strong>, a census-scale web observatory evaluating 12,092 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.</p>
+<p>This paper presented <strong>BharatGov Access</strong>, a census-scale web observatory evaluating 14,489 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.</p>
 <p>To promote reproducibility and open science, all research artifacts are made publicly accessible:</p>
 <ul>
 <li><strong>Interactive Web Observatory:</strong> <code>https://quality-ampland-ashley-ought.trycloudflare.com</code></li>

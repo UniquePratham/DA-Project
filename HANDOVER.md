@@ -1,6 +1,7 @@
 # BharatGov Access — Agent Handover Document
 **Project Domain:** National Government Web Infrastructure Observatory & Academic Benchmark  
-**Institution:** Department of Data Analytics, Indian Institute of Technology Kharagpur (Group 12)  
+**Institution:** Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur (Group 12)  
+**Subject:** Data Analytics  
 **Authors:** Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj  
 **Target Publication Venues:** ACM COMPASS / IEEE Internet Computing / Government Information Quarterly (GIQ)  
 **Date:** November 2026 | Checkpoint 2 Review Ready  
@@ -11,10 +12,10 @@
 
 This document provides a complete operational and technical handover for an incoming AI agent or developer continuing work on **BharatGov Access**. 
 
-BharatGov Access is the first census-scale, longitudinal web observatory evaluating India's public digital infrastructure across **12,092 government web domains**. The platform resolves the historical **Geo-IP perimeter firewall blindspot** (which caused &gt;66% false-positive reachability failures when measured from overseas cloud vantage points) by executing ingestion within the Indian domestic peering fabric.
+BharatGov Access is the first census-scale, longitudinal web observatory evaluating India's public digital infrastructure across **14,489 government web domains**. The platform resolves the historical **Geo-IP perimeter firewall blindspot** (which caused &gt;66% false-positive reachability failures when measured from overseas cloud vantage points) by executing ingestion within the Indian domestic peering fabric.
 
 The project currently encompasses:
-1. **A verified 12,092-portal census dataset** in Parquet, CSV, JSON, and bundled JS formats.
+1. **A verified 14,489-portal census dataset** in Parquet, CSV, JSON, and bundled JS formats.
 2. **A production holographic web dashboard** with interactive India Geo-Map, live telemetry, and zero horizontal scrollbar overflow.
 3. **A publication-ready academic paper** (Markdown, LaTeX, and compiled IEEE 2-column PDF).
 4. **A 6-slide academic presentation** in PPTX and vector 16:9 PDF formats.
@@ -24,7 +25,7 @@ The project currently encompasses:
 
 ## 2. Verified Census Scale & Dataset Architecture
 
-### A. Governance Tiers Breakdown (Total N = 12,092)
+### A. Governance Tiers Breakdown (Total N = 14,489)
 The observatory categorizes sovereign Indian digital public infrastructure into 7 non-overlapping tiers:
 
 | Administrative Governance Tier | Registered Census | Active Audited (%) | Inactive / Deprecated | Mean WCAG Acc. | GIGW Toolbar |
@@ -36,17 +37,17 @@ The observatory categorizes sovereign Indian digital public infrastructure into 
 | **Judiciary & Courts (High Courts, Tribunals)** | 292 | 271 (92.8%) | 21 | 91.0 / 100 | 78.2% |
 | **Public Sector Enterprises & Banks** | 260 | 247 (95.0%) | 13 | 91.8 / 100 | 66.8% |
 | **Urban Local Bodies (Municipalities)** | 140 | 122 (87.1%) | 18 | 90.1 / 100 | 80.3% |
-| **National Total / Baseline** | **12,092** | **10,247 (84.7%)** | **1,845 (15.3%)** | **93.8 / 100** | **91.0%** |
+| **National Total / Baseline** | **14,489** | **7,542 (52.1%)** | **1,845 (15.3%)** | **86.7 / 100** | **91.0%** |
 
 > These figures are computed from `resources/bharatgov_access_clean.parquet` over reachable portals only. Reproduce with `bharatgov tiers` (see §4).
 
 ### B. Storage Files & Data Formats
 All dataset artifacts are stored in the `resources/` directory and synchronized with `dashboard/static/`:
 * `resources/bharatgov_access_clean.parquet` — High-efficiency Apache Parquet format (columnar, compressed with snappy).
-* `resources/bharatgov_access_clean.csv` — Standard CSV file (12,092 rows, 20 clean columns).
+* `resources/bharatgov_access_clean.csv` — Standard CSV file (14,489 rows, 20 clean columns).
 * `resources/bharatgov_access_clean.json` — Structured JSON export for external APIs.
 * `dashboard/static/dataset.json` — Compact JSON for the live HTTP web dashboard.
-* `dashboard/static/dataset.js` — **Critical Local File Bundle:** Declares `window.RAW_DATASET = [...]` so that `dashboard/index.html` loads all 12,092 rows with **zero CORS issues** when opened directly as a `file:///` URL in Windows Explorer.
+* `dashboard/static/dataset.js` — **Critical Local File Bundle:** Declares `window.RAW_DATASET = [...]` so that `dashboard/index.html` loads all 14,489 rows with **zero CORS issues** when opened directly as a `file:///` URL in Windows Explorer.
 * `dashboard/static/india_map.js` — Generated state boundaries (36 States/UTs, 41 KB) for the atlas choropleth. Rebuild with `python scripts/build_india_map.py`.
 * `dashboard/static/fonts/` — Self-hosted Newsreader, Public Sans and IBM Plex Mono woff2 subsets, so the dashboard renders identically offline. Refresh with `python scripts/fetch_fonts.py`.
 
@@ -61,8 +62,8 @@ pip install -e packages/bharatgov-access   # from this repo
 ```python
 import bharatgov_access as bga
 
-bga.load()                  # 12,092 domains, 20 typed columns
-bga.load(reachable=True)    # 10,247 that answered in-country
+bga.load()                  # 14,489 domains, 20 typed columns
+bga.load(reachable=True)    # 7,542 that answered in-country
 bga.tier_summary()          # Table I of the paper
 bga.architecture_summary()  # Table II of the paper
 bga.state_ranking()         # 36 States and UTs, ranked
