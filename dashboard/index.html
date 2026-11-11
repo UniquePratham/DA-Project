@@ -1,1790 +1,658 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BharatGov Access — National Web Infrastructure Observatory</title>
-
-  <!-- Typography: Inter, Outfit, JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-
-  <!-- Local Script Data Bundle for zero-CORS file:// support -->
-  <script src="static/dataset.js"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            heading: ['Outfit', 'Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              saffron: '#f97316',
-              emerald: '#10b981',
-              indigo: '#6366f1',
-              cyan: '#06b6d4',
-            }
-          }
-        }
-      }
-    };
-  </script>
-
-  <style>
-    /* Strict viewport and scrollbar containment */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      max-width: 100vw;
-      overflow-x: hidden !important;
-      margin: 0;
-      padding: 0;
-      background-color: #030712;
-      color: #f3f4f6;
-      font-family: 'Inter', system-ui, sans-serif;
-    }
-
-    /* Completely eliminate all horizontal scrollbars system-wide */
-    ::-webkit-scrollbar:horizontal {
-      display: none !important;
-      height: 0px !important;
-      width: 0px !important;
-    }
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
-    }
-
-    /* Animated background ambient lighting mesh */
-    .bg-mesh {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background:
-        radial-gradient(circle at 10% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.09) 0%, transparent 50%),
-        radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 90% 85%, rgba(236, 72, 153, 0.04) 0%, transparent 40%);
-    }
-
-    /* Premium Holographic Glass Card */
-    .holo-card {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(10, 15, 30, 0.65) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 12px;
-      position: relative;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-    }
-
-    .holo-card:hover {
-      border-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6), 0 0 25px -4px rgba(249, 115, 22, 0.08);
-      transform: translateY(-2px);
-    }
-
-    /* Iridescent holographic rainbow top accent */
-    .holo-glow::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1.5px;
-      background: linear-gradient(90deg, transparent 0%, #f97316 20%, #8b5cf6 50%, #06b6d4 80%, transparent 100%);
-      opacity: 0.9;
-      border-radius: 12px 12px 0 0;
-    }
-
-    /* Pulse dot */
-    .pulse-dot {
-      position: relative;
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: #10b981;
-    }
-    .pulse-dot::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background-color: #10b981;
-      opacity: 0.5;
-      animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-    }
-    @keyframes ping {
-      75%, 100% {
-        transform: scale(2.3);
-        opacity: 0;
-      }
-    }
-
-    /* Luxury Navigation Tab Controls */
-    .nav-pill-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: #9ca3af;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
-    .nav-pill-btn:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.06);
-    }
-    .nav-pill-btn.active {
-      color: #ffffff;
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
-      border-color: rgba(249, 115, 22, 0.4);
-      box-shadow: 0 2px 12px rgba(249, 115, 22, 0.15);
-    }
-
-    /* Standard rectangular button */
-    .shadcn-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 6px;
-      transition: all 0.15s ease;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(17, 24, 39, 0.85);
-      color: #e5e7eb;
-      white-space: nowrap;
-    }
-    .shadcn-btn:hover {
-      background: rgba(31, 41, 55, 0.95);
-      border-color: rgba(255, 255, 255, 0.25);
-      color: #ffffff;
-    }
-
-    /* SVG Map Interaction (Strictly NO CSS scale to prevent mouse flicker) */
-    .map-state-node {
-      cursor: pointer;
-    }
-    .map-state-node circle.outer-ring {
-      transition: stroke 0.2s ease, fill-opacity 0.2s ease, stroke-width 0.2s ease;
-    }
-    .map-state-node:hover circle.outer-ring {
-      stroke-width: 3.5px;
-      stroke: #f97316 !important;
-      fill: #f97316 !important;
-      fill-opacity: 0.65 !important;
-      filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.9));
-    }
-    .map-state-node text {
-      pointer-events: none;
-      transition: fill 0.2s ease, font-weight 0.2s ease;
-    }
-    .map-state-node:hover text {
-      fill: #ffffff !important;
-      font-weight: 800;
-    }
-
-    /* Radar Beam Animation */
-    @keyframes beamFlow {
-      0% { stroke-dashoffset: 160; opacity: 0.2; }
-      50% { opacity: 0.95; }
-      100% { stroke-dashoffset: 0; opacity: 0.2; }
-    }
-    .radar-beam {
-      stroke-dasharray: 6 5;
-      animation: beamFlow 3s linear infinite;
-    }
-
-    /* Chart bounding box */
-    .chart-box {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-width: 0;
-      overflow: hidden;
-    }
-
-    /* Table styling */
-    .table-box {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .table-box::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BharatGov Access — National Web Infrastructure Observatory</title>
+<meta name="description" content="A census-scale measurement of 12,092 Indian government web domains, audited from inside the country against WCAG 2.1 AA, Core Web Vitals, CERT-In hardening and GIGW 3.0.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="static/app.css">
+<link rel="icon" href="static/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="static/favicon.svg">
+<script src="static/dataset.js" defer></script>
+<script src="static/india_map.js" defer></script>
+<script src="static/app.js" defer></script>
 </head>
-<body class="min-h-screen flex flex-col relative selection:bg-orange-500 selection:text-white">
+<body>
 
-  <!-- Ambient Light Mesh -->
-  <div class="bg-mesh"></div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Top Global Header -->
-  <header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#030712]/90 backdrop-blur-xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap lg:flex-nowrap items-center justify-between py-3 gap-3">
-        
-        <!-- Brand & Observatory Status -->
-        <div class="flex items-center gap-3 shrink-0">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 via-amber-500 to-indigo-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-orange-500/20 shrink-0">
-            🏛️
-          </div>
-          <div class="flex flex-col justify-center">
-            <div class="flex items-center gap-2">
-              <span class="font-heading font-extrabold text-lg text-white tracking-tight leading-none">BharatGov Access</span>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span class="pulse-dot"></span>
-                <span>National Egress Peering</span>
-              </span>
-            </div>
-            <p class="text-[11px] text-zinc-400 mt-1 leading-none">National Public Web Infrastructure Observatory · 12,092 Domains</p>
-          </div>
-        </div>
-
-        <!-- Sleek Segmented Navigation (Auto-wrapping, zero horizontal scroll) -->
-        <nav class="flex items-center gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/[0.08] flex-wrap">
-          <button onclick="switchTab('benchmarks')" id="tab-btn-benchmarks" class="nav-pill-btn active">
-            <span>📊</span> <span>Benchmarks</span>
-          </button>
-          <button onclick="switchTab('map')" id="tab-btn-map" class="nav-pill-btn">
-            <span>🗺️</span> <span>India Geo-Map</span>
-          </button>
-          <button onclick="switchTab('scorecard')" id="tab-btn-scorecard" class="nav-pill-btn">
-            <span>🏛️</span> <span>State Scorecards</span>
-          </button>
-          <button onclick="switchTab('architecture')" id="tab-btn-architecture" class="nav-pill-btn">
-            <span>🛡️</span> <span>5-Pillar Standards</span>
-          </button>
-          <button onclick="switchTab('explorer')" id="tab-btn-explorer" class="nav-pill-btn">
-            <span>📋</span> <span>National Registry</span>
-          </button>
-          <button onclick="switchTab('usage')" id="tab-btn-usage" class="nav-pill-btn">
-            <span>📖</span> <span>Guide</span>
-          </button>
-        </nav>
-
-      </div>
+<!-- ============================================================ masthead -->
+<header class="masthead">
+  <div class="shell">
+    <div class="masthead__top">
+      <span>BharatGov Access</span>
+      <span class="hide-sm">Department of Data Analytics &middot; IIT Kharagpur</span>
+      <span>Release 2026.11</span>
     </div>
-  </header>
 
-  <!-- Live Telemetry Stream Ticker -->
-  <div class="w-full bg-black/60 border-b border-white/[0.05] py-2 px-4 z-20 text-[11px] text-zinc-400 font-mono">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-hidden">
-      <div class="flex items-center gap-2 shrink-0">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="text-zinc-300 font-semibold uppercase text-[10px] tracking-wider">Live Audit Telemetry:</span>
+    <div class="masthead__main">
+      <div class="wordmark">
+        <svg class="wordmark__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="butt">
+            <path d="M9 38V24a15 15 0 0 1 30 0v14" />
+            <path d="M4 38h40" stroke-width="2.4" />
+          </g>
+          <g fill="currentColor">
+            <rect x="16" y="30" width="4" height="8" />
+            <rect x="22" y="24" width="4" height="14" />
+            <rect x="28" y="17" width="4" height="21" />
+          </g>
+        </svg>
+        <div class="wordmark__text">
+          <div class="wordmark__name">BharatGov Access</div>
+          <p class="wordmark__sub">A census of India&rsquo;s public web, measured from inside the country.</p>
+        </div>
       </div>
-      <div class="truncate flex-1 text-zinc-300 transition-opacity duration-300" id="telemetry-ticker">
-        [National-Audit] meity.gov.in -> 200 OK | TTFB: 210ms | WCAG 2.1: 94.5/100 | S3WaaS Drupal Active
-      </div>
-      <div class="hidden md:flex items-center gap-3 shrink-0 text-zinc-400">
-        <span>Transit: Domestic Peering Fabric</span>
-        <span>•</span>
-        <span class="text-emerald-400 font-semibold">Zero Geo-IP Blocking</span>
+
+      <div class="masthead__meta">
+        <div class="masthead__stat">Domains<b data-bind="total">&mdash;</b></div>
+        <div class="masthead__stat">Reachable<b data-bind="reachable">&mdash;</b></div>
+        <div class="masthead__stat">Mean maturity<b data-bind="maturity">&mdash;</b></div>
       </div>
     </div>
   </div>
+</header>
 
-  <!-- Main Observatory Workspace -->
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 z-10 min-w-0">
+<!-- ================================================================ rail -->
+<nav class="rail" aria-label="Sections">
+  <div class="shell">
+    <div class="rail__inner" role="tablist" aria-label="Observatory sections">
+      <button class="rail__btn" role="tab" id="tab-overview" aria-controls="view-overview" aria-selected="true" data-view="overview">
+        <span class="rail__num">01</span>Overview
+      </button>
+      <button class="rail__btn" role="tab" id="tab-atlas" aria-controls="view-atlas" aria-selected="false" tabindex="-1" data-view="atlas">
+        <span class="rail__num">02</span>Atlas
+      </button>
+      <button class="rail__btn" role="tab" id="tab-ledger" aria-controls="view-ledger" aria-selected="false" tabindex="-1" data-view="ledger">
+        <span class="rail__num">03</span>Ledger
+      </button>
+      <button class="rail__btn" role="tab" id="tab-standard" aria-controls="view-standard" aria-selected="false" tabindex="-1" data-view="standard">
+        <span class="rail__num">04</span>Standard
+      </button>
+      <button class="rail__btn" role="tab" id="tab-method" aria-controls="view-method" aria-selected="false" tabindex="-1" data-view="method">
+        <span class="rail__num">05</span>Method
+      </button>
 
-    <!-- Primary Holographic KPI Scorecards (The 6 Pillars) -->
-    <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-      
-      <!-- Card 1 -->
-      <div class="holo-card holo-glow p-4 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Active Audited</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">84.7% Online</span>
+      <div class="rail__spacer"></div>
+
+      <div class="rail__tools">
+        <button class="icon-btn" id="palette-open" type="button" aria-label="Search domains (press slash)" title="Search domains — /">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4L14 14" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div class="theme-switch" role="group" aria-label="Colour theme">
+          <button class="theme-switch__btn" type="button" data-theme-set="light" aria-pressed="false">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="8" cy="8" r="3.1"/>
+              <path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3.05 3.05l1.13 1.13M11.82 11.82l1.13 1.13M12.95 3.05l-1.13 1.13M4.18 11.82l-1.13 1.13" stroke-linecap="round"/>
+            </svg>
+            <span>Light</span>
+          </button>
+          <button class="theme-switch__btn" type="button" data-theme-set="dark" aria-pressed="false">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8a5.6 5.6 0 1 0 6.8 6.8z" stroke-linejoin="round"/>
+            </svg>
+            <span>Dark</span>
+          </button>
         </div>
-        <div class="mt-2.5">
-          <div class="text-2xl sm:text-3xl font-heading font-extrabold text-white tracking-tight" id="kpi-active">10,247</div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">12,092 Total Census</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+  <div class="shell">
+
+    <!-- ======================================================== 01 OVERVIEW -->
+    <section class="view" id="view-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+
+      <div class="band" aria-label="Headline census figures">
+        <div class="band__cell">
+          <span class="band__label">Domains registered</span>
+          <div class="band__value" data-bind="total">&mdash;</div>
+          <p class="band__note">Seven non-overlapping governance tiers across 36 States and Union Territories.</p>
+        </div>
+        <div class="band__cell">
+          <span class="band__label">Reachable in-country</span>
+          <div class="band__value"><span data-bind="reachable">&mdash;</span><span class="band__unit" data-bind="reachablePct">&mdash;</span></div>
+          <p class="band__note"><em data-bind="unreachable">&mdash;</em> domains returned no response from domestic transit.</p>
+        </div>
+        <div class="band__cell">
+          <span class="band__label">Mean accessibility</span>
+          <div class="band__value"><span data-bind="acc">&mdash;</span><span class="band__unit">/ 100</span></div>
+          <p class="band__note">WCAG 2.1 AA structural checks across reachable portals.</p>
+        </div>
+        <div class="band__cell">
+          <span class="band__label">Mean security headers</span>
+          <div class="band__value"><span data-bind="sec">&mdash;</span><span class="band__unit">/ 100</span></div>
+          <p class="band__note">CERT-In hardening: HSTS, CSP, frame and MIME policy.</p>
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="holo-card holo-glow p-4 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Accessibility</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">WCAG 2.1 AA</span>
-        </div>
-        <div class="mt-2.5">
-          <div class="text-2xl sm:text-3xl font-heading font-extrabold text-emerald-400 tracking-tight leading-none">93.8<span class="text-xs text-zinc-400 font-normal"> / 100</span></div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">MeitY GIGW 3.0 Mean</div>
-        </div>
-      </div>
+      <div class="stack" style="margin-top: var(--s6)">
 
-      <!-- Card 3 -->
-      <div class="holo-card holo-glow p-4 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">GIGW Toolbar</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">A+/A- Controls</span>
-        </div>
-        <div class="mt-2.5">
-          <div class="text-2xl sm:text-3xl font-heading font-extrabold text-blue-400 tracking-tight leading-none">91.0%</div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">District High Adoption</div>
-        </div>
-      </div>
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">What the census found</h2>
+            <span class="section__note">n = <span data-bind="reachable">&mdash;</span> reachable</span>
+          </div>
+          <p class="section__lede">
+            Five results that hold across the full population rather than a sample. Every figure below is
+            computed from the released dataset at load time &mdash; nothing on this page is illustrative.
+          </p>
+          <ol class="findings" id="findings"></ol>
+        </section>
 
-      <!-- Card 4 -->
-      <div class="holo-card holo-glow p-4 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Regional Languages</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-orange-500/10 text-orange-400 border border-orange-500/20">8th Schedule</span>
-        </div>
-        <div class="mt-2.5">
-          <div class="text-2xl sm:text-3xl font-heading font-extrabold text-orange-400 tracking-tight leading-none">86.0%</div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">Native Indian Scripts</div>
-        </div>
-      </div>
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Maturity by governance tier</h2>
+            <span class="section__note">Composite index, 0&ndash;100</span>
+          </div>
+          <p class="section__lede">
+            The composite index weights accessibility at 30&nbsp;per&nbsp;cent, security at 25, speed at 20,
+            and linguistic and mobile reach at 10 and 5. The vertical rule marks the national mean.
+          </p>
+          <figure class="figure">
+            <div id="chart-tier"></div>
+            <figcaption class="figure__caption">
+              <b>Figure 1.</b> Mean composite maturity per tier, reachable portals only. Tier populations
+              differ by two orders of magnitude &mdash; district administrations alone account for
+              <span data-bind="districtShare">&mdash;</span> of the census.
+            </figcaption>
+          </figure>
+        </section>
 
-      <!-- Card 5 -->
-      <div class="holo-card holo-glow p-4 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">HTTPS Transport</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">TLS 1.2/1.3</span>
-        </div>
-        <div class="mt-2.5">
-          <div class="text-2xl sm:text-3xl font-heading font-extrabold text-purple-400 tracking-tight leading-none">100.0%</div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">Security Score: 68.0</div>
-        </div>
-      </div>
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Speed, measured from inside the country</h2>
+            <span class="section__note">Domestic peering transit</span>
+          </div>
+          <p class="section__lede">
+            Overseas vantage points report a large share of Indian government hosts as unreachable because
+            state data centres and NIC gateways drop foreign traffic at the perimeter. These measurements
+            originate inside the domestic peering fabric, so a timeout here means the host is genuinely down.
+          </p>
+          <div class="split split--even">
+            <figure class="figure">
+              <div id="chart-lcp"></div>
+              <figcaption class="figure__caption">
+                <b>Figure 2.</b> Estimated Largest Contentful Paint, bucketed at the Core Web Vitals
+                thresholds. Median <span data-bind="medianLcp">&mdash;</span>.
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <div id="chart-latency"></div>
+              <figcaption class="figure__caption">
+                <b>Figure 3.</b> Time to first byte over domestic transit. Median
+                <span data-bind="medianLat">&mdash;</span>.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
 
-      <!-- Card 6 -->
-      <div class="holo-card holo-glow p-4 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Domestic Latency</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20">Core Web Vitals</span>
-        </div>
-        <div class="mt-2.5">
-          <div class="text-2xl sm:text-3xl font-heading font-extrabold text-zinc-200 tracking-tight leading-none">1.18s</div>
-          <div class="text-[11px] text-zinc-400 mt-0.5">Median TTFB (LCP: 2.67s)</div>
-        </div>
-      </div>
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Hardening and platform</h2>
+            <span class="section__note">CERT-In &middot; CMS fingerprint</span>
+          </div>
+          <div class="split split--even">
+            <figure class="figure">
+              <div id="chart-sec"></div>
+              <figcaption class="figure__caption">
+                <b>Figure 4.</b> Distribution of the security header score. A portal scoring 100 sets HSTS,
+                a content security policy, <code>X-Frame-Options</code> and
+                <code>X-Content-Type-Options</code>; most set only the last two.
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <div id="chart-arch"></div>
+              <figcaption class="figure__caption">
+                <b>Figure 5.</b> Content management platform, fingerprinted from response headers and
+                markup. Unreachable hosts are excluded rather than counted as &ldquo;unknown&rdquo;.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
 
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Pillar coverage by tier</h2>
+            <span class="section__note">Share of reachable portals meeting each check</span>
+          </div>
+          <div class="ledger-scroll">
+            <table class="ledger" id="tier-matrix">
+              <thead>
+                <tr>
+                  <th scope="col">Tier</th>
+                  <th scope="col" style="text-align:right">Portals</th>
+                  <th scope="col" style="text-align:right">Reachable</th>
+                  <th scope="col" style="text-align:right">Accessibility</th>
+                  <th scope="col" style="text-align:right">Security</th>
+                  <th scope="col" style="text-align:right">GIGW toolbar</th>
+                  <th scope="col" style="text-align:right">Scheduled language</th>
+                  <th scope="col" style="text-align:right">Mobile viewport</th>
+                </tr>
+              </thead>
+              <tbody id="tier-matrix-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- TAB 1: EXECUTIVE BENCHMARKS -->
-    <!-- ========================================================================= -->
-    <div id="view-benchmarks" class="tab-content space-y-6">
-      
-      <!-- Observatory Summary Card -->
-      <div class="holo-card p-5 sm:p-6 border-l-4 border-orange-500 relative overflow-hidden">
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-          <div class="space-y-1.5 max-w-4xl">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-orange-500/10 text-orange-400 border border-orange-500/30">
-                National Census Scale
-              </span>
-              <h2 class="font-heading font-extrabold text-base sm:text-lg text-white">
-                Empirical Longitudinal Measurement of India's Sovereign Public Web
-              </h2>
-            </div>
-            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-              Covering 12,092 public portals serving 900+ million citizens across 36 States/UTs, 788 districts, and central ministries. 
-              Audited directly over domestic peering transit to eliminate foreign Geo-IP edge drops and measure authentic citizen-experienced web quality under W3C (WCAG 2.1 AA) and MeitY (GIGW 3.0) standards.
-            </p>
-          </div>
-          <div class="flex flex-wrap items-center gap-2 shrink-0">
-            <div class="px-3 py-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-center">
-              <div class="text-[11px] font-semibold text-zinc-400">Total Census</div>
-              <div class="text-base font-bold text-white font-mono">12,092</div>
-            </div>
-            <div class="px-3 py-2 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-center">
-              <div class="text-[11px] font-semibold text-emerald-400">Active In-Country</div>
-              <div class="text-base font-bold text-emerald-300 font-mono">10,247</div>
-            </div>
-            <div class="px-3 py-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-center">
-              <div class="text-[11px] font-semibold text-zinc-400">Inactive/Deprecated</div>
-              <div class="text-base font-bold text-zinc-400 font-mono">1,845</div>
-            </div>
-          </div>
+    <!-- =========================================================== 02 ATLAS -->
+    <section class="view" id="view-atlas" role="tabpanel" aria-labelledby="tab-atlas" tabindex="0" hidden>
+      <div class="section" style="border-top:0; padding-top:0">
+        <div class="section__head">
+          <h2 class="section__title">State and Union Territory atlas</h2>
+          <span class="section__note">Choropleth &middot; mean composite maturity</span>
         </div>
-
-        <!-- 3 Rigor Guarantees -->
-        <div class="mt-4 pt-4 border-t border-white/[0.06] grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-          <div class="p-3 rounded-lg bg-black/40 border border-white/[0.05]">
-            <div class="font-semibold text-orange-400 flex items-center gap-1.5">
-              <span>🛡️</span> 1. Decoupled Measurement Rigor
-            </div>
-            <p class="text-[11px] text-zinc-400 mt-1 leading-normal">
-              Validation is decoupled from reachability. Offline hosts display explicit diagnostic reasons (<code class="text-orange-400">DNS Deprecated</code>, <code class="text-orange-400">504 Timeout</code>) rather than misleading zero scores.
-            </p>
-          </div>
-          <div class="p-3 rounded-lg bg-black/40 border border-white/[0.05]">
-            <div class="font-semibold text-indigo-400 flex items-center gap-1.5">
-              <span>⚡</span> 2. In-Country Vantage Point
-            </div>
-            <p class="text-[11px] text-zinc-400 mt-1 leading-normal">
-              Executed within Indian national network boundaries, resolving false-positive 66%+ drop rates from overseas crawlers caused by state RailTel/NIC perimeter firewalls.
-            </p>
-          </div>
-          <div class="p-3 rounded-lg bg-black/40 border border-white/[0.05]">
-            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-              <span>📐</span> 3. Defensible 5-Pillar Standard
-            </div>
-            <p class="text-[11px] text-zinc-400 mt-1 leading-normal">
-              Consolidates measurements into 5 orthogonal pillars with exactly 10 sub-features, removing ambiguous or uncalibrated variables for research reproducibility.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Charts Grid 1: Radar & State Maturity -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        
-        <!-- Radar (5 cols) -->
-        <div class="holo-card p-5 flex flex-col lg:col-span-5 min-w-0">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-heading font-bold text-sm sm:text-base text-white">5-Pillar Cross-Tier Radar</h3>
-            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-white/[0.06] text-zinc-300 border border-white/10">Governance Tiers</span>
-          </div>
-          <p class="text-[11px] text-zinc-400 mb-2">Central Ministries vs State Depts vs District Collectorates vs PSUs</p>
-          
-          <div class="p-2.5 rounded-lg bg-black/40 border border-white/[0.06] mb-3 text-[11px] text-zinc-300 leading-relaxed">
-            💡 <strong>S3WaaS Dividend:</strong> District Collectorates achieve the highest Accessibility (<span class="text-emerald-400 font-bold">96.1</span>) via unified S3WaaS Drupal distribution, while Central & Public Sector lead in Security (<span class="text-indigo-400 font-bold">85.2</span>).
-          </div>
-
-          <div class="chart-box min-h-[300px] flex-1">
-            <canvas id="radarChart"></canvas>
-          </div>
-        </div>
-
-        <!-- Horizontal Bar (7 cols) -->
-        <div class="holo-card p-5 flex flex-col lg:col-span-7 min-w-0">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-heading font-bold text-sm sm:text-base text-white">State Web Infrastructure Maturity Index</h3>
-            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-orange-500/10 text-orange-400 border border-orange-500/20">36 States & UTs</span>
-          </div>
-          <p class="text-[11px] text-zinc-400 mb-2">Weighted composite score (Accessibility + Security + Speed + Language + Services)</p>
-
-          <div class="p-2.5 rounded-lg bg-black/40 border border-white/[0.06] mb-3 text-[11px] text-zinc-300 leading-relaxed">
-            🏆 <strong>Top Performing States:</strong> West Bengal (<span class="text-orange-400 font-bold">81.2</span>), Nagaland (<span class="text-orange-400 font-bold">80.5</span>), Haryana (<span class="text-orange-400 font-bold">79.8</span>), and Mizoram (<span class="text-orange-400 font-bold">79.5</span>) lead in digital maturity.
-          </div>
-
-          <div class="chart-box min-h-[300px] flex-1">
-            <canvas id="stateBarChart"></canvas>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Charts Grid 2: Architecture, CWV LCP, Security Headers -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        
-        <!-- CMS Architecture -->
-        <div class="holo-card p-5 flex flex-col min-w-0">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-heading font-bold text-sm sm:text-base text-white">CMS Architecture Profiling</h3>
-            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-white/[0.06] text-zinc-300">12,092 Portals</span>
-          </div>
-          <p class="text-[11px] text-zinc-400 mb-3">Distribution across public web stacks</p>
-          <div class="chart-box min-h-[220px] flex-1">
-            <canvas id="archChart"></canvas>
-          </div>
-          <p class="text-[11px] text-zinc-400 mt-2 text-center pt-2 border-t border-white/[0.06]">
-            <strong>63.2%</strong> run on NIC's standardized <span class="text-orange-400 font-semibold">S3WaaS (Drupal)</span> framework.
-          </p>
-        </div>
-
-        <!-- Core Web Vitals: LCP -->
-        <div class="holo-card p-5 flex flex-col min-w-0">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-heading font-bold text-sm sm:text-base text-white">Core Web Vitals: Est. LCP</h3>
-            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400">Domestic Speed</span>
-          </div>
-          <p class="text-[11px] text-zinc-400 mb-3">Estimated Largest Contentful Paint (seconds)</p>
-          <div class="chart-box min-h-[220px] flex-1">
-            <canvas id="lcpChart"></canvas>
-          </div>
-          <p class="text-[11px] text-zinc-400 mt-2 text-center pt-2 border-t border-white/[0.06]">
-            <strong>68.4%</strong> achieve &le; 2.5s load speeds under authentic domestic peering.
-          </p>
-        </div>
-
-        <!-- Security Headers Posture -->
-        <div class="holo-card p-5 flex flex-col min-w-0 md:col-span-2 lg:col-span-1">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-heading font-bold text-sm sm:text-base text-white">Security Headers Hardening</h3>
-            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-500/10 text-purple-400">CERT-In Audit</span>
-          </div>
-          <p class="text-[11px] text-zinc-400 mb-3">Adoption of defensive HTTP security headers</p>
-          <div class="chart-box min-h-[220px] flex-1">
-            <canvas id="securityChart"></canvas>
-          </div>
-          <p class="text-[11px] text-zinc-400 mt-2 text-center pt-2 border-t border-white/[0.06]">
-            Critical gap: <span class="text-purple-400 font-semibold">HSTS is 44.5%</span> and <span class="text-purple-400 font-semibold">CSP is 35.2%</span>.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- TAB 2: HOLOGRAPHIC INDIA GEO-GRAPH MAP -->
-    <!-- ========================================================================= -->
-    <div id="view-map" class="tab-content space-y-6 hidden">
-      <div class="holo-card p-5 sm:p-6 border-l-4 border-indigo-500">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 uppercase tracking-wider">Interactive Geo-Observatory</span>
-              <h2 class="font-heading font-extrabold text-base sm:text-lg text-white">National E-Governance Topological Map</h2>
-            </div>
-            <p class="text-xs text-zinc-300 mt-1">
-              Holographic network graph connecting the National Ingestion Fabric to all 36 States & Union Territories. Click or hover on any state node to inspect real-time digital infrastructure metrics.
-            </p>
-          </div>
-          <div class="flex items-center gap-3 shrink-0">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-xs text-zinc-300">
-              <span class="w-2.5 h-2.5 rounded-full bg-orange-500 shadow-sm shadow-orange-500/50"></span>
-              <span>Central Gateway: National Transit Peering</span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map & Inspector Dual View -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        
-        <!-- Interactive SVG Geo Map (7 cols) -->
-        <div class="holo-card p-4 sm:p-6 lg:col-span-7 flex flex-col justify-between min-w-0">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Topological State Network</span>
-            <span class="text-xs text-zinc-500 font-mono">36 States & UT Nodes</span>
-          </div>
-
-          <!-- SVG India Holographic Topology -->
-          <div class="relative w-full flex items-center justify-center py-2" style="min-height: 440px;">
-            <svg id="india-hologram-svg" viewBox="0 0 600 680" class="w-full h-auto max-h-[500px]" style="filter: drop-shadow(0 0 15px rgba(249, 115, 22, 0.05));">
-              <defs>
-                <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#f97316" stop-opacity="0.8"/>
-                  <stop offset="60%" stop-color="#ea580c" stop-opacity="0.3"/>
-                  <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
-                </radialGradient>
-                <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#f97316" stop-opacity="0.8"/>
-                  <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.5"/>
-                  <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2"/>
-                </linearGradient>
-              </defs>
-
-              <!-- Subtle India Geo-Boundary Outline Polygon -->
-              <path d="M 230 40 L 290 60 L 330 90 L 340 140 L 400 160 L 480 180 L 530 190 L 570 210 L 580 240 L 540 260 L 490 260 L 460 280 L 410 270 L 370 310 L 380 380 L 350 440 L 310 500 L 280 570 L 250 630 L 220 570 L 190 490 L 140 430 L 110 370 L 90 320 L 110 260 L 140 220 L 180 170 L 190 120 Z" 
-                    fill="rgba(15, 23, 42, 0.5)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" stroke-dasharray="4 4" />
-
-              <!-- Central National Ingestion Transit Hub (x=270, y=340) -->
-              <g id="map-beams" stroke="url(#beamGrad)" stroke-width="1.2">
-                <line x1="270" y1="340" x2="230" y2="170" class="radar-beam" /> <!-- Delhi -->
-                <line x1="270" y1="340" x2="395" y2="340" class="radar-beam" /> <!-- West Bengal -->
-                <line x1="270" y1="340" x2="165" y2="395" class="radar-beam" /> <!-- Maharashtra -->
-                <line x1="270" y1="340" x2="260" y2="580" class="radar-beam" /> <!-- Tamil Nadu -->
-                <line x1="270" y1="340" x2="250" y2="425" class="radar-beam" /> <!-- Telangana -->
-                <line x1="270" y1="340" x2="480" y2="225" class="radar-beam" /> <!-- Assam -->
-                <line x1="270" y1="340" x2="195" y2="80" class="radar-beam" />  <!-- Jammu & Kashmir -->
-                <line x1="270" y1="340" x2="125" y2="315" class="radar-beam" /> <!-- Gujarat -->
-                <line x1="270" y1="340" x2="295" y2="240" class="radar-beam" /> <!-- Uttar Pradesh -->
-                <line x1="270" y1="340" x2="220" y2="505" class="radar-beam" /> <!-- Karnataka -->
-              </g>
-
-              <!-- Central National Gateway Beacon -->
-              <circle cx="270" cy="340" r="30" fill="url(#hubGlow)" />
-              <circle cx="270" cy="340" r="8" fill="#f97316" stroke="#ffffff" stroke-width="2" />
-              <circle cx="270" cy="340" r="15" fill="none" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3">
-                <animateTransform attributeName="transform" type="rotate" from="0 270 340" to="360 270 340" dur="8s" repeatCount="indefinite"/>
-              </circle>
-              <text x="270" y="365" text-anchor="middle" fill="#f97316" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="bold">NATIONAL GATEWAY</text>
-
-              <!-- State Nodes (Interactive Circles with Data) -->
-              <g id="state-nodes-group">
-                <!-- Dynamically rendered via JS -->
-              </g>
-            </svg>
-          </div>
-
-          <div class="flex items-center justify-between text-[11px] text-zinc-400 pt-3 border-t border-white/[0.06]">
-            <span>🟢 Color: Composite Maturity Index (0–100)</span>
-            <span>⚡ Click node to inspect state profile</span>
-          </div>
-        </div>
-
-        <!-- State Inspector Details Panel (5 cols) -->
-        <div class="holo-card p-5 lg:col-span-5 flex flex-col justify-between min-w-0" id="map-inspector-card">
-          <div>
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-xs font-semibold text-orange-400 uppercase tracking-wider">Node Telemetry Inspector</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-white/[0.06] text-zinc-300" id="insp-tier">State / UT</span>
-            </div>
-            <h3 class="font-heading font-extrabold text-xl text-white mt-1" id="insp-state-name">West Bengal</h3>
-            <p class="text-xs text-zinc-400 mt-0.5" id="insp-state-desc">Monitored state departments, revenue districts, and portals.</p>
-
-            <!-- Metrics Matrix -->
-            <div class="grid grid-cols-2 gap-3 mt-4">
-              <div class="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div class="text-[10px] text-zinc-400 font-semibold uppercase">Total Portals</div>
-                <div class="text-xl font-bold text-white font-mono mt-0.5" id="insp-portals">485</div>
-                <div class="text-[10px] text-emerald-400 mt-0.5">420 Active In-Country</div>
-              </div>
-              <div class="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div class="text-[10px] text-zinc-400 font-semibold uppercase">Maturity Score</div>
-                <div class="text-xl font-bold text-orange-400 font-mono mt-0.5" id="insp-maturity">81.2 / 100</div>
-                <div class="text-[10px] text-zinc-400 mt-0.5">Rank #1 Nationally</div>
-              </div>
-              <div class="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div class="text-[10px] text-zinc-400 font-semibold uppercase">Accessibility (WCAG)</div>
-                <div class="text-xl font-bold text-emerald-400 font-mono mt-0.5" id="insp-acc">95.4 / 100</div>
-                <div class="text-[10px] text-zinc-400 mt-0.5">MeitY GIGW Compliant</div>
-              </div>
-              <div class="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div class="text-[10px] text-zinc-400 font-semibold uppercase">GIGW Toolbar</div>
-                <div class="text-xl font-bold text-blue-400 font-mono mt-0.5" id="insp-toolbar">94.8%</div>
-                <div class="text-[10px] text-zinc-400 mt-0.5">A+/A- Contrast Toggles</div>
-              </div>
-            </div>
-
-            <!-- Inclusivity Progress -->
-            <div class="mt-4 space-y-2.5">
-              <div>
-                <div class="flex justify-between text-xs text-zinc-300 mb-1">
-                  <span>Regional Language Localization (Bengali/Hindi)</span>
-                  <span class="font-bold text-orange-400" id="insp-lang-rate">88.2%</span>
-                </div>
-                <div class="w-full bg-zinc-800/80 h-1.5 rounded-full overflow-hidden">
-                  <div class="bg-orange-500 h-full rounded-full" id="insp-lang-bar" style="width: 88.2%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs text-zinc-300 mb-1">
-                  <span>Mobile Viewport Optimization</span>
-                  <span class="font-bold text-emerald-400" id="insp-mobile-rate">98.5%</span>
-                </div>
-                <div class="w-full bg-zinc-800/80 h-1.5 rounded-full overflow-hidden">
-                  <div class="bg-emerald-500 h-full rounded-full" id="insp-mobile-bar" style="width: 98.5%"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Diagnostic Callout -->
-            <div class="mt-4 p-3 rounded-lg bg-black/40 border border-white/[0.06] text-xs text-zinc-300">
-              <strong class="text-indigo-400 block mb-0.5">Primary Architecture Stack:</strong>
-              <span id="insp-arch-text">S3WaaS Drupal standardizes 82% of district collectorates; remaining legacy state secretariat portals are scheduled for edge HSTS hardening.</span>
-            </div>
-          </div>
-
-          <div class="pt-4 mt-4 border-t border-white/[0.06] flex items-center justify-between">
-            <button onclick="inspectStateInRegistry()" class="shadcn-btn text-xs gap-1.5">
-              <span>🔍</span> <span>Filter State in National Registry</span>
-            </button>
-            <span class="text-[11px] text-zinc-500 font-mono">Status: Verified 200 OK</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- TAB 3: STATE SCORECARDS -->
-    <!-- ========================================================================= -->
-    <div id="view-scorecard" class="tab-content space-y-6 hidden">
-      
-      <div class="holo-card p-5 sm:p-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h2 class="font-heading font-bold text-base sm:text-lg text-white">State & Territory Web Infrastructure Scorecard</h2>
-            <p class="text-xs text-zinc-400 mt-1 max-w-2xl">
-              Inspect empirical performance, citizen utility penetration, and automated policy recommendations for any Indian State or Union Territory.
-            </p>
-          </div>
-          <div class="flex items-center gap-2.5 shrink-0">
-            <label for="state-selector" class="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Select State/UT:</label>
-            <select id="state-selector" onchange="updateStateScorecard()" class="bg-zinc-900 border border-zinc-700 text-white text-xs rounded-lg px-3 py-2 outline-none focus:border-orange-500 cursor-pointer">
-              <!-- Dynamically populated -->
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- State Stats Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4" id="state-stat-grid">
-        <div class="holo-card p-4">
-          <span class="text-[11px] text-zinc-400 font-semibold uppercase tracking-wider">Portals Evaluated</span>
-          <div class="text-2xl font-bold text-white font-heading mt-1" id="sc-portals">-</div>
-          <span class="text-[10px] text-zinc-500 mt-0.5 block" id="sc-subtext-portals">State & District Portals</span>
-        </div>
-        <div class="holo-card p-4">
-          <span class="text-[11px] text-zinc-400 font-semibold uppercase tracking-wider">Accessibility Score</span>
-          <div class="text-2xl font-bold text-emerald-400 font-heading mt-1" id="sc-acc">-</div>
-          <span class="text-[10px] text-zinc-500 mt-0.5 block">WCAG 2.1 AA Compliance</span>
-        </div>
-        <div class="holo-card p-4">
-          <span class="text-[11px] text-zinc-400 font-semibold uppercase tracking-wider">GIGW Toolbar Rate</span>
-          <div class="text-2xl font-bold text-amber-400 font-heading mt-1" id="sc-gigw">-</div>
-          <span class="text-[10px] text-zinc-500 mt-0.5 block">Font & Contrast Controls</span>
-        </div>
-        <div class="holo-card p-4">
-          <span class="text-[11px] text-zinc-400 font-semibold uppercase tracking-wider">Regional Language</span>
-          <div class="text-2xl font-bold text-blue-400 font-heading mt-1" id="sc-lang">-</div>
-          <span class="text-[10px] text-zinc-500 mt-0.5 block">Scheduled Script Support</span>
-        </div>
-      </div>
-
-      <!-- State Features & Recommendations -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        
-        <div class="holo-card p-5">
-          <h3 class="font-heading font-bold text-sm sm:text-base text-white mb-1">Citizen Feature Penetration in <span id="sc-state-name" class="text-orange-400">Selected State</span></h3>
-          <p class="text-[11px] text-zinc-400 mb-4">Adoption percentage of citizen utilities across this state's public web</p>
-          <div class="space-y-4" id="sc-features-list">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <div class="holo-card p-5 flex flex-col justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-sm sm:text-base text-white mb-1">State Digital Modernization Blueprint</h3>
-            <p class="text-[11px] text-zinc-400 mb-3">Empirically generated action items based on detected defects in this state:</p>
-            <div class="space-y-2.5" id="sc-recommendations">
-              <!-- Dynamically populated -->
-            </div>
-          </div>
-          <div class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] text-zinc-500 flex items-center justify-between">
-            <span>Aligned with MeitY GIGW 3.0 & CERT-In Guidelines</span>
-            <span class="text-orange-400 font-mono font-medium">Observatory Actionable</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- TAB 4: 5-PILLAR ARCHITECTURE -->
-    <!-- ========================================================================= -->
-    <div id="view-architecture" class="tab-content space-y-6 hidden">
-      
-      <div class="holo-card p-5 sm:p-6 border-l-4 border-amber-500">
-        <h2 class="font-heading font-bold text-base sm:text-lg text-white">The 5 Core Evaluation Pillars & 10 Standardized Sub-Features</h2>
-        <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-4xl leading-relaxed">
-          To eliminate feature bloat and ambiguous metrics, BharatGov Access consolidates all empirical web infrastructure measurements into exactly 5 orthogonal pillars, each containing 2 defensible sub-features strictly aligned with national and international web standards:
+        <p class="section__lede">
+          Boundaries are Census of India state outlines, projected and simplified for the web. Fill encodes
+          the mean composite maturity of every reachable portal registered to that State or Union Territory.
+          Select a state to open its dossier.
         </p>
       </div>
 
-      <!-- 5 Pillar Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        
-        <!-- Pillar 1 -->
-        <div class="holo-card p-5 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">PILLAR 1</span>
-            <span class="text-[11px] text-zinc-400 font-mono">WCAG 2.1 AA</span>
-          </div>
-          <h4 class="font-heading font-bold text-base text-white">Accessibility & Usability</h4>
-          <p class="text-xs text-zinc-400 leading-normal">Evaluates digital barriers for disabled citizens across image alternative text, form labels, and skip-navigation links.</p>
-          <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-emerald-400 font-mono">sub_accessibility_score</code>:</span>
-              <span class="font-semibold text-white">93.8 / 100</span>
-            </div>
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-emerald-400 font-mono">sub_has_gigw_toolbar</code>:</span>
-              <span class="font-semibold text-white">91.0% Penetration</span>
+      <div class="atlas">
+        <div class="map-wrap">
+          <svg class="map-svg" id="india-map" viewBox="0 0 620 700" role="group" aria-label="Choropleth of Indian States and Union Territories by mean web maturity"></svg>
+          <div class="legend">
+            <span class="legend__title">Maturity</span>
+            <div class="legend__ramp" id="map-legend-ramp"></div>
+            <div class="legend__scale" style="flex:1 1 8rem">
+              <span data-bind="mapMin">&mdash;</span>
+              <span data-bind="mapMax">&mdash;</span>
             </div>
           </div>
+          <p class="figure__caption" style="border-top:0; padding-top:var(--s2)">
+            States with no registered portal are left unfilled. Hover or focus a state for its figures;
+            press <kbd>Enter</kbd> to pin it to the dossier.
+          </p>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="holo-card p-5 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">PILLAR 2</span>
-            <span class="text-[11px] text-zinc-400 font-mono">Core Web Vitals</span>
+        <div class="dossier" id="dossier">
+          <div class="dossier__head">
+            <h3 class="dossier__name" id="dossier-name">&mdash;</h3>
+            <span class="dossier__rank" id="dossier-rank"></span>
           </div>
-          <h4 class="font-heading font-bold text-base text-white">Performance & Latency</h4>
-          <p class="text-xs text-zinc-400 leading-normal">Measures time-to-first-byte (TTFB) and estimated LCP responsive delivery over domestic network infrastructure.</p>
-          <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-blue-400 font-mono">sub_response_latency_ms</code>:</span>
-              <span class="font-semibold text-white">1,185 ms (Median)</span>
+          <div class="dossier__grid">
+            <div class="dossier__cell">
+              <span class="dossier__k">Portals</span>
+              <div class="dossier__v" id="dossier-portals">&mdash;</div>
             </div>
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-blue-400 font-mono">sub_lcp_est_sec</code>:</span>
-              <span class="font-semibold text-white">2.67s (Est. LCP)</span>
+            <div class="dossier__cell">
+              <span class="dossier__k">Reachable</span>
+              <div class="dossier__v" id="dossier-reach">&mdash;</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="holo-card p-5 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">PILLAR 3</span>
-            <span class="text-[11px] text-zinc-400 font-mono">CERT-In Security</span>
-          </div>
-          <h4 class="font-heading font-bold text-base text-white">Security & Cryptography</h4>
-          <p class="text-xs text-zinc-400 leading-normal">Validates TLS transport encryption and audits defensive HTTP headers (HSTS, CSP, X-Frame-Options, X-Content-Type).</p>
-          <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-purple-400 font-mono">sub_https_enforced</code>:</span>
-              <span class="font-semibold text-white">100.0% Enforced</span>
+            <div class="dossier__cell">
+              <span class="dossier__k">Maturity</span>
+              <div class="dossier__v" id="dossier-maturity">&mdash;</div>
             </div>
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-purple-400 font-mono">sub_security_headers_score</code>:</span>
-              <span class="font-semibold text-white">68.0 / 100</span>
+            <div class="dossier__cell">
+              <span class="dossier__k">Accessibility</span>
+              <div class="dossier__v" id="dossier-acc">&mdash;</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="holo-card p-5 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/10 text-orange-400 border border-orange-500/20">PILLAR 4</span>
-            <span class="text-[11px] text-zinc-400 font-mono">Digital India</span>
-          </div>
-          <h4 class="font-heading font-bold text-base text-white">Linguistic & Mobile Inclusivity</h4>
-          <p class="text-xs text-zinc-400 leading-normal">Tracks presence of India's 22 recognized regional languages and checks mobile viewport configuration for rural smartphone citizens.</p>
-          <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-orange-400 font-mono">sub_is_multilingual</code>:</span>
-              <span class="font-semibold text-white">86.0% Portals</span>
+            <div class="dossier__cell">
+              <span class="dossier__k">Security headers</span>
+              <div class="dossier__v" id="dossier-sec">&mdash;</div>
             </div>
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-orange-400 font-mono">sub_mobile_responsive</code>:</span>
-              <span class="font-semibold text-white">97.9% Responsive</span>
+            <div class="dossier__cell">
+              <span class="dossier__k">Median TTFB</span>
+              <div class="dossier__v" id="dossier-lat">&mdash;</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Pillar 5 -->
-        <div class="holo-card p-5 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20">PILLAR 5</span>
-            <span class="text-[11px] text-zinc-400 font-mono">NIC Framework</span>
-          </div>
-          <h4 class="font-heading font-bold text-base text-white">Architecture & Services</h4>
-          <p class="text-xs text-zinc-400 leading-normal">Fingerprints CMS architectures (S3WaaS Drupal vs Legacy ASP.NET) and validates citizen grievance mechanisms (CPGRAMS).</p>
-          <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-rose-400 font-mono">sub_cms_architecture</code>:</span>
-              <span class="font-semibold text-white">63.2% S3WaaS</span>
-            </div>
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-rose-400 font-mono">sub_has_citizen_services</code>:</span>
-              <span class="font-semibold text-white">95.4% Integrated</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Composite Score Card -->
-        <div class="holo-card p-5 space-y-3 bg-gradient-to-br from-zinc-900 via-zinc-900 to-orange-950/20 border-orange-500/30">
-          <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500 text-white">COMPOSITE INDEX</span>
-            <span class="text-[11px] text-zinc-400 font-mono">Normalized</span>
-          </div>
-          <h4 class="font-heading font-bold text-base text-white">Observatory Maturity Score</h4>
-          <p class="text-xs text-zinc-400 leading-normal">A statistically weighted composite (0–100) synthesizing all 5 pillars into a single benchmark indicator for academic analysis.</p>
-          <div class="border-t border-white/[0.06] pt-2.5 space-y-1.5 text-xs">
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-orange-400 font-mono">National Mean</code>:</span>
-              <span class="font-bold text-orange-400 text-sm">78.8 / 100</span>
-            </div>
-            <div class="flex justify-between text-zinc-300">
-              <span>• <code class="text-orange-400 font-mono">Max Observed</code>:</span>
-              <span class="font-semibold text-white">98.5 / 100</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- TAB 5: NATIONAL REGISTRY (12,092 SITES) -->
-    <!-- ========================================================================= -->
-    <div id="view-explorer" class="tab-content space-y-4 hidden">
-      
-      <!-- Filter Toolbar -->
-      <div class="holo-card p-4">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-          
-          <div class="flex flex-wrap items-center gap-2.5 flex-1 min-w-0">
-            <!-- Search Bar -->
-            <div class="relative w-full sm:w-64 min-w-0">
-              <input 
-                type="text" 
-                id="registry-search" 
-                oninput="applyFilters()" 
-                placeholder="Search domain, entity, or state..." 
-                class="w-full bg-zinc-950/80 border border-zinc-700/80 text-white text-xs rounded-lg pl-8 pr-3 py-2 outline-none focus:border-orange-500 placeholder-zinc-500"
-              />
-              <span class="absolute left-2.5 top-2.5 text-zinc-500 text-xs pointer-events-none">🔍</span>
-            </div>
-            
-            <!-- Tier Filter -->
-            <select id="registry-tier" onchange="applyFilters()" class="bg-zinc-950/80 border border-zinc-700/80 text-white text-xs rounded-lg px-3 py-2 outline-none focus:border-orange-500 cursor-pointer">
-              <option value="all">All Administrative Tiers (12,092)</option>
-              <option value="central">Central Ministries (645)</option>
-              <option value="state_ut">State Departments (2,935)</option>
-              <option value="district">District Administrations (7,468)</option>
-              <option value="academic_research">Higher Ed & Research (352)</option>
-              <option value="judiciary">Judiciary & Courts (292)</option>
-              <option value="public_sector">PSUs & Banking (260)</option>
-              <option value="urban_local_body">Municipal Bodies (140)</option>
-            </select>
-
-            <!-- Status Filter -->
-            <select id="registry-status" onchange="applyFilters()" class="bg-zinc-950/80 border border-zinc-700/80 text-white text-xs rounded-lg px-3 py-2 outline-none focus:border-orange-500 cursor-pointer">
-              <option value="all">All Statuses (12,092)</option>
-              <option value="success" selected>Active In-Country (10,247)</option>
-              <option value="unreachable">Offline / Inactive (1,845)</option>
-            </select>
           </div>
 
-          <div class="flex items-center gap-2 shrink-0 self-end md:self-auto">
-            <button onclick="exportFilteredCSV()" class="shadcn-btn text-xs gap-1.5">
-              <span>📥</span> <span>Export Filtered CSV</span>
+          <div class="meters" id="dossier-meters"></div>
+
+          <div style="margin-top: var(--s4); display:flex; gap: var(--s2); flex-wrap: wrap">
+            <button class="btn" type="button" id="dossier-open-ledger">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4L14 14" stroke-linecap="round"/></svg>
+              Open in ledger
             </button>
+            <button class="btn" type="button" id="dossier-copy">Copy state summary</button>
           </div>
-
         </div>
       </div>
 
-      <!-- Data Table -->
-      <div class="holo-card overflow-hidden">
-        <div class="table-box">
-          <table class="w-full text-left text-xs border-collapse">
+      <section class="section" style="margin-top: var(--s6)">
+        <div class="section__head">
+          <h2 class="section__title">Ranking</h2>
+          <span class="section__note">All States and Union Territories</span>
+        </div>
+        <div class="ledger-scroll">
+          <table class="ledger" id="state-rank">
             <thead>
-              <tr class="border-b border-white/[0.08] bg-black/40 text-zinc-400 font-semibold uppercase tracking-wider text-[10px]">
-                <th class="py-3 px-4" style="width: 25%;">Portal Domain & Entity</th>
-                <th class="py-3 px-3" style="width: 14%;">Level & State</th>
-                <th class="py-3 px-3" style="width: 12%;">Architecture</th>
-                <th class="py-3 px-3" style="width: 10%;">Accessibility</th>
-                <th class="py-3 px-3" style="width: 8%;">TTFB</th>
-                <th class="py-3 px-3" style="width: 8%;">Security</th>
-                <th class="py-3 px-3" style="width: 8%;">Badges</th>
-                <th class="py-3 px-4" style="width: 15%;">Audit Status</th>
+              <tr>
+                <th scope="col" style="width:3rem">#</th>
+                <th scope="col">State or UT</th>
+                <th scope="col" style="text-align:right">Portals</th>
+                <th scope="col" style="text-align:right">Maturity</th>
+                <th scope="col" style="text-align:right">Accessibility</th>
+                <th scope="col" style="text-align:right">Security</th>
+                <th scope="col" style="text-align:right">Median TTFB</th>
               </tr>
             </thead>
-            <tbody id="registry-table-body" class="divide-y divide-white/[0.04]">
-              <!-- Dynamically rendered -->
-            </tbody>
+            <tbody id="state-rank-body"></tbody>
           </table>
         </div>
+      </section>
+    </section>
 
-        <!-- Pagination Bar -->
-        <div class="p-3 border-t border-white/[0.08] bg-black/40 flex flex-wrap items-center justify-between gap-3 text-xs text-zinc-400">
-          <div>
-            Showing <span id="pag-start" class="text-white font-semibold">1</span> to <span id="pag-end" class="text-white font-semibold">25</span> of <span id="pag-total" class="text-white font-semibold">12,092</span> portals
-          </div>
-          <div class="flex items-center space-x-2">
-            <button onclick="prevPage()" id="btn-prev-page" class="shadcn-btn text-xs py-1 px-3 disabled:opacity-40 disabled:cursor-not-allowed">Previous</button>
-            <span class="text-xs text-zinc-300 font-mono">Page <span id="current-page-num" class="text-white font-bold">1</span> of <span id="total-page-num">484</span></span>
-            <button onclick="nextPage()" id="btn-next-page" class="shadcn-btn text-xs py-1 px-3 disabled:opacity-40 disabled:cursor-not-allowed">Next</button>
-          </div>
+    <!-- ========================================================== 03 LEDGER -->
+    <section class="view" id="view-ledger" role="tabpanel" aria-labelledby="tab-ledger" tabindex="0" hidden>
+      <div class="section" style="border-top:0; padding-top:0">
+        <div class="section__head">
+          <h2 class="section__title">Domain ledger</h2>
+          <span class="section__note">Full census &middot; 20 columns</span>
         </div>
-      </div>
-
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- TAB 6: RESEARCH METHODOLOGY & GUIDE -->
-    <!-- ========================================================================= -->
-    <div id="view-usage" class="tab-content space-y-6 hidden">
-      
-      <div class="holo-card p-5 sm:p-6 border-l-4 border-orange-500">
-        <h2 class="font-heading font-bold text-base sm:text-lg text-white mb-2">How to Use the BharatGov Access Census Dataset in Research</h2>
-        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-4xl">
-          The <strong>BharatGov Access</strong> dataset is packaged as versioned, immutable Apache Parquet, CSV, and JSON records covering <strong>12,092 government portals</strong>. 
-          Audited directly over domestic infrastructure within national transit boundaries, this benchmark provides reproducible data 
-          for computer science, public policy, and e-governance researchers.
+        <p class="section__lede">
+          Every registered domain with its measured values. Offline hosts keep their diagnostic reason
+          instead of a zero score, so a missing number always means &ldquo;not measured&rdquo; rather than
+          &ldquo;measured as zero&rdquo;.
         </p>
-
-        <!-- Python Code Box -->
-        <div class="mt-4 p-4 bg-black/60 rounded-lg border border-white/[0.08] font-mono text-xs text-zinc-300 space-y-2 min-w-0">
-          <div class="flex items-center justify-between text-zinc-400 pb-2 border-b border-white/[0.06]">
-            <span class="text-orange-400 font-bold">Python Quickstart (Pandas / PyArrow)</span>
-            <span class="text-[10px] text-zinc-500">python &gt;= 3.9</span>
-          </div>
-          <pre class="text-zinc-300 leading-relaxed text-[11px] whitespace-pre-wrap">
-import pandas as pd
-
-# Load clean 5-pillar census dataset (12,092 portals)
-df = pd.read_parquet("resources/bharatgov_access_clean.parquet")
-active = df[df["is_reachable"] == True]
-
-# Mean Accessibility by governance tier
-acc = active.groupby("government_level")["sub_accessibility_score"].mean()
-print("Accessibility by Tier:\n", acc.round(1))
-
-# S3WaaS vs Legacy ASP.NET comparison
-arch = active.groupby("sub_cms_architecture")[[
-    "sub_accessibility_score",
-    "sub_security_headers_score",
-    "sub_response_latency_ms"
-]].mean()
-print("\nCMS Framework Comparison:\n", arch.round(1))
-          </pre>
-        </div>
       </div>
 
-      <!-- Data Dictionary Table -->
-      <div class="holo-card p-5 sm:p-6">
-        <h3 class="font-heading font-bold text-base text-white mb-1">Clean 5-Pillar Schema Dictionary (20 Standard Columns)</h3>
-        <p class="text-xs text-zinc-400 mb-4">Strictly standardized, non-ambiguous schema eliminating noisy or unverified variables:</p>
-        
-        <div class="table-box">
-          <table class="w-full text-left text-xs border-collapse">
+      <div class="ledger-tools">
+        <div class="field">
+          <label class="field__label" for="ledger-search">Search</label>
+          <input class="input input--search" id="ledger-search" type="search" placeholder="domain, entity, district&hellip;" autocomplete="off">
+        </div>
+        <div class="field">
+          <label class="field__label" for="ledger-tier">Tier</label>
+          <select class="select" id="ledger-tier">
+            <option value="all">All tiers</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ledger-status">Status</label>
+          <select class="select" id="ledger-status">
+            <option value="all">All</option>
+            <option value="reachable" selected>Reachable</option>
+            <option value="unreachable">Unreachable</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ledger-sort">Sort</label>
+          <select class="select" id="ledger-sort">
+            <option value="maturity">Maturity, high to low</option>
+            <option value="maturity-asc">Maturity, low to high</option>
+            <option value="acc">Accessibility</option>
+            <option value="sec">Security headers</option>
+            <option value="latency">Latency, low to high</option>
+            <option value="domain">Domain, A to Z</option>
+          </select>
+        </div>
+        <button class="btn" type="button" id="ledger-export">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.8 7.2L8 10.4l3.2-3.2M2.5 12.5h11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Export CSV
+        </button>
+      </div>
+
+      <div class="ledger-scroll">
+        <table class="ledger" id="ledger-table">
+          <thead>
+            <tr>
+              <th scope="col">Domain</th>
+              <th scope="col">Tier &middot; State</th>
+              <th scope="col">Platform</th>
+              <th scope="col" style="text-align:right">Access.</th>
+              <th scope="col" style="text-align:right">Security</th>
+              <th scope="col" style="text-align:right">TTFB</th>
+              <th scope="col" style="text-align:right">LCP</th>
+              <th scope="col">Checks</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="ledger-body"></tbody>
+        </table>
+      </div>
+
+      <div class="pager">
+        <span class="pager__count" id="ledger-count">&mdash;</span>
+        <div class="pager__nav">
+          <button class="btn" type="button" id="ledger-prev">Previous</button>
+          <span class="pager__pos" id="ledger-pos">&mdash;</span>
+          <button class="btn" type="button" id="ledger-next">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== 04 STANDARD -->
+    <section class="view" id="view-standard" role="tabpanel" aria-labelledby="tab-standard" tabindex="0" hidden>
+      <div class="section" style="border-top:0; padding-top:0">
+        <div class="section__head">
+          <h2 class="section__title">The five-pillar standard</h2>
+          <span class="section__note">10 sub-features &middot; 20 columns</span>
+        </div>
+        <p class="section__lede">
+          An earlier iteration carried more than seventy uncalibrated columns. Most were correlated
+          restatements of the same measurement, which makes a composite index arbitrary. The standard now
+          holds exactly five orthogonal pillars and two defensible sub-features each, every one traceable to
+          a published specification.
+        </p>
+      </div>
+
+      <div class="pillars" id="pillars"></div>
+
+      <section class="section" style="margin-top: var(--s6)">
+        <div class="section__head">
+          <h2 class="section__title">Composite index</h2>
+          <span class="section__note">Weighted, 0&ndash;100</span>
+        </div>
+        <div class="split split--wide-left">
+          <div class="prose">
+            <p>
+              The composite is a fixed linear weighting, not a fitted model. Accessibility carries the
+              largest weight because it is the only pillar with a statutory obligation behind it under the
+              Rights of Persons with Disabilities Act. Security follows because header absence is a
+              measurable defect rather than a judgement call.
+            </p>
+            <p style="margin-top: var(--s3)">
+              Speed is scored as <code>max(0, 100 &minus; 15 &times; LCP)</code>, so a portal at the 2.5&nbsp;s
+              Core Web Vitals threshold scores 62.5 on that term and a portal at 6&nbsp;s scores zero. The
+              two binary reach terms are deliberately small: they describe coverage, not quality.
+            </p>
+          </div>
+          <div class="code">
+            <div class="code__bar"><span>Composite index</span><span>weights</span></div>
+            <pre><span class="c"># M = weighted sum of five pillars</span>
+M = 0.30 * accessibility
+  + 0.25 * security_headers
+  + 0.20 * max(0, 100 - 15 * lcp_sec)
+  + 0.10 * multilingual
+  + 0.05 * mobile_responsive
+  + 0.05 * citizen_services
+  + 0.05 * gigw_toolbar</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">Schema</h2>
+          <span class="section__note">20 columns, no derived duplicates</span>
+        </div>
+        <div class="ledger-scroll">
+          <table class="ledger">
             <thead>
-              <tr class="border-b border-white/[0.08] text-zinc-400 bg-black/40 font-semibold uppercase text-[10px]">
-                <th class="py-2.5 px-3">Column Name</th>
-                <th class="py-2.5 px-3">Data Type</th>
-                <th class="py-2.5 px-3">Core Pillar</th>
-                <th class="py-2.5 px-3">Description & Standards Alignment</th>
+              <tr>
+                <th scope="col">Column</th>
+                <th scope="col">Type</th>
+                <th scope="col">Pillar</th>
+                <th scope="col">Definition</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-white/[0.04] text-zinc-300">
-              <tr>
-                <td class="py-2 px-3 font-mono text-orange-400">domain_name</td>
-                <td class="py-2 px-3 text-zinc-400">string</td>
-                <td class="py-2 px-3 text-zinc-400">Metadata</td>
-                <td class="py-2 px-3">Registered domain identifier (e.g. <code class="text-zinc-200">meity.gov.in</code>, <code class="text-zinc-200">varanasi.nic.in</code>)</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-orange-400">is_reachable</td>
-                <td class="py-2 px-3 text-zinc-400">boolean</td>
-                <td class="py-2 px-3 text-zinc-400">Reachability</td>
-                <td class="py-2 px-3"><code class="text-zinc-200">True</code> if portal returned HTTP 200/300 from domestic node</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-orange-400">measurement_reason</td>
-                <td class="py-2 px-3 text-zinc-400">string</td>
-                <td class="py-2 px-3 text-zinc-400">Diagnostic</td>
-                <td class="py-2 px-3">Explicit diagnostic status reason (e.g. <code class="text-zinc-200">200 OK — Active S3WaaS Drupal Deployment</code>, <code class="text-zinc-200">DNS Deprecated</code>)</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-emerald-400">sub_accessibility_score</td>
-                <td class="py-2 px-3 text-zinc-400">float (0–100)</td>
-                <td class="py-2 px-3 text-emerald-400">Pillar 1: Accessibility</td>
-                <td class="py-2 px-3">WCAG 2.1 AA score measuring image alt attributes, form labels, and HTML lang tags</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-emerald-400">sub_has_gigw_toolbar</td>
-                <td class="py-2 px-3 text-zinc-400">boolean</td>
-                <td class="py-2 px-3 text-emerald-400">Pillar 1: Accessibility</td>
-                <td class="py-2 px-3">MeitY GIGW 3.0 accessibility widget (A+/A- font resizers, contrast toggle, skip-to-content)</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-blue-400">sub_response_latency_ms</td>
-                <td class="py-2 px-3 text-zinc-400">float (ms)</td>
-                <td class="py-2 px-3 text-blue-400">Pillar 2: Performance</td>
-                <td class="py-2 px-3">Network Round-Trip Time / Time to First Byte (TTFB) measured from domestic ingress</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-blue-400">sub_lcp_est_sec</td>
-                <td class="py-2 px-3 text-zinc-400">float (sec)</td>
-                <td class="py-2 px-3 text-blue-400">Pillar 2: Performance</td>
-                <td class="py-2 px-3">Estimated Largest Contentful Paint (LCP) based on TTFB and DOM asset payload size</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-purple-400">sub_https_enforced</td>
-                <td class="py-2 px-3 text-zinc-400">boolean</td>
-                <td class="py-2 px-3 text-purple-400">Pillar 3: Security</td>
-                <td class="py-2 px-3">Whether portal strictly mandates TLS/HTTPS encryption on canonical traffic</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-purple-400">sub_security_headers_score</td>
-                <td class="py-2 px-3 text-zinc-400">float (0–100)</td>
-                <td class="py-2 px-3 text-purple-400">Pillar 3: Security</td>
-                <td class="py-2 px-3">CERT-In security header score evaluating HSTS, CSP, X-Frame-Options, and X-Content-Type</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-orange-400">sub_is_multilingual</td>
-                <td class="py-2 px-3 text-zinc-400">boolean</td>
-                <td class="py-2 px-3 text-orange-400">Pillar 4: Inclusivity</td>
-                <td class="py-2 px-3">Presence of content/navigation in Indian 8th Schedule regional languages (Hindi, Tamil, Bengali, etc.)</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-orange-400">sub_mobile_responsive</td>
-                <td class="py-2 px-3 text-zinc-400">boolean</td>
-                <td class="py-2 px-3 text-orange-400">Pillar 4: Inclusivity</td>
-                <td class="py-2 px-3">Standard mobile viewport configuration (<code class="text-zinc-200">width=device-width, initial-scale=1.0</code>)</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-rose-400">sub_cms_architecture</td>
-                <td class="py-2 px-3 text-zinc-400">categorical</td>
-                <td class="py-2 px-3 text-rose-400">Pillar 5: Architecture</td>
-                <td class="py-2 px-3">CMS framework: <code class="text-zinc-200">s3waas_drupal</code>, <code class="text-zinc-200">custom_dynamic_cms</code>, <code class="text-zinc-200">legacy_asp_net</code>, <code class="text-zinc-200">modern_spa</code>, or <code class="text-zinc-200">wordpress</code></td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-rose-400">sub_has_citizen_services</td>
-                <td class="py-2 px-3 text-zinc-400">boolean</td>
-                <td class="py-2 px-3 text-rose-400">Pillar 5: Interactivity</td>
-                <td class="py-2 px-3">Native search bar and citizen public grievance integration (CPGRAMS, Samadhan, Jan Sunwai)</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 font-mono text-orange-400 font-bold">observatory_maturity_score</td>
-                <td class="py-2 px-3 text-zinc-400">float (0–100)</td>
-                <td class="py-2 px-3 text-orange-400 font-bold">Composite Index</td>
-                <td class="py-2 px-3">Multidimensional weighted maturity score synthesizing all 5 core pillars</td>
-              </tr>
-            </tbody>
+            <tbody id="schema-body"></tbody>
           </table>
         </div>
+      </section>
+    </section>
 
+    <!-- ========================================================== 05 METHOD -->
+    <section class="view" id="view-method" role="tabpanel" aria-labelledby="tab-method" tabindex="0" hidden>
+      <div class="section" style="border-top:0; padding-top:0">
+        <div class="section__head">
+          <h2 class="section__title">Method and reproduction</h2>
+          <span class="section__note">Versioned release</span>
+        </div>
+        <p class="section__lede">
+          The dataset ships as immutable Parquet, CSV and JSON. Everything on this page is derived from the
+          same release, so a reader can reproduce any figure here without trusting the interface.
+        </p>
       </div>
 
-    </div>
+      <div class="split split--wide-left">
+        <div class="stack">
+          <section>
+            <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">Why the vantage point matters</h3>
+            <div class="prose" style="margin-top:var(--s2)">
+              <p>
+                Measuring Indian government infrastructure from an overseas cloud region produces a
+                systematic false negative. State data centres, NIC gateways and several departmental
+                reverse proxies drop or reset foreign traffic at the perimeter, so a crawler in Frankfurt
+                records a timeout on a portal that serves citizens normally.
+              </p>
+              <p style="margin-top:var(--s3)">
+                Every measurement in this release originates inside the domestic peering fabric. That single
+                change moves the observed reachability rate by tens of percentage points and is the reason
+                the census is worth publishing at all.
+              </p>
+            </div>
+          </section>
 
-  </main>
+          <section>
+            <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">Reproduce a figure</h3>
+            <div class="code" style="margin-top:var(--s3)">
+              <div class="code__bar"><span>Python 3.9+</span><span>pandas &middot; pyarrow</span></div>
+              <pre><span class="k">import</span> pandas <span class="k">as</span> pd
 
-  <!-- Global Footer -->
-  <footer class="border-t border-white/[0.08] bg-black/80 py-6 text-xs text-zinc-500 z-10">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+df = pd.read_parquet(<span class="s">"resources/bharatgov_access_clean.parquet"</span>)
+live = df[df[<span class="s">"is_reachable"</span>]]
+
+<span class="c"># Figure 1 — mean composite maturity per tier</span>
+tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"observatory_maturity_score"</span>]
+<span class="k">print</span>(tier.agg([<span class="s">"count"</span>, <span class="s">"mean"</span>]).round(<span class="s">1</span>))
+
+<span class="c"># Figure 5 — platform distribution, unreachable excluded</span>
+<span class="k">print</span>(live[<span class="s">"sub_cms_architecture"</span>].value_counts())</pre>
+            </div>
+          </section>
+
+          <section>
+            <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">Known limits</h3>
+            <ul class="findings" style="margin-top:var(--s3)">
+              <li><span class="findings__idx">01</span><div class="findings__body"><h3>Structural, not rendered</h3><p>Accessibility is scored from markup: alternative text, form labels, language declaration and skip links. It does not execute a screen reader, so it cannot detect a focus trap or a mislabelled control.</p></div></li>
+              <li><span class="findings__idx">02</span><div class="findings__body"><h3>LCP is estimated</h3><p>Largest Contentful Paint is derived from time to first byte and document payload rather than measured in a browser. It ranks portals correctly but should not be quoted as a field measurement.</p></div></li>
+              <li><span class="findings__idx">03</span><div class="findings__body"><h3>One observation per domain</h3><p>Each domain is measured once per release. Longitudinal claims require comparing releases, not re-reading a single one.</p></div></li>
+              <li><span class="findings__idx">04</span><div class="findings__body"><h3>Registration is not usage</h3><p>A registered domain is not necessarily a portal citizens use. The census measures what is published, not what is visited.</p></div></li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="stack">
+          <div>
+            <h3 class="colophon__h">Release</h3>
+            <ul class="colophon__list">
+              <li><code>bharatgov_access_clean.parquet</code></li>
+              <li><code>bharatgov_access_clean.csv</code></li>
+              <li><code>bharatgov_access_clean.json</code></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="colophon__h">Standards</h3>
+            <ul class="colophon__list">
+              <li>WCAG 2.1 Level AA</li>
+              <li>MeitY GIGW 3.0</li>
+              <li>CERT-In header guidance</li>
+              <li>Core Web Vitals thresholds</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="colophon__h">Cite as</h3>
+            <p class="colophon__body" style="margin-top:0">
+              Agarwal, P., Bairagi, A. K., &amp; Yaduraj, V. N. (2026).
+              <em>BharatGov Access: a census-scale observatory of Indian public web infrastructure.</em>
+              Department of Data Analytics, IIT Kharagpur.
+            </p>
+          </div>
+          <div>
+            <h3 class="colophon__h">Keyboard</h3>
+            <ul class="colophon__list">
+              <li><code>/</code> search domains</li>
+              <li><code>1</code>&ndash;<code>5</code> jump to section</li>
+              <li><code>t</code> toggle theme</li>
+              <li><code>Esc</code> close</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ============================================================= colophon -->
+<footer class="colophon">
+  <div class="shell">
+    <div class="colophon__grid">
       <div>
-        <span class="text-zinc-300 font-medium">BharatGov Access</span> — Department of Data Analytics & E-Governance Research · IIT Kharagpur
+        <div class="colophon__title">BharatGov Access</div>
+        <p class="colophon__body">
+          A longitudinal observatory of India&rsquo;s public web infrastructure, maintained by the
+          Department of Data Analytics at IIT Kharagpur. Measurements are taken from inside the domestic
+          peering fabric so that perimeter firewalls are not mistaken for outages.
+        </p>
       </div>
-      <div class="flex items-center space-x-3 text-zinc-400">
-        <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> National Peering Node</span>
-        <span>•</span>
-        <span>MeitY GIGW 3.0 Aligned</span>
+      <div>
+        <h3 class="colophon__h">Census</h3>
+        <ul class="colophon__list">
+          <li><span data-bind="total">&mdash;</span> domains</li>
+          <li><span data-bind="reachable">&mdash;</span> reachable</li>
+          <li><span data-bind="unreachable">&mdash;</span> offline</li>
+          <li>36 States and UTs</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="colophon__h">Standards</h3>
+        <ul class="colophon__list">
+          <li>WCAG 2.1 AA</li>
+          <li>GIGW 3.0</li>
+          <li>CERT-In</li>
+          <li>Core Web Vitals</li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="colophon__foot">
+      <span>Release 2026.11 &middot; Checkpoint 2</span>
+      <span>Measured in-country &middot; no overseas vantage points</span>
+    </div>
+  </div>
+</footer>
 
-  <!-- Application Engine & Holographic Topology Logic -->
-  <script>
-    let rawDataset = [];
-    let filteredData = [];
-    let currentPage = 1;
-    const pageSize = 25;
-    let chartsInitialized = false;
+<!-- ================================================================ chrome -->
+<div class="tip" id="tip" role="tooltip" aria-hidden="true"></div>
 
-    // State topological coordinates on the India SVG Map (viewBox 0 0 600 680)
-    const STATE_GEO_NODES = [
-      { name: 'West Bengal', x: 395, y: 340, portals: 485, maturity: 81.2, acc: 95.4, gigw: 94.8, lang: 88.2, mobile: 98.5, arch: 'S3WaaS Drupal (82%)' },
-      { name: 'Nagaland', x: 535, y: 220, portals: 110, maturity: 80.5, acc: 95.8, gigw: 95.0, lang: 82.0, mobile: 99.0, arch: 'S3WaaS Drupal (91%)' },
-      { name: 'Haryana', x: 215, y: 195, portals: 340, maturity: 79.8, acc: 94.6, gigw: 93.2, lang: 89.0, mobile: 98.2, arch: 'S3WaaS Drupal (78%)' },
-      { name: 'Mizoram', x: 495, y: 285, portals: 95, maturity: 79.5, acc: 95.2, gigw: 94.0, lang: 80.0, mobile: 98.0, arch: 'S3WaaS Drupal (88%)' },
-      { name: 'Uttar Pradesh', x: 295, y: 240, portals: 840, maturity: 78.4, acc: 94.1, gigw: 91.5, lang: 91.0, mobile: 97.5, arch: 'S3WaaS & Samadhan' },
-      { name: 'Maharashtra', x: 165, y: 395, portals: 620, maturity: 77.2, acc: 93.5, gigw: 89.2, lang: 88.5, mobile: 97.0, arch: 'Custom & S3WaaS' },
-      { name: 'Kerala', x: 210, y: 590, portals: 310, maturity: 76.8, acc: 93.8, gigw: 90.0, lang: 89.0, mobile: 98.0, arch: 'Drupal & Modern SPA' },
-      { name: 'Karnataka', x: 220, y: 505, portals: 540, maturity: 76.5, acc: 93.4, gigw: 88.5, lang: 87.0, mobile: 97.8, arch: 'KUIDFC & S3WaaS' },
-      { name: 'Tamil Nadu', x: 260, y: 580, portals: 580, maturity: 76.0, acc: 93.0, gigw: 87.0, lang: 90.5, mobile: 96.5, arch: 'TNeGA & Custom' },
-      { name: 'Gujarat', x: 125, y: 315, portals: 450, maturity: 76.2, acc: 92.8, gigw: 86.5, lang: 86.0, mobile: 96.8, arch: 'GSwan & S3WaaS' },
-      { name: 'Delhi', x: 230, y: 175, portals: 645, maturity: 78.2, acc: 92.0, gigw: 78.4, lang: 88.5, mobile: 98.0, arch: 'Central Ministries' },
-      { name: 'Assam', x: 480, y: 225, portals: 320, maturity: 77.0, acc: 93.6, gigw: 89.0, lang: 84.0, mobile: 97.2, arch: 'S3WaaS Drupal' },
-      { name: 'Rajasthan', x: 160, y: 235, portals: 490, maturity: 76.4, acc: 92.5, gigw: 85.0, lang: 86.0, mobile: 96.0, arch: 'RajGov & S3WaaS' },
-      { name: 'Madhya Pradesh', x: 245, y: 310, portals: 510, maturity: 76.9, acc: 93.2, gigw: 88.0, lang: 89.5, mobile: 96.5, arch: 'MP e-Gov & S3WaaS' },
-      { name: 'Bihar', x: 360, y: 260, portals: 440, maturity: 75.8, acc: 92.0, gigw: 84.5, lang: 87.0, mobile: 95.8, arch: 'Bihar State Portal' },
-      { name: 'Odisha', x: 350, y: 385, portals: 380, maturity: 77.4, acc: 93.9, gigw: 90.5, lang: 85.0, mobile: 97.4, arch: 'OSDC & S3WaaS' },
-      { name: 'Andhra Pradesh', x: 265, y: 465, portals: 430, maturity: 76.3, acc: 92.6, gigw: 86.0, lang: 88.0, mobile: 96.8, arch: 'RealTime Governance' },
-      { name: 'Telangana', x: 250, y: 425, portals: 390, maturity: 76.7, acc: 93.0, gigw: 87.5, lang: 87.5, mobile: 97.0, arch: 'T-Fiber & S3WaaS' },
-      { name: 'Punjab', x: 195, y: 145, portals: 280, maturity: 77.2, acc: 93.4, gigw: 89.0, lang: 88.0, mobile: 97.1, arch: 'S3WaaS Drupal' },
-      { name: 'Jammu and Kashmir', x: 195, y: 80, portals: 250, maturity: 77.5, acc: 94.0, gigw: 91.0, lang: 83.0, mobile: 98.0, arch: 'S3WaaS & JK e-Gov' }
-    ];
+<div class="palette" id="palette" hidden>
+  <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Search domains">
+    <input class="palette__input" id="palette-input" type="text" placeholder="Search 12,092 domains, entities and districts&hellip;" autocomplete="off" spellcheck="false">
+    <ul class="palette__list" id="palette-list" role="listbox" aria-label="Results"></ul>
+  </div>
+</div>
 
-    let currentSelectedState = 'West Bengal';
+<noscript>
+  <div class="shell" style="padding-block: var(--s6)">
+    <p class="prose">
+      This observatory renders its figures from the released dataset in the browser. Enable JavaScript to
+      view the charts, or read the same numbers directly from
+      <code>resources/bharatgov_access_clean.parquet</code>.
+    </p>
+  </div>
+</noscript>
 
-    // Tab Navigation
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('.nav-pill-btn').forEach(btn => btn.classList.remove('active'));
-
-      const targetView = document.getElementById(`view-${tabId}`);
-      const targetBtn = document.getElementById(`tab-btn-${tabId}`);
-
-      if (targetView) targetView.classList.remove('hidden');
-      if (targetBtn) targetBtn.classList.add('active');
-
-      if (tabId === 'benchmarks') {
-        window.dispatchEvent(new Event('resize'));
-      }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Load Dataset (Dual Mode: Memory script bundle for file:// + fetch fallback for http://)
-    async function loadData() {
-      try {
-        if (window.RAW_DATASET && window.RAW_DATASET.length) {
-          rawDataset = window.RAW_DATASET;
-        } else {
-          const res = await fetch('static/dataset.json');
-          rawDataset = await res.json();
-        }
-      } catch (e) {
-        console.warn("Could not fetch JSON, trying RAW_DATASET fallback:", e);
-        if (window.RAW_DATASET && window.RAW_DATASET.length) {
-          rawDataset = window.RAW_DATASET;
-        }
-      }
-
-      if (rawDataset && rawDataset.length) {
-        filteredData = rawDataset.filter(r => r.reachable);
-        renderTable();
-        initCharts();
-        populateStateSelector();
-        renderIndiaMapNodes();
-        startTelemetrySimulation();
-      }
-    }
-
-    // Render Holographic Map State Nodes (Clean SVG without CSS transform flicker)
-    function renderIndiaMapNodes() {
-      const group = document.getElementById('state-nodes-group');
-      if (!group) return;
-      group.innerHTML = '';
-
-      STATE_GEO_NODES.forEach(st => {
-        const color = st.maturity >= 80 ? '#f97316' : st.maturity >= 77 ? '#8b5cf6' : '#06b6d4';
-        
-        const nodeG = document.createElementNS("http://www.w3.org/2000/svg", "g");
-        nodeG.setAttribute('class', 'map-state-node');
-        nodeG.setAttribute('onclick', `selectStateNode('${st.name}')`);
-
-        const circleOuter = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circleOuter.setAttribute('class', 'outer-ring');
-        circleOuter.setAttribute('cx', st.x);
-        circleOuter.setAttribute('cy', st.y);
-        circleOuter.setAttribute('r', '7.5');
-        circleOuter.setAttribute('fill', color);
-        circleOuter.setAttribute('fill-opacity', '0.35');
-        circleOuter.setAttribute('stroke', color);
-        circleOuter.setAttribute('stroke-width', '1.5');
-
-        const circleCore = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circleCore.setAttribute('cx', st.x);
-        circleCore.setAttribute('cy', st.y);
-        circleCore.setAttribute('r', '3');
-        circleCore.setAttribute('fill', '#ffffff');
-
-        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        text.setAttribute('x', st.x);
-        text.setAttribute('y', st.y - 10);
-        text.setAttribute('text-anchor', 'middle');
-        text.setAttribute('fill', '#d1d5db');
-        text.setAttribute('font-size', '9');
-        text.setAttribute('font-family', "'Inter', sans-serif");
-        text.setAttribute('font-weight', '600');
-        text.textContent = st.name;
-
-        nodeG.appendChild(circleOuter);
-        nodeG.appendChild(circleCore);
-        nodeG.appendChild(text);
-        group.appendChild(nodeG);
-      });
-    }
-
-    function selectStateNode(stateName) {
-      currentSelectedState = stateName;
-      const st = STATE_GEO_NODES.find(s => s.name === stateName);
-      if (!st) return;
-
-      document.getElementById('insp-state-name').innerText = st.name;
-      document.getElementById('insp-portals').innerText = st.portals.toLocaleString();
-      document.getElementById('insp-maturity').innerText = `${st.maturity} / 100`;
-      document.getElementById('insp-acc').innerText = `${st.acc} / 100`;
-      document.getElementById('insp-toolbar').innerText = `${st.gigw}%`;
-      document.getElementById('insp-lang-rate').innerText = `${st.lang}%`;
-      document.getElementById('insp-lang-bar').style.width = `${st.lang}%`;
-      document.getElementById('insp-mobile-rate').innerText = `${st.mobile}%`;
-      document.getElementById('insp-mobile-bar').style.width = `${st.mobile}%`;
-      document.getElementById('insp-arch-text').innerText = `${st.arch}; telemetry verified over domestic national route.`;
-
-      const sel = document.getElementById('state-selector');
-      if (sel) {
-        sel.value = stateName;
-        updateStateScorecard();
-      }
-    }
-
-    function inspectStateInRegistry() {
-      switchTab('explorer');
-      const searchBox = document.getElementById('registry-search');
-      if (searchBox) {
-        searchBox.value = currentSelectedState;
-        applyFilters();
-      }
-    }
-
-    // Populate State Selector in Scorecard Tab
-    function populateStateSelector() {
-      const select = document.getElementById('state-selector');
-      if (!select) return;
-      select.innerHTML = '';
-
-      const states = Array.from(new Set(rawDataset.map(r => r.state).filter(s => s && s !== 'National / Central'))).sort();
-      states.forEach(st => {
-        const opt = document.createElement('option');
-        opt.value = st;
-        opt.innerText = st;
-        select.appendChild(opt);
-      });
-
-      if (states.includes('West Bengal')) {
-        select.value = 'West Bengal';
-      } else if (states.length) {
-        select.value = states[0];
-      }
-      updateStateScorecard();
-    }
-
-    // State Scorecard Logic
-    function updateStateScorecard() {
-      const select = document.getElementById('state-selector');
-      if (!select) return;
-      const stateName = select.value;
-      currentSelectedState = stateName;
-      const statePortals = rawDataset.filter(r => r.state === stateName);
-      if (!statePortals.length) return;
-
-      const total = statePortals.length;
-      const reachablePortals = statePortals.filter(r => r.reachable);
-      const reachCount = reachablePortals.length;
-
-      const avgAcc = reachCount ? (reachablePortals.reduce((acc, r) => acc + (r.acc_score || 0), 0) / reachCount).toFixed(1) : 'N/A';
-      const gigwCount = reachablePortals.filter(r => r.has_gigw_toolbar).length;
-      const gigwRate = reachCount ? ((gigwCount / reachCount) * 100).toFixed(1) : '0';
-      const langCount = reachablePortals.filter(r => r.multilingual).length;
-      const langRate = reachCount ? ((langCount / reachCount) * 100).toFixed(1) : '0';
-
-      document.getElementById('sc-state-name').innerText = stateName;
-      document.getElementById('sc-portals').innerText = `${reachCount.toLocaleString()} / ${total.toLocaleString()}`;
-      document.getElementById('sc-acc').innerText = avgAcc !== 'N/A' ? `${avgAcc} / 100` : 'N/A';
-      document.getElementById('sc-gigw').innerText = `${gigwRate}%`;
-      document.getElementById('sc-lang').innerText = `${langRate}%`;
-
-      const searchRate = reachCount ? ((reachablePortals.filter(r => r.has_citizen_services).length / reachCount) * 100).toFixed(0) : '0';
-      const mobileRate = reachCount ? ((reachablePortals.filter(r => r.mobile_responsive).length / reachCount) * 100).toFixed(0) : '0';
-
-      const fList = document.getElementById('sc-features-list');
-      fList.innerHTML = `
-        <div>
-          <div class="flex justify-between text-xs text-zinc-300 mb-1">
-            <span>GIGW Accessibility Toolbar (A+/A-, High Contrast, Skip-to-Content)</span>
-            <span class="font-bold text-orange-400">${gigwRate}%</span>
-          </div>
-          <div class="w-full bg-zinc-800/80 h-2 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-orange-500 to-amber-400 h-full rounded-full" style="width: ${gigwRate}%"></div>
-          </div>
-        </div>
-        <div>
-          <div class="flex justify-between text-xs text-zinc-300 mb-1">
-            <span>Regional Scheduled Language Localization</span>
-            <span class="font-bold text-blue-400">${langRate}%</span>
-          </div>
-          <div class="w-full bg-zinc-800/80 h-2 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-full rounded-full" style="width: ${langRate}%"></div>
-          </div>
-        </div>
-        <div>
-          <div class="flex justify-between text-xs text-zinc-300 mb-1">
-            <span>Mobile Responsive Viewport Configuration</span>
-            <span class="font-bold text-emerald-400">${mobileRate}%</span>
-          </div>
-          <div class="w-full bg-zinc-800/80 h-2 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: ${mobileRate}%"></div>
-          </div>
-        </div>
-        <div>
-          <div class="flex justify-between text-xs text-zinc-300 mb-1">
-            <span>Online Citizen Services (Search & Grievances)</span>
-            <span class="font-bold text-purple-400">${searchRate}%</span>
-          </div>
-          <div class="w-full bg-zinc-800/80 h-2 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-full rounded-full" style="width: ${searchRate}%"></div>
-          </div>
-        </div>
-      `;
-
-      const recs = document.getElementById('sc-recommendations');
-      recs.innerHTML = `
-        <div class="p-3 bg-black/40 rounded-lg border border-white/[0.06] text-xs">
-          <strong class="text-orange-400">1. S3WaaS Modernization Migration:</strong>
-          <p class="text-zinc-400 mt-0.5 leading-relaxed">
-            Ensure remaining district line departments adopt the MeitY-certified S3WaaS Drupal distribution to maintain automated WCAG 2.1 AA compliance and mobile optimization.
-          </p>
-        </div>
-        <div class="p-3 bg-black/40 rounded-lg border border-white/[0.06] text-xs">
-          <strong class="text-blue-400">2. Linguistic Localization:</strong>
-          <p class="text-zinc-400 mt-0.5 leading-relaxed">
-            Extend scheduled language support beyond English/Hindi to include official state regional dialects across all citizen grievance workflows.
-          </p>
-        </div>
-        <div class="p-3 bg-black/40 rounded-lg border border-white/[0.06] text-xs">
-          <strong class="text-purple-400">3. Reverse Proxy Cryptographic Headers:</strong>
-          <p class="text-zinc-400 mt-0.5 leading-relaxed">
-            Configure HSTS (<code class="text-zinc-300">max-age=31536000</code>) and Content-Security-Policy headers in state edge reverse proxies to eliminate XSS and SSL-stripping vulnerabilities.
-          </p>
-        </div>
-      `;
-    }
-
-    // Filter Table Data
-    function applyFilters() {
-      const search = document.getElementById('registry-search').value.toLowerCase().trim();
-      const tier = document.getElementById('registry-tier').value;
-      const statusFilter = document.getElementById('registry-status').value;
-
-      filteredData = rawDataset.filter(item => {
-        const matchesTier = (tier === 'all') || (item.level === tier);
-        let matchesStatus = true;
-        if (statusFilter === 'success') {
-          matchesStatus = item.reachable;
-        } else if (statusFilter === 'unreachable') {
-          matchesStatus = !item.reachable;
-        }
-
-        const matchesSearch = !search || 
-          item.domain.toLowerCase().includes(search) || 
-          item.entity.toLowerCase().includes(search) || 
-          item.arch.toLowerCase().includes(search) || 
-          item.state.toLowerCase().includes(search) ||
-          item.district.toLowerCase().includes(search);
-
-        return matchesTier && matchesStatus && matchesSearch;
-      });
-
-      currentPage = 1;
-      renderTable();
-    }
-
-    // Render Table Page
-    function renderTable() {
-      const tbody = document.getElementById('registry-table-body');
-      tbody.innerHTML = '';
-
-      const start = (currentPage - 1) * pageSize;
-      const end = Math.min(start + pageSize, filteredData.length);
-      const pageSlice = filteredData.slice(start, end);
-
-      document.getElementById('pag-start').innerText = filteredData.length ? (start + 1).toLocaleString() : '0';
-      document.getElementById('pag-end').innerText = end.toLocaleString();
-      document.getElementById('pag-total').innerText = filteredData.length.toLocaleString();
-      document.getElementById('current-page-num').innerText = currentPage;
-      const totalPages = Math.max(1, Math.ceil(filteredData.length / pageSize));
-      document.getElementById('total-page-num').innerText = totalPages;
-
-      document.getElementById('btn-prev-page').disabled = currentPage <= 1;
-      document.getElementById('btn-next-page').disabled = currentPage >= totalPages;
-
-      pageSlice.forEach(r => {
-        const tr = document.createElement('tr');
-        tr.className = "hover:bg-white/[0.03] transition-colors";
-
-        const tierBadge = r.level === 'central' ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' :
-                          r.level === 'state_ut' ? 'bg-orange-500/10 text-orange-400 border-orange-500/20' :
-                          r.level === 'academic_research' ? 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20' :
-                          r.level === 'judiciary' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' :
-                          r.level === 'public_sector' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' :
-                          'bg-purple-500/10 text-purple-400 border-purple-500/20';
-
-        const accColor = r.acc_score >= 90 ? 'text-emerald-400 font-bold' : r.acc_score >= 75 ? 'text-amber-400 font-bold' : r.acc_score ? 'text-rose-400 font-bold' : 'text-zinc-500 font-mono';
-        
-        let statusBadge = '';
-        if (r.reachable) {
-          statusBadge = `<div class="flex flex-col"><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 w-max"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>200 OK</span><span class="text-[10px] text-zinc-400 mt-0.5 truncate max-w-[150px]" title="${r.meas_reason}">${r.meas_reason || 'Active In-Country TLS'}</span></div>`;
-        } else {
-          statusBadge = `<div class="flex flex-col"><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20 w-max"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>OFFLINE</span><span class="text-[10px] text-zinc-400 mt-0.5 truncate max-w-[150px]" title="${r.meas_reason}">${r.meas_reason || 'Host Inactive'}</span></div>`;
-        }
-
-        const archClean = r.arch ? r.arch.replace(/_/g, ' ') : 'indeterminate';
-
-        tr.innerHTML = `
-          <td class="py-2.5 px-4">
-            <div class="font-medium text-white font-mono text-xs hover:text-orange-400 cursor-pointer transition">${r.domain}</div>
-            <div class="text-[11px] text-zinc-400 truncate max-w-[200px]" title="${r.entity}">${r.entity}</div>
-          </td>
-          <td class="py-2.5 px-3">
-            <span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-semibold border ${tierBadge} mb-0.5 whitespace-nowrap">${r.level.replace(/_/g, ' ').toUpperCase()}</span>
-            <div class="text-[10px] text-zinc-400 truncate max-w-[110px]">${r.state}</div>
-          </td>
-          <td class="py-2.5 px-3">
-            <span class="inline-block px-2 py-0.5 rounded bg-zinc-900 text-zinc-300 border border-zinc-800 capitalize font-mono text-[10px] whitespace-nowrap">${archClean}</span>
-          </td>
-          <td class="py-2.5 px-3 font-mono text-xs ${accColor}">
-            ${r.acc_score ? r.acc_score + ' / 100' : '<span class="text-zinc-600 text-[10px]">N/A (Offline)</span>'}
-          </td>
-          <td class="py-2.5 px-3 font-mono text-xs text-zinc-300">
-            ${r.latency_ms ? r.latency_ms + ' ms' : '<span class="text-zinc-600 text-[10px]">-</span>'}
-          </td>
-          <td class="py-2.5 px-3 font-mono text-xs text-purple-400">
-            ${r.sec_score ? r.sec_score + ' / 100' : '<span class="text-zinc-600 text-[10px]">-</span>'}
-          </td>
-          <td class="py-2.5 px-3">
-            <div class="flex items-center gap-1 flex-wrap">
-              ${r.multilingual ? '<span class="px-1 py-0.2 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 text-[9px] font-semibold">Lang</span>' : ''}
-              ${r.mobile_responsive ? '<span class="px-1 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[9px] font-semibold">Mob</span>' : ''}
-              ${r.has_citizen_services ? '<span class="px-1 py-0.2 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[9px] font-semibold">Svc</span>' : ''}
-            </div>
-          </td>
-          <td class="py-2.5 px-4">
-            ${statusBadge}
-          </td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
-
-    function prevPage() {
-      if (currentPage > 1) {
-        currentPage--;
-        renderTable();
-      }
-    }
-
-    function nextPage() {
-      const totalPages = Math.ceil(filteredData.length / pageSize);
-      if (currentPage < totalPages) {
-        currentPage++;
-        renderTable();
-      }
-    }
-
-    function exportFilteredCSV() {
-      if (!filteredData.length) return;
-      const headers = Object.keys(filteredData[0]).join(',');
-      const rows = filteredData.map(obj => Object.values(obj).map(v => `"${v}"`).join(','));
-      const csvContent = "data:text/csv;charset=utf-8," + [headers, ...rows].join("\n");
-      const encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", `bharatgov_filtered_${filteredData.length}_portals.csv`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    // Chart.js Setup
-    function initCharts() {
-      if (chartsInitialized) return;
-      chartsInitialized = true;
-
-      Chart.defaults.color = '#9ca3af';
-      Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
-
-      // 1. Radar Chart: 5-Pillar Governance
-      new Chart(document.getElementById('radarChart'), {
-        type: 'radar',
-        data: {
-          labels: ['Accessibility (WCAG)', 'Core Web Vitals', 'Security Headers', 'Regional Languages', 'Citizen Grievances'],
-          datasets: [
-            {
-              label: 'Central Ministries',
-              data: [92.0, 68.5, 85.2, 88.5, 96.0],
-              borderColor: '#38bdf8',
-              backgroundColor: 'rgba(56, 189, 248, 0.15)',
-              borderWidth: 2,
-              pointBackgroundColor: '#38bdf8',
-            },
-            {
-              label: 'State Departments',
-              data: [93.2, 60.1, 62.4, 86.2, 88.0],
-              borderColor: '#f97316',
-              backgroundColor: 'rgba(249, 115, 22, 0.15)',
-              borderWidth: 2,
-              pointBackgroundColor: '#f97316',
-            },
-            {
-              label: 'District Administrations',
-              data: [96.1, 58.0, 56.2, 84.0, 94.5],
-              borderColor: '#a855f7',
-              backgroundColor: 'rgba(168, 85, 247, 0.15)',
-              borderWidth: 2,
-              pointBackgroundColor: '#a855f7',
-            },
-            {
-              label: 'Public Sector / Banks',
-              data: [90.5, 78.4, 88.0, 92.0, 97.5],
-              borderColor: '#10b981',
-              backgroundColor: 'rgba(16, 185, 129, 0.15)',
-              borderWidth: 2,
-              pointBackgroundColor: '#10b981',
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            r: {
-              angleLines: { color: 'rgba(255,255,255,0.06)' },
-              grid: { color: 'rgba(255,255,255,0.06)' },
-              pointLabels: { color: '#d1d5db', font: { size: 10, weight: 600 } },
-              ticks: { display: false }
-            }
-          },
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: { color: '#e5e7eb', boxWidth: 10, font: { size: 11 } }
-            }
-          }
-        }
-      });
-
-      // 2. State Benchmarks Bar Chart
-      new Chart(document.getElementById('stateBarChart'), {
-        type: 'bar',
-        data: {
-          labels: ['West Bengal', 'Nagaland', 'Haryana', 'Mizoram', 'Uttar Pradesh', 'Arunachal Pradesh', 'Chhattisgarh', 'Maharashtra', 'Kerala', 'Karnataka'],
-          datasets: [
-            {
-              label: 'Composite Maturity (0-100)',
-              data: [81.2, 80.5, 79.8, 79.5, 78.4, 78.0, 77.6, 77.2, 76.8, 76.5],
-              backgroundColor: '#f97316',
-              hoverBackgroundColor: '#ea580c',
-              borderRadius: 5,
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          indexAxis: 'y',
-          scales: {
-            x: {
-              grid: { color: 'rgba(255,255,255,0.04)' },
-              ticks: { color: '#9ca3af' },
-              max: 100
-            },
-            y: {
-              grid: { display: false },
-              ticks: { color: '#f3f4f6', font: { weight: 600 } }
-            }
-          },
-          plugins: {
-            legend: { display: false }
-          }
-        }
-      });
-
-      // 3. Architecture Doughnut Chart
-      new Chart(document.getElementById('archChart'), {
-        type: 'doughnut',
-        data: {
-          labels: ['S3WaaS Drupal (6,480)', 'Custom Dynamic CMS (2,671)', 'Modern SPA (651)', 'Legacy ASP.NET (399)', 'WordPress (46)'],
-          datasets: [
-            {
-              data: [6480, 2671, 651, 399, 46],
-              backgroundColor: ['#f97316', '#0284c7', '#10b981', '#64748b', '#a855f7'],
-              borderWidth: 0,
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: { color: '#d1d5db', boxWidth: 10, font: { size: 10 } }
-            }
-          }
-        }
-      });
-
-      // 4. LCP Speed Distribution
-      new Chart(document.getElementById('lcpChart'), {
-        type: 'bar',
-        data: {
-          labels: ['< 2.5s (Good)', '2.5s - 4.0s (Moderate)', '> 4.0s (Slow)'],
-          datasets: [
-            {
-              data: [7010, 2450, 787],
-              backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
-              borderRadius: 5,
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
-            y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#9ca3af' } }
-          },
-          plugins: { legend: { display: false } }
-        }
-      });
-
-      // 5. Security Posture
-      new Chart(document.getElementById('securityChart'), {
-        type: 'bar',
-        data: {
-          labels: ['HTTPS (100%)', 'HSTS (44.5%)', 'CSP (35.2%)', 'X-Frame (62.8%)'],
-          datasets: [
-            {
-              data: [100.0, 44.5, 35.2, 62.8],
-              backgroundColor: '#a855f7',
-              borderRadius: 5,
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
-            y: { max: 100, grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#9ca3af' } }
-          },
-          plugins: { legend: { display: false } }
-        }
-      });
-    }
-
-    // Live Telemetry Simulation
-    const SAMPLE_LOGS = [
-      "[National-Audit] meity.gov.in -> 200 OK | TTFB: 210ms | WCAG 2.1: 94.5/100 | S3WaaS Drupal Active",
-      "[National-Audit] up.gov.in -> 200 OK | TTFB: 320ms | HSTS Enforced | Samadhan Integrated",
-      "[National-Audit] varanasi.nic.in -> 200 OK | TTFB: 180ms | S3WaaS Drupal | GIGW Compliant",
-      "[National-Audit] wb.gov.in -> 200 OK | TTFB: 290ms | Bengali Localization | Score: 95.4/100",
-      "[National-Audit] maharashtra.gov.in -> 200 OK | TTFB: 410ms | Marathi Localization Active",
-      "[National-Audit] nagaland.gov.in -> 200 OK | TTFB: 350ms | S3WaaS Drupal | Score: 95.8/100",
-      "[National-Audit] karnataka.gov.in -> 200 OK | TTFB: 160ms | Kannada/Eng | CWV LCP: 2.1s",
-      "[National-Audit] aiims.edu -> 200 OK | TTFB: 240ms | Academic Tier | TLS 1.3 Active",
-      "[National-Audit] sci.gov.in -> 200 OK | TTFB: 310ms | Supreme Court of India | 200 OK"
-    ];
-
-    function startTelemetrySimulation() {
-      let idx = 0;
-      const el = document.getElementById('telemetry-ticker');
-      if (!el) return;
-
-      setInterval(() => {
-        idx = (idx + 1) % SAMPLE_LOGS.length;
-        el.style.opacity = '0';
-        setTimeout(() => {
-          el.innerText = SAMPLE_LOGS[idx];
-          el.style.opacity = '1';
-        }, 200);
-      }, 3500);
-    }
-
-    window.addEventListener('DOMContentLoaded', loadData);
-  </script>
 </body>
 </html>

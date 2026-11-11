@@ -12,9 +12,10 @@ Digital Public Infrastructure (DPI) serves as the primary conduit through which 
 To overcome these barriers, we present **BharatGov Access**, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures **12,092 government web domains** across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible **5-Pillar / 10-Sub-Feature** evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).
 
 Our empirical audit reveals three primary findings:
-1. **The S3WaaS Standardization Dividend:** The National Informatics Centre's (NIC) *Secure, Scalable and Sugamya Website as a Service* (S3WaaS) framework, running on a hardened Drupal core across 6,480 active district portals (63.2%), acts as a transformative equalizer, elevating mean accessibility compliance to **96.1 / 100** with **98.2%** GIGW accessibility toolbar penetration, contrasted with legacy state ASP.NET deployments that languish at **81.5 / 100**.
-2. **The Cryptographic Hardening Deficit:** While transport-layer encryption is ubiquitous (**100.0%** HTTPS enforcement across active nodes), defensive HTTP headers exhibit severe lag: only **44.5%** of public portals mandate HTTP Strict Transport Security (HSTS), and a mere **35.2%** declare Content Security Policy (CSP), exposing citizens to SSL-stripping and cross-site scripting risks.
-3. **Linguistic & Domestic Latency Performance:** Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is **1.18 seconds** (estimated LCP of 2.67s), with **86.0%** of active portals offering localization in regional Eighth Schedule Indian scripts. 
+
+1. **The S3WaaS Standardization Dividend:** The National Informatics Centre's (NIC) *Secure, Scalable and Sugamya Website as a Service* (S3WaaS) framework, running on a hardened Drupal core across 6,480 active district portals (63.2%), acts as a transformative equalizer, elevating mean accessibility compliance to **95.2 / 100** with **100.0%** GIGW accessibility toolbar penetration, contrasted with legacy state ASP.NET deployments that languish at **84.3 / 100**. The dividend is real but bounded: S3WaaS does not lead on security headers, where it scores 66.8 against 85.1 for modern single-page applications.
+2. **The Cryptographic Hardening Deficit:** While transport-layer encryption is ubiquitous (**100.0%** HTTPS enforcement across active nodes), defensive HTTP headers exhibit severe lag: the mean header-hardening score is **68.0 / 100**, and only **444 portals (4.3%)** set HSTS, a content security policy, frame options and MIME-sniffing protection together. The modal band, holding 60.0% of portals, scores between 50 and 75, leaving citizens exposed to SSL-stripping and cross-site scripting risks at the edge.
+3. **Linguistic & Domestic Latency Performance:** Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is **888 ms** (mean 1,186 ms; estimated LCP median 2.27 s, mean 2.67 s), with **86.0%** of active portals offering localization in regional Eighth Schedule Indian scripts. 
 
 We release the entire 12,092-portal dataset in immutable Apache Parquet, CSV, and JSON formats under CC-BY-4.0 alongside an open-access interactive observatory to assist researchers, engineers, and policymakers in modernizing public digital infrastructure.
 
@@ -117,6 +118,8 @@ To eliminate ambiguous and noisy features, we synthesize web infrastructure eval
 To enable comparative governance analysis, we formulate a normalized composite maturity index ($0 \le M \le 100$):
 $$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0, 100 - 15 \cdot T_{\text{lcp}}) + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})$$
 
+The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0. We verified the formula against the released values: it reproduces **99.96%** of the 10,247 reachable rows to within 0.15, and the four remaining rows are all clamped at the floor. The formula is exposed as `bharatgov_access.maturity_index()` so a reader can score a portal they measured themselves with the same methodology.
+
 ---
 
 ## IV. Measurement System Architecture
@@ -156,7 +159,7 @@ $$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0,
 ### A. In-Country Vantage Point Elimination of Geo-IP Bias
 The primary engineering challenge encountered during initial audits was the severe distortion caused by state perimeter security devices. When crawled from an Atlanta (US) node, 1,592 out of 2,390 domains (66.6%) returned HTTP 502/504 errors. 
 
-Deploying an equivalent measurement agent in a Bangalore datacenter connected to domestic tier-1 Indian internet transit eliminated these drops entirely. Active reachability jumped to **84.7%** across the census dataset, and latencies dropped from over 15,000 ms (timeout threshold) to authentic domestic values ($\text{median} = 1.18\text{s}$).
+Deploying an equivalent measurement agent in a Bangalore datacenter connected to domestic tier-1 Indian internet transit eliminated these drops entirely. Active reachability jumped to **84.7%** across the census dataset, and latencies dropped from over 15,000 ms (timeout threshold) to authentic domestic values (median TTFB 888 ms, mean 1,186 ms).
 
 ### B. Decoupled Validation Rigor
 To ensure academic integrity, BharatGov Access strictly decouples **Schema Registration** from **Measurement Success**. When a portal is unreachable or its DNS lease has expired, the observatory assigns explicit status diagnostic codes (`DNS Inactive`, `504 Timeout`, `502 Bad Gateway`, `403 WAF Challenge`) and records sub-feature metrics as `null` / `NaN`, preventing the propagation of artificial zero scores.
@@ -168,38 +171,62 @@ To ensure academic integrity, BharatGov Access strictly decouples **Schema Regis
 The census dataset comprises **12,092 government web domains**, with **10,247 actively evaluated in-country**. Table I provides a comprehensive breakdown across administrative levels.
 
 ### TABLE I: Comprehensive Breakdown Across Governance Tiers
+All figures are computed from the released dataset (`bharatgov_access_clean.parquet`) over reachable portals only. Reproduce with `bharatgov tiers`.
+
 | Governance Tier | Total Registered | Active Audited (%) | Mean Acc. Score ($S_{\text{acc}}$) | GIGW Toolbar (%) | Mean Sec. Score ($S_{\text{sec}}$) | Multilingual (%) | Median TTFB (ms) | Mean Maturity ($M$) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Central Ministries** | 645 | 622 (96.4%) | 92.0 | 78.4% | **85.2** | 88.5% | 720 | 78.2 |
-| **State Departments** | 2,935 | 2,758 (94.0%) | 93.2 | 84.2% | 62.4 | 86.2% | 1,150 | 77.4 |
-| **District Collectorates** | 7,468 | 6,180 (82.8%) | **96.1** | **98.2%** | 56.2 | 84.0% | 850 | **79.5** |
-| **Academic & Research** | 352 | 344 (97.7%) | 91.5 | 74.0% | 74.0 | 78.0 | **540** | 76.8 |
-| **Judiciary & Courts** | 292 | 278 (95.2%) | 92.0 | 92.0% | 76.0 | 88.0 | 820 | 77.5 |
-| **Public Sector / Banks** | 260 | 255 (98.1%) | 90.5 | 65.0% | **88.0** | **92.0%** | 610 | 78.6 |
-| **Urban Local Bodies** | 140 | 128 (91.4%) | 89.0 | 70.0% | 62.0 | 82.0 | 1,080 | 75.2 |
-| **National Baseline** | **12,092** | **10,247 (84.7%)** | **93.8** | **91.0%** | **68.0** | **86.0%** | **1,185** | **78.8** |
+| **Central Ministries** | 645 | 532 (82.5%) | 90.8 | 88.2% | 78.6 | 75.9% | 971 | 74.9 |
+| **State Departments** | 2,935 | 2,017 (68.7%) | 92.0 | 88.3% | 68.4 | 84.6% | 1,059 | 75.7 |
+| **District Collectorates** | 7,468 | 6,716 (89.9%) | **95.0** | 94.7% | 65.8 | 86.9% | 880 | **80.1** |
+| **Academic & Research** | 352 | 342 (97.2%) | 91.6 | 71.1% | 84.7 | 90.6% | **487** | **83.3** |
+| **Judiciary & Courts** | 292 | 271 (92.8%) | 91.0 | 78.2% | 63.2 | 88.6% | 1,024 | 71.9 |
+| **Public Sector / Banks** | 260 | 247 (95.0%) | 91.8 | 66.8% | 84.4 | 89.9% | 496 | **83.2** |
+| **Urban Local Bodies** | 140 | 122 (87.1%) | 90.1 | 80.3% | 65.8 | 77.9% | 1,096 | 71.6 |
+| **National Baseline** | **12,092** | **10,247 (84.7%)** | **93.8** | **91.0%** | **68.0** | **86.0%** | **888** | **78.8** |
+
+Two figures in this table deserve careful reading. First, the national reachability rate of 84.7% is not uniform: state departments sit at 68.7% while higher education reaches 97.2%, so the national average conceals a 28-point spread across tiers. Second, the tier with the highest accessibility (district collectorates, 95.0) is not the tier with the highest security (higher education, 84.7). Accessibility and security are effectively uncorrelated across tiers, which is the central finding of Section V-B.
 
 ### A. Architectural Impact: S3WaaS vs. Legacy Frameworks
-A central empirical contribution of this study is quantifying the national impact of NIC's S3WaaS Drupal distribution. As illustrated in Table II, S3WaaS portals outperform custom dynamic CMS and legacy ASP.NET deployments across every user-facing dimension.
+A central empirical contribution of this study is quantifying the national impact of NIC's S3WaaS Drupal distribution. As Table II shows, S3WaaS portals outperform every other platform on accessibility, GIGW toolbar penetration and mobile responsiveness, but they do **not** lead on security headers — a distinction an earlier draft of this paper elided.
 
 ### TABLE II: Comparison of Web CMS Architectures
+Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with `bharatgov arch`.
+
 | Metric | S3WaaS Drupal | Custom Dynamic CMS | Legacy ASP.NET | Modern SPA | WordPress |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Active Portals Observed** | 6,480 (63.2%) | 2,671 (26.1%) | 399 (3.9%) | 651 (6.4%) | 46 (0.4%) |
-| **Mean Accessibility ($S_{\text{acc}}$)** | **96.1 / 100** | 91.2 / 100 | 81.5 / 100 | 92.0 / 100 | 88.5 / 100 |
-| **GIGW Toolbar Penetration** | **98.2%** | 78.0% | 48.0% | 68.0% | 62.0% |
-| **Median TTFB Latency** | 800 ms | 1,100 ms | 1,500 ms | **500 ms** | 1,200 ms |
-| **Mobile Responsiveness** | **99.5%** | 94.0% | 88.0% | 99.0% | 95.0% |
-| **Composite Maturity ($M$)** | **80.2 / 100** | 75.8 / 100 | 68.4 / 100 | 78.5 / 100 | 73.2 / 100 |
+| **Mean Accessibility ($S_{\text{acc}}$)** | **95.2 / 100** | 92.6 / 100 | 84.3 / 100 | 91.6 / 100 | 90.8 / 100 |
+| **GIGW Toolbar Penetration** | **100.0%** | 77.4% | 67.7% | 71.4% | 95.7% |
+| **Mean Security Headers ($S_{\text{sec}}$)** | 66.8 / 100 | 67.6 / 100 | 60.3 / 100 | **85.1 / 100** | 74.5 / 100 |
+| **Median TTFB Latency** | 914 ms | 909 ms | 1,060 ms | **529 ms** | 1,259 ms |
+| **Mobile Responsiveness** | 98.8% | 96.1% | 90.5% | **100.0%** | 97.8% |
+| **Composite Maturity ($M$)** | 81.0 / 100 | 74.4 / 100 | 68.5 / 100 | **82.3 / 100** | 70.8 / 100 |
+
+The S3WaaS dividend is real but narrower than a single composite score suggests. It buys accessibility and mobile compliance almost completely — 100.0% toolbar penetration and 95.2 mean accessibility against 84.3 for legacy ASP.NET, a 10.9-point gap. It buys nothing on security: S3WaaS scores 66.8 on headers, below the custom-CMS mean of 67.6 and far below the modern-SPA mean of 85.1. A template can ship accessible markup; it cannot ship a content security policy, because that is a deployment decision made at the reverse proxy.
 
 ### B. The Cryptographic Security Gap
-While 100.0% of reachable portals mandate TLS/HTTPS, our audit reveals a significant security vulnerability in defensive HTTP headers:
-- **HSTS Adoption:** Only **44.5%** enforce `Strict-Transport-Security`. This leaves citizens connecting over public Wi-Fi vulnerable to SSL-stripping attacks.
-- **CSP Adoption:** Only **35.2%** declare `Content-Security-Policy`. The absence of CSP is especially acute in state portals running custom forms, creating vulnerability to Cross-Site Scripting (XSS).
-- **Clickjacking Defense:** **62.8%** configure `X-Frame-Options` or CSP `frame-ancestors`.
+While 100.0% of reachable portals mandate TLS/HTTPS, the audit reveals a substantial gap in defensive HTTP headers. The released schema records a composite header score rather than per-directive booleans, so the figures below are distributional rather than per-directive:
+
+- **Mean header score:** **68.0 / 100** across 10,247 reachable portals.
+- **Full hardening:** only **444 portals (4.3%)** score 100, meaning they set HSTS, a content security policy, `X-Frame-Options` and `X-Content-Type-Options` together.
+- **Partial hardening:** **29.5%** score 75 or above; the modal band is 50–75, holding 6,144 portals (60.0%).
+
+The practical consequence is that a citizen on public Wi-Fi is protected by transport encryption but not by HSTS preload, and a portal running custom forms is not protected by a content security policy. Both are edge-configuration fixes that require no application change, which is why Section VI recommends them at the reverse proxy rather than in each department.
 
 ### C. State-by-State Governance Maturity Rankings
-Benchmarking composite maturity across the 36 States and UTs highlights significant regional leadership. West Bengal (81.2), Nagaland (80.5), Haryana (79.8), Mizoram (79.5), and Uttar Pradesh (78.4) achieve the highest scores, primarily driven by rapid district-level S3WaaS migration. Conversely, states retaining decentralized, bespoke line department portals exhibited lower compliance due to missing accessibility toolbars and unoptimized asset delivery.
+Benchmarking composite maturity across the 36 States and UTs shows a narrow band: the top state (Meghalaya, 79.9) and the bottom (Himachal Pradesh, 78.4) differ by only 1.5 points on the composite index. That compression is itself the finding — the composite is dominated by accessibility, which is uniformly high, so it cannot discriminate between states. Security headers, by contrast, span 62.8 to 86.2 across states, a 23-point range, and median latency spans 758 ms to 1,846 ms.
+
+| Rank | State / UT | Portals | Maturity | Accessibility | Security | Median TTFB |
+| :---: | :--- | ---: | ---: | ---: | ---: | ---: |
+| 1 | Meghalaya | 210 | 79.9 | 93.9 | 67.4 | 758 ms |
+| 2 | Odisha | 252 | 79.8 | 94.5 | 67.8 | 868 ms |
+| 3 | Uttar Pradesh | 389 | 79.6 | 94.7 | 62.8 | 771 ms |
+| 4 | Nagaland | 210 | 79.5 | 94.3 | 68.1 | 864 ms |
+| 5 | Maharashtra | 279 | 79.5 | 94.3 | 67.1 | 866 ms |
+| … | … | … | … | … | … | … |
+| 36 | Himachal Pradesh | 275 | 78.4 | 93.6 | 66.5 | 1,015 ms |
+
+Reproduce with `bharatgov states`.
 
 ---
 
@@ -208,9 +235,9 @@ Benchmarking composite maturity across the 36 States and UTs highlights signific
 Based on empirical evidence across 12,092 portals, we propose three actionable recommendations for MeitY, NIC, and state IT departments:
 
 1. **Mandate Complete District & Municipal S3WaaS Migration:**  
-   Our data demonstrates that S3WaaS elevates accessibility compliance by over 14 points (from 81.5 to 96.1) while ensuring mobile responsiveness. State governments should phase out legacy bespoke ASP.NET websites and migrate all municipal and district portals to the S3WaaS pipeline.
+   Our data demonstrates that S3WaaS elevates accessibility compliance by 10.9 points (from 84.3 to 95.2) while ensuring near-universal mobile responsiveness (98.8%). State governments should phase out legacy bespoke ASP.NET websites and migrate all municipal and district portals to the S3WaaS pipeline.
 2. **Institute Centralized Reverse Proxy Security Headers:**  
-   The lag in HSTS (44.5%) and CSP (35.2%) can be resolved without modifying application code. We recommend that RailTel, NIC, and State Data Centres mandate automated injection of HSTS (`max-age=31536000; includeSubDomains`) and base CSP policies at their NGINX / reverse-proxy edge gateways.
+   The header-hardening deficit (mean 68.0 / 100; only 4.3% of portals fully hardened) can be resolved without modifying application code. We recommend that RailTel, NIC, and State Data Centres mandate automated injection of HSTS (`max-age=31536000; includeSubDomains`) and base CSP policies at their NGINX / reverse-proxy edge gateways.
 3. **Establish In-Country Automated Longitudinal Audits:**  
    Government bodies should rely on continuous, in-country automated observatories rather than periodic, point-in-time commercial manual audits. Ongoing monitoring incentivizes departments to fix regressions in image alt tags and language localization immediately upon deployment.
 
@@ -232,8 +259,29 @@ Based on empirical evidence across 12,092 portals, we propose three actionable r
 This paper presented **BharatGov Access**, a census-scale web observatory evaluating 12,092 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.
 
 To promote reproducibility and open science, all research artifacts are made publicly accessible:
+
 - **Interactive Web Observatory:** `https://quality-ampland-ashley-ought.trycloudflare.com`
 - **Census Open Dataset:** Immutable Apache Parquet, CSV, and JSON releases hosted under CC-BY-4.0 in `resources/bharatgov_access_clean.*`.
+- **Installable Python package:** `pip install bharatgov-access` bundles the Parquet release and exposes the loader, the tier and platform tables, the state ranking and the maturity index. Every figure in this paper is one call away:
+
+```python
+import bharatgov_access as bga
+
+bga.tier_summary()          # Table I
+bga.architecture_summary()  # Table II
+bga.state_ranking()         # Section V-C
+```
+
+A command-line interface ships with the package, so the tables are reachable without writing Python:
+
+```bash
+bharatgov tiers
+bharatgov arch
+bharatgov states --top 10
+bharatgov query --tier district --state Kerala --min-maturity 85
+```
+
+The package carries a test suite that asserts the published figures, so a regression in the loader fails loudly rather than silently changing a table in this paper.
 
 ---
 

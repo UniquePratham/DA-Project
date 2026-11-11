@@ -29,14 +29,16 @@ The observatory categorizes sovereign Indian digital public infrastructure into 
 
 | Administrative Governance Tier | Registered Census | Active Audited (%) | Inactive / Deprecated | Mean WCAG Acc. | GIGW Toolbar |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Central Ministries & Commissions** | 645 | 622 (96.4%) | 23 | 92.0 / 100 | 78.4% |
-| **State Departments (36 States/UTs)** | 2,935 | 2,758 (94.0%) | 177 | 93.2 / 100 | 84.2% |
-| **District Administrations (All 788 Districts)** | 7,468 | 6,180 (82.8%) | 1,288 | **96.1 / 100** | **98.2%** |
-| **Higher Education & Research (IITs, NITs)** | 352 | 344 (97.7%) | 8 | 91.5 / 100 | 74.0% |
-| **Judiciary & Courts (High Courts, Tribunals)** | 292 | 278 (95.2%) | 14 | 92.0 / 100 | 92.0% |
-| **Public Sector Enterprises & Banks** | 260 | 255 (98.1%) | 5 | 90.5 / 100 | 65.0% |
-| **Urban Local Bodies (Municipalities)** | 140 | 128 (91.4%) | 12 | 89.0 / 100 | 70.0% |
+| **Central Ministries & Commissions** | 645 | 532 (82.5%) | 113 | 90.8 / 100 | 88.2% |
+| **State Departments (36 States/UTs)** | 2,935 | 2,017 (68.7%) | 918 | 92.0 / 100 | 88.3% |
+| **District Administrations (All 788 Districts)** | 7,468 | 6,716 (89.9%) | 752 | **95.0 / 100** | 94.7% |
+| **Higher Education & Research (IITs, NITs)** | 352 | 342 (97.2%) | 10 | 91.6 / 100 | 71.1% |
+| **Judiciary & Courts (High Courts, Tribunals)** | 292 | 271 (92.8%) | 21 | 91.0 / 100 | 78.2% |
+| **Public Sector Enterprises & Banks** | 260 | 247 (95.0%) | 13 | 91.8 / 100 | 66.8% |
+| **Urban Local Bodies (Municipalities)** | 140 | 122 (87.1%) | 18 | 90.1 / 100 | 80.3% |
 | **National Total / Baseline** | **12,092** | **10,247 (84.7%)** | **1,845 (15.3%)** | **93.8 / 100** | **91.0%** |
+
+> These figures are computed from `resources/bharatgov_access_clean.parquet` over reachable portals only. Reproduce with `bharatgov tiers` (see §4).
 
 ### B. Storage Files & Data Formats
 All dataset artifacts are stored in the `resources/` directory and synchronized with `dashboard/static/`:
@@ -45,6 +47,32 @@ All dataset artifacts are stored in the `resources/` directory and synchronized 
 * `resources/bharatgov_access_clean.json` — Structured JSON export for external APIs.
 * `dashboard/static/dataset.json` — Compact JSON for the live HTTP web dashboard.
 * `dashboard/static/dataset.js` — **Critical Local File Bundle:** Declares `window.RAW_DATASET = [...]` so that `dashboard/index.html` loads all 12,092 rows with **zero CORS issues** when opened directly as a `file:///` URL in Windows Explorer.
+* `dashboard/static/india_map.js` — Generated state boundaries (36 States/UTs, 41 KB) for the atlas choropleth. Rebuild with `python scripts/build_india_map.py`.
+* `dashboard/static/fonts/` — Self-hosted Newsreader, Public Sans and IBM Plex Mono woff2 subsets, so the dashboard renders identically offline. Refresh with `python scripts/fetch_fonts.py`.
+
+### C. Installable Python Package
+The census ships as a pip-installable package at `packages/bharatgov-access/`:
+
+```bash
+pip install bharatgov-access          # from PyPI, once published
+pip install -e packages/bharatgov-access   # from this repo
+```
+
+```python
+import bharatgov_access as bga
+
+bga.load()                  # 12,092 domains, 20 typed columns
+bga.load(reachable=True)    # 10,247 that answered in-country
+bga.tier_summary()          # Table I of the paper
+bga.architecture_summary()  # Table II of the paper
+bga.state_ranking()         # 36 States and UTs, ranked
+bga.maturity_index(...)     # recompute the composite for your own portal
+```
+
+A CLI ships with it: `bharatgov info | tiers | arch | states | query | export`.
+The package bundles the Parquet release (465 KB wheel) and carries 14 tests that
+assert the published figures, so a loader regression fails loudly instead of
+silently changing a paper table.
 
 ---
 
@@ -94,42 +122,94 @@ To prevent "metric bloat" (which previously had 70+ uncalibrated columns), the p
 
 ## 4. Web Dashboard Architecture & Design Decisions
 
-### A. Core File: `dashboard/index.html`
-* **Zero Horizontal Scrollbar Lockdown:** The document strictly enforces:
-  ```css
-  html, body {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden !important;
-  }
-  ::-webkit-scrollbar:horizontal {
-    display: none !important;
-    height: 0px !important;
-  }
-  ```
-* **Dual Ingestion Mode (Offline `file:///` + Live HTTP):**
-  Loads `static/dataset.js` via `<script>`. If `window.RAW_DATASET` is available in memory, it uses it immediately; otherwise, it falls back to `fetch('static/dataset.json')`. This prevents Chrome/Edge CORS errors when opened from local disk.
-* **Six Structured Views:**
-  1. `📊 Benchmarks` — Executive scorecards, 5-Pillar Spider Radar, State Maturity index, CMS architecture doughnut, CWV LCP breakdown, CERT-In security header stats.
-  2. `🗺️ India Geo-Map` — Interactive Vector SVG topological network connecting the Central National Gateway to 20 key state nodes with animated radar beams. Clicking any node updates the **Node Telemetry Inspector** with real data.
-  3. `🏛️ State Scorecards` — Interactive dropdown for all 36 States/UTs displaying citizen utility penetration and actionable GIGW modernization blueprints.
-  4. `🛡️ 5-Pillar Standards` — Clear explanation of the research methodology and scoring formulas.
-  5. `📋 National Registry` — High-performance table with search, tier filter, status filter, CSV export, and pagination across 12,092 records.
-  6. `📖 Guide` — Python quickstart script using Pandas/PyArrow and complete 20-column data dictionary.
-* **SVG Hover Fix:** State nodes use pure SVG stroke/fill transitions on hover instead of CSS `transform: scale()`, permanently eliminating the cursor jitter/flicker issue.
+The dashboard was rebuilt as a printed statistical bulletin rather than a SaaS
+product. The design language borrows from census atlases and government
+bulletins: warm paper, hairline rules, one oxide accent, tabular figures, and
+real geography. There are no gradients on surfaces, no glass panels, no glow, no
+emoji, and no icon library mixed with a second icon library.
+
+### A. File Layout
+
+| File | Role |
+| :--- | :--- |
+| `dashboard/index.html` | Semantic markup only. No inline styles beyond a few layout utilities. |
+| `dashboard/static/app.css` | Design tokens (OKLCH), type scale, layout, print stylesheet. |
+| `dashboard/static/app.js` | Data engine, SVG chart renderers, atlas, ledger, palette, theme. |
+| `dashboard/static/dataset.js` | `window.RAW_DATASET` bundle for zero-CORS `file://` loading. |
+| `dashboard/static/india_map.js` | Generated state boundaries for the atlas. |
+| `dashboard/static/fonts/` | Self-hosted woff2 subsets. |
+| `dashboard/static/logo-mark.svg` | The Gateway / Datum mark. |
+| `dashboard/static/favicon.svg` | Favicon tile. |
+
+### B. Design System
+
+* **Palette.** OKLCH tokens on a warm paper ground (`--paper`), warm near-black
+  ink (`--ink` through `--ink-4`), and a single oxide accent (`--oxide`). A
+  five-step sequential ramp (`--data-1` … `--data-5`) carries the choropleth.
+  Contrast is verified: body 14.6:1, secondary 8.4:1, tertiary 5.5:1, quaternary
+  3.7:1 against paper, in both themes.
+* **Typography.** Newsreader (display), Public Sans (UI), IBM Plex Mono
+  (figures). Three faces, each with a job. Headings are roman; italic is reserved
+  for body-copy emphasis.
+* **Light and dark.** An explicit segmented control in the rail, not a mystery
+  icon. The choice persists in `localStorage`; the OS preference is followed only
+  until the reader makes an explicit choice. `t` toggles from the keyboard.
+* **No horizontal scroll.** `overflow-x: clip` on `html` and `body`, verified at
+  320 / 375 / 414 / 768 / 1024 / 1280 / 1600 px across all five views.
+
+### C. Five Views
+
+1. **Overview** — headline band, five computed findings, tier maturity bars,
+   LCP and TTFB distributions, security and platform charts, pillar coverage
+   matrix.
+2. **Atlas** — real Census state boundaries as a choropleth, a state dossier
+   with meters, and a full 36-row ranking.
+3. **Ledger** — the full census with search, tier and status filters, six sort
+   orders, pagination, and CSV export.
+4. **Standard** — the five pillars with live values, the composite formula, and
+   the 20-column schema.
+5. **Method** — vantage-point rationale, a reproduction snippet, and four
+   documented limits.
+
+### D. Data Integrity
+
+Every figure is computed in the browser from `dataset.js` at load time. Nothing
+is hardcoded. `scripts/verify_dashboard.py` recomputes the same figures
+independently from `resources/bharatgov_access_clean.csv` with pandas and
+compares them against the rendered DOM: **419 assertions across layout, data,
+behaviour and accessibility**, all passing.
+
+### E. Accessibility
+
+Landmarks, a skip link, `role="tablist"` with arrow-key navigation, labelled
+controls, `aria-label` on every SVG, visible focus rings, and WCAG AA contrast in
+both themes. Verified by the `a11y` suite.
 
 ---
 
 ## 5. Academic Deliverables & Research Artifacts
 
-1. **Academic Research Paper (Submission Ready):**
-   * Markdown: `research_paper/BharatGov_Access_Research_Paper.md` (10-page comprehensive paper, mathematical formulations, Tables I & II, 10 formal academic citations).
-   * LaTeX: `research_paper/BharatGov_Access_Research_Paper.tex` (IEEE conference format).
-   * Compiled PDF: `research_paper/BharatGov_Access_Research_Paper.pdf` (Rendered using Playwright into a two-column IEEE format).
-2. **Academic Presentation (6 Widescreen Slides):**
-   * PowerPoint: `resources/DA Check 02.pptx` and `resources/BharatGov_Access_Checkpoint_2_Presentation.pptx`.
-   * Vector 16:9 PDF: `resources/BharatGov.pdf`.
-   * HTML Deck: `resources/checkpoint_2_presentation.html`.
+1. **Academic Research Paper (submission ready):**
+   * Markdown source of truth: `research_paper/BharatGov_Access_Research_Paper.md`
+   * Rendered HTML: `research_paper/BharatGov_Access_Research_Paper.html`
+   * Compiled PDF: `research_paper/BharatGov_Access_Research_Paper.pdf`
+   * LaTeX: `research_paper/BharatGov_Access_Research_Paper.tex`
+   * Regenerate with `python scripts/render_paper.py`. The Markdown is the single
+     source; the HTML and PDF are derived, so a table correction propagates.
+   * **Tables I and II were corrected against the released dataset.** An earlier
+     draft carried figures that did not match the Parquet release (for example a
+     96.1 district accessibility mean where the data says 95.0, and per-header
+     HSTS/CSP percentages that the 20-column schema does not record). Every
+     number in the paper is now reproducible with `bharatgov tiers` and
+     `bharatgov arch`.
+2. **Final Evaluation Deck (5 widescreen slides):**
+   * PDF: `resources/BharatGov_Access_Final_Deck.pdf`
+   * HTML: `resources/BharatGov_Access_Final_Deck.html`
+   * Regenerate with `python scripts/build_deck.py`. Every number on a slide is
+     computed from the dataset, and the screenshots come from
+     `python scripts/capture_screenshots.py`.
+3. **Screenshots:** `resources/screenshots/` — five views in light and dark, a
+   full-page overview, and a mobile proof shot.
 
 ---
 
@@ -141,6 +221,7 @@ To prevent "metric bloat" (which previously had 70+ uncalibrated columns), the p
 * **Live Tunnel:** Cloudflare Quick Tunnel  
   **URL:** `https://quality-ampland-ashley-ought.trycloudflare.com` (Status: HTTP 200 OK)
 * **File Sync Workflow:** Files are synchronized from local to remote via Paramiko SFTP. Temporary sync scripts must be deleted immediately after execution and never committed to Git.
+* **Deploying the rebuilt dashboard:** the new dashboard is fully static and needs no build step. Upload `dashboard/index.html` plus the whole `dashboard/static/` directory (including `fonts/`, `india_map.js`, `app.css`, `app.js`, `logo-mark.svg`, `favicon.svg`). The old single-file dashboard had no external assets; this one does, so a partial upload will render unstyled.
 
 ---
 
@@ -169,3 +250,4 @@ To prevent "metric bloat" (which previously had 70+ uncalibrated columns), the p
 > [!TIP]
 > **MAINTAIN DUAL DATA LOADING**  
 > Whenever regenerating or updating the census dataset, always update both `dashboard/static/dataset.json` AND `dashboard/static/dataset.js` so that local `file:///` browsing works out of the box without requiring a web server.
+

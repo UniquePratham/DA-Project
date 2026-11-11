@@ -10,6 +10,40 @@
 
 ---
 
+## Install the dataset
+
+The census ships as a pip-installable package, so a reader can query it without cloning the repo:
+
+```bash
+pip install bharatgov-access
+```
+
+```python
+import bharatgov_access as bga
+
+df = bga.load()                  # 12,092 domains, 20 typed columns
+live = bga.load(reachable=True)  # 10,247 that answered in-country
+
+bga.tier_summary()               # Table I of the paper
+bga.architecture_summary()       # Table II of the paper
+bga.state_ranking()              # 36 States and UTs, ranked
+```
+
+A CLI ships with it:
+
+```bash
+bharatgov info
+bharatgov tiers
+bharatgov arch
+bharatgov states --top 10
+bharatgov query --tier district --state Kerala --min-maturity 85
+bharatgov export --format csv --out census.csv --reachable-only
+```
+
+The package lives at [`packages/bharatgov-access/`](packages/bharatgov-access) and bundles the Parquet release in a 465 KB wheel. Its 14 tests assert the published figures, so a loader regression fails loudly rather than silently changing a paper table.
+
+---
+
 ## 1. Core Research Question
 
 > **What is the measurable state of India's public-facing government web infrastructure, how does it differ across governance levels, states, departments, and website architectures, and how does it evolve over time?**

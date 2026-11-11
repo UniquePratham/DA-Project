@@ -45,7 +45,7 @@ Digital Public Infrastructure (DPI) serves as the primary conduit through which 
 
 To overcome these barriers, we present BharatGov Access, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures 12,092 government web domains across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible 5-Pillar / 10-Sub-Feature evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).
 
-Our empirical audit reveals three primary findings: (1) The National Informatics Centre's (NIC) S3WaaS Drupal framework elevates mean accessibility compliance to 96.1 / 100 with 98.2\% GIGW toolbar penetration across 6,480 active district portals (63.2\%), contrasted with legacy state ASP.NET deployments that languish at 81.5 / 100. (2) While transport-layer encryption is ubiquitous (100.0\% HTTPS enforcement), defensive HTTP headers exhibit severe lag: only 44.5\% of public portals mandate HSTS, and a mere 35.2\% declare Content Security Policy (CSP). (3) Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is 1.18 seconds, with 86.0\% of active portals offering localization in regional Eighth Schedule Indian scripts. We release the entire 12,092-portal dataset under CC-BY-4.0 alongside an open-access interactive observatory.
+Our empirical audit reveals three primary findings: (1) The National Informatics Centre's (NIC) S3WaaS Drupal framework elevates mean accessibility compliance to 95.2 / 100 with 100.0\% GIGW toolbar penetration across 6,480 active portals (63.2\%), contrasted with legacy state ASP.NET deployments that languish at 84.3 / 100. The dividend is real but bounded: S3WaaS does not lead on security headers, where it scores 66.8 against 85.1 for modern single-page applications. (2) While transport-layer encryption is ubiquitous (100.0\% HTTPS enforcement), defensive HTTP headers exhibit severe lag: the mean header-hardening score is 68.0 / 100, and only 444 portals (4.3\%) set HSTS, a content security policy, frame options and MIME-sniffing protection together. (3) Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is 888 ms (mean 1,186 ms), with 86.0\% of active portals offering localization in regional Eighth Schedule Indian scripts. We release the entire 12,092-portal dataset under CC-BY-4.0 alongside an open-access interactive observatory.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -106,7 +106,7 @@ M = \; & 0.30 S_{\text{acc}} + 0.25 S_{\text{sec}} + 0.20 \max(0, 100 - 15 T_{\t
 \end{equation}
 
 \section{System Architecture \& Ingestion}
-The observatory is deployed on a dedicated Ubuntu 22.04 LTS instance in Bangalore (6 vCPUs, 60 GB RAM). Probing targets directly from within the domestic Indian internet fabric completely eliminated perimeter drops, reducing latencies to an authentic median of 1.18 seconds.
+The observatory is deployed on a dedicated Ubuntu 22.04 LTS instance in Bangalore (6 vCPUs, 60 GB RAM). Probing targets directly from within the domestic Indian internet fabric completely eliminated perimeter drops, reducing latencies to an authentic median of 888 ms (mean 1,186 ms).
 
 \section{Empirical Findings}
 Table~\ref{tab:governance} summarizes the empirical audit across 12,092 registered domains (10,247 active in-country).
@@ -120,13 +120,13 @@ Table~\ref{tab:governance} summarizes the empirical audit across 12,092 register
 \toprule
 \textbf{Tier} & \textbf{Count} & \textbf{Active (\%)} & \textbf{Acc. ($S_{\text{acc}}$)} & \textbf{GIGW (\%)} & \textbf{Sec. ($S_{\text{sec}}$)} & \textbf{Maturity ($M$)} \\
 \midrule
-Central Ministries & 645 & 96.4\% & 92.0 & 78.4\% & \textbf{85.2} & 78.2 \\
-State Depts & 2,935 & 94.0\% & 93.2 & 84.2\% & 62.4 & 77.4 \\
-Districts (NIC) & 7,468 & 82.8\% & \textbf{96.1} & \textbf{98.2\%} & 56.2 & \textbf{79.5} \\
-Academic \& Res. & 352 & 97.7\% & 91.5 & 74.0\% & 74.0 & 76.8 \\
-Judiciary & 292 & 95.2\% & 92.0 & 92.0\% & 76.0 & 77.5 \\
-Public Sector / Banks & 260 & 98.1\% & 90.5 & 65.0\% & \textbf{88.0} & 78.6 \\
-Municipal Bodies & 140 & 91.4\% & 89.0 & 70.0\% & 62.0 & 75.2 \\
+Central Ministries & 645 & 82.5\% & 90.8 & 88.2\% & 78.6 & 74.9 \\
+State Depts & 2,935 & 68.7\% & 92.0 & 88.3\% & 68.4 & 75.7 \\
+Districts (NIC) & 7,468 & 89.9\% & \textbf{95.0} & 94.7\% & 65.8 & 80.1 \\
+Academic \& Res. & 352 & 97.2\% & 91.6 & 71.1\% & 84.7 & \textbf{83.3} \\
+Judiciary & 292 & 92.8\% & 91.0 & 78.2\% & 63.2 & 71.9 \\
+Public Sector / Banks & 260 & 95.0\% & 91.8 & 66.8\% & 84.4 & \textbf{83.2} \\
+Municipal Bodies & 140 & 87.1\% & 90.1 & 80.3\% & 65.8 & 71.6 \\
 \midrule
 \textbf{National Total} & \textbf{12,092} & \textbf{84.7\%} & \textbf{93.8} & \textbf{91.0\%} & \textbf{68.0} & \textbf{78.8} \\
 \bottomrule
@@ -135,10 +135,10 @@ Municipal Bodies & 140 & 91.4\% & 89.0 & 70.0\% & 62.0 & 75.2 \\
 \end{table}
 
 \subsection{The S3WaaS Standardization Triumph}
-6,480 active portals (63.2\%) run on NIC's S3WaaS Drupal architecture, achieving a mean accessibility score of 96.1 / 100 and 98.2\% GIGW toolbar adoption. In contrast, 399 legacy state ASP.NET deployments achieve only 81.5 / 100 accessibility and 48.0\% toolbar penetration.
+6,480 active portals (63.2\%) run on NIC's S3WaaS Drupal architecture, achieving a mean accessibility score of 95.2 / 100 and 100.0\% GIGW toolbar adoption. In contrast, 399 legacy state ASP.NET deployments achieve only 84.3 / 100 accessibility and 67.7\% toolbar penetration. The dividend is real but bounded: S3WaaS scores 66.8 on security headers, below the custom-CMS mean of 67.6 and far below the modern-SPA mean of 85.1. A template can ship accessible markup; it cannot ship a content security policy, because that is a deployment decision made at the reverse proxy.
 
 \subsection{Cryptographic Hardening Deficit}
-While 100.0\% of active portals enforce HTTPS, defensive HTTP headers remain critically neglected: only 44.5\% enforce HSTS, and 35.2\% declare CSP, exposing citizens to SSL stripping and XSS risks.
+While 100.0\% of active portals enforce HTTPS, defensive HTTP headers remain critically neglected: the mean header-hardening score is 68.0 / 100, and only 444 portals (4.3\%) set HSTS, a content security policy, frame options and MIME-sniffing protection together. The modal band, holding 60.0\% of portals, scores between 50 and 75, exposing citizens to SSL stripping and XSS risks at the edge.
 
 \section{Conclusion}
 BharatGov Access establishes India's first census-scale, domestic web observatory across 12,092 public portals. We release our versioned dataset and live dashboard (\url{https://quality-ampland-ashley-ought.trycloudflare.com}) under CC-BY-4.0.

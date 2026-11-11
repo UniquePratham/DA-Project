@@ -116,6 +116,10 @@ resources/*.csv
 resources/*.parquet
 resources/*.json
 
+# Regenerable build artifacts (rebuild with `make dashboard-shots` / `make assets`)
+resources/screenshots/
+data/fixtures/india_states.geojson
+
 # Remote & Deployment Automation Scripts
 scripts/run_remote.py
 scripts/deploy_dashboard_to_cloud.py

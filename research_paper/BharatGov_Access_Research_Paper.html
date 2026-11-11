@@ -1,542 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BharatGov Access Research Paper - IEEE Conference Format</title>
-  <!-- KaTeX -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<meta charset="UTF-8">
+<title>BharatGov Access — Research Paper</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+@page {
+  size: letter portrait;
+  margin: 17mm 13mm 18mm 13mm;
+}
 
-  <style>
-    @page {
-      size: letter portrait;
-      margin: 18mm 14mm 20mm 14mm;
-      @bottom-center {
-        content: counter(page);
-        font-size: 9pt;
-        font-family: "Times New Roman", Times, serif;
-      }
-    }
-    
-    * {
-      box-sizing: border-box;
-    }
+*, *::before, *::after { box-sizing: border-box; }
 
-    body {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 10pt;
-      line-height: 1.25;
-      color: #111;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-    .title-banner {
-      text-align: center;
-      margin-bottom: 14pt;
-    }
+body {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 9.6pt;
+  line-height: 1.34;
+  color: #111;
+  margin: 0;
+  background: #fff;
+  text-align: justify;
+  hyphens: auto;
+}
 
-    .title {
-      font-size: 20pt;
-      font-weight: bold;
-      line-height: 1.15;
-      margin-bottom: 8pt;
-    }
+/* ---------------------------------------------------------------- masthead */
 
-    .authors {
-      font-size: 10.5pt;
-      margin-bottom: 4pt;
-    }
+.masthead {
+  text-align: center;
+  border-bottom: 1.5pt solid #111;
+  padding-bottom: 9pt;
+  margin-bottom: 12pt;
+  column-span: all;
+}
 
-    .authors strong {
-      font-weight: bold;
-    }
+.masthead .venue {
+  font-size: 8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 7pt;
+}
 
-    .affil {
-      font-size: 9pt;
-      font-style: italic;
-      color: #333;
-      margin-bottom: 2pt;
-    }
+.masthead h1 {
+  font-size: 17pt;
+  line-height: 1.16;
+  font-weight: bold;
+  margin: 0 0 8pt;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
 
-    .email {
-      font-family: "Courier New", monospace;
-      font-size: 8.5pt;
-      color: #0b5394;
-    }
+.masthead .authors {
+  font-size: 10pt;
+  margin-bottom: 3pt;
+}
 
-    .paper-body {
-      column-count: 2;
-      column-gap: 18pt;
-      text-align: justify;
-    }
+.masthead .affiliation {
+  font-size: 8.6pt;
+  font-style: italic;
+  color: #333;
+  line-height: 1.4;
+}
 
-    .abstract-box {
-      font-size: 9pt;
-      margin-bottom: 10pt;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      padding: 6pt 0;
-    }
+/* ------------------------------------------------------------------ layout */
 
-    .abstract-title {
-      font-weight: bold;
-      font-style: italic;
-      display: inline;
-    }
+.body-columns {
+  column-count: 2;
+  column-gap: 7mm;
+  column-fill: auto;
+}
 
-    .keywords {
-      font-size: 9pt;
-      margin-top: 4pt;
-    }
+h2 {
+  font-size: 10.4pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 12pt 0 5pt;
+  padding-bottom: 2pt;
+  border-bottom: 0.5pt solid #bbb;
+  break-after: avoid;
+  text-align: left;
+}
 
-    .keywords strong {
-      font-style: italic;
-    }
+h3 {
+  font-size: 9.8pt;
+  font-weight: bold;
+  font-style: italic;
+  margin: 9pt 0 3pt;
+  break-after: avoid;
+  text-align: left;
+}
 
-    h2 {
-      font-size: 10.5pt;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-      margin-top: 14pt;
-      margin-bottom: 6pt;
-      letter-spacing: 0.5px;
-      break-after: avoid;
-    }
+p { margin: 0 0 5pt; orphans: 2; widows: 2; }
 
-    h3 {
-      font-size: 10pt;
-      font-weight: bold;
-      font-style: italic;
-      margin-top: 10pt;
-      margin-bottom: 4pt;
-      break-after: avoid;
-    }
+ul, ol { margin: 0 0 6pt; padding-left: 14pt; }
+li { margin-bottom: 2.5pt; }
 
-    p {
-      margin: 0 0 6pt 0;
-      text-indent: 14pt;
-    }
+strong { font-weight: bold; }
+em { font-style: italic; }
 
-    p.no-indent {
-      text-indent: 0;
-    }
+code {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 8.4pt;
+  background: #f2f2f2;
+  padding: 0 1.5pt;
+  border-radius: 1.5pt;
+}
 
-    ol, ul {
-      margin: 4pt 0 6pt 16pt;
-      padding: 0;
-      font-size: 9.5pt;
-    }
+pre {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 7.2pt;
+  line-height: 1.28;
+  background: #f7f7f7;
+  border: 0.5pt solid #ddd;
+  border-left: 2pt solid #a63a1e;
+  padding: 5pt 6pt;
+  margin: 6pt 0;
+  overflow: hidden;
+  white-space: pre;
+  break-inside: avoid;
+  text-align: left;
+}
 
-    li {
-      margin-bottom: 3pt;
-      line-height: 1.25;
-    }
+pre code { background: none; padding: 0; font-size: inherit; }
 
-    pre, code {
-      font-family: "Courier New", monospace;
-      font-size: 8pt;
-      background: #f4f5f7;
-    }
+/* ------------------------------------------------------------------ tables */
 
-    pre {
-      padding: 6pt;
-      border: 1px solid #e2e8f0;
-      border-radius: 4px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      margin: 6pt 0;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7.4pt;
+  line-height: 1.24;
+  margin: 6pt 0 8pt;
+  break-inside: avoid;
+  text-align: left;
+}
 
-    .equation {
-      text-align: center;
-      margin: 6pt 0;
-      font-size: 9.5pt;
-    }
+thead th {
+  background: #1b1612;
+  color: #fff;
+  font-weight: bold;
+  padding: 3pt 3pt;
+  border: 0.4pt solid #1b1612;
+  vertical-align: bottom;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 8pt;
-      margin: 8pt 0 10pt 0;
-      break-inside: avoid;
-    }
+tbody td {
+  padding: 2.4pt 3pt;
+  border: 0.4pt solid #ccc;
+  vertical-align: top;
+}
 
-    th, td {
-      border: 1px solid #cbd5e1;
-      padding: 4pt 5pt;
-      text-align: left;
-    }
+tbody tr:nth-child(even) { background: #f7f5f2; }
 
-    th {
-      background: #f1f5f9;
-      font-weight: bold;
-      text-align: center;
-    }
+/* Wide tables (the tier and platform comparisons) span both columns. */
+table.wide {
+  column-span: all;
+  font-size: 7.8pt;
+}
 
-    .table-caption {
-      font-size: 8pt;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 3pt;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+/* ------------------------------------------------------------------- math */
 
-    .references {
-      font-size: 8pt;
-      line-height: 1.2;
-    }
+.katex { font-size: 0.96em; }
+.katex-display { margin: 6pt 0; overflow-x: hidden; }
 
-    .references ol {
-      margin-left: 14pt;
-    }
+/* ------------------------------------------------------------------ rules */
 
-    .references li {
-      margin-bottom: 4pt;
-    }
+hr {
+  border: 0;
+  border-top: 0.5pt solid #ccc;
+  margin: 9pt 0;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 1px 4px;
-      font-size: 7.5pt;
-      background: #e2e8f0;
-      border-radius: 3px;
-      font-weight: 600;
-    }
-  </style>
+blockquote {
+  margin: 6pt 0;
+  padding-left: 8pt;
+  border-left: 2pt solid #ccc;
+  color: #333;
+  font-style: italic;
+}
+
+a { color: #111; text-decoration: none; }
+
+/* --------------------------------------------------------------- utilities */
+
+.abstract {
+  font-size: 9pt;
+  background: #faf8f5;
+  border-top: 1pt solid #111;
+  border-bottom: 1pt solid #111;
+  padding: 7pt 0;
+  margin-bottom: 10pt;
+  column-span: all;
+}
+
+.abstract h2 {
+  border: 0;
+  margin: 0 0 4pt;
+  font-size: 9pt;
+  letter-spacing: 0.1em;
+}
+
+.abstract p { margin-bottom: 4pt; }
+
+.keywords {
+  font-size: 8.4pt;
+  margin-top: 5pt;
+  color: #333;
+}
+
+@media print {
+  .body-columns { column-fill: auto; }
+}
+</style>
 </head>
 <body>
+<header class="masthead"><div class="venue">Department of Data Analytics &middot; IIT Kharagpur &middot; 2026</div><h1>BharatGov Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Data Analytics, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
+<div class="body-columns">
+<section class="abstract"><h2>Abstract</h2>
+<p>Digital Public Infrastructure (DPI) serves as the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services to over 900 million connected citizens. Despite its systemic societal significance, empirical knowledge of the accessibility, performance, and cryptographic security of India's multi-tiered public web remains scarce, fragmented, and vulnerable to measurement bias. Prior web measurement studies have evaluated narrow samples ($\le 100$ homepages) or relied on overseas cloud vantage points, which we demonstrate trigger false-positive reachability failures exceeding 66% due to domestic perimeter Geo-IP firewalls operated by state gateways and RailTel. </p>
+<p>To overcome these barriers, we present <strong>BharatGov Access</strong>, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures <strong>12,092 government web domains</strong> across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible <strong>5-Pillar / 10-Sub-Feature</strong> evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).</p>
+<p>Our empirical audit reveals three primary findings:</p>
+<ol>
+<li><strong>The S3WaaS Standardization Dividend:</strong> The National Informatics Centre's (NIC) <em>Secure, Scalable and Sugamya Website as a Service</em> (S3WaaS) framework, running on a hardened Drupal core across 6,480 active district portals (63.2%), acts as a transformative equalizer, elevating mean accessibility compliance to <strong>95.2 / 100</strong> with <strong>100.0%</strong> GIGW accessibility toolbar penetration, contrasted with legacy state ASP.NET deployments that languish at <strong>84.3 / 100</strong>. The dividend is real but bounded: S3WaaS does not lead on security headers, where it scores 66.8 against 85.1 for modern single-page applications.</li>
+<li><strong>The Cryptographic Hardening Deficit:</strong> While transport-layer encryption is ubiquitous (<strong>100.0%</strong> HTTPS enforcement across active nodes), defensive HTTP headers exhibit severe lag: the mean header-hardening score is <strong>68.0 / 100</strong>, and only <strong>444 portals (4.3%)</strong> set HSTS, a content security policy, frame options and MIME-sniffing protection together. The modal band, holding 60.0% of portals, scores between 50 and 75, leaving citizens exposed to SSL-stripping and cross-site scripting risks at the edge.</li>
+<li><strong>Linguistic &amp; Domestic Latency Performance:</strong> Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is <strong>888 ms</strong> (mean 1,186 ms; estimated LCP median 2.27 s, mean 2.67 s), with <strong>86.0%</strong> of active portals offering localization in regional Eighth Schedule Indian scripts. </li>
+</ol>
+<p>We release the entire 12,092-portal dataset in immutable Apache Parquet, CSV, and JSON formats under CC-BY-4.0 alongside an open-access interactive observatory to assist researchers, engineers, and policymakers in modernizing public digital infrastructure.</p>
+<p><strong>Keywords:</strong> Web Measurement, E-Governance, Digital Public Infrastructure, Web Accessibility, WCAG 2.1, Core Web Vitals, GIGW 3.0, Internet Measurement, Cyber Security, CERT-In.</p>
+<hr>
+</section><h2>I. Introduction</h2>
+<p>The expansion of Digital India has transformed the web portal from a static institutional brochure into an indispensable vehicle for basic citizen rights. Millions of citizens interact daily with portals operated by Central Ministries, State Secretariats, District Collectorates, and Municipal Corporations to access Direct Benefit Transfer (DBT) subsidies, obtain birth and caste certificates, inspect revenue land records, verify exam rolls, and lodge public grievances through CPGRAMS.</p>
+<p>However, the rapid digitization of public administration across 36 States and Union Territories (UTs) has historically occurred in silos. Disparate legacy hosting architectures, decentralized software development vendors, and varying administrative technical capacity have generated significant heterogeneity in web quality, accessibility, responsiveness, and defense posture.</p>
+<h3>A. The Empirical Vacuum in Public Web Measurement</h3>
+<p>While commercial web measurement platforms (such as HTTP Archive and Chrome User Experience Report) track the global top million domains, their coverage of sovereign public sector web ecosystems in the Global South is extraordinarily sparse. Furthermore, prior academic investigations of Indian government portals suffer from three crippling methodological limitations:
+1. <strong>Shallow, Non-Representative Samples:</strong> Academic studies typically evaluate between 50 and 200 arbitrary central ministry homepages, completely bypassing the district and municipal portals where 80% of citizen administrative transactions occur.
+2. <strong>The Perimeter Firewall Blindspot (Geo-IP Bias):</strong> Crawlers executing from overseas cloud instances (e.g., AWS us-east-1 or GCP us-central1) encounter aggressive edge perimeter Geo-IP drops enforced by RailTel, state National Informatics Centre (NIC) gates, and state data center (SDC) firewalls. These firewalls silently terminate TCP handshakes or return HTTP 502/504 errors, resulting in false unreachability estimates exceeding 66%.
+3. <strong>Metric Bloat and Measurement Conflation:</strong> Many tools harvest 70+ arbitrary, uncalibrated variables, assigning misleading "zero scores" to unreachable domains rather than decoupling schema validation from network availability.</p>
+<h3>B. Research Contributions</h3>
+<p>To address these challenges, this study makes the following contributions:
+- <strong>Census-Scale Domain Registry:</strong> We construct and maintain India's largest verified public domain registry comprising <strong>12,092 government portals</strong> covering 7 distinct governance tiers.
+- <strong>Domestic In-Country Vantage Point:</strong> We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, demonstrating the complete elimination of artificial perimeter drops and establishing authentic domestic baseline latencies.
+- <strong>5-Pillar Standardized Methodology:</strong> We eliminate feature bloat by formulating a 5-Pillar / 10-Sub-Feature evaluation schema grounded in W3C (WCAG 2.1 AA), Core Web Vitals, and MeitY GIGW 3.0.
+- <strong>Empirical Findings on S3WaaS:</strong> We present the first large-scale empirical validation of NIC’s S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.
+- <strong>Open Data &amp; Live Observatory:</strong> We deploy a public, interactive web dashboard (<code>quality-ampland-ashley-ought.trycloudflare.com</code>) and release versioned Apache Parquet datasets for reproducibility.</p>
+<hr>
+<h2>II. Related Work &amp; Background</h2>
+<h3>A. Web Accessibility &amp; GIGW Standards</h3>
+<p>The World Wide Web Consortium's Web Content Accessibility Guidelines (WCAG 2.1) specify four core principles: Perceivable, Operable, Understandable, and Robust (POUR). In India, the Ministry of Electronics and Information Technology formulated the <em>Guidelines for Indian Government Websites</em> (GIGW), currently in version 3.0. GIGW mandates specific accessibility features, including primary navigation skip links, text resizers (A+/A-), high-contrast viewing modes, and regional language availability for linguistic inclusion.</p>
+<h3>B. Web Performance &amp; Core Web Vitals</h3>
+<p>Google's Core Web Vitals framework establishes user-centric latency benchmarks, focusing on Largest Contentful Paint (LCP $\le 2.5\text{s}$), First Input Delay / Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS $\le 0.1$). Prior studies have highlighted how excessive JavaScript payload and bloated DOM structures degrade access for rural citizens relying on mobile broadband.</p>
+<h3>C. Network Measurement Bias</h3>
+<p>Internet measurement literature has repeatedly established that vantage point location significantly skews empirical findings. Censorship, CDN routing policies, and perimeter firewalls frequently induce divergent responses depending on client IP origin. In this study, we specifically quantify and resolve the perimeter Geo-IP bias affecting sovereign Indian government portals.</p>
+<hr>
+<h2>III. The 5-Pillar Evaluation Framework</h2>
+<p>To eliminate ambiguous and noisy features, we synthesize web infrastructure evaluation into five orthogonal pillars, each containing exactly two defensible sub-features, plus a weighted composite index.</p>
+<pre><code>                    ┌────────────────────────────────────────────────────────┐
+                    │               BharatGov Access Framework               │
+                    └───────────────────────────┬────────────────────────────┘
+                                                │
+         ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐
+         ▼              ▼                       ▼                       ▼              ▼
+   ┌───────────┐  ┌───────────┐           ┌───────────┐           ┌───────────┐  ┌───────────┐
+   │ Pillar 1: │  │ Pillar 2: │           │ Pillar 3: │           │ Pillar 4: │  │ Pillar 5: │
+   │ Accessi-  │  │  Perform- │           │ Security  │           │ Inclusiv- │  │  Arch &amp;   │
+   │  bility   │  │   ance    │           │ &amp; Crypto  │           │    ity    │  │ Services  │
+   └─────┬─────┘  └─────┬─────┘           └─────┬─────┘           └─────┬─────┘  └─────┬─────┘
+         │              │                       │                       │              │
+    ┌────┴────┐    ┌────┴────┐             ┌────┴────┐             ┌────┴────┐    ┌────┴────┐
+    │Alt &amp; Lbl│    │Latency  │             │TLS/HTTPS│             │Multiling│    │S3WaaS CMS
+    │Toolbar  │    │Est. LCP │             │Sec Head.│             │Viewport │    │Grievance│
+    └─────────┘    └─────────┘             └─────────┘             └─────────┘    └─────────┘
+</code></pre>
+<h3>Pillar 1: Accessibility &amp; Usability (WCAG 2.1 AA / GIGW 3.0)</h3>
+<ol>
+<li><strong>$S_{\text{acc}}$ (Accessibility Compliance Score, $0 \le S_{\text{acc}} \le 100$):</strong><br>
+   Computed from structural DOM inspection evaluating image alternative text coverage ($C_{\text{alt}}$), form control input labeling ($C_{\text{lbl}}$), document root language specification ($I_{\text{lang}} \in {0, 1}$), and skip-to-content bypass links ($I_{\text{skip}} \in {0, 1}$):
+   $$S_{\text{acc}} = \min\left(98.5, \; 65.0 + 15.0 \cdot C_{\text{alt}} + 10.0 \cdot C_{\text{lbl}} + 4.0 \cdot I_{\text{lang}} + 6.0 \cdot I_{\text{skip}}\right)$$</li>
+<li><strong>$F_{\text{toolbar}}$ (GIGW Accessibility Toolbar Presence, Boolean):</strong><br>
+   Detects client-side accessibility widgets providing font resizing ($A+/A-$), high-contrast color toggling, and screen reader bypass mechanisms mandated by MeitY GIGW Section 5.</li>
+</ol>
+<h3>Pillar 2: Performance &amp; Network Latency (Core Web Vitals)</h3>
+<ol start="3">
+<li><strong>$L_{\text{resp}}$ (Time to First Byte / Network Round-Trip Latency, ms):</strong><br>
+   High-precision measurement of HTTP connection establishment, TLS negotiation, and initial server response time from the domestic Bangalore vantage point.</li>
+<li><strong>$T_{\text{lcp}}$ (Estimated Largest Contentful Paint, seconds):</strong><br>
+   Derived from measured network TTFB and payload HTML asset size ($S_{\text{kb}}$):
+   $$T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{resp}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)$$</li>
+</ol>
+<h3>Pillar 3: Security &amp; Cryptography (CERT-In Baseline)</h3>
+<ol start="5">
+<li><strong>$I_{\text{https}}$ (Canonical HTTPS Enforcement, Boolean):</strong><br>
+   Validates whether plaintext HTTP requests are strictly upgraded via 301/308 redirects to secure TLS transport.</li>
+<li><strong>$S_{\text{sec}}$ (Security Headers Hardening Score, $0 \le S_{\text{sec}} \le 100$):</strong><br>
+   Assesses compliance with CERT-In cyber security guidelines:
+   $$S_{\text{sec}} = 40 \cdot I_{\text{https}} + 25 \cdot I_{\text{hsts}} + 15 \cdot I_{\text{csp}} + 10 \cdot I_{\text{xcto}} + 10 \cdot I_{\text{xfo}}$$
+   where $I_{\text{hsts}}$ denotes <code>Strict-Transport-Security</code>, $I_{\text{csp}}$ denotes <code>Content-Security-Policy</code>, $I_{\text{xcto}}$ denotes <code>X-Content-Type-Options: nosniff</code>, and $I_{\text{xfo}}$ denotes <code>X-Frame-Options</code>.</li>
+</ol>
+<h3>Pillar 4: Linguistic &amp; Mobile Inclusivity (Digital India Reach)</h3>
+<ol start="7">
+<li><strong>$I_{\text{multi}}$ (Regional Multilingual Localization, Boolean):</strong><br>
+   Identifies navigation and body content localized into India's 22 Eighth Schedule languages (Devanagari/Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, Malayalam, Odia, Punjabi, Assamese, Urdu).</li>
+<li><strong>$I_{\text{mobile}}$ (Responsive Viewport Configuration, Boolean):</strong><br>
+   Verifies standard mobile viewport declaration: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</li>
+</ol>
+<h3>Pillar 5: Architecture &amp; Citizen Interactivity</h3>
+<ol start="9">
+<li><strong>$A_{\text{cms}}$ (CMS &amp; Framework Architecture, Categorical):</strong><br>
+   Fingerprints web platforms: <code>s3waas_drupal</code> (NIC standardized distribution), <code>custom_dynamic_cms</code>, <code>legacy_asp_net</code> (older state portals), <code>modern_spa</code> (React/Angular client-rendered), or <code>wordpress</code>.</li>
+<li><strong>$I_{\text{services}}$ (Citizen Online Services &amp; Grievance Integration, Boolean):</strong><br>
+    Detects integrated site search utilities and citizen grievance redressal integrations (e.g., CPGRAMS, Samadhan, Jan Sunwai, CM Helpline).</li>
+</ol>
+<h3>Composite Observatory Maturity Score</h3>
+<p>To enable comparative governance analysis, we formulate a normalized composite maturity index ($0 \le M \le 100$):
+$$M = 0.30 \cdot S_{\text{acc}} + 0.25 \cdot S_{\text{sec}} + 0.20 \cdot \max(0, 100 - 15 \cdot T_{\text{lcp}}) + 10 \cdot I_{\text{multi}} + 5 \cdot I_{\text{mobile}} + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})$$</p>
+<p>The binary terms carry absolute point values (10 or 5), not percentages, so a portal with every binary term true and perfect scores on the three continuous terms reaches exactly 100. The index is clamped to a floor of 45.0. We verified the formula against the released values: it reproduces <strong>99.96%</strong> of the 10,247 reachable rows to within 0.15, and the four remaining rows are all clamped at the floor. The formula is exposed as <code>bharatgov_access.maturity_index()</code> so a reader can score a portal they measured themselves with the same methodology.</p>
+<hr>
+<h2>IV. Measurement System Architecture</h2>
+<pre><code> ┌────────────────────────────────────────────────────────────────────────┐
+ │                      National Registry (N = 12,092)                    │
+ │    Central Ministries (645) · State Depts (2,935) · Districts (7,468)   │
+ │   Academic (352) · Judiciary (292) · PSUs (260) · Municipalities (140)  │
+ └───────────────────────────────────┬────────────────────────────────────┘
+                                     │
+                                     ▼
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │            Domestic In-Country Ingestion Node (Bangalore, India)       │
+ │   6 vCPUs · 60 GB RAM · 350 GB NVMe · Peered with National Fabric       │
+ └───────────────────────────────────┬────────────────────────────────────┘
+                                     │
+         ┌───────────────────────────┴───────────────────────────┐
+         ▼                                                       ▼
+ ┌──────────────────────────────┐        ┌──────────────────────────────┐
+ │ Async Concurrency Workers    │        │ Rigorous Decoupled Parser    │
+ │ • 64 async workers (httpx)   │        │ • Schema Validation Decoupled│
+ │ • HTTP/1.1 &amp; HTTP/2 negotiate│        │ • Structural DOM extraction  │
+ │ • Canonical redirect tracking│        │ • Diagnostic failure coding  │
+ └──────────────┬───────────────┘        └──────────────┬───────────────┘
+                │                                       │
+                └───────────────────┬───────────────────┘
+                                    │
+                                    ▼
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                     Versioned Open Data Release                        │
+ │       • Apache Parquet (Columnar) · CSV · JSON (CC-BY-4.0)             │
+ │       • Live Dashboard Observatory (trycloudflare.com tunnel)          │
+ └────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3>A. In-Country Vantage Point Elimination of Geo-IP Bias</h3>
+<p>The primary engineering challenge encountered during initial audits was the severe distortion caused by state perimeter security devices. When crawled from an Atlanta (US) node, 1,592 out of 2,390 domains (66.6%) returned HTTP 502/504 errors. </p>
+<p>Deploying an equivalent measurement agent in a Bangalore datacenter connected to domestic tier-1 Indian internet transit eliminated these drops entirely. Active reachability jumped to <strong>84.7%</strong> across the census dataset, and latencies dropped from over 15,000 ms (timeout threshold) to authentic domestic values (median TTFB 888 ms, mean 1,186 ms).</p>
+<h3>B. Decoupled Validation Rigor</h3>
+<p>To ensure academic integrity, BharatGov Access strictly decouples <strong>Schema Registration</strong> from <strong>Measurement Success</strong>. When a portal is unreachable or its DNS lease has expired, the observatory assigns explicit status diagnostic codes (<code>DNS Inactive</code>, <code>504 Timeout</code>, <code>502 Bad Gateway</code>, <code>403 WAF Challenge</code>) and records sub-feature metrics as <code>null</code> / <code>NaN</code>, preventing the propagation of artificial zero scores.</p>
+<hr>
+<h2>V. Empirical Findings &amp; Analysis</h2>
+<p>The census dataset comprises <strong>12,092 government web domains</strong>, with <strong>10,247 actively evaluated in-country</strong>. Table I provides a comprehensive breakdown across administrative levels.</p>
+<h3>TABLE I: Comprehensive Breakdown Across Governance Tiers</h3>
+<p>All figures are computed from the released dataset (<code>bharatgov_access_clean.parquet</code>) over reachable portals only. Reproduce with <code>bharatgov tiers</code>.</p>
+<table class="wide">
+<thead>
+<tr>
+<th style="text-align: left;">Governance Tier</th>
+<th style="text-align: center;">Total Registered</th>
+<th style="text-align: center;">Active Audited (%)</th>
+<th style="text-align: center;">Mean Acc. Score ($S_{\text{acc}}$)</th>
+<th style="text-align: center;">GIGW Toolbar (%)</th>
+<th style="text-align: center;">Mean Sec. Score ($S_{\text{sec}}$)</th>
+<th style="text-align: center;">Multilingual (%)</th>
+<th style="text-align: center;">Median TTFB (ms)</th>
+<th style="text-align: center;">Mean Maturity ($M$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Central Ministries</strong></td>
+<td style="text-align: center;">645</td>
+<td style="text-align: center;">532 (82.5%)</td>
+<td style="text-align: center;">90.8</td>
+<td style="text-align: center;">88.2%</td>
+<td style="text-align: center;">78.6</td>
+<td style="text-align: center;">75.9%</td>
+<td style="text-align: center;">971</td>
+<td style="text-align: center;">74.9</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>State Departments</strong></td>
+<td style="text-align: center;">2,935</td>
+<td style="text-align: center;">2,017 (68.7%)</td>
+<td style="text-align: center;">92.0</td>
+<td style="text-align: center;">88.3%</td>
+<td style="text-align: center;">68.4</td>
+<td style="text-align: center;">84.6%</td>
+<td style="text-align: center;">1,059</td>
+<td style="text-align: center;">75.7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>District Collectorates</strong></td>
+<td style="text-align: center;">7,468</td>
+<td style="text-align: center;">6,716 (89.9%)</td>
+<td style="text-align: center;"><strong>95.0</strong></td>
+<td style="text-align: center;">94.7%</td>
+<td style="text-align: center;">65.8</td>
+<td style="text-align: center;">86.9%</td>
+<td style="text-align: center;">880</td>
+<td style="text-align: center;"><strong>80.1</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Academic &amp; Research</strong></td>
+<td style="text-align: center;">352</td>
+<td style="text-align: center;">342 (97.2%)</td>
+<td style="text-align: center;">91.6</td>
+<td style="text-align: center;">71.1%</td>
+<td style="text-align: center;">84.7</td>
+<td style="text-align: center;">90.6%</td>
+<td style="text-align: center;"><strong>487</strong></td>
+<td style="text-align: center;"><strong>83.3</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Judiciary &amp; Courts</strong></td>
+<td style="text-align: center;">292</td>
+<td style="text-align: center;">271 (92.8%)</td>
+<td style="text-align: center;">91.0</td>
+<td style="text-align: center;">78.2%</td>
+<td style="text-align: center;">63.2</td>
+<td style="text-align: center;">88.6%</td>
+<td style="text-align: center;">1,024</td>
+<td style="text-align: center;">71.9</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Public Sector / Banks</strong></td>
+<td style="text-align: center;">260</td>
+<td style="text-align: center;">247 (95.0%)</td>
+<td style="text-align: center;">91.8</td>
+<td style="text-align: center;">66.8%</td>
+<td style="text-align: center;">84.4</td>
+<td style="text-align: center;">89.9%</td>
+<td style="text-align: center;">496</td>
+<td style="text-align: center;"><strong>83.2</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Urban Local Bodies</strong></td>
+<td style="text-align: center;">140</td>
+<td style="text-align: center;">122 (87.1%)</td>
+<td style="text-align: center;">90.1</td>
+<td style="text-align: center;">80.3%</td>
+<td style="text-align: center;">65.8</td>
+<td style="text-align: center;">77.9%</td>
+<td style="text-align: center;">1,096</td>
+<td style="text-align: center;">71.6</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>National Baseline</strong></td>
+<td style="text-align: center;"><strong>12,092</strong></td>
+<td style="text-align: center;"><strong>10,247 (84.7%)</strong></td>
+<td style="text-align: center;"><strong>93.8</strong></td>
+<td style="text-align: center;"><strong>91.0%</strong></td>
+<td style="text-align: center;"><strong>68.0</strong></td>
+<td style="text-align: center;"><strong>86.0%</strong></td>
+<td style="text-align: center;"><strong>888</strong></td>
+<td style="text-align: center;"><strong>78.8</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Two figures in this table deserve careful reading. First, the national reachability rate of 84.7% is not uniform: state departments sit at 68.7% while higher education reaches 97.2%, so the national average conceals a 28-point spread across tiers. Second, the tier with the highest accessibility (district collectorates, 95.0) is not the tier with the highest security (higher education, 84.7). Accessibility and security are effectively uncorrelated across tiers, which is the central finding of Section V-B.</p>
+<h3>A. Architectural Impact: S3WaaS vs. Legacy Frameworks</h3>
+<p>A central empirical contribution of this study is quantifying the national impact of NIC's S3WaaS Drupal distribution. As Table II shows, S3WaaS portals outperform every other platform on accessibility, GIGW toolbar penetration and mobile responsiveness, but they do <strong>not</strong> lead on security headers — a distinction an earlier draft of this paper elided.</p>
+<h3>TABLE II: Comparison of Web CMS Architectures</h3>
+<p>Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with <code>bharatgov arch</code>.</p>
+<table class="wide">
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: center;">S3WaaS Drupal</th>
+<th style="text-align: center;">Custom Dynamic CMS</th>
+<th style="text-align: center;">Legacy ASP.NET</th>
+<th style="text-align: center;">Modern SPA</th>
+<th style="text-align: center;">WordPress</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Active Portals Observed</strong></td>
+<td style="text-align: center;">6,480 (63.2%)</td>
+<td style="text-align: center;">2,671 (26.1%)</td>
+<td style="text-align: center;">399 (3.9%)</td>
+<td style="text-align: center;">651 (6.4%)</td>
+<td style="text-align: center;">46 (0.4%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Accessibility ($S_{\text{acc}}$)</strong></td>
+<td style="text-align: center;"><strong>95.2 / 100</strong></td>
+<td style="text-align: center;">92.6 / 100</td>
+<td style="text-align: center;">84.3 / 100</td>
+<td style="text-align: center;">91.6 / 100</td>
+<td style="text-align: center;">90.8 / 100</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GIGW Toolbar Penetration</strong></td>
+<td style="text-align: center;"><strong>100.0%</strong></td>
+<td style="text-align: center;">77.4%</td>
+<td style="text-align: center;">67.7%</td>
+<td style="text-align: center;">71.4%</td>
+<td style="text-align: center;">95.7%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Security Headers ($S_{\text{sec}}$)</strong></td>
+<td style="text-align: center;">66.8 / 100</td>
+<td style="text-align: center;">67.6 / 100</td>
+<td style="text-align: center;">60.3 / 100</td>
+<td style="text-align: center;"><strong>85.1 / 100</strong></td>
+<td style="text-align: center;">74.5 / 100</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median TTFB Latency</strong></td>
+<td style="text-align: center;">914 ms</td>
+<td style="text-align: center;">909 ms</td>
+<td style="text-align: center;">1,060 ms</td>
+<td style="text-align: center;"><strong>529 ms</strong></td>
+<td style="text-align: center;">1,259 ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mobile Responsiveness</strong></td>
+<td style="text-align: center;">98.8%</td>
+<td style="text-align: center;">96.1%</td>
+<td style="text-align: center;">90.5%</td>
+<td style="text-align: center;"><strong>100.0%</strong></td>
+<td style="text-align: center;">97.8%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Composite Maturity ($M$)</strong></td>
+<td style="text-align: center;">81.0 / 100</td>
+<td style="text-align: center;">74.4 / 100</td>
+<td style="text-align: center;">68.5 / 100</td>
+<td style="text-align: center;"><strong>82.3 / 100</strong></td>
+<td style="text-align: center;">70.8 / 100</td>
+</tr>
+</tbody>
+</table>
+<p>The S3WaaS dividend is real but narrower than a single composite score suggests. It buys accessibility and mobile compliance almost completely — 100.0% toolbar penetration and 95.2 mean accessibility against 84.3 for legacy ASP.NET, a 10.9-point gap. It buys nothing on security: S3WaaS scores 66.8 on headers, below the custom-CMS mean of 67.6 and far below the modern-SPA mean of 85.1. A template can ship accessible markup; it cannot ship a content security policy, because that is a deployment decision made at the reverse proxy.</p>
+<h3>B. The Cryptographic Security Gap</h3>
+<p>While 100.0% of reachable portals mandate TLS/HTTPS, the audit reveals a substantial gap in defensive HTTP headers. The released schema records a composite header score rather than per-directive booleans, so the figures below are distributional rather than per-directive:</p>
+<ul>
+<li><strong>Mean header score:</strong> <strong>68.0 / 100</strong> across 10,247 reachable portals.</li>
+<li><strong>Full hardening:</strong> only <strong>444 portals (4.3%)</strong> score 100, meaning they set HSTS, a content security policy, <code>X-Frame-Options</code> and <code>X-Content-Type-Options</code> together.</li>
+<li><strong>Partial hardening:</strong> <strong>29.5%</strong> score 75 or above; the modal band is 50–75, holding 6,144 portals (60.0%).</li>
+</ul>
+<p>The practical consequence is that a citizen on public Wi-Fi is protected by transport encryption but not by HSTS preload, and a portal running custom forms is not protected by a content security policy. Both are edge-configuration fixes that require no application change, which is why Section VI recommends them at the reverse proxy rather than in each department.</p>
+<h3>C. State-by-State Governance Maturity Rankings</h3>
+<p>Benchmarking composite maturity across the 36 States and UTs shows a narrow band: the top state (Meghalaya, 79.9) and the bottom (Himachal Pradesh, 78.4) differ by only 1.5 points on the composite index. That compression is itself the finding — the composite is dominated by accessibility, which is uniformly high, so it cannot discriminate between states. Security headers, by contrast, span 62.8 to 86.2 across states, a 23-point range, and median latency spans 758 ms to 1,846 ms.</p>
+<table class="wide">
+<thead>
+<tr>
+<th style="text-align: center;">Rank</th>
+<th style="text-align: left;">State / UT</th>
+<th style="text-align: right;">Portals</th>
+<th style="text-align: right;">Maturity</th>
+<th style="text-align: right;">Accessibility</th>
+<th style="text-align: right;">Security</th>
+<th style="text-align: right;">Median TTFB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Meghalaya</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">79.9</td>
+<td style="text-align: right;">93.9</td>
+<td style="text-align: right;">67.4</td>
+<td style="text-align: right;">758 ms</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Odisha</td>
+<td style="text-align: right;">252</td>
+<td style="text-align: right;">79.8</td>
+<td style="text-align: right;">94.5</td>
+<td style="text-align: right;">67.8</td>
+<td style="text-align: right;">868 ms</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Uttar Pradesh</td>
+<td style="text-align: right;">389</td>
+<td style="text-align: right;">79.6</td>
+<td style="text-align: right;">94.7</td>
+<td style="text-align: right;">62.8</td>
+<td style="text-align: right;">771 ms</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Nagaland</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">79.5</td>
+<td style="text-align: right;">94.3</td>
+<td style="text-align: right;">68.1</td>
+<td style="text-align: right;">864 ms</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Maharashtra</td>
+<td style="text-align: right;">279</td>
+<td style="text-align: right;">79.5</td>
+<td style="text-align: right;">94.3</td>
+<td style="text-align: right;">67.1</td>
+<td style="text-align: right;">866 ms</td>
+</tr>
+<tr>
+<td style="text-align: center;">…</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+</tr>
+<tr>
+<td style="text-align: center;">36</td>
+<td style="text-align: left;">Himachal Pradesh</td>
+<td style="text-align: right;">275</td>
+<td style="text-align: right;">78.4</td>
+<td style="text-align: right;">93.6</td>
+<td style="text-align: right;">66.5</td>
+<td style="text-align: right;">1,015 ms</td>
+</tr>
+</tbody>
+</table>
+<p>Reproduce with <code>bharatgov states</code>.</p>
+<hr>
+<h2>VI. Discussion &amp; Policy Recommendations</h2>
+<p>Based on empirical evidence across 12,092 portals, we propose three actionable recommendations for MeitY, NIC, and state IT departments:</p>
+<ol>
+<li><strong>Mandate Complete District &amp; Municipal S3WaaS Migration:</strong><br>
+   Our data demonstrates that S3WaaS elevates accessibility compliance by 10.9 points (from 84.3 to 95.2) while ensuring near-universal mobile responsiveness (98.8%). State governments should phase out legacy bespoke ASP.NET websites and migrate all municipal and district portals to the S3WaaS pipeline.</li>
+<li><strong>Institute Centralized Reverse Proxy Security Headers:</strong><br>
+   The header-hardening deficit (mean 68.0 / 100; only 4.3% of portals fully hardened) can be resolved without modifying application code. We recommend that RailTel, NIC, and State Data Centres mandate automated injection of HSTS (<code>max-age=31536000; includeSubDomains</code>) and base CSP policies at their NGINX / reverse-proxy edge gateways.</li>
+<li><strong>Establish In-Country Automated Longitudinal Audits:</strong><br>
+   Government bodies should rely on continuous, in-country automated observatories rather than periodic, point-in-time commercial manual audits. Ongoing monitoring incentivizes departments to fix regressions in image alt tags and language localization immediately upon deployment.</li>
+</ol>
+<hr>
+<h2>VII. Threats to Validity &amp; Limitations</h2>
+<ol>
+<li><strong>Automated vs. Manual Usability Testing:</strong><br>
+   Automated DOM inspection reliably identifies structural WCAG failures (missing alt attributes, empty links, form control labeling). However, nuanced cognitive usability barriers and complex screen-reader audio flows still require human evaluation.</li>
+<li><strong>Single Vantage Point Scope:</strong><br>
+   Although our Bangalore vantage point provides authentic domestic egress without perimeter blocking, latency experienced by rural users over congested 2G/4G radio access networks may exceed datacenter TTFB measurements.</li>
+<li><strong>Dynamic Single-Page Applications:</strong><br>
+   A subset of modern SPAs (6.4%) render content client-side using JavaScript frameworks. While our crawler tracks dynamic redirects, full JS evaluation on every sub-route requires significant headless browser resources.</li>
+</ol>
+<hr>
+<h2>VIII. Conclusion &amp; Open Science Artifacts</h2>
+<p>This paper presented <strong>BharatGov Access</strong>, a census-scale web observatory evaluating 12,092 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.</p>
+<p>To promote reproducibility and open science, all research artifacts are made publicly accessible:</p>
+<ul>
+<li><strong>Interactive Web Observatory:</strong> <code>https://quality-ampland-ashley-ought.trycloudflare.com</code></li>
+<li><strong>Census Open Dataset:</strong> Immutable Apache Parquet, CSV, and JSON releases hosted under CC-BY-4.0 in <code>resources/bharatgov_access_clean.*</code>.</li>
+<li><strong>Installable Python package:</strong> <code>pip install bharatgov-access</code> bundles the Parquet release and exposes the loader, the tier and platform tables, the state ranking and the maturity index. Every figure in this paper is one call away:</li>
+</ul>
+<pre><code class="language-python">import bharatgov_access as bga
 
-<div class="title-banner">
-  <div class="title">BharatGov Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</div>
-  <div class="authors">
-    <strong>Pratham Agarwal</strong>, <strong>Amit Kumar Bairagi</strong>, and <strong>Vishwajeet Nand Yaduraj</strong>
-  </div>
-  <div class="affil">
-    Department of Data Analytics, Indian Institute of Technology Kharagpur, West Bengal 721302, India
-  </div>
-  <div class="email">
-    Correspondence: {pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in
-  </div>
+bga.tier_summary()          # Table I
+bga.architecture_summary()  # Table II
+bga.state_ranking()         # Section V-C
+</code></pre>
+<p>A command-line interface ships with the package, so the tables are reachable without writing Python:</p>
+<pre><code class="language-bash">bharatgov tiers
+bharatgov arch
+bharatgov states --top 10
+bharatgov query --tier district --state Kerala --min-maturity 85
+</code></pre>
+<p>The package carries a test suite that asserts the published figures, so a regression in the loader fails loudly rather than silently changing a table in this paper.</p>
+<hr>
+<h2>References</h2>
+<ol>
+<li>World Wide Web Consortium (W3C), "Web Content Accessibility Guidelines (WCAG) 2.1," W3C Recommendation, June 2018. [Online]. Available: https://www.w3.org/TR/WCAG21/</li>
+<li>Ministry of Electronics and Information Technology (MeitY), Government of India, "Guidelines for Indian Government Websites (GIGW 3.0)," National Informatics Centre (NIC), New Delhi, 2023.</li>
+<li>Indian Computer Emergency Response Team (CERT-In), "Cyber Security Guidelines for Government Entities," Ministry of Electronics and Information Technology, New Delhi, 2023.</li>
+<li>National Informatics Centre (NIC), "S3WaaS: Secure, Scalable and Sugamya Website as a Service," Ministry of Electronics and Information Technology, 2024. [Online]. Available: https://s3waas.gov.in/</li>
+<li>P. Agarwal, A. K. Bairagi, and V. N. Yaduraj, "BharatGov Access: National Government Web Infrastructure Observatory," Indian Institute of Technology Kharagpur, Tech. Rep. DA-2026-G12, 2026.</li>
+<li>Google Developers, "Web Vitals: Essential metrics for a healthy site," 2023. [Online]. Available: https://web.dev/vitals/</li>
+<li>M. A. Fagan, "Web Accessibility of State and Local Government Websites: An Empirical Longitudinal Study," <em>Government Information Quarterly</em>, vol. 38, no. 3, p. 101584, 2021.</li>
+<li>S. Scheitle et al., "A Long Way to the Top: Significance, Structure, and Stability of Internet Top Lists," in <em>Proc. ACM Internet Measurement Conference (IMC)</em>, 2018, pp. 478–493.</li>
+<li>R. Padmanabhan et al., "Residential Alternatives to CDN-Hosted Public Infrastructure in Developing Regions," in <em>Proc. ACM SIGCOMM</em>, 2020.</li>
+<li>E. B. V. Kumar and S. K. Gupta, "Digital India: Empirical Evaluation of Public Grievance Portals and Citizen Engagement," <em>IEEE Transactions on Technology and Society</em>, vol. 3, no. 2, pp. 112–124, 2022.</li>
+</ol>
 </div>
-
-<div class="paper-body">
-
-  <div class="abstract-box">
-    <div class="abstract-title">Abstract—</div>Digital Public Infrastructure (DPI) serves as the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services to over 900 million connected citizens. Despite its systemic societal significance, empirical knowledge of the accessibility, performance, and cryptographic security of India's multi-tiered public web remains scarce, fragmented, and vulnerable to measurement bias. Prior web measurement studies have evaluated narrow samples (&le; 100 homepages) or relied on overseas cloud vantage points, which we demonstrate trigger false-positive reachability failures exceeding 66% due to domestic perimeter Geo-IP firewalls operated by state gateways and RailTel.
-    <br><br>
-    To overcome these barriers, we present <strong>BharatGov Access</strong>, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures <strong>12,092 government web domains</strong> across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible <strong>5-Pillar / 10-Sub-Feature</strong> evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0). Our empirical audit reveals the profound standardization dividend of NIC's S3WaaS platform (elevating accessibility to 96.1/100 across 6,480 district portals), identifies critical cryptographic header lag (only 44.5% HSTS and 35.2% CSP adoption), and documents authentic domestic peering latency (median TTFB of 1.18s).
-    <div class="keywords">
-      <strong>Keywords—</strong>Web Measurement, E-Governance, Digital Public Infrastructure, Web Accessibility, WCAG 2.1 AA, Core Web Vitals, GIGW 3.0, Internet Measurement, Cyber Security, CERT-In.
-    </div>
-  </div>
-
-  <h2>I. Introduction</h2>
-  <p>The expansion of Digital India has transformed the web portal from a static institutional brochure into an indispensable vehicle for basic citizen rights. Millions of citizens interact daily with portals operated by Central Ministries, State Secretariats, District Collectorates, and Municipal Corporations to access Direct Benefit Transfer (DBT) subsidies, obtain birth and caste certificates, inspect revenue land records, verify exam rolls, and lodge public grievances through CPGRAMS.</p>
-  <p>However, the rapid digitization of public administration across 36 States and Union Territories (UTs) has historically occurred in silos. Disparate legacy hosting architectures, decentralized software development vendors, and varying administrative technical capacity have generated significant heterogeneity in web quality, accessibility, responsiveness, and defense posture.</p>
-
-  <h3>A. The Empirical Vacuum in Public Web Measurement</h3>
-  <p>While commercial web measurement platforms (such as HTTP Archive and Chrome UX Report) track the global top million domains, their coverage of sovereign public sector web ecosystems in the Global South is extraordinarily sparse. Furthermore, prior academic investigations suffer from three crippling methodological limitations:</p>
-  <ul>
-    <li><strong>Shallow, Non-Representative Samples:</strong> Academic studies typically evaluate between 50 and 200 arbitrary central ministry homepages, completely bypassing the district and municipal portals where 80% of citizen administrative transactions occur.</li>
-    <li><strong>The Perimeter Firewall Blindspot (Geo-IP Bias):</strong> Crawlers executing from overseas cloud instances (e.g., AWS us-east-1) encounter aggressive edge perimeter Geo-IP drops enforced by RailTel, state National Informatics Centre (NIC) gates, and state data center (SDC) firewalls. These firewalls silently terminate TCP handshakes or return HTTP 502/504 errors, resulting in false unreachability estimates exceeding 66%.</li>
-    <li><strong>Metric Bloat and Measurement Conflation:</strong> Many tools harvest 70+ arbitrary, uncalibrated variables, assigning misleading "zero scores" to unreachable domains rather than decoupling schema validation from network availability.</li>
-  </ul>
-
-  <h3>B. Research Contributions</h3>
-  <p>To address these challenges, this study makes the following contributions:</p>
-  <ul>
-    <li><strong>Census-Scale Domain Registry:</strong> We construct and maintain India's largest verified public domain registry comprising <strong>12,092 government portals</strong> across 7 administrative tiers.</li>
-    <li><strong>Domestic In-Country Vantage Point:</strong> We deploy a high-concurrency ingestion engine inside the Indian domestic internet fabric in Bangalore, demonstrating the complete elimination of artificial perimeter drops and establishing authentic domestic baseline latencies.</li>
-    <li><strong>5-Pillar Standardized Methodology:</strong> We eliminate feature bloat by formulating a 5-Pillar / 10-Sub-Feature evaluation schema grounded in W3C WCAG 2.1 AA, Core Web Vitals, and MeitY GIGW 3.0.</li>
-    <li><strong>Empirical Findings on S3WaaS:</strong> We present the first large-scale empirical validation of NIC's S3WaaS platform, quantifying its measurable impact on accessibility and mobile inclusivity.</li>
-    <li><strong>Open Data & Live Observatory:</strong> We deploy a public, interactive web dashboard and release versioned Apache Parquet datasets for reproducibility.</li>
-  </ul>
-
-  <h2>II. Related Work & Background</h2>
-  <h3>A. Web Accessibility & GIGW Standards</h3>
-  <p>The World Wide Web Consortium's Web Content Accessibility Guidelines (WCAG 2.1) specify four core principles: Perceivable, Operable, Understandable, and Robust (POUR). In India, MeitY formulated the <em>Guidelines for Indian Government Websites</em> (GIGW 3.0), mandating primary navigation skip links, text resizers (A+/A-), high-contrast viewing modes, and regional language availability for linguistic inclusion.</p>
-
-  <h3>B. Web Performance & Core Web Vitals</h3>
-  <p>Google's Core Web Vitals framework establishes user-centric latency benchmarks, focusing on Largest Contentful Paint (LCP &le; 2.5s), First Input Delay / Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS &le; 0.1). Prior studies have highlighted how excessive JavaScript payload and bloated DOM structures degrade access for rural citizens relying on mobile broadband.</p>
-
-  <h3>C. Network Measurement Bias</h3>
-  <p>Internet measurement literature has repeatedly established that vantage point location significantly skews empirical findings. Censorship, CDN routing policies, and perimeter firewalls frequently induce divergent responses depending on client IP origin. In this study, we specifically quantify and resolve the perimeter Geo-IP bias affecting sovereign Indian government portals.</p>
-
-  <h2>III. The 5-Pillar Evaluation Framework</h2>
-  <p class="no-indent">To eliminate ambiguous and noisy features, we synthesize web infrastructure evaluation into five orthogonal pillars, each containing exactly two defensible sub-features, plus a weighted composite index.</p>
-
-  <h3>Pillar 1: Accessibility & Usability (WCAG 2.1 AA / GIGW 3.0)</h3>
-  <p><strong>1. $S_{\text{acc}}$ (Accessibility Compliance Score, $0 \le S_{\text{acc}} \le 100$):</strong> Computed from structural DOM inspection evaluating image alternative text coverage ($C_{\text{alt}}$), form control input labeling ($C_{\text{lbl}}$), document root language specification ($I_{\text{lang}} \in \{0, 1\}$), and skip-to-content bypass links ($I_{\text{skip}} \in \{0, 1\}$):</p>
-  <div class="equation">
-    $$S_{\text{acc}} = \min\left(98.5, \; 65.0 + 15.0 \cdot C_{\text{alt}} + 10.0 \cdot C_{\text{lbl}} + 4.0 \cdot I_{\text{lang}} + 6.0 \cdot I_{\text{skip}}\right)$$
-  </div>
-  <p><strong>2. $F_{\text{toolbar}}$ (GIGW Accessibility Toolbar Presence, Boolean):</strong> Detects client-side accessibility widgets providing font resizing (A+/A-), high-contrast color toggling, and screen reader bypass mechanisms mandated by MeitY GIGW Section 5.</p>
-
-  <h3>Pillar 2: Performance & Network Latency (Core Web Vitals)</h3>
-  <p><strong>3. $L_{\text{resp}}$ (Time to First Byte / Latency, ms):</strong> High-precision measurement of HTTP connection establishment, TLS negotiation, and initial server response time from the domestic Bangalore vantage point.</p>
-  <p><strong>4. $T_{\text{lcp}}$ (Estimated Largest Contentful Paint, seconds):</strong> Derived from measured network TTFB and payload HTML asset size ($S_{\text{kb}}$):</p>
-  <div class="equation">
-    $$T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{resp}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)$$
-  </div>
-
-  <h3>Pillar 3: Security & Cryptography (CERT-In Baseline)</h3>
-  <p><strong>5. $I_{\text{https}}$ (Canonical HTTPS Enforcement, Boolean):</strong> Validates whether plaintext HTTP requests are strictly upgraded via 301/308 redirects to secure TLS transport.</p>
-  <p><strong>6. $S_{\text{sec}}$ (Security Headers Hardening Score, $0 \le S_{\text{sec}} \le 100$):</strong> Assesses compliance with CERT-In cyber security guidelines:</p>
-  <div class="equation">
-    $$S_{\text{sec}} = 40 \cdot I_{\text{https}} + 25 \cdot I_{\text{hsts}} + 15 \cdot I_{\text{csp}} + 10 \cdot I_{\text{xcto}} + 10 \cdot I_{\text{xfo}}$$
-  </div>
-  <p class="no-indent">where $I_{\text{hsts}}$ denotes Strict-Transport-Security, $I_{\text{csp}}$ denotes Content-Security-Policy, $I_{\text{xcto}}$ denotes X-Content-Type-Options: nosniff, and $I_{\text{xfo}}$ denotes X-Frame-Options.</p>
-
-  <h3>Pillar 4: Linguistic & Mobile Inclusivity (Digital India Reach)</h3>
-  <p><strong>7. $I_{\text{multi}}$ (Regional Multilingual Localization, Boolean):</strong> Identifies navigation and body content localized into India's 22 Eighth Schedule languages.</p>
-  <p><strong>8. $I_{\text{mobile}}$ (Responsive Viewport Configuration, Boolean):</strong> Verifies standard mobile viewport declaration: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</p>
-
-  <h3>Pillar 5: Architecture & Citizen Interactivity</h3>
-  <p><strong>9. $A_{\text{cms}}$ (CMS & Framework Architecture, Categorical):</strong> Fingerprints web platforms: <code>s3waas_drupal</code> (NIC standardized distribution), <code>custom_dynamic_cms</code>, <code>legacy_asp_net</code>, <code>modern_spa</code>, or <code>wordpress</code>.</p>
-  <p><strong>10. $I_{\text{services}}$ (Citizen Online Services & Grievance Integration, Boolean):</strong> Detects integrated site search utilities and citizen grievance redressal integrations (e.g., CPGRAMS, Samadhan, Jan Sunwai, CM Helpline).</p>
-
-  <h3>Composite Observatory Maturity Score</h3>
-  <p class="no-indent">To enable comparative governance analysis, we formulate a normalized composite maturity index ($0 \le M \le 100$):</p>
-  <div class="equation">
-    $$M = 0.30 S_{\text{acc}} + 0.25 S_{\text{sec}} + 0.20 \max(0, 100 - 15 T_{\text{lcp}}) + 10 I_{\text{multi}} + 5 I_{\text{mobile}} + 5 I_{\text{services}} + 5 \mathbb{I}(\text{S3WaaS})$$
-  </div>
-
-  <h2>IV. Measurement System Architecture</h2>
-  <p>The BharatGov Access measurement system operates a high-concurrency ingestion pipeline orchestrated across three tightly coupled modules:</p>
-  <ol>
-    <li><strong>National Domain Registry Manager:</strong> Maintains the unified taxonomy of 12,092 portals across seven administrative tiers.</li>
-    <li><strong>Domestic Ingestion Node:</strong> Hosted on a bare-metal cloud instance in Bangalore (6 vCPUs, 60 GB RAM, NVMe storage) connected to domestic NIXI peering points. Operates 64 async worker threads via <code>httpx</code> negotiating HTTP/1.1 and HTTP/2.</li>
-    <li><strong>Decoupled Parser & Diagnostic Engine:</strong> Strictly decouples registry existence from network availability. When domains fail or are deprecated, explicit RFC status codes (DNS Inactive, 504 Timeout, 502 Bad Gateway) are recorded and metrics stored as null.</li>
-  </ol>
-
-  <h2>V. Empirical Findings & Analysis</h2>
-  <p>The census dataset comprises <strong>12,092 government web domains</strong>, with <strong>10,247 actively evaluated in-country</strong> (84.7% availability). Table I details baseline metrics across administrative tiers.</p>
-
-  <div class="table-caption">TABLE I: Comprehensive Breakdown Across Governance Tiers</div>
-  <table>
-    <thead>
-      <tr>
-        <th>Governance Tier</th>
-        <th>Total</th>
-        <th>Active (%)</th>
-        <th>Acc.</th>
-        <th>Toolbar</th>
-        <th>Sec.</th>
-        <th>Multi</th>
-        <th>TTFB</th>
-        <th>Maturity</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Central Ministries</strong></td>
-        <td>645</td>
-        <td>622 (96.4%)</td>
-        <td>92.0</td>
-        <td>78.4%</td>
-        <td><strong>85.2</strong></td>
-        <td>88.5%</td>
-        <td>720ms</td>
-        <td>78.2</td>
-      </tr>
-      <tr>
-        <td><strong>State Departments</strong></td>
-        <td>2,935</td>
-        <td>2,758 (94.0%)</td>
-        <td>93.2</td>
-        <td>84.2%</td>
-        <td>62.4</td>
-        <td>86.2%</td>
-        <td>1,150ms</td>
-        <td>77.4</td>
-      </tr>
-      <tr>
-        <td><strong>Districts (Collectorates)</strong></td>
-        <td>7,468</td>
-        <td>6,180 (82.8%)</td>
-        <td><strong>96.1</strong></td>
-        <td><strong>98.2%</strong></td>
-        <td>56.2</td>
-        <td>84.0%</td>
-        <td>850ms</td>
-        <td><strong>79.5</strong></td>
-      </tr>
-      <tr>
-        <td><strong>Academic & Research</strong></td>
-        <td>352</td>
-        <td>344 (97.7%)</td>
-        <td>91.5</td>
-        <td>74.0%</td>
-        <td>74.0</td>
-        <td>78.0%</td>
-        <td><strong>540ms</strong></td>
-        <td>76.8</td>
-      </tr>
-      <tr>
-        <td><strong>Judiciary & Courts</strong></td>
-        <td>292</td>
-        <td>278 (95.2%)</td>
-        <td>92.0</td>
-        <td>92.0%</td>
-        <td>76.0</td>
-        <td>88.0%</td>
-        <td>820ms</td>
-        <td>77.5</td>
-      </tr>
-      <tr>
-        <td><strong>Public Sector / Banks</strong></td>
-        <td>260</td>
-        <td>255 (98.1%)</td>
-        <td>90.5</td>
-        <td>65.0%</td>
-        <td><strong>88.0</strong></td>
-        <td><strong>92.0%</strong></td>
-        <td>610ms</td>
-        <td>78.6</td>
-      </tr>
-      <tr>
-        <td><strong>Urban Local Bodies</strong></td>
-        <td>140</td>
-        <td>128 (91.4%)</td>
-        <td>89.0</td>
-        <td>70.0%</td>
-        <td>62.0</td>
-        <td>82.0%</td>
-        <td>1,080ms</td>
-        <td>75.2</td>
-      </tr>
-      <tr style="background: #f8fafc; font-weight: bold;">
-        <td><strong>National Baseline</strong></td>
-        <td><strong>12,092</strong></td>
-        <td><strong>10,247 (84.7%)</strong></td>
-        <td><strong>93.8</strong></td>
-        <td><strong>91.0%</strong></td>
-        <td><strong>68.0</strong></td>
-        <td><strong>86.0%</strong></td>
-        <td><strong>1,185ms</strong></td>
-        <td><strong>78.8</strong></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>A. Architectural Impact: S3WaaS vs. Legacy Frameworks</h3>
-  <p>A central empirical contribution of this study is quantifying the national impact of NIC's S3WaaS Drupal distribution. As shown in Table II, S3WaaS portals outperform custom CMS and legacy ASP.NET deployments across every citizen-facing dimension.</p>
-
-  <div class="table-caption">TABLE II: Comparison of Web CMS Architectures</div>
-  <table>
-    <thead>
-      <tr>
-        <th>Metric</th>
-        <th>S3WaaS Drupal</th>
-        <th>Custom CMS</th>
-        <th>Legacy ASP.NET</th>
-        <th>Modern SPA</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Active Portals</strong></td>
-        <td>6,480 (63.2%)</td>
-        <td>2,671 (26.1%)</td>
-        <td>399 (3.9%)</td>
-        <td>651 (6.4%)</td>
-      </tr>
-      <tr>
-        <td><strong>Mean Accessibility</strong></td>
-        <td><strong>96.1 / 100</strong></td>
-        <td>91.2 / 100</td>
-        <td>81.5 / 100</td>
-        <td>92.0 / 100</td>
-      </tr>
-      <tr>
-        <td><strong>GIGW Toolbar</strong></td>
-        <td><strong>98.2%</strong></td>
-        <td>78.0%</td>
-        <td>48.0%</td>
-        <td>68.0%</td>
-      </tr>
-      <tr>
-        <td><strong>Median TTFB</strong></td>
-        <td>800 ms</td>
-        <td>1,100 ms</td>
-        <td>1,500 ms</td>
-        <td><strong>500 ms</strong></td>
-      </tr>
-      <tr>
-        <td><strong>Mobile Viewport</strong></td>
-        <td><strong>99.5%</strong></td>
-        <td>94.0%</td>
-        <td>88.0%</td>
-        <td>99.0%</td>
-      </tr>
-      <tr>
-        <td><strong>Composite Maturity</strong></td>
-        <td><strong>80.2 / 100</strong></td>
-        <td>75.8 / 100</td>
-        <td>68.4 / 100</td>
-        <td>78.5 / 100</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>B. The Cryptographic Security Gap</h3>
-  <p>While 100.0% of reachable portals mandate TLS/HTTPS, our audit reveals a significant security vulnerability in defensive HTTP headers: only <strong>44.5%</strong> enforce <code>Strict-Transport-Security</code> (HSTS) and a mere <strong>35.2%</strong> declare <code>Content-Security-Policy</code> (CSP). The absence of CSP is especially acute in state portals running custom forms, creating vulnerability to Cross-Site Scripting (XSS).</p>
-
-  <h3>C. State-by-State Governance Maturity Rankings</h3>
-  <p>Benchmarking composite maturity across the 36 States and UTs highlights significant regional leadership. West Bengal (81.2), Nagaland (80.5), Haryana (79.8), Mizoram (79.5), and Uttar Pradesh (78.4) achieve the highest scores, primarily driven by rapid district-level S3WaaS migration. Conversely, states retaining decentralized, bespoke line department portals exhibited lower compliance due to missing accessibility toolbars and unoptimized asset delivery.</p>
-
-  <h2>VI. Discussion & Recommendations</h2>
-  <p>Based on empirical evidence across 12,092 portals, we propose three actionable recommendations for MeitY, NIC, and state IT departments:</p>
-  <ol>
-    <li><strong>Mandate Complete S3WaaS Migration:</strong> S3WaaS elevates accessibility compliance by over 14 points (from 81.5 to 96.1) while ensuring mobile responsiveness. State governments should phase out legacy bespoke ASP.NET websites and migrate all municipal and district portals to the S3WaaS pipeline.</li>
-    <li><strong>Centralize Edge Security Headers:</strong> The lag in HSTS (44.5%) and CSP (35.2%) can be resolved without modifying application code. RailTel, NIC, and SDCs should mandate automated injection of HSTS (<code>max-age=31536000; includeSubDomains</code>) and base CSP policies at their NGINX / reverse-proxy edge gateways.</li>
-    <li><strong>Continuous Automated Longitudinal Audits:</strong> Government bodies should rely on continuous, in-country automated observatories rather than periodic, point-in-time commercial manual audits. Ongoing monitoring incentivizes departments to fix regressions in image alt tags and language localization immediately upon deployment.</li>
-  </ol>
-
-  <h2>VII. Threats to Validity & Limitations</h2>
-  <p>While automated DOM inspection reliably identifies structural WCAG failures (missing alt attributes, empty links, form control labeling), nuanced cognitive usability barriers and complex screen-reader audio flows still require human evaluation. Additionally, datacenter TTFB measurements from Bangalore do not capture last-mile radio access network congestion in remote rural areas.</p>
-
-  <h2>VIII. Conclusion & Open Science Artifacts</h2>
-  <p>This paper presented <strong>BharatGov Access</strong>, a census-scale web observatory evaluating 12,092 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.</p>
-  <p>To promote reproducibility and open science, all research artifacts are made publicly accessible:</p>
-  <ul>
-    <li><strong>Interactive Web Observatory:</strong> <code>https://quality-ampland-ashley-ought.trycloudflare.com</code></li>
-    <li><strong>Census Open Dataset:</strong> Immutable Apache Parquet, CSV, and JSON releases hosted under CC-BY-4.0 in <code>resources/bharatgov_access_clean.*</code>.</li>
-  </ul>
-
-  <h2>References</h2>
-  <div class="references">
-    <ol>
-      <li>World Wide Web Consortium (W3C), "Web Content Accessibility Guidelines (WCAG) 2.1," W3C Recommendation, June 2018.</li>
-      <li>Ministry of Electronics and Information Technology (MeitY), Government of India, "Guidelines for Indian Government Websites (GIGW 3.0)," NIC, New Delhi, 2023.</li>
-      <li>Indian Computer Emergency Response Team (CERT-In), "Cyber Security Guidelines for Government Entities," MeitY, New Delhi, 2023.</li>
-      <li>National Informatics Centre (NIC), "S3WaaS: Secure, Scalable and Sugamya Website as a Service," MeitY, 2024. [Online]. Available: https://s3waas.gov.in/</li>
-      <li>P. Agarwal, A. K. Bairagi, and V. N. Yaduraj, "BharatGov Access: National Government Web Infrastructure Observatory," IIT Kharagpur, Tech. Rep. DA-2026-G12, 2026.</li>
-      <li>Google Developers, "Web Vitals: Essential metrics for a healthy site," 2023. [Online]. Available: https://web.dev/vitals/</li>
-      <li>M. A. Fagan, "Web Accessibility of State and Local Government Websites: An Empirical Longitudinal Study," <em>Gov. Inf. Q.</em>, vol. 38, no. 3, p. 101584, 2021.</li>
-      <li>S. Scheitle et al., "A Long Way to the Top: Significance, Structure, and Stability of Internet Top Lists," in <em>Proc. ACM IMC</em>, 2018, pp. 478–493.</li>
-      <li>R. Padmanabhan et al., "Residential Alternatives to CDN-Hosted Public Infrastructure in Developing Regions," in <em>Proc. ACM SIGCOMM</em>, 2020.</li>
-      <li>E. B. V. Kumar and S. K. Gupta, "Digital India: Empirical Evaluation of Public Grievance Portals," <em>IEEE Trans. Technol. Soc.</em>, vol. 3, no. 2, pp. 112–124, 2022.</li>
-    </ol>
-  </div>
-
-</div>
-
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false}
-      ],
-      throwOnError: false
-    });
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ],
+    throwOnError: false
   });
 </script>
 </body>

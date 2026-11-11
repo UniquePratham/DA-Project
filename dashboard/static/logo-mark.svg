@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="BharatGov Access mark">
+  <title>BharatGov Access</title>
+  <!--
+    Mark concept: "Gateway / Datum".
+
+    A portal archway — the shape of a government entrance — whose interior holds a
+    rising measurement series. The arch says public infrastructure; the bars say
+    census. Both rest on one datum line, because every figure in the observatory
+    is measured against the same baseline.
+
+    Grid: 48 units. Arch legs at x=9 and x=39 (30 wide, radius 15), head apex at
+    y=9, legs down to the datum at y=38. Bars are 4 wide with 2-unit gaps, inset
+    5.5 units from each leg so they never touch the arch at small sizes.
+  -->
+  <g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="butt">
+    <path d="M9 38V24a15 15 0 0 1 30 0v14" />
+    <path d="M4 38h40" stroke-width="2.4" />
+  </g>
+  <g fill="currentColor">
+    <rect x="16" y="30" width="4" height="8" />
+    <rect x="22" y="24" width="4" height="14" />
+    <rect x="28" y="17" width="4" height="21" />
+  </g>
+</svg>
