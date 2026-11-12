@@ -85,6 +85,40 @@ GRIEVANCE_MARKERS = [
     "helpline",
 ]
 
+#: Headers and body markers that indicate a WAF or bot filter rather than a
+#: genuinely missing page. Used to separate "blocked" from "broken".
+WAF_HEADER_MARKERS = (
+    "cf-ray",
+    "x-sucuri-id",
+    "x-akamai-transformed",
+    "server-timing",
+    "x-cache",
+    "x-iinfo",
+    "x-waf",
+)
+
+WAF_BODY_MARKERS = (
+    "access denied",
+    "request blocked",
+    "cloudflare",
+    "incapsula",
+    "sucuri",
+    "akamai",
+    "captcha",
+    "bot detection",
+    "forbidden",
+    "not acceptable",
+)
+
+
+def _looks_like_waf(resp) -> bool:
+    """True when a 4xx/5xx looks like a bot filter rather than a dead page."""
+    headers = {k.lower(): v for k, v in resp.headers.items()}
+    if any(m in headers for m in WAF_HEADER_MARKERS):
+        return True
+    body = (resp.text or "")[:4000].lower()
+    return any(m in body for m in WAF_BODY_MARKERS)
+
 
 def measure(domain: str, timeout: float = 25.0) -> dict:
     """Fetch one domain and derive every metric from the real response."""
@@ -108,6 +142,7 @@ def measure(domain: str, timeout: float = 25.0) -> dict:
         "observatory_maturity_score": None,
         "html_bytes": None,
         "sha256": "",
+        "blocked_by_waf": False,
     }
 
     t0 = time.perf_counter()
@@ -144,6 +179,15 @@ def measure(domain: str, timeout: float = 25.0) -> dict:
     row["final_url"] = resp.url
     row["status_code"] = resp.status_code
     row["sub_response_latency_ms"] = round(elapsed_ms, 1)
+
+    # A 403/429/503 from a WAF is a distinct outcome, not a dead portal. The
+    # site exists and serves citizens; it refuses our declared research client.
+    # Recording it separately keeps it out of the accessibility averages while
+    # still counting it as evidence about the estate.
+    if resp.status_code in (403, 429, 503) and _looks_like_waf(resp):
+        row["measurement_reason"] = f"WAF challenge (HTTP {resp.status_code})"
+        row["blocked_by_waf"] = True
+        return row
 
     if resp.status_code >= 400:
         row["measurement_reason"] = f"HTTP {resp.status_code}"
@@ -333,6 +377,7 @@ def main() -> int:
         "observatory_maturity_score",
         "html_bytes",
         "sha256",
+        "blocked_by_waf",
     ]
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")

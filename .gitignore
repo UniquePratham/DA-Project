@@ -124,3 +124,7 @@ data/fixtures/india_states.geojson
 scripts/run_remote.py
 scripts/deploy_dashboard_to_cloud.py
 scripts/download_dataset.py
+# Vultr catalogue is fetched from the live API; regenerate with
+# scripts/fetch_vultr_catalog.py. Committed so the dashboard works offline.
+!data/fixtures/vultr_catalog.json
+!data/fixtures/world-110m.json

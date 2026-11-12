@@ -72,3 +72,22 @@ stop-docker:
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type d -name ".pytest_cache" -exec rm -rf {} +
+
+# ---------------------------------------------------------------- infrastructure
+
+.PHONY: vultr-catalog world-coverage world-map future-data infra-test
+
+vultr-catalog:  ## Fetch the live Vultr region and plan catalogue
+	python scripts/fetch_vultr_catalog.py
+
+world-coverage:  ## Rebuild the 249-country coverage table
+	python scripts/build_world_coverage.py
+
+world-map:  ## Rebuild the world map geometry
+	python scripts/build_world_map.py
+
+future-data:  ## Rebuild the Future view bundle
+	python scripts/build_future_data.py
+
+infra-test:  ## Run the infrastructure safety tests
+	python -m pytest tests/test_infrastructure.py -v

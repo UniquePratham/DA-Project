@@ -991,7 +991,7 @@
 
   /* ---------------------------------------------------------------- tabs */
 
-  const VIEWS = ['overview', 'atlas', 'ledger', 'standard', 'method'];
+  const VIEWS = ['overview', 'atlas', 'ledger', 'standard', 'method', 'future'];
 
   function activateView(name, focus) {
     if (VIEWS.indexOf(name) === -1) return;
@@ -1012,6 +1012,7 @@
     if (panel) renderChartsIn(panel);
 
     if (name === 'atlas' && state.selectedState) selectState(state.selectedState);
+    if (name === 'future') renderFuture();
 
     if (history.replaceState) {
       history.replaceState(null, '', `#${name}`);
@@ -1402,6 +1403,307 @@
         }
       )
     );
+  }
+
+  /* --------------------------------------------------------------- future */
+
+  let futureData = null;
+  let futureLoading = false;
+
+  function futureBadge(status) {
+    const label = String(status || 'planned').replace(/_/g, ' ');
+    return `<span class="future-badge future-badge--${esc(status)}">${esc(label)}</span>`;
+  }
+
+  function renderFuture() {
+    if (futureData) {
+      paintFuture();
+      return;
+    }
+    // The bundle is a JS global rather than a fetch, so the page works from
+    // file:// as well as over HTTP. This matches how dataset.js is loaded.
+    if (window.FUTURE_DATA) {
+      futureData = window.FUTURE_DATA;
+      paintFuture();
+      return;
+    }
+    if (futureLoading) return;
+    futureLoading = true;
+
+    fetch('static/future.json')
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+      .then((data) => {
+        futureData = data;
+        paintFuture();
+      })
+      .catch((err) => {
+        const host = $('#future-countries');
+        if (host) {
+          host.innerHTML =
+            '<p class="future-note">The global expansion bundle could not be loaded ' +
+            `(${esc(err.message)}). Serve this page over HTTP so that ` +
+            '<code>static/future.json</code> resolves.</p>';
+        }
+      })
+      .finally(() => {
+        futureLoading = false;
+      });
+  }
+
+  function paintFuture() {
+    const d = futureData;
+    if (!d) return;
+
+    // A. measured vs planned
+    const measured = $('#future-measured');
+    if (measured) {
+      const base = d.india_baseline || {};
+      measured.innerHTML = [
+        `India: ${int(base.discovered)} domains discovered, ${int(base.reachable)} measured`,
+        `Accessibility ${dec(base.mean_accessibility)} / 100 (axe-core)`,
+        `Security ${dec(base.mean_security)} / 100 (OWASP headers)`,
+        `Median TTFB ${int(base.median_ttfb_ms)} ms`,
+        `Mobile ${dec(base.mobile_pct)}% · Language ${dec(base.multilingual_pct)}%`,
+      ]
+        .map((t) => `<li>${esc(t)}</li>`)
+        .join('');
+    }
+
+    const planned = $('#future-planned');
+    if (planned) {
+      const dims = (d.dimensions || []).filter((x) => x.india_status !== 'measured');
+      planned.innerHTML = dims
+        .map((x) => `<li>${esc(x.name)} &mdash; ${esc(x.measures)}</li>`)
+        .join('');
+    }
+
+    // B. countries
+    renderWorldMap();
+    renderCountryCards();
+
+    // C. dimensions
+    const dims = $('#future-dimensions');
+    if (dims) {
+      dims.innerHTML = (d.dimensions || [])
+        .map(
+          (x) =>
+            '<article class="future-dim">' +
+            '<div class="future-dim__head">' +
+            `<span class="future-dim__name">${esc(x.name)}</span>` +
+            futureBadge(x.india_status === 'measured' ? 'operational' : 'planned') +
+            '</div>' +
+            `<p class="future-dim__body">${esc(x.measures)}</p>` +
+            `<div class="future-dim__tool">${esc(x.tool)}</div>` +
+            '</article>'
+        )
+        .join('');
+    }
+
+    // D. infrastructure
+    const infra = d.infrastructure || {};
+    const stats = $('#future-infra');
+    if (stats) {
+      const cells = [
+        ['Active instances', int(infra.active_instances || 0)],
+        ['Completed jobs', int(infra.completed_jobs || 0)],
+        ['Failed jobs', int(infra.failed_jobs || 0)],
+        ['Actual spend', `$${Number(infra.actual_total_usd || 0).toFixed(4)}`],
+        ['Month spend', `$${Number(infra.month_spend_usd || 0).toFixed(4)}`],
+        ['Monthly cap', `$${Number(infra.monthly_cap_usd || 0).toFixed(2)}`],
+        ['Per-job cap', `$${Number(infra.per_job_cap_usd || 0).toFixed(2)}`],
+      ];
+      stats.innerHTML = cells
+        .map(
+          ([k, v]) =>
+            `<div class="future-stat"><span class="future-stat__k">${esc(k)}</span>` +
+            `<span class="future-stat__v">${v}</span></div>`
+        )
+        .join('');
+    }
+    const note = $('#future-infra-note');
+    if (note && infra.note) note.textContent = infra.note;
+
+    const plans = $('#future-plans tbody');
+    if (plans) {
+      plans.innerHTML = (d.instance_catalogue || [])
+        .map(
+          (p) =>
+            '<tr>' +
+            `<td><code>${esc(p.plan_id)}</code></td>` +
+            `<td class="num">${int(p.vcpu)}</td>` +
+            `<td class="num">${int(p.ram_mb)} MB</td>` +
+            `<td class="num">${int(p.disk_gb)} GB</td>` +
+            `<td class="num">$${Number(p.hourly_usd).toFixed(4)}</td>` +
+            `<td class="num">${dec(p.billed_hours)}</td>` +
+            `<td class="num">$${Number(p.est_batch_usd).toFixed(4)}</td>` +
+            '</tr>'
+        )
+        .join('');
+    }
+
+    // E. roadmap
+    const road = $('#future-roadmap');
+    if (road) {
+      road.innerHTML = (d.roadmap || [])
+        .map(
+          (r) =>
+            `<li class="roadmap__item roadmap__item--${esc(r.status)}">` +
+            `<span class="roadmap__phase">${String(r.phase).padStart(2, '0')}</span>` +
+            '<div>' +
+            `<h4 class="roadmap__title">${esc(r.title)} ${futureBadge(r.status)}</h4>` +
+            `<p class="roadmap__detail">${esc(r.detail)}</p>` +
+            '</div></li>'
+        )
+        .join('');
+    }
+  }
+
+  /* ---------------------------------------------------------- world map */
+
+  let worldFilter = 'all';
+
+  const WORLD_STATUS_LABEL = {
+    operational: 'Operational',
+    planned: 'Planned',
+    unsupported: 'Unsupported',
+    provisioning: 'Provisioning',
+    temporarily_unavailable: 'Temporarily unavailable',
+  };
+
+  function worldStatusOf(code) {
+    const w = window.WORLD_DATA;
+    if (!w) return 'unsupported';
+    const c = (w.countries || []).find((x) => x.code === code);
+    return c ? c.status : 'unsupported';
+  }
+
+  function renderWorldMap() {
+    const svg = $('#world-map');
+    const map = window.WORLD_MAP;
+    if (!svg || !map) return;
+
+    const paths = (map.countries || [])
+      .map((c) => {
+        const status = worldStatusOf(c.code);
+        return (
+          `<path class="world-country world-country--${esc(status)}" ` +
+          `d="${c.d}" data-code="${esc(c.code)}" ` +
+          `aria-label="${esc(c.name)}: ${esc(WORLD_STATUS_LABEL[status] || status)}"></path>`
+        );
+      })
+      .join('');
+
+    svg.innerHTML = paths;
+
+    // Legend
+    const legend = $('#world-legend');
+    if (legend) {
+      const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
+      legend.innerHTML = ['operational', 'planned', 'unsupported']
+        .map(
+          (s) =>
+            `<span class="world-legend__item">` +
+            `<span class="world-legend__swatch world-legend__swatch--${s}"></span>` +
+            `${esc(WORLD_STATUS_LABEL[s])} <b>${int(counts[s] || 0)}</b></span>`
+        )
+        .join('');
+    }
+
+    // Filters
+    const filters = $('#world-filters');
+    if (filters) {
+      const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
+      const opts = [
+        ['all', 'All countries', window.WORLD_DATA ? window.WORLD_DATA.total_countries : 0],
+        ['operational', 'Operational', counts.operational || 0],
+        ['planned', 'Planned', counts.planned || 0],
+        ['unsupported', 'Unsupported', counts.unsupported || 0],
+      ];
+      filters.innerHTML = opts
+        .map(
+          ([key, label, n]) =>
+            `<button type="button" class="world-filter${key === worldFilter ? ' is-active' : ''}" ` +
+            `data-filter="${key}" aria-pressed="${key === worldFilter}">` +
+            `${esc(label)} <b>${int(n)}</b></button>`
+        )
+        .join('');
+
+      filters.querySelectorAll('.world-filter').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          worldFilter = btn.dataset.filter;
+          renderWorldMap();
+          renderCountryCards();
+        });
+      });
+    }
+
+    // Hover tooltip on the map
+    svg.addEventListener('mouseover', (event) => {
+      const path = event.target.closest('.world-country');
+      if (!path) return;
+      const code = path.dataset.code;
+      const w = window.WORLD_DATA;
+      const c = w && (w.countries || []).find((x) => x.code === code);
+      if (!c) return;
+      const regions = (c.domestic_regions || [])
+        .map((r) => r.city)
+        .join(', ');
+      showTip(
+        event,
+        `<b>${esc(c.name)}</b><br>${esc(WORLD_STATUS_LABEL[c.status] || c.status)}` +
+          (regions ? `<br>${esc(regions)}` : '')
+      );
+    });
+    svg.addEventListener('mousemove', (event) => {
+      if (event.target.closest('.world-country')) moveTip(event);
+    });
+    svg.addEventListener('mouseout', (event) => {
+      if (event.target.closest('.world-country')) hideTip();
+    });
+  }
+
+  function renderCountryCards() {
+    const host = $('#future-countries');
+    const w = window.WORLD_DATA;
+    if (!host || !w) return;
+
+    let list = w.countries || [];
+    if (worldFilter !== 'all') {
+      list = list.filter((c) => c.status === worldFilter);
+    }
+    // Operational first, then planned, then unsupported; alphabetical within.
+    const order = { operational: 0, provisioning: 1, planned: 2, temporarily_unavailable: 3, unsupported: 4 };
+    list = list.slice().sort((a, b) => {
+      const d = (order[a.status] ?? 9) - (order[b.status] ?? 9);
+      return d !== 0 ? d : a.name.localeCompare(b.name);
+    });
+
+    host.innerHTML = list
+      .map((c) => {
+        const regions = (c.domestic_regions || []).map((r) => r.city).join(', ');
+        return (
+          '<article class="future-country">' +
+          '<div class="future-country__top">' +
+          `<span class="future-country__name">${esc(c.name)}</span>` +
+          `<span class="future-country__code">${esc(c.code)}</span>` +
+          '</div>' +
+          futureBadge(c.status) +
+          (regions ? `<div class="future-country__region">${esc(regions)}</div>` : '') +
+          `<p class="future-country__note">${esc(c.note || '')}</p>` +
+          '</article>'
+        );
+      })
+      .join('');
+
+    const count = $('#world-count');
+    if (count) {
+      count.textContent =
+        `Showing ${list.length} of ${w.total_countries} countries. ` +
+        `${w.countries_with_regions} have a domestic cloud region; ` +
+        `${w.status_counts.operational || 0} are operational, ` +
+        `${w.status_counts.planned || 0} planned, ` +
+        `${w.status_counts.unsupported || 0} unsupported.`;
+    }
   }
 
   function boot() {

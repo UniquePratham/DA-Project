@@ -10,6 +10,9 @@
 <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="static/favicon.svg">
 <script src="static/dataset.js" defer></script>
+<script src="static/future.js" defer></script>
+<script src="static/world.js" defer></script>
+<script src="static/world_map.js" defer></script>
 <script src="static/india_map.js" defer></script>
 <script src="static/app.js" defer></script>
 </head>
@@ -72,6 +75,9 @@
       </button>
       <button class="rail__btn" role="tab" id="tab-method" aria-controls="view-method" aria-selected="false" tabindex="-1" data-view="method">
         <span class="rail__num">05</span>Method
+      </button>
+      <button class="rail__btn" role="tab" id="tab-future" aria-controls="view-future" aria-selected="false" tabindex="-1" data-view="future">
+        <span class="rail__num">06</span>Future
       </button>
 
       <div class="rail__spacer"></div>
@@ -590,6 +596,130 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
             </ul>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <!-- ========================================================== 06 FUTURE -->
+    <section class="view" id="view-future" role="tabpanel" aria-labelledby="tab-future" tabindex="0" hidden>
+      <div class="section" style="border-top:0; padding-top:0">
+        <div class="section__head">
+          <h2 class="section__title">Future &mdash; Global Observatory</h2>
+          <span class="section__note">Planned expansion</span>
+        </div>
+        <p class="section__lede">
+          The India census is complete. The next phase measures other countries from inside those
+          countries, using the same tools and the same timeouts, so the comparison is like for like.
+          Everything on this page is either measured today or explicitly marked as planned.
+        </p>
+      </div>
+
+      <!-- A. Vision -->
+      <div class="section">
+        <div class="section__head">
+          <h3 class="section__title" style="font-size:var(--fs-h3)">A &middot; What changes and what does not</h3>
+        </div>
+        <div class="split split--wide-left">
+          <div class="prose">
+            <p>
+              A government website can only be judged from the network its citizens use. A portal that
+              answers in 200&nbsp;ms from Frankfurt and times out from Lagos is not a slow portal; it is a
+              portal with a geography. Measuring it from the wrong place produces a number that looks
+              precise and means nothing.
+            </p>
+            <p>
+              The global observatory therefore provisions a measurement node <em>inside</em> each target
+              country, runs the same five-pillar audit, uploads the evidence to central storage, and
+              destroys the node. Compute is temporary. The dataset, the provenance and the methodology
+              are permanent.
+            </p>
+            <p>
+              What does not change: the tools, the timeouts, the safety governor, and the rule that a
+              metric we did not measure is stored as null rather than zero.
+            </p>
+          </div>
+          <div class="stack">
+            <div class="panel">
+              <h4 class="panel__h">Measured today</h4>
+              <ul class="panel__list" id="future-measured"></ul>
+            </div>
+            <div class="panel">
+              <h4 class="panel__h">Planned, not yet measured</h4>
+              <ul class="panel__list" id="future-planned"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- B. Country coverage -->
+      <div class="section">
+        <div class="section__head">
+          <h3 class="section__title" style="font-size:var(--fs-h3)">B &middot; Worldwide coverage</h3>
+          <span class="section__note">Derived from real cloud regions</span>
+        </div>
+        <p class="section__lede" style="margin-bottom:var(--s4)">
+          A country is marked operational only when a datacentre physically inside it exists. Where none
+          exists, the country is marked planned or unsupported rather than measured from a neighbour,
+          because a foreign probe cannot support a domestic claim.
+        </p>
+
+        <div class="world-wrap">
+          <svg class="world-map" id="world-map" viewBox="0 0 1000 500" role="img"
+               aria-label="World map of measurement probe availability by country"></svg>
+          <div class="world-legend" id="world-legend"></div>
+        </div>
+
+        <div class="world-filters" id="world-filters" role="group" aria-label="Filter countries by status"></div>
+        <div class="future-grid" id="future-countries"></div>
+        <p class="future-note" id="world-count"></p>
+      </div>
+
+      <!-- C. Dimensions -->
+      <div class="section">
+        <div class="section__head">
+          <h3 class="section__title" style="font-size:var(--fs-h3)">C &middot; The eight research dimensions</h3>
+        </div>
+        <p class="section__lede" style="margin-bottom:var(--s4)">
+          Each dimension is reported separately. They are not collapsed into a single score, because a
+          country can be accessible and insecure at the same time, and averaging hides exactly that.
+        </p>
+        <div class="future-dims" id="future-dimensions"></div>
+      </div>
+
+      <!-- D. Infrastructure -->
+      <div class="section">
+        <div class="section__head">
+          <h3 class="section__title" style="font-size:var(--fs-h3)">D &middot; Ephemeral infrastructure</h3>
+          <span class="section__note">Live counters</span>
+        </div>
+        <div class="future-stats" id="future-infra"></div>
+        <p class="future-note" id="future-infra-note"></p>
+
+        <h4 class="panel__h" style="margin-top:var(--s6)">Instance catalogue and cost per batch</h4>
+        <div class="table-wrap">
+          <table class="table" id="future-plans">
+            <thead>
+              <tr>
+                <th>Plan</th><th class="num">vCPU</th><th class="num">RAM</th>
+                <th class="num">Disk</th><th class="num">Hourly</th>
+                <th class="num">Billed hours</th><th class="num">Cost per batch</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="future-note">
+          A 15-minute batch is billed at the one-hour minimum, so the cost per batch equals the hourly
+          rate. Storage, snapshots, bandwidth overage and backups are modelled separately in
+          <code>services/infrastructure/cost.py</code>.
+        </p>
+      </div>
+
+      <!-- E. Roadmap -->
+      <div class="section">
+        <div class="section__head">
+          <h3 class="section__title" style="font-size:var(--fs-h3)">E &middot; Research roadmap</h3>
+        </div>
+        <ol class="roadmap" id="future-roadmap"></ol>
       </div>
     </section>
 
