@@ -455,7 +455,18 @@ class InfrastructureManager:
         record.transition(InstanceState.TERMINATING, "destroy requested")
         self._persist_state()
 
-        ok = self.provider.destroy_instance(record.instance_id)
+        try:
+            ok = self.provider.destroy_instance(record.instance_id)
+        except ProviderError as exc:
+            # A transient provider failure must not leave the record claiming
+            # the instance is gone. Mark it failed so the reaper retries.
+            record.error = f"destroy failed: {exc}"
+            record.transition(InstanceState.FAILED, record.error)
+            self._persist_state()
+            self._record("destroy.failed", job_id=job_id,
+                         instance_id=record.instance_id, error=str(exc))
+            raise LifecycleError(record.error) from None
+
         if not ok:
             record.error = "provider did not confirm destruction"
             record.transition(InstanceState.FAILED, record.error)

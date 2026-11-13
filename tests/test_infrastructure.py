@@ -438,3 +438,71 @@ def test_audit_log_records_every_action(tmp_path):
 
     actions = [e["action"] for e in mgr.audit_log()]
     assert "provision.created" in actions
+
+# ---------------------------------------------------------------- selection
+
+
+def test_selector_only_returns_domestic_regions():
+    from services.infrastructure.selection import RegionSelector
+
+    regions = [
+        Region("blr", "Bangalore", "IN", "Asia"),
+        Region("bom", "Mumbai", "IN", "Asia"),
+        Region("sgp", "Singapore", "SG", "Asia"),
+    ]
+    sel = RegionSelector(regions)
+    chosen = sel.select_or_raise("IN")
+    assert chosen.region.country == "IN"
+    assert chosen.region.id in {"blr", "bom"}
+
+
+def test_selector_refuses_a_country_with_no_domestic_region():
+    from services.infrastructure.selection import RegionSelector
+
+    sel = RegionSelector([Region("blr", "Bangalore", "IN", "Asia")])
+    assert sel.select("JP") is None
+    with pytest.raises(LookupError, match="no cloud region inside JP"):
+        sel.select_or_raise("JP")
+
+
+def test_selector_prefers_the_region_with_fewer_blocks():
+    from services.infrastructure.selection import RegionHistory, RegionSelector
+
+    regions = [
+        Region("blr", "Bangalore", "IN", "Asia"),
+        Region("bom", "Mumbai", "IN", "Asia"),
+    ]
+    hist = RegionHistory()
+    # Bangalore has been blocked twice; Mumbai never.
+    hist.record("blr", "IN", 200, blocked=True)
+    hist.record("blr", "IN", 210, blocked=True)
+    hist.record("bom", "IN", 400, blocked=False)
+
+    sel = RegionSelector(regions, hist)
+    chosen = sel.select_or_raise("IN")
+    assert chosen.region.id == "bom"
+    assert chosen.blocks == 0
+
+
+def test_selector_prefers_lower_latency_when_blocks_are_equal():
+    from services.infrastructure.selection import RegionHistory, RegionSelector
+
+    regions = [
+        Region("blr", "Bangalore", "IN", "Asia"),
+        Region("bom", "Mumbai", "IN", "Asia"),
+    ]
+    hist = RegionHistory()
+    hist.record("blr", "IN", 120, blocked=False)
+    hist.record("bom", "IN", 480, blocked=False)
+
+    sel = RegionSelector(regions, hist)
+    assert sel.select_or_raise("IN").region.id == "blr"
+
+
+def test_selector_reports_no_history_honestly():
+    from services.infrastructure.selection import RegionSelector
+
+    sel = RegionSelector([Region("blr", "Bangalore", "IN", "Asia")])
+    chosen = sel.select_or_raise("IN")
+    assert chosen.reason == "no_history"
+    assert chosen.samples == 0

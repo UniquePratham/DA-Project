@@ -128,3 +128,5 @@ scripts/download_dataset.py
 # scripts/fetch_vultr_catalog.py. Committed so the dashboard works offline.
 !data/fixtures/vultr_catalog.json
 !data/fixtures/world-110m.json
+# Ephemeral infrastructure runtime state (contains instance ids and spend)
+data/infra/

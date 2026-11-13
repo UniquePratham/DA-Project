@@ -295,6 +295,44 @@ Every value is either measured or explicitly labelled planned. The
 infrastructure counters read zero because nothing has been provisioned, not
 because the panel is a mock-up.
 
+
+### 8.6 Region selection
+
+The measurement region is chosen per country, and the choice is recorded so it
+can be audited.
+
+1. **Only a domestic region is eligible.** A region in a neighbouring country is
+   never substituted, because a foreign probe cannot support a domestic claim.
+2. **Within the eligible set**, regions are ranked by fewest observed WAF
+   blocks, then lowest observed median latency, then provider order.
+3. **With no history**, the choice is recorded as `no_history` rather than
+   implying a measured preference.
+
+`services/infrastructure/selection.py` implements this. `RegionHistory` is
+populated from real measurement outcomes, so the ranking improves as the
+observatory runs.
+
+### 8.7 Verified end-to-end
+
+`scripts/prove_ephemeral.py` provisions one real instance, waits for it to
+become active, marks the job running, verifies the results, and destroys the
+instance. A real run on 2026-11-14:
+
+| Step | Result |
+| :--- | :--- |
+| Region selected | `blr` (Bangalore), reason `no_history` |
+| Plan | `vc2-1c-1gb`, 1 GB RAM, $0.007/hr |
+| Instance | `28bfbed8-…`, public IP `139.84.150.147` |
+| Ready in | 28 s |
+| Destroyed | yes, confirmed gone |
+| Actual cost | **$0.0070** |
+| Production servers touched | **0 of 5** |
+
+The first attempt hit Vultr's `409 Server is currently locked` on delete, which
+is a transient state while an instance settles. `destroy_instance()` now retries
+with backoff instead of treating the lock as a permanent failure, because a
+failed destroy leaves a billable instance running.
+
 ---
 
 ## 9. DataHub KGP Dataset Release

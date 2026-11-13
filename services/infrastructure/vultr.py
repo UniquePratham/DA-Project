@@ -305,13 +305,32 @@ class VultrProvider:
         if self.dry_run:
             self._simulated.pop(instance_id, None)
             return True
-        self._request("DELETE", f"/instances/{instance_id}")
-        # Deletion is asynchronous; poll briefly so the caller can trust the
-        # return value rather than discovering a ghost instance later.
-        for _ in range(20):
+
+        # Vultr returns 409 "Server is currently locked" while an instance is
+        # still settling after creation. Retry with backoff rather than
+        # treating a transient lock as a permanent failure, because a failed
+        # destroy leaves a billable instance running.
+        last_error = ""
+        for attempt in range(8):
+            try:
+                self._request("DELETE", f"/instances/{instance_id}")
+                break
+            except ProviderError as exc:
+                last_error = str(exc)
+                if "409" not in last_error and "locked" not in last_error.lower():
+                    raise
+                time.sleep(min(30, 5 * (attempt + 1)))
+        else:
+            raise ProviderError(
+                f"instance {instance_id} stayed locked after 8 attempts: {last_error}"
+            )
+
+        # Deletion is asynchronous; poll so the caller can trust the return
+        # value rather than discovering a ghost instance later.
+        for _ in range(30):
             if self.get_instance(instance_id) is None:
                 return True
-            time.sleep(3)
+            time.sleep(4)
         return self.get_instance(instance_id) is None
 
     def account_balance(self) -> Optional[float]:
