@@ -364,6 +364,32 @@ instance, injects a throwaway SSH keypair through cloud-init, uploads the same
 `crawl_real.py` used for the India census, runs a real batch, pulls the results
 back, and verifies the SHA-256 before destroying the instance.
 
+A real run on 2026-11-18, measuring three Indian government domains from a
+Bangalore probe:
+
+| Step | Result |
+| :--- | :--- |
+| Instance | `66d0b6de-…`, IP `139.84.158.177`, `blr` |
+| SSH | connected, deps installed by cloud-init |
+| Worker | uploaded, 3 domains |
+| Measured | 3/3 in under a second |
+| Reachable | 2 of 3 |
+| Checksum | **MATCH** |
+| Destroyed | yes, confirmed gone |
+| Cost | **$0.0070** |
+
+The measurements themselves:
+
+| Domain | Status | TTFB | Accessibility | Security | Maturity |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| `meity.gov.in` | 200 | 262 ms | 95.0 | 100.0 | 77.3 |
+| `india.gov.in` | 200 | 330 ms | 97.8 | 85.0 | 69.8 |
+| `nic.in` | — | — | — | — | — |
+
+`nic.in` did not resolve from the probe, which is recorded as a real outcome
+rather than a zero. The two that answered produced genuine SHA-256 hashes of
+their response bodies, so the evidence is reproducible.
+
 The keypair is generated per run and exists only in memory, so a leaked
 instance cannot be reached after the job ends. The worker is byte-identical to
 the India one, which is what makes a measurement on an ephemeral probe
