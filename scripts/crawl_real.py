@@ -28,25 +28,50 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import re
 import sys
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
 
+# Allow the script to be run from a directory that also contains tools/.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+if _HERE not in sys.path:
+    sys.path.insert(0, _HERE)
+
 import requests
 from bs4 import BeautifulSoup
 
+from tools.http.polite import PoliteClient, RobotsDisallowed
+
+# Honest identification. The crawler does not pretend to be a browser: a site
+# operator who wants us to stop can find out who we are and ask.
 UA = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    "BharatGovAccessObservatory/1.0 "
+    "(+https://uniquepratham.github.io/DA-Project/; research-bot@bharatgov.in)"
 )
 HEADERS = {
     "User-Agent": UA,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-IN,en;q=0.9,hi;q=0.8",
-    "Upgrade-Insecure-Requests": "1",
+    "Accept-Language": "en;q=0.9",
+    "From": "research-bot@bharatgov.in",
 }
+
+# One shared polite client per process: it holds the per-host rate limiters and
+# the robots.txt cache, so concurrency across hosts never becomes concurrency
+# against a single host.
+_CLIENT: "PoliteClient | None" = None
+_CLIENT_LOCK = threading.Lock()
+
+
+def _client(timeout: float) -> "PoliteClient":
+    global _CLIENT
+    with _CLIENT_LOCK:
+        if _CLIENT is None:
+            _CLIENT = PoliteClient(timeout=timeout)
+        return _CLIENT
 
 INDIC = [
     "\u0939\u093f\u0928\u094d\u0926\u0940",  # hindi
@@ -143,26 +168,29 @@ def measure(domain: str, timeout: float = 25.0) -> dict:
         "html_bytes": None,
         "sha256": "",
         "blocked_by_waf": False,
+        "robots_disallowed": False,
     }
+
+    client = _client(timeout)
 
     t0 = time.perf_counter()
     try:
-        resp = requests.get(
-            url, headers=HEADERS, timeout=timeout, allow_redirects=True, verify=False
-        )
+        resp = client.get(url)
         elapsed_ms = (time.perf_counter() - t0) * 1000.0
+    except RobotsDisallowed:
+        row["measurement_reason"] = "robots.txt disallowed"
+        row["robots_disallowed"] = True
+        return row
     except requests.exceptions.SSLError:
         # Retry over plain HTTP only to record that TLS failed.
         try:
             t0 = time.perf_counter()
-            resp = requests.get(
-                f"http://{domain}",
-                headers=HEADERS,
-                timeout=timeout,
-                allow_redirects=True,
-                verify=False,
-            )
+            resp = client.get(f"http://{domain}")
             elapsed_ms = (time.perf_counter() - t0) * 1000.0
+        except RobotsDisallowed:
+            row["measurement_reason"] = "robots.txt disallowed"
+            row["robots_disallowed"] = True
+            return row
         except Exception as exc:  # noqa: BLE001
             row["measurement_reason"] = f"TLS error: {type(exc).__name__}"
             return row
@@ -378,6 +406,7 @@ def main() -> int:
         "html_bytes",
         "sha256",
         "blocked_by_waf",
+        "robots_disallowed",
     ]
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")

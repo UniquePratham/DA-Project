@@ -195,7 +195,7 @@ def measure_country(
         )
 
         sftp = client.open_sftp()
-        sftp.put(str(WORKER), "/root/crawl_real.py")
+        upload_worker(sftp)
         domains = SEEDS.get(country, [])[:4]
         sftp.putfo(io.BytesIO(json.dumps(domains).encode()), "/root/domains.json")
         sftp.close()
@@ -253,6 +253,38 @@ def measure_country(
                 out["destroy_error"] = str(exc)
 
     return out
+
+
+
+def upload_worker(sftp, remote_root: str = "/root") -> None:
+    """Upload the crawler and the tools package it imports.
+
+    The worker is not self-contained: it imports tools.http.polite, which in
+    turn imports tools.http.robots. Uploading only crawl_real.py produces a
+    ModuleNotFoundError on the instance, so the package goes with it.
+    """
+    import posixpath
+
+    sftp.put(str(WORKER), posixpath.join(remote_root, "crawl_real.py"))
+
+    tools_dir = REPO / "tools" / "http"
+    try:
+        sftp.stat(posixpath.join(remote_root, "tools"))
+    except IOError:
+        sftp.mkdir(posixpath.join(remote_root, "tools"))
+    try:
+        sftp.stat(posixpath.join(remote_root, "tools", "http"))
+    except IOError:
+        sftp.mkdir(posixpath.join(remote_root, "tools", "http"))
+
+    for name in ("__init__.py", "polite.py", "robots.py"):
+        local = tools_dir / name
+        if local.exists():
+            sftp.put(str(local), posixpath.join(remote_root, "tools", "http", name))
+
+    init = REPO / "tools" / "__init__.py"
+    if init.exists():
+        sftp.put(str(init), posixpath.join(remote_root, "tools", "__init__.py"))
 
 
 def main() -> int:

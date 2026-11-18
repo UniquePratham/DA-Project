@@ -437,6 +437,31 @@ The sample is four domains per country by design. This is a cross-country
 comparability check, not a census; the India census in the other views remains
 the large sample.
 
+
+### 8.11 Crawler politeness
+
+The crawler obeys three rules, enforced in `tools/http/polite.py` and
+`tools/http/robots.py` rather than left to the caller:
+
+1. **Honest identification.** The User-Agent names the project and gives a
+   contact address. It does not claim to be a browser.
+2. **robots.txt compliance.** Python's standard `urllib.robotparser` does not
+   implement `*` wildcards or `$` anchors, so it silently allows paths that
+   robots.txt forbids. `gov.uk` publishes `Disallow: /*/print$` and
+   `Disallow: /search/all*`; the standard library permits both. The parser here
+   implements RFC 9309 matching: wildcards, end anchors, longest-match wins,
+   Allow beats Disallow on a tie, and specific agents beat `*`.
+3. **One request per second per host**, with a site's own `Crawl-delay`
+   overriding the default, a global concurrency cap, `Retry-After` honoured on
+   429/503, and exponential backoff after repeated failures.
+
+A robots-disallowed URL is recorded as `robots_disallowed`, not as a failure,
+so it stays out of the reachability denominator rather than being counted as a
+dead portal.
+
+Eleven tests cover this, including the exact gov.uk patterns the standard
+library gets wrong.
+
 ---
 
 ## 9. DataHub KGP Dataset Release

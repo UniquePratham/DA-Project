@@ -147,6 +147,38 @@ def run(client: paramiko.SSHClient, cmd: str, timeout: float = 600.0) -> tuple[s
     return o, e, out.channel.recv_exit_status()
 
 
+
+def upload_worker(sftp, remote_root: str = "/root") -> None:
+    """Upload the crawler and the tools package it imports.
+
+    The worker is not self-contained: it imports tools.http.polite, which in
+    turn imports tools.http.robots. Uploading only crawl_real.py produces a
+    ModuleNotFoundError on the instance, so the package goes with it.
+    """
+    import posixpath
+
+    sftp.put(str(WORKER), posixpath.join(remote_root, "crawl_real.py"))
+
+    tools_dir = REPO / "tools" / "http"
+    try:
+        sftp.stat(posixpath.join(remote_root, "tools"))
+    except IOError:
+        sftp.mkdir(posixpath.join(remote_root, "tools"))
+    try:
+        sftp.stat(posixpath.join(remote_root, "tools", "http"))
+    except IOError:
+        sftp.mkdir(posixpath.join(remote_root, "tools", "http"))
+
+    for name in ("__init__.py", "polite.py", "robots.py"):
+        local = tools_dir / name
+        if local.exists():
+            sftp.put(str(local), posixpath.join(remote_root, "tools", "http", name))
+
+    init = REPO / "tools" / "__init__.py"
+    if init.exists():
+        sftp.put(str(init), posixpath.join(remote_root, "tools", "__init__.py"))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--country", default="IN")
@@ -226,7 +258,7 @@ def main() -> int:
         print("  ", (o or e).strip().splitlines()[-1] if (o or e).strip() else "done")
 
         sftp = client.open_sftp()
-        sftp.put(str(WORKER), "/root/crawl_real.py")
+        upload_worker(sftp)
         domains = SEED_DOMAINS.get(args.country.upper(), [])[: args.domains]
         sftp.putfo(io.BytesIO(json.dumps(domains).encode()), "/root/domains.json")
         sftp.close()
