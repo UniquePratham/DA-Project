@@ -395,6 +395,48 @@ instance cannot be reached after the job ends. The worker is byte-identical to
 the India one, which is what makes a measurement on an ephemeral probe
 comparable to one on the permanent node.
 
+
+### 8.10 Cross-country measurements
+
+`scripts/run_global_batch.py` provisions one probe per country, measures a small
+comparable sample of national portals, and appends the results to
+`data/real/global_measurements.csv` with full provenance.
+
+Every row records `probe_country`, `probe_region`, `probe_region_country` and
+`domestic_probe`. A row is only marked domestic when the probe's region country
+equals the target country, so the claim can be checked rather than trusted.
+
+**18 countries measured, 72 domains, all from domestic probes, $0.126 total.**
+
+| Country | Probe | Reachable | Accessibility | Security | Median TTFB |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| India | `blr` | 3/4 | 97.8 | 85.0 | 476 ms |
+| Singapore | `sgp` | 2/4 | 96.0 | 50.0 | 971 ms |
+| Australia | `mel` | 4/4 | 91.8 | 66.2 | 155 ms |
+| South Korea | `icn` | 4/4 | 90.8 | 5.0 | 262 ms |
+| France | `cdg` | 1/4 | 89.3 | 70.0 | 135 ms |
+| Poland | `waw` | 4/4 | 86.9 | 32.5 | 85 ms |
+| United States | `atl` | 4/4 | 86.7 | 52.5 | 187 ms |
+| Sweden | `sto` | 4/4 | 86.1 | 58.8 | 240 ms |
+| Brazil | `sao` | 3/4 | 86.0 | 90.0 | 196 ms |
+| United Kingdom | `lhr` | 3/4 | 85.7 | 71.7 | 91 ms |
+| Japan | `itm` | 2/4 | 84.4 | 35.0 | 187 ms |
+| Netherlands | `ams` | 4/4 | 83.3 | 100.0 | 136 ms |
+| Israel | `tlv` | 3/4 | 83.3 | 53.3 | 293 ms |
+| South Africa | `jnb` | 3/4 | 83.1 | 23.3 | 1,508 ms |
+| Canada | `yto` | 3/4 | 81.7 | 40.0 | 78 ms |
+| Mexico | `mex` | 3/4 | 81.4 | 23.3 | 291 ms |
+| Spain | `mad` | 3/4 | 79.5 | 45.0 | 58 ms |
+| Germany | `fra` | 2/4 | 69.6 | 87.5 | 109 ms |
+
+Two countries were skipped rather than faked: **Italy** had no plan meeting the
+1 GB floor in its region, and **Chile** timed out during provisioning. Both are
+recorded as skipped, not as zeros.
+
+The sample is four domains per country by design. This is a cross-country
+comparability check, not a census; the India census in the other views remains
+the large sample.
+
 ---
 
 ## 9. DataHub KGP Dataset Release

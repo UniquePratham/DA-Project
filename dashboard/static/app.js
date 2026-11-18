@@ -1482,6 +1482,9 @@
     renderCountryCards();
 
     // C. dimensions
+    renderGlobal();
+
+    // D. dimensions
     const dims = $('#future-dimensions');
     if (dims) {
       dims.innerHTML = (d.dimensions || [])
@@ -1703,6 +1706,59 @@
         `${w.status_counts.operational || 0} are operational, ` +
         `${w.status_counts.planned || 0} planned, ` +
         `${w.status_counts.unsupported || 0} unsupported.`;
+    }
+  }
+
+  function renderGlobal() {
+    const g = window.GLOBAL_DATA;
+    const host = $('#global-table tbody');
+    if (!g || !host) return;
+
+    const summary = $('#global-summary');
+    if (summary) {
+      const cells = [
+        ['Countries measured', int(g.countries_measured)],
+        ['Domains measured', int(g.total_rows)],
+        ['Overall reachable', `${dec(g.overall_reach_pct)}%`],
+        ['Domestic probes', g.all_domestic ? 'all' : 'mixed'],
+      ];
+      summary.innerHTML = cells
+        .map(
+          ([k, v]) =>
+            `<div class="future-stat"><span class="future-stat__k">${esc(k)}</span>` +
+            `<span class="future-stat__v">${v}</span></div>`
+        )
+        .join('');
+    }
+
+    host.innerHTML = (g.countries || [])
+      .map((c) => {
+        const num = (v, suffix = '') =>
+          v === null || v === undefined ? '<span class="muted">not measured</span>' : `${dec(v)}${suffix}`;
+        return (
+          '<tr>' +
+          `<td><b>${esc(c.name)}</b> <span class="future-country__code">${esc(c.code)}</span></td>` +
+          `<td><code>${esc(c.probe_region)}</code> ${esc(c.probe_region_country)}` +
+          (c.domestic_probe ? '' : ' <span class="muted">(foreign)</span>') +
+          '</td>' +
+          `<td class="num">${int(c.domains)}</td>` +
+          `<td class="num">${int(c.reachable)} <span class="muted">${dec(c.reach_pct)}%</span></td>` +
+          `<td class="num">${num(c.accessibility)}</td>` +
+          `<td class="num">${num(c.security)}</td>` +
+          `<td class="num">${num(c.maturity)}</td>` +
+          `<td class="num">${c.median_ttfb_ms === null ? '—' : int(c.median_ttfb_ms) + ' ms'}</td>` +
+          '</tr>'
+        );
+      })
+      .join('');
+
+    const note = $('#global-note');
+    if (note) {
+      note.textContent =
+        `${g.countries_measured} countries measured from domestic probes, ` +
+        `${g.total_rows} domains total. Each country's sample is small by design: ` +
+        'this is a cross-country comparability check, not a census. The India ' +
+        'census in the other views remains the large sample.';
     }
   }
 

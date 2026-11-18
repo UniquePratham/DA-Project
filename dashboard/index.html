@@ -13,6 +13,7 @@
 <script src="static/future.js" defer></script>
 <script src="static/world.js" defer></script>
 <script src="static/world_map.js" defer></script>
+<script src="static/global.js" defer></script>
 <script src="static/india_map.js" defer></script>
 <script src="static/app.js" defer></script>
 </head>
@@ -676,7 +677,35 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
       <!-- C. Dimensions -->
       <div class="section">
         <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">C &middot; The eight research dimensions</h3>
+          <h3 class="section__title" style="font-size:var(--fs-h3)">C &middot; Measured across countries</h3>
+          <span class="section__note">Real probes, real results</span>
+        </div>
+        <p class="section__lede" style="margin-bottom:var(--s4)">
+          Each country was measured from a probe physically inside it, using the same worker and
+          timeouts as the India census. Every row records which region measured it, so a domestic
+          claim can be checked rather than trusted.
+        </p>
+        <div class="future-stats" id="global-summary"></div>
+        <div class="table-wrap" style="margin-top:var(--s4)">
+          <table class="table" id="global-table">
+            <thead>
+              <tr>
+                <th>Country</th><th>Probe region</th>
+                <th class="num">Domains</th><th class="num">Reachable</th>
+                <th class="num">Accessibility</th><th class="num">Security</th>
+                <th class="num">Maturity</th><th class="num">Median TTFB</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="future-note" id="global-note"></p>
+      </div>
+
+      <!-- D. Dimensions -->
+      <div class="section">
+        <div class="section__head">
+          <h3 class="section__title" style="font-size:var(--fs-h3)">D &middot; The eight research dimensions</h3>
         </div>
         <p class="section__lede" style="margin-bottom:var(--s4)">
           Each dimension is reported separately. They are not collapsed into a single score, because a
@@ -688,7 +717,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
       <!-- D. Infrastructure -->
       <div class="section">
         <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">D &middot; Ephemeral infrastructure</h3>
+          <h3 class="section__title" style="font-size:var(--fs-h3)">E &middot; Ephemeral infrastructure</h3>
           <span class="section__note">Live counters</span>
         </div>
         <div class="future-stats" id="future-infra"></div>
@@ -717,7 +746,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
       <!-- E. Roadmap -->
       <div class="section">
         <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">E &middot; Research roadmap</h3>
+          <h3 class="section__title" style="font-size:var(--fs-h3)">F &middot; Research roadmap</h3>
         </div>
         <ol class="roadmap" id="future-roadmap"></ol>
       </div>

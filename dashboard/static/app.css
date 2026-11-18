@@ -2374,3 +2374,8 @@ a:hover {
 .view .section {
   scroll-margin-top: 72px;
 }
+
+.muted {
+  color: var(--ink-3);
+  font-size: var(--fs-micro);
+}
