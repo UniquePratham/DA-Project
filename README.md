@@ -333,6 +333,42 @@ is a transient state while an instance settles. `destroy_instance()` now retries
 with backoff instead of treating the lock as a permanent failure, because a
 failed destroy leaves a billable instance running.
 
+
+### 8.8 Restart safety and reconciliation
+
+A process that dies mid-run leaves the ledger disagreeing with reality: a job
+claiming an instance exists when it was deleted by hand, or an instance billing
+with no job that knows about it. Both are wrong, and both cost money or lose
+data.
+
+`InfrastructureManager.reconcile()` resolves both:
+
+| Situation | Action |
+| :--- | :--- |
+| Job says active, instance gone | Job marked `FAILED` with the reason recorded |
+| Instance exists, no job knows it | Destroyed, but only if it carries the ownership tag |
+| Job says active, instance exists | Left alone |
+
+```bash
+VULTR_API_KEY=... python scripts/reconcile_infra.py --dry-run   # report
+VULTR_API_KEY=... python scripts/reconcile_infra.py             # act
+```
+
+Run it after any crash, or on a schedule. Five tests cover it, including that a
+foreign instance is never touched.
+
+### 8.9 Remote measurement
+
+`scripts/run_remote_measurement.py` closes the last gap: it provisions an
+instance, injects a throwaway SSH keypair through cloud-init, uploads the same
+`crawl_real.py` used for the India census, runs a real batch, pulls the results
+back, and verifies the SHA-256 before destroying the instance.
+
+The keypair is generated per run and exists only in memory, so a leaked
+instance cannot be reached after the job ends. The worker is byte-identical to
+the India one, which is what makes a measurement on an ephemeral probe
+comparable to one on the permanent node.
+
 ---
 
 ## 9. DataHub KGP Dataset Release

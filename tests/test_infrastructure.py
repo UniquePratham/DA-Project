@@ -506,3 +506,72 @@ def test_selector_reports_no_history_honestly():
     chosen = sel.select_or_raise("IN")
     assert chosen.reason == "no_history"
     assert chosen.samples == 0
+
+# -------------------------------------------------------------- reconcile
+
+
+def test_reconcile_marks_a_vanished_instance_failed(tmp_path):
+    """A process that dies mid-run leaves a job claiming an instance exists."""
+    provider = FakeProvider()
+    mgr = make_manager(tmp_path, provider)
+    mgr.provision("job-1", "IN", "bom", "vc2-1c-1gb", 900)
+
+    # The instance is deleted outside the manager.
+    provider.instances.clear()
+
+    report = mgr.reconcile(dry_run=False)
+
+    assert report["vanished"] == ["job-1"]
+    assert mgr._jobs["job-1"].state is InstanceState.FAILED
+    assert "deleted outside the manager" in mgr._jobs["job-1"].error
+
+
+def test_reconcile_destroys_an_orphan_it_owns(tmp_path):
+    provider = FakeProvider()
+    mgr = make_manager(tmp_path, provider)
+    mgr.provision("job-1", "IN", "bom", "vc2-1c-1gb", 900)
+    # Simulate a crash that lost the job ledger but left the instance.
+    mgr._jobs.clear()
+
+    report = mgr.reconcile(dry_run=False)
+
+    assert report["orphans"] == ["inst-1"]
+    assert provider.destroyed == ["inst-1"]
+
+
+def test_reconcile_never_touches_a_foreign_instance(tmp_path):
+    provider = FakeProvider()
+    provider.instances["foreign"] = ProvisionedInstance(
+        id="foreign", region_id="bom", plan_id="x", label="user-db",
+        status="active", tags=("production",),
+    )
+    mgr = make_manager(tmp_path, provider)
+
+    report = mgr.reconcile(dry_run=False)
+
+    assert report["orphans"] == []
+    assert "foreign" in provider.instances
+
+
+def test_reconcile_leaves_a_healthy_job_alone(tmp_path):
+    provider = FakeProvider()
+    mgr = make_manager(tmp_path, provider)
+    mgr.provision("job-1", "IN", "bom", "vc2-1c-1gb", 900)
+
+    report = mgr.reconcile(dry_run=False)
+
+    assert report["healthy"] == ["job-1"]
+    assert provider.destroyed == []
+    assert mgr._jobs["job-1"].state is InstanceState.INITIALIZING
+
+
+def test_reconcile_dry_run_changes_nothing(tmp_path):
+    provider = FakeProvider()
+    mgr = make_manager(tmp_path, provider)
+    mgr.provision("job-1", "IN", "bom", "vc2-1c-1gb", 900)
+    mgr._jobs.clear()
+
+    report = mgr.reconcile(dry_run=True)
+
+    assert report["orphans"] == ["inst-1"]
+    assert provider.destroyed == []

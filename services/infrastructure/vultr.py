@@ -241,7 +241,12 @@ class VultrProvider:
         if spec.ssh_key_ids:
             body["sshkey_id"] = list(spec.ssh_key_ids)
         if spec.user_data:
-            body["user_data"] = spec.user_data
+            # Vultr requires base64-encoded cloud-init, not raw text.
+            import base64
+
+            body["user_data"] = base64.b64encode(
+                spec.user_data.encode("utf-8")
+            ).decode("ascii")
 
         data = self._request("POST", "/instances", body)
         inst = data.get("instance", {})

@@ -277,6 +277,7 @@ class InfrastructureManager:
         plan_id: str,
         expected_runtime_seconds: float = 900.0,
         label: str | None = None,
+        user_data: str = "",
     ) -> JobRecord:
         """Create one worker for one job, or return the existing one.
 
@@ -326,6 +327,7 @@ class InfrastructureManager:
             os_id=self.os_id,
             label=label or f"bga-{job_id}"[:60],
             tags=(OWNERSHIP_TAG, PROJECT_TAG),
+            user_data=user_data,
         )
 
         try:
@@ -551,6 +553,81 @@ class InfrastructureManager:
         return expired
 
     # ------------------------------------------------------------ reporting
+
+    def reconcile(self, dry_run: bool | None = None) -> dict:
+        """Reconcile the job ledger against what the provider actually has.
+
+        This is the restart-safety path. A process that dies mid-run leaves job
+        records claiming an instance exists when it may have been deleted by
+        hand, or claiming nothing when an instance is still billing. Both are
+        wrong, and both cost money or lose data.
+
+        Three cases are handled:
+
+        * **Job says active, instance is gone.** The instance was deleted
+          outside the manager. The job is marked FAILED with a clear reason, so
+          it is not retried forever and the audit trail explains what happened.
+        * **Instance exists, no job knows about it.** An orphan. It is destroyed
+          only if it carries the ownership tag.
+        * **Job says active, instance exists.** Left alone; it is doing its job.
+
+        Returns a summary of what was changed.
+        """
+        dry = self.dry_run if dry_run is None else dry_run
+        report = {"vanished": [], "orphans": [], "healthy": [], "errors": []}
+
+        live = {i.id: i for i in self.owned_instances()}
+
+        for record in list(self._jobs.values()):
+            if record.state in {InstanceState.DESTROYED, InstanceState.FAILED}:
+                continue
+            if record.instance_id is None:
+                continue
+            if record.instance_id in live:
+                report["healthy"].append(record.job_id)
+                continue
+
+            # The job believes an instance exists; the provider disagrees.
+            record.error = (
+                "instance no longer exists at the provider; it was deleted "
+                "outside the manager"
+            )
+            try:
+                record.transition(InstanceState.FAILED, record.error)
+            except LifecycleError:
+                # Already in a terminal-ish state; force the flag.
+                record.state = InstanceState.FAILED
+            report["vanished"].append(record.job_id)
+            self._record(
+                "reconcile.vanished",
+                job_id=record.job_id,
+                instance_id=record.instance_id,
+            )
+
+        known = {
+            r.instance_id
+            for r in self._jobs.values()
+            if r.instance_id
+            and r.state not in {InstanceState.DESTROYED, InstanceState.FAILED}
+        }
+        for iid, inst in live.items():
+            if iid in known:
+                continue
+            if dry:
+                report["orphans"].append(iid)
+                self._record("reconcile.would_destroy", instance_id=iid)
+                continue
+            try:
+                self._assert_owned(inst)
+                if self.provider.destroy_instance(iid):
+                    report["orphans"].append(iid)
+                    self._record("reconcile.destroyed", instance_id=iid)
+            except (OwnershipError, ProviderError) as exc:
+                report["errors"].append(f"{iid}: {exc}")
+                self._record("reconcile.failed", instance_id=iid, error=str(exc))
+
+        self._persist_state()
+        return report
 
     def summary(self) -> dict:
         """A snapshot for the dashboard's infrastructure panel."""
