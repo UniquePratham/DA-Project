@@ -1,4 +1,4 @@
-"""Schemas package for BharatGov Access Observatory."""
+"""Schemas package for CivicWeb Access Observatory."""
 
 from schemas.evidence import RawEvidenceRecord, EvidenceType
 from schemas.domain import GovernmentEntityRecord, DomainStatus, GovernmentLevel

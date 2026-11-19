@@ -1,4 +1,4 @@
-"""Data Quality & Integrity Validation Engine for BharatGov Access."""
+"""Data Quality & Integrity Validation Engine for CivicWeb Access."""
 
 from __future__ import annotations
 

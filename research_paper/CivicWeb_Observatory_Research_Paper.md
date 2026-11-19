@@ -1,4 +1,4 @@
-# BharatGov Access: An In-Country Measurement Study of India's Public Web Infrastructure
+# CivicWeb Access: An In-Country Measurement Study of India's Public Web Infrastructure
 
 **Pratham Agarwal**, **Amit Kumar Bairagi**, and **Vishwajeet Nand Yaduraj**  
 *Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India*  
@@ -81,7 +81,7 @@ We group the measurements into five pillars, each with two sub-features, giving 
 
 ```
                     ┌────────────────────────────────────────────────────────┐
-                    │               BharatGov Access Framework               │
+                    │               CivicWeb Access Framework               │
                     └───────────────────────────┬────────────────────────────┘
                                                 │
          ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐
@@ -178,7 +178,7 @@ The binary terms are worth absolute points, not percentages, so a portal that sa
 
 Two things should be said about this index. The weights are our judgement, not a finding; we think accessibility and security matter most, and a reader who disagrees can recompute $M$ from the published per-pillar columns. And because accessibility is uniformly high across the registry, the composite compresses differences between tiers. We therefore report the pillars separately in Section V and treat the composite as a summary rather than a verdict.
 
-The formula is available as `bharatgov_access.maturity_index()` so anyone can score a portal they measured themselves.
+The formula is available as `civicweb_observatory.maturity_index()` so anyone can score a portal they measured themselves.
 
 ---
 
@@ -244,7 +244,7 @@ The registry contains **14,489 government and public-sector domains**, of which 
 
 ### TABLE I: Breakdown by governance tier
 
-All figures are computed from the released dataset over reachable portals only. Reproduce with `bharatgov tiers`.
+All figures are computed from the released dataset over reachable portals only. Reproduce with `civicweb tiers`.
 
 | Governance Tier | Discovered | Reachable (%) | Mean Acc. ($S_{\text{axe}}$) | GIGW Toolbar (%) | Mean Sec. ($S_{\text{sec}}$) | Multilingual (%) | Median TTFB (ms) | Mean Maturity ($M$) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -290,7 +290,7 @@ Table II compares the six platforms we could fingerprint.
 
 ### TABLE II: Comparison of web platforms
 
-Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with `bharatgov arch`.
+Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with `civicweb arch`.
 
 | Metric | S3WaaS Drupal | Custom Dynamic CMS | Legacy ASP.NET | Modern SPA | WordPress | Drupal |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -344,7 +344,7 @@ Only **61.3%** of reachable portals declare a document language at all. **18.4%*
 
 The `district` column is empty for every row in this release, and only 62 domains are classified into the district tier. We therefore make no district-level claim at all.
 
-State attribution is inferred from the hostname's own labels, which works for `kerala.gov.in` but cannot resolve a central ministry to a state. Thirty-four distinct State/UT values appear among reachable portals, but the per-state samples are too small and too unevenly distributed to support a ranking, so we do not publish one. The raw grouping is available with `bharatgov states` for anyone who wants to look.
+State attribution is inferred from the hostname's own labels, which works for `kerala.gov.in` but cannot resolve a central ministry to a state. Thirty-four distinct State/UT values appear among reachable portals, but the per-state samples are too small and too unevenly distributed to support a ranking, so we do not publish one. The raw grouping is available with `civicweb states` for anyone who wants to look.
 
 ---
 
@@ -397,7 +397,7 @@ Language inclusion is the weakest pillar by a wide margin, at 18.4%.
 Everything in this paper can be recomputed from the released data. The dataset ships as Parquet, CSV and JSON under CC-BY-4.0; the crawler and discovery scripts are in the repository; and the observatory is live at `https://uniquepratham.github.io/DA-Project/`.
 
 ```python
-import bharatgov_access as bga
+import civicweb_observatory as bga
 
 bga.load()                  # 14,489 discovered domains
 bga.load(reachable=True)    # 7,542 that answered

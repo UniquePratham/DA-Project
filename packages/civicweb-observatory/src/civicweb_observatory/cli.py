@@ -1,11 +1,11 @@
-"""Command-line interface for the BharatGov Access dataset.
+"""Command-line interface for the CivicWeb Access dataset.
 
-    bharatgov info
-    bharatgov tiers
-    bharatgov arch
-    bharatgov states --top 10
-    bharatgov export --format csv --out census.csv
-    bharatgov query --tier district --state Kerala --min-maturity 85
+    civicweb info
+    civicweb tiers
+    civicweb arch
+    civicweb states --top 10
+    civicweb export --format csv --out census.csv
+    civicweb query --tier district --state Kerala --min-maturity 85
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ def _print_table(df: pd.DataFrame) -> None:
 def cmd_info(_: argparse.Namespace) -> int:
     info = describe_release()
     width = max(len(k) for k in info)
-    print(f"BharatGov Access v{info['version']}")
+    print(f"CivicWeb Access v{info['version']}")
     print("-" * (width + 24))
     for key, value in info.items():
         if key in {"version", "source"}:
@@ -116,10 +116,10 @@ def cmd_query(args: argparse.Namespace) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="bharatgov",
-        description="Query the BharatGov Access census of 12,092 Indian government domains.",
+        prog="civicweb",
+        description="Query the CivicWeb Access census of 12,092 Indian government domains.",
     )
-    parser.add_argument("--version", action="version", version=f"bharatgov-access {__version__}")
+    parser.add_argument("--version", action="version", version=f"civicweb-observatory {__version__}")
 
     sub = parser.add_subparsers(dest="command", required=True)
 

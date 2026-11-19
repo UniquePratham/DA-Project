@@ -47,7 +47,7 @@ def test_longest_match_wins():
 def test_specific_agent_beats_wildcard():
     txt = (
         "User-agent: *\nDisallow: /\n\n"
-        "User-agent: BharatGovAccessObservatory\nDisallow: /private\n"
+        "User-agent: CivicWebObservatory\nDisallow: /private\n"
     )
     r = RobotsTxt(txt)
     assert r.can_fetch(USER_AGENT, "https://x/public") is True
@@ -81,7 +81,7 @@ def test_govuk_real_patterns_are_enforced():
 
 
 def test_user_agent_identifies_the_project():
-    assert "BharatGovAccessObservatory" in USER_AGENT
+    assert "CivicWebObservatory" in USER_AGENT
     assert "research-bot@" in USER_AGENT
     # It must not claim to be a browser.
     assert "Mozilla" not in USER_AGENT

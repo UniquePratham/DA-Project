@@ -43,8 +43,8 @@ spec2.loader.exec_module(clean)
 
 REGISTRY = REPO / "data" / "fixtures" / "global_domains.json"
 UA = (
-    "BharatGovAccessObservatory/1.0 "
-    "(+https://uniquepratham.github.io/DA-Project/; research-bot@bharatgov.in)"
+    "CivicWebObservatory/1.0 "
+    "(+https://uniquepratham.github.io/DA-Project/; research-bot@civicweb.in)"
 )
 HEADERS = {"User-Agent": UA, "Accept": "text/html,application/xhtml+xml"}
 

@@ -1,4 +1,4 @@
-"""Playwright Headless Browser Session Manager for BharatGov Access."""
+"""Playwright Headless Browser Session Manager for CivicWeb Access."""
 
 from __future__ import annotations
 

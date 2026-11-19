@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BharatGov Access — National Web Infrastructure Observatory</title>
+<title>CivicWeb Access — National Web Infrastructure Observatory</title>
 <meta name="description" content="A measured census of Indian government web domains, audited from inside the country with axe-core 4.x, real TLS handshakes, the OWASP Secure Headers directive set, and headless-Chromium mobile rendering.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="static/app.css">
@@ -25,7 +25,7 @@
 <header class="masthead">
   <div class="shell">
     <div class="masthead__top">
-      <span>BharatGov Access</span>
+      <span>CivicWeb Access</span>
       <span class="hide-sm">Department of Computer Science and Engineering &middot; IIT Kharagpur</span>
       <span>Data Analytics</span>
     </div>
@@ -44,7 +44,7 @@
           </g>
         </svg>
         <div class="wordmark__text">
-          <div class="wordmark__name">BharatGov Access</div>
+          <div class="wordmark__name">CivicWeb Access</div>
           <p class="wordmark__sub">A census of India&rsquo;s public web, measured from inside the country.</p>
         </div>
       </div>
@@ -538,7 +538,7 @@ M = 0.30 * accessibility
               <div class="code__bar"><span>Python 3.9+</span><span>pandas &middot; pyarrow</span></div>
               <pre><span class="k">import</span> pandas <span class="k">as</span> pd
 
-df = pd.read_parquet(<span class="s">"resources/bharatgov_access_clean.parquet"</span>)
+df = pd.read_parquet(<span class="s">"resources/civicweb_observatory_clean.parquet"</span>)
 live = df[df[<span class="s">"is_reachable"</span>]]
 
 <span class="c"># Figure 1 — mean composite maturity per tier</span>
@@ -565,9 +565,9 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
           <div>
             <h3 class="colophon__h">Release</h3>
             <ul class="colophon__list">
-              <li><code>bharatgov_access_clean.parquet</code></li>
-              <li><code>bharatgov_access_clean.csv</code></li>
-              <li><code>bharatgov_access_clean.json</code></li>
+              <li><code>civicweb_observatory_clean.parquet</code></li>
+              <li><code>civicweb_observatory_clean.csv</code></li>
+              <li><code>civicweb_observatory_clean.json</code></li>
             </ul>
           </div>
           <div>
@@ -583,7 +583,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
             <h3 class="colophon__h">Cite as</h3>
             <p class="colophon__body" style="margin-top:0">
               Agarwal, P., Bairagi, A. K., &amp; Yaduraj, V. N. (2026).
-              <em>BharatGov Access: a census-scale observatory of Indian public web infrastructure.</em>
+              <em>CivicWeb Access: a census-scale observatory of Indian public web infrastructure.</em>
               Department of Computer Science and Engineering, IIT Kharagpur.
             </p>
           </div>
@@ -658,15 +658,31 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
           <span class="section__note">Derived from real cloud regions</span>
         </div>
         <p class="section__lede" style="margin-bottom:var(--s4)">
-          A country is marked operational only when a datacentre physically inside it exists. Where none
-          exists, the country is marked planned or unsupported rather than measured from a neighbour,
-          because a foreign probe cannot support a domestic claim.
+          A country is <b>operational</b> when we have measured from a datacentre inside it, and
+          <b>available</b> when such a datacentre exists but we have not measured yet. Where no cloud
+          operates, the country needs a <b>resident probe</b> &mdash; a machine placed in-country, which is
+          how the India census began. A foreign probe is never substituted, because it cannot support a
+          domestic claim.
         </p>
 
         <div class="world-wrap">
           <svg class="world-map" id="world-map" viewBox="0 0 1000 500" role="img"
                aria-label="World map of measurement probe availability by country"></svg>
           <div class="world-legend" id="world-legend"></div>
+        </div>
+
+        <h4 class="panel__h" style="margin-top:var(--s5)">Cloud providers modelled</h4>
+        <div class="table-wrap" style="margin-bottom:var(--s4)">
+          <table class="table" id="world-providers">
+            <thead>
+              <tr>
+                <th>Provider</th><th class="num">Regions</th>
+                <th class="num">Countries</th><th class="num">Cheapest / hr</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
 
         <div class="world-filters" id="world-filters" role="group" aria-label="Filter countries by status"></div>
@@ -781,7 +797,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
   <div class="shell">
     <div class="colophon__grid">
       <div>
-        <div class="colophon__title">BharatGov Access</div>
+        <div class="colophon__title">CivicWeb Access</div>
         <p class="colophon__body">
           A longitudinal observatory of India&rsquo;s public web infrastructure, maintained by the
           Department of Computer Science and Engineering at IIT Kharagpur. Measurements are taken from inside the domestic
@@ -829,7 +845,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
     <p class="prose">
       This observatory renders its figures from the released dataset in the browser. Enable JavaScript to
       view the charts, or read the same numbers directly from
-      <code>resources/bharatgov_access_clean.parquet</code>.
+      <code>resources/civicweb_observatory_clean.parquet</code>.
     </p>
   </div>
 </noscript>

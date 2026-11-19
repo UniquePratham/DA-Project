@@ -3,12 +3,12 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: bharatgov_postgres
+    container_name: civicweb_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-bharatgov}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bharatgov_secure_password_change_me}
-      POSTGRES_DB: ${POSTGRES_DB:-bharatgov_access}
+      POSTGRES_USER: ${POSTGRES_USER:-civicweb}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-civicweb_secure_password_change_me}
+      POSTGRES_DB: ${POSTGRES_DB:-civicweb_observatory}
       # Performance tuning for 96GB RAM Host
       POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
     command: >
@@ -25,14 +25,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-bharatgov} -d ${POSTGRES_DB:-bharatgov_access}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-civicweb} -d ${POSTGRES_DB:-civicweb_observatory}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7-alpine
-    container_name: bharatgov_redis
+    container_name: civicweb_redis
     restart: unless-stopped
     command: redis-server --maxmemory 4gb --maxmemory-policy allkeys-lru --save 60 1 --loglevel notice
     ports:
@@ -47,7 +47,7 @@ services:
 
   minio:
     image: minio/minio:latest
-    container_name: bharatgov_minio
+    container_name: civicweb_minio
     restart: unless-stopped
     command: server /data --console-address ":9001"
     environment:
@@ -66,7 +66,7 @@ services:
 
   ollama:
     image: ollama/ollama:latest
-    container_name: bharatgov_ollama
+    container_name: civicweb_ollama
     restart: unless-stopped
     ports:
       - "11434:11434"
@@ -87,7 +87,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: bharatgov_worker
+    container_name: civicweb_worker
     restart: unless-stopped
     depends_on:
       postgres:
@@ -100,7 +100,7 @@ services:
         condition: service_started
     environment:
       - ENVIRONMENT=production
-      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-bharatgov}:${POSTGRES_PASSWORD:-bharatgov_secure_password_change_me}@postgres:5432/${POSTGRES_DB:-bharatgov_access}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-civicweb}:${POSTGRES_PASSWORD:-civicweb_secure_password_change_me}@postgres:5432/${POSTGRES_DB:-civicweb_observatory}
       - REDIS_URL=redis://redis:6379/0
       - OLLAMA_BASE_URL=http://ollama:11434
       - MINIO_ENDPOINT=minio:9000
@@ -117,7 +117,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: bharatgov_api
+    container_name: civicweb_api
     restart: unless-stopped
     depends_on:
       postgres:
@@ -128,7 +128,7 @@ services:
       - "8000:8000"
     environment:
       - ENVIRONMENT=production
-      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-bharatgov}:${POSTGRES_PASSWORD:-bharatgov_secure_password_change_me}@postgres:5432/${POSTGRES_DB:-bharatgov_access}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-civicweb}:${POSTGRES_PASSWORD:-civicweb_secure_password_change_me}@postgres:5432/${POSTGRES_DB:-civicweb_observatory}
       - REDIS_URL=redis://redis:6379/0
       - OLLAMA_BASE_URL=http://ollama:11434
     volumes:

@@ -1,4 +1,4 @@
-"""Rename the project from BharatGov Access to CivicWeb Observatory.
+"""Rename the project from CivicWeb Access to CivicWeb Observatory.
 
 The project is no longer India-specific: it measures government websites across
 93 countries. The name should say that.
@@ -8,7 +8,7 @@ is harmless. It handles three things:
 
 1. **File and directory names** — the package directory, the paper, the deck.
 2. **Content** — every reference in code, docs, config and data.
-3. **Ordering** — longest patterns first, so ``bharatgov_access_clean.csv``
+3. **Ordering** — longest patterns first, so ``civicweb_observatory_clean.csv``
    becomes ``civicweb_observatory_clean.csv`` rather than a mangled hybrid.
 
 It deliberately does not touch ``.git``, ``node_modules``, caches, or the
@@ -33,46 +33,46 @@ TEXT_SUFFIXES = {
 #: Ordered longest-first so a specific pattern wins over a general one.
 REPLACEMENTS: list[tuple[str, str]] = [
     # Data artefacts
-    ("bharatgov_access_clean.parquet", "civicweb_observatory_clean.parquet"),
-    ("bharatgov_access_clean.csv", "civicweb_observatory_clean.csv"),
-    ("bharatgov_access_clean.json", "civicweb_observatory_clean.json"),
-    ("bharatgov_access_clean", "civicweb_observatory_clean"),
-    ("bharatgov_access_vX.Y.Z", "civicweb_observatory_vX.Y.Z"),
-    ("bharatgov_access_v0.1.0", "civicweb_observatory_v0.1.0"),
-    ("bharatgov_access_0.1.0", "civicweb_observatory_0.1.0"),
-    ("bharatgov_access_2026", "civicweb_observatory_2026"),
-    ("bharatgov_access_", "civicweb_observatory_"),
+    ("civicweb_observatory_clean.parquet", "civicweb_observatory_clean.parquet"),
+    ("civicweb_observatory_clean.csv", "civicweb_observatory_clean.csv"),
+    ("civicweb_observatory_clean.json", "civicweb_observatory_clean.json"),
+    ("civicweb_observatory_clean", "civicweb_observatory_clean"),
+    ("civicweb_observatory_vX.Y.Z", "civicweb_observatory_vX.Y.Z"),
+    ("civicweb_observatory_v0.1.0", "civicweb_observatory_v0.1.0"),
+    ("civicweb_observatory_0.1.0", "civicweb_observatory_0.1.0"),
+    ("civicweb_observatory_2026", "civicweb_observatory_2026"),
+    ("civicweb_observatory_", "civicweb_observatory_"),
     # Package and module
-    ("bharatgov-access", "civicweb-observatory"),
-    ("bharatgov_access", "civicweb_observatory"),
+    ("civicweb-observatory", "civicweb-observatory"),
+    ("civicweb_observatory", "civicweb_observatory"),
     # Infrastructure identifiers
-    ("bharatgov-ephemeral", "civicweb-ephemeral"),
-    ("bharatgov-bangalore", "civicweb-node"),
-    ("bharatgov-dashboard", "civicweb-dashboard"),
-    ("bharatgov-tunnel", "civicweb-tunnel"),
-    ("bharatgov-evidence", "civicweb-evidence"),
-    ("bharatgov_secure_password_change_me", "civicweb_secure_password_change_me"),
-    ("bharatgov_password", "civicweb_password"),
-    ("bharatgov_postgres", "civicweb_postgres"),
-    ("bharatgov_redis", "civicweb_redis"),
-    ("bharatgov_minio", "civicweb_minio"),
-    ("bharatgov_ollama", "civicweb_ollama"),
-    ("bharatgov_worker", "civicweb_worker"),
-    ("bharatgov_api", "civicweb_api"),
+    ("civicweb-ephemeral", "civicweb-ephemeral"),
+    ("civicweb-node", "civicweb-node"),
+    ("civicweb-dashboard", "civicweb-dashboard"),
+    ("civicweb-tunnel", "civicweb-tunnel"),
+    ("civicweb-evidence", "civicweb-evidence"),
+    ("civicweb_secure_password_change_me", "civicweb_secure_password_change_me"),
+    ("civicweb_password", "civicweb_password"),
+    ("civicweb_postgres", "civicweb_postgres"),
+    ("civicweb_redis", "civicweb_redis"),
+    ("civicweb_minio", "civicweb_minio"),
+    ("civicweb_ollama", "civicweb_ollama"),
+    ("civicweb_worker", "civicweb_worker"),
+    ("civicweb_api", "civicweb_api"),
     # Documents
-    ("BharatGov_Access_Research_Paper", "CivicWeb_Observatory_Research_Paper"),
-    ("BharatGov_Access_Final_Deck", "CivicWeb_Observatory_Final_Deck"),
-    ("BharatGov_Access_Project_Documentation_Clean", "CivicWeb_Observatory_Project_Documentation"),
-    ("BharatGov_Access_Checkpoint_2_Presentation", "CivicWeb_Observatory_Checkpoint_2_Presentation"),
-    ("BharatGov_Access", "CivicWeb_Observatory"),
+    ("CivicWeb_Observatory_Research_Paper", "CivicWeb_Observatory_Research_Paper"),
+    ("CivicWeb_Observatory_Final_Deck", "CivicWeb_Observatory_Final_Deck"),
+    ("CivicWeb_Observatory_Project_Documentation", "CivicWeb_Observatory_Project_Documentation"),
+    ("CivicWeb_Observatory_Checkpoint_2_Presentation", "CivicWeb_Observatory_Checkpoint_2_Presentation"),
+    ("CivicWeb_Observatory", "CivicWeb_Observatory"),
     # Display names and identifiers
-    ("BharatGovAccessObservatory", "CivicWebObservatory"),
-    ("BharatGovAccess", "CivicWebObservatory"),
-    ("BharatGov", "CivicWeb"),
-    ("bharatgov", "civicweb"),
+    ("CivicWebObservatory", "CivicWebObservatory"),
+    ("CivicWebObservatory", "CivicWebObservatory"),
+    ("CivicWeb", "CivicWeb"),
+    ("civicweb", "civicweb"),
     # Contact address
-    ("research-bot@bharatgov.in", "research-bot@civicweb.org"),
-    ("bharatgov.in", "civicweb.org"),
+    ("research-bot@civicweb.in", "research-bot@civicweb.org"),
+    ("civicweb.in", "civicweb.org"),
 ]
 
 

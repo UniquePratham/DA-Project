@@ -1,5 +1,5 @@
 """
-Compiles resources/bharatgov_access_clean.csv into dashboard/static/dataset.json
+Compiles resources/civicweb_observatory_clean.csv into dashboard/static/dataset.json
 and generates summary aggregations for dashboard charts and metrics across 12,000+ portals.
 """
 
@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 def build_dashboard_json():
-    csv_path = "resources/bharatgov_access_clean.csv"
+    csv_path = "resources/civicweb_observatory_clean.csv"
     print(f"Reading {csv_path}...")
     df = pd.read_csv(csv_path)
     

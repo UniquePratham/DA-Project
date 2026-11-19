@@ -1,4 +1,4 @@
-"""Configuration management for BharatGov Access Observatory."""
+"""Configuration management for CivicWeb Access Observatory."""
 
 from __future__ import annotations
 
@@ -29,13 +29,13 @@ class Settings(BaseSettings):
     requests_per_second_per_domain: float = Field(default=1.0)  # Max 1 req/sec per domain
 
     # Database
-    postgres_user: str = Field(default="bharatgov")
-    postgres_password: str = Field(default="bharatgov_password")
-    postgres_db: str = Field(default="bharatgov_access")
+    postgres_user: str = Field(default="civicweb")
+    postgres_password: str = Field(default="civicweb_password")
+    postgres_db: str = Field(default="civicweb_observatory")
     postgres_host: str = Field(default="localhost")
     postgres_port: int = Field(default=5432)
     database_url: Optional[str] = Field(
-        default="postgresql+asyncpg://bharatgov:bharatgov_password@localhost:5432/bharatgov_access"
+        default="postgresql+asyncpg://civicweb:civicweb_password@localhost:5432/civicweb_observatory"
     )
 
     # Redis
@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     minio_root_user: str = Field(default="minioadmin")
     minio_root_password: str = Field(default="minioadmin")
     minio_endpoint: str = Field(default="localhost:9000")
-    minio_bucket: str = Field(default="bharatgov-evidence")
+    minio_bucket: str = Field(default="civicweb-evidence")
 
     # Safety Governor Limits
     max_pages_per_domain_per_cycle: int = Field(default=10)
@@ -64,7 +64,7 @@ class Settings(BaseSettings):
     cooldown_on_429_seconds: int = Field(default=60)
     cooldown_on_5xx_seconds: int = Field(default=30)
     user_agent: str = Field(
-        default="BharatGovAccessObservatory/1.0 (+https://datahub.kgp/bharatgov-access; research-bot@bharatgov.in)"
+        default="CivicWebObservatory/1.0 (+https://datahub.kgp/civicweb-observatory; research-bot@civicweb.in)"
     )
 
     # Storage Subdirectories

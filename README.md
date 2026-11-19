@@ -1,4 +1,4 @@
-# BharatGov Access
+# CivicWeb Access
 ### Agentic, Longitudinal Observatory of India's Government Web Infrastructure
 
 [![License](https://img.shields.io/badge/License-CC--BY--4.0-blue.svg)](LICENSE)
@@ -7,7 +7,7 @@
 [![Target Platform](https://img.shields.io/badge/Target-DataHub%20KGP-orange.svg)](#datahub-kgp-dataset-release)
 [![Live Observatory](https://img.shields.io/badge/Live%20Observatory-uniquepratham.github.io-1f6feb.svg)](https://uniquepratham.github.io/)
 
-**BharatGov Access** is a large-scale, longitudinal, evidence-first observatory and dataset platform characterizing the publicly observable digital infrastructure of Indian government websites across **Central Ministries**, **36 States/UTs**, and **785+ District Administrations**.
+**CivicWeb Access** is a large-scale, longitudinal, evidence-first observatory and dataset platform characterizing the publicly observable digital infrastructure of Indian government websites across **Central Ministries**, **36 States/UTs**, and **785+ District Administrations**.
 
 **Live observatory:** <https://uniquepratham.github.io/>
 
@@ -18,11 +18,11 @@
 The census ships as a pip-installable package, so a reader can query it without cloning the repo:
 
 ```bash
-pip install bharatgov-access
+pip install civicweb-observatory
 ```
 
 ```python
-import bharatgov_access as bga
+import civicweb_observatory as bga
 
 df = bga.load()                  # 14,489 domains, 20 typed columns
 live = bga.load(reachable=True)  # 7,542 that answered in-country
@@ -35,15 +35,15 @@ bga.state_ranking()              # 36 States and UTs, ranked
 A CLI ships with it:
 
 ```bash
-bharatgov info
-bharatgov tiers
-bharatgov arch
-bharatgov states --top 10
-bharatgov query --tier district --state Kerala --min-maturity 85
-bharatgov export --format csv --out census.csv --reachable-only
+civicweb info
+civicweb tiers
+civicweb arch
+civicweb states --top 10
+civicweb query --tier district --state Kerala --min-maturity 85
+civicweb export --format csv --out census.csv --reachable-only
 ```
 
-The package lives at [`packages/bharatgov-access/`](packages/bharatgov-access) and bundles the Parquet release in a 465 KB wheel. Its 14 tests assert the published figures, so a loader regression fails loudly rather than silently changing a paper table.
+The package lives at [`packages/civicweb-observatory/`](packages/civicweb-observatory) and bundles the Parquet release in a 465 KB wheel. Its 14 tests assert the published figures, so a loader regression fails loudly rather than silently changing a paper table.
 
 ---
 
@@ -55,7 +55,7 @@ The package lives at [`packages/bharatgov-access/`](packages/bharatgov-access) a
 
 ## 2. The 10 Measurement Dimensions
 
-Rather than treating digital accessibility in isolation, BharatGov Access captures 10 multi-dimensional measurement families with complete cryptographic SHA-256 raw evidence provenance:
+Rather than treating digital accessibility in isolation, CivicWeb Access captures 10 multi-dimensional measurement families with complete cryptographic SHA-256 raw evidence provenance:
 
 | # | Dimension | Deterministic Measurement Signals |
 |---|---|---|
@@ -74,7 +74,7 @@ Rather than treating digital accessibility in isolation, BharatGov Access captur
 
 ## 3. System Architecture
 
-BharatGov Access uses a **5-layer hybrid architecture** that strictly separates adaptive AI reasoning from deterministic network measurements:
+CivicWeb Access uses a **5-layer hybrid architecture** that strictly separates adaptive AI reasoning from deterministic network measurements:
 
 ```
                   Government Domain Registry (10,000+ Domains)
@@ -135,8 +135,8 @@ The platform is designed to run self-hosted on a dedicated Linux instance (e.g. 
 ### Installation
 ```bash
 # 1. Clone repository
-git clone <REPO_URL> bharatgov-access
-cd bharatgov-access
+git clone <REPO_URL> civicweb-observatory
+cd civicweb-observatory
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -184,8 +184,8 @@ python scripts/run_pipeline.py --live --limit 100 --version 0.1.0
 ssh root@<YOUR_VM_IP>
 
 # 2. Clone and enter directory
-git clone <REPO_URL> /opt/bharatgov-access
-cd /opt/bharatgov-access
+git clone <REPO_URL> /opt/civicweb-observatory
+cd /opt/civicweb-observatory
 
 # 3. Initialize all infrastructure & pull local AI model
 chmod +x scripts/init_infra.sh
@@ -238,7 +238,7 @@ be recovered. A failed instance is never auto-destroyed.
 
 These are not conventions; they are structural.
 
-1. **Ownership.** Every instance carries the tag `bharatgov-ephemeral`. The
+1. **Ownership.** Every instance carries the tag `civicweb-ephemeral`. The
    reaper only ever considers tagged instances, so an unrelated server in the
    same account is invisible to it. `_assert_owned()` raises before any destroy.
 2. **Data before destruction.** `destroy()` refuses unless
@@ -515,13 +515,57 @@ links to `/government/organisations/xxx`, not to `health.gov.uk`. A
 domain-based census therefore cannot reach every ministry in every country, and
 this is a property of how governments deploy websites, not a gap in the method.
 
+
+### 8.13 Multi-cloud coverage and the unsupported-country problem
+
+Vultr operates in 20 countries. Marking the other 229 "unsupported" was true of
+one vendor, not of the research question. The coverage model now spans six
+clouds and distinguishes four states:
+
+| Status | Count | Meaning |
+| :--- | ---: | :--- |
+| **operational** | 19 | Measured from a datacentre inside the country |
+| **available** | 18 | A domestic datacentre exists; not yet measured |
+| **resident_required** | 82 | No cloud datacentre; needs a machine placed in-country |
+| **out_of_scope** | 130 | No datacentre and no realistic path to a domestic probe |
+
+Providers modelled, with the countries each actually operates in:
+
+| Provider | Regions | Countries | Cheapest / hr |
+| :--- | ---: | ---: | ---: |
+| AWS | 28 | 22 | $0.0104 |
+| Google Cloud | 38 | 26 | $0.0085 |
+| Azure | 47 | 34 | $0.0116 |
+| Hetzner | 6 | 4 | $0.0052 |
+| DigitalOcean | 10 | 8 | $0.0089 |
+| Oracle Cloud | 25 | 21 | $0.0075 |
+
+Union: **80 regions across 37 countries**. That is the honest ceiling for a
+cloud-based domestic probe — no cloud operates in every country.
+
+#### How the remaining countries get measured
+
+`resident_required` is not a dead end. It means the probe must be a machine
+physically in the country rather than a rented cloud instance:
+
+1. **Resident probe** — the team places a machine in-country. This is exactly
+   how the India census began, on a Vultr Bangalore node before the ephemeral
+   infrastructure existed.
+2. **Volunteer probe** — a collaborator runs the same worker and returns signed
+   results. The worker is a single Python file plus a small `tools` package, so
+   the barrier is low.
+3. **Out of scope** — recorded as such rather than approximated.
+
+The distinction matters because "unsupported" conflates "we cannot" with "we
+have not yet". A reader deserves to know which, and the dashboard now says so.
+
 ---
 
 ## 9. DataHub KGP Dataset Release
 
 Every release generated by `services/analytics/exporter.py` produces:
-1. **`bharatgov_access_vX.Y.Z.parquet`**: Columnar dataset ready for high-performance SQL, Pandas, Polars, DuckDB queries.
-2. **`bharatgov_access_vX.Y.Z.jsonl`**: Complete hierarchical records with full nested measurements.
+1. **`civicweb_observatory_vX.Y.Z.parquet`**: Columnar dataset ready for high-performance SQL, Pandas, Polars, DuckDB queries.
+2. **`civicweb_observatory_vX.Y.Z.jsonl`**: Complete hierarchical records with full nested measurements.
 3. **`coverage_audit_vX.Y.Z.json`**: Section 8 coverage report logging verified, observed, unavailable, and restricted percentages.
 4. **`manifest_vX.Y.Z.json`**: Dataset provenance, versioning metadata, and citation references.
 
@@ -529,7 +573,7 @@ Every release generated by `services/analytics/exporter.py` produces:
 
 ## 10. Ethical & Responsible Crawling Guarantee
 
-BharatGov Access adheres to strict responsible crawling standards:
+CivicWeb Access adheres to strict responsible crawling standards:
 - $\le 1.0\text{ req/sec}$ per domain with exponential backoff on 429/5xx status codes.
 - Concurrency strictly locked to 1 per domain.
 - `robots.txt` exclusion honored across all domains.
@@ -542,11 +586,11 @@ BharatGov Access adheres to strict responsible crawling standards:
 Distributed under the **Creative Commons Attribution 4.0 International (CC-BY-4.0)** License.
 
 ```bibtex
-@misc{bharatgov_access_2026,
-  title={BharatGov Access: Agentic, Longitudinal Observatory of India's Government Web Infrastructure},
-  author={BharatGov Access Research Team},
+@misc{civicweb_observatory_2026,
+  title={CivicWeb Access: Agentic, Longitudinal Observatory of India's Government Web Infrastructure},
+  author={CivicWeb Access Research Team},
   year={2026},
-  howpublished={\url{https://datahub.kgp/bharatgov-access}},
+  howpublished={\url{https://datahub.kgp/civicweb-observatory}},
   note={DataHub KGP Research Dataset}
 }
 ```

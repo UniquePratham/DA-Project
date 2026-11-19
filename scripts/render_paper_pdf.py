@@ -1,5 +1,5 @@
 """
-Render BharatGov Access Research Paper to PDF using Playwright with IEEE 2-Column Academic Formatting.
+Render CivicWeb Access Research Paper to PDF using Playwright with IEEE 2-Column Academic Formatting.
 """
 import os
 import sys
@@ -9,7 +9,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BharatGov Access Research Paper - IEEE Conference Format</title>
+  <title>CivicWeb Access Research Paper - IEEE Conference Format</title>
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
@@ -220,7 +220,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <body>
 
 <div class="title-banner">
-  <div class="title">BharatGov Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</div>
+  <div class="title">CivicWeb Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure</div>
   <div class="authors">
     <strong>Pratham Agarwal</strong>, <strong>Amit Kumar Bairagi</strong>, and <strong>Vishwajeet Nand Yaduraj</strong>
   </div>
@@ -237,7 +237,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <div class="abstract-box">
     <div class="abstract-title">Abstract—</div>Digital Public Infrastructure (DPI) serves as the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services to over 900 million connected citizens. Despite its systemic societal significance, empirical knowledge of the accessibility, performance, and cryptographic security of India's multi-tiered public web remains scarce, fragmented, and vulnerable to measurement bias. Prior web measurement studies have evaluated narrow samples (&le; 100 homepages) or relied on overseas cloud vantage points, which we demonstrate trigger false-positive reachability failures exceeding 66% due to domestic perimeter Geo-IP firewalls operated by state gateways and RailTel.
     <br><br>
-    To overcome these barriers, we present <strong>BharatGov Access</strong>, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures <strong>12,092 government web domains</strong> across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible <strong>5-Pillar / 10-Sub-Feature</strong> evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0). Our empirical audit reveals the profound standardization dividend of NIC's S3WaaS platform (elevating accessibility to 96.1/100 across 6,480 district portals), identifies critical cryptographic header lag (only 44.5% HSTS and 35.2% CSP adoption), and documents authentic domestic peering latency (median TTFB of 1.18s).
+    To overcome these barriers, we present <strong>CivicWeb Access</strong>, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures <strong>12,092 government web domains</strong> across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible <strong>5-Pillar / 10-Sub-Feature</strong> evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0). Our empirical audit reveals the profound standardization dividend of NIC's S3WaaS platform (elevating accessibility to 96.1/100 across 6,480 district portals), identifies critical cryptographic header lag (only 44.5% HSTS and 35.2% CSP adoption), and documents authentic domestic peering latency (median TTFB of 1.18s).
     <div class="keywords">
       <strong>Keywords—</strong>Web Measurement, E-Governance, Digital Public Infrastructure, Web Accessibility, WCAG 2.1 AA, Core Web Vitals, GIGW 3.0, Internet Measurement, Cyber Security, CERT-In.
     </div>
@@ -315,7 +315,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </div>
 
   <h2>IV. Measurement System Architecture</h2>
-  <p>The BharatGov Access measurement system operates a high-concurrency ingestion pipeline orchestrated across three tightly coupled modules:</p>
+  <p>The CivicWeb Access measurement system operates a high-concurrency ingestion pipeline orchestrated across three tightly coupled modules:</p>
   <ol>
     <li><strong>National Domain Registry Manager:</strong> Maintains the unified taxonomy of 12,092 portals across seven administrative tiers.</li>
     <li><strong>Domestic Ingestion Node:</strong> Hosted on a bare-metal cloud instance in Bangalore (6 vCPUs, 60 GB RAM, NVMe storage) connected to domestic NIXI peering points. Operates 64 async worker threads via <code>httpx</code> negotiating HTTP/1.1 and HTTP/2.</li>
@@ -510,11 +510,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <p>While automated DOM inspection reliably identifies structural WCAG failures (missing alt attributes, empty links, form control labeling), nuanced cognitive usability barriers and complex screen-reader audio flows still require human evaluation. Additionally, datacenter TTFB measurements from Bangalore do not capture last-mile radio access network congestion in remote rural areas.</p>
 
   <h2>VIII. Conclusion & Open Science Artifacts</h2>
-  <p>This paper presented <strong>BharatGov Access</strong>, a census-scale web observatory evaluating 12,092 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.</p>
+  <p>This paper presented <strong>CivicWeb Access</strong>, a census-scale web observatory evaluating 12,092 Indian government portals through an in-country domestic vantage point in Bangalore. By establishing a standardized 5-Pillar / 10-Sub-Feature framework, we have demonstrated the national accessibility dividends of NIC's S3WaaS platform while revealing critical security gaps in HTTP defense headers.</p>
   <p>To promote reproducibility and open science, all research artifacts are made publicly accessible:</p>
   <ul>
     <li><strong>Interactive Web Observatory:</strong> <code>https://quality-ampland-ashley-ought.trycloudflare.com</code></li>
-    <li><strong>Census Open Dataset:</strong> Immutable Apache Parquet, CSV, and JSON releases hosted under CC-BY-4.0 in <code>resources/bharatgov_access_clean.*</code>.</li>
+    <li><strong>Census Open Dataset:</strong> Immutable Apache Parquet, CSV, and JSON releases hosted under CC-BY-4.0 in <code>resources/civicweb_observatory_clean.*</code>.</li>
   </ul>
 
   <h2>References</h2>
@@ -524,7 +524,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       <li>Ministry of Electronics and Information Technology (MeitY), Government of India, "Guidelines for Indian Government Websites (GIGW 3.0)," NIC, New Delhi, 2023.</li>
       <li>Indian Computer Emergency Response Team (CERT-In), "Cyber Security Guidelines for Government Entities," MeitY, New Delhi, 2023.</li>
       <li>National Informatics Centre (NIC), "S3WaaS: Secure, Scalable and Sugamya Website as a Service," MeitY, 2024. [Online]. Available: https://s3waas.gov.in/</li>
-      <li>P. Agarwal, A. K. Bairagi, and V. N. Yaduraj, "BharatGov Access: National Government Web Infrastructure Observatory," IIT Kharagpur, Tech. Rep. DA-2026-G12, 2026.</li>
+      <li>P. Agarwal, A. K. Bairagi, and V. N. Yaduraj, "CivicWeb Access: National Government Web Infrastructure Observatory," IIT Kharagpur, Tech. Rep. DA-2026-G12, 2026.</li>
       <li>Google Developers, "Web Vitals: Essential metrics for a healthy site," 2023. [Online]. Available: https://web.dev/vitals/</li>
       <li>M. A. Fagan, "Web Accessibility of State and Local Government Websites: An Empirical Longitudinal Study," <em>Gov. Inf. Q.</em>, vol. 38, no. 3, p. 101584, 2021.</li>
       <li>S. Scheitle et al., "A Long Way to the Top: Significance, Structure, and Stability of Internet Top Lists," in <em>Proc. ACM IMC</em>, 2018, pp. 478–493.</li>
@@ -555,8 +555,8 @@ def main():
     paper_dir = os.path.join(base_dir, "research_paper")
     os.makedirs(paper_dir, exist_ok=True)
 
-    html_path = os.path.join(paper_dir, "BharatGov_Access_Research_Paper.html")
-    pdf_path = os.path.join(paper_dir, "BharatGov_Access_Research_Paper.pdf")
+    html_path = os.path.join(paper_dir, "CivicWeb_Observatory_Research_Paper.html")
+    pdf_path = os.path.join(paper_dir, "CivicWeb_Observatory_Research_Paper.pdf")
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(HTML_TEMPLATE)
@@ -575,7 +575,7 @@ def main():
             print_background=True,
             display_header_footer=True,
             header_template="<div></div>",
-            footer_template='<div style="font-size: 8pt; font-family: serif; width: 100%; text-align: center; color: #444;">Department of Computer Science and Engineering, IIT Kharagpur &mdash; Data Analytics &mdash; BharatGov Access | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
+            footer_template='<div style="font-size: 8pt; font-family: serif; width: 100%; text-align: center; color: #444;">Department of Computer Science and Engineering, IIT Kharagpur &mdash; Data Analytics &mdash; CivicWeb Access | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
         )
         browser.close()
     

@@ -19,7 +19,7 @@ from pathlib import Path
 import requests
 
 OUT = Path("data/fixtures/ct_domains.json")
-UA = "Mozilla/5.0 (compatible; BharatGovAccess/1.0; research)"
+UA = "Mozilla/5.0 (compatible; CivicWebObservatory/1.0; research)"
 
 NAMESPACES = ["%.gov.in", "%.nic.in", "%.ac.in", "%.res.in", "%.edu.in"]
 

@@ -1,4 +1,4 @@
-"""End-to-end verification of the BharatGov Access dashboard.
+"""End-to-end verification of the CivicWeb Access dashboard.
 
 Covers four independent concerns:
 
@@ -23,7 +23,7 @@ from pathlib import Path
 import pandas as pd
 from playwright.async_api import async_playwright
 
-CSV = Path("resources/bharatgov_access_clean.csv")
+CSV = Path("resources/civicweb_observatory_clean.csv")
 PAGE = Path("dashboard/index.html").resolve().as_uri()
 OUT = Path("scratch/verify")
 

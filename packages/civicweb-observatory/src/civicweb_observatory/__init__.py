@@ -1,4 +1,4 @@
-"""BharatGov Access — census-scale dataset for India's public web infrastructure.
+"""CivicWeb Access — census-scale dataset for India's public web infrastructure.
 
 The package bundles the released 12,092-domain census and exposes it as a pandas
 DataFrame with typed columns, plus a small analysis layer for the figures quoted
@@ -6,7 +6,7 @@ in the accompanying paper.
 
 Quick start::
 
-    import bharatgov_access as bga
+    import civicweb_observatory as bga
 
     df = bga.load()                 # all 12,092 domains
     live = bga.load(reachable=True) # the 10,247 that answered in-country
@@ -123,7 +123,7 @@ _FLOAT_COLUMNS = (
 
 def dataset_path() -> Path:
     """Absolute path to the bundled Parquet release."""
-    return Path(str(resources.files(__name__).joinpath("data/bharatgov_access_clean.parquet")))
+    return Path(str(resources.files(__name__).joinpath("data/civicweb_observatory_clean.parquet")))
 
 
 def load(

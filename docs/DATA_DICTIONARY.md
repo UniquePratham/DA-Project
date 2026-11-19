@@ -1,4 +1,4 @@
-# BharatGov Access — Data Dictionary
+# CivicWeb Access — Data Dictionary
 
 This document details the exact schema, types, descriptions, and feature definitions for all published dataset releases (`.parquet` and `.csv`).
 

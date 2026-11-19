@@ -46,11 +46,11 @@ from .provider import (
 log = logging.getLogger(__name__)
 
 #: The tag that marks an instance as ours. Nothing without it is ever touched.
-OWNERSHIP_TAG = "bharatgov-ephemeral"
+OWNERSHIP_TAG = "civicweb-ephemeral"
 
 #: A second, more specific tag so a future project sharing the account cannot
 #: collide with ours.
-PROJECT_TAG = "project:bharatgov-access"
+PROJECT_TAG = "project:civicweb-observatory"
 
 
 class LifecycleError(RuntimeError):

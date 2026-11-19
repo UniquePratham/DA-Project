@@ -1,6 +1,6 @@
 """
 Census-Scale 10,000+ Indian Government Web Infrastructure Dataset Generator.
-BharatGov Access v3.0.0 (National Census Release).
+CivicWeb Access v3.0.0 (National Census Release).
 
 Comprehensive representation across:
 - Central Ministries & Flagship Schemes: 650+
@@ -24,7 +24,7 @@ random.seed(42)
 np.random.seed(42)
 
 # Load existing seed from earlier Bangalore crawl (2,390 portals)
-seed_csv = "resources/bharatgov_access_clean.csv"
+seed_csv = "resources/civicweb_observatory_clean.csv"
 base_df = pd.read_csv(seed_csv)
 print(f"Loaded base dataset with {len(base_df):,} portals.")
 
@@ -368,9 +368,9 @@ def build_10k_dataset():
     print(df["sub_cms_architecture"].value_counts())
 
     # Export to resources/
-    csv_p = "resources/bharatgov_access_clean.csv"
-    parquet_p = "resources/bharatgov_access_clean.parquet"
-    json_p = "resources/bharatgov_access_clean.json"
+    csv_p = "resources/civicweb_observatory_clean.csv"
+    parquet_p = "resources/civicweb_observatory_clean.parquet"
+    json_p = "resources/civicweb_observatory_clean.json"
 
     df.to_csv(csv_p, index=False)
     df.to_parquet(parquet_p, index=False)

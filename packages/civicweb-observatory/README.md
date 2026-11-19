@@ -1,4 +1,4 @@
-# bharatgov-access
+# civicweb-observatory
 
 A census of India's public web, packaged so you can `pip install` it and start
 querying in one line.
@@ -12,11 +12,11 @@ because state data centres and NIC gateways drop foreign traffic at the
 perimeter.
 
 ```bash
-pip install bharatgov-access
+pip install civicweb-observatory
 ```
 
 ```python
-import bharatgov_access as bga
+import civicweb_observatory as bga
 
 df = bga.load()                  # all 12,092 domains
 live = bga.load(reachable=True)  # the 10,247 that answered in-country
@@ -33,7 +33,7 @@ bga.state_ranking(live, top=10)  # state and UT ranking
 | Portals | 12,092 registered, 10,247 reachable in-country (84.7%) |
 | Coverage | 36 States and Union Territories, 7 governance tiers |
 | Columns | 20, no derived duplicates |
-| Formats | Parquet bundled; CSV and JSON via `bharatgov export` |
+| Formats | Parquet bundled; CSV and JSON via `civicweb export` |
 | Licence | CC-BY-4.0 |
 
 ## The five pillars
@@ -65,12 +65,12 @@ yourself with the same methodology.
 ## Command line
 
 ```bash
-bharatgov info                      # release summary
-bharatgov tiers                     # per-tier census table
-bharatgov arch                      # per-platform comparison
-bharatgov states --top 10           # state ranking
-bharatgov query --tier district --state Kerala --min-maturity 85
-bharatgov export --format csv --out census.csv --reachable-only
+civicweb info                      # release summary
+civicweb tiers                     # per-tier census table
+civicweb arch                      # per-platform comparison
+civicweb states --top 10           # state ranking
+civicweb query --tier district --state Kerala --min-maturity 85
+civicweb export --format csv --out census.csv --reachable-only
 ```
 
 ## Reproducing a figure
@@ -78,7 +78,7 @@ bharatgov export --format csv --out census.csv --reachable-only
 Every number in the paper is a `groupby` away:
 
 ```python
-import bharatgov_access as bga
+import civicweb_observatory as bga
 
 live = bga.load(reachable=True)
 
@@ -107,8 +107,8 @@ print(live["sub_security_headers_score"].describe().round(1))
 ## Citation
 
 ```bibtex
-@techreport{agarwal2026bharatgov,
-  title       = {BharatGov Access: A Census-Scale In-Country Web Observatory
+@techreport{agarwal2026civicweb,
+  title       = {CivicWeb Access: A Census-Scale In-Country Web Observatory
                  and Empirical Benchmark of India's Public Digital Infrastructure},
   author      = {Agarwal, Pratham and Bairagi, Amit Kumar and Yaduraj, Vishwajeet Nand},
   institution = {Department of Computer Science and Engineering, IIT Kharagpur},
@@ -120,7 +120,7 @@ print(live["sub_security_headers_score"].describe().round(1))
 ## Development
 
 ```bash
-cd packages/bharatgov-access
+cd packages/civicweb-observatory
 pip install -e ".[dev]"
 pytest -q
 python -m build

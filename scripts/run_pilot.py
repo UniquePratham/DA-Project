@@ -38,7 +38,7 @@ from services.validator.engine import DataQualityValidator
 
 async def run_pilot_pipeline(dry_run: bool = False, max_sites: int = 10) -> Dict[str, Any]:
     print("=" * 65)
-    print(" BharatGov Access - Phase 2 Deterministic Pilot Collection")
+    print(" CivicWeb Access - Phase 2 Deterministic Pilot Collection")
     print(f" Mode: {'DRY RUN (Fixtures)' if dry_run else 'LIVE COLLECTION'}")
     print(f" VM Specs: 24 vCPU / 96 GB RAM / 1600 GB Storage Target")
     print("=" * 65)
@@ -202,7 +202,7 @@ async def run_pilot_pipeline(dry_run: bool = False, max_sites: int = 10) -> Dict
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run BharatGov Access Pilot Pipeline")
+    parser = argparse.ArgumentParser(description="Run CivicWeb Access Pilot Pipeline")
     parser.add_argument("--dry-run", action="store_true", help="Run with simulated offline fixtures")
     parser.add_argument("--limit", type=int, default=10, help="Max sites to inspect")
     args = parser.parse_args()

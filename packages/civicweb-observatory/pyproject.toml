@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "bharatgov-access"
+name = "civicweb-observatory"
 version = "1.0.0"
-description = "Census-scale dataset and analysis toolkit for India's public web infrastructure (12,092 government domains)."
+description = "Cross-country measurement dataset and analysis toolkit for public-sector web infrastructure (14,489 India domains plus 19-country global sample)."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "CC-BY-4.0" }
@@ -21,7 +21,8 @@ keywords = [
   "wcag",
   "gigw",
   "core-web-vitals",
-  "india",
+  "global",
+  "cross-country",
   "open-data",
 ]
 classifiers = [
@@ -45,7 +46,7 @@ dependencies = [
 dev = ["pytest>=7.0", "build>=1.0"]
 
 [project.scripts]
-bharatgov = "bharatgov_access.cli:main"
+civicweb = "civicweb_observatory.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/UniquePratham/DA-Project"
@@ -53,14 +54,14 @@ Repository = "https://github.com/UniquePratham/DA-Project"
 Documentation = "https://github.com/UniquePratham/DA-Project/blob/main/docs/DATA_DICTIONARY.md"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/bharatgov_access"]
+packages = ["src/civicweb_observatory"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"src/bharatgov_access/data/bharatgov_access_clean.parquet" = "bharatgov_access/data/bharatgov_access_clean.parquet"
+"src/civicweb_observatory/data/civicweb_observatory_clean.parquet" = "civicweb_observatory/data/civicweb_observatory_clean.parquet"
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "src/bharatgov_access",
+  "src/civicweb_observatory",
   "tests",
   "README.md",
 ]

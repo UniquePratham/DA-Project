@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BharatGov Access — Research Paper</title>
+<title>CivicWeb Access — Research Paper</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
@@ -236,7 +236,7 @@ a { color: #111; text-decoration: none; }
 </style>
 </head>
 <body>
-<header class="masthead"><div class="venue">Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; 2026</div><h1>BharatGov Access: An In-Country Measurement Study of India's Public Web Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Subject: Data Analytics<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
+<header class="masthead"><div class="venue">Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; 2026</div><h1>CivicWeb Access: An In-Country Measurement Study of India's Public Web Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Subject: Data Analytics<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
 <div class="body-columns">
 <section class="abstract"><h2>Abstract</h2>
 <p>Most Indians who deal with the state now do so through a website. Welfare transfers, land records, exam results, tax filings and court listings all pass through government portals, and the quality of those portals decides whether a citizen can actually finish the task. Yet we know very little, in measured terms, about how good they are. Existing studies tend to look at a few dozen ministry homepages, and the ones that crawl from outside India run into perimeter filters that make live sites look dead.</p>
@@ -279,7 +279,7 @@ a { color: #111; text-decoration: none; }
 <h2>III. The Five-Pillar Framework</h2>
 <p>We group the measurements into five pillars, each with two sub-features, giving twelve variables in total. The point of the grouping is to keep accessibility, speed, security, inclusion and platform separate, because they turn out to be largely independent of one another and averaging them too early hides the interesting variation.</p>
 <pre><code>                    ┌────────────────────────────────────────────────────────┐
-                    │               BharatGov Access Framework               │
+                    │               CivicWeb Access Framework               │
                     └───────────────────────────┬────────────────────────────┘
                                                 │
          ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐
@@ -404,7 +404,7 @@ M = {} & 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \\
 $$</p>
 <p>The binary terms are worth absolute points, not percentages, so a portal that satisfies all of them and scores perfectly on the three continuous terms reaches exactly 100. The result is clamped to [0, 100].</p>
 <p>Two things should be said about this index. The weights are our judgement, not a finding; we think accessibility and security matter most, and a reader who disagrees can recompute $M$ from the published per-pillar columns. And because accessibility is uniformly high across the registry, the composite compresses differences between tiers. We therefore report the pillars separately in Section V and treat the composite as a summary rather than a verdict.</p>
-<p>The formula is available as <code>bharatgov_access.maturity_index()</code> so anyone can score a portal they measured themselves.</p>
+<p>The formula is available as <code>civicweb_observatory.maturity_index()</code> so anyone can score a portal they measured themselves.</p>
 <hr>
 <h2>IV. How the Measurement Was Built</h2>
 <pre><code> ┌────────────────────────────────────────────────────────────────────────┐
@@ -451,7 +451,7 @@ $$</p>
 <h2>V. Findings</h2>
 <p>The registry contains <strong>14,489 government and public-sector domains</strong>, of which <strong>7,542 (52.1%)</strong> responded and are analysed here.</p>
 <h3>TABLE I: Breakdown by governance tier</h3>
-<p>All figures are computed from the released dataset over reachable portals only. Reproduce with <code>bharatgov tiers</code>.</p>
+<p>All figures are computed from the released dataset over reachable portals only. Reproduce with <code>civicweb tiers</code>.</p>
 <table class="wide">
 <thead>
 <tr>
@@ -610,7 +610,7 @@ $$</p>
 <h3>B. Platform matters for accessibility, not for security</h3>
 <p>Table II compares the six platforms we could fingerprint.</p>
 <h3>TABLE II: Comparison of web platforms</h3>
-<p>Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with <code>bharatgov arch</code>.</p>
+<p>Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with <code>civicweb arch</code>.</p>
 <table class="wide">
 <thead>
 <tr>
@@ -729,7 +729,7 @@ $$</p>
 <p>Only <strong>61.3%</strong> of reachable portals declare a document language at all. <strong>18.4%</strong> contain text in a scheduled Indian script, and <strong>4.1%</strong> declare <code>hreflang</code> alternates. For a country with twenty-two scheduled languages, this is the largest gap in the study.</p>
 <h3>G. What we cannot say about states and districts</h3>
 <p>The <code>district</code> column is empty for every row in this release, and only 62 domains are classified into the district tier. We therefore make no district-level claim at all.</p>
-<p>State attribution is inferred from the hostname's own labels, which works for <code>kerala.gov.in</code> but cannot resolve a central ministry to a state. Thirty-four distinct State/UT values appear among reachable portals, but the per-state samples are too small and too unevenly distributed to support a ranking, so we do not publish one. The raw grouping is available with <code>bharatgov states</code> for anyone who wants to look.</p>
+<p>State attribution is inferred from the hostname's own labels, which works for <code>kerala.gov.in</code> but cannot resolve a central ministry to a state. Thirty-four distinct State/UT values appear among reachable portals, but the per-state samples are too small and too unevenly distributed to support a ranking, so we do not publish one. The raw grouping is available with <code>civicweb states</code> for anyone who wants to look.</p>
 <hr>
 <h2>VI. What Should Change</h2>
 <p>Three recommendations follow from the data.</p>
@@ -775,7 +775,7 @@ $$</p>
 <p>Security is the real deficit. Transport encryption is essentially solved at 99.5%, but header hardening sits at 43.1 out of 100 and only a third of portals set a content security policy. These are proxy configuration changes, not application rewrites, and they are the cheapest improvement available to the estate.</p>
 <p>Language inclusion is the weakest pillar by a wide margin, at 18.4%.</p>
 <p>Everything in this paper can be recomputed from the released data. The dataset ships as Parquet, CSV and JSON under CC-BY-4.0; the crawler and discovery scripts are in the repository; and the observatory is live at <code>https://uniquepratham.github.io/DA-Project/</code>.</p>
-<pre><code class="language-python">import bharatgov_access as bga
+<pre><code class="language-python">import civicweb_observatory as bga
 
 bga.load()                  # 14,489 discovered domains
 bga.load(reachable=True)    # 7,542 that answered

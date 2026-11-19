@@ -6,9 +6,9 @@ Inputs:
   data/fixtures/registry_full.json - tier/state metadata
 
 Outputs:
-  resources/bharatgov_access_clean.csv
-  resources/bharatgov_access_clean.parquet
-  resources/bharatgov_access_clean.json
+  resources/civicweb_observatory_clean.csv
+  resources/civicweb_observatory_clean.parquet
+  resources/civicweb_observatory_clean.json
   dashboard/static/dataset.json
   dashboard/static/dataset.js
 
@@ -26,9 +26,9 @@ import pandas as pd
 
 REAL_DIR = Path("data/real")
 REGISTRY = Path("data/fixtures/registry_full.json")
-OUT_CSV = Path("resources/bharatgov_access_clean.csv")
-OUT_PARQUET = Path("resources/bharatgov_access_clean.parquet")
-OUT_JSON = Path("resources/bharatgov_access_clean.json")
+OUT_CSV = Path("resources/civicweb_observatory_clean.csv")
+OUT_PARQUET = Path("resources/civicweb_observatory_clean.parquet")
+OUT_JSON = Path("resources/civicweb_observatory_clean.json")
 DASH_JSON = Path("dashboard/static/dataset.json")
 DASH_JS = Path("dashboard/static/dataset.js")
 

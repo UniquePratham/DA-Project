@@ -73,7 +73,7 @@ class DatasetExporter:
         observations: List[ObservationRecord],
         registry: List[GovernmentEntityRecord],
     ) -> Dict[str, Path]:
-        release_prefix = f"bharatgov_access_{dataset_version}"
+        release_prefix = f"civicweb_observatory_{dataset_version}"
 
         # 1. Build lookup map of registry entity records
         registry_map: Dict[str, GovernmentEntityRecord] = {r.domain_id: r for r in registry}
@@ -298,7 +298,7 @@ class DatasetExporter:
 
         # 8. Generate DataHub Release Metadata
         manifest = {
-            "dataset_name": "BharatGov Access",
+            "dataset_name": "CivicWeb Access",
             "dataset_version": dataset_version,
             "description": "Agentic, Longitudinal Observatory of India's Government Web Infrastructure (Website Level with State/Central Benchmarks)",
             "dataset_granularity": "1 row per unique government website / domain",

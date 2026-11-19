@@ -2038,8 +2038,9 @@ a:hover {
 }
 
 .future-badge--operational { color: var(--data-5); }
-.future-badge--planned { color: var(--ink-3); }
-.future-badge--unsupported { color: var(--oxide); }
+.future-badge--available { color: var(--data-4); }
+.future-badge--resident_required { color: var(--data-2); }
+.future-badge--out_of_scope { color: var(--ink-3); }
 .future-badge--provisioning { color: var(--data-3); }
 .future-badge--temporarily_unavailable { color: var(--data-2); }
 
@@ -2280,10 +2281,11 @@ a:hover {
 }
 
 .world-country--operational { fill: var(--data-5); }
-.world-country--planned { fill: var(--data-3); }
-.world-country--unsupported { fill: var(--paper-3); }
-.world-country--provisioning { fill: var(--data-4); }
-.world-country--temporarily_unavailable { fill: var(--data-2); }
+.world-country--available { fill: var(--data-4); }
+.world-country--resident_required { fill: var(--data-2); }
+.world-country--out_of_scope { fill: var(--paper-3); }
+.world-country--provisioning { fill: var(--data-3); }
+.world-country--temporarily_unavailable { fill: var(--data-1); }
 
 .world-country:hover {
   stroke: var(--ink);
@@ -2323,8 +2325,9 @@ a:hover {
 }
 
 .world-legend__swatch--operational { background: var(--data-5); }
-.world-legend__swatch--planned { background: var(--data-3); }
-.world-legend__swatch--unsupported { background: var(--paper-3); }
+.world-legend__swatch--available { background: var(--data-4); }
+.world-legend__swatch--resident_required { background: var(--data-2); }
+.world-legend__swatch--out_of_scope { background: var(--paper-3); }
 
 .world-filters {
   display: flex;

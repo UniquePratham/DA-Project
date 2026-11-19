@@ -1,4 +1,4 @@
-"""Polite HTTP client for the BharatGov Access observatory.
+"""Polite HTTP client for the CivicWeb Access observatory.
 
 This module exists because a measurement crawler that is rude produces bad data
 as well as bad manners: a site that rate-limits you returns 429, and a 429
@@ -37,15 +37,15 @@ from .robots import RobotsCache, RobotsTxt
 #: Honest identification. The contact address is the project's, so a site
 #: operator can ask us to stop.
 USER_AGENT = (
-    "BharatGovAccessObservatory/1.0 "
-    "(+https://uniquepratham.github.io/DA-Project/; research-bot@bharatgov.in)"
+    "CivicWebObservatory/1.0 "
+    "(+https://uniquepratham.github.io/DA-Project/; research-bot@civicweb.in)"
 )
 
 DEFAULT_HEADERS = {
     "User-Agent": USER_AGENT,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en;q=0.9",
-    "From": "research-bot@bharatgov.in",
+    "From": "research-bot@civicweb.in",
 }
 
 #: Minimum seconds between two requests to the same host.

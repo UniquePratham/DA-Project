@@ -6759,5 +6759,1260 @@
   "status": "ok",
   "certs": 0,
   "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.salute.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.sante.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.sant\u00e9.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.sanidad.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.salud.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.saude.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.justice.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.justicia.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.justi\u00e7a.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.justiz.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.giustizia.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.justitie.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.finance.gov.ie",
+  "status": "ok",
+  "certs": 257,
+  "added": 4
+ },
+ {
+  "country": "IE",
+  "query": "%25.finanz.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.finanzen.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.finanzas.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.financas.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IE",
+  "query": "%25.finan\u00e7as.gov.ie",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.salute.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.sante.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.sant\u00e9.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.sanidad.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.salud.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.saude.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.salute.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.sante.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.sant\u00e9.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.sanidad.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.salud.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.saude.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justice.gov.il",
+  "status": "ok",
+  "certs": 665,
+  "added": 85
+ },
+ {
+  "country": "IL",
+  "query": "%25.justicia.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justi\u00e7a.gov.il",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justiz.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.giustizia.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justitie.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justice.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justicia.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justi\u00e7a.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justiz.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.giustizia.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.justitie.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finance.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finanz.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finanzen.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finanzas.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.financas.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finan\u00e7as.gov.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finance.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finanz.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finanzen.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finanzas.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.financas.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IL",
+  "query": "%25.finan\u00e7as.ac.il",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salute.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sante.gov.in",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sant\u00e9.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sanidad.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salud.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.saude.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salute.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sante.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sant\u00e9.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sanidad.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salud.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.saude.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salute.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sante.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sant\u00e9.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sanidad.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salud.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.saude.ac.in",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salute.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sante.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sant\u00e9.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sanidad.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salud.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.saude.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salute.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sante.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sant\u00e9.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.sanidad.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.salud.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.saude.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justice.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justicia.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justi\u00e7a.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justiz.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.giustizia.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justitie.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justice.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justicia.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justi\u00e7a.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justiz.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.giustizia.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justitie.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justice.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justicia.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justi\u00e7a.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justiz.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.giustizia.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justitie.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justice.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justicia.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justi\u00e7a.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justiz.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.giustizia.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justitie.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justice.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justicia.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justi\u00e7a.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justiz.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.giustizia.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.justitie.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finance.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanz.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzen.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzas.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.financas.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finan\u00e7as.gov.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finance.nic.in",
+  "status": "ok",
+  "certs": 18,
+  "added": 1
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanz.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzen.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzas.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.financas.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finan\u00e7as.nic.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finance.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanz.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzen.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzas.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.financas.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finan\u00e7as.ac.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finance.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanz.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzen.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzas.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.financas.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finan\u00e7as.res.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finance.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanz.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzen.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finanzas.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.financas.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IN",
+  "query": "%25.finan\u00e7as.edu.in",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.salute.gov.it",
+  "status": "ok",
+  "certs": 550,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.sante.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.sant\u00e9.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.sanidad.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.salud.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.saude.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.salute.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.sante.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.sant\u00e9.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.sanidad.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.salud.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.saude.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justice.gov.it",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justicia.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justi\u00e7a.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justiz.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.giustizia.gov.it",
+  "status": "ok",
+  "certs": 5,
+  "added": 1
+ },
+ {
+  "country": "IT",
+  "query": "%25.justitie.gov.it",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justice.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justicia.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justi\u00e7a.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justiz.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.giustizia.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.justitie.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finance.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finanz.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finanzen.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finanzas.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.financas.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finan\u00e7as.gov.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finance.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finanz.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finanzen.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finanzas.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.financas.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "IT",
+  "query": "%25.finan\u00e7as.istruzione.it",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
  }
 ]

@@ -1,4 +1,4 @@
-"""Deterministic measurement tools for BharatGov Access.
+"""Deterministic measurement tools for CivicWeb Access.
 
 Each subpackage wraps one external instrument so the measurement code never
 talks to a library directly:

@@ -20,9 +20,9 @@ from pathlib import Path
 import markdown
 from playwright.sync_api import sync_playwright
 
-SOURCE = Path("research_paper/BharatGov_Access_Research_Paper.md")
-HTML_OUT = Path("research_paper/BharatGov_Access_Research_Paper.html")
-PDF_OUT = Path("research_paper/BharatGov_Access_Research_Paper.pdf")
+SOURCE = Path("research_paper/CivicWeb_Observatory_Research_Paper.md")
+HTML_OUT = Path("research_paper/CivicWeb_Observatory_Research_Paper.html")
+PDF_OUT = Path("research_paper/CivicWeb_Observatory_Research_Paper.pdf")
 
 STYLESHEET = """
 @page {
@@ -362,7 +362,7 @@ def build_html() -> str:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BharatGov Access — Research Paper</title>
+<title>CivicWeb Access — Research Paper</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>

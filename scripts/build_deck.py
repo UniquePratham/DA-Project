@@ -16,10 +16,10 @@ from pathlib import Path
 import pandas as pd
 from playwright.sync_api import sync_playwright
 
-CSV = Path("resources/bharatgov_access_clean.csv")
+CSV = Path("resources/civicweb_observatory_clean.csv")
 SHOTS = Path("resources/screenshots")
-HTML_OUT = Path("resources/BharatGov_Access_Final_Deck.html")
-PDF_OUT = Path("resources/BharatGov_Access_Final_Deck.pdf")
+HTML_OUT = Path("resources/CivicWeb_Observatory_Final_Deck.html")
+PDF_OUT = Path("resources/CivicWeb_Observatory_Final_Deck.pdf")
 
 
 def figures() -> dict:
@@ -441,7 +441,7 @@ def build(f: dict) -> str:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BharatGov Access — Final Evaluation</title>
+<title>CivicWeb Access — Final Evaluation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -452,7 +452,7 @@ def build(f: dict) -> str:
 <!-- ============================================================ 1 · TITLE -->
 <section class="slide title-slide">
   <div class="rail">
-    <span><b>BharatGov Access</b></span>
+    <span><b>CivicWeb Access</b></span>
     <span>Final Evaluation &middot; Checkpoint 3</span>
     <span>2026</span>
   </div>
@@ -540,7 +540,7 @@ def build(f: dict) -> str:
   </div>
 
   <div class="foot">
-    <span>BharatGov Access</span>
+    <span>CivicWeb Access</span>
     <span>Measured in-country &middot; no overseas vantage points</span>
   </div>
 </section>
@@ -621,7 +621,7 @@ def build(f: dict) -> str:
   </div>
 
   <div class="foot">
-    <span>Table I &middot; reproduce with <span class="mono">bharatgov tiers</span></span>
+    <span>Table I &middot; reproduce with <span class="mono">civicweb tiers</span></span>
     <span>n = {f['live']:,} reachable</span>
   </div>
 </section>
@@ -681,7 +681,7 @@ def build(f: dict) -> str:
   </div>
 
   <div class="foot">
-    <span>Table II &middot; reproduce with <span class="mono">bharatgov arch</span></span>
+    <span>Table II &middot; reproduce with <span class="mono">civicweb arch</span></span>
     <span>Unreachable hosts excluded</span>
   </div>
 </section>
@@ -703,9 +703,9 @@ def build(f: dict) -> str:
           <div class="mono" style="font-size:7.4pt; letter-spacing:0.1em; text-transform:uppercase; color:#9a8d82; margin-bottom:3mm">
             Install &middot; query &middot; reproduce
           </div>
-          <pre class="mono" style="margin:0; font-size:9pt; line-height:1.75; color:#efe9e2; white-space:pre-wrap"><span style="color:#e08a5f">pip install</span> bharatgov-access
+          <pre class="mono" style="margin:0; font-size:9pt; line-height:1.75; color:#efe9e2; white-space:pre-wrap"><span style="color:#e08a5f">pip install</span> civicweb-observatory
 
-<span style="color:#e08a5f">import</span> bharatgov_access <span style="color:#e08a5f">as</span> bga
+<span style="color:#e08a5f">import</span> civicweb_observatory <span style="color:#e08a5f">as</span> bga
 
 bga.load()                  <span style="color:#7a6d63"># {f['total']:,} domains</span>
 bga.load(reachable=<span style="color:#e08a5f">True</span>)  <span style="color:#7a6d63"># {f['live']:,} live</span>

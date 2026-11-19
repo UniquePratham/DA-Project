@@ -1,4 +1,4 @@
-"""High-Throughput Parallel Master Orchestrator Pipeline for BharatGov Access Observatory.
+"""High-Throughput Parallel Master Orchestrator Pipeline for CivicWeb Access Observatory.
 
 Operates at the WEBSITE level (1 row per unique government website/domain),
 extracting multi-page features (homepage, about, contact, citizen services, circulars)
@@ -38,7 +38,7 @@ async def execute_observatory_pipeline(
     checkpoint_every: int = 25,
 ) -> Dict[str, Any]:
     print("=" * 80)
-    print(" 🏛️  BharatGov Access - Large-Scale Website Observatory Pipeline")
+    print(" 🏛️  CivicWeb Access - Large-Scale Website Observatory Pipeline")
     print(f" Mode: {'DRY RUN (Simulated)' if dry_run else 'LIVE PRODUCTION (Polite Concurrent Crawl)'}")
     print(f" Target Unique Websites: {limit_websites:,} | Concurrency Workers: {concurrency}")
     print(f" Multi-Page Depth: Up to {max_pages_per_domain + 1} pages/site | Dataset Version: {dataset_version}")
@@ -185,7 +185,7 @@ async def execute_observatory_pipeline(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run Large-Scale BharatGov Access Website Observatory Pipeline")
+    parser = argparse.ArgumentParser(description="Run Large-Scale CivicWeb Access Website Observatory Pipeline")
     parser.add_argument("--dry-run", action="store_true", default=False, help="Run with simulated offline fixtures")
     parser.add_argument("--live", action="store_true", default=True, help="Run live polite network collection")
     parser.add_argument("--limit", "--limit-websites", dest="limit", type=int, default=3000, help="Target unique websites limit (default: 3000)")

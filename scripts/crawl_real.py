@@ -1,4 +1,4 @@
-"""Real in-country measurement crawler for BharatGov Access.
+"""Real in-country measurement crawler for CivicWeb Access.
 
 Runs on the India node. Every value written here comes from an actual HTTP
 request and the actual response body. Nothing is sampled or synthesised.
@@ -49,14 +49,14 @@ from tools.http.polite import PoliteClient, RobotsDisallowed
 # Honest identification. The crawler does not pretend to be a browser: a site
 # operator who wants us to stop can find out who we are and ask.
 UA = (
-    "BharatGovAccessObservatory/1.0 "
-    "(+https://uniquepratham.github.io/DA-Project/; research-bot@bharatgov.in)"
+    "CivicWebObservatory/1.0 "
+    "(+https://uniquepratham.github.io/DA-Project/; research-bot@civicweb.in)"
 )
 HEADERS = {
     "User-Agent": UA,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en;q=0.9",
-    "From": "research-bot@bharatgov.in",
+    "From": "research-bot@civicweb.in",
 }
 
 # One shared polite client per process: it holds the per-host rate limiters and

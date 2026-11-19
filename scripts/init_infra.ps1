@@ -1,7 +1,7 @@
-# BharatGov Access - Windows PowerShell Local Initialization Script
+# CivicWeb Access - Windows PowerShell Local Initialization Script
 
 Write-Host "=========================================================" -ForegroundColor Cyan
-Write-Host " BharatGov Access - Local Dev Infrastructure Init" -ForegroundColor Cyan
+Write-Host " CivicWeb Access - Local Dev Infrastructure Init" -ForegroundColor Cyan
 Write-Host "=========================================================" -ForegroundColor Cyan
 
 if (-not (Test-Path ".env")) {

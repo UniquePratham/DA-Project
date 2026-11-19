@@ -32,7 +32,7 @@ from services.infrastructure.catalog import (
 from services.infrastructure.regions import TARGET_COUNTRIES, ProbeRegistry
 
 OUT = REPO / "dashboard" / "static" / "future.json"
-CSV = REPO / "resources" / "bharatgov_access_clean.csv"
+CSV = REPO / "resources" / "civicweb_observatory_clean.csv"
 
 #: The eight research dimensions the global programme will measure. The first
 #: five are already measured for India; the last three are planned.
@@ -219,7 +219,7 @@ def instance_catalogue() -> list[dict]:
 
 def main() -> int:
     payload = {
-        "generated_from": "services/infrastructure + resources/bharatgov_access_clean.csv",
+        "generated_from": "services/infrastructure + resources/civicweb_observatory_clean.csv",
         "india_baseline": india_baseline(),
         "countries": country_coverage(),
         "dimensions": DIMENSIONS,

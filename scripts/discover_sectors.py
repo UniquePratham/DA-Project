@@ -43,8 +43,8 @@ REGISTRY = REPO / "data" / "fixtures" / "global_domains.json"
 LOG = REPO / "data" / "fixtures" / "sector_discovery_log.json"
 
 UA = (
-    "BharatGovAccessObservatory/1.0 "
-    "(+https://uniquepratham.github.io/DA-Project/; research-bot@bharatgov.in)"
+    "CivicWebObservatory/1.0 "
+    "(+https://uniquepratham.github.io/DA-Project/; research-bot@civicweb.in)"
 )
 
 #: Sector -> subdomain labels in the languages governments actually use.

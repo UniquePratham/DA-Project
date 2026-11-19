@@ -24,9 +24,9 @@ REAL_DIR = Path("data/real")
 REGISTRY = Path("data/fixtures/registry_full.json")
 LINKED = Path("data/fixtures/linked_domains.json")
 
-OUT_CSV = Path("resources/bharatgov_access_clean.csv")
-OUT_PARQUET = Path("resources/bharatgov_access_clean.parquet")
-OUT_JSON = Path("resources/bharatgov_access_clean.json")
+OUT_CSV = Path("resources/civicweb_observatory_clean.csv")
+OUT_PARQUET = Path("resources/civicweb_observatory_clean.parquet")
+OUT_JSON = Path("resources/civicweb_observatory_clean.json")
 DASH_JSON = Path("dashboard/static/dataset.json")
 DASH_JS = Path("dashboard/static/dataset.js")
 

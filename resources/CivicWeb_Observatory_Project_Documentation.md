@@ -1,4 +1,4 @@
-# BharatGov Access
+# CivicWeb Access
 ## Agentic, Longitudinal Observatory of India's Government Web Infrastructure
 
 **Project Type:** Large-scale novel dataset + data analytics + working proof-of-concept product  
@@ -13,7 +13,7 @@
 
 # 1. Executive Summary
 
-**BharatGov Access** is a large-scale, longitudinal, evidence-first dataset and analytics platform designed to characterize the publicly observable digital infrastructure of Indian government websites.
+**CivicWeb Access** is a large-scale, longitudinal, evidence-first dataset and analytics platform designed to characterize the publicly observable digital infrastructure of Indian government websites.
 
 The project will discover, verify, monitor, analyze, and document Indian government web portals across central government, states and union territories, districts, departments, public agencies, local-government bodies, public services, and other verifiable government web properties within the defined project scope.
 
@@ -45,7 +45,7 @@ The project will then transform the collected data into:
 1. A versioned large-scale dataset.
 2. A comprehensive analytical layer.
 3. An interactive visual observatory.
-4. A working **BharatGov Inspector** proof-of-concept product.
+4. A working **CivicWeb Inspector** proof-of-concept product.
 
 The same underlying data pipeline will power all four components.
 
@@ -118,11 +118,11 @@ Create a visually strong dashboard allowing users to explore India's government-
 
 ### Objective 7 — Working product
 
-Create **BharatGov Inspector**, a functioning proof-of-concept that accepts a government URL and produces an evidence-backed quality report and benchmark comparison.
+Create **CivicWeb Inspector**, a functioning proof-of-concept that accepts a government URL and produces an evidence-backed quality report and benchmark comparison.
 
 ---
 
-# 4. What Makes BharatGov Access Distinct
+# 4. What Makes CivicWeb Access Distinct
 
 Existing accessibility-testing tools and studies mean the project must not be positioned merely as:
 
@@ -130,7 +130,7 @@ Existing accessibility-testing tools and studies mean the project must not be po
 
 That would be too narrow.
 
-BharatGov Access combines:
+CivicWeb Access combines:
 
 ```text
 Comprehensive government-web discovery
@@ -281,7 +281,7 @@ The actual values must be generated from the collection system.
 
 # 9. Data Dimensions
 
-BharatGov Access will collect several measurement families.
+CivicWeb Access will collect several measurement families.
 
 ## 9.1 Accessibility
 
@@ -527,7 +527,7 @@ Data Warehouse
 Analytics Dashboard DataHub
           |
           v
-BharatGov Inspector
+CivicWeb Inspector
 ```
 
 ---
@@ -667,7 +667,7 @@ The project does not perform stress testing.
 
 # 16. Explicitly Prohibited Actions
 
-BharatGov Access must not:
+CivicWeb Access must not:
 
 - bypass authentication;
 - bypass access controls;
@@ -1217,7 +1217,7 @@ Use:
 # 34. Repository Structure
 
 ```text
-bharatgov-access/
+civicweb-observatory/
 │
 ├── README.md
 ├── LICENSE
@@ -1834,7 +1834,7 @@ Every visualization must answer a question.
 
 ---
 
-# 51. BharatGov Inspector
+# 51. CivicWeb Inspector
 
 The working product will accept:
 
@@ -1845,7 +1845,7 @@ government URL
 and produce:
 
 ```text
-BharatGov Report
+CivicWeb Report
 ```
 
 Possible output:
@@ -1894,7 +1894,7 @@ This makes the dataset directly useful.
 User
  |
  v
-BharatGov Inspector API
+CivicWeb Inspector API
  |
  v
 Safety Governor
@@ -2381,7 +2381,7 @@ Weeks 13–14
 
 ## Product
 
-- [ ] BharatGov Inspector;
+- [ ] CivicWeb Inspector;
 - [ ] working URL analysis;
 - [ ] benchmark;
 - [ ] report.
@@ -2397,15 +2397,15 @@ Weeks 13–14
 
 ---
 
-# 67. What BharatGov Access Is
+# 67. What CivicWeb Access Is
 
-BharatGov Access is:
+CivicWeb Access is:
 
 > **A continuously evolving, evidence-first dataset and observatory that uses a locally hosted lightweight AI agent to adaptively study India's heterogeneous government websites while deterministic tools, safety controls, and validation systems provide reproducibility, responsible collection, and trustworthy analytics.**
 
 ---
 
-# 68. What BharatGov Access Is Not
+# 68. What CivicWeb Access Is Not
 
 It is not:
 
@@ -2461,7 +2461,7 @@ The correct implementation order is:
         |
 17. Dashboard
         |
-18. BharatGov Inspector
+18. CivicWeb Inspector
         |
 19. DataHub release
 ```
@@ -2516,4 +2516,4 @@ The dashboard communicates the findings.
 
 The product demonstrates practical value.
 
-That separation is the foundation of BharatGov Access.
+That separation is the foundation of CivicWeb Access.

@@ -1,4 +1,4 @@
-"""BharatGov Access Interactive Decision-Maker Dashboard.
+"""CivicWeb Access Interactive Decision-Maker Dashboard.
 
 Provides State-wise and Central Ministry Web Maturity Analytics:
 - Comparative State Benchmarks (Accessibility, Speed, GIGW Compliance, Multilingualism)
@@ -16,13 +16,13 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="BharatGov Access — State & Central Observatory Dashboard",
+    page_title="CivicWeb Access — State & Central Observatory Dashboard",
     page_icon="🏛️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-st.title("🏛️ BharatGov Access — Government Web Infrastructure Observatory")
+st.title("🏛️ CivicWeb Access — Government Web Infrastructure Observatory")
 st.caption("Empowering State & Central IT Decision Makers with Data-Driven Public Web Analytics")
 
 # Load Latest Dataset Release
@@ -31,10 +31,10 @@ RELEASES_DIR = Path(__file__).resolve().parent.parent / "data" / "releases"
 
 @st.cache_data
 def load_latest_dataset():
-    csv_files = list(RELEASES_DIR.glob("bharatgov_access_*.csv"))
+    csv_files = list(RELEASES_DIR.glob("civicweb_observatory_*.csv"))
     if not csv_files:
         # Fallback to resources directory
-        csv_files = list((Path(__file__).resolve().parent.parent / "resources").glob("bharatgov_access_*.csv"))
+        csv_files = list((Path(__file__).resolve().parent.parent / "resources").glob("civicweb_observatory_*.csv"))
     if not csv_files:
         return None
     

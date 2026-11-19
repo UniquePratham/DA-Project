@@ -1,4 +1,4 @@
-"""Tests for the bharatgov-access package.
+"""Tests for the civicweb-observatory package.
 
 These assert the published figures, so a regression in the loader or the
 aggregation layer fails loudly rather than silently changing a paper table.
@@ -9,19 +9,19 @@ from __future__ import annotations
 import pandas as pd
 import pytest
 
-import bharatgov_access as bga
+import civicweb_observatory as cwo
 
 
 def test_release_shape():
-    df = bga.load()
+    df = cwo.load()
     assert len(df) == 14489
-    assert list(df.columns) == list(bga.COLUMNS)
+    assert list(df.columns) == list(cwo.COLUMNS)
 
 
 def test_reachability_split():
-    df = bga.load()
-    live = bga.load(reachable=True)
-    offline = bga.load(reachable=False)
+    df = cwo.load()
+    live = cwo.load(reachable=True)
+    offline = cwo.load(reachable=False)
 
     assert len(live) == 7542
     assert len(offline) == 6947
@@ -31,7 +31,7 @@ def test_reachability_split():
 
 
 def test_dtypes_are_typed():
-    df = bga.load()
+    df = cwo.load()
     assert df["is_reachable"].dtype == bool
     assert df["sub_has_gigw_toolbar"].dtype == bool
     assert pd.api.types.is_float_dtype(df["sub_accessibility_score"])
@@ -39,13 +39,13 @@ def test_dtypes_are_typed():
 
 
 def test_local_body_is_normalised():
-    df = bga.load()
+    df = cwo.load()
     assert "local_body" not in set(df["government_level"])
-    assert set(df["government_level"]) == set(bga.TIERS)
+    assert set(df["government_level"]) == set(cwo.TIERS)
 
 
 def test_tier_summary_matches_paper_table_one():
-    table = bga.tier_summary()
+    table = cwo.tier_summary()
 
     assert table.loc["National", "portals"] == 14489
     assert table.loc["National", "reachable"] == 7542
@@ -63,7 +63,7 @@ def test_tier_summary_matches_paper_table_one():
 
 
 def test_architecture_summary_matches_paper_table_two():
-    table = bga.architecture_summary()
+    table = cwo.architecture_summary()
 
     assert table.loc["s3waas_drupal", "portals"] == 661
     assert table.loc["s3waas_drupal", "share_pct"] == pytest.approx(8.8, abs=0.05)
@@ -81,7 +81,7 @@ def test_architecture_summary_matches_paper_table_two():
 
 
 def test_state_ranking_is_sorted_and_complete():
-    table = bga.state_ranking()
+    table = cwo.state_ranking()
     assert len(table) >= 30
     assert list(table["rank"]) == list(range(1, len(table) + 1))
     assert table["mean_maturity"].is_monotonic_decreasing
@@ -89,7 +89,7 @@ def test_state_ranking_is_sorted_and_complete():
 
 
 def test_filters_compose():
-    df = bga.load(reachable=True, tiers=["state_ut"], states=["Kerala"])
+    df = cwo.load(reachable=True, tiers=["state_ut"], states=["Kerala"])
     assert len(df) > 0
     assert (df["government_level"] == "state_ut").all()
     assert (df["state_or_ut"] == "Kerala").all()
@@ -97,11 +97,11 @@ def test_filters_compose():
 
 
 def test_maturity_index_reproduces_release_values():
-    df = bga.load(reachable=True)
+    df = cwo.load(reachable=True)
 
     sample = df.sample(200, random_state=7)
     for _, row in sample.iterrows():
-        recomputed = bga.maturity_index(
+        recomputed = cwo.maturity_index(
             accessibility=row["sub_accessibility_score"],
             security=row["sub_security_headers_score"],
             lcp_sec=row["sub_lcp_est_sec"],
@@ -117,10 +117,10 @@ def test_maturity_index_reproduces_release_values():
 
 
 def test_maturity_index_is_exact_for_almost_every_row():
-    df = bga.load(reachable=True)
+    df = cwo.load(reachable=True)
 
     recomputed = [
-        bga.maturity_index(
+        cwo.maturity_index(
             accessibility=row.sub_accessibility_score,
             security=row.sub_security_headers_score,
             lcp_sec=row.sub_lcp_est_sec,
@@ -139,7 +139,7 @@ def test_maturity_index_is_exact_for_almost_every_row():
 
 
 def test_describe_release():
-    info = bga.describe_release()
+    info = cwo.describe_release()
     assert info["portals"] == 14489
     assert info["reachable"] == 7542
     assert info["tiers"] == 7
@@ -148,7 +148,7 @@ def test_describe_release():
 
 
 def test_cli_info(capsys):
-    from bharatgov_access.cli import main
+    from civicweb_observatory.cli import main
 
     assert main(["info"]) == 0
     out = capsys.readouterr().out
@@ -156,7 +156,7 @@ def test_cli_info(capsys):
 
 
 def test_cli_query(capsys):
-    from bharatgov_access.cli import main
+    from civicweb_observatory.cli import main
 
     assert main(["query", "--tier", "district", "--state", "Kerala", "--limit", "5"]) == 0
     out = capsys.readouterr().out
@@ -164,7 +164,7 @@ def test_cli_query(capsys):
 
 
 def test_cli_export(tmp_path):
-    from bharatgov_access.cli import main
+    from civicweb_observatory.cli import main
 
     target = tmp_path / "census.csv"
     assert main(["export", "--format", "csv", "--out", str(target), "--reachable-only"]) == 0

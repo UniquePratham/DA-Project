@@ -1,4 +1,4 @@
-"""BharatGov Access State and Central Benchmark Analysis Engine.
+"""CivicWeb Access State and Central Benchmark Analysis Engine.
 
 Computes state-by-state and central ministry comparative analytics:
 - State Web Accessibility Index (0 - 100)

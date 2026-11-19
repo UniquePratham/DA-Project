@@ -952,7 +952,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `bharatgov_access_${rows.length}_domains.csv`;
+    link.download = `civicweb_observatory_${rows.length}_domains.csv`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -1293,7 +1293,7 @@
       const stat = state.stats.states.find((s) => s.name === state.selectedState);
       if (!stat) return;
       const text =
-        `${stat.name} — BharatGov Access\n` +
+        `${stat.name} — CivicWeb Access\n` +
         `Portals: ${stat.total} (${stat.live} reachable, ${dec(stat.reachRate)}%)\n` +
         `Composite maturity: ${dec(stat.maturity)} / 100 (rank ${stat.rank} of ${state.stats.states.length})\n` +
         `Accessibility: ${dec(stat.acc)} / 100\n` +
@@ -1567,8 +1567,9 @@
 
   const WORLD_STATUS_LABEL = {
     operational: 'Operational',
-    planned: 'Planned',
-    unsupported: 'Unsupported',
+    available: 'Available',
+    resident_required: 'Resident probe',
+    out_of_scope: 'Out of scope',
     provisioning: 'Provisioning',
     temporarily_unavailable: 'Temporarily unavailable',
   };
@@ -1602,12 +1603,29 @@
     const legend = $('#world-legend');
     if (legend) {
       const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
-      legend.innerHTML = ['operational', 'planned', 'unsupported']
+      legend.innerHTML = ['operational', 'available', 'resident_required', 'out_of_scope']
         .map(
           (s) =>
             `<span class="world-legend__item">` +
             `<span class="world-legend__swatch world-legend__swatch--${s}"></span>` +
             `${esc(WORLD_STATUS_LABEL[s])} <b>${int(counts[s] || 0)}</b></span>`
+        )
+        .join('');
+    }
+
+    // Provider table
+    const pbody = $('#world-providers tbody');
+    if (pbody && window.WORLD_DATA && window.WORLD_DATA.providers) {
+      pbody.innerHTML = window.WORLD_DATA.providers
+        .map(
+          (p) =>
+            '<tr>' +
+            `<td><b>${esc(p.provider)}</b></td>` +
+            `<td class="num">${int(p.regions)}</td>` +
+            `<td class="num">${int(p.countries)}</td>` +
+            `<td class="num">$${Number(p.cheapest_hourly_usd).toFixed(4)}</td>` +
+            `<td class="muted">${esc(p.note)}</td>` +
+            '</tr>'
         )
         .join('');
     }
@@ -1619,8 +1637,9 @@
       const opts = [
         ['all', 'All countries', window.WORLD_DATA ? window.WORLD_DATA.total_countries : 0],
         ['operational', 'Operational', counts.operational || 0],
-        ['planned', 'Planned', counts.planned || 0],
-        ['unsupported', 'Unsupported', counts.unsupported || 0],
+        ['available', 'Available', counts.available || 0],
+        ['resident_required', 'Resident probe', counts.resident_required || 0],
+        ['out_of_scope', 'Out of scope', counts.out_of_scope || 0],
       ];
       filters.innerHTML = opts
         .map(
@@ -1675,7 +1694,7 @@
       list = list.filter((c) => c.status === worldFilter);
     }
     // Operational first, then planned, then unsupported; alphabetical within.
-    const order = { operational: 0, provisioning: 1, planned: 2, temporarily_unavailable: 3, unsupported: 4 };
+    const order = { operational: 0, available: 1, provisioning: 2, resident_required: 3, temporarily_unavailable: 4, out_of_scope: 5 };
     list = list.slice().sort((a, b) => {
       const d = (order[a.status] ?? 9) - (order[b.status] ?? 9);
       return d !== 0 ? d : a.name.localeCompare(b.name);
@@ -1703,9 +1722,10 @@
       count.textContent =
         `Showing ${list.length} of ${w.total_countries} countries. ` +
         `${w.countries_with_regions} have a domestic cloud region; ` +
-        `${w.status_counts.operational || 0} are operational, ` +
-        `${w.status_counts.planned || 0} planned, ` +
-        `${w.status_counts.unsupported || 0} unsupported.`;
+        `${w.status_counts.operational || 0} operational, ` +
+        `${w.status_counts.available || 0} available, ` +
+        `${w.status_counts.resident_required || 0} need a resident probe, ` +
+        `${w.status_counts.out_of_scope || 0} out of scope.`;
     }
   }
 

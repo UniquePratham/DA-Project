@@ -1,4 +1,4 @@
-# BharatGov Access — Agent Handover Document
+# CivicWeb Access — Agent Handover Document
 **Project Domain:** National Government Web Infrastructure Observatory & Academic Benchmark  
 **Institution:** Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur (Group 12)  
 **Subject:** Data Analytics  
@@ -10,9 +10,9 @@
 
 ## 1. Executive Summary & Purpose
 
-This document provides a complete operational and technical handover for an incoming AI agent or developer continuing work on **BharatGov Access**. 
+This document provides a complete operational and technical handover for an incoming AI agent or developer continuing work on **CivicWeb Access**. 
 
-BharatGov Access is the first census-scale, longitudinal web observatory evaluating India's public digital infrastructure across **14,489 government web domains**. The platform resolves the historical **Geo-IP perimeter firewall blindspot** (which caused &gt;66% false-positive reachability failures when measured from overseas cloud vantage points) by executing ingestion within the Indian domestic peering fabric.
+CivicWeb Access is the first census-scale, longitudinal web observatory evaluating India's public digital infrastructure across **14,489 government web domains**. The platform resolves the historical **Geo-IP perimeter firewall blindspot** (which caused &gt;66% false-positive reachability failures when measured from overseas cloud vantage points) by executing ingestion within the Indian domestic peering fabric.
 
 The project currently encompasses:
 1. **A verified 14,489-portal census dataset** in Parquet, CSV, JSON, and bundled JS formats.
@@ -39,28 +39,28 @@ The observatory categorizes sovereign Indian digital public infrastructure into 
 | **Urban Local Bodies (Municipalities)** | 140 | 122 (87.1%) | 18 | 90.1 / 100 | 80.3% |
 | **National Total / Baseline** | **14,489** | **7,542 (52.1%)** | **1,845 (15.3%)** | **86.7 / 100** | **91.0%** |
 
-> These figures are computed from `resources/bharatgov_access_clean.parquet` over reachable portals only. Reproduce with `bharatgov tiers` (see §4).
+> These figures are computed from `resources/civicweb_observatory_clean.parquet` over reachable portals only. Reproduce with `civicweb tiers` (see §4).
 
 ### B. Storage Files & Data Formats
 All dataset artifacts are stored in the `resources/` directory and synchronized with `dashboard/static/`:
-* `resources/bharatgov_access_clean.parquet` — High-efficiency Apache Parquet format (columnar, compressed with snappy).
-* `resources/bharatgov_access_clean.csv` — Standard CSV file (14,489 rows, 20 clean columns).
-* `resources/bharatgov_access_clean.json` — Structured JSON export for external APIs.
+* `resources/civicweb_observatory_clean.parquet` — High-efficiency Apache Parquet format (columnar, compressed with snappy).
+* `resources/civicweb_observatory_clean.csv` — Standard CSV file (14,489 rows, 20 clean columns).
+* `resources/civicweb_observatory_clean.json` — Structured JSON export for external APIs.
 * `dashboard/static/dataset.json` — Compact JSON for the live HTTP web dashboard.
 * `dashboard/static/dataset.js` — **Critical Local File Bundle:** Declares `window.RAW_DATASET = [...]` so that `dashboard/index.html` loads all 14,489 rows with **zero CORS issues** when opened directly as a `file:///` URL in Windows Explorer.
 * `dashboard/static/india_map.js` — Generated state boundaries (36 States/UTs, 41 KB) for the atlas choropleth. Rebuild with `python scripts/build_india_map.py`.
 * `dashboard/static/fonts/` — Self-hosted Newsreader, Public Sans and IBM Plex Mono woff2 subsets, so the dashboard renders identically offline. Refresh with `python scripts/fetch_fonts.py`.
 
 ### C. Installable Python Package
-The census ships as a pip-installable package at `packages/bharatgov-access/`:
+The census ships as a pip-installable package at `packages/civicweb-observatory/`:
 
 ```bash
-pip install bharatgov-access          # from PyPI, once published
-pip install -e packages/bharatgov-access   # from this repo
+pip install civicweb-observatory          # from PyPI, once published
+pip install -e packages/civicweb-observatory   # from this repo
 ```
 
 ```python
-import bharatgov_access as bga
+import civicweb_observatory as bga
 
 bga.load()                  # 14,489 domains, 20 typed columns
 bga.load(reachable=True)    # 7,542 that answered in-country
@@ -70,7 +70,7 @@ bga.state_ranking()         # 36 States and UTs, ranked
 bga.maturity_index(...)     # recompute the composite for your own portal
 ```
 
-A CLI ships with it: `bharatgov info | tiers | arch | states | query | export`.
+A CLI ships with it: `civicweb info | tiers | arch | states | query | export`.
 The package bundles the Parquet release (465 KB wheel) and carries 14 tests that
 assert the published figures, so a loader regression fails loudly instead of
 silently changing a paper table.
@@ -83,7 +83,7 @@ To prevent "metric bloat" (which previously had 70+ uncalibrated columns), the p
 
 ```
                     ┌────────────────────────────────────────────────────────┐
-                    │               BharatGov Access Framework               │
+                    │               CivicWeb Access Framework               │
                     └───────────────────────────┬────────────────────────────┘
                                                 │
          ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐
@@ -176,7 +176,7 @@ emoji, and no icon library mixed with a second icon library.
 
 Every figure is computed in the browser from `dataset.js` at load time. Nothing
 is hardcoded. `scripts/verify_dashboard.py` recomputes the same figures
-independently from `resources/bharatgov_access_clean.csv` with pandas and
+independently from `resources/civicweb_observatory_clean.csv` with pandas and
 compares them against the rendered DOM: **419 assertions across layout, data,
 behaviour and accessibility**, all passing.
 
@@ -191,21 +191,21 @@ both themes. Verified by the `a11y` suite.
 ## 5. Academic Deliverables & Research Artifacts
 
 1. **Academic Research Paper (submission ready):**
-   * Markdown source of truth: `research_paper/BharatGov_Access_Research_Paper.md`
-   * Rendered HTML: `research_paper/BharatGov_Access_Research_Paper.html`
-   * Compiled PDF: `research_paper/BharatGov_Access_Research_Paper.pdf`
-   * LaTeX: `research_paper/BharatGov_Access_Research_Paper.tex`
+   * Markdown source of truth: `research_paper/CivicWeb_Observatory_Research_Paper.md`
+   * Rendered HTML: `research_paper/CivicWeb_Observatory_Research_Paper.html`
+   * Compiled PDF: `research_paper/CivicWeb_Observatory_Research_Paper.pdf`
+   * LaTeX: `research_paper/CivicWeb_Observatory_Research_Paper.tex`
    * Regenerate with `python scripts/render_paper.py`. The Markdown is the single
      source; the HTML and PDF are derived, so a table correction propagates.
    * **Tables I and II were corrected against the released dataset.** An earlier
      draft carried figures that did not match the Parquet release (for example a
      96.1 district accessibility mean where the data says 95.0, and per-header
      HSTS/CSP percentages that the 20-column schema does not record). Every
-     number in the paper is now reproducible with `bharatgov tiers` and
-     `bharatgov arch`.
+     number in the paper is now reproducible with `civicweb tiers` and
+     `civicweb arch`.
 2. **Final Evaluation Deck (5 widescreen slides):**
-   * PDF: `resources/BharatGov_Access_Final_Deck.pdf`
-   * HTML: `resources/BharatGov_Access_Final_Deck.html`
+   * PDF: `resources/CivicWeb_Observatory_Final_Deck.pdf`
+   * HTML: `resources/CivicWeb_Observatory_Final_Deck.html`
    * Regenerate with `python scripts/build_deck.py`. Every number on a slide is
      computed from the dataset, and the screenshots come from
      `python scripts/capture_screenshots.py`.
@@ -237,12 +237,12 @@ serve the identical static build; neither needs a build step.
 ### B. Secondary — Cloudflare Tunnel on the Vultr node
 
 * **Cloud Node:** Deployed domestically inside India (Ubuntu 22.04 LTS, 6 vCPUs, 60 GB RAM, 350 GB NVMe).
-* **Remote Path:** `/opt/bharatgov-bangalore/dashboard/`
+* **Remote Path:** `/opt/civicweb-node/dashboard/`
 * **Live Tunnel:** Cloudflare Quick Tunnel
   **URL:** `https://weeks-privacy-transcription-improved.trycloudflare.com` (Status: HTTP 200 OK)
 * **Supervision:** two systemd units, both `enabled` and `active`:
-  * `bharatgov-dashboard.service` — `python3 -m http.server 8088 --bind 127.0.0.1`
-  * `bharatgov-tunnel.service` — `cloudflared tunnel --url http://127.0.0.1:8088`
+  * `civicweb-dashboard.service` — `python3 -m http.server 8088 --bind 127.0.0.1`
+  * `civicweb-tunnel.service` — `cloudflared tunnel --url http://127.0.0.1:8088`
   Both restart on failure and start on boot. The origin binds to loopback only,
   so the tunnel is the sole ingress.
 * **Caveat:** a Quick Tunnel hostname is ephemeral. It changes when the tunnel

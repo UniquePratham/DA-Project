@@ -1,5 +1,5 @@
 {
- "generated_from": "services/infrastructure + resources/bharatgov_access_clean.csv",
+ "generated_from": "services/infrastructure + resources/civicweb_observatory_clean.csv",
  "india_baseline": {
   "measured": true,
   "discovered": 14489,

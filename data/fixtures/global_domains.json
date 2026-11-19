@@ -4756,6 +4756,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "accessibility.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-03-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "accessible.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -5687,6 +5695,14 @@
   "tld": "gov.mn",
   "first_seen": "2016-11-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "achlama-assets.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T06:28:35",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "achp.scot.nhs.uk",
@@ -23179,6 +23195,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "apacforms.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-05-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "apacwomen.ac.in",
   "country": "IN",
   "tld": "ac.in",
@@ -24024,6 +24048,14 @@
   "tld": "gov.cn",
   "first_seen": "2017-06-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "api.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-05T07:21:40",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "api.k-apt.go.kr",
@@ -25368,6 +25400,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "apm-aws.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "apm.mrmwr.gov.om",
   "country": "OM",
   "tld": "gov.om",
@@ -25605,6 +25645,22 @@
   "tld": "gov.uz",
   "first_seen": "2026-07-17T10:48:09",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "apot.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "apotsc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "apoyos.financierarural.gob.mx",
@@ -38822,6 +38878,14 @@
   "tld": "gob.mx",
   "first_seen": "2014-07-04T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "auditors-council.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "audvid.technion.ac.il",
@@ -101736,6 +101800,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "collab-edge.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-10-09T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "collab-edge.lekhwiya.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -103060,6 +103132,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "committees.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-01-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "committees.parliament.uk",
   "country": "GB",
   "tld": "parliament.uk",
@@ -103072,6 +103152,14 @@
   "tld": "edu.au",
   "first_seen": "2010-07-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "committes.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-08-03T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "common.tpic.ac.kr",
@@ -103704,6 +103792,14 @@
   "tld": "go.kr",
   "first_seen": "2011-08-30T07:08:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "community.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-03T07:24:33",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "community.kfda.go.kr",
@@ -107334,6 +107430,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "consult.finance.gov.ie",
+  "country": "IE",
+  "tld": "gov.ie",
+  "sector": "finance",
+  "first_seen": "2026-07-02T09:57:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "consult.gnhme.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -109673,6 +109777,14 @@
   "tld": "gov.sg",
   "first_seen": "2015-09-03T03:08:25",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "corepay.finance.gov.ie",
+  "country": "IE",
+  "tld": "gov.ie",
+  "sector": "finance",
+  "first_seen": "2023-09-20T15:08:31",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "coreroller.interlegis.leg.br",
@@ -113840,6 +113952,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cpa-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-01-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cpa.api.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -113880,6 +114000,14 @@
   "tld": "gov.kw",
   "first_seen": "2019-03-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cpa.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-01-13T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cpa.parliament.uk",
@@ -127981,6 +128109,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "databank.finance.gov.ie",
+  "country": "IE",
+  "tld": "gov.ie",
+  "sector": "finance",
+  "first_seen": "2025-12-19T13:03:11",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "database.aims.ac.za",
   "country": "ZA",
   "tld": "ac.za",
@@ -132684,6 +132820,22 @@
   "tld": "or.kr",
   "first_seen": "2013-08-08T02:00:15",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "designsonline-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-12-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "designsonline.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-12-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "designsystem.gov.cz",
@@ -146508,6 +146660,14 @@
   "tld": "leg.br",
   "first_seen": "2017-07-08T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "donate.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2024-08-16T08:14:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "donate.ncku.edu.tw",
@@ -192587,6 +192747,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "estatescommittee.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "estaticos.villamuelas.gob.es",
   "country": "ES",
   "tld": "gob.es",
@@ -198241,6 +198409,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "exp-e.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-10-09T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "exp-e.sgrf.gov.om",
   "country": "OM",
   "tld": "gov.om",
@@ -199286,6 +199462,14 @@
   "tld": "nhs.uk",
   "first_seen": "2014-09-24T09:18:18",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "external.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-07-20T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "external.kouga.gov.za",
@@ -206336,6 +206520,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fileretrieval.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-04-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "filermanagement.edgarfiling.sec.gov",
   "country": "US",
   "tld": "gov",
@@ -206847,6 +207039,14 @@
   "tld": "gov.tw",
   "first_seen": "2008-06-25T04:22:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "finance.nic.in",
+  "country": "IN",
+  "tld": "nic.in",
+  "sector": "finance",
+  "first_seen": "2026-09-07T05:56:18",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "finance.ntpc.gov.tw",
@@ -210016,6 +210216,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "foi-tluna.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-09-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "foi.gov.ie",
   "country": "IE",
   "tld": "gov.ie",
@@ -211837,6 +212045,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "formspdf-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "formspdf.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "formsus2.saude.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -213250,6 +213474,14 @@
   "tld": "go.kr",
   "first_seen": "2013-10-30T07:25:06",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "franchisees.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2018-04-18T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "franciscosantos.pi.leg.br",
@@ -227128,6 +227360,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "gis-appraisal.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-12-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "gis-heritage.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -228288,6 +228528,14 @@
   "tld": "or.kr",
   "first_seen": "2011-01-07T04:55:35",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "giustizia.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "judiciary",
+  "first_seen": "2021-04-20T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "giustiziatributaria.gov.it",
@@ -242210,6 +242458,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "havarot.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "havarotsc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "haven.edu.ph",
   "country": "PH",
   "tld": "edu.ph",
@@ -247185,6 +247449,14 @@
   "tld": "ac.il",
   "first_seen": "2017-09-05T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "hishtalmuyot.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "hisios.leicestershire.nhs.uk",
@@ -258290,6 +258562,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ica-online.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ica.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -258316,6 +258596,14 @@
   "tld": "gov.sg",
   "first_seen": "2016-12-18T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ica.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "icab.gov.ph",
@@ -266746,6 +267034,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ilitaonline-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ilitaonline.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ilitonline.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-05-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ilkadimmuftulugu.gov.tr",
   "country": "TR",
   "tld": "gov.tr",
@@ -266982,6 +267294,14 @@
   "tld": "gov.et",
   "first_seen": "2019-07-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ilr-online.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-06-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ilr.ta.gov.lv",
@@ -272055,6 +272375,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "inheritance.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-05-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "inhye.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -273271,6 +273599,14 @@
   "tld": "govt.nz",
   "first_seen": "2013-10-23T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "insolvency.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-09-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "insolvencydirect.gov.uk",
@@ -296621,6 +296957,14 @@
   "tld": "gov.gr",
   "sector": "judiciary",
   "first_seen": "2026-03-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-10-13T00:00:00",
   "source": "certificate_transparency_sector"
  },
  {
@@ -324272,6 +324616,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "legalaidportal.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2019-12-11T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "legalcapacity-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-03-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "legalcapacity.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-03-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "legalcenter.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -324405,6 +324773,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "legislation.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-09-01T05:45:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "legislation.na.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -324417,6 +324793,14 @@
   "tld": "parliament.uk",
   "first_seen": "2024-08-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "legislative-services.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "legislaturadetucuman.gob.ar",
@@ -343403,6 +343787,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "magnet-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-11-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "magnet.moa.gov.cy",
   "country": "CY",
   "tld": "gov.cy",
@@ -351240,6 +351632,14 @@
   "tld": "gov.mt",
   "first_seen": "2023-02-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mavdil.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "maven.eid.belgium.be",
@@ -372645,6 +373045,14 @@
   "tld": "gov.me",
   "first_seen": "2023-03-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mojqmarkets.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2023-12-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mojra.or.kr",
@@ -398830,6 +399238,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "nesach.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2012-10-31T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "nesbireysel.kamusm.gov.tr",
   "country": "TR",
   "tld": "gov.tr",
@@ -417216,6 +417632,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "odem-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2018-02-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "odeme.29mayis.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -423959,6 +424383,14 @@
   "tld": "gov.bh",
   "first_seen": "2019-01-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "oos.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-02-20T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "oos.ksu.edu.sa",
@@ -437112,6 +437544,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "patents-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "patents.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "patersonnj.gov",
   "country": "US",
   "tld": "gov",
@@ -439892,6 +440340,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pctonline-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-07-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pctonline.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-07-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pctro-inet.jpo.go.jp",
   "country": "JP",
   "tld": "go.jp",
@@ -440310,6 +440774,14 @@
   "tld": "edu.au",
   "first_seen": "2010-02-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pdoonline-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-05-11T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pdos-sdpsp.fgov.be",
@@ -448879,6 +449351,30 @@
   "tld": "nic.in",
   "first_seen": "2018-06-26T06:06:48",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pledges.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pledgessc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2013-11-03T04:20:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pleges.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2014-11-10T03:33:06",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "plenarinho.camara.leg.br",
@@ -458456,6 +458952,46 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portals-children.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T08:53:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "portals-emergency.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-20T10:42:03",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "portals-fatf.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-20T10:37:59",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "portals-legalaid.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T05:33:31",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "portals-sanegoria.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T06:32:57",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portals.bmf.gv.at",
   "country": "AT",
   "tld": "gv.at",
@@ -458468,6 +459004,14 @@
   "tld": "gov.au",
   "first_seen": "2009-12-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portals.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-20T11:53:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portals.ocjs.ohio.gov",
@@ -464875,6 +465419,22 @@
   "tld": "go.ke",
   "first_seen": "2018-05-02T23:12:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "professionalunits-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-09-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "professionalunits.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-09-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "profil.administrata.gov.al",
@@ -479752,6 +480312,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "realestate.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "realestate.moj.gov.kw",
   "country": "KW",
   "tld": "gov.kw",
@@ -485541,6 +486109,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "reqshm.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "requacarto.cra.wallonie.be",
   "country": "BE",
   "tld": "wallonie.be",
@@ -486303,6 +486879,14 @@
   "tld": "gov.uk",
   "first_seen": "2012-06-07T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "reshumot.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T08:49:58",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "resic.sante.gouv.fr",
@@ -487549,6 +488133,14 @@
   "tld": "gov.ru",
   "first_seen": "2019-04-18T09:25:45",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rfa.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2024-04-17T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "rfa.sedena.gob.mx",
@@ -499249,6 +499841,22 @@
   "tld": "gov.tn",
   "first_seen": "2021-05-20T11:16:39",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sanegoria.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-10-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sanegoriaportal.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2025-08-18T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sanexlabs.sanidad.gob.es",
@@ -512099,6 +512707,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "securelogin.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-08-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "securemessaging.eastriding.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -521185,6 +521801,14 @@
   "tld": "gov.bh",
   "first_seen": "2019-01-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sfbweb.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2017-02-20T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sfbweb.mem.gov.ma",
@@ -530618,6 +531242,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "simplex.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T08:09:40",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "simplex.lpp.ac.id",
   "country": "ID",
   "tld": "ac.id",
@@ -535694,6 +536326,14 @@
   "tld": "gov.za",
   "first_seen": "2018-04-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "siyualawyers.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-07-26T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sizekorea.kats.go.kr",
@@ -541731,11 +542371,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "snow.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-09-21T06:32:10",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "snowcapstone.unisim.edu.sg",
   "country": "SG",
   "tld": "edu.sg",
   "first_seen": "2016-05-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "snowd.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-07-16T08:13:04",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "snp.jst.go.jp",
@@ -568016,6 +568672,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "tabo.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2016-06-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "tabucs.gov.np",
   "country": "NP",
   "tld": "gov.np",
@@ -586179,6 +586843,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "trademarks.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2022-08-11T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "trademarksonline-sc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "trademarksonline.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2015-10-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "trademex-console.spw.wallonie.be",
   "country": "BE",
   "tld": "wallonie.be",
@@ -595621,6 +596309,14 @@
   "tld": "gov.sg",
   "first_seen": "2015-01-06T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "uatdatabank.finance.gov.ie",
+  "country": "IE",
+  "tld": "gov.ie",
+  "sector": "finance",
+  "first_seen": "2025-12-19T13:04:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "uatemis.govt.nz",
@@ -608417,6 +609113,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vc.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-02-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "vc.mineco.gob.es",
   "country": "ES",
   "tld": "gob.es",
@@ -608777,6 +609481,14 @@
   "tld": "gov.ma",
   "first_seen": "2020-07-13T11:30:14",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "vcourt.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2026-08-23T11:08:56",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "vcp.uitm.edu.my",
@@ -635826,6 +636538,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ws.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2023-12-03T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ws.learn.ac.lk",
   "country": "LK",
   "tld": "ac.lk",
@@ -636664,6 +637384,14 @@
   "tld": "gov.np",
   "first_seen": "2017-12-16T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "wssf.justice.gov.il",
+  "country": "IL",
+  "tld": "gov.il",
+  "sector": "judiciary",
+  "first_seen": "2023-09-14T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "wssk.swin.edu.au",

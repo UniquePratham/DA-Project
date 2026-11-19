@@ -26,7 +26,7 @@ import requests
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "data" / "fixtures" / "global_domains.json"
 
-UA = "Mozilla/5.0 (compatible; BharatGovAccess/1.0; research)"
+UA = "Mozilla/5.0 (compatible; CivicWebObservatory/1.0; research)"
 
 #: Country -> the TLD namespaces its government actually uses.
 #:

@@ -1,5 +1,5 @@
 """
-Cloud Bangalore Crawler & Feature Extractor for BharatGov Access.
+Cloud Bangalore Crawler & Feature Extractor for CivicWeb Access.
 Extracts 5 Main Features & 10 Sub-Features across 2,390 Government Portals.
 """
 

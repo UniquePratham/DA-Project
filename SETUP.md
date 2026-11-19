@@ -1,6 +1,6 @@
-# BharatGov Access — Production VM Deployment & Setup Guide
+# CivicWeb Access — Production VM Deployment & Setup Guide
 
-This guide provides step-by-step instructions for deploying and running **BharatGov Access** on your **Vultr VM (24 vCPU / 96 GB RAM / 1600 GB Storage)**.
+This guide provides step-by-step instructions for deploying and running **CivicWeb Access** on your **Vultr VM (24 vCPU / 96 GB RAM / 1600 GB Storage)**.
 
 ---
 
@@ -41,11 +41,11 @@ docker compose version
 
 ## 3. Clone Repository
 
-Clone the project from GitHub into `/opt/bharatgov-access`:
+Clone the project from GitHub into `/opt/civicweb-observatory`:
 
 ```bash
-git clone https://github.com/UniquePratham/DA-Project.git /opt/bharatgov-access
-cd /opt/bharatgov-access
+git clone https://github.com/UniquePratham/DA-Project.git /opt/civicweb-observatory
+cd /opt/civicweb-observatory
 ```
 
 ---
@@ -134,15 +134,15 @@ tail -f crawl.log
 
 All exported datasets are saved to `data/releases/`:
 
-- **Columnar Dataset (Parquet)**: `data/releases/bharatgov_access_v0.1.0.parquet`
-- **JSONL Stream**: `data/releases/bharatgov_access_v0.1.0.jsonl`
+- **Columnar Dataset (Parquet)**: `data/releases/civicweb_observatory_v0.1.0.parquet`
+- **JSONL Stream**: `data/releases/civicweb_observatory_v0.1.0.jsonl`
 - **Coverage Audit**: `data/releases/coverage_audit_0.1.0.json`
 - **DataHub Manifest**: `data/releases/manifest_0.1.0.json`
 
 To copy datasets from your VM to your local computer:
 ```bash
 # Run this from your local machine:
-scp root@<YOUR_VM_IP>:/opt/bharatgov-access/data/releases/* ./downloads/
+scp root@<YOUR_VM_IP>:/opt/civicweb-observatory/data/releases/* ./downloads/
 ```
 
 ---

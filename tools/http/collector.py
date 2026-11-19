@@ -1,4 +1,4 @@
-"""Deterministic HTTP Collector for BharatGov Access."""
+"""Deterministic HTTP Collector for CivicWeb Access."""
 
 from __future__ import annotations
 

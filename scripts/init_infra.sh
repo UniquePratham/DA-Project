@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "========================================================="
-echo " BharatGov Access - VM Infrastructure Initialization"
+echo " CivicWeb Access - VM Infrastructure Initialization"
 echo " Target VM: 24 vCPU / 96 GB RAM / 1600 GB NVMe"
 echo "========================================================="
 
