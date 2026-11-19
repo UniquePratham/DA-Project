@@ -204,10 +204,21 @@ EXTRA_INFRA = (
     "packer",
 )
 
+#: Markers that must match a whole label. Derived from EXTRA_INFRA by stripping
+#: the trailing dot some entries carry, so "ad." becomes the label "ad" and no
+#: longer matches "saniDAD".
+EXTRA_INFRA_LABELS = {
+    m.rstrip(".") for m in EXTRA_INFRA if not m.endswith("-") and "." not in m.rstrip(".")
+}
+
+#: Markers that are prefixes, e.g. "app-" or "api-".
+EXTRA_INFRA_PREFIXES = tuple(m for m in EXTRA_INFRA if m.endswith("-"))
+
 
 def is_clean(host: str, country: str) -> tuple[bool, str]:
     """Return (keep, reason). Reason is empty when kept."""
     h = host.lower()
+    labels = h.split(".")
 
     # 1. Must be inside the country's restricted government namespace.
     tlds = discover.GOV_TLDS.get(country, [])
@@ -219,27 +230,33 @@ def is_clean(host: str, country: str) -> tuple[bool, str]:
     # 2. Must not look internal or infrastructural.
     if not discover.is_public_portal(h):
         return False, "internal or test host"
-    if any(m in h for m in EXTRA_INFRA):
-        return False, "infrastructure host"
 
-    # 3. A hostname with more than four labels is almost always a machine.
+    # 3. Infrastructure markers are matched against whole labels, not as
+    #    substrings. Substring matching produced false positives: the marker
+    #    "ad." matched "saniDAD.gob.es", rejecting every Spanish health domain.
+    for label in labels[:-2]:  # skip the namespace itself
+        if label in EXTRA_INFRA_LABELS:
+            return False, "infrastructure host"
+        if any(label.startswith(m) for m in EXTRA_INFRA_PREFIXES):
+            return False, "infrastructure host"
+
+    # 4. A hostname with more than four labels is almost always a machine.
     if h.count(".") > 3:
         return False, "too many labels"
 
-    # 4. Reject anything with a numeric-only first label (IP-like or hashed).
-    first = h.split(".")[0]
+    # 5. Reject anything with a numeric-only first label (IP-like or hashed).
+    first = labels[0]
     if first.isdigit():
         return False, "numeric label"
 
-    # 5. Reject labels that look like machine names: long runs of consonants,
-    #    or a label that is mostly digits and hyphens.
-    for label in h.split(".")[:-2]:
+    # 6. Reject labels that look like machine names.
+    for label in labels[:-2]:
         if len(label) > 20:
             return False, "machine-like label"
         digits = sum(c.isdigit() for c in label)
         if digits and digits / max(1, len(label)) > 0.4:
             return False, "machine-like label"
-        if any(tok in label for tok in ("pool", "node", "srv", "host", "vm", "dc")):
+        if any(tok in label for tok in ("pool", "node", "srv", "host", "vm")):
             return False, "machine-like label"
 
     return True, ""

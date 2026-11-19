@@ -3262,6 +3262,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "acces-origines-amp.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-31T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "acces-securise.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -3302,6 +3310,14 @@
   "tld": "gob.ar",
   "first_seen": "2017-02-02T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "accesmed.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-14T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "acceso.banagrario.gov.co",
@@ -3687,6 +3703,14 @@
   "tld": "gov",
   "first_seen": "2012-11-15T13:16:54",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "access.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-03-29T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "access.firescotland.gov.uk",
@@ -5094,6 +5118,14 @@
   "tld": "ac.il",
   "first_seen": "2018-07-26T07:37:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "accounts.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "accounts.fortsmithar.gov",
@@ -11226,6 +11258,14 @@
   "tld": "gov.co",
   "first_seen": "2014-02-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "agata.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-21T05:19:12",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "agate.rochdale.gov.uk",
@@ -24227,6 +24267,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "api.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-11-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "api.sbc.edu.sa",
   "country": "SA",
   "tld": "edu.sa",
@@ -24521,6 +24569,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "apicoll.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-01-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "apidocs.hkma.gov.hk",
   "country": "HK",
   "tld": "gov.hk",
@@ -24603,6 +24659,22 @@
   "tld": "gov.tw",
   "first_seen": "2018-01-29T01:49:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "apinterop.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-11-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "apinteropcoll.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-10-13T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "apiovh.tmo.gov.lb",
@@ -31724,6 +31796,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "aquasise.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-18T15:50:20",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "aquatic.biodata.usgs.gov",
   "country": "US",
   "tld": "gov",
@@ -32240,6 +32320,14 @@
   "tld": "edu.tr",
   "first_seen": "2017-04-05T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "archeo.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "archi-bko.gov.kz",
@@ -35180,6 +35268,38 @@
   "tld": "gov.al",
   "first_seen": "2018-06-19T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "asdep-ase-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "asdep-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "asdep-paph-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "asdep-pmi-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "asdonline.oag.govt.nz",
@@ -39333,6 +39453,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "auth-alt.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-01-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "authent-tacvplus.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2022-10-13T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "auti.aut.ac.nz",
   "country": "NZ",
   "tld": "ac.nz",
@@ -41678,11 +41814,59 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "awp-intern-p.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "awp-intern-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "awp-qs.justiz.gv.at",
   "country": "AT",
   "tld": "gv.at",
   "first_seen": "2017-07-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "awp-s2-intern-p.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2024-01-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "awp-s2-intern-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2024-01-09T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "awp-s2o2-intern-p.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "awp-s2o2-intern-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "awp.bbg.gv.at",
@@ -42054,6 +42238,22 @@
   "tld": "edu.cn",
   "first_seen": "2015-03-05T07:10:35",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ayres.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ayres2.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ays.ac.th",
@@ -43827,6 +44027,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "baignades.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-21T05:23:06",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "baihualin.triph.gov.cn",
   "country": "CN",
   "tld": "gov.cn",
@@ -44569,6 +44777,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "bancos.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-04-13T18:45:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "bancotalentos.cnmp.mp.br",
   "country": "BR",
   "tld": "mp.br",
@@ -45134,6 +45350,14 @@
   "tld": "gov.kw",
   "first_seen": "2018-01-08T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "banksia.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-07-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "bankstown.nsw.gov.au",
@@ -48165,6 +48389,14 @@
   "tld": "edu.pk",
   "first_seen": "2016-11-15T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "bcc.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2019-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "bcc.jsc.nasa.gov",
@@ -60298,6 +60530,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "box.finanzas.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "finance",
+  "first_seen": "2025-05-19T08:16:40",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "box.kinmen.gov.tw",
   "country": "TW",
   "tld": "gov.tw",
@@ -62391,6 +62631,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "bris-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2025-11-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "bris.economie.fgov.be",
   "country": "BE",
   "tld": "fgov.be",
@@ -64167,6 +64415,22 @@
   "tld": "go.id",
   "first_seen": "2011-03-23T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "budgetreports-alt.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-01-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "budgetreports.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-09-01T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "budgetset.kaltimprov.go.id",
@@ -66617,6 +66881,14 @@
   "tld": "gov.pk",
   "first_seen": "2018-03-12T10:19:25",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "bvs.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2026-09-09T03:41:52",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "bvsci.albirkgedu.gov.sa",
@@ -70173,6 +70445,14 @@
   "tld": "ac.il",
   "first_seen": "2017-03-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "campus.finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2023-06-08T13:11:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "campus.generalpaz.gov.ar",
@@ -74956,6 +75236,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "casr.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2020-09-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cass.anu.edu.au",
   "country": "AU",
   "tld": "edu.au",
@@ -76760,6 +77048,38 @@
   "tld": "gov.na",
   "first_seen": "2026-09-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cbms-reports.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-08-11T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cbms-sit.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cbms-training.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cbms.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cbms.ird.gov.np",
@@ -78946,6 +79266,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ccs.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-01-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ccs.gdip.gov.bh",
   "country": "BH",
   "tld": "gov.bh",
@@ -79420,6 +79748,38 @@
   "tld": "gob.cl",
   "first_seen": "2019-07-15T21:54:55",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cdc1ucwebext.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-06-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cdc1ucwebextd.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-06-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cdc3ucwebext.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-06-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cdc3ucwebextd.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-06-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cdd.aau.ac.ae",
@@ -81053,6 +81413,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cellulari.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2024-04-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cellule-gouvernance.gov.tn",
   "country": "TN",
   "tld": "gov.tn",
@@ -82215,11 +82583,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cercacollportale.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-12-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cercalatuascuola.istruzione.it",
   "country": "IT",
   "tld": "istruzione.it",
   "first_seen": "2024-11-08T12:20:16",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cercaportale.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-10-21T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cerd.u-gakugei.ac.jp",
@@ -82628,6 +83012,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "certif-covid.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2022-10-13T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "certif.belgium.be",
   "country": "BE",
   "tld": "belgium.be",
@@ -82787,6 +83179,14 @@
   "tld": "wallonie.be",
   "first_seen": "2022-09-05T12:04:01",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "certificatsenfants.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2020-05-28T09:25:57",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "certificatsverts.wallonie.be",
@@ -83844,6 +84244,22 @@
   "tld": "gov.np",
   "first_seen": "2018-07-25T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cftinterc.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2021-11-21T23:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cftinters.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2021-11-21T23:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cg-lib.or.kr",
@@ -85027,6 +85443,14 @@
   "tld": "or.kr",
   "first_seen": "2007-06-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "chargingsurvey.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2023-09-20T03:52:26",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "chargoalinahs.edu.bd",
@@ -93198,6 +93622,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cjxc.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-04T21:46:59",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ck-mileage.gnu.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -98105,6 +98537,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cmul.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2020-09-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cmvalchiavenna.gov.it",
   "country": "IT",
   "tld": "gov.it",
@@ -99006,6 +99446,14 @@
   "tld": "or.kr",
   "first_seen": "2013-02-05T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cnriph.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-03T05:22:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cnrs.nadra.gov.pk",
@@ -102480,6 +102928,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "comms.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-01-21T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "comms.northshorecity.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -102884,6 +103340,14 @@
   "tld": "gov.uk",
   "first_seen": "2011-07-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "communications.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-01-21T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "communications.yvc.ac.il",
@@ -105313,6 +105777,14 @@
   "tld": "gov.uk",
   "first_seen": "2010-08-31T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "congliocchituoi.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2024-04-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "congnghethanglong.edu.vn",
@@ -108402,6 +108874,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cooperazione.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "coophp.nic.in",
   "country": "IN",
   "tld": "nic.in",
@@ -108421,6 +108901,14 @@
   "tld": "gov.lk",
   "first_seen": "2018-11-09T09:22:29",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "coops.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-08T18:59:04",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "coopt.kyutech.ac.jp",
@@ -112721,11 +113209,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "covid-19-api.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2020-04-17T08:39:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "covid-19.gob.es",
   "country": "ES",
   "tld": "gob.es",
   "first_seen": "2020-03-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "covid-19.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-05-06T13:56:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "covid-misp.ncsc.gov.ie",
@@ -112775,6 +113279,14 @@
   "tld": "gov.bw",
   "first_seen": "2023-11-13T07:35:50",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "covid19.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-05-06T13:56:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "covid19.social.gov.ma",
@@ -123634,6 +124146,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "da.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-09-11T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "da.gov.ph",
   "country": "PH",
   "tld": "gov.ph",
@@ -126308,6 +126828,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dat-svil.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dat.gov.ar",
   "country": "AR",
   "tld": "gov.ar",
@@ -126334,6 +126862,14 @@
   "tld": "gob.ar",
   "first_seen": "2016-01-13T18:09:14",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dat.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "data-odp.parliament.uk",
@@ -127596,6 +128132,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dati.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "datix.phcc.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -128399,6 +128943,14 @@
   "tld": "ac.jp",
   "first_seen": "2012-02-27T07:49:37",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ddcspp68.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2020-08-12T08:50:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dde.minedu.gov.gr",
@@ -130093,6 +130645,14 @@
   "tld": "gov.dz",
   "first_seen": "2018-05-05T18:57:32",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "demat.social.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-08T18:59:04",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "demdec.mef.gov.it",
@@ -131859,6 +132419,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "desktop.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "desktop.harrow.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -131934,6 +132502,14 @@
   "tld": "edu.sg",
   "first_seen": "2013-05-16T07:12:46",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "desktopcb.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "desktopvc.nic.in",
@@ -132221,6 +132797,22 @@
   "tld": "gov.ph",
   "first_seen": "2017-05-25T10:41:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dev3b.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dev3f.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dev4.portal.gov.ph",
@@ -133621,6 +134213,14 @@
   "tld": "gob.es",
   "first_seen": "2021-03-09T11:24:37",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dgos-onvs.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-24T14:22:24",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dgovernor.kwale.go.ke",
@@ -135539,6 +136139,14 @@
   "tld": "fgov.be",
   "first_seen": "2015-11-20T14:11:39",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dialin.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-06-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dialin.finance.gov.lb",
@@ -140439,6 +141047,14 @@
   "tld": "gov.ie",
   "first_seen": "2020-11-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "discoverreceiver.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "discoverreceiver.neb-one.gc.ca",
@@ -145495,6 +146111,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "donailsangue.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "donaines.pb.leg.br",
   "country": "BR",
   "tld": "leg.br",
@@ -147322,6 +147946,38 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dpi-declaration-new.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2022-02-07T23:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dpi-declaration.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-02T05:15:58",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dpi-new-declaration.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-07-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dpi-new.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-07-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dpi.gobiernotransparente.gob.cl",
   "country": "CL",
   "tld": "gob.cl",
@@ -147348,6 +148004,14 @@
   "tld": "gov.vn",
   "first_seen": "2017-04-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dpi.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-02T05:15:58",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dpi.vic.gov.au",
@@ -148666,11 +149330,99 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "drees-alzheimer-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2016-01-08T11:56:04",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-apa-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2016-01-08T11:58:10",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-asco-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2016-01-08T11:59:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-asdep-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-07-18T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "drees-chronos.sante.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
   "first_seen": "2014-09-08T14:09:41",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "drees-ecoles-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-07-18T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-ehpa-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2019-09-23T09:21:59",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-enquetes-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-07-18T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-org-comp-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-03-27T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-pch-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2016-02-10T14:21:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "drees-sae-faq.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-07-18T22:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "drees-scribe.sante.gouv.fr",
@@ -148944,6 +149696,14 @@
   "tld": "gov.vn",
   "first_seen": "2017-07-15T04:47:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "drive.egovcloud.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2025-12-15T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "drive.gov.am",
@@ -157227,6 +157987,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "eaupotable.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-31T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "eauxetforets.gov.ma",
   "country": "MA",
   "tld": "gov.ma",
@@ -161854,6 +162622,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "eciemaps.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-09-08T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ecimt.ac.in",
   "country": "IN",
   "tld": "ac.in",
@@ -161957,6 +162733,14 @@
   "tld": "gov.tn",
   "first_seen": "2021-12-06T08:13:58",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "eclaire-api.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-06T14:15:40",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "eclasificacion.hacienda.gob.es",
@@ -162449,6 +163233,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ecodex-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2023-06-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ecodex-tst.just.fgov.be",
   "country": "BE",
   "tld": "fgov.be",
@@ -162475,6 +163267,22 @@
   "tld": "gov.pt",
   "first_seen": "2018-08-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ecodex.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2022-12-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ecodexq-ap.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2022-05-30T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ecodo.ncnp.go.jp",
@@ -163695,6 +164503,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ecxbris-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2021-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ecxbris.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-05-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ecxeem.scourt.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -164227,6 +165051,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "edge.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-10-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "edge.hfea.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -164549,6 +165381,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "edikte.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:09:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ediktsdatei.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:09:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "edinburgh.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -164668,6 +165516,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "edit.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2018-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "edit.mzv.gov.cz",
   "country": "CZ",
   "tld": "gov.cz",
@@ -164694,6 +165550,22 @@
   "tld": "gov.sk",
   "first_seen": "2020-06-30T07:43:06",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "editbeta.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2018-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "editmaps.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2018-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "editor-drp-preprd.overheid.nl",
@@ -164750,6 +165622,22 @@
   "tld": "gob.es",
   "first_seen": "2021-05-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "editquitredtape.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2017-12-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "editsellingtogov.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2017-12-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "edka.gov.gr",
@@ -169862,6 +170750,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "egovcloud.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2021-11-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "egovernmentworkshop.nita.gov.gh",
   "country": "GH",
   "tld": "gov.gh",
@@ -171036,6 +171932,14 @@
   "tld": "bundestag.de",
   "first_seen": "2026-09-29T07:07:53",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "eingaben.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:09:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "einspekcja.umgdy.gov.pl",
@@ -173913,6 +174817,14 @@
   "tld": "parliament.uk",
   "first_seen": "2024-08-06T23:16:53",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "elections-urps.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2020-11-20T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "elections.act.gov.au",
@@ -181300,6 +182212,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "environnement.sante.wallonie.be",
+  "country": "BE",
+  "tld": "wallonie.be",
+  "sector": "health",
+  "first_seen": "2026-10-04T01:16:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "envirostor.dtsc.ca.gov",
   "country": "US",
   "tld": "gov",
@@ -185059,6 +185979,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "eps.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "eps.tabunghaji.gov.my",
   "country": "MY",
   "tld": "gov.my",
@@ -187740,6 +188668,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "esds-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ese.yasar.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -190363,6 +191299,14 @@
   "tld": "gouv.fr",
   "first_seen": "2015-12-29T13:35:13",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "espe-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "espeed.edu.vn",
@@ -196532,6 +197476,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "exec.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2020-01-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "execgw.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2022-01-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "execgwq.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2022-01-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "executivedashboards.nbs.gov.ae",
   "country": "AE",
   "tld": "gov.ae",
@@ -201747,6 +202715,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fb-bris.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2025-03-28T09:33:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fb.citax.gov.tw",
   "country": "TW",
   "tld": "gov.tw",
@@ -205100,6 +206076,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "finance.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "finance",
+  "first_seen": "2026-08-06T14:17:57",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "finance.cet.ac.il",
   "country": "IL",
   "tld": "ac.il",
@@ -205140,6 +206124,14 @@
   "tld": "gov.au",
   "first_seen": "2010-01-18T23:59:42",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2025-12-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "finance.gov.bw",
@@ -205394,6 +206386,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "financien.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "finance",
+  "first_seen": "2026-08-06T14:17:57",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "financierarural.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
@@ -205464,11 +206464,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "finanzas.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "finance",
+  "first_seen": "2026-05-28T14:48:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "finanzas.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
   "first_seen": "2016-09-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2026-06-06T09:24:56",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "finanzas.seg.gob.mx",
@@ -205504,6 +206520,14 @@
   "tld": "gob.mx",
   "first_seen": "2015-01-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "finanzen.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "finance",
+  "first_seen": "2026-08-06T14:17:57",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "finanzonline.bmf.gv.at",
@@ -205658,6 +206682,14 @@
   "tld": "govt.nz",
   "first_seen": "2013-10-22T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "finess.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2022-10-12T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "finforms.wigan.gov.uk",
@@ -206498,6 +207530,14 @@
   "tld": "gov.sg",
   "first_seen": "2014-12-01T23:49:52",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fitosanitari.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-10-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fiu.edu.tr",
@@ -209046,6 +210086,14 @@
   "tld": "gov",
   "first_seen": "2012-07-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "forensik.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-09-14T05:22:30",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "foresight.jst.go.jp",
@@ -212681,6 +213729,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fse.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-06-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fsf.facs.gov.au",
   "country": "AU",
   "tld": "gov.au",
@@ -213190,6 +214246,14 @@
   "tld": "gov.au",
   "first_seen": "2012-11-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fte.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2013-04-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ftex.smrj.go.jp",
@@ -221501,6 +222565,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "geodae.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "geodash.gov.bd",
   "country": "BD",
   "tld": "gov.bd",
@@ -227451,6 +228523,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "glpi-formation.direccte.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2020-09-28T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "glpi-formation.social.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "glpi.mpce.mp.br",
   "country": "BR",
   "tld": "mp.br",
@@ -227463,6 +228551,14 @@
   "tld": "mp.br",
   "first_seen": "2019-11-19T14:00:19",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "glpi.social.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "glpi.tjse.jus.br",
@@ -250159,6 +251255,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "hr-alt.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-01-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "hr-connect-ecc.rp.edu.sg",
   "country": "SG",
   "tld": "edu.sg",
@@ -252875,6 +253979,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "huddle.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2016-08-03T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "hudmobile1.hud.gov",
   "country": "US",
   "tld": "gov",
@@ -253713,6 +254825,14 @@
   "tld": "police.uk",
   "first_seen": "2018-06-21T09:52:24",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "hybrid.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-10-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "hybrid.greenwoodhigh.edu.in",
@@ -254814,6 +255934,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "iah.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2026-08-24T12:46:12",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "iaid.ac.ae",
   "country": "AE",
   "tld": "ac.ae",
@@ -255001,6 +256129,14 @@
   "tld": "ac.lk",
   "first_seen": "2020-02-07T08:22:36",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "iam01.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2016-08-03T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "iamas.ac.jp",
@@ -255596,6 +256732,14 @@
   "tld": "gov",
   "first_seen": "2010-04-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ibas.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2021-09-22T05:12:40",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ibaschoolsystem.edu.pk",
@@ -259110,6 +260254,14 @@
   "tld": "ac.kr",
   "first_seen": "2012-10-25T06:52:05",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ictdashboard.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-12-24T13:45:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "icted.wieducation.edu.np",
@@ -263760,6 +264912,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "iit.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-01-30T09:37:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "iit.kmu.gov.ua",
   "country": "UA",
   "tld": "gov.ua",
@@ -267442,6 +268602,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "inclasns.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-09-09T00:21:42",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "inclusion.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -269976,6 +271144,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ingesa.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-02-12T12:13:32",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ingo.interior.gov.pk",
   "country": "PK",
   "tld": "gov.pk",
@@ -271271,6 +272447,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "insolvenzverwalter.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:09:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "insonqadri.gov.uz",
   "country": "UZ",
   "tld": "gov.uz",
@@ -272116,6 +273300,22 @@
   "tld": "overheid.nl",
   "first_seen": "2025-05-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "integration-pof.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2017-02-09T14:27:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "integration-rof.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2017-02-09T14:27:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "integration.education.govt.nz",
@@ -277464,6 +278664,14 @@
   "tld": "gov.ph",
   "first_seen": "2016-10-28T02:04:31",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "irisv2.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2011-09-19T08:42:29",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "irj.kku.ac.th",
@@ -283904,6 +285112,14 @@
   "tld": "gv.at",
   "first_seen": "2017-02-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ivt.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2018-09-17T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ivv.gov.pt",
@@ -291403,6 +292619,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "join.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-09-25T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "join.finances.gov.tn",
   "country": "TN",
   "tld": "gov.tn",
@@ -294287,11 +295511,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "justice.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "judiciary",
+  "first_seen": "2026-09-02T07:43:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justice.deltastate.gov.ng",
   "country": "NG",
   "tld": "gov.ng",
   "first_seen": "2018-01-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justice.fgov.be",
+  "country": "BE",
+  "tld": "fgov.be",
+  "sector": "judiciary",
+  "first_seen": "2026-09-02T07:42:28",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justice.gc.ca",
@@ -294497,11 +295737,59 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "justitie.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "judiciary",
+  "first_seen": "2026-09-02T07:43:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justitie.fgov.be",
+  "country": "BE",
+  "tld": "fgov.be",
+  "sector": "judiciary",
+  "first_seen": "2026-09-02T07:42:28",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justiz-online.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justiz.fgov.be",
+  "country": "BE",
+  "tld": "fgov.be",
+  "sector": "judiciary",
+  "first_seen": "2026-09-02T07:42:28",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justiz.gv.at",
   "country": "AT",
   "tld": "gv.at",
   "first_seen": "2015-03-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justizonline.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justizonline.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justks.gov.ua",
@@ -297876,6 +299164,14 @@
   "tld": "go.ug",
   "first_seen": "2018-09-25T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "katalog.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-13T10:52:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "katalogos.sedena.gob.mx",
@@ -313985,6 +315281,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "kundmachungen.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:09:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "kunenerc.gov.na",
   "country": "NA",
   "tld": "gov.na",
@@ -317035,6 +318339,22 @@
   "tld": "wallonie.be",
   "first_seen": "2022-10-03T01:23:14",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "laboesi-rec.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-11-11T23:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "laboesi.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-10-24T22:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "labor-elearning.mol.gov.tw",
@@ -325486,6 +326806,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "library.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-05-18T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "library.ganpatuniversity.ac.in",
   "country": "IN",
   "tld": "ac.in",
@@ -331945,6 +333273,14 @@
   "tld": "ac.id",
   "first_seen": "2015-08-26T05:06:55",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "logimed.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2016-06-16T12:24:03",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "logis.gov.za",
@@ -339458,6 +340794,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ma.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2016-08-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ma.rmutsv.ac.th",
   "country": "TH",
   "tld": "ac.th",
@@ -340100,6 +341444,14 @@
   "tld": "gov",
   "first_seen": "2012-05-22T16:28:15",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "macro.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2024-08-18T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "macs.defence.gov.sg",
@@ -344288,6 +345640,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mam.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-03-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mam.gov.mo",
   "country": "MO",
   "tld": "gov.mo",
@@ -345786,6 +347146,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "maps-alt.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2015-11-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "maps-cartes.ec.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -346085,6 +347453,14 @@
   "tld": "govt.nz",
   "first_seen": "2013-01-27T21:42:37",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mapshelp.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-07-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mapua.edu.ph",
@@ -349902,6 +351278,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mcm.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-03-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mcmis.volpe.dot.gov",
   "country": "US",
   "tld": "gov",
@@ -351006,6 +352390,14 @@
   "tld": "gov.za",
   "first_seen": "2017-07-28T11:27:10",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mdm.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-03-29T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mdm.fstb.gov.hk",
@@ -352758,6 +354150,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mediatoren.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2025-08-11T05:25:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "mediatorenliste.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2025-08-11T05:25:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mediawiki.landonline.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -352982,6 +354390,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "medimeddm.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-04T05:09:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "medinet.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -353071,6 +354487,14 @@
   "tld": "ac.il",
   "first_seen": "2014-05-22T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "medle.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "medlib.chungbuk.ac.kr",
@@ -355453,6 +356877,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mes-conseils-covid.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-07-31T08:14:42",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mes-demarches.culturecommunication.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -355549,6 +356981,14 @@
   "tld": "gov.uk",
   "first_seen": "2011-11-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mesconseilscovid.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-03-24T10:22:35",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mesdemarches.agriculture.gouv.fr",
@@ -358652,6 +360092,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "micollab01.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:53:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "micorreo.upp.edu.mx",
   "country": "MX",
   "tld": "edu.mx",
@@ -360505,6 +361953,14 @@
   "tld": "gov.uk",
   "first_seen": "2011-08-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ministers.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-10-01T11:44:11",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ministryinfo.gov.lb",
@@ -367703,6 +369159,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "modulieservizi.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-01-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "modulieservizicoll.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "modulistica.inpdap.gov.it",
   "country": "IT",
   "tld": "gov.it",
@@ -370258,6 +371730,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "monbilanprevention.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-31T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "monbureau.tc.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -370608,6 +372088,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "monparcourspsy.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-03-15T15:37:25",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "monpsy.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-03-15T15:37:42",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "monradrs.srbatom.gov.rs",
   "country": "RS",
   "tld": "gov.rs",
@@ -370641,6 +372137,14 @@
   "tld": "leg.br",
   "first_seen": "2017-09-21T11:51:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "monsoutienpsy.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-03-15T15:37:32",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "montalvo.gob.ec",
@@ -398412,6 +399916,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "nexcloud-ayres.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "nexcol-nceel.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -398473,6 +399985,14 @@
   "tld": "gov.ro",
   "first_seen": "2023-08-06T22:24:40",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "nextcloud.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2020-12-08T11:00:42",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "nextcloud.scau.edu.cn",
@@ -414260,11 +415780,91 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "odin-aah.social-sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-dataviz-drees.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-epi.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-medicaments.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-medimed.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-renfortrh.social-sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-siperf3.social-sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin-suivi-grippe.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "odin.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
   "first_seen": "2017-01-05T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "odin.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "odin.social-sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "odin.wu.ac.kr",
@@ -416358,6 +417958,14 @@
   "tld": "ac.nz",
   "first_seen": "2014-05-27T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ojs.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-09-29T06:54:43",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ojs.serambimekkah.ac.id",
@@ -422863,6 +424471,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "optms.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2026-08-12T05:15:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "optofluidics.sehir.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -423862,6 +425478,14 @@
   "tld": "gov.hk",
   "first_seen": "2018-01-19T04:04:37",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "orobnat.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-16T14:32:17",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "orobreg.sante.gouv.fr",
@@ -425390,11 +427014,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "otp-alt.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "otp.dongwon.mil.kr",
   "country": "KR",
   "tld": "mil.kr",
   "first_seen": "2026-01-14T06:10:29",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "otp.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "otp.lekhwiya.gov.qa",
@@ -426578,6 +428218,14 @@
   "tld": "canada.ca",
   "first_seen": "2020-11-25T14:52:12",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ouverture.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-21T06:04:45",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ouvg.gov.ua",
@@ -428477,6 +430125,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "paas.govcms.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-02T02:06:16",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "paas.hvw-capac.fgov.be",
   "country": "BE",
   "tld": "fgov.be",
@@ -429126,6 +430782,22 @@
   "tld": "gob.mx",
   "first_seen": "2014-12-12T17:04:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pagopa.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pagopacoll.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pagos.cedros.edu.mx",
@@ -432040,6 +433712,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "partraining.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2026-08-24T02:41:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "parttime.nctu.edu.tw",
   "country": "TW",
   "tld": "edu.tw",
@@ -432437,6 +434117,14 @@
   "tld": "gov",
   "first_seen": "2011-06-07T20:15:40",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "passpluscovid.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-02-08T23:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "passport.cs-eport.gov.cn",
@@ -439642,6 +441330,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pf.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2025-12-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pf.kln.ac.lk",
   "country": "LK",
   "tld": "ac.lk",
@@ -441726,6 +443422,14 @@
   "tld": "leg.br",
   "first_seen": "2017-10-24T11:43:36",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "piattaformacronicita.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-10-21T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "piberbach.ooe.gv.at",
@@ -446474,6 +448178,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pmnd-collecte.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pmnhp.nadra.gov.pk",
   "country": "PK",
   "tld": "gov.pk",
@@ -447244,6 +448956,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pnes.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pnet.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -447340,6 +449060,14 @@
   "tld": "gov.ro",
   "first_seen": "2023-01-05T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pnrr.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pnscia-web.interno.gov.it",
@@ -448110,6 +449838,14 @@
   "tld": "gov.sg",
   "first_seen": "2014-11-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pof.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2019-11-25T14:16:17",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pog-mrada.gov.ua",
@@ -449134,6 +450870,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "polpor.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-01-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "polporcoll.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-01-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "polsa.gov.pl",
   "country": "PL",
   "tld": "gov.pl",
@@ -449799,6 +451551,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portail-certif.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2022-10-13T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portail-dgac.aviation-civile.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -450084,6 +451844,14 @@
   "tld": "gc.ca",
   "first_seen": "2014-03-24T17:13:26",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portal-q.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-18T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portal-sit.ssg-wsg.gov.sg",
@@ -451729,6 +453497,14 @@
   "tld": "edu.mx",
   "first_seen": "2016-11-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portal.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-25T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portal.kangan.edu.au",
@@ -454445,6 +456221,14 @@
   "tld": "jus.br",
   "first_seen": "2014-04-15T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portaleacque.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portalemp.bancomext.gob.mx",
@@ -458129,6 +459913,38 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pre-dpi-declaration.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-06T16:36:11",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pre-dpi-new.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-07-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pre-dpi.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-06T05:18:09",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pre-eciemaps.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-07-31T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pre-explotacion.mtin.gob.es",
   "country": "ES",
   "tld": "gob.es",
@@ -460234,6 +462050,22 @@
   "tld": "jus.br",
   "first_seen": "2018-05-14T15:16:37",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "proapp147c.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2023-04-26T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "proapp147s.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2020-05-28T09:34:30",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "proba.lpa.gov.rs",
@@ -462469,6 +464301,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "proveedores.finanzas.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "finance",
+  "first_seen": "2025-04-07T12:37:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "proveedores.jujuy.gov.ar",
   "country": "AR",
   "tld": "gov.ar",
@@ -464569,6 +466409,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "psy-enfant-ado.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-03-15T15:37:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "psy.korea.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -464707,6 +466555,14 @@
   "tld": "gov",
   "first_seen": "2012-09-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "psyenfantado.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-03-15T15:37:42",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pszczyna.sr.gov.pl",
@@ -469868,6 +471724,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "qr-gen.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-03-20T11:01:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "qr.mapo.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -470895,6 +472759,14 @@
   "tld": "gob.ec",
   "first_seen": "2014-10-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "quitredtape.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2017-12-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "quitsmoking.hpa.gov.tw",
@@ -472953,6 +474825,14 @@
   "tld": "gov.lk",
   "first_seen": "2018-12-29T17:31:43",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rancher-ayres.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2020-12-08T11:00:42",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ranchi.nic.in",
@@ -476243,6 +478123,14 @@
   "tld": "go.jp",
   "first_seen": "2011-07-07T15:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "recette-ioa.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "recharge.otago.ac.nz",
@@ -479661,6 +481549,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "registry-ayres.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "registry-registre.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -480774,6 +482670,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "report.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2021-09-22T05:20:12",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "report.keypay.gov.vn",
   "country": "VN",
   "tld": "gov.vn",
@@ -481481,6 +483385,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "reprocann.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2021-11-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "reps.luton.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -481759,6 +483671,14 @@
   "tld": "gov.pk",
   "first_seen": "2018-01-22T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rese.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-01T05:35:53",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "research-hub.griffith.edu.au",
@@ -487128,6 +489048,14 @@
   "tld": "belgium.be",
   "first_seen": "2019-07-16T08:58:30",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rof.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2017-02-09T14:28:49",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "rofuku.go.jp",
@@ -492597,6 +494525,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "saf.finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2025-03-31T08:24:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "safa.edu.pk",
   "country": "PK",
   "tld": "edu.pk",
@@ -493134,6 +495070,14 @@
   "tld": "gov.mo",
   "first_seen": "2019-12-18T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "safpy.finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2025-03-20T14:06:38",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sag-rrs.nic.in",
@@ -494235,6 +496179,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2026-08-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "salud.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -494331,6 +496283,14 @@
   "tld": "gob.ec",
   "first_seen": "2016-02-22T12:21:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "salute.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "health",
+  "first_seen": "2019-02-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "salute.gov.it",
@@ -495187,6 +497147,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sanexlabs.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-04-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sanfernando.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -495437,6 +497405,22 @@
   "tld": "go.kr",
   "first_seen": "2012-06-26T07:34:26",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sanidad-ue.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-08-16T20:21:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-07-27T09:00:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sanidadpolicial.gub.uy",
@@ -496258,6 +498242,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sante-habitat.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-23T06:35:41",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sante-infobase.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -496270,6 +498262,14 @@
   "tld": "canada.ca",
   "first_seen": "2020-08-17T13:39:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-31T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sante.gov.dz",
@@ -498351,11 +500351,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sbc1.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-08T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sbc2-mita.gov.mt",
   "country": "MT",
   "tld": "gov.mt",
   "first_seen": "2020-04-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sbc2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-08T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sbce.cma.gov.kw",
@@ -503062,6 +505078,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sdgliste.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-07-22T19:09:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sdgs.be.gov.ng",
   "country": "NG",
   "tld": "gov.ng",
@@ -504441,6 +506465,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sec.govcms.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-08-17T12:21:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sec.guet.edu.cn",
   "country": "CN",
   "tld": "edu.cn",
@@ -505013,6 +507045,30 @@
   "tld": "gov.uk",
   "first_seen": "2009-03-24T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "secure-cbms-sit.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "secure-cbms-training.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "secure-cbms.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "secure-dr.rba.gov.au",
@@ -509775,6 +511831,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "seg.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2017-10-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "seg.guanajuato.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
@@ -511264,6 +513328,14 @@
   "tld": "edu.mx",
   "first_seen": "2016-02-29T15:39:38",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sellingtogov.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-08-21T18:43:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sellopropyme.gob.cl",
@@ -517846,6 +519918,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sgi.finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2022-04-18T12:27:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sgidashboard.finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2022-04-18T12:28:40",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sgif.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -521906,11 +523994,59 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "si-amiante-api.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "si-amiante.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-08T19:02:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "si-autorisations.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-01T05:40:47",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "si-cport.gob.ar",
   "country": "AR",
   "tld": "gob.ar",
   "first_seen": "2014-04-10T13:34:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "si-enquetes-integ.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-05-16T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "si-enquetes-valid.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-07-24T22:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "si-enquetes.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2024-05-15T22:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "si-iaid.ac.id",
@@ -521953,6 +524089,14 @@
   "tld": "gov.si",
   "first_seen": "2025-09-25T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "si-vic.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-11-13T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "si.centrelink.gov.au",
@@ -522515,6 +524659,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "siapadd.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-06-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "siapame.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
@@ -523075,6 +525227,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sicle.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sicm.compraspublicas.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -523472,6 +525632,14 @@
   "tld": "edu.np",
   "first_seen": "2017-04-10T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sidec.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-31T05:26:39",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sidem.hackney.gov.uk",
@@ -524629,6 +526797,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "signon-alt.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2015-11-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "signon.bca.gv.at",
   "country": "AT",
   "tld": "gv.at",
@@ -524648,6 +526824,14 @@
   "tld": "gov",
   "first_seen": "2010-05-25T13:44:23",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "signon.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2015-11-24T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "signup.nhcue.edu.tw",
@@ -528570,6 +530754,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sirano.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sirauto.justica.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -528624,6 +530816,14 @@
   "tld": "edu.mx",
   "first_seen": "2016-03-15T17:29:38",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sirec.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2018-12-05T13:58:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "siredd.environnement.gov.ma",
@@ -528736,6 +530936,14 @@
   "tld": "gov.co",
   "first_seen": "2011-03-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "siriph.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-15T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sirirach.ac.th",
@@ -529116,6 +531324,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sisac-valid.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2021-02-05T22:41:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sisac.sante.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -529277,11 +531493,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sise-erp.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-02T05:30:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sise.men.gov.ma",
   "country": "MA",
   "tld": "gov.ma",
   "first_seen": "2018-04-02T08:59:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "siseauth.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-13T05:20:16",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "siseg-onep.jefatura.gob.ar",
@@ -529541,6 +531773,14 @@
   "tld": "mp.br",
   "first_seen": "2019-11-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sisn.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2025-11-04T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sisneryschool.edu.np",
@@ -538006,6 +540246,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "social-sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-31T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "social-support.gov.bw",
   "country": "BW",
   "tld": "gov.bw",
@@ -539187,6 +541435,14 @@
   "tld": "gov.tn",
   "first_seen": "2020-04-15T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "solidarites-sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-31T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "solidaritysummit.gou.go.ug",
@@ -541819,6 +544075,14 @@
   "tld": "gov.ar",
   "first_seen": "2017-04-14T12:44:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "spbmumis.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2020-08-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "spbu.uim.edu.my",
@@ -548961,6 +551225,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "stars-infocentre.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2026-01-12T10:46:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "stars.bilkent.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -549897,6 +552169,22 @@
   "tld": "ac.id",
   "first_seen": "2016-08-10T22:11:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "stats.justice.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "judiciary",
+  "first_seen": "2026-08-12T11:46:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "stats.justitie.belgium.be",
+  "country": "BE",
+  "tld": "belgium.be",
+  "sector": "judiciary",
+  "first_seen": "2026-08-12T11:46:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "stats.kamparkab.go.id",
@@ -552851,6 +555139,14 @@
   "tld": "gov.ae",
   "first_seen": "2014-02-16T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "storefront.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2026-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "storefront.health.gov.ie",
@@ -562576,6 +564872,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sz.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2018-08-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sz.government.bg",
   "country": "BG",
   "tld": "government.bg",
@@ -565782,6 +568086,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "tareas.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-03-20T11:01:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "tareecc.nsw.edu.au",
   "country": "AU",
   "tld": "edu.au",
@@ -568132,6 +570444,14 @@
   "tld": "gov.cn",
   "first_seen": "2016-05-24T09:19:38",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "tdmtraining.finance.gov.bd",
+  "country": "BD",
+  "tld": "gov.bd",
+  "sector": "finance",
+  "first_seen": "2026-07-22T02:07:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "tdpi.gob.cl",
@@ -583667,6 +585987,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "trapianti.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-03-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "trasolongo.gov.mn",
   "country": "MN",
   "tld": "gov.mn",
@@ -585345,6 +587673,22 @@
   "tld": "gouv.fr",
   "first_seen": "2017-01-26T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "trovalavoro.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-07-17T08:55:31",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "trovanorme.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-04-22T08:48:32",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "trp.nic.in",
@@ -589650,6 +591994,14 @@
   "tld": "go.kr",
   "first_seen": "2014-12-05T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "txt.finanzas.gov.ar",
+  "country": "AR",
+  "tld": "gov.ar",
+  "sector": "finance",
+  "first_seen": "2022-05-23T10:26:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "txt.sansalvadorer.gov.ar",
@@ -596652,6 +599004,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "unicas-fhir.sanidad.gob.es",
+  "country": "ES",
+  "tld": "gob.es",
+  "sector": "health",
+  "first_seen": "2026-09-13T06:17:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "unicef.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -602546,6 +604906,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vadim-new.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-03T05:10:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "vadim.sante.gouv.fr",
+  "country": "FR",
+  "tld": "gouv.fr",
+  "sector": "health",
+  "first_seen": "2025-12-03T05:10:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "vadmebox1.cwb.gov.tw",
   "country": "TW",
   "tld": "gov.tw",
@@ -603687,6 +606063,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vc1.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-01-27T09:38:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "vc1.tjpr.jus.br",
   "country": "BR",
   "tld": "jus.br",
@@ -603694,11 +606078,43 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vc2.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-13T10:53:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "vc2.tjpr.jus.br",
   "country": "BR",
   "tld": "jus.br",
   "first_seen": "2018-07-27T21:21:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "vc5.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-13T10:53:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "vc6.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-08-13T10:53:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "vc7.justiz.gv.at",
+  "country": "AT",
+  "tld": "gv.at",
+  "sector": "judiciary",
+  "first_seen": "2026-09-08T06:50:32",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "vca.gov.mt",
@@ -609049,6 +611465,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vita.salute.gov.it",
+  "country": "IT",
+  "tld": "gov.it",
+  "sector": "health",
+  "first_seen": "2026-10-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "vita2.virginia.gov",
   "country": "US",
   "tld": "gov",
@@ -613186,6 +615610,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wac.justice.government.bg",
+  "country": "BG",
+  "tld": "government.bg",
+  "sector": "judiciary",
+  "first_seen": "2021-01-21T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wac.kmu.edu.tw",
   "country": "TW",
   "tld": "edu.tw",
@@ -615769,6 +618201,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wccp01.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2016-08-03T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wccportal.wcc.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -616189,6 +618629,78 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wd0ex0.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex1.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-09-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex3.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex4.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex5.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex6.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex7.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd0ex9.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wd2-portal.usps.gov",
   "country": "US",
   "tld": "gov",
@@ -616201,6 +618713,318 @@
   "tld": "gov.hk",
   "first_seen": "2018-10-15T07:20:51",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "wd3ex2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-07-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd3ex3.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-07-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd3ex4.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-07-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd3ex5.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-07-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd3ex6.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2022-02-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd3ex9.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-07-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex0.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2020-03-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex1.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2021-09-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-08-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex3.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-08-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex4.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-08-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex5.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-08-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex6.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2020-03-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex7.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2020-03-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex8.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2020-03-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd4ex9.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2025-08-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex1.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex3.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex4.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex5.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex6.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd5ex7.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex0.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex1.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex3.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex4.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex5.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex6.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex7.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd6ex9.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex1.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex2.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex3.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex4.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex5.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex6.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wd7ex7.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2019-06-12T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "wda.gov.sg",
@@ -619995,6 +622819,14 @@
   "tld": "gov.ge",
   "first_seen": "2011-10-03T09:13:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "webconf.justice.government.bg",
+  "country": "BG",
+  "tld": "government.bg",
+  "sector": "judiciary",
+  "first_seen": "2021-01-21T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "webconf.justiciamilitar.gov.co",
@@ -626220,6 +629052,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wiki-ayres.salud.gob.ar",
+  "country": "AR",
+  "tld": "gob.ar",
+  "sector": "health",
+  "first_seen": "2024-02-14T11:01:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wiki.aimssec.ac.za",
   "country": "ZA",
   "tld": "ac.za",
@@ -628514,6 +631354,14 @@
   "tld": "edu.tw",
   "first_seen": "2016-09-02T07:14:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "woagreporter.finance.gov.au",
+  "country": "AU",
+  "tld": "gov.au",
+  "sector": "finance",
+  "first_seen": "2013-02-18T01:14:56",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "wocatug.slm.go.ug",
