@@ -139,8 +139,29 @@ def main() -> int:
         )
     sectors.sort(key=lambda s: -s["domains"])
 
+    # Domestic vs nearest comparison: the core finding of the vantage model.
+    vantage = []
+    for label, is_domestic in (("domestic", True), ("nearest", False)):
+        sub = df[df.domestic_probe == is_domestic]
+        sr = sub[sub.is_reachable]
+        if not len(sub):
+            continue
+        vantage.append(
+            {
+                "vantage": label,
+                "domains": int(len(sub)),
+                "reachable": int(len(sr)),
+                "reach_pct": round(len(sr) / len(sub) * 100, 1),
+                "accessibility": round(float(sr.sub_accessibility_score.mean()), 1) if len(sr) else None,
+                "security": round(float(sr.sub_security_headers_score.mean()), 1) if len(sr) else None,
+                "maturity": round(float(sr.observatory_maturity_score.mean()), 1) if len(sr) else None,
+                "median_ttfb_ms": int(sr.sub_response_latency_ms.median()) if len(sr) else None,
+            }
+        )
+
     payload = {
         "generated_from": "data/real/global_measurements.csv",
+        "vantage_comparison": vantage,
         "total_rows": int(len(df)),
         "countries_measured": len(countries),
         "all_domestic": bool(df.domestic_probe.all()),

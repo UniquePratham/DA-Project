@@ -1788,6 +1788,27 @@
         'census in the other views remains the large sample.';
     }
 
+    // Domestic vs nearest comparison
+    const vbody = $('#global-vantage tbody');
+    if (vbody && g.vantage_comparison) {
+      const num = (v, suffix = '') =>
+        v === null || v === undefined ? '<span class="muted">not measured</span>' : `${dec(v)}${suffix}`;
+      vbody.innerHTML = g.vantage_comparison
+        .map(
+          (v) =>
+            '<tr>' +
+            `<td><b>${esc(v.vantage)}</b></td>` +
+            `<td class="num">${int(v.domains)}</td>` +
+            `<td class="num">${int(v.reachable)} <span class="muted">${dec(v.reach_pct)}%</span></td>` +
+            `<td class="num">${num(v.accessibility)}</td>` +
+            `<td class="num">${num(v.security)}</td>` +
+            `<td class="num">${num(v.maturity)}</td>` +
+            `<td class="num">${v.median_ttfb_ms === null ? '—' : int(v.median_ttfb_ms) + ' ms'}</td>` +
+            '</tr>'
+        )
+        .join('');
+    }
+
     // Sector breakdown
     const sbody = $('#global-sectors tbody');
     if (sbody && g.sectors) {

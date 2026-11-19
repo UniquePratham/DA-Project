@@ -6870,6 +6870,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "activesync.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "activesync.kzndpw.gov.za",
   "country": "ZA",
   "tld": "gov.za",
@@ -23915,6 +23923,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "api.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2021-04-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "api.fmhaca.gov.et",
   "country": "ET",
   "tld": "gov.et",
@@ -24151,6 +24167,14 @@
   "tld": "gov.il",
   "sector": "judiciary",
   "first_seen": "2026-08-05T07:21:40",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "api.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-22T00:00:00",
   "source": "certificate_transparency_sector"
  },
  {
@@ -28698,6 +28722,14 @@
   "tld": "edu.tr",
   "first_seen": "2017-10-11T13:41:23",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "apply.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-03T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "apply.kaist.ac.kr",
@@ -33961,6 +33993,14 @@
   "tld": "gov",
   "first_seen": "2012-07-19T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "arrestinfo.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-09-20T10:36:14",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "arriendaconserviu.gob.cl",
@@ -42627,6 +42667,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "az-cppm-prod01.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "az-cppm-prod02.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "az-cppm-prod03.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "az.gov",
   "country": "US",
   "tld": "gov",
@@ -49023,6 +49087,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "bcreporter.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2022-06-06T22:32:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "bcreports.gov.mt",
   "country": "MT",
   "tld": "gov.mt",
@@ -50619,6 +50691,14 @@
   "tld": "edu.au",
   "first_seen": "2010-11-24T05:21:48",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "benchbooks.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "bendigo.vic.gov.au",
@@ -72346,6 +72426,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "captiveportal-login.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-05-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "captiveportal.iitd.ac.in",
   "country": "IN",
   "tld": "ac.in",
@@ -80179,6 +80267,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cdarm.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-06-26T12:20:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cdasmgss.edu.bd",
   "country": "BD",
   "tld": "edu.bd",
@@ -87559,6 +87655,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "chiefvictimsadvisor.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-06-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "chiengraknoy.go.th",
   "country": "TH",
   "tld": "go.th",
@@ -93959,6 +94063,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cjesp-omniscreen-ilo.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2025-12-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cjesp-omniscreen.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2025-12-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cjesp-teleste.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2025-12-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cjf.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
@@ -98492,6 +98620,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cms.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2016-05-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cms.kmseremban.edu.my",
   "country": "MY",
   "tld": "edu.my",
@@ -98952,6 +99088,14 @@
   "tld": "edu.pk",
   "first_seen": "2016-11-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cmsiat.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2016-01-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cmsmobile.oro.gov.hk",
@@ -101135,6 +101279,14 @@
   "tld": "edu.tw",
   "first_seen": "2013-12-17T06:41:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cofaa.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-02-04T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cofc.gov.bw",
@@ -110365,6 +110517,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "coronialservices.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-06-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "corot.nise.go.jp",
   "country": "JP",
   "tld": "go.jp",
@@ -114209,6 +114369,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cp.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2026-09-15T09:48:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cp.foj.gov.me",
   "country": "ME",
   "tld": "gov.me",
@@ -114228,6 +114396,14 @@
   "tld": "gov.tw",
   "first_seen": "2015-12-25T06:10:42",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cp.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-09-15T09:48:22",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cp.kimpo.ac.kr",
@@ -125036,6 +125212,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "da.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2016-01-18T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "da.manchester.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -128743,6 +128927,14 @@
   "tld": "parliament.uk",
   "first_seen": "2020-08-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "datalab.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-06-01T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "datalakecadg.mprj.mp.br",
@@ -140299,6 +140491,14 @@
   "tld": "ac.za",
   "first_seen": "2011-03-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "digitalportal.budgetoffice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2023-08-09T18:43:03",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "digitalpostbox.gov.ie",
@@ -181915,6 +182115,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "engage.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2026-10-09T10:27:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "engage.hampshire.nhs.uk",
   "country": "GB",
   "tld": "nhs.uk",
@@ -183931,6 +184139,14 @@
   "tld": "govt.nz",
   "first_seen": "2013-04-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "eom-iat.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2016-04-03T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "eopamravati.edu.in",
@@ -188619,6 +188835,14 @@
   "tld": "edu.ph",
   "first_seen": "2017-04-17T16:03:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ermportal.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2026-07-27T14:53:39",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "erms.ceomanipur.nic.in",
@@ -202269,6 +202493,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "f5-saml.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2020-12-04T02:29:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "f7stceftsfe.statcan.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -207706,6 +207938,14 @@
   "source": "certificate_transparency_sector"
  },
  {
+  "domain_name": "finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2026-08-21T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "finance.gov.sk",
   "country": "SK",
   "tld": "gov.sk",
@@ -210412,6 +210652,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fmojlib.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-08-22T13:58:32",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fmp.gov.ba",
   "country": "BA",
   "tld": "gov.ba",
@@ -211008,6 +211256,14 @@
   "tld": "gov",
   "first_seen": "2012-09-19T16:18:09",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "foia.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-07-27T10:06:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "foiaonline.regulations.gov",
@@ -215045,6 +215301,14 @@
   "tld": "gov.om",
   "first_seen": "2018-11-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fs.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2024-01-08T19:46:12",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fs.kr.gov.ua",
@@ -245513,6 +245777,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "hearings.courtsofnz.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2023-05-08T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "heart.kku.ac.th",
   "country": "TH",
   "tld": "ac.th",
@@ -264553,6 +264825,14 @@
   "tld": "belgium.be",
   "first_seen": "2019-05-22T11:18:32",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ierportal.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2025-08-14T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ierrs.seab.gov.sg",
@@ -290034,6 +290314,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "jdo.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-05-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "jdph.gov.sa",
   "country": "SA",
   "tld": "gov.sa",
@@ -290545,11 +290833,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "jet.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-07-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "jeti.or.kr",
   "country": "KR",
   "tld": "or.kr",
   "first_seen": "2012-11-26T01:09:58",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "jetonline.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-07-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "jetprovostnet.learn.mod.uk",
@@ -297893,6 +298197,14 @@
   "source": "certificate_transparency_sector"
  },
  {
+  "domain_name": "justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-09-25T15:54:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justice.gov.sk",
   "country": "SK",
   "tld": "gov.sk",
@@ -297926,6 +298238,14 @@
   "tld": "government.bg",
   "first_seen": "2017-09-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-06-01T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justice.wa.gov.au",
@@ -302340,6 +302660,14 @@
   "tld": "edu.sa",
   "first_seen": "2017-05-08T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "kbedit.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2019-11-24T21:34:37",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "kbedu.or.kr",
@@ -348893,6 +349221,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mande.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2026-08-22T00:24:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mandeni.gov.za",
   "country": "ZA",
   "tld": "gov.za",
@@ -374034,6 +374370,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mojmecm.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-08-21T11:35:11",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mojoagung.grobogan.go.id",
   "country": "ID",
   "tld": "go.id",
@@ -389821,6 +390165,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mycareer.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mycareer.mpi.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -390141,6 +390493,14 @@
   "tld": "gc.ca",
   "first_seen": "2013-10-10T18:28:22",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mydesktop.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2018-10-01T21:30:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mydesktop.lincoln.ac.nz",
@@ -407718,6 +408078,14 @@
   "tld": "gov.cz",
   "first_seen": "2024-09-23T06:03:35",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "nms.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2025-12-15T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "nms.mot.gov.sa",
@@ -425399,6 +425767,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "oos-akl.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "oos-wlg.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "oos.amiriflight.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -439557,6 +439941,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "payment.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "payment.kcc.gov.zm",
   "country": "ZM",
   "tld": "gov.zm",
@@ -443613,6 +444005,14 @@
   "tld": "gov.ua",
   "first_seen": "2017-05-11T21:30:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "peregrine.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2024-05-17T21:12:25",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pereyaslav-rda.gov.ua",
@@ -452710,6 +453110,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "poc.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2021-05-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "poc.moi.gov.kw",
   "country": "KW",
   "tld": "gov.kw",
@@ -456518,6 +456926,14 @@
   "tld": "gov.ae",
   "first_seen": "2017-10-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portal.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2024-05-17T21:13:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portal.fiu.gov.om",
@@ -489367,6 +489783,14 @@
   "tld": "go.id",
   "first_seen": "2016-10-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "revop.finance.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "finance",
+  "first_seen": "2025-08-01T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "revsandbens.merton.gov.uk",
@@ -543347,6 +543771,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sn-mahi-prod.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2024-03-11T23:40:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sn-mahi.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2021-04-15T02:46:41",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sn-pac.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -569928,6 +570368,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "t1webdr.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2016-02-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "t2-net.ccra-adrc.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -575037,6 +575485,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "te-kura.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "te-pa.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "te-sts.hamilton.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -576163,6 +576627,14 @@
   "tld": "ac.in",
   "first_seen": "2016-11-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "tehononga-tearawhiti.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-07-02T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "tehran.mofa.go.ug",
@@ -581654,6 +582126,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "thrive.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-09-03T19:42:12",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "thsk.gov.tr",
   "country": "TR",
   "tld": "gov.tr",
@@ -583731,6 +584211,14 @@
   "tld": "ac.th",
   "first_seen": "2017-01-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "tkk.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-08-18T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "tkmv.gov.ru",
@@ -589082,6 +589570,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "training.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2026-08-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "training.kcg.gov.tw",
   "country": "TW",
   "tld": "gov.tw",
@@ -591414,6 +591910,14 @@
   "tld": "gov.al",
   "first_seen": "2017-06-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "treaties.justice.gov.ng",
+  "country": "NG",
+  "tld": "gov.ng",
+  "sector": "judiciary",
+  "first_seen": "2024-01-25T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "treaties.parliament.uk",
@@ -615149,6 +615653,14 @@
   "tld": "gov.tw",
   "first_seen": "2015-07-24T07:00:31",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "violencefreenz.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2021-08-31T17:36:09",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "violenciazero.gov.pt",
@@ -641844,6 +642356,14 @@
   "tld": "gov.ar",
   "first_seen": "2017-03-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "www2.justice.govt.nz",
+  "country": "NZ",
+  "tld": "govt.nz",
+  "sector": "judiciary",
+  "first_seen": "2025-12-03T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "www2.justucuman.gov.ar",
