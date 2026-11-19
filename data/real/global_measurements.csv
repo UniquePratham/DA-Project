@@ -951,3 +951,543 @@ limpopoleg.gov.za,https://limpopoleg.gov.za/,200.0,True,HTTP 200,79.6,True,3577.
 gpaa.gov.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T07:07:42Z,all-za-1795071864
 fmcm.treasury.gov.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T07:07:42Z,all-za-1795071864
 apps.statssa.gov.za,http://apps.statssa.gov.za/,503.0,False,WAF challenge (HTTP 503),,,2013.0,,,,,,,,,,,True,False,ZA,jnb,ZA,True,2026-11-19T07:07:42Z,all-za-1795071864
+ethicsonline.unsw.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+caudit.edu.au,https://caudit.edu.au/,403.0,False,WAF challenge (HTTP 403),,,196.0,,,,,,,,,,,True,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+agency.abr.gov.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+brauer.vic.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+cardinia.vic.gov.au,https://cardinia.vic.gov.au/,403.0,False,WAF challenge (HTTP 403),,,226.2,,,,,,,,,,,True,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+oac.sa.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+coffscollege.nsw.edu.au,https://coffscollege.nsw.edu.au/,200.0,True,HTTP 200,84.8,True,216.1,3.27,True,70.0,False,True,wordpress,True,63.1,452797.0,4637d63b590758e49c4ae6c1ae3d23695ff3ebe87a283069d0ed4513ab324bec,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+alesco.uws.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+alrc.gov.au,https://www.alrc.gov.au/,200.0,True,HTTP 200,95.6,True,400.0,1.28,True,0.0,False,True,wordpress,False,49.8,105117.0,b0816d79f6a704f1bd6ba9de15bc7f288b7a0d03a881e89f4ad99cafd0c21d7e,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+eroll.sa.gov.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+sec.qld.edu.au,https://www.sec.qld.edu.au/,200.0,True,HTTP 200,95.0,True,565.5,4.58,True,0.0,False,True,custom_dynamic_cms,False,39.8,573722.0,740b21129fa804d006d9610d01a12ccf86e92c73ee65e607f06e650a087a73ac,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+redmine.adelaide.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+stav.vic.edu.au,https://stav.vic.edu.au/,200.0,True,HTTP 200,95.0,True,599.3,0.95,True,0.0,False,True,custom_dynamic_cms,False,50.7,7561.0,e8aa1f05eb8e6ce49e36c2043b88900df578a97bfadc553441be4c164d24f523,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+gttpuseer.deewr.gov.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+tyims.deewr.gov.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+egrs.jcu.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+vdesktop.adelaide.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+www-iasprd.latrobe.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+aho.nsw.gov.au,https://aho.nsw.gov.au/,200.0,True,HTTP 200,86.0,True,297.4,1.23,True,65.0,True,True,custom_dynamic_cms,True,78.4,120779.0,231bf3d1c10213700ceae0785929447fe879a3f1332459e6fdfd287139619cfa,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+students.mgsm.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+esp.educationau.edu.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+padua.qld.edu.au,https://padua.qld.edu.au/,200.0,True,HTTP 200,65.0,True,149.4,1.11,True,0.0,False,True,wordpress,True,46.2,136010.0,67c6720ecd7f507cef9142488acc64d11e36302abdc2753f7eec7e4baad7deeb,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+statelyncav01.sa.gov.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+burdekin.qld.gov.au,https://www.burdekin.qld.gov.au/Home,200.0,True,HTTP 200,93.8,True,1172.6,2.55,True,100.0,False,True,legacy_asp_net,True,75.5,121593.0,91134fb69f26d3d94186920abef94052e5da37ffcdf8cb1c33ffeca633fb5475,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+sfes.deewr.gov.au,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+forms.business.gov.au,,,False,Timeout,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+wd6ex7.finance.gov.au,,,False,Timeout,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+nswteachers.nsw.edu.au,,,False,Timeout,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+sec.govcms.gov.au,,,False,Timeout,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+famis.sa.gov.au,,,False,Timeout,,,,,,,,,,,,,,False,False,AU,mel,AU,True,2026-11-19T15:15:08Z,all-au-1795101138
+i3govpacgerencial.planejamento.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+agenda.planejamento.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+i3govsalasituacao.planejamento.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+csa.anp.gov.br,https://csa.anp.gov.br/,200.0,True,HTTP 200,95.0,True,417.6,0.67,True,100.0,False,True,custom_dynamic_cms,False,76.5,6512.0,b974dfe3889d346d0919fd2585dce7f004353281df0be2b24c5281b038dbf73a,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+mardeespanha.mg.leg.br,https://mardeespanha.mg.leg.br/,200.0,True,HTTP 200,72.6,True,452.8,0.93,True,0.0,True,True,custom_dynamic_cms,False,54.0,37788.0,bf9651e95b8ff56bf0c8fd46d2ce0b34607f8d3bbeea05c05c8c1ce9386cbcd0,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+capitolio.mg.leg.br,https://www.capitolio.mg.leg.br:443,200.0,True,HTTP 200,74.2,False,643.7,1.27,True,45.0,True,True,custom_dynamic_cms,False,64.7,47205.0,4533f177b0c2c074e9da1f42a161942aaca8371bc0e1ae8d68086ebe607ddd32,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+esporte.gov.br,https://www.gov.br/esporte/pt-br,200.0,True,HTTP 200,95.0,True,1232.3,4.13,True,25.0,True,True,modern_spa,True,62.4,350567.0,dd753d302f9d7d14a5d54ac7577f8b7147d6d357974185b54365fb65d3da38d6,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+cas.trt7.jus.br,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+mp.rj.gov.br,https://mp.rj.gov.br/,200.0,True,HTTP 200,87.3,False,185.8,0.53,True,0.0,False,True,legacy_asp_net,False,49.6,38958.0,af07d1f0cbd5bc47df98c034afab0ae28864a5d408d48dc3481c2b4207612870,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+syncpim.mprs.mp.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+gv3.trt4.jus.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+arinternet.pr.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+prt11.mpt.mp.br,https://prt11.mpt.mp.br/,200.0,True,HTTP 200,77.6,True,753.7,1.52,True,0.0,True,True,legacy_asp_net,False,53.7,59334.0,548e1f370541e9ed1fb62bfe6917342276689cc46446d899b2d3c383e82d16e0,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+servidorconectado.pe.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+conecta.mpf.mp.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+olinda.pe.leg.br,https://www.olinda.pe.leg.br:443,200.0,True,HTTP 200,88.4,False,607.9,1.25,True,45.0,True,True,wordpress,False,69.0,52662.0,c21aa47c3b733c6d2ab22600fbddf21355cd9e4bf3fa48d17718c08a2c3b3578,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+bv.trf2.jus.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+sifge.caixa.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+intelijus.trf2.jus.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+tre-go.jus.br,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+tjconsig.tjpb.jus.br,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+centraldeservicos.trt7.jus.br,https://trtceara.atlassian.net/helpcenter/centraldeservicos/user/login?destination=,200.0,True,HTTP 200,95.0,False,4264.2,7.51,True,70.0,True,False,custom_dynamic_cms,False,56.0,171595.0,136dc250178d597a7f99f906030e544680a3346385b0f4ccf8586027b50f9504,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+mpfdrive.mpf.mp.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+mea.trf5.jus.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+pje2g-suporte.tjba.jus.br,,,False,Timeout,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+metaframe.tjrs.jus.br,,,False,Timeout,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+wwws.prodemge.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+dae.prodemge.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+ouropreto.mg.gov.br,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+sispac.gov.br,,,False,Timeout,,,,,,,,,,,,,,False,False,BR,sao,BR,True,2026-11-19T15:17:43Z,all-br-1795101315
+scrs.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+recherche-search.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+finance-community.canada.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+sra-ads.cic.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+univ.fin.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+ccgu.securitepublique.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+vitalevents.services.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+extranet5.psc-cfp.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+apps-wo.cbsa-asfc.gc.ca,https://apps-wo.cbsa-asfc.gc.ca/,200.0,True,HTTP 200,90.0,False,367.4,0.55,True,45.0,False,False,custom_dynamic_cms,False,56.6,45.0,f2dcc96deec8bca2facba9ad0db55c89f3c4937cd6d2d28e5c4869216ffa81cf,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+pto.gcfm.canada.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+ecalertme.weather.gc.ca,https://ecalertme.weather.gc.ca/,200.0,True,HTTP 200,100.0,True,363.8,0.61,True,25.0,False,True,custom_dynamic_cms,False,59.4,9202.0,eefb0c5f3c27069a0e1cc4598f8cb1cad6c1042b7090c79707cfdd6e405792ac,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+tplogin.justice.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+intra.ccg-gcc.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+info06.hc-sc.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+courriel.tpsgc.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+digital.canada.ca,https://digital.canada.ca/,200.0,True,HTTP 200,95.0,False,325.4,0.59,True,0.0,False,True,custom_dynamic_cms,False,51.7,15821.0,f27601bf1ea4c315b2f398f993c42f45857fbcd72ee2b103106d4bf52cf83251,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+icare-iedec-train.cic.gc.ca,https://icare-iedec-train.cic.gc.ca/,500.0,False,HTTP 500,,,399.8,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+etn-recherche.justice.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+science-catalogue.canada.ca,https://science-catalogue.canada.ca/,200.0,True,HTTP 200,88.3,True,219.6,0.36,True,70.0,False,True,custom_dynamic_cms,False,67.9,5101.0,daffb89293b7de24de16b70ad3ad8d20d8d9665f1b68d0ff639fb5976abdf41c,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+decisions.chrt-tcdp.gc.ca,https://decisions.chrt-tcdp.gc.ca/chrt-tcdp/en/nav.do,200.0,True,HTTP 200,100.0,True,1011.8,1.7,True,60.0,False,True,drupal,False,64.9,27517.0,0724113c9b3892f0b1cf25da086ddd9f08664231f7621a42bdd57bc71ca52efb,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+rpsim1-ssc.fjgc-gccf.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+qc-employer.jobbank.gc.ca,https://qc-employer.jobbank.gc.ca/employer/,200.0,True,HTTP 200,87.0,True,265.2,0.63,True,90.0,False,True,legacy_asp_net,True,76.7,36170.0,2e3e9042d411987fc98dec03db0559ddfa6628088f6e7cdb33d6365656f721a7,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+portico.parl.gc.ca,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+campagne-e-it.oec.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+e-campaign-it.csb.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+biportal-cert.pwgsc-tpsgc.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+mesobligations.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+im.acdi-cida.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+registry-registre.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+blrscr3.egs-seg.gc.ca,,,False,Timeout,,,,,,,,,,,,,,False,False,CA,yto,CA,True,2026-11-19T15:20:12Z,all-ca-1795101469
+sgs.mintrab.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+mantis.dgac.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+sgs.sea.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+en.datachile.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+correo2.previsionsocial.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+rrhh.mintrab.gob.cl,https://rrhh.mintrab.gob.cl/,404.0,False,HTTP 404,,,411.6,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+museorapanui.gob.cl,https://www.museorapanui.gob.cl/,200.0,True,HTTP 200,85.0,False,553.6,1.19,True,35.0,True,True,drupal,False,65.7,54744.0,c4a469492e30f554b8e4aca1cede3fea1bdaa31bffec7f846ac41284ffac6005,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+propiedadintelectual.gob.cl,https://www.propiedadintelectual.gob.cl/,200.0,True,HTTP 200,82.1,False,526.3,1.13,True,35.0,True,True,drupal,False,65.0,52848.0,92f0ea8bb5a249f3817b21c743665beb7ba75f0dd3217df365135a1f5c7d11a1,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+ifisantartico.dgac.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+documentos-cha.digital.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+apps.cifes.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+tools.investchile.gob.cl,https://tools.investchile.gob.cl/,200.0,True,HTTP 200,95.0,True,843.8,1.42,True,85.0,False,True,wordpress,False,70.5,23170.0,bc2d1d55236aae32cc13ee768801997b9a4f904e6f4df40a489111f4bf9d5501,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+csirt.gob.cl,https://csirt.gob.cl/,200.0,True,HTTP 200,95.0,False,745.0,1.65,True,100.0,True,True,custom_dynamic_cms,True,88.5,81114.0,26016ad7ddfed0d99199f6573bb44bef3f450067f700fe74e97a1bb490820641,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+snifa.sma.gob.cl,https://snifa.sma.gob.cl/,200.0,True,HTTP 200,70.0,True,310.9,0.69,True,65.0,False,True,custom_dynamic_cms,False,60.2,35068.0,488476f97bfe0467fa8c3602773d3c6b16b8a776aaa7e8138464a07af9e26942,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+hermes.odepa.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+extranet.injuv.gob.cl,https://extranet.injuv.gob.cl/,200.0,True,HTTP 200,90.0,False,1059.1,1.59,True,20.0,False,False,custom_dynamic_cms,False,47.2,83.0,ceec497ef94b7a10e5e6ead29bc1f4ad6b9649b30136d784804ddc106f124a96,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+dirac.gob.cl,https://www.dirac.gob.cl/,200.0,True,HTTP 200,55.0,False,737.8,1.74,True,100.0,False,True,custom_dynamic_cms,False,61.3,97431.0,2ac684af0817a64c058a31c357f4e10db311337fd3344ff08f5f22a010542e9a,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+bibliomoviles.gob.cl,https://www.bibliomoviles.gob.cl/,200.0,True,HTTP 200,87.5,False,545.7,1.11,True,60.0,True,True,drupal,False,72.9,44830.0,ac74d5afebf795dc59b61cb48845f163bb3b2a8ffa1540641bc55b089e7689f2,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+mi.superdesalud.gob.cl,https://mi.superdesalud.gob.cl/,404.0,False,HTTP 404,,,418.3,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+sinca.mma.gob.cl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+diariooficial.interior.gob.cl,https://www.diariooficial.interior.gob.cl/,200.0,True,HTTP 200,75.2,True,479.5,0.91,True,100.0,False,False,custom_dynamic_cms,False,64.8,29180.0,dd1416f0d3634689fc587f672da52aa0ffe9662059294215644240598cc68941,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+pertinencia.sea.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+sicexsagdesa.sag.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+tdpi.gob.cl,https://www.tdpi.cl/,200.0,True,HTTP 200,87.4,True,393.5,1.04,True,100.0,False,True,wordpress,False,73.1,68446.0,b8dea0b5b5bd54b328ef2e24e2f55de49e1efe2c94d8efda34f6b2b0276c30b2,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+satisfaccion.gob.cl,https://satisfaccion.gob.cl/,200.0,True,HTTP 200,78.3,False,576.3,0.98,True,100.0,True,True,custom_dynamic_cms,False,80.5,18220.0,1f89020ab386e8a684d495d1f1f5765e98c599773eec9c002fd45ee4a10bf1d2,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+mhn.gob.cl,https://www.mhn.gob.cl/,200.0,True,HTTP 200,86.1,False,339.3,1.18,True,35.0,True,True,drupal,False,66.0,103308.0,4d2abaed62f0f2156239847c7f34f28a0993b53d8a3a0a50bdeb2ed0f0b4722b,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+museomartingusinde.gob.cl,https://www.museoyaganusi.gob.cl/,200.0,True,HTTP 200,83.5,False,344.8,0.81,True,35.0,True,True,drupal,False,66.4,44807.0,bdc11159a35d9cf78e731d4fcdf8af9631ce423a835e861fba34b0ec8f7cf6e0,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+cajta.gob.cl,https://www.cajta.cl/,200.0,True,HTTP 200,88.8,True,1136.7,2.25,True,0.0,True,True,custom_dynamic_cms,False,54.9,83666.0,ba8c91e895184b57b3b22baff0db636f1c10e20f0fa05a341c3174f29515e411,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+solicitudes.minagri.gob.cl,https://minagri.gob.cl/,200.0,True,HTTP 200,74.9,True,2381.5,6.21,True,30.0,True,True,wordpress,True,51.3,405218.0,f68b9eb2f80996320d2f0485902ba9cdd43fcc5c98613eb29434e15ce4703221,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+exteo.mtt.gob.cl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,CL,scl,CL,True,2026-11-19T15:22:20Z,all-cl-1795101617
+datscha.bfe.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+zvd01-psh04.zd.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+visitenkarten.bfr.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+zvd01-psh03.zd.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+daisy.bva.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+gsb-quickcheck3.bva.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+wiki.bfe.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+fortbildungsportal.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+osiris.jki.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+dafa-redaktion.ti.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+bbsr.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+bwi3.vti.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+transfer.bkg.bund.de,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+docforms.bfr.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+dip21.bundestag.de,https://dip21.bundestag.de/.enodia/challenge?redirect=%2F,400.0,False,HTTP 400,,,232.7,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+ida.bkg.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+ofcsg2bbm.res.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+bnd.bund.de,https://www.bnd.bund.de/DE/Startseite/startseite_node.html,200.0,True,HTTP 200,82.6,False,231.8,0.95,True,100.0,True,True,custom_dynamic_cms,False,81.9,92396.0,f6e2c988185c7aff6ae92477ea6d4bfb9333af45e1759cd1962d38d3e0615e30,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+ntp.bfr.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+statistik.gesund.bund.de,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+igs.bkg.bund.de,https://igs.bkg.bund.de/,200.0,True,HTTP 200,95.0,False,821.3,1.39,True,100.0,False,True,custom_dynamic_cms,False,74.3,24980.0,924e7b72eff10035b52ed9e61dead53e70c921e6588070d7011e0c7017a5c50b,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+gsb.bva.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+protokolle.bundestag.de,https://www.bundestag.de/.enodia/challenge?redirect=%2Fdokumente%2Fprotokolle,400.0,False,HTTP 400,,,664.0,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+webarchiv.bundestag.de,https://www.bundestag.de/.enodia/challenge?redirect=%2Ferror-webarchiv-1165834,400.0,False,HTTP 400,,,289.5,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+apasbafa.bund.de,https://www.apasbafa.bund.de/APAS/DE/Home/home_node.html,200.0,True,HTTP 200,81.7,False,354.6,0.72,True,100.0,True,True,custom_dynamic_cms,False,82.4,29383.0,f45366446007dc3160421f0e1b48479649860eaf9bedae7226e7c17a56be0635,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+bfdi.bund.de,https://www.bfdi.bund.de/DE/Home/home_node.html,200.0,True,HTTP 200,80.7,False,739.1,2.26,True,100.0,True,True,custom_dynamic_cms,True,82.4,176902.0,f404737a87cb79818a315df8ca1544e8d6cc731e4a5245789e00008077520c5f,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+via.fli.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+mobilesync.fli.bund.de,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+quickcheck1.gsb.bund.de,,,False,Timeout,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+test14.gsb.bund.de,,,False,Timeout,,,,,,,,,,,,,,False,False,DE,fra,DE,True,2026-11-19T15:24:40Z,all-de-1795101746
+redtrabaja.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+desa-servicios.mapama.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+desa-servicio.mapa.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+eportal.miteco.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+muface.buscador.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+aea.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+fega.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+msps.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+deh.minhafp.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+serviciosmin.gob.es,https://serviciosmin.gob.es/,403.0,False,HTTP 403,,,422.3,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+gp.serviciosmin.gob.es,https://gp.serviciosmin.gob.es/global-protect/login.esp,404.0,False,HTTP 404,,,361.4,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+pasarelaclave.minetur.gob.es,https://pasarelaclave.minetur.gob.es/,403.0,False,HTTP 403,,,462.7,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+sede.aena.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+eportal-t.mapa.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+evaluadd.minetur.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+testat2.empleo.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+pruebasdelta.empleo.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+acceso.funciona.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+aplicaciones.economia.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+petete.minhafp.gob.es,https://petete.tributos.hacienda.gob.es/consultas,200.0,True,HTTP 200,95.0,False,455.8,0.72,True,0.0,True,False,custom_dynamic_cms,False,56.3,4896.0,5f3eb7158e35a68ac9378844aef4192ae12eded4ebd2dcb6e2f6baf20562af63,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+transparencialocal.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+portalwifi2.inclusion.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+sede.muface.gob.es,https://sede.muface.gob.es/,200.0,True,HTTP 200,92.5,False,632.5,1.36,True,70.0,True,True,drupal,False,76.2,63567.0,e423592baab4bf65ab49a4fd1e54ca8337e98f42db684f51164160c931ded64d,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+lve.mtin.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+secegsa.gob.es,https://secegsa.gob.es/,404.0,False,HTTP 404,,,269.6,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+seittsa.gob.es,https://seittsa.gob.es/,200.0,True,HTTP 200,95.0,False,325.5,0.49,True,0.0,True,False,custom_dynamic_cms,False,57.0,502.0,4c282630891fa4f6771890daf6ec380474926393ad2d180099fab9285a8d6bdf,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+clasespasivas.gob.es,https://clasespasivas.gob.es/sitios/sedeclasespasivas/es-ES/Paginas/inicio.aspx,200.0,True,HTTP 200,100.0,True,285.8,0.74,True,100.0,True,True,legacy_asp_net,False,87.8,48391.0,dacee90c02b7b8f879e03d7956679f44b922b35df62a37b2e47f0608e702ad1e,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+sede.puertosdetenerife.gob.es,https://sede.puertosdetenerife.gob.es/,200.0,True,HTTP 200,75.0,True,1046.1,1.95,True,60.0,True,True,wordpress,False,66.7,58475.0,a17e789822d6dee473909e0cb2a77ce5b72731ad709ad66aeb5be5fbb23dda9e,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+transicionjusta.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+sgcmdm.gob.es,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ES,mad,ES,True,2026-11-19T15:26:52Z,all-es-1795101884
+videos.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+sasjs.sante-sports.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+marketing-pme.entreprises.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+biep.fonction-publique.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+stendhal.diplomatie.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+mondmp2.dmp.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+chorus-identite.finances.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+siam.douane.gouv.fr,https://siam.douane.gouv.fr/,403.0,False,WAF challenge (HTTP 403),,,430.4,,,,,,,,,,,True,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+odin.social-sante.gouv.fr,https://odin.social-sante.gouv.fr/,404.0,False,HTTP 404,,,488.2,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+baignades.sante.gouv.fr,https://baignades.sante.gouv.fr/baignades/,200.0,True,HTTP 200,90.0,False,521.5,0.78,True,0.0,False,False,custom_dynamic_cms,False,44.7,114.0,fad9fb15d0d891a60dbbe5357a6df8fc2c10c5cf8f896db7f8fbe8e14329576f,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+concoursc2011.finances.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+sig.ville.gouv.fr,https://sig.ville.gouv.fr/,200.0,True,HTTP 200,93.8,True,467.4,1.62,True,30.0,True,False,custom_dynamic_cms,False,60.8,141652.0,49506e2f69be8ff49f68d3ab5f2ebd2ae0ed2d160b2403344570623edaf2116e,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+eau.agriculture.gouv.fr,https://eau.agriculture.gouv.fr/,403.0,False,WAF challenge (HTTP 403),,,475.1,,,,,,,,,,,True,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+nova.entreprises.gouv.fr,https://nova.entreprises.gouv.fr/,200.0,True,HTTP 200,95.0,False,604.1,0.91,True,100.0,True,False,custom_dynamic_cms,False,80.8,141.0,5e842ca5e3f58ccf05a5ffdcdb1f4721354fef237eada5f32b34da8ef1769027,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+prix-carburants.gouv.fr,https://www.prix-carburants.gouv.fr/,200.0,True,HTTP 200,95.0,False,1026.0,1.82,True,100.0,True,True,custom_dynamic_cms,False,83.0,43291.0,df99cb185e863744d62fc6d88a857f10b285374dabf91bd6128720b9a6059d01,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+monbilanprevention.sante.gouv.fr,https://monbilanprevention.sante.gouv.fr/,200.0,True,HTTP 200,85.0,True,350.8,0.9,True,35.0,False,False,custom_dynamic_cms,False,51.5,57225.0,2001ed00961bc9b88bb2abe894d84c790239ca6f161f0796ca8631ffc62a82d4,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+inscription-ira.fonction-publique.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+declarationpollution.ecologie.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+monpsy.sante.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+si-vic.sante.gouv.fr,https://si-vic.sante.gouv.fr/,200.0,True,HTTP 200,95.0,True,219.7,0.34,True,75.0,True,True,custom_dynamic_cms,False,81.2,1578.0,3b06c0c628b7921fdbce4f076017bce08fd89786779c509fc77eedac4fe07786,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+recrutement.fonction-publique.gouv.fr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+cybermalveillance.gouv.fr,https://www.cybermalveillance.gouv.fr/,200.0,True,HTTP 200,93.8,False,319.9,1.42,True,60.0,True,True,custom_dynamic_cms,True,78.9,144360.0,07dc84027c627fd9b8c47ade86e92cef73bb75cfa0d341d92294d89b4ba0062f,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+rps.travailler-mieux.gouv.fr,https://rps.travailler-mieux.gouv.fr/,200.0,True,HTTP 200,85.0,True,256.1,0.77,True,35.0,False,False,custom_dynamic_cms,False,51.9,59641.0,6d2a579e2db1b12067521a062072420243de271da1833ae3943b5df80e136353,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+sarthe.gouv.fr,https://www.sarthe.gouv.fr/,200.0,True,HTTP 200,76.1,False,961.2,2.29,True,0.0,True,True,custom_dynamic_cms,True,56.0,130058.0,33e329519d061214835a9085306b897aedfd743eb994831f18621c2da07bacdb,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+assistance.emploi.gouv.fr,https://support.assistance.emploi.gouv.fr/servicedesk/customer/portals,200.0,True,HTTP 200,61.0,True,2344.5,5.75,True,70.0,False,False,custom_dynamic_cms,False,38.5,343165.0,ab782cfb04a5437bd1c2cedd702140c2e636d2e8ce64c5a85da7e34055a1a652,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+drees-alzheimer-faq.sante.gouv.fr,,,False,Timeout,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+cip.interieur.gouv.fr,,,False,Timeout,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+macadam.bercy.gouv.fr,,,False,Timeout,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+valce.travail.gouv.fr,,,False,Timeout,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+pas.sante.gouv.fr,,,False,Timeout,,,,,,,,,,,,,,False,False,FR,cdg,FR,True,2026-11-19T15:29:24Z,all-fr-1795102017
+solihullccg.nhs.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+queenstreetsurgery.nhs.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+ocs.south-ayrshire.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+hbclaims.newcastle.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+appointments.guysandstthomas.nhs.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+meetings.ecis.police.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+ceop.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+testfotoweb.royalnavy.mod.uk,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+reporting.direct.gov.uk,https://www.gov.uk/report-terrorism,200.0,True,HTTP 200,97.0,True,496.9,1.17,True,100.0,False,True,modern_spa,True,80.6,64590.0,91482804f4e2aae074284df1ae4c63ec660c1948bef711a42c100fe178733aaf,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+myeaccount.islington.gov.uk,https://www.islington.gov.uk/login-or-register-for-an-account/Changes-to-customer-accounts,200.0,True,HTTP 200,90.8,True,650.6,1.14,True,70.0,False,True,custom_dynamic_cms,True,71.3,25235.0,9a8222dec235b594ed939f635ecc3cd2ea044644292fa80737da6b2dbad272c6,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+payments.merton.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+hillingdon.gov.uk,https://pre.hillingdon.gov.uk/,200.0,True,HTTP 200,86.0,True,524.0,1.14,True,60.0,False,True,custom_dynamic_cms,True,67.4,53812.0,5378e76fbea855ed92cb1237f0deda717cc333ac4325bb67146fc20490ac4679,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+careers.richmond.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+hertsvalleysccg.nhs.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+devonjobs.gov.uk,https://devonjobs.gov.uk/,200.0,True,HTTP 200,84.1,False,1019.0,2.5,True,25.0,False,True,modern_spa,True,54.0,149881.0,0ef9555cafc57aed4baa3a8a600d86ccb4c8e048453f7e126b128743ba5914cf,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+av.camden.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+mspallowances.scottish.parliament.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+warwickshire.gov.uk,https://www.warwickshire.gov.uk:443/,200.0,True,HTTP 200,78.0,True,869.6,2.03,True,60.0,False,True,custom_dynamic_cms,True,62.3,111628.0,9ff09a2edf83b04d517ff1f7f3c7b8810960bd854720edb71b15fedded727697,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+slp.somerset.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+civilservice.gov.uk,https://www.gov.uk/government/organisations/civil-service,200.0,True,HTTP 200,97.0,True,251.0,0.94,True,100.0,False,True,modern_spa,True,81.3,86470.0,94d01010fa02c5e31f5169dab4395e9dee30610045803f0dcc2db4b986c5e974,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+learningzone.coi.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+secure.lewisham.gov.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+gocd-webdevci.parliament.uk,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+warwickhospital.nhs.uk,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+internetdirect.parliament.uk,,,False,Timeout,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+activesync2.hertfordshire.nhs.uk,,,False,Timeout,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+civilservicelearning.civilservice.gov.uk,,,False,Timeout,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+cheshire.police.uk,,,False,Timeout,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+hydra.stft.nhs.uk,,,False,Timeout,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+gw1.lambeth.gov.uk,,,False,Timeout,,,,,,,,,,,,,,False,False,GB,lhr,GB,True,2026-11-19T15:32:16Z,all-gb-1795102171
+medlcp.tau.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+sif.shaanan.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+uc.bgu.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+learnet.zefat.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+eeportal.technion.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+ccwlc2800u.technion.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+yedion.jce.ac.il,https://yedion.jce.ac.il/,200.0,True,HTTP 200,90.0,False,624.6,0.94,True,0.0,False,False,custom_dynamic_cms,False,44.2,313.0,c63b780b530afd9bd0fef060737b532e7212cb7866c1301757eb969baeed449e,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+nachshon2014.cet.ac.il,https://inactivesite.cet.ac.il/,200.0,True,HTTP 200,90.0,True,867.6,1.32,True,30.0,False,True,custom_dynamic_cms,False,55.5,3430.0,a54d326ca8e98e25916382d22175413c63d5c8b856aeb57565d7a84b259f8602,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+telhai.ac.il,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+ogen.cet.ac.il,https://inactivesite.cet.ac.il/,200.0,True,HTTP 200,90.0,True,954.5,1.45,True,30.0,False,True,custom_dynamic_cms,False,55.1,3430.0,a54d326ca8e98e25916382d22175413c63d5c8b856aeb57565d7a84b259f8602,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+ofakim.cet.ac.il,https://ofakim.cet.ac.il/,200.0,True,HTTP 200,90.0,False,959.4,1.45,True,30.0,False,False,legacy_asp_net,False,50.1,1666.0,abb71c6ab18ab90b23cbe34a2d0cfb3bd93a84ab829d125930afe013ad0d395f,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+gamba.cet.ac.il,https://productplayer.cet.ac.il/gamba,200.0,True,HTTP 200,95.0,False,1089.1,1.68,True,30.0,True,True,custom_dynamic_cms,False,66.0,7622.0,792c4fee79f343e69f347f3644e0fce739ec85fe8283bf508bb5e5bae70a0a49,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+lp2sport.bgu.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+mdesplatform.bezalel.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+smartspaces.tau.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+wpnet.technion.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+lexicon.cet.ac.il,https://inactivesite.cet.ac.il/,200.0,True,HTTP 200,90.0,True,541.4,0.83,True,30.0,False,True,custom_dynamic_cms,False,57.0,3430.0,a54d326ca8e98e25916382d22175413c63d5c8b856aeb57565d7a84b259f8602,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+lis.tau.ac.il,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+beitberl.ac.il,https://www.beitberl.ac.il/,200.0,True,HTTP 200,70.1,True,607.2,2.52,True,35.0,True,True,wordpress,False,57.2,247797.0,5b18e7fdaf327e1193377635c64218fd22a1ade9f52ff7da762e645736675855,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+reading.cet.ac.il,https://eduinactivesite.cet.ac.il/,200.0,True,HTTP 200,70.0,True,476.0,0.74,True,30.0,False,True,custom_dynamic_cms,False,51.3,3299.0,094e72e255ba1f38551300f34f2ce86b55d1b59a7a1b7367db5e5a424ba17c73,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+centrabridge.cet.ac.il,,,False,TooManyRedirects,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+biomed.technion.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+itemsdepot.cet.ac.il,https://itemsdepot.cet.ac.il/,403.0,False,WAF challenge (HTTP 403),,,1265.2,,,,,,,,,,,True,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+labs.cet.ac.il,https://labs.cet.ac.il/,530.0,False,HTTP 530,,,197.8,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+centraintegration.cet.ac.il,https://centraintegration.cet.ac.il/,403.0,False,WAF challenge (HTTP 403),,,486.2,,,,,,,,,,,True,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+smalim.cet.ac.il,https://inactivesite.cet.ac.il/,200.0,True,HTTP 200,90.0,True,1049.5,1.6,True,30.0,False,True,custom_dynamic_cms,False,54.7,3430.0,a54d326ca8e98e25916382d22175413c63d5c8b856aeb57565d7a84b259f8602,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+qbuy.qsm.ac.il,https://qbuy.qsm.ac.il/,200.0,True,HTTP 200,85.0,True,2313.9,4.02,True,0.0,True,True,wordpress,True,53.4,83626.0,0cf84a9ce0edc80b00c0f2e66d27978aab862416fba0fac5b76a8e9ea1e1f8dc,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+rishum.jct.ac.il,https://rishum.jct.ac.il/Home/login,200.0,True,HTTP 200,95.0,False,13977.7,21.04,True,0.0,True,True,custom_dynamic_cms,False,43.5,11124.0,e3f1f8bfd84ffdf86e9fa599779512249fcf38d26da68a1a7ad10ac260c94eee,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+samba1.huji.ac.il,,,False,Timeout,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+crypto.biu.ac.il,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IL,tlv,IL,True,2026-11-19T15:34:42Z,all-il-1795102340
+brharnecoa.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+hptsc.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+kmctlawcollege.kmct.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+erms.ceomanipur.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+sjri.res.in,https://sjri.res.in/,200.0,True,HTTP 200,89.3,False,265.4,0.62,True,0.0,False,True,custom_dynamic_cms,False,49.9,33810.0,e032d7a520913ac19b2ec4395694fab8678f1b5857cfc304c73236957b101458,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+gcac.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+kv1roorkee.ac.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+math.tifrbng.res.in,https://math.tifrbng.res.in/,200.0,True,HTTP 200,90.0,False,581.6,0.87,True,0.0,False,False,custom_dynamic_cms,False,44.4,231.0,ddf45dbfce45361cabec688c6137be763fdc4a2fd2b6b5143e8e4c7274da844c,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+esamadhan.hp.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+tsdpharm.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+atritapovan.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+kl.cmdashboard.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+deensacademy.edu.in,https://deensacademy.edu.in/,404.0,False,HTTP 404,,,1526.9,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+jtfp.jntbgri.res.in,https://jtfp.jntbgri.res.in/index.php/jtfp,200.0,True,HTTP 200,87.5,True,1600.8,2.63,True,0.0,False,True,custom_dynamic_cms,False,43.4,35058.0,399971535cbfb89874610c793fe41357545ba94bd6a7532dae25fed85f161c4c,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+testing.cirb.res.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+warangalurban.nic.in,https://hanumakonda.telangana.gov.in/,200.0,True,HTTP 200,98.6,True,1072.3,2.84,True,0.0,True,True,s3waas_drupal,True,66.1,189435.0,8cb27dd39acb019dcc6465d64a06777dd0ca2c6ce54373fa37f1c65eb590e95e,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+mgt.res.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+tiruppur.nic.in,https://tiruppur.nic.in/,200.0,True,HTTP 200,97.7,True,1830.1,3.9,True,0.0,True,True,s3waas_drupal,True,62.6,177347.0,d71da621ab84ca76335cb3027731e56548153028c28cfa5c4b8cfce012a5f1f5,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+biomitra.bicnirrh.res.in,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+owncloud.iitd.ac.in,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+student.thenavodayaacademy.edu.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+sms.edu.in,https://sharadamandirschool.edu.in/,200.0,True,HTTP 200,90.6,True,1464.7,6.06,True,30.0,False,True,wordpress,False,41.5,593235.0,d2e9cd5bfafb4d94103042a672a243820fb05e3e62aaf6134a56cb561aef9917,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+bhimakali.nic.in,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+tirunelveli.nic.in,https://tirunelveli.nic.in/,200.0,True,HTTP 200,96.9,True,1855.0,4.0,True,0.0,True,True,s3waas_drupal,True,62.1,186818.0,0e448f680d4601b5b0d6c917850f7533fb339e772d8b9b2e39d9709526d6de96,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+dalhangyanmanch.res.in,https://dalhangyanmanch.res.in/,200.0,True,HTTP 200,77.8,True,3973.6,6.47,True,0.0,False,True,custom_dynamic_cms,False,28.9,77997.0,76c0448fa5023aa561164e2ec705fbc4d589ce9082f1a7204747df60711b6bac,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+mce.edu.in,https://mce.edu.in/,200.0,True,HTTP 200,94.5,True,2292.8,4.41,True,0.0,True,True,custom_dynamic_cms,True,55.1,148767.0,5302559b9801669102eb5accb01668c5ae686714c2b24cc38a5e263bafed622f,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+aei.edu.in,https://aei.edu.in/,200.0,True,HTTP 200,89.4,True,2705.3,6.7,True,0.0,True,False,custom_dynamic_cms,True,41.8,405540.0,154d536180c2d48e8d51261dc7f6149d631db2d97971edd71a229a76ab6a53c2,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+ch.govdashboard.nic.in,,,False,TooManyRedirects,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+democppp.nic.in,,,False,Timeout,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+annavitran.nic.in,,,False,Timeout,,,,,,,,,,,,,,False,False,IN,blr,IN,True,2026-11-19T15:36:55Z,all-in-1795102487
+nishiodai.env.go.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+cb.takayama-nh.go.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+eng.osaka-u.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+st.ryukoku.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+call.setsunan.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+paki09ni.rukehahaa751.go.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+moodle.iuk.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+cc.toin.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+webct.kyushu-u.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+carewww01.tsuda.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+swm.kobe-shinwa.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+netacademy2.nagaoka-ct.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+city.akashi.lg.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+dream.josho.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+ceweb.hosei.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+courses.niph.go.jp,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+webclass.josai.ac.jp,https://webclass.josai.ac.jp/,200.0,True,HTTP 200,90.0,True,253.1,0.41,True,60.0,False,True,custom_dynamic_cms,False,65.8,4500.0,241acab6a1e872c2660ba8fd5dab913c6ac23ca4bd325a32c4f29ecd212806e5,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+porta.nanzan-u.ac.jp,https://ui.nanzan.ac.jp:443/realms/nanzan/protocol/openid-connect/auth?scope=openid&response_type=code&redirect_uri=https%3A%2F%2Fporta.nanzan-u.ac.jp%2Fportal%2Faction%2Fpt%2Ff01%2FUspt010100&state=x3ug0TKXTzRN0l6XbEV4IwHIblPr4WkrVMlWLY_my6Y&nonce=zbXck2YHCpeknofHa_43FsF-Luy2zmKjPusD9OXNlBA&client_id=porta-pt,200.0,True,HTTP 200,75.0,False,322.1,0.53,True,100.0,False,True,modern_spa,False,70.9,7655.0,ef46c8c08d944be2c8cbe0620d88f3923ae94cde4d3e47773539cf497d5cfc59,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+seidokanri.go.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+wm.saitama-u.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+file.ide.go.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+kitasato.ac.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+city.niihama.lg.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+www4.harp.lg.jp,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+cerd.u-gakugei.ac.jp,https://cerd.u-gakugei.ac.jp/,200.0,True,HTTP 200,90.0,False,251.3,0.38,True,0.0,False,False,custom_dynamic_cms,False,45.9,186.0,8018a54ccb47a3c87a2ea6fb79acf439c75188989470aa21f98a30df050f20fb,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+osakagaigo.ac.jp,https://osakagaigo.ac.jp/,200.0,True,HTTP 200,85.1,True,573.0,1.36,True,0.0,False,True,custom_dynamic_cms,False,46.4,77255.0,91a5015e9797a2a4d4124f8f36e155e9623d6dcf21150a38af95d0b4ee8482cf,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+imc.tut.ac.jp,,,False,Timeout,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+caripas.pu-toyama.ac.jp,,,False,Timeout,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+ms.jaea.go.jp,,,False,Timeout,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+med.kyushu-u.ac.jp,,,False,Timeout,,,,,,,,,,,,,,False,False,JP,itm,JP,True,2026-11-19T15:38:56Z,all-jp-1795102621
+capstone.hanyang.ac.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+hrd.incheon.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+kiporo.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+sign.wsi.ac.kr,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+rms2.yonsei.ac.kr,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+lib.knrda.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+lungca.or.kr,https://lungca.or.kr/,200.0,True,HTTP 200,95.0,False,318.2,0.49,True,0.0,False,True,custom_dynamic_cms,False,52.0,2201.0,1d416a26aca86fc6d89acdf7a576ae3aac5b16c463ff3da40fe01db55afb6d04,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+job.icak.or.kr,https://job.icak.or.kr/,502.0,False,HTTP 502,,,384.5,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+traffic.ydp.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+alpk.or.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+tst-tecb.hometax.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+cyber.joongbu.ac.kr,https://cyber.joongbu.ac.kr/,200.0,True,HTTP 200,93.8,True,461.7,1.08,True,0.0,True,True,custom_dynamic_cms,False,59.9,60246.0,3dcd2d3935f043149772047b0c3c16b96c413b6ffc4b059d237b5ebfe6fd22a4,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+kfpa.or.kr,https://kfpa.or.kr/,200.0,True,HTTP 200,76.5,True,569.9,1.25,True,70.0,True,True,modern_spa,False,71.7,60378.0,29095a1ad07f560b7256da07e0a72cfc8982661fd5858ac7befdd6df616476ba,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+icert.khcu.ac.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+ltec.or.kr,https://ltec.or.kr/,200.0,True,HTTP 200,75.0,True,477.2,1.28,True,0.0,True,True,custom_dynamic_cms,False,53.7,87206.0,f07445b0d6f2313116937313c641db5df41999ce34fd79c959180d988a55688e,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+kinp.or.kr,https://www.kinp.or.kr/,200.0,True,HTTP 200,90.0,True,427.0,0.65,True,0.0,False,True,custom_dynamic_cms,False,50.0,882.0,adca4e03a2341c311dc8c05d418046b8d0e738a79677671027572757e03d3742,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+cpa.go.kr,https://www.cpa.go.kr/,200.0,True,HTTP 200,90.0,False,581.4,0.87,True,0.0,False,False,custom_dynamic_cms,False,44.4,64.0,5ada4f0a93d7ec7687439e76f29334245e7e330a94284bab2fea6d7f8aa8b960,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+consulting2.pen.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+jnsei.go.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+counsel.cu.ac.kr,https://counsel.cu.ac.kr/,200.0,True,HTTP 200,90.0,True,967.2,5.47,True,0.0,True,True,custom_dynamic_cms,False,45.6,616835.0,fc7acde928f9dd6714e47b6aaa4c03d24e6f1e495904301dbde4caa8316ff6ad,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+ostin.oasis.or.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+gds.ggu.ac.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+ssreading.gglib.or.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+eminwon.hc.go.kr,https://eminwon.hc.go.kr/,403.0,False,HTTP 403,,,15838.2,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+ksrs.or.kr,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+jeonbuk.ac.kr,,,False,Timeout,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+lnav.kwu.ac.kr,,,False,Timeout,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+dorm.cue.ac.kr,,,False,Timeout,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+eminwon.namwon.go.kr,,,False,Timeout,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+nanum.namwon.go.kr,,,False,Timeout,,,,,,,,,,,,,,False,False,KR,icn,KR,True,2026-11-19T15:41:16Z,all-kr-1795102740
+comprasdegobierno.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+ivera-cruz.edu.mx,https://ivera-cruz.edu.mx/,403.0,False,WAF challenge (HTTP 403),,,707.6,,,,,,,,,,,True,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+correo.conagua.gob.mx,https://correo.conagua.gob.mx/owa/auth/logon.aspx?url=https%3a%2f%2fcorreo.conagua.gob.mx%2fowa%2f&reason=0,200.0,True,HTTP 200,65.0,True,1027.3,1.92,True,20.0,False,False,legacy_asp_net,False,38.7,58846.0,acea44cc281d0be8724a7c4441fefac83cbf090182ddc40bcdbb02805b9c6189,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+agroasemex.gob.mx,https://agroasemex.gob.mx/login_up.php,200.0,True,HTTP 200,95.0,False,1311.7,2.64,True,35.0,False,True,modern_spa,False,54.3,103894.0,cefd3f0e95b38783ef2431528ebafde2519a0a7eee76358d92352ab8e636334e,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+mexicoconectado.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+guadalajara.gob.mx,https://guadalajara.gob.mx/,200.0,True,HTTP 200,90.0,False,570.1,0.87,True,70.0,False,True,custom_dynamic_cms,False,66.9,2264.0,158bfc33f8e54cd95782a399a7e34735849e11c652f3e68b6f75cce9a3ebf66d,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+piedrasnegras.gob.mx,https://piedrasnegras.gob.mx/,200.0,True,HTTP 200,90.0,True,317.2,1.0,True,0.0,False,True,modern_spa,False,49.0,80380.0,ec784b33c9fec8692494d22df547ac5666850c0e02da7cc8e4da7dcaa63a01a0,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+ius.scjn.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+vzc1.ssp.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+universidadgv.edu.mx,https://universidadgv.edu.mx/,200.0,True,HTTP 200,95.0,False,417.9,0.64,True,0.0,True,True,custom_dynamic_cms,False,61.6,1547.0,8ac225fd461b1bd901a184b199fdb1e2eeced8c62933a66ba08d77ab9750ecf5,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+modalanspiac.edu.mx,https://www.lanspiac.edu.mx/,200.0,True,HTTP 200,86.1,True,2554.2,5.24,True,60.0,True,True,wordpress,False,60.1,216531.0,9f20b95c7736ba8175ce39591bbb3d106ef6554cb3a8619a8fb79961f12e4129,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+ipatria.edu.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+cbta52.edu.mx,https://cbta52.edu.mx/,403.0,False,WAF challenge (HTTP 403),,,242.0,,,,,,,,,,,True,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+colegiocopan.edu.mx,https://colegiocopan.edu.mx/,200.0,True,HTTP 200,86.6,True,600.4,2.06,True,70.0,True,True,custom_dynamic_cms,False,72.3,178389.0,f9daafe3384cc80842d0e21e324cb8a457f91b4276abadc9878983d56583bf94,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+lasallep.edu.mx,https://lasallep.edu.mx/,200.0,True,HTTP 200,88.3,True,665.2,3.18,True,0.0,True,True,legacy_asp_net,False,52.0,334800.0,5e8817b56c69c58f6b8208a1c6379ca71230a029daaaa6007a3396fd35cb8a4b,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+capacitacion.ifaj.edu.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+activesync.conafe.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+pagos.oomapasc.gob.mx,https://pagos.oomapasc.gob.mx/,200.0,True,HTTP 200,95.0,False,390.4,0.6,True,15.0,True,True,custom_dynamic_cms,False,65.5,1744.0,860355cd0ae1ce588c500a0d9ee8f9762b3aca5386469c2c24b070d28ccdb6c4,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+correo.uveg.edu.mx,https://www.google.com/a/uveg.edu.mx/ServiceLogin?service=mail&passive=true&continue=https://mail.google.com/mail/&ss=1&ltmpl=default&ltmplcache=2&emr=1&osid=1,200.0,True,HTTP 200,95.0,False,3185.5,4.79,True,65.0,False,False,custom_dynamic_cms,False,50.4,1289.0,d1237ada9c22962040e8628ee5cf1c4e63283df2744a3cf88d75da76272f05d4,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+ittepic.edu.mx,https://www.tepic.tecnm.mx/,200.0,True,HTTP 200,94.9,False,680.2,2.8,True,0.0,True,True,custom_dynamic_cms,False,55.1,273475.0,52dfcf5ac6c88bcc27815c8acf5781820cf861f6ef28fa71b1c024678a260a8f,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+louispasteur.edu.mx,https://louispasteur.edu.mx/,200.0,True,HTTP 200,67.5,True,8222.6,13.0,True,0.0,True,True,wordpress,False,35.2,101719.0,3cb8d55ef31fe0d306288c0350143579e6978608b7d3732c56ee88232ebded44,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+difsinaloa.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+siiu.uvaq.edu.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+smcorreo3.dipe.gob.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+fotos.upnuruapan.edu.mx,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+conecta3.sedesol.gob.mx,,,False,Timeout,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+dialin.ofsgto.gob.mx,,,False,Timeout,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+keys.pgr.gob.mx,,,False,Timeout,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+sii.it-acapulco.edu.mx,,,False,Timeout,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+correoweb.pjenl.gob.mx,,,False,Timeout,,,,,,,,,,,,,,False,False,MX,mex,MX,True,2026-11-19T15:44:16Z,all-mx-1795102882
+zboregister.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+acp.ondernemersplein.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+picard.mijn.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+componenten-tst.overheid.nl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+zoekdienst.overheid.nl,https://zoekdienst.overheid.nl/,404.0,False,HTTP 404,,,349.7,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+cia.ondernemersplein.overheid.nl,https://cia.ondernemersplein.overheid.nl/,404.0,False,HTTP 404,,,362.2,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+service.omgevingswet.overheid.nl,https://service.omgevingswet.overheid.nl/,404.0,False,HTTP 404,,,336.6,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+overheidsloket.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+organisaties.overheid.nl,https://organisaties.overheid.nl/,200.0,True,HTTP 200,95.0,False,369.4,0.68,True,100.0,True,True,custom_dynamic_cms,False,86.5,18708.0,a5e8da4dbd3159d1b014a7e8e4ddbe1ae881c4a0d4aea576178dc857aafd579a,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+eformulierenmaarssen.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+iknowcimow.omgevingswet.overheid.nl,https://iknowcimow.omgevingswet.overheid.nl/,404.0,False,HTTP 404,,,212.8,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+bag.basisregistraties.overheid.nl,https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag,200.0,True,HTTP 200,73.0,False,945.9,3.39,True,100.0,True,True,modern_spa,True,76.7,302878.0,87910c053461884f7e147b26db8b3c240d19738bcba733f102122cc578145d8d,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+oproepingen.overheid.nl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+brk.basisregistraties.overheid.nl,https://brk.basisregistraties.overheid.nl/,200.0,True,HTTP 200,95.0,False,381.1,0.93,True,100.0,True,True,modern_spa,False,85.7,54780.0,f3c483bf157305bfe8c28b53b1afb1eed0e60e7d3910a4ca1f3d46b8fa7e8a95,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+algoritme.overheid.nl,https://algoritmes.overheid.nl/nl,200.0,True,HTTP 200,95.0,True,1113.1,1.99,True,100.0,True,True,modern_spa,False,82.5,49334.0,260aecda6da97e6c9ecbfabc237481c8a80afc1eb8a15559ce2f41d7c71a7313,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+geozet.koop.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+renvooiservice-eto.overheid.nl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+algoritmen.overheid.nl,https://algoritmes.overheid.nl/nl,200.0,True,HTTP 200,95.0,True,1202.1,2.12,True,100.0,True,True,modern_spa,False,82.1,49334.0,f16de2e9e2deb28e49403f55d57399432ecc7f2de4a78835733948fee10c0086,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+repo-ob.mijn.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+acc7.mijn.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+digikoppeling.omgevingswet.overheid.nl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+developer.overheid.nl,https://developer.overheid.nl/,200.0,True,HTTP 200,95.0,True,250.7,0.78,True,0.0,True,True,custom_dynamic_cms,True,66.2,62319.0,1d4f684a116a67eae1327f2d0cf016f5e4924db8bec3ca864406eecf3c9b2d77,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+renvooiservice.overheid.nl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+data.overheid.nl,https://data.overheid.nl/,200.0,True,HTTP 200,80.0,False,497.2,1.05,True,70.0,True,True,drupal,False,73.3,46455.0,f7277e0d7fe4325793ecd3a59cc7a5b3ceca5b3794a9b25a311e1c7acbb32b1d,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+lvbb-tst.overheid.nl,,,False,TLS error: SSLError,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+omgevingswet.overheid.nl,,,False,TLS error: SSLError,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+dash-ebb-a-az2.mijn.overheid.nl,,,False,Timeout,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+acc1.mijn.overheid.nl,,,False,Timeout,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+dash-ebb-a-az1.mijn.overheid.nl,,,False,Timeout,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+dash-mt.mijn.overheid.nl,,,False,Timeout,,,,,,,,,,,,,,False,False,NL,ams,NL,True,2026-11-19T15:46:43Z,all-nl-1795103062
+transport.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+konstytucjadlanauki.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+msit.gov.pl,https://msit.gov.pl/,503.0,False,HTTP 503,,,335.3,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+grodziskwlkp.sr.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+liderzy.nauka.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+lowicz.sr.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+ostrow.sr.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+poir.parp.gov.pl,https://poir.parp.gov.pl/,200.0,True,HTTP 200,90.0,False,272.4,0.41,True,25.0,False,False,custom_dynamic_cms,False,52.0,212.0,d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+bbn.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+ems.ms.gov.pl,https://prs.ms.gov.pl,200.0,True,HTTP 200,95.0,False,774.9,1.32,True,0.0,True,True,custom_dynamic_cms,False,59.5,24152.0,3acbe2507bdc46997cb388d9ca7993c09695c6b64832fe1aea48a7fc2068e97b,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+lidzbarkwarminski.sr.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+puesc.gov.pl,https://puesc.gov.pl/,200.0,True,HTTP 200,87.5,True,537.7,1.92,True,60.0,True,True,modern_spa,False,70.5,170875.0,971b660e4d553f9a0e26c54c1017e3641f22e23ac301f8c5a708b9e6457bb002,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+tarnobrzeg.sr.gov.pl,https://tarnobrzeg.sr.gov.pl/,200.0,True,HTTP 200,95.0,True,448.6,1.23,True,35.0,True,True,drupal,False,68.6,86321.0,1eba0b4b785b0526bfa2e3a6426186d9d4761c9c71d68f7e0f4ff0f70da2c17f,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+kolejki-online.nfz.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+pol-on.mnisw.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+wybory.msz.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+biznes.gov.pl,https://www.biznes.gov.pl/pl,200.0,True,HTTP 200,97.9,True,985.2,1.83,True,25.0,True,True,custom_dynamic_cms,True,70.1,54411.0,3e9deef4d4d50c5bbe6ab14737d4dd9dc6dd2ab1694d8890478ef4d48253d628,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+newsletter.parp.gov.pl,https://www.parp.gov.pl/,200.0,True,HTTP 200,90.0,False,259.8,0.39,True,25.0,False,False,custom_dynamic_cms,False,52.1,212.0,d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+bialogard.sr.gov.pl,https://bialogard.sr.gov.pl/,403.0,False,HTTP 403,,,73.7,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+esp.ms.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+rio.gov.pl,https://rio.gov.pl/,200.0,True,HTTP 200,95.0,False,333.9,0.74,True,0.0,True,True,custom_dynamic_cms,False,61.3,37296.0,8f9ad23d2b6726cf3430f9d82bf2550d933a720204f7343eccf1ed740f39f56f,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+rf.gov.pl,https://rf.gov.pl/,200.0,True,HTTP 200,90.0,False,1531.3,2.3,True,0.0,False,False,custom_dynamic_cms,False,40.1,212.0,d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+mf.gov.pl,https://www.gov.pl/web/finanse,200.0,True,HTTP 200,84.5,False,2427.8,3.99,True,70.0,True,True,custom_dynamic_cms,False,65.9,53178.0,bfed7dbe316b108211bf410ef22ff47160b3f04cff83c0d645c1024e6828ae00,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+jedrzejow.sr.gov.pl,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+poczta-i.sejm.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+ckp.gov.pl,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+news.archiwa.gov.pl,,,False,Timeout,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+poczta.cba.gov.pl,,,False,Timeout,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+mola.msz.gov.pl,,,False,Timeout,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+mrr.gov.pl,,,False,Timeout,,,,,,,,,,,,,,False,False,PL,waw,PL,True,2026-11-19T15:48:42Z,all-pl-1795103208
+biomolfrontiers.nus.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+online.sgjourney.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+hssehen.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+gpxsvr3.np.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+spsfitnessportal.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+moh-topvsreturns.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+infohub.hpb.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+nushpc.nus.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+lex.cscollege.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+eponline.mom.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+dipnet.mfa.gov.sg,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+weather.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+app.maintenanceofparents.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+2fareg.np.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+schools.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+stg.smu.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+box.stb.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+ror.uat-bgp.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+secure.mas.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+ossia.edu.sg,https://ossia.edu.sg/,200.0,True,HTTP 200,76.2,True,500.0,1.09,True,90.0,False,True,custom_dynamic_cms,False,67.1,52553.0,eb7d57f8e5ccd3f0d97ea914c59e26293b1b6f6992aecfd42190b891ba4c9452,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+app.cpib.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+sgs.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+shs.hpb.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+xn--dgtv4ynrdrx5bdhb.gov.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+learning.curtin.edu.sg,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+rbs.create.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+msf.gov.sg,https://www.msf.gov.sg:443/,202.0,True,HTTP 202,95.0,False,1368.7,2.07,True,0.0,False,True,custom_dynamic_cms,False,47.3,2412.0,7953dd157cbb868015922d6981bd614328201390428cd84e50127feabdf487ef,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+www11.unisim.edu.sg,,,False,Timeout,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+sfa.edu.sg,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+mystamford.sais.edu.sg,,,False,Timeout,,,,,,,,,,,,,,False,False,SG,sgp,SG,True,2026-11-19T15:51:55Z,all-sg-1795103327
+filermanagement.edgarfiling.sec.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+rapids.doleta.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+college.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+tester.senate.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+ebid.nashville.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+secure.greensboro-nc.gov,https://secure.greensboro-nc.gov/,200.0,True,HTTP 200,90.0,False,696.4,1.05,True,0.0,False,False,custom_dynamic_cms,False,43.9,703.0,557b5e9015b4963a130c7039e077b3ec0306d401b6ee13d631721d5d969d2917,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+evidence.dna.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+secure.manchesternh.gov,https://secure.manchesternh.gov/,200.0,True,HTTP 200,90.0,False,759.7,1.14,True,0.0,False,False,custom_dynamic_cms,False,43.6,703.0,557b5e9015b4963a130c7039e077b3ec0306d401b6ee13d631721d5d969d2917,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+grants3.hrsa.gov,https://grants3.hrsa.gov/,200.0,True,HTTP 200,90.0,False,913.6,1.38,True,60.0,False,False,legacy_asp_net,False,57.9,769.0,e25a9084489e6ffa6f5281472b1ecaffbc829e3252f0d5ec1d6fb0e1c9bcc8d3,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+eservices.scottsdaleaz.gov,https://eservices.scottsdaleaz.gov/,200.0,True,HTTP 200,90.0,False,986.4,1.48,True,80.0,False,False,custom_dynamic_cms,False,62.6,0.0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+ixp.llnl.gov,https://ixp.llnl.gov/,200.0,True,HTTP 200,90.0,False,1239.6,1.86,True,25.0,False,False,custom_dynamic_cms,False,47.7,207.0,7c02960642ef49ca2188d5ea3d7d78af11534587446fdad0f65bc9855f3e4672,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+sslx.gta.ga.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+er.inprs.in.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+expresslane.dps.louisiana.gov,https://expresslane.la.gov,200.0,True,HTTP 200,95.0,False,1380.5,2.07,True,45.0,False,False,custom_dynamic_cms,False,53.5,250.0,8de3507319c66fa06b236840785535fedc75eb8232ef85010ca68ee502f97cc9,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+communities.firstresponder.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+durhamcora.durhamcountync.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+immport.niaid.nih.gov,https://immport.niaid.nih.gov/home,200.0,True,HTTP 200,90.0,True,935.5,1.68,True,100.0,False,False,modern_spa,False,67.0,42113.0,96aeca68b7dfdf627b50f76f838814fc78d11354e6ff0926b411aa454ecdc693,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+secure.nashville.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+iowacollegeaid.gov,https://educate.iowa.gov/,200.0,True,HTTP 200,100.0,True,438.1,2.0,True,90.0,False,True,drupal,True,76.5,206696.0,9549bb2dcf9552d024d1cca180cf57210ce7ca9dba2547dc3d9aec6df24f62fe,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+health.wisconsin.gov,,,False,robots.txt disallowed,,,,,,,,,,,,,,False,True,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+ums.jpl.nasa.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+fedpay.gsa.gov,https://fedpay.gsa.gov/,200.0,True,HTTP 200,97.5,True,1384.7,2.21,True,100.0,False,False,legacy_asp_net,False,67.6,19927.0,b701c895ba26ea8672c0e5c4ea999cb2bc062931be5526995d2436ec220b4810,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+pubs.nationalservice.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+dm.omh.ny.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+servicesonline.opm.gov,https://www.servicesonline.opm.gov/,200.0,True,HTTP 200,85.0,True,613.6,1.26,True,60.0,False,True,custom_dynamic_cms,False,61.7,52934.0,e19a9dddcb71862fecbe6a4a42be78b80154e6cee8e42c7734fbaaf0e158cdde,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+mydmv.dmv.ny.gov,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+bk-live-internet.ecf.uscourts.gov,,,False,Timeout,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+idave.flhsmv.gov,,,False,Timeout,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+secure.vermonttreasurer.gov,,,False,Timeout,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+online-livestock.rma.usda.gov,,,False,Timeout,,,,,,,,,,,,,,False,False,US,atl,US,True,2026-11-19T15:54:32Z,all-us-1795103519
+klerksdorp.ca.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+gepf-exc-p02.gepf.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+0-mobiexplore.up.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+studentmailam.wits.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+tourism.kaigarib.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+siyanda.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+vps1.mandeni.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+nyda.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+nltis.transport.gov.za,https://nltis.transport.gov.za/,200.0,True,HTTP 200,90.0,False,268.2,0.4,True,0.0,False,False,custom_dynamic_cms,False,45.8,198.0,9c26faef37f17dd65716787dac939cb0d970b8f7624be184f4463c897a5640c8,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+itsupport.dkm.gov.za,https://itsupport.dkm.gov.za/pages/UI.php,200.0,True,HTTP 200,92.0,False,364.9,0.62,True,35.0,False,False,custom_dynamic_cms,False,54.5,11587.0,777d48e7900adb2af6ed7ba7f6f93f9756a86e3394a7c819c414002ea09fb0d3,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+my.milpark.ac.za,https://helpdesk.milpark.ac.za/login,200.0,True,HTTP 200,80.0,False,420.0,0.68,True,100.0,False,True,custom_dynamic_cms,False,72.0,7369.0,aca7c44ad7c95142de58a3b8090967ababe5cfb5f0476713d2340f20db93a38e,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+password.uct.ac.za,https://password.uct.ac.za/,200.0,True,HTTP 200,90.0,False,361.3,0.54,True,25.0,False,False,custom_dynamic_cms,False,51.6,82.0,49a9c061ce4a37bf383a7f01905764a4433be5e7217ecd3f672e88ebb6e58a2e,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+roam.usaf.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+engcobolm.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+wam.seals.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+pipe01.gmtwc.gov.za,https://pipe01.gmtwc.gov.za/,404.0,False,HTTP 404,,,150.2,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+itirele.justice.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+rustenburg.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+gfn.daff.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+ulturfapp.ul.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+cput.ac.za,https://cput.ac.za/,200.0,True,HTTP 200,92.6,True,200.1,1.09,True,85.0,False,True,legacy_asp_net,True,75.8,120921.0,f4100a90c36770e76e989832612e4bf95930fd8cea8b19d09a921af1ca59fa5f,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+local.ukzn.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+cybershot.kaigarib.gov.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+letsemeng.gov.za,https://www.letsemeng.fs.gov.za/,200.0,True,HTTP 200,77.5,False,3578.2,5.7,True,20.0,False,False,wordpress,False,31.1,50680.0,43d032f0e478f96cfa0b8540a2c2b3314fe3f5038e6d996fee71e2d1aaf24b52,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+stboos.sun.ac.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+khaecmadmn.pgwc.gov.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+westonaria.gov.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+uc-acs.uct.ac.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+web.gpw.gov.za,,,False,Timeout,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677
+nzg.ac.za,,,False,DNS or connection failure,,,,,,,,,,,,,,False,False,ZA,jnb,ZA,True,2026-11-19T15:57:02Z,all-za-1795103677

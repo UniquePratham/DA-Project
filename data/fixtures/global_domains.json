@@ -7250,6 +7250,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ada.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ada.gov.ba",
   "country": "BA",
   "tld": "gov.ba",
@@ -24981,6 +24989,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "aplicaciones.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "aplicaciones.fomento.gob.es",
   "country": "ES",
   "tld": "gob.es",
@@ -25392,6 +25408,14 @@
   "tld": "gov.tw",
   "first_seen": "2014-04-18T02:05:18",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "apmmef.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "apms.infrastructure.gov.au",
@@ -33607,6 +33631,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "aroteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "arouca.unasus.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -35877,6 +35909,14 @@
   "tld": "edu.au",
   "first_seen": "2010-10-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "askus.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "askusanything.ac.nz",
@@ -48774,6 +48814,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "bcroportal.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "bcroteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "bcrp.gob.pe",
   "country": "PE",
   "tld": "gob.pe",
@@ -53170,6 +53226,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "bienes.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "bienesdelestado.gob.ar",
   "country": "AR",
   "tld": "gob.ar",
@@ -54708,6 +54772,22 @@
   "tld": "gov",
   "first_seen": "2012-06-19T17:09:45",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "birepositorio.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "birepositorioprb.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "birganj.nepalimmigration.gov.np",
@@ -66432,6 +66512,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "businessnumber.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-05-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "businessportal.southeastiep.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -70900,6 +70988,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "canada.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "canadabuys.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -70912,6 +71008,14 @@
   "tld": "gc.ca",
   "first_seen": "2015-10-20T19:13:54",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "canadiensensante.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "health",
+  "first_seen": "2025-12-22T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "canakcimuftulugu.gov.tr",
@@ -95547,6 +95651,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cloud.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cloud.forest.go.th",
   "country": "TH",
   "tld": "go.th",
@@ -101940,6 +102052,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "collaboration.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "collaboration.london.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -107578,6 +107698,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "consultez-nous.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "consulting.gnjje.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -111989,6 +112117,14 @@
   "tld": "gov",
   "first_seen": "2012-09-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "corresponderse.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "corretor.trt9.jus.br",
@@ -128241,6 +128377,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "datos.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "datos.gob.cl",
   "country": "CL",
   "tld": "gob.cl",
@@ -130727,6 +130871,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "demandez-nous.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "demat.social.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -130789,6 +130941,14 @@
   "tld": "mil.kr",
   "first_seen": "2026-03-12T05:31:16",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "demo-collaboration.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "demo-esupport.lmra.gov.bh",
@@ -131230,6 +131390,14 @@
   "tld": "gob.mx",
   "first_seen": "2015-08-18T00:08:40",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "denuncias.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "denunciecorrupcion.gov.co",
@@ -133189,6 +133357,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "devijpapp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-11-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "devlearn.ufs.ac.za",
   "country": "ZA",
   "tld": "ac.za",
@@ -133271,6 +133447,14 @@
   "tld": "gov.hk",
   "first_seen": "2018-06-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "devpjaapp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-12-08T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "devportal.nagoya-u.ac.jp",
@@ -136234,6 +136418,14 @@
   "tld": "gov.lb",
   "first_seen": "2014-02-20T10:21:52",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dialin.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2018-11-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dialin.findeter.gov.co",
@@ -143062,6 +143254,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dlsutv.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-10-05T13:47:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dlszobel.edu.ph",
   "country": "PH",
   "tld": "edu.ph",
@@ -143872,6 +144072,14 @@
   "tld": "gov.np",
   "first_seen": "2018-08-07T09:53:05",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dmteam.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-06-04T20:46:21",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dmulms1.dokkyomed.ac.jp",
@@ -153223,11 +153431,83 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dw-ca.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-collaborationpp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-justmepp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-lexdocspp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dw-pkk.purwakartakab.go.id",
   "country": "ID",
   "tld": "go.id",
   "first_seen": "2016-08-15T01:32:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dw-portal.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-portalpp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-prjpp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-search.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dw-searchpp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dw.doi.gov",
@@ -170377,6 +170657,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "egcs.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-02-22T17:33:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "egcsbe.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-02-22T17:38:20",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "egcsfe.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-02-22T17:33:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "egdbooking.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -186434,6 +186738,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "equipesm.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-06-04T20:46:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "equite.edsc.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -190726,6 +191038,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "esinafip.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2020-02-04T03:35:19",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "esinet.norfolk.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -193729,6 +194049,14 @@
   "tld": "gov.sg",
   "first_seen": "2016-03-03T01:59:22",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "etn-recherche.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "etn.gu.gov.si",
@@ -198039,6 +198367,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "expedientesdigitales.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:21:15",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "expedr.nba.gov.cy",
   "country": "CY",
   "tld": "gov.cy",
@@ -198221,6 +198557,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "explore.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-11T20:05:27",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "explore.up.ac.za",
   "country": "ZA",
   "tld": "ac.za",
@@ -198233,6 +198577,22 @@
   "tld": "gov.ro",
   "first_seen": "2022-09-19T15:23:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "exploremds.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-11T20:05:27",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "explorepbi.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-11T20:05:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "explorer.asc-csa.gc.ca",
@@ -201889,6 +202249,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "famille.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "family.dlszobel.edu.ph",
   "country": "PH",
   "tld": "edu.ph",
@@ -201929,6 +202297,14 @@
   "tld": "or.kr",
   "first_seen": "2013-03-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "family.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "family.kongju.ac.kr",
@@ -204151,6 +204527,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fee-payments.health.canada.ca",
+  "country": "CA",
+  "tld": "canada.ca",
+  "sector": "health",
+  "first_seen": "2026-02-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "feecollection.psgtech.ac.in",
   "country": "IN",
   "tld": "ac.in",
@@ -204758,6 +205142,14 @@
   "tld": "gov.sa",
   "first_seen": "2017-07-23T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "feteh.gov.et",
+  "country": "ET",
+  "tld": "gov.et",
+  "sector": "judiciary",
+  "first_seen": "2025-05-24T12:39:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fetp.edu.sa",
@@ -207616,6 +208008,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fiteh.gov.et",
+  "country": "ET",
+  "tld": "gov.et",
+  "sector": "judiciary",
+  "first_seen": "2025-05-24T15:23:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fitforlife.westmidlands.nhs.uk",
   "country": "GB",
   "tld": "nhs.uk",
@@ -209295,6 +209695,22 @@
   "tld": "gob.cl",
   "first_seen": "2019-07-22T11:07:31",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "foaea-ivr-api.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2025-05-26T13:50:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "foaea-ivr-prod-api.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "foci.anl.gov",
@@ -214815,6 +215231,14 @@
   "tld": "gov.co",
   "first_seen": "2015-05-07T22:42:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fund-fina.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-05-27T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fund.cmc.or.kr",
@@ -224089,6 +224513,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "gestion.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "gestion.inase.gov.ar",
   "country": "AR",
   "tld": "gov.ar",
@@ -224136,6 +224568,14 @@
   "tld": "gouv.fr",
   "first_seen": "2014-12-12T10:34:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "gestionaplicaciones.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2019-03-01T14:53:52",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "gestioncobranzaics.bancoagrario.gov.co",
@@ -252123,6 +252563,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "hrms-sgrh.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-03-30T18:35:33",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "hrms.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
@@ -252380,6 +252828,14 @@
   "tld": "gov",
   "first_seen": "2011-11-29T19:57:55",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "hrtrn.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-13T13:57:09",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "hrts.tn.gov",
@@ -263455,6 +263911,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ifolio-tr.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2025-11-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ifolio.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2025-11-18T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ifoms-stg.mfa.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
@@ -265281,6 +265753,14 @@
   "tld": "edu.tr",
   "first_seen": "2017-09-18T07:51:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ijpapp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ijro.gov.uz",
@@ -274333,6 +274813,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "interprb.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "intersc.tsukuba.ac.jp",
   "country": "JP",
   "tld": "ac.jp",
@@ -278613,6 +279101,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ire.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "irec.unisa.ac.za",
   "country": "ZA",
   "tld": "ac.za",
@@ -279669,6 +280165,14 @@
   "tld": "ac.jp",
   "first_seen": "2011-09-02T07:30:51",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "isc-pdr.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "isc-w3.jaist.ac.jp",
@@ -295192,6 +295696,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "jupcsccmcmg.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-02-18T18:38:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "jupem.gov.my",
   "country": "MY",
   "tld": "gov.my",
@@ -295542,6 +296054,62 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "jus-ott3.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jus-ott4.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jus-ottc.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jus-ssm1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-05-09T21:47:09",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jusaccess-evo.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-10-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jusaccess.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-10-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jusaccess2.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-10-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "jusaccess3.justice.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -295556,6 +296124,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "juscampus-catalogue.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-19T09:09:32",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juscampus.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2025-12-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "juschubut.gov.ar",
   "country": "AR",
   "tld": "gov.ar",
@@ -295568,6 +296152,30 @@
   "tld": "leg.br",
   "first_seen": "2017-09-27T06:15:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "juscrmapps.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:38:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juscrmbiprod.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:44:08",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jusdevpsoft.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-04-02T11:53:10",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "jusdnit.dnit.gov.br",
@@ -295610,6 +296218,14 @@
   "tld": "go.kr",
   "first_seen": "2014-03-20T06:56:51",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "juspace.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-05-15T17:24:38",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "jusrionegro.gov.ar",
@@ -295682,6 +296298,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "justemoi.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justica.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -295708,6 +296332,14 @@
   "tld": "belgium.be",
   "sector": "judiciary",
   "first_seen": "2026-09-02T07:43:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justice.canada.ca",
+  "country": "CA",
+  "tld": "canada.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
   "source": "certificate_transparency_sector"
  },
  {
@@ -295759,6 +296391,14 @@
   "tld": "gov.cz",
   "first_seen": "2024-07-08T12:20:44",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justice.gov.et",
+  "country": "ET",
+  "tld": "gov.et",
+  "sector": "judiciary",
+  "first_seen": "2026-10-07T13:08:28",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justice.gov.ge",
@@ -295843,6 +296483,14 @@
   "tld": "go.id",
   "first_seen": "2016-10-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justicetv.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-01-06T13:16:41",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justicia.gob.ec",
@@ -295991,6 +296639,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "justme.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justmobile.just.fgov.be",
   "country": "BE",
   "tld": "fgov.be",
@@ -296003,6 +296659,22 @@
   "tld": "edu.mx",
   "first_seen": "2016-06-23T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justraduire.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-04-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "justranslate.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-04-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justsendit.just.fgov.be",
@@ -296101,6 +296773,174 @@
   "tld": "gov.pt",
   "first_seen": "2018-10-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "juvidb1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-04-17T15:10:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms02.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-13T14:35:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms04.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-13T14:35:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms05.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-12-19T13:19:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms07.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-04T17:11:25",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms08.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-11-19T12:25:39",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms09.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-07-21T17:35:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms10.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-03-10T19:46:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms25.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2022-01-13T13:20:41",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms27.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-27T13:08:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms28.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-27T13:08:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms29.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:41:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms30.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:41:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms31.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-27T13:15:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms32.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-27T13:15:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms33.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:38:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcms34.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:41:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlcsm04.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-03T13:22:31",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlex01.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-11-07T17:46:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvlex02.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-11-07T17:46:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "juvweb05.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-04-17T15:10:21",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "juznobacki.okrug.gov.rs",
@@ -321188,11 +322028,35 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "laws-lois-api.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-01-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "laws-lois.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-03-09T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "laws.gov.bw",
   "country": "BW",
   "tld": "gov.bw",
   "first_seen": "2025-08-11T12:55:39",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "laws.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-03-09T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "laws.lanl.gov",
@@ -321720,6 +322584,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lcms365nlb.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-13T14:35:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "lconf.ooe.gv.at",
   "country": "AT",
   "tld": "gv.at",
@@ -321746,6 +322618,14 @@
   "tld": "gov.hk",
   "first_seen": "2019-06-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "lcsm365nlb.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-13T12:07:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "lcyl.gov.cn",
@@ -324093,6 +324973,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lex.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2018-09-17T14:29:46",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "lexbackend.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-05-11T17:41:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "lexcult.trf2.jus.br",
   "country": "BR",
   "tld": "jus.br",
@@ -324105,6 +325001,14 @@
   "tld": "jus.br",
   "first_seen": "2018-02-09T22:15:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "lexdocs.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "lexforce.mfe.gov.ro",
@@ -324133,6 +325037,30 @@
   "tld": "gob.es",
   "first_seen": "2020-05-05T10:54:47",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "lexprod.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-27T13:08:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "lexreporting.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-08-27T13:15:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "lexwalkmeprod.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2022-01-13T13:20:41",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "leylek.ku.edu.tr",
@@ -333685,6 +334613,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lois-laws.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-03-09T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "lois.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-03-09T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "loja.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -338655,6 +339599,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lyncweb.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2018-11-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "lyncweb.fiscalia.gov.co",
   "country": "CO",
   "tld": "gov.co",
@@ -339206,6 +340158,14 @@
   "tld": "gov.bh",
   "first_seen": "2022-01-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "lyndiscover.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2018-11-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "lynx.nmmu.ac.za",
@@ -362513,6 +363473,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mint.gov.et",
+  "country": "ET",
+  "tld": "gov.et",
+  "sector": "judiciary",
+  "first_seen": "2026-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mint.gov.gh",
   "country": "GH",
   "tld": "gov.gh",
@@ -374715,6 +375683,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "movjped2.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-01-31T19:56:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "movlsa.gov.zw",
   "country": "ZW",
   "tld": "gov.zw",
@@ -376869,6 +377845,14 @@
   "tld": "gov.me",
   "first_seen": "2023-03-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mrs.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-24T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mrsc.vic.gov.au",
@@ -393209,6 +394193,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "nationalteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "nationaluniversity.edu.pk",
   "country": "PK",
   "tld": "edu.pk",
@@ -406516,6 +407508,14 @@
   "tld": "nhs.uk",
   "first_seen": "2013-03-07T20:01:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "northteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "northtec.ac.nz",
@@ -425760,6 +426760,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "oroteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "oroverde.gob.ar",
   "country": "AR",
   "tld": "gob.ar",
@@ -427055,6 +428063,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ot1gcd01.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-09-18T16:11:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ot1gcd04.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-09-18T16:11:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ota.csu.gov.cz",
   "country": "CZ",
   "tld": "gov.cz",
@@ -427365,11 +428389,107 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "otto-pilot.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-09-19T15:14:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otto.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-09-19T15:14:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ottopilot.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-09-19T15:14:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "otuke.go.ug",
   "country": "UG",
   "tld": "go.ug",
   "first_seen": "2018-08-27T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "otvadcnt.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-09-23T18:02:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvaprxy.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-09-23T18:02:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvcapps1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-02-24T13:38:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvfoaea1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-09-09T11:28:27",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvgcims5.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-07-16T14:43:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvgcims6.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-07-16T14:43:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvgcims7.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-01-26T19:53:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvlcms1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2022-09-20T19:47:46",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvlims4.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-09-04T17:14:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "otvorenavlada.gov.hr",
@@ -427384,6 +428504,70 @@
   "tld": "gov.sk",
   "first_seen": "2020-06-09T03:49:50",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "otvppscsp2.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-05-02T18:25:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvppscsp3.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2022-09-27T20:22:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvppscsp6.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-02-27T17:48:25",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvps086.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-05-27T12:50:39",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvps262.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-07-22T12:12:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvsp04.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-10-07T13:37:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvsp05.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-01-30T19:16:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "otvsp10.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-08-06T17:33:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "otx.bozok.edu.tr",
@@ -431254,6 +432438,14 @@
   "tld": "gov.tn",
   "first_seen": "2023-01-18T12:01:26",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "paiements-frais.sante.canada.ca",
+  "country": "CA",
+  "tld": "canada.ca",
+  "sector": "health",
+  "first_seen": "2026-02-27T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "paih.gov.pl",
@@ -440303,6 +441495,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "peoplesoft.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-01-18T14:47:11",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pepdoicms.sp.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -440777,6 +441977,14 @@
   "tld": "gouv.fr",
   "first_seen": "2016-10-25T17:12:19",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "permisos.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "permisv3.pgwc.gov.za",
@@ -445151,6 +446359,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pjaapp.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pjdjscholarship.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -446717,6 +447933,14 @@
   "tld": "gov.ar",
   "first_seen": "2017-05-15T14:30:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "planifico.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "planner.skps.edu.pk",
@@ -449515,6 +450739,38 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "poc2019-ca.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-19T14:09:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "poc2019-lexdocs.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-19T14:09:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "poc2019-prj.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-19T14:09:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "poc2019-search.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-19T14:09:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pochai-sisaket.go.th",
   "country": "TH",
   "tld": "go.th",
@@ -451843,6 +453099,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portail-etn.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portail-ouest.pc.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -452025,6 +453289,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portal-api.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-05-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "portal-aspcore.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2025-06-17T18:14:11",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portal-decs.sa.edu.au",
   "country": "AU",
   "tld": "edu.au",
@@ -452088,6 +453368,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portal-portail.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-05-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portal-portail.nserc-crsng.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -452143,6 +453431,14 @@
   "tld": "gv.at",
   "first_seen": "2015-09-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portal-webform.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2025-06-17T18:14:11",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portal-west.pc.gc.ca",
@@ -462183,6 +463479,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "prj.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "prl.res.in",
   "country": "IN",
   "tld": "res.in",
@@ -464348,6 +465652,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "proteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "protecciondelconsumidor.gov",
   "country": "US",
   "tld": "gov",
@@ -464790,6 +466102,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "prportal.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "prr3.mpf.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -465187,6 +466507,22 @@
   "tld": "gov.co",
   "first_seen": "2015-04-16T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pruebaborrar.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2018-03-21T14:43:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pruebaborrar3.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2018-03-23T18:41:56",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pruebadetalento.uhs.edu.mx",
@@ -465754,6 +467090,14 @@
   "tld": "gov.hk",
   "first_seen": "2009-10-06T02:12:29",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "psdi-spdi.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-06-04T20:46:21",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "psdmedia1.gov.jo",
@@ -472052,6 +473396,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "qroteams.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "qs-mff.minori.gov.it",
   "country": "IT",
   "tld": "gov.it",
@@ -472771,6 +474123,14 @@
   "tld": "gov",
   "first_seen": "2012-03-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "questions.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "questions.medicare.gov",
@@ -478454,6 +479814,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rechercher.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-20T17:03:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rechki.rooivacevichi.gov.by",
   "country": "BY",
   "tld": "gov.by",
@@ -479496,6 +480864,14 @@
   "tld": "leg.br",
   "first_seen": "2017-09-19T13:49:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "redes.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "redesaei.gsi.gov.br",
@@ -491916,6 +493292,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rtftps.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-11-26T12:50:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rtgs.cbb.gov.bh",
   "country": "BH",
   "tld": "gov.bh",
@@ -497156,11 +498540,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "san1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2018-01-09T13:29:20",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "san2.deewr.gov.au",
   "country": "AU",
   "tld": "gov.au",
   "first_seen": "2010-11-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "san2.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2018-01-09T13:29:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "san4.deewr.gov.au",
@@ -498558,6 +499958,14 @@
   "tld": "canada.ca",
   "first_seen": "2020-08-17T13:39:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sante.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "health",
+  "first_seen": "2025-12-22T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sante.gouv.fr",
@@ -506428,6 +507836,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "search.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-03-20T17:03:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "search.mcmc.gov.my",
   "country": "MY",
   "tld": "gov.my",
@@ -513980,6 +515396,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "seminariosmef.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2022-01-24T14:46:09",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "seminarsevents.iras.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
@@ -516031,6 +517455,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "service.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-05-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "service.kuas.edu.tw",
   "country": "TW",
   "tld": "edu.tw",
@@ -516477,6 +517909,14 @@
   "tld": "nic.in",
   "first_seen": "2018-08-23T14:49:16",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "services-sso-au.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-05-27T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "services.aadnc.gc.ca",
@@ -517205,6 +518645,14 @@
   "tld": "gc.ca",
   "first_seen": "2014-10-28T11:44:55",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "servicesauxvictimes.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "serviceseprocess.az.government.bg",
@@ -526628,6 +528076,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sigade.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sigadepru.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sigaeweb.mte.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -530354,6 +531818,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sipjtus.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sipkd.penajamkab.go.id",
   "country": "ID",
   "tld": "go.id",
@@ -531826,6 +533298,14 @@
   "tld": "gouv.fr",
   "sector": "health",
   "first_seen": "2025-12-02T05:30:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sise.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
   "source": "certificate_transparency_sector"
  },
  {
@@ -534224,6 +535704,14 @@
   "tld": "ac.in",
   "first_seen": "2016-11-15T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sjmtv.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-10-05T13:47:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sjoptlrc.gov.et",
@@ -542559,6 +544047,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "soporte1700.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "soportetic.dgac.gob.cl",
   "country": "CL",
   "tld": "gob.cl",
@@ -544604,6 +546100,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "spdi-psdi.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-06-04T20:46:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "spe.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -546319,11 +547823,35 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "spryncapa.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sprynprb.finanzas.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
   "first_seen": "2016-09-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sprynpruebas.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sprynsoporte.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2026-08-30T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sps.agid.gov.it",
@@ -550279,6 +551807,14 @@
   "tld": "gov.uk",
   "first_seen": "2010-12-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ssrs-egcs.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-02-22T17:26:44",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ssru.ac.th",
@@ -561555,6 +563091,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "surveilsante.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "health",
+  "first_seen": "2025-09-02T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "survey-sit.ssg-wsg.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
@@ -562332,6 +563876,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sutcis.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sutd.edu.sg",
   "country": "SG",
   "tld": "edu.sg",
@@ -562974,6 +564526,14 @@
   "tld": "gov.uk",
   "first_seen": "2012-07-10T10:34:23",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "svrskype.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2018-06-08T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "svrsms.edu.in",
@@ -565971,6 +567531,14 @@
   "tld": "go.th",
   "first_seen": "2016-06-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "tableau.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-02-11T20:05:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "tablero.misiones.gov.ar",
@@ -571636,6 +573204,14 @@
   "tld": "or.kr",
   "first_seen": "2013-09-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "techshare.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "techsite.ohio.gov",
@@ -583440,6 +585016,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "tplogin.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-10-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "tpmedellin.gov.co",
   "country": "CO",
   "tld": "gov.co",
@@ -584603,6 +586187,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "training-formation.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2024-02-28T15:07:27",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "training-formation.phac-aspc.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -585658,6 +587250,14 @@
   "tld": "gov",
   "first_seen": "2011-04-20T21:35:17",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "transfer-transfert.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2019-12-09T15:18:37",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "transfer.angus.gov.uk",
@@ -607599,6 +609199,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vehiculos.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "vehiculos.gobernaciondecaldas.gov.co",
   "country": "CO",
   "tld": "gov.co",
@@ -609242,6 +610850,14 @@
   "tld": "gov.co",
   "first_seen": "2012-04-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "victimservices.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "victor.sa.gov.au",
@@ -611435,6 +613051,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "visitas.finanzas.gob.ec",
+  "country": "EC",
+  "tld": "gob.ec",
+  "sector": "finance",
+  "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "visitas.mpsm.gob.pe",
   "country": "PE",
   "tld": "gob.pe",
@@ -612134,6 +613758,30 @@
   "tld": "edu.tr",
   "first_seen": "2017-09-22T08:58:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "vkew-baskin.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2018-09-20T16:31:03",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "vkew-boldly.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2021-05-10T22:29:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "vkew-cables.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2020-09-18T16:11:23",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "vkew-socket.pwgsc.gc.ca",
@@ -618276,6 +619924,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wbims.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2023-02-24T13:38:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wblock.skku.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -620544,6 +622200,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "web1.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "web1.seattle.gov",
   "country": "US",
   "tld": "gov",
@@ -620675,6 +622339,14 @@
   "tld": "go.kr",
   "first_seen": "2008-11-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "web2.justice.gc.ca",
+  "country": "CA",
+  "tld": "gc.ca",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "web2.moeaboe.gov.tw",

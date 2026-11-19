@@ -465,36 +465,55 @@ library gets wrong.
 
 ### 8.12 Sector coverage
 
-Sector is inferred from the hostname, which is reliable for dedicated domains
-(`health.`, `court.`, `police.`) but puts general portals in `general`.
+Sector is inferred from the hostname and, where a ministry index supplied it,
+from the link text. It is reliable for dedicated domains (`health.`, `court.`,
+`police.`) and puts general portals in `general`.
 
-Measured breakdown across 952 domains:
+Measured breakdown across **1,492 domains**:
 
 | Sector | Domains | Reachable | Accessibility | Security |
 | :--- | ---: | ---: | ---: | ---: |
-| general | 612 | 34.8% | 87.1 | 50.5 |
-| education | 212 | 36.3% | 85.8 | 28.1 |
-| judiciary | 41 | 53.7% | 81.3 | 33.0 |
-| health | 33 | 21.2% | 91.2 | 65.0 |
-| transport | 16 | 18.8% | 95.0 | 23.3 |
-| finance | 15 | 13.3% | 92.5 | 47.5 |
-| social | 9 | 22.2% | 90.6 | 12.5 |
-| police | 9 | 0.0% | not measured | not measured |
-| agriculture | 3 | 0.0% | not measured | not measured |
-| defence | 2 | 0.0% | not measured | not measured |
+| general | 958 | 31.6% | 87.6 | 49.0 |
+| education | 343 | 32.9% | 86.1 | 28.8 |
+| judiciary | 53 | 47.2% | 80.9 | 32.6 |
+| health | 51 | 19.6% | 90.8 | 56.5 |
+| transport | 34 | 26.5% | 91.6 | 47.8 |
+| finance | 23 | 13.0% | 90.7 | 61.7 |
+| social | 10 | 20.0% | 90.6 | 12.5 |
+| police | 11 | 0.0% | not measured | not measured |
+| agriculture | 5 | 0.0% | not measured | not measured |
+| defence | 3 | 0.0% | not measured | not measured |
+| environment | 1 | 0.0% | not measured | not measured |
 
-Two findings worth noting. **Health scores highest on security (65.0) and
-accessibility (91.2)** despite being the sector most often assumed to lag.
-**Education scores worst on security (28.1)** across 212 domains, which is the
-largest single-sector deficit in the study.
+Three findings:
+
+1. **Health scores highest on accessibility (90.8) and second on security
+   (56.5)**, contrary to the assumption that health portals lag.
+2. **Education scores worst on security (28.8)** across 343 domains, the
+   largest single-sector deficit in the study.
+3. **Finance has the lowest reachability (13.0%)** but the highest security
+   (61.7) among sectors with data. Tax and treasury portals are heavily
+   protected, which is why they are hard to reach and well hardened.
 
 A sector with no reachable domains shows "not measured" rather than a zero, so
 an empty sample cannot be mistaken for a bad score.
 
-Sector discovery is still running across 93 countries and 9 sectors. It is
-slow because crt.sh throttles aggressively; the script backs off and
-short-circuits a country when throttled rather than burning time on every
-remaining label.
+#### Why sector coverage is uneven, and what was tried
+
+Four discovery methods were attempted:
+
+| Method | Result |
+| :--- | :--- |
+| Certificate Transparency, sector labels | 574 domains, but crt.sh now takes ~38 s per query and often returns nothing |
+| National sitemaps | 39 domains; a sitemap lists its own pages, not other agencies |
+| Agency directories | 424 domains; Poland alone yielded 315 |
+| Ministry indexes | 373 domains; Canada 34, Poland 303 |
+
+The structural limit is that **modern governments use path-based routing on one
+domain rather than a separate domain per agency**. `gov.uk/government/organisations`
+links to `/government/organisations/xxx`, not to `health.gov.uk`. A
+domain-based census therefore cannot reach every ministry in every country, and
+this is a property of how governments deploy websites, not a gap in the method.
 
 ---
 
