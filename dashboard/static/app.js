@@ -1566,10 +1566,10 @@
   let worldFilter = 'all';
 
   const WORLD_STATUS_LABEL = {
-    operational: 'Operational',
-    available: 'Available',
-    resident_required: 'Resident probe',
-    out_of_scope: 'Out of scope',
+    operational: 'Domestic, measured',
+    domestic_ready: 'Domestic, ready',
+    nearest_available: 'Nearest probe',
+    unmeasurable: 'Unmeasurable',
     provisioning: 'Provisioning',
     temporarily_unavailable: 'Temporarily unavailable',
   };
@@ -1603,7 +1603,7 @@
     const legend = $('#world-legend');
     if (legend) {
       const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
-      legend.innerHTML = ['operational', 'available', 'resident_required', 'out_of_scope']
+      legend.innerHTML = ['operational', 'domestic_ready', 'nearest_available', 'unmeasurable']
         .map(
           (s) =>
             `<span class="world-legend__item">` +
@@ -1613,18 +1613,25 @@
         .join('');
     }
 
-    // Provider table
-    const pbody = $('#world-providers tbody');
-    if (pbody && window.WORLD_DATA && window.WORLD_DATA.providers) {
-      pbody.innerHTML = window.WORLD_DATA.providers
+    // Vantage class table
+    const vbody = $('#world-vantages tbody');
+    if (vbody && window.WORLD_DATA) {
+      const vc = window.WORLD_DATA.vantage_counts || {};
+      const rows = [
+        ['domestic', vc.domestic || 0,
+         'Probe inside the country. Supports a claim about what a citizen experiences.'],
+        ['nearest', vc.nearest || 0,
+         'Probe in the closest region, in another country. Real data, but it describes a foreign client\'s view.'],
+        ['unmeasurable', vc.unmeasurable || 0,
+         'Nearest region over 6,000 km away. A latency figure would describe the path, not the portal.'],
+      ];
+      vbody.innerHTML = rows
         .map(
-          (p) =>
+          ([cls, n, meaning]) =>
             '<tr>' +
-            `<td><b>${esc(p.provider)}</b></td>` +
-            `<td class="num">${int(p.regions)}</td>` +
-            `<td class="num">${int(p.countries)}</td>` +
-            `<td class="num">$${Number(p.cheapest_hourly_usd).toFixed(4)}</td>` +
-            `<td class="muted">${esc(p.note)}</td>` +
+            `<td>${futureBadge(cls === 'domestic' ? 'operational' : cls === 'nearest' ? 'nearest_available' : 'unmeasurable')}</td>` +
+            `<td class="num">${int(n)}</td>` +
+            `<td class="muted">${esc(meaning)}</td>` +
             '</tr>'
         )
         .join('');
@@ -1636,10 +1643,10 @@
       const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
       const opts = [
         ['all', 'All countries', window.WORLD_DATA ? window.WORLD_DATA.total_countries : 0],
-        ['operational', 'Operational', counts.operational || 0],
-        ['available', 'Available', counts.available || 0],
-        ['resident_required', 'Resident probe', counts.resident_required || 0],
-        ['out_of_scope', 'Out of scope', counts.out_of_scope || 0],
+        ['operational', 'Domestic, measured', counts.operational || 0],
+        ['domestic_ready', 'Domestic, ready', counts.domestic_ready || 0],
+        ['nearest_available', 'Nearest probe', counts.nearest_available || 0],
+        ['unmeasurable', 'Unmeasurable', counts.unmeasurable || 0],
       ];
       filters.innerHTML = opts
         .map(
@@ -1694,7 +1701,7 @@
       list = list.filter((c) => c.status === worldFilter);
     }
     // Operational first, then planned, then unsupported; alphabetical within.
-    const order = { operational: 0, available: 1, provisioning: 2, resident_required: 3, temporarily_unavailable: 4, out_of_scope: 5 };
+    const order = { operational: 0, domestic_ready: 1, provisioning: 2, nearest_available: 3, temporarily_unavailable: 4, unmeasurable: 5 };
     list = list.slice().sort((a, b) => {
       const d = (order[a.status] ?? 9) - (order[b.status] ?? 9);
       return d !== 0 ? d : a.name.localeCompare(b.name);
@@ -1722,10 +1729,10 @@
       count.textContent =
         `Showing ${list.length} of ${w.total_countries} countries. ` +
         `${w.countries_with_regions} have a domestic cloud region; ` +
-        `${w.status_counts.operational || 0} operational, ` +
-        `${w.status_counts.available || 0} available, ` +
-        `${w.status_counts.resident_required || 0} need a resident probe, ` +
-        `${w.status_counts.out_of_scope || 0} out of scope.`;
+        `${w.status_counts.operational || 0} measured domestically, ` +
+        `${w.status_counts.domestic_ready || 0} domestic and ready, ` +
+        `${w.status_counts.nearest_available || 0} measurable from a nearest probe, ` +
+        `${w.status_counts.unmeasurable || 0} too remote to measure meaningfully.`;
     }
   }
 

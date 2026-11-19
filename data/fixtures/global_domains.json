@@ -1365,6 +1365,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "aamates.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-03T08:02:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "aamctraining.edu.au",
   "country": "AU",
   "tld": "edu.au",
@@ -1377,6 +1385,14 @@
   "tld": "edu.in",
   "first_seen": "2016-12-15T09:42:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "aamovil.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-18T00:11:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "aansoeke.aros.ac.za",
@@ -1720,6 +1736,14 @@
   "tld": "gov.qa",
   "first_seen": "2020-03-23T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "abcdelasemociones.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:10:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "abdakhilm.edu.bd",
@@ -7323,6 +7347,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "adala.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "adalor.domsgma.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -7883,11 +7915,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "adjaj.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2026-09-11T18:24:18",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "adjd.gov.ae",
   "country": "AE",
   "tld": "gov.ae",
   "first_seen": "2017-07-04T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "adjudicaciones.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:24:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "adjumani.go.ug",
@@ -10494,6 +10542,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "affaireassurance.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "affairebanque.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "affaires-generales.gov.ma",
   "country": "MA",
   "tld": "gov.ma",
@@ -13048,6 +13112,14 @@
   "tld": "gov.pt",
   "first_seen": "2018-08-07T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ahdath.justice.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "judiciary",
+  "first_seen": "2026-08-16T11:47:09",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ahdhp.nic.in",
@@ -16747,6 +16819,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "alertamex.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-04-28T15:00:58",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "alerte-saip.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -19764,6 +19844,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "amendes.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "amendment.sltf.gov.gh",
   "country": "GH",
   "tld": "gov.gh",
@@ -20651,6 +20739,14 @@
   "tld": "gov.ro",
   "first_seen": "2023-09-29T12:10:09",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ana.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2026-09-01T15:07:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ana.xjtu.edu.cn",
@@ -27966,6 +28062,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "appdgpyp.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "appeal.moe.gov.tw",
   "country": "TW",
   "tld": "gov.tw",
@@ -31158,6 +31262,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "appsconasama.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-14T00:48:32",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "appscwbdms.gov.et",
   "country": "ET",
   "tld": "gov.et",
@@ -32560,6 +32672,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "archivohistorico.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:11:29",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "archivom.midelt-indh.gov.ma",
   "country": "MA",
   "tld": "gov.ma",
@@ -33146,6 +33266,14 @@
   "tld": "gov.tr",
   "first_seen": "2017-04-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "arij.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2024-11-14T14:45:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "arimr.gov.pl",
@@ -40935,6 +41063,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "av.sante.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "health",
+  "first_seen": "2018-02-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "av.sch.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -41346,6 +41482,14 @@
   "tld": "edu.in",
   "first_seen": "2017-01-15T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "avgaconbioetica.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T02:08:51",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "avi.kemenkeu.go.id",
@@ -60918,6 +61062,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "bp.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2022-06-28T14:18:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "bpa-oefen.omgeving.vlaanderen.be",
   "country": "BE",
   "tld": "vlaanderen.be",
@@ -69463,6 +69615,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "caisseenligne.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cait.gov.kw",
   "country": "KW",
   "tld": "gov.kw",
@@ -69790,6 +69950,14 @@
   "tld": "gov.sg",
   "first_seen": "2016-12-21T10:15:56",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "calidad.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-14T00:48:49",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "calidaddevida.minvu.gob.cl",
@@ -71670,6 +71838,14 @@
   "tld": "gob.mx",
   "first_seen": "2014-03-26T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "capacita.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:01:40",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "capacitacao.dnit.gov.br",
@@ -75356,6 +75532,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "casierjudiciaire.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "casilla.cnm.gob.pe",
   "country": "PE",
   "tld": "gob.pe",
@@ -76097,6 +76281,14 @@
   "tld": "res.in",
   "first_seen": "2019-03-19T03:33:22",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cavi-conamed.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2018-08-28T19:16:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cawadi.gov.ph",
@@ -77846,6 +78038,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cc-ccinshae.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-01-03T21:22:58",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cc-cdmx.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:25:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cc-lnweb-ext.iba.edu.pk",
   "country": "PK",
   "tld": "edu.pk",
@@ -78658,6 +78866,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ccfarmacia.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:03:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ccff02.minfin.fgov.be",
   "country": "BE",
   "tld": "fgov.be",
@@ -78838,6 +79054,14 @@
   "tld": "gob.pe",
   "first_seen": "2017-01-26T23:25:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ccinshaeaamates.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2021-06-16T20:53:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ccirc-ccric.gc.ca",
@@ -79588,6 +79812,14 @@
   "tld": "edu.ph",
   "first_seen": "2011-07-22T06:37:56",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ccsb.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-11-28T18:33:05",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ccsc.gov.mo",
@@ -81854,6 +82086,22 @@
   "tld": "gov.ar",
   "first_seen": "2017-04-29T02:11:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cenatra.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-06-02T16:45:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cenatra.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cenbank.gov.ng",
@@ -89579,6 +89827,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cifrhs.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-01T15:07:29",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cig.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -93820,6 +94076,14 @@
   "tld": "gov.me",
   "first_seen": "2023-03-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cjnapi.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cjnb2.justice.gouv.fr",
@@ -99062,6 +99326,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cnasnu.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cnastu.edu.np",
   "country": "NP",
   "tld": "edu.np",
@@ -99202,6 +99474,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cnclt.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-07-26T18:10:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cncmfe.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -99340,6 +99620,14 @@
   "tld": "gov.md",
   "first_seen": "2023-04-13T07:20:52",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cnej.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2025-12-24T06:49:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cnerg.iitkgp.ac.in",
@@ -99571,6 +99859,14 @@
   "tld": "gob.pe",
   "first_seen": "2015-12-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cnm.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2026-09-01T15:07:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cnmc.gob.es",
@@ -102887,6 +103183,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "comitescsg.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-09-11T23:17:41",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "comlaw.gov.au",
   "country": "AU",
   "tld": "gov.au",
@@ -104180,6 +104484,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "complaints.finance.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "finance",
+  "first_seen": "2025-09-25T14:23:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "complaints.p-o.belgium.be",
   "country": "BE",
   "tld": "belgium.be",
@@ -104262,6 +104574,14 @@
   "tld": "ac.th",
   "first_seen": "2017-01-01T18:31:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "compraconsolidada.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:25:25",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "compranet.funcionpublica.gob.mx",
@@ -104887,11 +105207,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "conasama.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:35:57",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "conasev.gob.pe",
   "country": "PE",
   "tld": "gob.pe",
   "first_seen": "2010-09-10T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "conbioetica-mexico.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:12:11",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "conceicaodosouros.mg.leg.br",
@@ -106525,6 +106861,14 @@
   "tld": "gov.sg",
   "first_seen": "2009-08-11T01:38:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "connect.justice.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "judiciary",
+  "first_seen": "2021-09-26T19:28:55",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "connect.lancashirecare.nhs.uk",
@@ -108734,6 +109078,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "contratacion.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T18:01:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "contratacionbogota.gov.co",
   "country": "CO",
   "tld": "gov.co",
@@ -109019,6 +109371,14 @@
   "tld": "gob.cl",
   "first_seen": "2018-11-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "convocatoriasapbp.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2018-11-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "convoreg.nitk.edu.in",
@@ -113465,6 +113825,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "courts.justice.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "judiciary",
+  "first_seen": "2026-01-02T05:46:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "courts.justiz.gv.at",
   "country": "AT",
   "tld": "gv.at",
@@ -113726,6 +114094,14 @@
   "tld": "gov.ie",
   "first_seen": "2020-07-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "coviduti.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-07-26T09:06:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "coviprov.gob.ec",
@@ -115298,6 +115674,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cr.justice.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "judiciary",
+  "first_seen": "2026-09-11T22:33:40",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cra-arc.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -116748,6 +117132,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "crslebanon.finance.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "finance",
+  "first_seen": "2022-08-30T13:13:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "crsport.gov.me",
   "country": "ME",
   "tld": "gov.me",
@@ -116760,6 +117152,14 @@
   "tld": "gov.me",
   "first_seen": "2021-07-26T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "crsportal.finance.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "finance",
+  "first_seen": "2022-08-30T11:22:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "crt.qca.gov.mt",
@@ -118917,6 +119317,14 @@
   "tld": "gov.uz",
   "first_seen": "2018-08-24T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "csm.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2026-09-01T15:08:01",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "csm.seocho.go.kr",
@@ -122498,6 +122906,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cvcovid.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:14:59",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "cvcs.calvet.ca.gov",
   "country": "US",
   "tld": "gov",
@@ -124844,11 +125260,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dac.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dacademy.edu.np",
   "country": "NP",
   "tld": "edu.np",
   "first_seen": "2017-04-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dachuissier.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dacm.fda.gov.tw",
@@ -131089,6 +131521,46 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "demanda-2025.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-14T00:49:04",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "demanda2021.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2022-12-29T18:24:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "demanda2022.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-01-23T15:15:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "demanda2023.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2024-09-23T08:08:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "demanda2025.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-04-04T09:02:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "demande.indemnitecovid.wallonie.be",
   "country": "BE",
   "tld": "wallonie.be",
@@ -131216,6 +131688,14 @@
   "tld": "overheid.nl",
   "first_seen": "2024-07-31T12:53:22",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "demo02.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2024-05-29T21:53:53",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "demo1-systemteam.overheid.nl",
@@ -131461,6 +131941,14 @@
   "tld": "belgium.be",
   "first_seen": "2019-05-22T11:24:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dengue.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:13:09",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "denis.bund.de",
@@ -132659,6 +133147,14 @@
   "tld": "gob.cl",
   "first_seen": "2019-08-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "desdgces.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "desdigital.mod.uk",
@@ -134398,6 +134894,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dgces.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dgchrae.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:27:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dgci.gov.pk",
   "country": "PK",
   "tld": "gov.pk",
@@ -134410,6 +134922,14 @@
   "tld": "gov.pt",
   "first_seen": "2004-07-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dgcosem.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-01T15:10:40",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dgcs-misi.social.gouv.fr",
@@ -134699,6 +135219,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dgmoss.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:27:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dgms.gjcity.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -134749,11 +135277,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dgpis.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-01T15:10:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dgpj.justica.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
   "first_seen": "2018-08-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dgpladesdigital.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:13:49",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dgpm.mam.gov.pt",
@@ -134943,6 +135487,14 @@
   "tld": "gov.pt",
   "first_seen": "2019-05-10T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dgti.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dgtresor.gouv.fr",
@@ -141661,6 +142213,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "discusion.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:26:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "discuss.yuntech.edu.tw",
   "country": "TW",
   "tld": "edu.tw",
@@ -144028,6 +144588,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dmpeservices.sante.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "health",
+  "first_seen": "2021-11-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dmptc.gov.vn",
   "country": "VN",
   "tld": "gov.vn",
@@ -145625,6 +146193,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "documentos.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-18T00:13:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "documentos.seps.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -146822,6 +147398,14 @@
   "tld": "go.th",
   "first_seen": "2016-06-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dondemevacuno.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:26:25",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dondurma.ulakbim.gov.tr",
@@ -150086,6 +150670,14 @@
   "tld": "gov",
   "first_seen": "2012-02-29T14:24:18",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "drh.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "drh.taxco.gob.mx",
@@ -155679,6 +156271,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "e-management.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2025-10-15T08:44:42",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "e-management.madrm.gov.md",
   "country": "MD",
   "tld": "gov.md",
@@ -157336,6 +157936,14 @@
   "tld": "nic.in",
   "first_seen": "2017-11-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "eadoul.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "eadsegep.planejamento.gov.br",
@@ -163133,6 +163741,14 @@
   "tld": "wallonie.be",
   "first_seen": "2022-08-05T13:46:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "echangeompic.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "echanges.finances.gouv.fr",
@@ -171562,6 +172178,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "egrace.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "egrading.mdks.gov.my",
   "country": "MY",
   "tld": "gov.my",
@@ -172142,6 +172766,14 @@
   "tld": "go.ug",
   "first_seen": "2018-07-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ehuissier.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ehvd.gesundheit.gv.at",
@@ -173452,6 +174084,14 @@
   "tld": "fgov.be",
   "first_seen": "2019-02-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ejusticemobile.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ek.ac.kr",
@@ -180308,6 +180948,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "enarm.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-05T14:44:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "enasr.faa.gov",
   "country": "US",
   "tld": "gov",
@@ -182280,6 +182928,14 @@
   "tld": "gov.br",
   "first_seen": "2011-08-08T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ensayosclinicos.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-07-24T19:47:31",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ensda.go.ke",
@@ -184978,6 +185634,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "epicorto.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-07-25T00:23:09",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "epidemiologia.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "epiep.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -187246,6 +187918,14 @@
   "tld": "gov.hk",
   "first_seen": "2018-04-30T11:03:27",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "erc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T08:01:52",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "erca.go.jp",
@@ -192959,6 +193639,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "estudiosclinicos.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:26:56",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "estudy.dsu.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -196040,6 +196728,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "everification.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "everlearning.sen.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -198766,6 +199462,14 @@
   "tld": "gov.ae",
   "first_seen": "2018-07-24T09:58:16",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "expertsjudiciaires.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "expertsystems.ato.gov.au",
@@ -205147,6 +205851,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "femme.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2024-01-28T09:38:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "femmes.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -206978,6 +207690,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "finance.gov.mn",
+  "country": "MN",
+  "tld": "gov.mn",
+  "sector": "finance",
+  "first_seen": "2026-05-25T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "finance.gov.mt",
+  "country": "MT",
+  "tld": "gov.mt",
+  "sector": "finance",
+  "first_seen": "2025-01-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "finance.gov.sk",
   "country": "SK",
   "tld": "gov.sk",
@@ -207963,6 +208691,14 @@
   "tld": "gob.es",
   "first_seen": "2021-09-27T08:02:55",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "firmaelectronica.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-07T23:37:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "firpobuonarroti.gov.it",
@@ -209379,6 +210115,14 @@
   "tld": "or.kr",
   "first_seen": "2012-08-20T10:15:21",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fm01ssa-65-dc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2019-06-21T17:14:37",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fma-va.brz.gv.at",
@@ -225064,6 +225808,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "gestorinsumos.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:28:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "gesund.bund.de",
   "country": "DE",
   "tld": "bund.de",
@@ -225160,6 +225912,14 @@
   "tld": "gc.ca",
   "first_seen": "2015-07-23T17:23:34",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "getris.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-04-28T15:00:58",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "gets.govt.nz",
@@ -231243,6 +232003,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "godata.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "godavarischool.edu.in",
   "country": "IN",
   "tld": "edu.in",
@@ -233357,6 +234125,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "gp.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "gp.khm.gov.ua",
   "country": "UA",
   "tld": "gov.ua",
@@ -233376,6 +234152,14 @@
   "tld": "nhs.uk",
   "first_seen": "2014-05-16T15:27:53",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "gp2.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-07T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "gpa.gov.hk",
@@ -233502,6 +234286,14 @@
   "tld": "nic.in",
   "first_seen": "2015-03-10T06:15:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "gpc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-14T00:50:30",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "gpccic.or.kr",
@@ -245715,6 +246507,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "hepatitisc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:27:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "heqep-ugc.gov.bd",
   "country": "BD",
   "tld": "gov.bd",
@@ -246301,6 +247101,14 @@
   "tld": "go.kr",
   "first_seen": "2012-12-13T05:16:14",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "hgm.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "hgoia.gob.ec",
@@ -266250,6 +267058,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ijs.justice.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "judiciary",
+  "first_seen": "2026-09-11T22:48:20",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ijto.or.kr",
   "country": "KR",
   "tld": "or.kr",
@@ -269726,6 +270542,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "incidencias.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:28:14",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "incidents.dea.gov.ge",
   "country": "GE",
   "tld": "gov.ge",
@@ -272016,6 +272840,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "informes-cnts.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-10T19:50:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "informes.dnic.gob.ar",
   "country": "AR",
   "tld": "gob.ar",
@@ -272397,6 +273229,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "inibas.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2015-11-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "inicio.cbta35.edu.mx",
   "country": "MX",
   "tld": "edu.mx",
@@ -272668,6 +273508,14 @@
   "tld": "ac.za",
   "first_seen": "2010-06-04T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "innn.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2019-01-22T23:07:21",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "inno.cbnu.ac.kr",
@@ -273305,6 +274153,22 @@
   "tld": "ac.kr",
   "first_seen": "2012-08-28T00:16:20",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "insabieducacion.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-07-10T04:24:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "insabiencuestas.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-09-05T15:45:37",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "insadm.ice.go.kr",
@@ -276057,6 +276921,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "inventariocovid.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:26:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "inventarios.inah.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
@@ -276535,6 +277407,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "invitacionesbirmex.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:27:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "invite.qicdrc.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -276722,6 +277602,14 @@
   "tld": "gov",
   "first_seen": "2013-02-19T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ioecd.finance.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "finance",
+  "first_seen": "2022-08-30T13:15:04",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ioepc.edu.np",
@@ -295755,6 +296643,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "judgesplatform.justice.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "judiciary",
+  "first_seen": "2021-06-23T13:28:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "judgesvacation.moj.gov.sa",
   "country": "SA",
   "tld": "gov.sa",
@@ -296987,6 +297883,14 @@
   "tld": "gov.md",
   "first_seen": "2023-05-04T05:55:41",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justice.gov.mt",
+  "country": "MT",
+  "tld": "gov.mt",
+  "sector": "judiciary",
+  "first_seen": "2025-01-22T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justice.gov.sk",
@@ -319863,6 +320767,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "labcenaprece.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:15:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "labcenter.pusan.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -325370,6 +326282,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lesiones.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:15:49",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "lesniczego.lasy.gov.pl",
   "country": "PL",
   "tld": "gov.pl",
@@ -325459,6 +326379,14 @@
   "tld": "edu.tw",
   "first_seen": "2016-05-16T13:02:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "letssl.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2024-11-20T16:33:13",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "letstalkaboutit.nhs.uk",
@@ -331458,6 +332386,14 @@
   "tld": "gov.tw",
   "first_seen": "2017-10-23T07:11:14",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "lineadelavida.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:16:05",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "lineasur.gob.ec",
@@ -343970,6 +344906,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "maharate.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2026-09-29T02:45:04",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "maharatech.gov.eg",
   "country": "EG",
   "tld": "gov.eg",
@@ -349938,6 +350882,14 @@
   "tld": "gov.ph",
   "first_seen": "2017-08-28T06:30:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "marjii.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "markers.dna.gov",
@@ -356155,6 +357107,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "medicosdelbienestar.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2022-12-29T18:24:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "medict.icu.gov.my",
   "country": "MY",
   "tld": "gov.my",
@@ -356231,6 +357191,14 @@
   "tld": "or.kr",
   "first_seen": "2013-11-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "medios.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-06-29T17:43:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mediprices.economie.fgov.be",
@@ -358145,6 +359113,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mensajeria.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-07T11:55:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mensajeria.sea.gob.cl",
   "country": "CL",
   "tld": "gob.cl",
@@ -358739,6 +359715,22 @@
   "tld": "gov.hk",
   "first_seen": "2014-11-26T06:42:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mesa.sinave.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-04-28T15:00:58",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "mesacovid.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:16:22",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mesadeayuda.inah.gob.mx",
@@ -365066,6 +366058,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mision.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:28:14",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "misionespermanentes.gov.co",
   "country": "CO",
   "tld": "gov.co",
@@ -365596,6 +366596,14 @@
   "tld": "edu.my",
   "first_seen": "2016-03-24T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mivacuna.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-11-28T03:03:31",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "miwd.gov.ph",
@@ -394911,6 +395919,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "nationalitemarocaine.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "nationallawcollege.edu.pk",
   "country": "PK",
   "tld": "edu.pk",
@@ -398753,6 +399769,14 @@
   "tld": "ac.nz",
   "first_seen": "2015-04-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "neltiliztli.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:28:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "nem.bvl.bund.de",
@@ -408704,6 +409728,22 @@
   "tld": "gob.ec",
   "first_seen": "2016-11-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "notif1.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "notif2.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "notificacao.cncs.gov.pt",
@@ -421494,6 +422534,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "onc.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-10-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "onc.osaka-u.ac.jp",
   "country": "JP",
   "tld": "ac.jp",
@@ -424131,6 +425179,14 @@
   "tld": "fgov.be",
   "first_seen": "2020-09-01T12:15:52",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "onram.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:29:57",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ons.or.kr",
@@ -432533,6 +433589,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pacientes.sinave.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-01-27T21:06:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pacileaks.pacinotti.gov.it",
   "country": "IT",
   "tld": "gov.it",
@@ -438120,6 +439184,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pax.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:05:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "paxion.appivate.mod.uk",
   "country": "GB",
   "tld": "mod.uk",
@@ -438251,6 +439323,14 @@
   "tld": "gov.cn",
   "first_seen": "2016-07-20T05:56:07",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pay.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pay.kemenkumham.go.id",
@@ -448680,6 +449760,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "plaintes.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "planalto.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -449064,6 +450152,14 @@
   "tld": "gob.ec",
   "first_seen": "2016-12-28T17:31:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "plataformas-censida.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:30:10",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "plateaustate.gov.ng",
@@ -454059,6 +455155,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portail.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-07T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portail.mhuv.gov.dz",
   "country": "DZ",
   "tld": "gov.dz",
@@ -454148,6 +455252,14 @@
   "tld": "gc.ca",
   "first_seen": "2011-05-18T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portailjugements.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portailorsec.interieur.gouv.fr",
@@ -457208,6 +458320,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portal.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2015-08-21T02:11:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portal.salzburg.gv.at",
   "country": "AT",
   "tld": "gv.at",
@@ -459152,6 +460272,14 @@
   "tld": "gv.at",
   "first_seen": "2015-08-31T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "portalvhc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:30:39",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "portalvia.mpu.gov.br",
@@ -463751,6 +464879,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "prevencionvih.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-24T00:54:58",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "prevenire.gov.ro",
   "country": "RO",
   "tld": "gov.ro",
@@ -465407,6 +466543,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "profesii.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2026-09-21T23:08:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "profesionalizacion.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:16:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "professional.vihiga.go.ke",
   "country": "KE",
   "tld": "go.ke",
@@ -465540,6 +466692,14 @@
   "tld": "gob.ar",
   "first_seen": "2016-10-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "programare-apostila.justice.gov.md",
+  "country": "MD",
+  "tld": "gov.md",
+  "sector": "judiciary",
+  "first_seen": "2025-12-08T08:50:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "programare.vaccinare-covid.gov.ro",
@@ -466303,6 +467463,14 @@
   "tld": "gob.pe",
   "first_seen": "2016-03-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pronam.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-02-19T18:44:20",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pronied.gob.pe",
@@ -467493,6 +468661,14 @@
   "source": "certificate_transparency_sector"
  },
  {
+  "domain_name": "pruebaccsb.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-02-25T00:51:39",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pruebadetalento.uhs.edu.mx",
   "country": "MX",
   "tld": "edu.mx",
@@ -467556,6 +468732,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pruebasaamates.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:25:33",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pruebasavgacnb.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T02:09:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pruebasccc2024.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T08:03:10",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pruebasdelta.empleo.gob.es",
   "country": "ES",
   "tld": "gob.es",
@@ -467563,11 +468763,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pruebasdocumentos.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-01-23T15:18:56",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pruebasimpo.vuce.gov.co",
   "country": "CO",
   "tld": "gov.co",
   "first_seen": "2010-06-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pruebasisver.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-04-28T15:00:58",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pruebasl.finanzas.gob.ec",
@@ -467589,6 +468805,14 @@
   "tld": "gov.co",
   "first_seen": "2016-04-06T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pruebaspvumovil.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2022-12-21T22:07:03",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pruebasrea.mtin.gob.es",
@@ -471444,6 +472668,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pulso.sinave.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-09-05T15:45:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pum.kedirikab.go.id",
   "country": "ID",
   "tld": "go.id",
@@ -472186,6 +473418,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pvu.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:06:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pvumovil.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:21:32",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pw-p.ooe.gv.at",
   "country": "AT",
   "tld": "gv.at",
@@ -472844,6 +474092,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "qa-discusion.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:31:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "qa-eservices.hamilton.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -472870,6 +474126,14 @@
   "tld": "parliament.uk",
   "first_seen": "2024-02-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "qa-pui-ssa.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-07T23:38:14",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "qa-sts.hamilton.govt.nz",
@@ -477196,6 +478460,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ram.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:31:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ram01.gov.cz",
   "country": "CZ",
   "tld": "gov.cz",
@@ -478989,6 +480261,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rcaddwbs.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rcais.res.in",
   "country": "IN",
   "tld": "res.in",
@@ -479869,6 +481149,14 @@
   "tld": "gouv.fr",
   "first_seen": "2017-08-23T08:31:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rdv.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "rdv.tax.gov.ma",
@@ -480824,6 +482112,14 @@
   "tld": "gov.ar",
   "first_seen": "2017-06-28T09:48:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "recibos.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:17:59",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "recinftrab.gov.pt",
@@ -484081,6 +485377,14 @@
   "tld": "gob.ec",
   "first_seen": "2014-03-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "registrodemanda.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-07T23:35:45",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "registrodeprecos.mg.gov.br",
@@ -491239,6 +492543,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rnesm.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rni.nic.in",
   "country": "IN",
   "tld": "nic.in",
@@ -494690,6 +496002,14 @@
   "tld": "edu.sa",
   "first_seen": "2012-05-13T04:20:48",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rucia.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-04-28T15:00:58",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ruckus.ndhu.edu.tw",
@@ -498460,6 +499780,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "saj2mobile.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sajja.ac.th",
   "country": "TH",
   "tld": "ac.th",
@@ -500999,6 +502327,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sante.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "health",
+  "first_seen": "2026-08-31T11:31:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sante.wallonie.be",
   "country": "BE",
   "tld": "wallonie.be",
@@ -502250,6 +503586,14 @@
   "tld": "gob.pe",
   "first_seen": "2016-12-18T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "satdrogas.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-09-30T19:13:17",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sate.edu.vn",
@@ -516308,6 +517652,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "semanasaludpublica.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:18:32",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "semantic.gov.md",
   "country": "MD",
   "tld": "gov.md",
@@ -519692,6 +521044,14 @@
   "tld": "gc.ca",
   "sector": "judiciary",
   "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "servicesenligne.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
   "source": "certificate_transparency_sector"
  },
  {
@@ -527175,6 +528535,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "siaa.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "siabi-web.trt3.jus.br",
   "country": "BR",
   "tld": "jus.br",
@@ -532160,6 +533528,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sinhepc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:33:09",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sinhviensaodo.edu.vn",
   "country": "VN",
   "tld": "edu.vn",
@@ -533759,6 +535135,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sirese.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:20:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sirfe.mef.gov.it",
   "country": "IT",
   "tld": "gov.it",
@@ -534272,6 +535656,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "siscensia.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:19:31",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sisco.mecon.gob.ar",
   "country": "AR",
   "tld": "gob.ar",
@@ -534370,6 +535762,14 @@
   "tld": "gov.ma",
   "first_seen": "2018-04-02T08:59:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "siseaconasa.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:33:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "siseauth.sante.gouv.fr",
@@ -534581,6 +535981,14 @@
   "tld": "gov.my",
   "first_seen": "2013-06-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sisma.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:19:59",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sismon.kpk.go.id",
@@ -535467,6 +536875,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sisver.sinave.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-07-24T17:50:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sisvis.mswia.gov.pl",
   "country": "PL",
   "tld": "gov.pl",
@@ -536249,6 +537665,14 @@
   "tld": "gov.tr",
   "first_seen": "2017-04-21T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sivudis.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-04-15T23:27:09",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sivv.ivv.gov.pt",
@@ -542056,6 +543480,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sndif.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-01-27T21:06:44",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sne.bnu.edu.cn",
   "country": "CN",
   "tld": "edu.cn",
@@ -542243,6 +543675,14 @@
   "tld": "gob.pe",
   "first_seen": "2015-10-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "snis.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:34:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "snit.onssa.gov.ma",
@@ -542574,6 +544014,22 @@
   "tld": "gov.sa",
   "first_seen": "2016-10-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "snsp.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-01T15:10:01",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "snspapps.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:20:52",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "snt.saude.gov.br",
@@ -545132,6 +546588,14 @@
   "tld": "gob.ec",
   "sector": "finance",
   "first_seen": "2024-05-06T15:26:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "soportedgti.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:22:51",
   "source": "certificate_transparency_sector"
  },
  {
@@ -550829,6 +552293,14 @@
   "tld": "gov.sa",
   "first_seen": "2017-05-08T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ssa-fonac.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-09-29T10:30:49",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ssa.gov",
@@ -561107,6 +562579,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "suave.sinave.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2023-04-25T16:43:49",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sub.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -562064,6 +563544,14 @@
   "tld": "canada.ca",
   "first_seen": "2020-08-11T11:12:04",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "suividecisions.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "suizid-praevention.gv.at",
@@ -568656,6 +570144,22 @@
   "tld": "gob.ar",
   "first_seen": "2016-05-02T15:57:22",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "tableroscovid.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:17:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "tablerospvu.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-11T16:43:43",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "tabligh.men.gov.ma",
@@ -576978,6 +578482,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "testamovil.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-05-15T18:11:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "testapi.my.gov.ge",
   "country": "GE",
   "tld": "gov.ge",
@@ -582718,6 +584230,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "tmn.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-07T23:34:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "tmo.gov.lb",
   "country": "LB",
   "tld": "gov.lb",
@@ -583304,6 +584824,14 @@
   "tld": "gov.tr",
   "first_seen": "2015-03-26T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "toecd.finance.gov.lb",
+  "country": "LB",
+  "tld": "gov.lb",
+  "sector": "finance",
+  "first_seen": "2022-08-30T13:14:06",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "toefljunior.or.kr",
@@ -592186,6 +593714,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "tspruebas01.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:00:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "tsqa-training.ncpublicschools.gov",
   "country": "US",
   "tld": "gov",
@@ -595757,6 +597293,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "uae.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2025-08-18T19:31:10",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "uaeevents.gov.ae",
   "country": "AE",
   "tld": "gov.ae",
@@ -595776,6 +597320,14 @@
   "tld": "gov.ae",
   "first_seen": "2014-03-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "uaeis.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T01:35:30",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "uaesas.gov.ae",
@@ -599518,6 +601070,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "uies-si.sinave.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "uif-extranet.sbs.gob.pe",
   "country": "PE",
   "tld": "gob.pe",
@@ -601665,6 +603225,14 @@
   "tld": "or.kr",
   "first_seen": "2013-07-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "una.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-10-10T00:21:45",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "unacert.mindef.gov.ar",
@@ -611079,6 +612647,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "vericvcovid.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:15:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "verifica-cup.istruzione.it",
   "country": "IT",
   "tld": "istruzione.it",
@@ -611105,6 +612681,14 @@
   "tld": "gob.mx",
   "first_seen": "2013-04-14T17:28:25",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "verificaenarm.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-18T00:07:04",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "verification.cwa.gov.si",
@@ -611805,6 +613389,14 @@
   "tld": "ac.nz",
   "first_seen": "2009-11-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "vhc.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-08-17T19:29:25",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "vhis.gov.hk",
@@ -613893,6 +615485,14 @@
   "tld": "nic.in",
   "first_seen": "2018-07-13T05:48:09",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "viruela.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-23T22:52:48",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "virus-report.taichung.gov.tw",
@@ -637085,6 +638685,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wsenationalite.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "wserncaj.justice.gov.ma",
+  "country": "MA",
+  "tld": "gov.ma",
+  "sector": "judiciary",
+  "first_seen": "2025-05-05T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wservice.mod.gov.kw",
   "country": "KW",
   "tld": "gov.kw",
@@ -652107,6 +653723,14 @@
   "tld": "gub.uy",
   "first_seen": "2019-05-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "zoonosis.salud.gob.mx",
+  "country": "MX",
+  "tld": "gob.mx",
+  "sector": "health",
+  "first_seen": "2026-07-15T00:15:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "zoowiki.otago.ac.nz",

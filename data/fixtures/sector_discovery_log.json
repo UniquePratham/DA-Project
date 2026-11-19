@@ -8638,5 +8638,2752 @@
   "status": "ok",
   "certs": 0,
   "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salute.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sante.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sant\u00e9.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sanidad.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salud.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.saude.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salute.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sante.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sant\u00e9.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sanidad.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salud.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.saude.or.kr",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salute.ac.kr",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sante.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sant\u00e9.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sanidad.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salud.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.saude.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salute.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sante.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sant\u00e9.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.sanidad.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.salud.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.saude.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justice.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justicia.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justi\u00e7a.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justiz.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.giustizia.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justitie.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justice.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justicia.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justi\u00e7a.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justiz.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.giustizia.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justitie.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justice.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justicia.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justi\u00e7a.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justiz.ac.kr",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.giustizia.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justitie.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justice.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justicia.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justi\u00e7a.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justiz.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.giustizia.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.justitie.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finance.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanz.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzen.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzas.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.financas.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finan\u00e7as.go.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finance.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanz.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzen.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzas.or.kr",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.financas.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finan\u00e7as.or.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finance.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanz.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzen.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzas.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.financas.ac.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finan\u00e7as.ac.kr",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finance.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanz.mil.kr",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzen.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finanzas.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.financas.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KR",
+  "query": "%25.finan\u00e7as.mil.kr",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.salute.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.sante.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.sant\u00e9.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.sanidad.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.salud.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.saude.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.justice.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.justicia.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.justi\u00e7a.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.justiz.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.giustizia.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.justitie.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.finance.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.finanz.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.finanzen.gov.kw",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.finanzas.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.financas.gov.kw",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KW",
+  "query": "%25.finan\u00e7as.gov.kw",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.salute.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.sante.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.sant\u00e9.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.sanidad.gov.kz",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.salud.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.saude.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.justice.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.justicia.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.justi\u00e7a.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.justiz.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.giustizia.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.justitie.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.finance.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.finanz.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.finanzen.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.finanzas.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.financas.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KZ",
+  "query": "%25.finan\u00e7as.gov.kz",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.salute.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.sante.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.sant\u00e9.gov.lb",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.sanidad.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.salud.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.saude.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.justice.gov.lb",
+  "status": "ok",
+  "certs": 365,
+  "added": 6
+ },
+ {
+  "country": "LB",
+  "query": "%25.justicia.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.justi\u00e7a.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.justiz.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.giustizia.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.justitie.gov.lb",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.finance.gov.lb",
+  "status": "ok",
+  "certs": 84,
+  "added": 5
+ },
+ {
+  "country": "LB",
+  "query": "%25.finanz.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.finanzen.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.finanzas.gov.lb",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.financas.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LB",
+  "query": "%25.finan\u00e7as.gov.lb",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.salute.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.sante.gov.lk",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.sant\u00e9.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.sanidad.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.salud.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.saude.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.salute.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.sante.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.sant\u00e9.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.sanidad.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.salud.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.saude.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justice.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justicia.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justi\u00e7a.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justiz.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.giustizia.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justitie.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justice.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justicia.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justi\u00e7a.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justiz.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.giustizia.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.justitie.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finance.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finanz.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finanzen.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finanzas.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.financas.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finan\u00e7as.gov.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finance.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finanz.ac.lk",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finanzen.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finanzas.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.financas.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LK",
+  "query": "%25.finan\u00e7as.ac.lk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.salute.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.sante.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.sant\u00e9.lrv.lt",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.sanidad.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.salud.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.saude.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.justice.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.justicia.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.justi\u00e7a.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.justiz.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.giustizia.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.justitie.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.finance.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.finanz.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.finanzen.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.finanzas.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.financas.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LT",
+  "query": "%25.finan\u00e7as.lrv.lt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.salute.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.sante.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.sant\u00e9.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.sanidad.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.salud.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.saude.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.justice.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.justicia.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.justi\u00e7a.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.justiz.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.giustizia.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.justitie.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.finance.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.finanz.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.finanzen.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.finanzas.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.financas.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LU",
+  "query": "%25.finan\u00e7as.gouvernement.lu",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.salute.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.sante.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.sant\u00e9.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.sanidad.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.salud.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.saude.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.justice.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.justicia.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.justi\u00e7a.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.justiz.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.giustizia.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.justitie.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.finance.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.finanz.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.finanzen.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.finanzas.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.financas.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "LV",
+  "query": "%25.finan\u00e7as.gov.lv",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.salute.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.sante.gov.ma",
+  "status": "ok",
+  "certs": 17,
+  "added": 3
+ },
+ {
+  "country": "MA",
+  "query": "%25.sant\u00e9.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.sanidad.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.salud.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.saude.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.justice.gov.ma",
+  "status": "ok",
+  "certs": 294,
+  "added": 41
+ },
+ {
+  "country": "MA",
+  "query": "%25.justicia.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.justi\u00e7a.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.justiz.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.giustizia.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.justitie.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.finance.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.finanz.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.finanzen.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.finanzas.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.financas.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MA",
+  "query": "%25.finan\u00e7as.gov.ma",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.salute.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.sante.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.sant\u00e9.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.sanidad.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.salud.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.saude.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.justice.gov.md",
+  "status": "ok",
+  "certs": 320,
+  "added": 9
+ },
+ {
+  "country": "MD",
+  "query": "%25.justicia.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.justi\u00e7a.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.justiz.gov.md",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.giustizia.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.justitie.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.finance.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.finanz.gov.md",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.finanzen.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.finanzas.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.financas.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MD",
+  "query": "%25.finan\u00e7as.gov.md",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.salute.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.sante.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.sant\u00e9.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.sanidad.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.salud.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.saude.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.justice.gov.me",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.justicia.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.justi\u00e7a.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.justiz.gov.me",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.giustizia.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.justitie.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.finance.gov.me",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.finanz.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.finanzen.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.finanzas.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.financas.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "ME",
+  "query": "%25.finan\u00e7as.gov.me",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.salute.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.sante.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.sant\u00e9.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.sanidad.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.salud.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.saude.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.justice.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.justicia.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.justi\u00e7a.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.justiz.gov.mk",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.giustizia.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.justitie.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.finance.gov.mk",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.finanz.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.finanzen.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.finanzas.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.financas.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MK",
+  "query": "%25.finan\u00e7as.gov.mk",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.salute.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.sante.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.sant\u00e9.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.sanidad.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.salud.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.saude.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.justice.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.justicia.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.justi\u00e7a.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.justiz.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.giustizia.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.justitie.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.finance.gov.mn",
+  "status": "ok",
+  "certs": 14,
+  "added": 1
+ },
+ {
+  "country": "MN",
+  "query": "%25.finanz.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.finanzen.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.finanzas.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.financas.gov.mn",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MN",
+  "query": "%25.finan\u00e7as.gov.mn",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.salute.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.sante.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.sant\u00e9.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.sanidad.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.salud.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.saude.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.justice.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.justicia.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.justi\u00e7a.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.justiz.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.giustizia.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.justitie.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.finance.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.finanz.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.finanzen.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.finanzas.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.financas.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MO",
+  "query": "%25.finan\u00e7as.gov.mo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.salute.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.sante.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.sant\u00e9.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.sanidad.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.salud.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.saude.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.justice.gov.mt",
+  "status": "ok",
+  "certs": 6,
+  "added": 1
+ },
+ {
+  "country": "MT",
+  "query": "%25.justicia.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.justi\u00e7a.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.justiz.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.giustizia.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.justitie.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.finance.gov.mt",
+  "status": "ok",
+  "certs": 8,
+  "added": 1
+ },
+ {
+  "country": "MT",
+  "query": "%25.finanz.gov.mt",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.finanzen.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.finanzas.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.financas.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MT",
+  "query": "%25.finan\u00e7as.gov.mt",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.salute.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.sante.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.sant\u00e9.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.sanidad.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.salud.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.saude.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.justice.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.justicia.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.justi\u00e7a.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.justiz.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.giustizia.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.justitie.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.finance.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.finanz.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.finanzen.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.finanzas.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.financas.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MU",
+  "query": "%25.finan\u00e7as.govmu.org",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.salute.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.sante.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.sant\u00e9.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.sanidad.gob.mx",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.salud.gob.mx",
+  "status": "ok",
+  "certs": 3855,
+  "added": 136
+ },
+ {
+  "country": "MX",
+  "query": "%25.saude.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.salute.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.sante.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.sant\u00e9.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.sanidad.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.salud.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.saude.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justice.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justicia.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justi\u00e7a.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justiz.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.giustizia.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justitie.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justice.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justicia.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justi\u00e7a.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justiz.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.giustizia.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.justitie.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finance.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finanz.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finanzen.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finanzas.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.financas.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finan\u00e7as.gob.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finance.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finanz.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finanzen.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finanzas.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.financas.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "MX",
+  "query": "%25.finan\u00e7as.edu.mx",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
  }
 ]

@@ -516,48 +516,55 @@ domain-based census therefore cannot reach every ministry in every country, and
 this is a property of how governments deploy websites, not a gap in the method.
 
 
-### 8.13 Multi-cloud coverage and the unsupported-country problem
+### 8.13 Coverage with one provider: the vantage model
 
-Vultr operates in 20 countries. Marking the other 229 "unsupported" was true of
-one vendor, not of the research question. The coverage model now spans six
-clouds and distinguishes four states:
+The account is Vultr, which operates in 20 countries. A domestic probe is
+therefore impossible in the other 229. That is a constraint on the vantage
+point, not on whether the country can be measured.
 
-| Status | Count | Meaning |
+`services/infrastructure/vantage.py` classifies every country into one of three
+vantage classes, derived from real geography rather than asserted:
+
+| Class | Countries | What the measurement means |
 | :--- | ---: | :--- |
-| **operational** | 19 | Measured from a datacentre inside the country |
-| **available** | 18 | A domestic datacentre exists; not yet measured |
-| **resident_required** | 82 | No cloud datacentre; needs a machine placed in-country |
-| **out_of_scope** | 130 | No datacentre and no realistic path to a domestic probe |
+| **domestic** | 19 | Probe inside the country. Supports a claim about what a citizen experiences. |
+| **nearest** | 180 | Probe in the closest region, in another country. Real data, but it describes a foreign client's view. |
+| **unmeasurable** | 50 | Nearest region over 6,000 km away. A latency figure would describe the path, not the portal. |
 
-Providers modelled, with the countries each actually operates in:
+The nearest region is chosen by great-circle distance from the country's
+centroid to each Vultr region, using a haversine calculation. The distance is
+recorded on every row, so a reader can see how far the probe was.
 
-| Provider | Regions | Countries | Cheapest / hr |
-| :--- | ---: | ---: | ---: |
-| AWS | 28 | 22 | $0.0104 |
-| Google Cloud | 38 | 26 | $0.0085 |
-| Azure | 47 | 34 | $0.0116 |
-| Hetzner | 6 | 4 | $0.0052 |
-| DigitalOcean | 10 | 8 | $0.0089 |
-| Oracle Cloud | 25 | 21 | $0.0075 |
+#### Why this is a contribution, not a workaround
 
-Union: **80 regions across 37 countries**. That is the honest ceiling for a
-cloud-based domestic probe — no cloud operates in every country.
+A portal measured from both inside and outside its country answers a question
+no single-vantage study can: **how much of the measured quality is the portal,
+and how much is the path to it?**
 
-#### How the remaining countries get measured
+For the 19 countries with both, the dataset supports that comparison directly.
+For the 180 with only a nearest probe, the row is labelled `vantage_class =
+nearest` and can never be mistaken for a domestic measurement.
 
-`resident_required` is not a dead end. It means the probe must be a machine
-physically in the country rather than a rented cloud instance:
+#### What the nearest class actually measures
 
-1. **Resident probe** — the team places a machine in-country. This is exactly
-   how the India census began, on a Vultr Bangalore node before the ephemeral
-   infrastructure existed.
-2. **Volunteer probe** — a collaborator runs the same worker and returns signed
-   results. The worker is a single Python file plus a small `tools` package, so
-   the barrier is low.
-3. **Out of scope** — recorded as such rather than approximated.
+It is the correct data for questions about cross-border access:
 
-The distinction matters because "unsupported" conflates "we cannot" with "we
-have not yet". A reader deserves to know which, and the dashboard now says so.
+- Does a government portal serve foreign clients at all?
+- Does it geo-block, and with what status code?
+- How much latency does distance add?
+- Do CDN and edge configurations differ for foreign traffic?
+
+These are real research questions, and the nearest probe answers them honestly.
+
+#### Running it
+
+```bash
+VULTR_API_KEY=... python scripts/measure_nearest.py --per-country 10
+```
+
+Countries are grouped by the probe region that will measure them, so one
+instance serves many countries rather than one instance per country. A batch of
+180 countries across 20 regions costs roughly $0.14.
 
 ---
 
