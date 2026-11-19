@@ -347,5 +347,107 @@
    "domestic_probe": true,
    "measured_at": "2026-11-18T17:33:19Z"
   }
+ ],
+ "sectors": [
+  {
+   "sector": "general",
+   "domains": 612,
+   "reachable": 213,
+   "reach_pct": 34.8,
+   "accessibility": 87.1,
+   "security": 50.5,
+   "maturity": 64.0,
+   "median_ttfb_ms": 379
+  },
+  {
+   "sector": "education",
+   "domains": 212,
+   "reachable": 77,
+   "reach_pct": 36.3,
+   "accessibility": 85.8,
+   "security": 28.1,
+   "maturity": 53.7,
+   "median_ttfb_ms": 578
+  },
+  {
+   "sector": "judiciary",
+   "domains": 41,
+   "reachable": 22,
+   "reach_pct": 53.7,
+   "accessibility": 81.3,
+   "security": 33.0,
+   "maturity": 56.5,
+   "median_ttfb_ms": 240
+  },
+  {
+   "sector": "health",
+   "domains": 33,
+   "reachable": 7,
+   "reach_pct": 21.2,
+   "accessibility": 91.2,
+   "security": 65.0,
+   "maturity": 67.4,
+   "median_ttfb_ms": 253
+  },
+  {
+   "sector": "transport",
+   "domains": 16,
+   "reachable": 3,
+   "reach_pct": 18.8,
+   "accessibility": 95.0,
+   "security": 23.3,
+   "maturity": 54.5,
+   "median_ttfb_ms": 440
+  },
+  {
+   "sector": "finance",
+   "domains": 15,
+   "reachable": 2,
+   "reach_pct": 13.3,
+   "accessibility": 92.5,
+   "security": 47.5,
+   "maturity": 51.4,
+   "median_ttfb_ms": 1138
+  },
+  {
+   "sector": "police",
+   "domains": 9,
+   "reachable": 0,
+   "reach_pct": 0.0,
+   "accessibility": null,
+   "security": null,
+   "maturity": null,
+   "median_ttfb_ms": null
+  },
+  {
+   "sector": "social",
+   "domains": 9,
+   "reachable": 2,
+   "reach_pct": 22.2,
+   "accessibility": 90.6,
+   "security": 12.5,
+   "maturity": 47.0,
+   "median_ttfb_ms": 1046
+  },
+  {
+   "sector": "agriculture",
+   "domains": 3,
+   "reachable": 0,
+   "reach_pct": 0.0,
+   "accessibility": null,
+   "security": null,
+   "maturity": null,
+   "median_ttfb_ms": null
+  },
+  {
+   "sector": "defence",
+   "domains": 2,
+   "reachable": 0,
+   "reach_pct": 0.0,
+   "accessibility": null,
+   "security": null,
+   "maturity": null,
+   "median_ttfb_ms": null
+  }
  ]
 }

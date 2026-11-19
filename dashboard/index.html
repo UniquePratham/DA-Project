@@ -700,6 +700,27 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
           </table>
         </div>
         <p class="future-note" id="global-note"></p>
+
+        <h4 class="panel__h" style="margin-top:var(--s6)">By sector</h4>
+        <div class="table-wrap">
+          <table class="table" id="global-sectors">
+            <thead>
+              <tr>
+                <th>Sector</th><th class="num">Domains</th>
+                <th class="num">Reachable</th><th class="num">Accessibility</th>
+                <th class="num">Security</th><th class="num">Maturity</th>
+                <th class="num">Median TTFB</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="future-note">
+          Sector is inferred from the hostname, which is reliable for dedicated
+          domains (<code>health.</code>, <code>court.</code>) but puts general
+          portals in <em>general</em>. A sector with no reachable domains shows
+          &ldquo;not measured&rdquo; rather than a zero.
+        </p>
       </div>
 
       <!-- D. Dimensions -->

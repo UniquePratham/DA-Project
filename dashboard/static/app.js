@@ -1760,6 +1760,27 @@
         'this is a cross-country comparability check, not a census. The India ' +
         'census in the other views remains the large sample.';
     }
+
+    // Sector breakdown
+    const sbody = $('#global-sectors tbody');
+    if (sbody && g.sectors) {
+      const num = (v, suffix = '') =>
+        v === null || v === undefined ? '<span class="muted">not measured</span>' : `${dec(v)}${suffix}`;
+      sbody.innerHTML = g.sectors
+        .map(
+          (s) =>
+            '<tr>' +
+            `<td><b>${esc(s.sector)}</b></td>` +
+            `<td class="num">${int(s.domains)}</td>` +
+            `<td class="num">${int(s.reachable)} <span class="muted">${dec(s.reach_pct)}%</span></td>` +
+            `<td class="num">${num(s.accessibility)}</td>` +
+            `<td class="num">${num(s.security)}</td>` +
+            `<td class="num">${num(s.maturity)}</td>` +
+            `<td class="num">${s.median_ttfb_ms === null ? '—' : int(s.median_ttfb_ms) + ' ms'}</td>` +
+            '</tr>'
+        )
+        .join('');
+    }
   }
 
   function boot() {

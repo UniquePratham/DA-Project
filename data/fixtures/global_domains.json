@@ -5527,6 +5527,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "acesso.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-20T17:38:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "acet.edu.in",
   "country": "IN",
   "tld": "edu.in",
@@ -14880,6 +14888,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ajuda-harpya.datasus.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2016-05-10T18:43:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ajutoare.gov.md",
   "country": "MD",
   "tld": "gov.md",
@@ -23019,6 +23035,14 @@
   "tld": "fgov.be",
   "first_seen": "2019-05-15T13:59:41",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ap-manager-rabbitmq.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-08T00:22:58",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ap.bmf.gv.at",
@@ -39768,6 +39792,14 @@
   "tld": "gob.mx",
   "first_seen": "2016-05-17T15:17:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "autorizador.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-19T18:05:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "autorizatiimediu.gov.md",
@@ -71897,6 +71929,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "captcha.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-28T14:21:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "captive.delawareinsurance.gov",
   "country": "US",
   "tld": "gov",
@@ -82504,6 +82544,14 @@
   "tld": "edu.mx",
   "first_seen": "2015-09-19T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ceph-app.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-10-24T09:27:54",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cepml.edu.mx",
@@ -109611,6 +109659,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "coronavirus.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-03-18T17:48:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "coronda.coronda.gob.ar",
   "country": "AR",
   "tld": "gob.ar",
@@ -120205,6 +120261,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "cturj-backend.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-20T17:38:46",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "cturj.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-20T17:38:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ctut.edu.vn",
   "country": "VN",
   "tld": "edu.vn",
@@ -128018,6 +128090,14 @@
   "tld": "gov.pl",
   "first_seen": "2016-09-12T05:24:20",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "datasus.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-04-09T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "datasync.bfr.bund.de",
@@ -154417,6 +154497,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "e-fns.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-19T18:11:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "e-folha.sp.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -169511,6 +169599,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "efk-app.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-02-27T13:25:46",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "efka.gov.gr",
   "country": "GR",
   "tld": "gov.gr",
@@ -171344,6 +171440,14 @@
   "tld": "gouv.fr",
   "first_seen": "2015-01-26T15:10:57",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ehr-service-app.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-02-04T22:07:03",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ehradm-cms.nic.in",
@@ -192156,6 +192260,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "estimasus.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-28T12:38:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "estore.esma.gov.ae",
   "country": "AE",
   "tld": "gov.ae",
@@ -211181,6 +211293,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "formsus2.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-11-06T22:49:16",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "formulaires.ci-oic.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -223630,6 +223750,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "gestao-esusve.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-10-31T17:25:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "gestao-leitos.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-04-20T16:49:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "gestao-manualsiafi.tesouro.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -223810,6 +223946,14 @@
   "tld": "mp.br",
   "first_seen": "2018-08-29T19:50:50",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "gestaoleitos.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-10-17T13:52:35",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "gestaonet.rj.gov.br",
@@ -241035,6 +241179,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "harpya.datasus.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2016-05-10T18:37:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "harran.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -247571,6 +247723,14 @@
   "tld": "gov.cn",
   "first_seen": "2017-05-04T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "hmg.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-19T12:23:51",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "hmhighschool.edu.bd",
@@ -271011,6 +271171,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "infra.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-09-29T13:44:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "infra.trt19.jus.br",
   "country": "BR",
   "tld": "jus.br",
@@ -274263,6 +274431,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "into.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-18T10:36:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "intodokdo.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -275290,6 +275466,22 @@
   "tld": "wallonie.be",
   "first_seen": "2022-09-17T11:19:51",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "investsus-backend.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-19T19:14:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "investsus-geral-api.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-19T21:15:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "invfinanciera.guanajuato.gob.mx",
@@ -345991,6 +346183,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "manager-rabbitmq.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-03-15T21:28:31",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "manager.aaf.edu.au",
   "country": "AU",
   "tld": "edu.au",
@@ -368207,6 +368407,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mobileapps-2711.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-04-21T11:20:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mobileapps.aurak.ac.ae",
   "country": "AE",
   "tld": "ac.ae",
@@ -372803,6 +373011,14 @@
   "tld": "gov.co",
   "first_seen": "2015-04-07T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "moodle.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-09-23T01:17:25",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "moodle.schechter.ac.il",
@@ -428235,6 +428451,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ouvidor-backend.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-27T15:10:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ouvidor.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-27T15:10:45",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ouvidoria.anac.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -431071,6 +431303,14 @@
   "tld": "jus.br",
   "first_seen": "2018-02-21T13:19:39",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "painel-oncologia.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2019-05-14T23:04:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "painfree.or.kr",
@@ -443696,6 +443936,22 @@
   "tld": "gov.kw",
   "first_seen": "2018-08-16T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pig-backend.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-27T16:42:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "pig.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-27T16:36:43",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pihms.ac.nz",
@@ -457860,6 +458116,14 @@
   "tld": "gov.bd",
   "first_seen": "2017-07-10T04:55:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "postgres-operator-ui.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-09-27T12:18:02",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "postie.open.edu.au",
@@ -473455,6 +473719,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rabbitmq-pbni.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-21T07:29:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rabegh-municipality.gov.sa",
   "country": "SA",
   "tld": "gov.sa",
@@ -479139,6 +479411,14 @@
   "tld": "gov.uk",
   "first_seen": "2011-03-16T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "redcap.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-08-06T12:33:53",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "reddedirectores.sems.gob.mx",
@@ -488343,6 +488623,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rn-manager-rabbitmq.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-04-08T20:30:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rn.ae.gov.ma",
   "country": "MA",
   "tld": "gov.ma",
@@ -488544,6 +488832,14 @@
   "tld": "or.kr",
   "first_seen": "2013-09-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rnds-guia.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-29T04:48:59",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "rnds.chosun.ac.kr",
@@ -504238,11 +504534,35 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "scpa.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-23T13:07:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "scpadi.cnbv.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
   "first_seen": "2014-11-03T20:16:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "scpar-backend.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-19T18:37:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "scpar.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-11-19T18:35:23",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "scpc.edu.in",
@@ -517676,6 +517996,14 @@
   "tld": "jus.br",
   "first_seen": "2016-12-02T18:52:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "servicos-cloud-19.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-09-19T20:08:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "servicos-siafi.tesouro.gov.br",
@@ -531846,6 +532174,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sisproadi.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2014-08-29T18:24:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sisprom.mdic.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -539670,6 +540006,14 @@
   "tld": "gov.sa",
   "first_seen": "2016-10-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "snt.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2014-09-18T13:47:25",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sntd.jftc.go.jp",
@@ -583313,6 +583657,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "tr-harpya.datasus.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2016-05-10T18:32:29",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "tr.cmdashboard.nic.in",
   "country": "IN",
   "tld": "nic.in",
@@ -586679,6 +587031,14 @@
   "tld": "jus.br",
   "first_seen": "2018-04-27T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "tre.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-02-05T01:11:06",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "tre.tjpr.jus.br",
@@ -599999,6 +600359,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "universusbrasil.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-09-22T22:17:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "univesp.sp.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -605256,6 +605624,14 @@
   "tld": "gov.hk",
   "first_seen": "2018-05-30T14:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "valida.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2020-08-22T14:39:54",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "validasenha.mppe.mp.br",
@@ -634981,6 +635357,14 @@
   "tld": "go.jp",
   "first_seen": "2015-03-13T04:42:05",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "www-hmg.saude.gov.br",
+  "country": "BR",
+  "tld": "gov.br",
+  "sector": "health",
+  "first_seen": "2021-10-19T12:23:51",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "www-iasprd.latrobe.edu.au",

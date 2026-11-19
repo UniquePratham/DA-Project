@@ -32,6 +32,58 @@ COUNTRY_NAMES = {
     "IL": "Israel",
 }
 
+#: Sector classification by hostname marker. A domain is assigned to the first
+#: sector whose marker appears, so the order matters: health before education,
+#: because "health.edu" is a health site.
+SECTOR_MARKERS: list[tuple[str, tuple[str, ...]]] = [
+    ("health", (
+        "health", "nhs", "hospital", "medic", "clinic", "doh", "moh",
+        "sante", "santé", "salud", "sanidad", "salute", "gesundheit",
+        "zdrowie", "zdrav", "saude", "saúde", "sanita", "gezondheid",
+        "sundhed", "hälsa", "helse", "terveys", "egeszseg",
+    )),
+    ("judiciary", (
+        "court", "justice", "judic", "tribunal", "supreme", "leg.",
+        "senat", "parliament", "congress", "assembly", "corte", "gerichte",
+        "rechtspraak", "domstol", "sud", "soud",
+    )),
+    ("finance", (
+        "fin", "tax", "revenue", "treasur", "budget", "bank", "fisco",
+        "hacienda", "impots", "finanz", "skatt", "podatki",
+    )),
+    ("police", ("police", "policia", "polizei", "policie", "politi", "policja")),
+    ("defence", ("defen", "army", "navy", "airforce", "military", "mod.", "mil.")),
+    ("transport", (
+        "transport", "rail", "road", "highway", "traffic", "metro",
+        "aviation", "airport", "port", "shipping", "verkehr",
+    )),
+    ("environment", (
+        "environment", "climate", "forest", "wildlife", "pollution",
+        "ecology", "umwelt", "ambiente", "milieu",
+    )),
+    ("agriculture", (
+        "agric", "farming", "farmers", "crop", "livestock", "fisheries",
+        "landwirtschaft", "rolnictwo",
+    )),
+    ("social", (
+        "social", "welfare", "pension", "benefit", "disability", "family",
+        "children", "youth", "elderly", "sozial", "previdencia",
+    )),
+    ("education", (
+        "edu", "ac.", "univ", "school", "college", "institute", "research",
+        "student", "campus", "library", "bildung", "onderwijs",
+    )),
+]
+
+
+def classify_sector(host: str) -> str:
+    """Assign a domain to a sector by hostname marker, or 'general'."""
+    h = host.lower()
+    for sector, markers in SECTOR_MARKERS:
+        if any(m in h for m in markers):
+            return sector
+    return "general"
+
 
 def main() -> int:
     if not CSV.exists():
@@ -67,6 +119,26 @@ def main() -> int:
 
     countries.sort(key=lambda c: (c["accessibility"] is None, -(c["accessibility"] or 0)))
 
+    # Sector breakdown, computed from the measured rows rather than the registry,
+    # so it reflects what was actually measured.
+    df["sector"] = df["domain_name"].map(classify_sector)
+    sectors = []
+    for sector, g in df.groupby("sector"):
+        gl = g[g.is_reachable]
+        sectors.append(
+            {
+                "sector": sector,
+                "domains": int(len(g)),
+                "reachable": int(len(gl)),
+                "reach_pct": round(len(gl) / len(g) * 100, 1),
+                "accessibility": round(float(gl.sub_accessibility_score.mean()), 1) if len(gl) else None,
+                "security": round(float(gl.sub_security_headers_score.mean()), 1) if len(gl) else None,
+                "maturity": round(float(gl.observatory_maturity_score.mean()), 1) if len(gl) else None,
+                "median_ttfb_ms": int(gl.sub_response_latency_ms.median()) if len(gl) else None,
+            }
+        )
+    sectors.sort(key=lambda s: -s["domains"])
+
     payload = {
         "generated_from": "data/real/global_measurements.csv",
         "total_rows": int(len(df)),
@@ -74,6 +146,7 @@ def main() -> int:
         "all_domestic": bool(df.domestic_probe.all()),
         "overall_reach_pct": round(len(live) / len(df) * 100, 1),
         "countries": countries,
+        "sectors": sectors,
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
