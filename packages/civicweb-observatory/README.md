@@ -108,7 +108,7 @@ print(live["sub_security_headers_score"].describe().round(1))
 
 ```bibtex
 @techreport{agarwal2026civicweb,
-  title       = {CivicWeb Access: A Census-Scale In-Country Web Observatory
+  title       = {CivicWeb Observatory: A Census-Scale In-Country Web Observatory
                  and Empirical Benchmark of India's Public Digital Infrastructure},
   author      = {Agarwal, Pratham and Bairagi, Amit Kumar and Yaduraj, Vishwajeet Nand},
   institution = {Department of Computer Science and Engineering, IIT Kharagpur},

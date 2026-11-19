@@ -1,4 +1,4 @@
-"""Real in-country measurement crawler for CivicWeb Access.
+"""Real in-country measurement crawler for CivicWeb Observatory.
 
 Runs on the India node. Every value written here comes from an actual HTTP
 request and the actual response body. Nothing is sampled or synthesised.

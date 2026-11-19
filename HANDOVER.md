@@ -1,4 +1,4 @@
-# CivicWeb Access — Agent Handover Document
+# CivicWeb Observatory — Agent Handover Document
 **Project Domain:** National Government Web Infrastructure Observatory & Academic Benchmark  
 **Institution:** Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur (Group 12)  
 **Subject:** Data Analytics  
@@ -10,9 +10,9 @@
 
 ## 1. Executive Summary & Purpose
 
-This document provides a complete operational and technical handover for an incoming AI agent or developer continuing work on **CivicWeb Access**. 
+This document provides a complete operational and technical handover for an incoming AI agent or developer continuing work on **CivicWeb Observatory**. 
 
-CivicWeb Access is the first census-scale, longitudinal web observatory evaluating India's public digital infrastructure across **14,489 government web domains**. The platform resolves the historical **Geo-IP perimeter firewall blindspot** (which caused &gt;66% false-positive reachability failures when measured from overseas cloud vantage points) by executing ingestion within the Indian domestic peering fabric.
+CivicWeb Observatory is the first census-scale, longitudinal web observatory evaluating India's public digital infrastructure across **14,489 government web domains**. The platform resolves the historical **Geo-IP perimeter firewall blindspot** (which caused &gt;66% false-positive reachability failures when measured from overseas cloud vantage points) by executing ingestion within the Indian domestic peering fabric.
 
 The project currently encompasses:
 1. **A verified 14,489-portal census dataset** in Parquet, CSV, JSON, and bundled JS formats.
@@ -83,7 +83,7 @@ To prevent "metric bloat" (which previously had 70+ uncalibrated columns), the p
 
 ```
                     ┌────────────────────────────────────────────────────────┐
-                    │               CivicWeb Access Framework               │
+                    │               CivicWeb Observatory Framework               │
                     └───────────────────────────┬────────────────────────────┘
                                                 │
          ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐

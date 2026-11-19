@@ -1293,7 +1293,7 @@
       const stat = state.stats.states.find((s) => s.name === state.selectedState);
       if (!stat) return;
       const text =
-        `${stat.name} — CivicWeb Access\n` +
+        `${stat.name} — CivicWeb Observatory\n` +
         `Portals: ${stat.total} (${stat.live} reachable, ${dec(stat.reachRate)}%)\n` +
         `Composite maturity: ${dec(stat.maturity)} / 100 (rank ${stat.rank} of ${state.stats.states.length})\n` +
         `Accessibility: ${dec(stat.acc)} / 100\n` +

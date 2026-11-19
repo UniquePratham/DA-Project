@@ -1,4 +1,4 @@
-# CivicWeb Access — Data Dictionary
+# CivicWeb Observatory — Data Dictionary
 
 This document details the exact schema, types, descriptions, and feature definitions for all published dataset releases (`.parquet` and `.csv`).
 

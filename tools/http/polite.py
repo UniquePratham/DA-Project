@@ -1,4 +1,4 @@
-"""Polite HTTP client for the CivicWeb Access observatory.
+"""Polite HTTP client for the CivicWeb Observatory observatory.
 
 This module exists because a measurement crawler that is rude produces bad data
 as well as bad manners: a site that rate-limits you returns 429, and a 429

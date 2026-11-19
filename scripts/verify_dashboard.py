@@ -1,4 +1,4 @@
-"""End-to-end verification of the CivicWeb Access dashboard.
+"""End-to-end verification of the CivicWeb Observatory dashboard.
 
 Covers four independent concerns:
 

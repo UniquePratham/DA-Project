@@ -298,7 +298,7 @@ class DatasetExporter:
 
         # 8. Generate DataHub Release Metadata
         manifest = {
-            "dataset_name": "CivicWeb Access",
+            "dataset_name": "CivicWeb Observatory",
             "dataset_version": dataset_version,
             "description": "Agentic, Longitudinal Observatory of India's Government Web Infrastructure (Website Level with State/Central Benchmarks)",
             "dataset_granularity": "1 row per unique government website / domain",

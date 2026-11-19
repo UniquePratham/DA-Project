@@ -362,7 +362,7 @@ def build_html() -> str:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CivicWeb Access — Research Paper</title>
+<title>CivicWeb Observatory — Research Paper</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>

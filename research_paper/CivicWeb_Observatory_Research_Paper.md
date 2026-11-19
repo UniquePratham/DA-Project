@@ -1,4 +1,4 @@
-# CivicWeb Access: An In-Country Measurement Study of India's Public Web Infrastructure
+# CivicWeb Observatory: An In-Country Measurement Study of India's Public Web Infrastructure
 
 **Pratham Agarwal**, **Amit Kumar Bairagi**, and **Vishwajeet Nand Yaduraj**  
 *Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India*  
@@ -81,7 +81,7 @@ We group the measurements into five pillars, each with two sub-features, giving 
 
 ```
                     ┌────────────────────────────────────────────────────────┐
-                    │               CivicWeb Access Framework               │
+                    │               CivicWeb Observatory Framework               │
                     └───────────────────────────┬────────────────────────────┘
                                                 │
          ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐

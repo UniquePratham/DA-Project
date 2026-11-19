@@ -1,6 +1,6 @@
-# CivicWeb Access — Production VM Deployment & Setup Guide
+# CivicWeb Observatory — Production VM Deployment & Setup Guide
 
-This guide provides step-by-step instructions for deploying and running **CivicWeb Access** on your **Vultr VM (24 vCPU / 96 GB RAM / 1600 GB Storage)**.
+This guide provides step-by-step instructions for deploying and running **CivicWeb Observatory** on your **Vultr VM (24 vCPU / 96 GB RAM / 1600 GB Storage)**.
 
 ---
 

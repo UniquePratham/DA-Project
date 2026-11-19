@@ -1,4 +1,4 @@
-"""CivicWeb Access Interactive Decision-Maker Dashboard.
+"""CivicWeb Observatory Interactive Decision-Maker Dashboard.
 
 Provides State-wise and Central Ministry Web Maturity Analytics:
 - Comparative State Benchmarks (Accessibility, Speed, GIGW Compliance, Multilingualism)
@@ -16,13 +16,13 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="CivicWeb Access — State & Central Observatory Dashboard",
+    page_title="CivicWeb Observatory — State & Central Observatory Dashboard",
     page_icon="🏛️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-st.title("🏛️ CivicWeb Access — Government Web Infrastructure Observatory")
+st.title("🏛️ CivicWeb Observatory — Government Web Infrastructure Observatory")
 st.caption("Empowering State & Central IT Decision Makers with Data-Driven Public Web Analytics")
 
 # Load Latest Dataset Release

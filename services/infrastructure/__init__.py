@@ -1,4 +1,4 @@
-"""Ephemeral cloud infrastructure for CivicWeb Access.
+"""Ephemeral cloud infrastructure for CivicWeb Observatory.
 
 The observatory's research data is persistent. Its compute is not. Measurement
 jobs are short-lived, so this package provisions a worker only when there is

@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title{CivicWeb Access: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure\\
+\title{CivicWeb Observatory: A Census-Scale In-Country Web Observatory and Empirical Benchmark of India's Public Digital Infrastructure\\
 \thanks{This research was conducted within the Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur.}
 }
 
@@ -43,7 +43,7 @@ vishwajeet.yaduraj@iitkgp.ac.in}
 \begin{abstract}
 Digital Public Infrastructure (DPI) serves as the primary conduit through which the Government of India delivers welfare entitlements, citizen registries, tax filings, and judicial services to over 900 million connected citizens. Despite its systemic societal significance, empirical knowledge of the accessibility, performance, and cryptographic security of India's multi-tiered public web remains scarce, fragmented, and vulnerable to measurement bias. Prior web measurement studies have evaluated narrow samples ($\le 100$ homepages) or relied on overseas cloud vantage points, which we demonstrate trigger false-positive reachability failures exceeding 66\% due to domestic perimeter Geo-IP firewalls operated by state gateways and RailTel. 
 
-To overcome these barriers, we present CivicWeb Access, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures 12,092 government web domains across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible 5-Pillar / 10-Sub-Feature evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).
+To overcome these barriers, we present CivicWeb Observatory, the first census-scale, longitudinal web observatory of India's public web infrastructure. Instrumented from domestic in-country cloud nodes deployed in Bangalore, India, the observatory continuously measures 12,092 government web domains across Central Ministries, 36 States and Union Territories, all 788 District Administrations, Urban Local Bodies (ULBs), premier academic institutes, and the judiciary. We introduce a standardized, defensible 5-Pillar / 10-Sub-Feature evaluation framework strictly aligned with W3C (WCAG 2.1 AA) and the Ministry of Electronics and Information Technology (MeitY) Guidelines for Indian Government Websites (GIGW 3.0).
 
 Our empirical audit reveals three primary findings: (1) The National Informatics Centre's (NIC) S3WaaS Drupal framework elevates mean accessibility compliance to 95.2 / 100 with 100.0\% GIGW toolbar penetration across 6,480 active portals (63.2\%), contrasted with legacy state ASP.NET deployments that languish at 84.3 / 100. The dividend is real but bounded: S3WaaS does not lead on security headers, where it scores 66.8 against 85.1 for modern single-page applications. (2) While transport-layer encryption is ubiquitous (100.0\% HTTPS enforcement), defensive HTTP headers exhibit severe lag: the mean header-hardening score is 68.0 / 100, and only 444 portals (4.3\%) set HSTS, a content security policy, frame options and MIME-sniffing protection together. (3) Under authentic domestic Indian peering conditions, median Time to First Byte (TTFB) is 888 ms (mean 1,186 ms), with 86.0\% of active portals offering localization in regional Eighth Schedule Indian scripts. We release the entire 12,092-portal dataset under CC-BY-4.0 alongside an open-access interactive observatory.
 \end{abstract}
@@ -141,7 +141,7 @@ Municipal Bodies & 140 & 87.1\% & 90.1 & 80.3\% & 65.8 & 71.6 \\
 While 100.0\% of active portals enforce HTTPS, defensive HTTP headers remain critically neglected: the mean header-hardening score is 68.0 / 100, and only 444 portals (4.3\%) set HSTS, a content security policy, frame options and MIME-sniffing protection together. The modal band, holding 60.0\% of portals, scores between 50 and 75, exposing citizens to SSL stripping and XSS risks at the edge.
 
 \section{Conclusion}
-CivicWeb Access establishes India's first census-scale, domestic web observatory across 12,092 public portals. We release our versioned dataset and live dashboard (\url{https://quality-ampland-ashley-ought.trycloudflare.com}) under CC-BY-4.0.
+CivicWeb Observatory establishes India's first census-scale, domestic web observatory across 12,092 public portals. We release our versioned dataset and live dashboard (\url{https://quality-ampland-ashley-ought.trycloudflare.com}) under CC-BY-4.0.
 
 \begin{thebibliography}{00}
 \bibitem{w3c} W3C, ``Web Content Accessibility Guidelines (WCAG) 2.1,'' W3C Recommendation, 2018.

@@ -8014,5 +8014,131 @@
   "status": "ok",
   "certs": 0,
   "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.salute.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.sante.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.sant\u00e9.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.sanidad.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.salud.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.saude.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.justice.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.justicia.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.justi\u00e7a.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.justiz.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.giustizia.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.justitie.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.finance.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.finanz.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.finanzen.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.finanzas.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.financas.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JO",
+  "query": "%25.finan\u00e7as.gov.jo",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
  }
 ]

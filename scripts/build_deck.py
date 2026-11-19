@@ -441,7 +441,7 @@ def build(f: dict) -> str:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CivicWeb Access — Final Evaluation</title>
+<title>CivicWeb Observatory — Final Evaluation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -452,7 +452,7 @@ def build(f: dict) -> str:
 <!-- ============================================================ 1 · TITLE -->
 <section class="slide title-slide">
   <div class="rail">
-    <span><b>CivicWeb Access</b></span>
+    <span><b>CivicWeb Observatory</b></span>
     <span>Final Evaluation &middot; Checkpoint 3</span>
     <span>2026</span>
   </div>
@@ -540,7 +540,7 @@ def build(f: dict) -> str:
   </div>
 
   <div class="foot">
-    <span>CivicWeb Access</span>
+    <span>CivicWeb Observatory</span>
     <span>Measured in-country &middot; no overseas vantage points</span>
   </div>
 </section>

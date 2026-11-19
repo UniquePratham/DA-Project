@@ -1,4 +1,4 @@
-# CivicWeb Access
+# CivicWeb Observatory
 ## Agentic, Longitudinal Observatory of India's Government Web Infrastructure
 
 **Project Type:** Large-scale novel dataset + data analytics + working proof-of-concept product  
@@ -13,7 +13,7 @@
 
 # 1. Executive Summary
 
-**CivicWeb Access** is a large-scale, longitudinal, evidence-first dataset and analytics platform designed to characterize the publicly observable digital infrastructure of Indian government websites.
+**CivicWeb Observatory** is a large-scale, longitudinal, evidence-first dataset and analytics platform designed to characterize the publicly observable digital infrastructure of Indian government websites.
 
 The project will discover, verify, monitor, analyze, and document Indian government web portals across central government, states and union territories, districts, departments, public agencies, local-government bodies, public services, and other verifiable government web properties within the defined project scope.
 
@@ -122,7 +122,7 @@ Create **CivicWeb Inspector**, a functioning proof-of-concept that accepts a gov
 
 ---
 
-# 4. What Makes CivicWeb Access Distinct
+# 4. What Makes CivicWeb Observatory Distinct
 
 Existing accessibility-testing tools and studies mean the project must not be positioned merely as:
 
@@ -130,7 +130,7 @@ Existing accessibility-testing tools and studies mean the project must not be po
 
 That would be too narrow.
 
-CivicWeb Access combines:
+CivicWeb Observatory combines:
 
 ```text
 Comprehensive government-web discovery
@@ -281,7 +281,7 @@ The actual values must be generated from the collection system.
 
 # 9. Data Dimensions
 
-CivicWeb Access will collect several measurement families.
+CivicWeb Observatory will collect several measurement families.
 
 ## 9.1 Accessibility
 
@@ -667,7 +667,7 @@ The project does not perform stress testing.
 
 # 16. Explicitly Prohibited Actions
 
-CivicWeb Access must not:
+CivicWeb Observatory must not:
 
 - bypass authentication;
 - bypass access controls;
@@ -2397,15 +2397,15 @@ Weeks 13–14
 
 ---
 
-# 67. What CivicWeb Access Is
+# 67. What CivicWeb Observatory Is
 
-CivicWeb Access is:
+CivicWeb Observatory is:
 
 > **A continuously evolving, evidence-first dataset and observatory that uses a locally hosted lightweight AI agent to adaptively study India's heterogeneous government websites while deterministic tools, safety controls, and validation systems provide reproducibility, responsible collection, and trustworthy analytics.**
 
 ---
 
-# 68. What CivicWeb Access Is Not
+# 68. What CivicWeb Observatory Is Not
 
 It is not:
 
@@ -2516,4 +2516,4 @@ The dashboard communicates the findings.
 
 The product demonstrates practical value.
 
-That separation is the foundation of CivicWeb Access.
+That separation is the foundation of CivicWeb Observatory.

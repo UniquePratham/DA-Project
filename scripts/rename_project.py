@@ -1,4 +1,4 @@
-"""Rename the project from CivicWeb Access to CivicWeb Observatory.
+"""Rename the project from CivicWeb Observatory to CivicWeb Observatory.
 
 The project is no longer India-specific: it measures government websites across
 93 countries. The name should say that.

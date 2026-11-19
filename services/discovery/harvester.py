@@ -1,4 +1,4 @@
-"""Domain Harvester, Link Extractor, and DNS Normalizer for CivicWeb Access."""
+"""Domain Harvester, Link Extractor, and DNS Normalizer for CivicWeb Observatory."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""CivicWeb Access — census-scale dataset for India's public web infrastructure.
+"""CivicWeb Observatory — census-scale dataset for India's public web infrastructure.
 
 The package bundles the released 12,092-domain census and exposes it as a pandas
 DataFrame with typed columns, plus a small analysis layer for the figures quoted

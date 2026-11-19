@@ -1,4 +1,4 @@
-"""Data Quality & Integrity Validation Engine for CivicWeb Access."""
+"""Data Quality & Integrity Validation Engine for CivicWeb Observatory."""
 
 from __future__ import annotations
 

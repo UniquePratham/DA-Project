@@ -1,4 +1,4 @@
-"""Configuration management for CivicWeb Access Observatory."""
+"""Configuration management for CivicWeb Observatory Observatory."""
 
 from __future__ import annotations
 

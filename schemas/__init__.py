@@ -1,4 +1,4 @@
-"""Schemas package for CivicWeb Access Observatory."""
+"""Schemas package for CivicWeb Observatory Observatory."""
 
 from schemas.evidence import RawEvidenceRecord, EvidenceType
 from schemas.domain import GovernmentEntityRecord, DomainStatus, GovernmentLevel

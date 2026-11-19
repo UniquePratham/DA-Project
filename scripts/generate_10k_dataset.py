@@ -1,6 +1,6 @@
 """
 Census-Scale 10,000+ Indian Government Web Infrastructure Dataset Generator.
-CivicWeb Access v3.0.0 (National Census Release).
+CivicWeb Observatory v3.0.0 (National Census Release).
 
 Comprehensive representation across:
 - Central Ministries & Flagship Schemes: 650+

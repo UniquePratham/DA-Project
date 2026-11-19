@@ -1,4 +1,4 @@
-"""Command-line interface for the CivicWeb Access dataset.
+"""Command-line interface for the CivicWeb Observatory dataset.
 
     civicweb info
     civicweb tiers
@@ -37,7 +37,7 @@ def _print_table(df: pd.DataFrame) -> None:
 def cmd_info(_: argparse.Namespace) -> int:
     info = describe_release()
     width = max(len(k) for k in info)
-    print(f"CivicWeb Access v{info['version']}")
+    print(f"CivicWeb Observatory v{info['version']}")
     print("-" * (width + 24))
     for key, value in info.items():
         if key in {"version", "source"}:
@@ -117,7 +117,7 @@ def cmd_query(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="civicweb",
-        description="Query the CivicWeb Access census of 12,092 Indian government domains.",
+        description="Query the CivicWeb Observatory census of 12,092 Indian government domains.",
     )
     parser.add_argument("--version", action="version", version=f"civicweb-observatory {__version__}")
 
