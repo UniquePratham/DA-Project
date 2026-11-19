@@ -8140,5 +8140,503 @@
   "status": "ok",
   "certs": 0,
   "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.salute.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sante.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sant\u00e9.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sanidad.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.salud.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.saude.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.salute.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sante.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sant\u00e9.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sanidad.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.salud.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.saude.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.salute.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sante.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sant\u00e9.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.sanidad.ac.jp",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.salud.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.saude.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justice.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justicia.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justi\u00e7a.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justiz.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.giustizia.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justitie.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justice.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justicia.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justi\u00e7a.lg.jp",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justiz.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.giustizia.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justitie.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justice.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justicia.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justi\u00e7a.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justiz.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.giustizia.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.justitie.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finance.go.jp",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanz.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanzen.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanzas.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.financas.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finan\u00e7as.go.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finance.lg.jp",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanz.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanzen.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanzas.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.financas.lg.jp",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finan\u00e7as.lg.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finance.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanz.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanzen.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finanzas.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.financas.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "JP",
+  "query": "%25.finan\u00e7as.ac.jp",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.salute.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.sante.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.sant\u00e9.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.sanidad.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.salud.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.saude.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.justice.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.justicia.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.justi\u00e7a.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.justiz.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.giustizia.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.justitie.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.finance.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.finanz.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.finanzen.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.finanzas.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.financas.go.ke",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "KE",
+  "query": "%25.finan\u00e7as.go.ke",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
  }
 ]
