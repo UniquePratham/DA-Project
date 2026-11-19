@@ -12761,5 +12761,254 @@
   "status": "ok",
   "certs": 0,
   "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.salute.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.sante.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.sant\u00e9.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.sanidad.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.salud.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.saude.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.salute.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.sante.edu.ph",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.sant\u00e9.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.sanidad.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.salud.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.saude.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justice.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justicia.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justi\u00e7a.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justiz.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.giustizia.gov.ph",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justitie.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justice.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justicia.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justi\u00e7a.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justiz.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.giustizia.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.justitie.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finance.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finanz.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finanzen.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finanzas.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.financas.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finan\u00e7as.gov.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finance.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finanz.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finanzen.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finanzas.edu.ph",
+  "status": "not-found",
+  "certs": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.financas.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
+ },
+ {
+  "country": "PH",
+  "query": "%25.finan\u00e7as.edu.ph",
+  "status": "ok",
+  "certs": 0,
+  "added": 0
  }
 ]
