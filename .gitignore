@@ -133,3 +133,6 @@ data/infra/
 
 # Added by repo hygiene pass
 .env.local
+
+# Vercel local state (contains project tokens)
+.vercel/
