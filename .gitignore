@@ -130,3 +130,6 @@ scripts/download_dataset.py
 !data/fixtures/world-110m.json
 # Ephemeral infrastructure runtime state (contains instance ids and spend)
 data/infra/
+
+# Added by repo hygiene pass
+.env.local
