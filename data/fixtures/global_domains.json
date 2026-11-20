@@ -20434,6 +20434,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ams-oiag.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2021-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ams-sga-cra-arc.fjgc-gccf.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
@@ -24167,6 +24175,14 @@
   "tld": "gov.il",
   "sector": "judiciary",
   "first_seen": "2026-08-05T07:21:40",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "api.justice.gov.sk",
+  "country": "SK",
+  "tld": "gov.sk",
+  "sector": "judiciary",
+  "first_seen": "2026-10-01T03:02:24",
   "source": "certificate_transparency_sector"
  },
  {
@@ -39765,6 +39781,14 @@
   "source": "certificate_transparency_sector"
  },
  {
+  "domain_name": "authoring.usaflix.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "auti.aut.ac.nz",
   "country": "NZ",
   "tld": "ac.nz",
@@ -44483,6 +44507,14 @@
   "tld": "edu.np",
   "first_seen": "2017-02-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "bak-economy.finance.gov.pk",
+  "country": "PK",
+  "tld": "gov.pk",
+  "sector": "finance",
+  "first_seen": "2026-07-27T08:16:43",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "baka.gov.tr",
@@ -57165,6 +57197,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "blogs.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-04-05T15:29:59",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "blogue-sct.canada.ca",
   "country": "CA",
   "tld": "canada.ca",
@@ -64721,11 +64761,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "budget.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-25T05:50:49",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "budget.gc.ca",
   "country": "CA",
   "tld": "gc.ca",
   "first_seen": "2018-04-24T22:31:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "budget.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2022-02-18T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "budget.gov.hk",
@@ -75458,6 +75514,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "case-access.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "case-portal.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-04-17T17:20:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "case.gsop.gov.gh",
   "country": "GH",
   "tld": "gov.gh",
@@ -76299,6 +76371,14 @@
   "tld": "gov.br",
   "first_seen": "2013-12-10T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "caucus.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2021-10-06T17:17:03",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "caudit.edu.au",
@@ -93635,6 +93715,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "civeng.unsw.edu.au",
   "country": "AU",
   "tld": "edu.au",
@@ -93844,6 +93932,22 @@
   "tld": "gov.om",
   "first_seen": "2019-04-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "civilrights.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-10T14:20:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "civilrightscharge.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-03T19:20:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "civilservice.gov.uk",
@@ -94529,6 +94633,14 @@
   "tld": "gov.uk",
   "first_seen": "2012-03-27T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cla.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2021-08-19T07:36:05",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "claarrdec.clsu.edu.ph",
@@ -95616,6 +95728,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "climate.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-25T05:51:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "climate.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -96651,6 +96771,14 @@
   "tld": "go.ug",
   "first_seen": "2018-07-19T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cloud.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-07-28T15:38:13",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "cloud.spacecenter.gov.ua",
@@ -102241,6 +102369,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "collab-edge.jabber.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-04T15:26:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "collab-edge.jsnu.edu.cn",
   "country": "CN",
   "tld": "edu.cn",
@@ -106735,6 +106871,182 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "connect-doj-o365.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-07-23T19:35:30",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-emfm.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2013-04-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-atf.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-02-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-atf1.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2012-05-21T17:49:15",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-bop.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-03-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2011-12-02T20:07:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-crm.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2013-12-24T15:03:15",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-dea.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-11-21T23:01:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-doj-dr.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2015-02-26T22:13:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-doj.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-02-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-enrd.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2014-01-08T21:40:39",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2012-04-26T15:23:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-eousa.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-04-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-fpi.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-03-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-oig.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2015-10-09T06:03:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-oig2010.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-09-06T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-ojp.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2012-07-11T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-usa.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-02-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-usms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-05-23T19:16:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mail-ustp.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2012-01-06T19:12:20",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-mobile.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-01-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect-portal.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-02-03T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "connect-rapports.sante.gouv.fr",
   "country": "FR",
   "tld": "gouv.fr",
@@ -107013,6 +107325,14 @@
   "tld": "gov.sg",
   "first_seen": "2009-08-11T01:38:11",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "connect.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "connect.justice.gov.lb",
@@ -107366,6 +107686,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "connect2-mail-eousa.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2015-01-30T17:00:58",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "connect2-mail-usms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-10-25T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "connect2.ags.gov.au",
   "country": "AU",
   "tld": "gov.au",
@@ -107401,6 +107737,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "connect2.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-06-14T13:46:12",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "connect2.swindon.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -107434,6 +107778,14 @@
   "tld": "gov",
   "first_seen": "2012-10-31T16:38:34",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "connect3.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "connect3a.bpa.gov",
@@ -110023,6 +110375,14 @@
   "tld": "ac.kr",
   "first_seen": "2014-10-31T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "cora.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-08-27T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "corbon.gov.ng",
@@ -116250,6 +116610,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "create.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-25T05:51:53",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "create.iucc.ac.il",
   "country": "IL",
   "tld": "ac.il",
@@ -118008,6 +118376,14 @@
   "tld": "gov.sg",
   "first_seen": "2016-05-12T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "csa.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "csa.madrm.gov.md",
@@ -126972,6 +127348,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "darc.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-28T20:39:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "darcinopolis.to.leg.br",
   "country": "BR",
   "tld": "leg.br",
@@ -129969,6 +130353,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dcl.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T12:21:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dd.estandard.gov.mn",
   "country": "MN",
   "tld": "gov.mn",
@@ -130367,6 +130759,14 @@
   "tld": "go.tz",
   "first_seen": "2018-06-11T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dea-mag.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2018-09-19T17:16:28",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dea.gov.ge",
@@ -134230,6 +134630,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "development.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-25T05:52:02",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "development.go.ug",
   "country": "UG",
   "tld": "go.ug",
@@ -136359,6 +136767,14 @@
   "tld": "edu.np",
   "first_seen": "2017-01-22T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dhs-portal.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dhs.arkansas.gov",
@@ -140379,6 +140795,14 @@
   "tld": "gv.at",
   "first_seen": "2015-01-27T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "digitalfirst.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "digitalhealth.gov.mt",
@@ -146954,6 +147378,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "doingbusiness.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-25T05:31:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "doingbusiness.gov.bw",
   "country": "BW",
   "tld": "gov.bw",
@@ -147038,11 +147470,99 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "dojocio.alerts.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-06-25T14:50:13",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojonline.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2025-04-22T15:28:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojonlineapi.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2025-08-01T06:33:03",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojonlinepilot.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2025-04-22T15:28:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojonlinepilotftp.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2021-08-27T06:37:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojonlinereport.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-07-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojpaas.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-06-06T21:12:56",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "dojran.gov.mk",
   "country": "MK",
   "tld": "gov.mk",
   "first_seen": "2018-10-25T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dojsts1-t-sign.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-11-13T19:03:24",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojsts1-t.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-02-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojsts1-token.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-12-16T17:49:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "dojsts1.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-02-26T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dokdo.gbpolice.go.kr",
@@ -154745,6 +155265,14 @@
   "tld": "gov.eg",
   "first_seen": "2019-06-24T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "dwp.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-03-01T08:55:08",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "dwp1.dhs.oregon.gov",
@@ -165251,6 +165779,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "economy.finance.gov.pk",
+  "country": "PK",
+  "tld": "gov.pk",
+  "sector": "finance",
+  "first_seen": "2026-07-26T08:15:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "economy.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -166972,6 +167508,14 @@
   "source": "certificate_transparency_sector"
  },
  {
+  "domain_name": "edit.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "edit.mzv.gov.cz",
   "country": "CZ",
   "tld": "gov.cz",
@@ -167373,6 +167917,14 @@
   "tld": "edu.tw",
   "first_seen": "2015-07-02T01:04:29",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "edocs.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2025-01-24T08:45:55",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "edocs.gov.kz",
@@ -170791,6 +171343,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "efile.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-04-17T17:20:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "efile.fara.gov",
   "country": "US",
   "tld": "gov",
@@ -171070,6 +171630,14 @@
   "tld": "gov.sg",
   "first_seen": "2014-09-29T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "efoiaportal.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2015-02-11T18:16:06",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "efolio.hct.ac.ae",
@@ -173422,6 +173990,14 @@
   "tld": "vlaanderen.be",
   "first_seen": "2019-12-12T21:00:22",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "einfo.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-04-17T17:20:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "einform.council.gov.ru",
@@ -183096,6 +183672,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ens.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-05-14T17:33:11",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ens.omu.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -184085,6 +184669,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-26T21:33:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "eoisarch.pamiatky.gov.sk",
   "country": "SK",
   "tld": "gov.sk",
@@ -184231,6 +184823,22 @@
   "tld": "gc.ca",
   "first_seen": "2015-04-17T17:45:56",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "eousabyodeas.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2018-12-20T18:43:47",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "eousabyodssl.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2018-12-20T18:43:47",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "eows.eld.gov.sg",
@@ -186671,6 +187279,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "eposta.finance.gov.tr",
+  "country": "TR",
+  "tld": "gov.tr",
+  "sector": "finance",
+  "first_seen": "2019-04-01T07:28:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "eposta.gata.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -188450,6 +189066,14 @@
   "tld": "gov.ae",
   "first_seen": "2014-02-16T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ereg.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ereg.gov.mt",
@@ -202788,6 +203412,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "facilities.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-06-25T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "facilities.kobe-tokiwa.ac.jp",
   "country": "JP",
   "tld": "ac.jp",
@@ -207946,11 +208578,27 @@
   "source": "certificate_transparency_sector"
  },
  {
+  "domain_name": "finance.gov.pk",
+  "country": "PK",
+  "tld": "gov.pk",
+  "sector": "finance",
+  "first_seen": "2026-10-09T07:59:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "finance.gov.sk",
   "country": "SK",
   "tld": "gov.sk",
   "first_seen": "2019-05-03T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "finance.gov.tr",
+  "country": "TR",
+  "tld": "gov.tr",
+  "sector": "finance",
+  "first_seen": "2019-12-24T11:26:26",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "finance.homabayassembly.go.ke",
@@ -208793,6 +209441,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "firehawk.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2018-06-28T12:16:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fireinfo.dhses.ny.gov",
   "country": "US",
   "tld": "gov",
@@ -209417,6 +210073,14 @@
   "tld": "gov.uk",
   "first_seen": "2010-01-19T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fixnics.csa.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fizicna.jep.gov.si",
@@ -215479,6 +216143,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fs1-t.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2015-04-08T21:26:50",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fs1.eqc.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
@@ -215486,11 +216158,35 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "fs1.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2015-04-08T21:27:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "fs2-t.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-02-19T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "fs2.eqc.govt.nz",
   "country": "NZ",
   "tld": "govt.nz",
   "first_seen": "2014-06-11T18:05:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "fs2.idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-02-19T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "fsa.go.jp",
@@ -230318,6 +231014,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "globalfund.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-09-02T08:40:33",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "globalgecc.edu.np",
   "country": "NP",
   "tld": "edu.np",
@@ -235671,6 +236375,14 @@
   "tld": "gov",
   "first_seen": "2011-12-22T20:54:39",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "grantsnet.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "granturi.imm.gov.ro",
@@ -244753,6 +245465,14 @@
   "tld": "edu.au",
   "first_seen": "2012-10-08T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "hdcarray.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-07-29T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "hdds.usgs.gov",
@@ -254056,6 +254776,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "hrmis.finance.gov.pk",
+  "country": "PK",
+  "tld": "gov.pk",
+  "sector": "finance",
+  "first_seen": "2026-07-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "hrmis.health.gov.lk",
   "country": "LK",
   "tld": "gov.lk",
@@ -259278,11 +260006,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ibp-api.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2019-12-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ibp.edu.mx",
   "country": "MX",
   "tld": "edu.mx",
   "first_seen": "2011-07-19T12:37:23",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ibp.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2019-11-26T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ibpc4istanbul.itu.edu.tr",
@@ -264069,6 +264813,14 @@
   "tld": "go.jp",
   "first_seen": "2012-02-02T15:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "idms.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "idms.sp.edu.sg",
@@ -285819,6 +286571,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "itirelepilot.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-07-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "itirelepilotssrs.justice.gov.za",
   "country": "ZA",
   "tld": "gov.za",
@@ -286650,6 +287410,14 @@
   "tld": "gov",
   "first_seen": "2011-06-24T18:27:45",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "itsm.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-03-01T08:55:08",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "itsm.parliament.uk",
@@ -288128,6 +288896,14 @@
   "tld": "gov.tr",
   "first_seen": "2014-07-22T08:50:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "jabber.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-09-02T14:40:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "jabber.mai.gov.ro",
@@ -289908,6 +290684,54 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "jconv.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-06-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jconv1.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-08-02T21:12:10",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jconv2.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-08-02T21:12:10",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jconx.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-06-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jconx1.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-06-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "jconx2.civ.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-06-24T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "jcs.edu.sa",
   "country": "SA",
   "tld": "edu.sa",
@@ -290537,6 +291361,14 @@
   "tld": "or.kr",
   "first_seen": "2009-10-01T14:49:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "jefs2.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-12-17T18:09:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "jefvirtual.jfpb.jus.br",
@@ -295071,6 +295903,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "join.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "join.justice.gov.ge",
   "country": "GE",
   "tld": "gov.ge",
@@ -298116,6 +298956,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justice.gov.bw",
   "country": "BW",
   "tld": "gov.bw",
@@ -298219,11 +299067,27 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "justice.gov.tr",
+  "country": "TR",
+  "tld": "gov.tr",
+  "sector": "judiciary",
+  "first_seen": "2025-11-04T13:00:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "justice.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
   "first_seen": "2012-08-11T15:59:18",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-08-15T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "justice.gov.zw",
@@ -317111,6 +317975,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ktaweb.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2023-07-25T12:39:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ktc.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -321420,6 +322292,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "labusaawmdm.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-09-08T21:18:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "labx.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -323667,6 +324547,30 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lawcouncil.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T12:21:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "lawcouncilmis.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T12:21:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "lawcouncilsystem.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T12:21:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "lawedu.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -324067,6 +324971,14 @@
   "tld": "ac.in",
   "first_seen": "2014-11-20T10:40:39",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "lbrdc.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-04T21:03:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "lbs.bnuz.edu.cn",
@@ -338635,6 +339547,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "lt-ecssbc-dc1.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2023-05-15T14:24:27",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "lt.justice.gov.sk",
   "country": "SK",
   "tld": "gov.sk",
@@ -350323,6 +351243,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "maps.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-02-12T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "maps.lekhwiya.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -359653,6 +360581,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "mepd.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-21T12:00:17",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "mepg.gov.me",
   "country": "ME",
   "tld": "gov.me",
@@ -361223,6 +362159,14 @@
   "tld": "jus.br",
   "first_seen": "2015-05-27T18:19:23",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mfa.finance.gov.tr",
+  "country": "TR",
+  "tld": "gov.tr",
+  "sector": "finance",
+  "first_seen": "2019-12-10T14:12:18",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mfa.gov.by",
@@ -374318,6 +375262,14 @@
   "tld": "gov.si",
   "first_seen": "2025-05-15T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "mojapaysf.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2025-07-23T08:04:37",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "mojconnect.justice.gov.uk",
@@ -399242,6 +400194,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "ndic.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2011-06-27T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "ndiim.ac.in",
   "country": "IN",
   "tld": "ac.in",
@@ -399506,6 +400466,22 @@
   "tld": "ac.jp",
   "first_seen": "2012-07-26T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ndts.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2010-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ndts.usdoj.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2010-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ndvs.gov.np",
@@ -401771,6 +402747,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "new.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T12:21:22",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "new.katabitowncouncil.go.ug",
   "country": "UG",
   "tld": "go.ug",
@@ -403941,6 +404925,14 @@
   "tld": "go.kr",
   "first_seen": "2010-06-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ngic.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2013-02-06T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ngii.go.kr",
@@ -417052,6 +418044,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "obchodnyvestnik.justice.gov.sk",
+  "country": "SK",
+  "tld": "gov.sk",
+  "sector": "judiciary",
+  "first_seen": "2026-08-18T06:03:09",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "obcig.acm.gov.pt",
   "country": "PT",
   "tld": "gov.pt",
@@ -421060,6 +422060,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "oig.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-30T18:20:07",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "oikade.gov.cy",
   "country": "CY",
   "tld": "gov.cy",
@@ -421502,6 +422510,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "okdbv.search.usa.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-06-02T20:00:03",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "okh.nic.in",
   "country": "IN",
   "tld": "nic.in",
@@ -421864,6 +422880,14 @@
   "tld": "edu.au",
   "first_seen": "2012-05-09T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ole.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-09-02T14:40:27",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ole.qut.edu.au",
@@ -422893,6 +423917,14 @@
   "tld": "edu.my",
   "first_seen": "2012-01-11T15:50:52",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "onas.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-07-15T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "onas.nou.edu.tw",
@@ -428691,6 +429723,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "origin-www.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-03-18T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "origin.go.kr",
   "country": "KR",
   "tld": "go.kr",
@@ -430443,6 +431483,14 @@
   "tld": "gov.na",
   "first_seen": "2024-07-01T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "otims.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-14T06:42:39",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "otirs.curriculum.edu.au",
@@ -432220,6 +433268,54 @@
   "tld": "gov.za",
   "first_seen": "2016-12-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ovwgreview.justapps.doj.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ovwgreviewnew.justapps.doj.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-03-21T12:39:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ovwgreviewtestnew.justapps.doj.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-02-28T13:00:29",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ovwreview.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-02-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ovwreviewnew.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-03-21T12:39:23",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "ovwreviewtestnew.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-02-28T13:00:29",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ovz.edu.gov.ru",
@@ -440859,6 +441955,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pbs.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2018-10-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pbs.harran.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -447583,6 +448687,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pilot.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2021-02-23T13:55:35",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pilot.mijn.overheid.nl",
   "country": "NL",
   "tld": "overheid.nl",
@@ -447777,6 +448889,14 @@
   "tld": "go.th",
   "first_seen": "2015-08-04T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "pimplus.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-27T05:48:46",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "pims.edu.np",
@@ -456872,6 +457992,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "portal.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "portal.erc.go.ke",
   "country": "KE",
   "tld": "go.ke",
@@ -461643,6 +462771,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "posta.finance.gov.tr",
+  "country": "TR",
+  "tld": "gov.tr",
+  "sector": "finance",
+  "first_seen": "2019-03-22T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "posta.firat.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -463007,6 +464143,14 @@
   "tld": "gov.uk",
   "first_seen": "2010-11-22T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ppp.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2024-11-08T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ppp.gov.ie",
@@ -466531,6 +467675,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "prod-digitalfirst.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "prod-enquiries.parliament.uk",
   "country": "GB",
   "tld": "parliament.uk",
@@ -466585,6 +467737,14 @@
   "tld": "gov.cz",
   "first_seen": "2024-09-09T23:11:13",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "prod.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "prod.magdaonlinepro.vlaanderen.be",
@@ -469736,6 +470896,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "psdpi.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-27T05:49:42",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "psds.gov.gh",
   "country": "GH",
   "tld": "gov.gh",
@@ -471495,6 +472663,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "pub-economy.finance.gov.pk",
+  "country": "PK",
+  "tld": "gov.pk",
+  "sector": "finance",
+  "first_seen": "2026-07-26T14:46:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "pub-lib.jpl.nasa.gov",
   "country": "US",
   "tld": "gov",
@@ -471654,6 +472830,14 @@
   "tld": "gov.pk",
   "first_seen": "2018-03-13T10:03:08",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "public.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-07-12T23:57:08",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "public.era.nih.gov",
@@ -481245,6 +482429,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "rdappfarm.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "rdapps.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "rdar.moh.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
@@ -481264,6 +482464,14 @@
   "tld": "gouv.fr",
   "first_seen": "2015-11-02T14:15:30",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rdcb.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-02-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "rde.ntpc.gov.tw",
@@ -482143,6 +483351,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "reap.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-22T06:02:05",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "reasignacion.sat.gob.mx",
   "country": "MX",
   "tld": "gob.mx",
@@ -482281,6 +483497,14 @@
   "tld": "gov.tw",
   "first_seen": "2009-10-09T06:29:35",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "reca.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-01-12T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "recall.mec.gov.qa",
@@ -486266,6 +487490,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "relativity.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2023-05-23T14:16:38",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "relativity.usa.doj.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-09-23T18:02:55",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "relatoriosmp.planejamento.gov.br",
   "country": "BR",
   "tld": "gov.br",
@@ -487497,6 +488737,14 @@
   "tld": "gov",
   "first_seen": "2012-07-20T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "reports.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T12:21:22",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "reports.london.gov.uk",
@@ -495802,6 +497050,14 @@
   "tld": "ac.il",
   "first_seen": "2018-07-19T04:23:57",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "rsso.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-03-01T08:55:08",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "rstv.nic.in",
@@ -505464,6 +506720,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sbu.dea.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-09-02T14:40:27",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sbu.edu.tr",
   "country": "TR",
   "tld": "edu.tr",
@@ -509822,6 +511086,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sdmx.finance.gov.pk",
+  "country": "PK",
+  "tld": "gov.pk",
+  "sector": "finance",
+  "first_seen": "2025-06-21T21:23:54",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sdn.minprom.gov.ru",
   "country": "RU",
   "tld": "gov.ru",
@@ -510508,6 +511780,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "search-www.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-07-28T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "search.archives.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-05-06T12:54:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "search.auckland.ac.nz",
   "country": "NZ",
   "tld": "ac.nz",
@@ -510625,6 +511913,14 @@
   "tld": "gc.ca",
   "sector": "judiciary",
   "first_seen": "2020-03-20T17:03:37",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "search.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-07-07T16:53:32",
   "source": "certificate_transparency_sector"
  },
  {
@@ -511355,6 +512651,14 @@
   "tld": "gov",
   "first_seen": "2009-12-15T13:51:51",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "second.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2021-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "secondaria.ic1saraccobella.gov.it",
@@ -517711,6 +519015,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "selfservice.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-02-02T09:53:42",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "selfservice.kettering.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -518898,6 +520210,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sentry.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2010-06-21T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sentry.mofa.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -518966,6 +520286,14 @@
   "tld": "gov.hk",
   "first_seen": "2017-06-26T09:47:03",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sentry.usdoj.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2010-06-21T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sentry1.taoiseach.gov.ie",
@@ -531429,6 +532757,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "signiflow.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-06-25T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "signon-alt.finance.gov.au",
   "country": "AU",
   "tld": "gov.au",
@@ -539788,6 +541124,22 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sky-cfme-ui1.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-07-14T12:01:43",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sky-cfme-ui2.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-07-14T12:01:29",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sky.chonbuk.ac.kr",
   "country": "KR",
   "tld": "ac.kr",
@@ -541461,6 +542813,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "smartit.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-03-01T08:55:08",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "smartjobs.qld.gov.au",
   "country": "AU",
   "tld": "gov.au",
@@ -541543,6 +542903,14 @@
   "tld": "gov",
   "first_seen": "2012-03-27T18:30:02",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "smartreporting.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-03-01T08:55:08",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "smarts.waterboards.ca.gov",
@@ -542341,6 +543709,14 @@
   "tld": "gov",
   "first_seen": "2012-11-14T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "smitsmint.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2022-01-21T07:12:54",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "smjchorus.or.kr",
@@ -550681,6 +552057,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "spravawebu.justice.gov.sk",
+  "country": "SK",
+  "tld": "gov.sk",
+  "sector": "judiciary",
+  "first_seen": "2025-11-25T06:20:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "spreturns.eastsussex.gov.uk",
   "country": "GB",
   "tld": "gov.uk",
@@ -551158,6 +552542,22 @@
   "tld": "edu.my",
   "first_seen": "2016-11-13T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sptc-xpwye-01.jabber.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-04T15:26:34",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sptc-xpwye-02.jabber.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-04T15:26:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sptc.edu.vn",
@@ -558229,6 +559629,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "stg-digitalfirst.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "stg-ecustoms.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -558360,6 +559768,14 @@
   "tld": "gov.mo",
   "first_seen": "2022-04-10T21:19:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "stg.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-28T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "stg.lankagate.gov.lk",
@@ -560974,6 +562390,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "sts.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "sts.epa.gov.tw",
   "country": "TW",
   "tld": "gov.tw",
@@ -561477,6 +562901,30 @@
   "tld": "ac.jp",
   "first_seen": "2008-04-01T06:51:51",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "sts1-enc.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-01-25T18:27:29",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sts1-sign.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-01-25T18:27:28",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "sts1.skyfall.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-01-25T18:27:10",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "sts1.uzzpro.gov.rs",
@@ -566394,6 +567842,14 @@
   "tld": "gov.gh",
   "first_seen": "2019-05-16T23:20:24",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "survey.ole.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-02-22T20:41:43",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "survey.parlament.gv.at",
@@ -590390,6 +591846,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "transcription.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-08-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "transespol.gob.ec",
   "country": "EC",
   "tld": "gob.ec",
@@ -593278,6 +594742,22 @@
   "tld": "gov.me",
   "first_seen": "2023-02-28T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "trustonline.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2026-07-14T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "trusts.justice.gov.za",
+  "country": "ZA",
+  "tld": "gov.za",
+  "sector": "judiciary",
+  "first_seen": "2021-08-27T13:46:09",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "trustslaw.calbar.ca.gov",
@@ -598268,6 +599748,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "uat-www.grantsnet.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-16T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "uat2.cpf.gov.sg",
   "country": "SG",
   "tld": "gov.sg",
@@ -601131,6 +602619,14 @@
   "tld": "ac.in",
   "first_seen": "2016-11-10T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "ugift.finance.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "finance",
+  "first_seen": "2026-08-15T12:46:44",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "ugiinuur.ar.gov.mn",
@@ -607395,11 +608891,43 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "usa.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-06-13T15:02:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "usa.nadmo.gov.gh",
   "country": "GH",
   "tld": "gov.gh",
   "first_seen": "2019-06-05T04:10:50",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "usaalert.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaapps.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-11T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaawmdm.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2016-12-08T20:44:32",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "usabilidade.gov.pt",
@@ -607409,11 +608937,75 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "usabyod365.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2023-03-10T20:19:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaconnect.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-09-10T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaconnect2.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-08-29T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaconnect3.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-06T22:24:39",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "usaf.ac.za",
   "country": "ZA",
   "tld": "ac.za",
   "first_seen": "2017-05-01T07:21:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "usaflix.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaflix2.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-08-26T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usafx.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usafx2.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-12-17T18:09:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "usage-ci.nii.ac.jp",
@@ -607449,6 +609041,150 @@
   "tld": "gouv.fr",
   "first_seen": "2016-07-01T12:28:14",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "usahubsuag131.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-02-17T20:22:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag132.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-02-17T20:22:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag133.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2021-02-17T20:22:51",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag430.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag431.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag432.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag433.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag434.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag435.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag436.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag437.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag438.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubsuag439.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-03-09T16:15:26",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubswgp201.wlanguest.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-11-13T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubswgp202.wlanguest.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-11-29T21:05:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubswgp301.wlanguest.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2020-12-10T19:01:48",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubswgp302.wlanguest.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-11-17T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usahubswgp303.wlanguest.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-07-02T14:03:36",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "usaid.gov",
@@ -607493,6 +609229,102 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "usalogin.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-09-01T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usamobile365.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2023-03-08T19:52:21",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usamobilecloud.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-05-09T18:34:19",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usamobilesecondary.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2019-05-21T14:43:46",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usarelativity.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-04-15T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremote-east.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremote-west.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremote1.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-15T20:05:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremote2.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremote3.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-01-20T00:00:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremoteeast.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-15T20:05:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usaremotewest.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-15T20:05:00",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "usasearch.fema.gov",
   "country": "US",
   "tld": "gov",
@@ -607505,6 +609337,14 @@
   "tld": "gov",
   "first_seen": "2012-04-30T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "usasync.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2023-05-11T13:28:50",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "usatestmanager.gov",
@@ -607526,6 +609366,22 @@
   "tld": "gov",
   "first_seen": "2012-06-22T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "usavenio-prod.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-05-12T16:42:46",
+  "source": "certificate_transparency_sector"
+ },
+ {
+  "domain_name": "usawifi.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2026-07-13T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "usb-en-ligne.lfkl.edu.my",
@@ -607764,6 +609620,14 @@
   "tld": "edu.bd",
   "first_seen": "2016-10-12T17:57:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "user-profile.eoir.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2025-12-23T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "user-serv.whu.edu.cn",
@@ -611448,6 +613312,14 @@
   "tld": "edu.in",
   "first_seen": "2016-11-17T00:00:00",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "vcf.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2024-12-04T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "vcgr.vic.gov.au",
@@ -622941,6 +624813,14 @@
   "tld": "go.kr",
   "first_seen": "2011-10-26T06:53:31",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "waterandlife.justice.go.ug",
+  "country": "UG",
+  "tld": "go.ug",
+  "sector": "judiciary",
+  "first_seen": "2023-01-22T00:00:00",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "waterbill.scc.gov.bd",
@@ -645131,6 +647011,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "wwwprod.justice.gov.sk",
+  "country": "SK",
+  "tld": "gov.sk",
+  "sector": "judiciary",
+  "first_seen": "2025-11-25T06:20:36",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "wwws.jfce.jus.br",
   "country": "BR",
   "tld": "jus.br",
@@ -646664,6 +648552,14 @@
   "source": "certificate_transparency"
  },
  {
+  "domain_name": "xmpp.finance.gov.tr",
+  "country": "TR",
+  "tld": "gov.tr",
+  "sector": "finance",
+  "first_seen": "2019-12-10T14:15:52",
+  "source": "certificate_transparency_sector"
+ },
+ {
   "domain_name": "xmpp.grsia.gov.qa",
   "country": "QA",
   "tld": "gov.qa",
@@ -647096,6 +648992,14 @@
   "tld": "gc.ca",
   "first_seen": "2016-06-11T16:54:16",
   "source": "certificate_transparency"
+ },
+ {
+  "domain_name": "xpwye-cluster.jabber.justice.gov",
+  "country": "US",
+  "tld": "gov",
+  "sector": "judiciary",
+  "first_seen": "2022-02-04T15:26:34",
+  "source": "certificate_transparency_sector"
  },
  {
   "domain_name": "xrb.govt.nz",

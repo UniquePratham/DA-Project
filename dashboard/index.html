@@ -4,17 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CivicWeb Observatory — Global Public Web Infrastructure Observatory</title>
-<meta name="description" content="A measured census of Indian government web domains, audited from inside the country with axe-core 4.x, real TLS handshakes, the OWASP Secure Headers directive set, and headless-Chromium mobile rendering.">
+<meta name="description" content="A cross-country measurement of public-sector web infrastructure across 81 countries, using axe-core 4.x, real TLS handshakes, the OWASP Secure Headers directive set, and headless-Chromium mobile rendering.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="static/app.css">
 <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="static/favicon.svg">
 <script src="static/dataset.js" defer></script>
-<script src="static/future.js" defer></script>
 <script src="static/world.js" defer></script>
 <script src="static/world_map.js" defer></script>
 <script src="static/global.js" defer></script>
-<script src="static/india_map.js" defer></script>
 <script src="static/app.js" defer></script>
 </head>
 <body>
@@ -65,20 +63,17 @@
       <button class="rail__btn" role="tab" id="tab-overview" aria-controls="view-overview" aria-selected="true" data-view="overview">
         <span class="rail__num">01</span>Overview
       </button>
-      <button class="rail__btn" role="tab" id="tab-atlas" aria-controls="view-atlas" aria-selected="false" tabindex="-1" data-view="atlas">
-        <span class="rail__num">02</span>Atlas
+      <button class="rail__btn" role="tab" id="tab-world" aria-controls="view-world" aria-selected="false" tabindex="-1" data-view="world">
+        <span class="rail__num">02</span>World
       </button>
-      <button class="rail__btn" role="tab" id="tab-ledger" aria-controls="view-ledger" aria-selected="false" tabindex="-1" data-view="ledger">
-        <span class="rail__num">03</span>Ledger
+      <button class="rail__btn" role="tab" id="tab-registry" aria-controls="view-registry" aria-selected="false" tabindex="-1" data-view="registry">
+        <span class="rail__num">03</span>Registry
       </button>
       <button class="rail__btn" role="tab" id="tab-standard" aria-controls="view-standard" aria-selected="false" tabindex="-1" data-view="standard">
         <span class="rail__num">04</span>Standard
       </button>
-      <button class="rail__btn" role="tab" id="tab-method" aria-controls="view-method" aria-selected="false" tabindex="-1" data-view="method">
-        <span class="rail__num">05</span>Method
-      </button>
-      <button class="rail__btn" role="tab" id="tab-future" aria-controls="view-future" aria-selected="false" tabindex="-1" data-view="future">
-        <span class="rail__num">06</span>Future
+      <button class="rail__btn" role="tab" id="tab-developers" aria-controls="view-developers" aria-selected="false" tabindex="-1" data-view="developers">
+        <span class="rail__num">05</span>Developers
       </button>
 
       <div class="rail__spacer"></div>
@@ -116,26 +111,26 @@
     <!-- ======================================================== 01 OVERVIEW -->
     <section class="view" id="view-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
 
-      <div class="band" aria-label="Headline census figures">
+      <div class="band" aria-label="Headline figures">
         <div class="band__cell">
-          <span class="band__label">Domains registered</span>
-          <div class="band__value" data-bind="total">&mdash;</div>
-          <p class="band__note">Seven non-overlapping governance tiers across 36 States and Union Territories.</p>
+          <span class="band__label">Countries measured</span>
+          <div class="band__value" data-bind="countries">&mdash;</div>
+          <p class="band__note">Of 249 classified. 19 measured domestically, the rest from nearest probes.</p>
         </div>
         <div class="band__cell">
-          <span class="band__label">Reachable in-country</span>
+          <span class="band__label">Domains measured</span>
+          <div class="band__value" data-bind="total">&mdash;</div>
+          <p class="band__note">Every row carries the probe region, distance and vantage class.</p>
+        </div>
+        <div class="band__cell">
+          <span class="band__label">Reachable</span>
           <div class="band__value"><span data-bind="reachable">&mdash;</span><span class="band__unit" data-bind="reachablePct">&mdash;</span></div>
-          <p class="band__note"><em data-bind="unreachable">&mdash;</em> domains returned no response from domestic transit.</p>
+          <p class="band__note"><em data-bind="unreachable">&mdash;</em> returned no response from their probe.</p>
         </div>
         <div class="band__cell">
           <span class="band__label">Mean accessibility</span>
           <div class="band__value"><span data-bind="acc">&mdash;</span><span class="band__unit">/ 100</span></div>
-          <p class="band__note">axe-core 4.x WCAG 2.1 AA audit across reachable portals.</p>
-        </div>
-        <div class="band__cell">
-          <span class="band__label">Mean security headers</span>
-          <div class="band__value"><span data-bind="sec">&mdash;</span><span class="band__unit">/ 100</span></div>
-          <p class="band__note">OWASP Secure Headers: HSTS, CSP, frame, MIME, referrer, permissions.</p>
+          <p class="band__note">axe-core 4.x WCAG 2.1 AA across reachable domains.</p>
         </div>
       </div>
 
@@ -143,288 +138,276 @@
 
         <section class="section">
           <div class="section__head">
-            <h2 class="section__title">What the census found</h2>
+            <h2 class="section__title">The vantage finding</h2>
+            <span class="section__note">Same portals, two vantage points</span>
+          </div>
+          <p class="section__lede">
+            A portal measured from inside its country and from the nearest foreign region gives two
+            different answers. The gap is the cost of distance, not a difference in the portals &mdash;
+            and it is the result a single-vantage study cannot produce.
+          </p>
+          <div class="table-wrap">
+            <table class="table" id="overview-vantage">
+              <thead>
+                <tr>
+                  <th>Vantage</th><th class="num">Domains</th>
+                  <th class="num">Reachable</th><th class="num">Accessibility</th>
+                  <th class="num">Security</th><th class="num">Median TTFB</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">What the measurement found</h2>
             <span class="section__note">n = <span data-bind="reachable">&mdash;</span> reachable</span>
           </div>
           <p class="section__lede">
-            Five results that hold across the full population rather than a sample. Every figure below is
-            computed from the released dataset at load time &mdash; nothing on this page is illustrative.
+            Results that hold across the measured population. Every figure is computed from the released
+            dataset at load time &mdash; nothing on this page is illustrative.
           </p>
           <ol class="findings" id="findings"></ol>
         </section>
 
         <section class="section">
           <div class="section__head">
-            <h2 class="section__title">Maturity by governance tier</h2>
-            <span class="section__note">Composite index, 0&ndash;100</span>
+            <h2 class="section__title">Coverage by vantage class</h2>
+            <span class="section__note">249 countries classified</span>
           </div>
-          <p class="section__lede">
-            The composite index weights accessibility at 30&nbsp;per&nbsp;cent, security at 25, speed at 20,
-            and linguistic and mobile reach at 10 and 5. The vertical rule marks the national mean.
-          </p>
-          <figure class="figure">
-            <div id="chart-tier"></div>
-            <figcaption class="figure__caption">
-              <b>Figure 1.</b> Mean composite maturity per tier, reachable portals only. Tier populations
-              differ by two orders of magnitude &mdash; district administrations alone account for
-              <span data-bind="districtShare">&mdash;</span> of the census.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section class="section">
-          <div class="section__head">
-            <h2 class="section__title">Speed, measured from inside the country</h2>
-            <span class="section__note">Domestic peering transit</span>
-          </div>
-          <p class="section__lede">
-            Overseas vantage points report a large share of Indian government hosts as unreachable because
-            state data centres and NIC gateways drop foreign traffic at the perimeter. These measurements
-            originate inside the domestic peering fabric, so a timeout here means the host is genuinely down.
-          </p>
-          <div class="split split--even">
-            <figure class="figure">
-              <div id="chart-lcp"></div>
-              <figcaption class="figure__caption">
-                <b>Figure 2.</b> Estimated Largest Contentful Paint, bucketed at the Core Web Vitals
-                thresholds. Median <span data-bind="medianLcp">&mdash;</span>.
-              </figcaption>
-            </figure>
-            <figure class="figure">
-              <div id="chart-latency"></div>
-              <figcaption class="figure__caption">
-                <b>Figure 3.</b> Time to first byte over domestic transit. Median
-                <span data-bind="medianLat">&mdash;</span>.
-              </figcaption>
-            </figure>
+          <div class="table-wrap">
+            <table class="table" id="overview-coverage">
+              <thead>
+                <tr><th>Vantage</th><th class="num">Countries</th><th>What it measures</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </div>
         </section>
 
         <section class="section">
           <div class="section__head">
-            <h2 class="section__title">Hardening and platform</h2>
-            <span class="section__note">OWASP headers &middot; CMS fingerprint</span>
+            <h2 class="section__title">By sector</h2>
+            <span class="section__note">Inferred from hostname</span>
           </div>
-          <div class="split split--even">
-            <figure class="figure">
-              <div id="chart-sec"></div>
-              <figcaption class="figure__caption">
-                <b>Figure 4.</b> Distribution of the security header score. A portal scoring 100 sets HSTS,
-                a content security policy, <code>X-Frame-Options</code> and
-                <code>X-Content-Type-Options</code>; most set only the last two.
-              </figcaption>
-            </figure>
-            <figure class="figure">
-              <div id="chart-arch"></div>
-              <figcaption class="figure__caption">
-                <b>Figure 5.</b> Content management platform, fingerprinted from response headers and
-                markup. Unreachable hosts are excluded rather than counted as &ldquo;unknown&rdquo;.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section__head">
-            <h2 class="section__title">Pillar coverage by tier</h2>
-            <span class="section__note">Share of reachable portals meeting each check</span>
-          </div>
-          <div class="ledger-scroll">
-            <table class="ledger" id="tier-matrix">
+          <div class="table-wrap">
+            <table class="table" id="overview-sectors">
               <thead>
                 <tr>
-                  <th scope="col">Tier</th>
-                  <th scope="col" style="text-align:right">Portals</th>
-                  <th scope="col" style="text-align:right">Reachable</th>
-                  <th scope="col" style="text-align:right">Accessibility</th>
-                  <th scope="col" style="text-align:right">Security</th>
-                  <th scope="col" style="text-align:right">GIGW toolbar</th>
-                  <th scope="col" style="text-align:right">Scheduled language</th>
-                  <th scope="col" style="text-align:right">Mobile viewport</th>
+                  <th>Sector</th><th class="num">Domains</th>
+                  <th class="num">Reachable</th><th class="num">Accessibility</th>
+                  <th class="num">Security</th><th class="num">Median TTFB</th>
                 </tr>
               </thead>
-              <tbody id="tier-matrix-body"></tbody>
+              <tbody></tbody>
             </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Top and bottom countries</h2>
+            <span class="section__note">By mean accessibility</span>
+          </div>
+          <div class="split split--even">
+            <figure class="figure">
+              <div id="chart-top-countries"></div>
+              <figcaption class="figure__caption"><b>Figure 1.</b> Highest mean accessibility.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div id="chart-bottom-countries"></div>
+              <figcaption class="figure__caption"><b>Figure 2.</b> Lowest mean accessibility.</figcaption>
+            </figure>
           </div>
         </section>
 
       </div>
     </section>
 
-    <!-- =========================================================== 02 ATLAS -->
-    <section class="view" id="view-atlas" role="tabpanel" aria-labelledby="tab-atlas" tabindex="0" hidden>
+    <!-- =========================================================== 02 WORLD -->
+    <section class="view" id="view-world" role="tabpanel" aria-labelledby="tab-world" tabindex="0" hidden>
       <div class="section" style="border-top:0; padding-top:0">
         <div class="section__head">
-          <h2 class="section__title">State and Union Territory atlas</h2>
-          <span class="section__note">Choropleth &middot; mean composite maturity</span>
+          <h2 class="section__title">World coverage</h2>
+          <span class="section__note">249 countries &middot; 81 measured</span>
         </div>
         <p class="section__lede">
-          Boundaries are Census of India state outlines, projected and simplified for the web. Fill encodes
-          the mean composite maturity of every reachable portal registered to that State or Union Territory.
-          Select a state to open its dossier.
+          Every country is classified by the vantage point that measured it. A
+          <b>domestic</b> probe sits inside the country and describes what a citizen sees. A
+          <b>nearest</b> probe sits in the closest available region and describes what a foreign
+          client sees. The two are never conflated.
         </p>
       </div>
 
-      <div class="atlas">
-        <div class="map-wrap">
-          <svg class="map-svg" id="india-map" viewBox="0 0 620 700" role="group" aria-label="Choropleth of Indian States and Union Territories by mean web maturity"></svg>
-          <div class="legend">
-            <span class="legend__title">Maturity</span>
-            <div class="legend__ramp" id="map-legend-ramp"></div>
-            <div class="legend__scale" style="flex:1 1 8rem">
-              <span data-bind="mapMin">&mdash;</span>
-              <span data-bind="mapMax">&mdash;</span>
-            </div>
-          </div>
-          <p class="figure__caption" style="border-top:0; padding-top:var(--s2)">
-            States with no registered portal are left unfilled. Hover or focus a state for its figures;
-            press <kbd>Enter</kbd> to pin it to the dossier.
-          </p>
-        </div>
+      <div class="world-wrap">
+        <svg class="world-map" id="world-map" viewBox="0 0 1000 500" role="img"
+             aria-label="World map of measurement coverage by vantage class"></svg>
+        <div class="world-legend" id="world-legend"></div>
+      </div>
 
-        <div class="dossier" id="dossier">
+      <div class="world-filters" id="world-filters" role="group" aria-label="Filter countries by status"></div>
+
+      <div class="atlas" style="margin-top: var(--s5)">
+        <div class="dossier" id="country-dossier">
           <div class="dossier__head">
-            <h3 class="dossier__name" id="dossier-name">&mdash;</h3>
-            <span class="dossier__rank" id="dossier-rank"></span>
+            <h3 class="dossier__name" id="country-name">&mdash;</h3>
+            <span class="dossier__rank" id="country-vantage"></span>
           </div>
           <div class="dossier__grid">
             <div class="dossier__cell">
-              <span class="dossier__k">Portals</span>
-              <div class="dossier__v" id="dossier-portals">&mdash;</div>
+              <span class="dossier__k">Domains</span>
+              <div class="dossier__v" id="country-domains">&mdash;</div>
             </div>
             <div class="dossier__cell">
               <span class="dossier__k">Reachable</span>
-              <div class="dossier__v" id="dossier-reach">&mdash;</div>
-            </div>
-            <div class="dossier__cell">
-              <span class="dossier__k">Maturity</span>
-              <div class="dossier__v" id="dossier-maturity">&mdash;</div>
+              <div class="dossier__v" id="country-reach">&mdash;</div>
             </div>
             <div class="dossier__cell">
               <span class="dossier__k">Accessibility</span>
-              <div class="dossier__v" id="dossier-acc">&mdash;</div>
+              <div class="dossier__v" id="country-acc">&mdash;</div>
             </div>
             <div class="dossier__cell">
-              <span class="dossier__k">Security headers</span>
-              <div class="dossier__v" id="dossier-sec">&mdash;</div>
+              <span class="dossier__k">Security</span>
+              <div class="dossier__v" id="country-sec">&mdash;</div>
+            </div>
+            <div class="dossier__cell">
+              <span class="dossier__k">Maturity</span>
+              <div class="dossier__v" id="country-mat">&mdash;</div>
             </div>
             <div class="dossier__cell">
               <span class="dossier__k">Median TTFB</span>
-              <div class="dossier__v" id="dossier-lat">&mdash;</div>
+              <div class="dossier__v" id="country-ttfb">&mdash;</div>
             </div>
           </div>
-
-          <div class="meters" id="dossier-meters"></div>
-
+          <p class="dossier__note" id="country-note"></p>
           <div style="margin-top: var(--s4); display:flex; gap: var(--s2); flex-wrap: wrap">
-            <button class="btn" type="button" id="dossier-open-ledger">
+            <button class="btn" type="button" id="country-open-registry">
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4L14 14" stroke-linecap="round"/></svg>
-              Open in ledger
+              Open in registry
             </button>
-            <button class="btn" type="button" id="dossier-copy">Copy state summary</button>
+            <button class="btn" type="button" id="country-copy">Copy summary</button>
           </div>
+        </div>
+
+        <div class="stack">
+          <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">
+            What each vantage class can claim
+          </h3>
+          <div class="table-wrap">
+            <table class="table" id="world-vantages">
+              <thead>
+                <tr><th>Vantage</th><th class="num">Countries</th><th>What it measures</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p class="future-note">
+            A portal measured from both inside and outside its country answers how much of its measured
+            quality is the portal and how much is the path to it. That comparison is the contribution.
+          </p>
         </div>
       </div>
 
       <section class="section" style="margin-top: var(--s6)">
         <div class="section__head">
-          <h2 class="section__title">Ranking</h2>
-          <span class="section__note">All States and Union Territories</span>
+          <h2 class="section__title">Country ranking</h2>
+          <span class="section__note">Measured countries, by accessibility</span>
         </div>
         <div class="ledger-scroll">
-          <table class="ledger" id="state-rank">
+          <table class="ledger" id="country-rank">
             <thead>
               <tr>
                 <th scope="col" style="width:3rem">#</th>
-                <th scope="col">State or UT</th>
-                <th scope="col" style="text-align:right">Portals</th>
-                <th scope="col" style="text-align:right">Maturity</th>
+                <th scope="col">Country</th>
+                <th scope="col">Vantage</th>
+                <th scope="col" style="text-align:right">Domains</th>
+                <th scope="col" style="text-align:right">Reachable</th>
                 <th scope="col" style="text-align:right">Accessibility</th>
                 <th scope="col" style="text-align:right">Security</th>
                 <th scope="col" style="text-align:right">Median TTFB</th>
               </tr>
             </thead>
-            <tbody id="state-rank-body"></tbody>
+            <tbody id="country-rank-body"></tbody>
           </table>
         </div>
       </section>
     </section>
 
-    <!-- ========================================================== 03 LEDGER -->
-    <section class="view" id="view-ledger" role="tabpanel" aria-labelledby="tab-ledger" tabindex="0" hidden>
+    <!-- ========================================================= 03 REGISTRY -->
+    <section class="view" id="view-registry" role="tabpanel" aria-labelledby="tab-registry" tabindex="0" hidden>
       <div class="section" style="border-top:0; padding-top:0">
         <div class="section__head">
-          <h2 class="section__title">Domain ledger</h2>
-          <span class="section__note">Full census &middot; 20 columns</span>
+          <h2 class="section__title">Domain registry</h2>
+          <span class="section__note">Every measured domain</span>
         </div>
         <p class="section__lede">
-          Every registered domain with its measured values. Offline hosts keep their diagnostic reason
-          instead of a zero score, so a missing number always means &ldquo;not measured&rdquo; rather than
-          &ldquo;measured as zero&rdquo;.
+          Every domain with its measured values and the probe that produced them. A domain that did not
+          answer keeps its diagnostic reason instead of a zero score, so a missing number always means
+          &ldquo;not measured&rdquo; rather than &ldquo;measured as zero&rdquo;.
         </p>
       </div>
 
       <div class="ledger-tools">
         <div class="field">
-          <label class="field__label" for="ledger-search">Search</label>
-          <input class="input input--search" id="ledger-search" type="search" placeholder="domain, entity, district&hellip;" autocomplete="off">
+          <label class="field__label" for="registry-search">Search</label>
+          <input class="input input--search" id="registry-search" type="search"
+                 placeholder="domain, entity, country&hellip;" autocomplete="off">
         </div>
         <div class="field">
-          <label class="field__label" for="ledger-tier">Tier</label>
-          <select class="select" id="ledger-tier">
+          <label class="field__label" for="registry-tier">Tier</label>
+          <select class="select" id="registry-tier">
             <option value="all">All tiers</option>
           </select>
         </div>
         <div class="field">
-          <label class="field__label" for="ledger-status">Status</label>
-          <select class="select" id="ledger-status">
+          <label class="field__label" for="registry-status">Status</label>
+          <select class="select" id="registry-status">
             <option value="all">All</option>
             <option value="reachable" selected>Reachable</option>
             <option value="unreachable">Unreachable</option>
           </select>
         </div>
         <div class="field">
-          <label class="field__label" for="ledger-sort">Sort</label>
-          <select class="select" id="ledger-sort">
-            <option value="maturity">Maturity, high to low</option>
-            <option value="maturity-asc">Maturity, low to high</option>
-            <option value="acc">Accessibility</option>
-            <option value="sec">Security headers</option>
-            <option value="latency">Latency, low to high</option>
+          <label class="field__label" for="registry-sort">Sort</label>
+          <select class="select" id="registry-sort">
             <option value="domain">Domain, A to Z</option>
+            <option value="acc">Accessibility, high to low</option>
+            <option value="sec">Security, high to low</option>
+            <option value="lat">Latency, low to high</option>
           </select>
         </div>
-        <button class="btn" type="button" id="ledger-export">
+        <button class="btn" type="button" id="registry-export">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.8 7.2L8 10.4l3.2-3.2M2.5 12.5h11" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Export CSV
         </button>
       </div>
 
       <div class="ledger-scroll">
-        <table class="ledger" id="ledger-table">
+        <table class="ledger" id="registry-table">
           <thead>
             <tr>
               <th scope="col">Domain</th>
-              <th scope="col">Tier &middot; State</th>
-              <th scope="col">Platform</th>
+              <th scope="col">Entity</th>
+              <th scope="col">Tier</th>
+              <th scope="col">Country</th>
+              <th scope="col" style="text-align:right">Reachable</th>
               <th scope="col" style="text-align:right">Access.</th>
               <th scope="col" style="text-align:right">Security</th>
               <th scope="col" style="text-align:right">TTFB</th>
-              <th scope="col" style="text-align:right">LCP</th>
-              <th scope="col">Checks</th>
-              <th scope="col">Status</th>
             </tr>
           </thead>
-          <tbody id="ledger-body"></tbody>
+          <tbody id="registry-body"></tbody>
         </table>
       </div>
 
       <div class="pager">
-        <span class="pager__count" id="ledger-count">&mdash;</span>
+        <span class="pager__count" id="registry-count">&mdash;</span>
         <div class="pager__nav">
-          <button class="btn" type="button" id="ledger-prev">Previous</button>
-          <span class="pager__pos" id="ledger-pos">&mdash;</span>
-          <button class="btn" type="button" id="ledger-next">Next</button>
+          <button class="btn" type="button" id="registry-prev">Previous</button>
+          <span class="pager__pos" id="registry-page">&mdash;</span>
+          <button class="btn" type="button" id="registry-next">Next</button>
         </div>
       </div>
     </section>
@@ -474,7 +457,7 @@ M = 0.30 * accessibility
   + 0.10 * multilingual
   + 0.05 * mobile_responsive
   + 0.05 * citizen_services
-  + 0.05 * gigw_toolbar</pre>
+  + 0.05 * s3waas_platform</pre>
           </div>
         </div>
       </section>
@@ -500,312 +483,147 @@ M = 0.30 * accessibility
       </section>
     </section>
 
-    <!-- ========================================================== 05 METHOD -->
-    <section class="view" id="view-method" role="tabpanel" aria-labelledby="tab-method" tabindex="0" hidden>
+    <!-- ====================================================== 05 DEVELOPERS -->
+    <section class="view" id="view-developers" role="tabpanel" aria-labelledby="tab-developers" tabindex="0" hidden>
       <div class="section" style="border-top:0; padding-top:0">
         <div class="section__head">
-          <h2 class="section__title">Method and reproduction</h2>
-          <span class="section__note">Versioned release</span>
+          <h2 class="section__title">Developers</h2>
+          <span class="section__note">Dataset &middot; package &middot; CLI</span>
         </div>
         <p class="section__lede">
-          The dataset ships as immutable Parquet, CSV and JSON. Everything on this page is derived from the
-          same release, so a reader can reproduce any figure here without trusting the interface.
+          The dataset ships as Parquet, CSV and JSON, with a Python package and a CLI. Everything on this
+          site is computed from the same release, so any figure can be reproduced without trusting the
+          interface.
         </p>
       </div>
 
-      <div class="split split--wide-left">
-        <div class="stack">
-          <section>
-            <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">Why the vantage point matters</h3>
-            <div class="prose" style="margin-top:var(--s2)">
-              <p>
-                Measuring Indian government infrastructure from an overseas cloud region produces a
-                systematic false negative. State data centres, NIC gateways and several departmental
-                reverse proxies drop or reset foreign traffic at the perimeter, so a crawler in Frankfurt
-                records a timeout on a portal that serves citizens normally.
-              </p>
-              <p style="margin-top:var(--s3)">
-                Every measurement in this release originates inside the domestic peering fabric. That single
-                change moves the observed reachability rate by tens of percentage points and is the reason
-                the census is worth publishing at all.
-              </p>
-            </div>
-          </section>
+      <div class="stack">
 
-          <section>
-            <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">Reproduce a figure</h3>
-            <div class="code" style="margin-top:var(--s3)">
-              <div class="code__bar"><span>Python 3.9+</span><span>pandas &middot; pyarrow</span></div>
-              <pre><span class="k">import</span> pandas <span class="k">as</span> pd
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Quick start</h2>
+            <span class="section__note">Python 3.9+</span>
+          </div>
+          <div class="code">
+            <div class="code__bar"><span>shell</span><span>pip</span></div>
+            <pre>pip install civicweb-observatory</pre>
+          </div>
+          <div class="code" style="margin-top:var(--s3)">
+            <div class="code__bar"><span>Python</span><span>pandas &middot; pyarrow</span></div>
+            <pre><span class="k">import</span> civicweb_observatory <span class="k">as</span> cwo
 
-df = pd.read_parquet(<span class="s">"resources/civicweb_observatory_clean.parquet"</span>)
+df   = cwo.load()                    <span class="c"># every measured domain</span>
+live = cwo.load(reachable=<span class="k">True</span>)      <span class="c"># only those that answered</span>
+
+cwo.country_summary()                <span class="c"># one row per country</span>
+cwo.sector_summary()                 <span class="c"># one row per sector</span>
+cwo.vantage_comparison()             <span class="c"># domestic vs nearest</span></pre>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Schema</h2>
+            <span class="section__note">20 columns</span>
+          </div>
+          <div class="table-wrap">
+            <table class="table" id="schema-table">
+              <thead>
+                <tr><th>Column</th><th>Type</th><th>Meaning</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Query recipes</h2>
+            <span class="section__note">Copy and run</span>
+          </div>
+
+          <div class="code">
+            <div class="code__bar"><span>Which countries score worst on security?</span><span>pandas</span></div>
+            <pre>live = cwo.load(reachable=<span class="k">True</span>)
+live.groupby(<span class="s">"probe_country"</span>)[<span class="s">"sub_security_headers_score"</span>] \
+    .agg([<span class="s">"count"</span>, <span class="s">"mean"</span>]) \
+    .query(<span class="s">"count >= 10"</span>) \
+    .sort_values(<span class="s">"mean"</span>) \
+    .head(<span class="s">10</span>)</pre>
+          </div>
+
+          <div class="code" style="margin-top:var(--s3)">
+            <div class="code__bar"><span>How much does distance cost?</span><span>pandas</span></div>
+            <pre>live = cwo.load(reachable=<span class="k">True</span>)
+live.groupby(<span class="s">"domestic_probe"</span>)[<span class="s">"sub_response_latency_ms"</span>] \
+    .agg([<span class="s">"count"</span>, <span class="s">"median"</span>, <span class="s">"mean"</span>])</pre>
+          </div>
+
+          <div class="code" style="margin-top:var(--s3)">
+            <div class="code__bar"><span>Which sectors are worst on accessibility?</span><span>pandas</span></div>
+            <pre>cwo.sector_summary().sort_values(<span class="s">"accessibility"</span>)</pre>
+          </div>
+
+          <div class="code" style="margin-top:var(--s3)">
+            <div class="code__bar"><span>Export a filtered slice</span><span>pandas</span></div>
+            <pre>df = cwo.load(reachable=<span class="k">True</span>, countries=[<span class="s">"IN"</span>, <span class="s">"GB"</span>, <span class="s">"JP"</span>])
+df.to_parquet(<span class="s">"slice.parquet"</span>, index=<span class="k">False</span>)</pre>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Command line</h2>
+            <span class="section__note">No Python required</span>
+          </div>
+          <div class="code">
+            <div class="code__bar"><span>shell</span><span>civicweb</span></div>
+            <pre>civicweb info                       <span class="c"># release shape and headline figures</span>
+civicweb countries --top 10         <span class="c"># ranked by accessibility</span>
+civicweb sectors                    <span class="c"># sector breakdown</span>
+civicweb vantage                    <span class="c"># domestic vs nearest</span>
+civicweb query --country IN --min-accessibility 90
+civicweb export --format csv --out slice.csv --reachable-only</pre>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">Reproduce a figure</h2>
+            <span class="section__note">Every number on this site</span>
+          </div>
+          <div class="code">
+            <div class="code__bar"><span>Python</span><span>pandas</span></div>
+            <pre><span class="k">import</span> pandas <span class="k">as</span> pd
+
+df   = pd.read_parquet(<span class="s">"resources/civicweb_observatory_clean.parquet"</span>)
 live = df[df[<span class="s">"is_reachable"</span>]]
 
-<span class="c"># Figure 1 — mean composite maturity per tier</span>
-tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"observatory_maturity_score"</span>]
-<span class="k">print</span>(tier.agg([<span class="s">"count"</span>, <span class="s">"mean"</span>]).round(<span class="s">1</span>))
+<span class="c"># Headline figures</span>
+<span class="k">print</span>(<span class="s">"domains   "</span>, <span class="k">len</span>(df))
+<span class="k">print</span>(<span class="s">"reachable "</span>, <span class="k">len</span>(live))
+<span class="k">print</span>(<span class="s">"countries "</span>, df[<span class="s">"probe_country"</span>].nunique())
+<span class="k">print</span>(<span class="s">"acc       "</span>, <span class="k">round</span>(live[<span class="s">"sub_accessibility_score"</span>].mean(), <span class="s">1</span>))
+<span class="k">print</span>(<span class="s">"sec       "</span>, <span class="k">round</span>(live[<span class="s">"sub_security_headers_score"</span>].mean(), <span class="s">1</span>))
 
-<span class="c"># Figure 5 — platform distribution, unreachable excluded</span>
-<span class="k">print</span>(live[<span class="s">"sub_cms_architecture"</span>].value_counts())</pre>
-            </div>
-          </section>
-
-          <section>
-            <h3 class="section__title" style="font-size:var(--fs-h3); font-family:var(--font-ui); font-weight:600">Known limits</h3>
-            <ul class="findings" style="margin-top:var(--s3)">
-              <li><span class="findings__idx">01</span><div class="findings__body"><h3>Structural, not rendered</h3><p>Accessibility is scored from markup: alternative text, form labels, language declaration and skip links. It does not execute a screen reader, so it cannot detect a focus trap or a mislabelled control.</p></div></li>
-              <li><span class="findings__idx">02</span><div class="findings__body"><h3>LCP is estimated</h3><p>Largest Contentful Paint is derived from time to first byte and document payload rather than measured in a browser. It ranks portals correctly but should not be quoted as a field measurement.</p></div></li>
-              <li><span class="findings__idx">03</span><div class="findings__body"><h3>One observation per domain</h3><p>Each domain is measured once per release. Longitudinal claims require comparing releases, not re-reading a single one.</p></div></li>
-              <li><span class="findings__idx">04</span><div class="findings__body"><h3>Registration is not usage</h3><p>A registered domain is not necessarily a portal citizens use. The census measures what is published, not what is visited.</p></div></li>
-            </ul>
-          </section>
-        </div>
-
-        <aside class="stack">
-          <div>
-            <h3 class="colophon__h">Release</h3>
-            <ul class="colophon__list">
-              <li><code>civicweb_observatory_clean.parquet</code></li>
-              <li><code>civicweb_observatory_clean.csv</code></li>
-              <li><code>civicweb_observatory_clean.json</code></li>
-            </ul>
+<span class="c"># The vantage finding</span>
+<span class="k">print</span>(live.groupby(<span class="s">"domestic_probe"</span>)[<span class="s">"sub_response_latency_ms"</span>].median())</pre>
           </div>
-          <div>
-            <h3 class="colophon__h">Standards</h3>
-            <ul class="colophon__list">
-              <li>WCAG 2.1 Level AA</li>
-              <li>MeitY GIGW 3.0</li>
-              <li>OWASP Secure Headers Project</li>
-              <li>Core Web Vitals thresholds</li>
-            </ul>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2 class="section__title">What the data cannot tell you</h2>
           </div>
-          <div>
-            <h3 class="colophon__h">Cite as</h3>
-            <p class="colophon__body" style="margin-top:0">
-              Agarwal, P., Bairagi, A. K., &amp; Yaduraj, V. N. (2026).
-              <em>CivicWeb Observatory: a census-scale observatory of Indian public web infrastructure.</em>
-              Department of Computer Science and Engineering, IIT Kharagpur.
-            </p>
-          </div>
-          <div>
-            <h3 class="colophon__h">Keyboard</h3>
-            <ul class="colophon__list">
-              <li><code>/</code> search domains</li>
-              <li><code>1</code>&ndash;<code>5</code> jump to section</li>
-              <li><code>t</code> toggle theme</li>
-              <li><code>Esc</code> close</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
+          <ul class="findings">
+            <li><span class="findings__idx">01</span><div class="findings__body"><h3>Automated testing is not conformance</h3><p>axe-core catches a subset of WCAG failures. It cannot judge cognitive load, screen-reader audio flow or reading order. A domain scoring well here is free of the machine-detectable defects we tested for; it is not thereby WCAG-conformant.</p></div></li>
+            <li><span class="findings__idx">02</span><div class="findings__body"><h3>LCP is estimated, never measured</h3><p>Largest Contentful Paint is derived from time to first byte and payload size. A true LCP needs a browser paint trace, which we did not run at scale.</p></div></li>
+            <li><span class="findings__idx">03</span><div class="findings__body"><h3>Nearest probes are not domestic</h3><p>180 countries were measured from a probe in another country. The <code>domestic_probe</code> column says which. Filter on it before making a claim about what a citizen experiences.</p></div></li>
+            <li><span class="findings__idx">04</span><div class="findings__body"><h3>Discovery is not verification</h3><p>A domain in the registry was observed in an auditable source. It was not confirmed to be an operational citizen portal, which is why reachability is 30% rather than near 100%.</p></div></li>
+            <li><span class="findings__idx">05</span><div class="findings__body"><h3>One snapshot</h3><p>This release is a single observation. The dataset carries no per-domain timestamp series, so no trend claim is supported.</p></div></li>
+          </ul>
+        </section>
 
-    <!-- ========================================================== 06 FUTURE -->
-    <section class="view" id="view-future" role="tabpanel" aria-labelledby="tab-future" tabindex="0" hidden>
-      <div class="section" style="border-top:0; padding-top:0">
-        <div class="section__head">
-          <h2 class="section__title">Future &mdash; Global Observatory</h2>
-          <span class="section__note">Planned expansion</span>
-        </div>
-        <p class="section__lede">
-          The India census is complete. The next phase measures other countries from inside those
-          countries, using the same tools and the same timeouts, so the comparison is like for like.
-          Everything on this page is either measured today or explicitly marked as planned.
-        </p>
-      </div>
-
-      <!-- A. Vision -->
-      <div class="section">
-        <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">A &middot; What changes and what does not</h3>
-        </div>
-        <div class="split split--wide-left">
-          <div class="prose">
-            <p>
-              A government website can only be judged from the network its citizens use. A portal that
-              answers in 200&nbsp;ms from Frankfurt and times out from Lagos is not a slow portal; it is a
-              portal with a geography. Measuring it from the wrong place produces a number that looks
-              precise and means nothing.
-            </p>
-            <p>
-              The global observatory therefore provisions a measurement node <em>inside</em> each target
-              country, runs the same five-pillar audit, uploads the evidence to central storage, and
-              destroys the node. Compute is temporary. The dataset, the provenance and the methodology
-              are permanent.
-            </p>
-            <p>
-              What does not change: the tools, the timeouts, the safety governor, and the rule that a
-              metric we did not measure is stored as null rather than zero.
-            </p>
-          </div>
-          <div class="stack">
-            <div class="panel">
-              <h4 class="panel__h">Measured today</h4>
-              <ul class="panel__list" id="future-measured"></ul>
-            </div>
-            <div class="panel">
-              <h4 class="panel__h">Planned, not yet measured</h4>
-              <ul class="panel__list" id="future-planned"></ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- B. Country coverage -->
-      <div class="section">
-        <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">B &middot; Worldwide coverage</h3>
-          <span class="section__note">Derived from real cloud regions</span>
-        </div>
-        <p class="section__lede" style="margin-bottom:var(--s4)">
-          A country is <b>measured domestically</b> when the probe sits inside it. Where Vultr has no
-          region, the country is measured from the <b>nearest</b> region instead &mdash; real data, but it
-          describes a foreign client's view rather than a citizen's. Every row records which vantage
-          produced it, so the two can be compared rather than conflated. Countries whose nearest region is
-          more than 6,000&nbsp;km away are marked <b>unmeasurable</b>, because the latency figure would say
-          more about the path than the portal.
-        </p>
-
-        <div class="world-wrap">
-          <svg class="world-map" id="world-map" viewBox="0 0 1000 500" role="img"
-               aria-label="World map of measurement probe availability by country"></svg>
-          <div class="world-legend" id="world-legend"></div>
-        </div>
-
-        <h4 class="panel__h" style="margin-top:var(--s5)">What each vantage class can claim</h4>
-        <div class="table-wrap" style="margin-bottom:var(--s4)">
-          <table class="table" id="world-vantages">
-            <thead>
-              <tr>
-                <th>Vantage</th><th class="num">Countries</th>
-                <th>What the measurement means</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-
-        <div class="world-filters" id="world-filters" role="group" aria-label="Filter countries by status"></div>
-        <div class="future-grid" id="future-countries"></div>
-        <p class="future-note" id="world-count"></p>
-      </div>
-
-      <!-- C. Dimensions -->
-      <div class="section">
-        <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">C &middot; Measured across countries</h3>
-          <span class="section__note">Real probes, real results</span>
-        </div>
-        <p class="section__lede" style="margin-bottom:var(--s4)">
-          Each country was measured from a probe physically inside it, using the same worker and
-          timeouts as the India census. Every row records which region measured it, so a domestic
-          claim can be checked rather than trusted.
-        </p>
-        <div class="future-stats" id="global-summary"></div>
-        <div class="table-wrap" style="margin-top:var(--s4)">
-          <table class="table" id="global-table">
-            <thead>
-              <tr>
-                <th>Country</th><th>Probe region</th>
-                <th class="num">Domains</th><th class="num">Reachable</th>
-                <th class="num">Accessibility</th><th class="num">Security</th>
-                <th class="num">Maturity</th><th class="num">Median TTFB</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <p class="future-note" id="global-note"></p>
-
-        <h4 class="panel__h" style="margin-top:var(--s6)">Domestic versus nearest probe</h4>
-        <div class="table-wrap">
-          <table class="table" id="global-vantage">
-            <thead>
-              <tr>
-                <th>Vantage</th><th class="num">Domains</th>
-                <th class="num">Reachable</th><th class="num">Accessibility</th>
-                <th class="num">Security</th><th class="num">Maturity</th>
-                <th class="num">Median TTFB</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <p class="future-note">
-          The same measurement taken from inside a country and from the nearest
-          foreign region. The gap is the cost of distance, not a difference in
-          the portals.
-        </p>
-
-        <h4 class="panel__h" style="margin-top:var(--s6)">By sector</h4>
-        <div class="table-wrap">
-          <table class="table" id="global-sectors">
-            <thead>
-              <tr>
-                <th>Sector</th><th class="num">Domains</th>
-                <th class="num">Reachable</th><th class="num">Accessibility</th>
-                <th class="num">Security</th><th class="num">Maturity</th>
-                <th class="num">Median TTFB</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <p class="future-note">
-          Sector is inferred from the hostname, which is reliable for dedicated
-          domains (<code>health.</code>, <code>court.</code>) but puts general
-          portals in <em>general</em>. A sector with no reachable domains shows
-          &ldquo;not measured&rdquo; rather than a zero.
-        </p>
-      </div>
-
-      <!-- D. Dimensions -->
-      <div class="section">
-        <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">D &middot; The eight research dimensions</h3>
-        </div>
-        <p class="section__lede" style="margin-bottom:var(--s4)">
-          Each dimension is reported separately. They are not collapsed into a single score, because a
-          country can be accessible and insecure at the same time, and averaging hides exactly that.
-        </p>
-        <div class="future-dims" id="future-dimensions"></div>
-      </div>
-
-      <!-- D. Infrastructure -->
-      <div class="section">
-        <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">E &middot; Ephemeral infrastructure</h3>
-          <span class="section__note">Live counters</span>
-        </div>
-        <div class="future-stats" id="future-infra"></div>
-        <p class="future-note" id="future-infra-note"></p>
-
-        <h4 class="panel__h" style="margin-top:var(--s6)">Instance catalogue and cost per batch</h4>
-        <div class="table-wrap">
-          <table class="table" id="future-plans">
-            <thead>
-              <tr>
-                <th>Plan</th><th class="num">vCPU</th><th class="num">RAM</th>
-                <th class="num">Disk</th><th class="num">Hourly</th>
-                <th class="num">Billed hours</th><th class="num">Cost per batch</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <p class="future-note">
-          A 15-minute batch is billed at the one-hour minimum, so the cost per batch equals the hourly
-          rate. Storage, snapshots, bandwidth overage and backups are modelled separately in
-          <code>services/infrastructure/cost.py</code>.
-        </p>
-      </div>
-
-      <!-- E. Roadmap -->
-      <div class="section">
-        <div class="section__head">
-          <h3 class="section__title" style="font-size:var(--fs-h3)">F &middot; Research roadmap</h3>
-        </div>
-        <ol class="roadmap" id="future-roadmap"></ol>
       </div>
     </section>
 
@@ -819,9 +637,7 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
       <div>
         <div class="colophon__title">CivicWeb Observatory</div>
         <p class="colophon__body">
-          A longitudinal observatory of India&rsquo;s public web infrastructure, maintained by the
-          Department of Computer Science and Engineering at IIT Kharagpur. Measurements are taken from inside the domestic
-          peering fabric so that perimeter firewalls are not mistaken for outages.
+          A cross-country observatory of public-sector web infrastructure, maintained by the Department of Computer Science and Engineering at IIT Kharagpur. Each measurement records the vantage point that produced it, so a domestic reading is never confused with a foreign one.
         </p>
       </div>
       <div>
@@ -830,22 +646,22 @@ tier = live.groupby(<span class="s">"government_level"</span>)[<span class="s">"
           <li><span data-bind="total">&mdash;</span> domains</li>
           <li><span data-bind="reachable">&mdash;</span> reachable</li>
           <li><span data-bind="unreachable">&mdash;</span> offline</li>
-          <li>36 States and UTs</li>
+          <li>81 countries</li>
         </ul>
       </div>
       <div>
         <h3 class="colophon__h">Standards</h3>
         <ul class="colophon__list">
           <li>WCAG 2.1 AA</li>
-          <li>GIGW 3.0</li>
+          <li>WCAG 2.1 AA</li>
           <li>OWASP Secure Headers</li>
           <li>Core Web Vitals</li>
         </ul>
       </div>
     </div>
     <div class="colophon__foot">
-      <span>National Observatory</span>
-      <span>Measured in-country &middot; no overseas vantage points</span>
+      <span>Global Observatory</span>
+      <span>Vantage recorded on every row</span>
     </div>
   </div>
 </footer>

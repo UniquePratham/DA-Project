@@ -1,1584 +1,238 @@
-/* Hallmark · component: data engine + SVG chart renderers
- * genre: editorial / institutional · theme: custom "Survey Paper"
- * states: default · hover · focus · active · disabled · loading · error · empty
- *
- * Every figure on the page is computed from the released dataset at load time.
- * No number in this file is a literal placeholder for a statistic.
- */
-
 (function () {
   'use strict';
 
-  /* ------------------------------------------------------------- constants */
-
-  const TIER_ORDER = [
-    'central',
-    'state_ut',
-    'district',
-    'academic_research',
-    'judiciary',
-    'public_sector',
-    'urban_local_body',
-  ];
-
-  const TIER_LABEL = {
-    central: 'Central ministries',
-    state_ut: 'State departments',
-    district: 'District administrations',
-    academic_research: 'Higher education',
-    judiciary: 'Judiciary',
-    public_sector: 'Public sector & banks',
-    urban_local_body: 'Urban local bodies',
-  };
-
-  const TIER_SHORT = {
-    central: 'Central',
-    state_ut: 'State',
-    district: 'District',
-    academic_research: 'Higher ed',
-    judiciary: 'Judiciary',
-    public_sector: 'PSU',
-    urban_local_body: 'Municipal',
-  };
-
-  const ARCH_LABEL = {
-    s3waas_drupal: 'S3WaaS (Drupal)',
-    custom_dynamic_cms: 'Custom dynamic CMS',
-    modern_spa: 'Modern SPA',
-    legacy_asp_net: 'Legacy ASP.NET',
-    wordpress: 'WordPress',
-    drupal: 'Drupal',
-    indeterminate_unreachable: 'Not fingerprinted',
-  };
-
-  const PAGE_SIZE = 40;
-
-  const SCHEMA = [
-    ['domain_name', 'string', 'Metadata', 'Registered domain identifier, e.g. meity.gov.in'],
-    ['entity_name', 'string', 'Metadata', 'Administrative owner of the domain'],
-    ['government_level', 'categorical', 'Metadata', 'One of seven non-overlapping governance tiers'],
-    ['state_or_ut', 'string', 'Metadata', 'State or Union Territory, or National for central bodies'],
-    ['district', 'string', 'Metadata', 'Revenue district, where the tier has one'],
-    ['final_url', 'string', 'Metadata', 'Canonical URL after redirect resolution'],
-    ['http_status_code', 'integer', 'Reachability', 'Final HTTP status observed from domestic transit'],
-    ['is_reachable', 'boolean', 'Reachability', 'True when the host answered 2xx or 3xx in-country'],
-    ['measurement_reason', 'string', 'Diagnostic', 'Explicit reason, so an offline host is never scored zero'],
-    ['sub_accessibility_score', 'float 0–100', 'Pillar 1', 'WCAG 2.1 AA structural checks: alt text, labels, lang, skip links'],
-    ['sub_has_gigw_toolbar', 'boolean', 'Pillar 1', 'GIGW 3.0 widget: font resizer, contrast toggle, skip-to-content'],
-    ['sub_response_latency_ms', 'float ms', 'Pillar 2', 'Time to first byte over domestic peering'],
-    ['sub_lcp_est_sec', 'float s', 'Pillar 2', 'Estimated Largest Contentful Paint from TTFB and payload'],
-    ['sub_https_enforced', 'boolean', 'Pillar 3', 'Whether canonical traffic is forced onto TLS'],
-    ['sub_security_headers_score', 'float 0–100', 'Pillar 3', 'HSTS, CSP, X-Frame-Options and X-Content-Type-Options'],
-    ['sub_is_multilingual', 'boolean', 'Pillar 4', 'Content available in an Eighth Schedule language'],
-    ['sub_mobile_responsive', 'boolean', 'Pillar 4', 'Declares width=device-width, initial-scale=1.0'],
-    ['sub_cms_architecture', 'categorical', 'Pillar 5', 'Platform fingerprinted from headers and markup'],
-    ['sub_has_citizen_services', 'boolean', 'Pillar 5', 'Native search and grievance redressal integration'],
-    ['observatory_maturity_score', 'float 0–100', 'Composite', 'Weighted synthesis of all five pillars'],
-  ];
-
-  /* ----------------------------------------------------------------- utils */
+  /* ------------------------------------------------------------- helpers */
 
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
 
-  const esc = (value) =>
-    String(value == null ? '' : value).replace(/[&<>"']/g, (ch) => ({
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;',
-    }[ch]));
+  const esc = (v) =>
+    String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    }[c]));
 
-  const int = (n) => (n == null || Number.isNaN(n) ? '—' : Math.round(n).toLocaleString('en-IN'));
-  const dec = (n, places) =>
-    n == null || Number.isNaN(n) ? '—' : Number(n).toFixed(places == null ? 1 : places);
-  const pct = (part, whole) => (whole ? (part / whole) * 100 : 0);
+  const int = (v) => (v == null || Number.isNaN(Number(v)) ? '—' : Number(v).toLocaleString('en-US'));
+  const dec = (v, d) => (v == null || Number.isNaN(Number(v)) ? '—' : Number(v).toFixed(d == null ? 1 : d));
 
-  const mean = (values) => {
-    const clean = values.filter((v) => typeof v === 'number' && !Number.isNaN(v));
-    return clean.length ? clean.reduce((a, b) => a + b, 0) / clean.length : null;
+  const mean = (xs) => {
+    const v = xs.filter((x) => x != null && !Number.isNaN(x));
+    return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
   };
 
-  const median = (values) => {
-    const clean = values.filter((v) => typeof v === 'number' && !Number.isNaN(v)).sort((a, b) => a - b);
-    if (!clean.length) return null;
-    const mid = Math.floor(clean.length / 2);
-    return clean.length % 2 ? clean[mid] : (clean[mid - 1] + clean[mid]) / 2;
+  const median = (xs) => {
+    const v = xs.filter((x) => x != null && !Number.isNaN(x)).sort((a, b) => a - b);
+    if (!v.length) return null;
+    const m = Math.floor(v.length / 2);
+    return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2;
   };
 
-  const countWhere = (rows, predicate) => rows.reduce((n, row) => n + (predicate(row) ? 1 : 0), 0);
-
-  const debounceFrame = (fn) => {
-    let queued = false;
-    return function () {
-      if (queued) return;
-      queued = true;
-      requestAnimationFrame(() => {
-        queued = false;
-        fn();
-      });
-    };
-  };
-
-  /* ----------------------------------------------------------------- state */
+  /* --------------------------------------------------------------- state */
 
   const state = {
     rows: [],
     live: [],
-    stats: null,
-    tiers: [],
-    states: [],
-    selectedState: null,
-    ledger: { page: 1, rows: [], sort: 'maturity' },
-    charts: [],
-    paletteIndex: 0,
-    paletteResults: [],
+    global: null,
+    world: null,
+    selectedCountry: null,
+    registry: { page: 0, size: 40, query: '', tier: 'all', status: 'all', sort: 'domain' },
+    theme: 'light',
   };
 
-  /* --------------------------------------------------------------- compute */
+  const VIEWS = ['overview', 'world', 'registry', 'standard', 'developers'];
 
-  function computeStats(rows) {
-    const live = rows.filter((r) => r.reachable);
-
-    const tiers = TIER_ORDER.map((key) => {
-      const all = rows.filter((r) => r.level === key);
-      const up = all.filter((r) => r.reachable);
-      return {
-        key,
-        label: TIER_LABEL[key],
-        short: TIER_SHORT[key],
-        total: all.length,
-        live: up.length,
-        reachRate: pct(up.length, all.length),
-        acc: mean(up.map((r) => r.acc_score)),
-        sec: mean(up.map((r) => r.sec_score)),
-        lat: median(up.map((r) => r.latency_ms)),
-        lcp: median(up.map((r) => r.lcp_sec)),
-        maturity: mean(up.map((r) => r.maturity_score)),
-        gigw: pct(countWhere(up, (r) => r.has_gigw_toolbar), up.length),
-        multi: pct(countWhere(up, (r) => r.multilingual), up.length),
-        mobile: pct(countWhere(up, (r) => r.mobile_responsive), up.length),
-        services: pct(countWhere(up, (r) => r.has_citizen_services), up.length),
-        https: pct(countWhere(up, (r) => r.has_https), up.length),
-      };
-    });
-
-    const mapNames = new Set((window.INDIA_MAP ? window.INDIA_MAP.states : []).map((s) => s.name));
-
-    const states = Array.from(new Set(rows.map((r) => r.state)))
-      .filter((name) => mapNames.has(name))
-      .map((name) => {
-        const all = rows.filter((r) => r.state === name);
-        const up = all.filter((r) => r.reachable);
-        return {
-          name,
-          total: all.length,
-          live: up.length,
-          reachRate: pct(up.length, all.length),
-          maturity: mean(up.map((r) => r.maturity_score)),
-          acc: mean(up.map((r) => r.acc_score)),
-          sec: mean(up.map((r) => r.sec_score)),
-          lat: median(up.map((r) => r.latency_ms)),
-          lcp: median(up.map((r) => r.lcp_sec)),
-          gigw: pct(countWhere(up, (r) => r.has_gigw_toolbar), up.length),
-          multi: pct(countWhere(up, (r) => r.multilingual), up.length),
-          mobile: pct(countWhere(up, (r) => r.mobile_responsive), up.length),
-          services: pct(countWhere(up, (r) => r.has_citizen_services), up.length),
-        };
-      })
-      .filter((s) => s.live > 0)
-      .sort((a, b) => b.maturity - a.maturity);
-
-    states.forEach((s, i) => {
-      s.rank = i + 1;
-    });
-
-    const archCounts = {};
-    live.forEach((r) => {
-      archCounts[r.arch] = (archCounts[r.arch] || 0) + 1;
-    });
-    const arch = Object.keys(archCounts)
-      .map((key) => ({ key, label: ARCH_LABEL[key] || key, count: archCounts[key] }))
-      .sort((a, b) => b.count - a.count);
-
-    const lcpBuckets = [
-      { label: '≤ 2.5 s', note: 'good', count: countWhere(live, (r) => r.lcp_sec != null && r.lcp_sec <= 2.5) },
-      { label: '2.5–4 s', note: 'needs work', count: countWhere(live, (r) => r.lcp_sec > 2.5 && r.lcp_sec <= 4) },
-      { label: '> 4 s', note: 'poor', count: countWhere(live, (r) => r.lcp_sec > 4) },
-    ];
-
-    const latBuckets = [
-      { label: '≤ 500 ms', count: countWhere(live, (r) => r.latency_ms != null && r.latency_ms <= 500) },
-      { label: '0.5–1 s', count: countWhere(live, (r) => r.latency_ms > 500 && r.latency_ms <= 1000) },
-      { label: '1–2 s', count: countWhere(live, (r) => r.latency_ms > 1000 && r.latency_ms <= 2000) },
-      { label: '> 2 s', count: countWhere(live, (r) => r.latency_ms > 2000) },
-    ];
-
-    const secBuckets = [
-      { label: '0–25', count: countWhere(live, (r) => r.sec_score != null && r.sec_score < 25) },
-      { label: '25–50', count: countWhere(live, (r) => r.sec_score >= 25 && r.sec_score < 50) },
-      { label: '50–75', count: countWhere(live, (r) => r.sec_score >= 50 && r.sec_score < 75) },
-      { label: '75–99', count: countWhere(live, (r) => r.sec_score >= 75 && r.sec_score < 100) },
-      { label: '100', count: countWhere(live, (r) => r.sec_score === 100) },
-    ];
-
-    const offlineReasons = {};
-    rows
-      .filter((r) => !r.reachable)
-      .forEach((r) => {
-        const reason = (r.meas_reason || 'Unspecified').split('—')[0].trim();
-        offlineReasons[reason] = (offlineReasons[reason] || 0) + 1;
-      });
-    const topOfflineReason = Object.keys(offlineReasons).sort(
-      (a, b) => offlineReasons[b] - offlineReasons[a]
-    )[0];
-
-    return {
-      total: rows.length,
-      live: live.length,
-      offline: rows.length - live.length,
-      reachRate: pct(live.length, rows.length),
-      acc: mean(live.map((r) => r.acc_score)),
-      sec: mean(live.map((r) => r.sec_score)),
-      maturity: mean(live.map((r) => r.maturity_score)),
-      medianLat: median(live.map((r) => r.latency_ms)),
-      medianLcp: median(live.map((r) => r.lcp_sec)),
-      gigw: pct(countWhere(live, (r) => r.has_gigw_toolbar), live.length),
-      multi: pct(countWhere(live, (r) => r.multilingual), live.length),
-      mobile: pct(countWhere(live, (r) => r.mobile_responsive), live.length),
-      services: pct(countWhere(live, (r) => r.has_citizen_services), live.length),
-      https: pct(countWhere(live, (r) => r.has_https), live.length),
-      perfectSec: countWhere(live, (r) => r.sec_score === 100),
-      slowTtfb: countWhere(live, (r) => r.latency_ms > 2000),
-      districtShare: pct(countWhere(rows, (r) => r.level === 'district'), rows.length),
-      tiers,
-      states,
-      arch,
-      lcpBuckets,
-      latBuckets,
-      secBuckets,
-      topOfflineReason,
-      offlineReasons,
-    };
-  }
-
-  /* ------------------------------------------------------------ svg charts */
-
-  function svgWrap(width, height, inner, label) {
-    return (
-      `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" ` +
-      `preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(label)}" ` +
-      `style="width:100%;height:auto;overflow:visible">${inner}</svg>`
-    );
-  }
-
-  function hbar(width, rows, opts) {
-    const options = opts || {};
-    const rowH = options.rowH || 30;
-    const labelW = Math.min(options.labelW || 168, Math.max(84, width * 0.36));
-    const valueW = 58;
-    const barX = labelW + 10;
-    const barW = Math.max(24, width - barX - valueW);
-    const height = rows.length * rowH + 6;
-    const max = options.max || Math.max.apply(null, rows.map((r) => r.value)) || 1;
-
-    let out = '';
-
-    if (options.ref != null) {
-      const refX = barX + (options.ref / max) * barW;
-      out +=
-        `<line x1="${refX.toFixed(1)}" y1="0" x2="${refX.toFixed(1)}" y2="${height}" ` +
-        `stroke="var(--oxide)" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>`;
-    }
-
-    rows.forEach((row, i) => {
-      const y = i * rowH + 3;
-      const mid = y + rowH / 2 - 4;
-      const w = Math.max(1.5, (row.value / max) * barW);
-      const fill = options.color ? options.color(row, i) : 'var(--data-4)';
-
-      out +=
-        `<text class="cat-label${row.strong ? ' cat-label--strong' : ''}" x="0" y="${mid + 4}">${esc(row.label)}</text>`;
-      out +=
-        `<rect x="${barX}" y="${mid - 5}" width="${barW}" height="10" style="fill:var(--paper-3)"/>`;
-      out +=
-        `<rect class="bar" x="${barX}" y="${mid - 5}" width="${w.toFixed(1)}" height="10" style="fill:${fill}">` +
-        `<title>${esc(row.label)}: ${esc(row.tip || row.valueText)}</title></rect>`;
-      out +=
-        `<text class="value-label" x="${width}" y="${mid + 4}" text-anchor="end">${esc(row.valueText)}</text>`;
-    });
-
-    return svgWrap(width, height, out, options.label || 'Bar chart');
-  }
-
-  function vbar(width, rows, opts) {
-    const options = opts || {};
-    const height = options.height || 168;
-    const padTop = 20;
-    const axisH = 24;
-    const plotH = height - padTop - axisH;
-    const colW = width / rows.length;
-    const barW = Math.min(colW * 0.56, 54);
-    const max = options.max || Math.max.apply(null, rows.map((r) => r.value)) || 1;
-
-    let out = `<line class="axis-line" x1="0" y1="${padTop + plotH}" x2="${width}" y2="${padTop + plotH}"/>`;
-
-    rows.forEach((row, i) => {
-      const cx = colW * i + colW / 2;
-      const h = Math.max(1.5, (row.value / max) * plotH);
-      const y = padTop + plotH - h;
-      const fill = options.color ? options.color(row, i) : 'var(--data-4)';
-
-      out +=
-        `<rect class="bar" x="${(cx - barW / 2).toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" ` +
-        `height="${h.toFixed(1)}" style="fill:${fill}">` +
-        `<title>${esc(row.label)}: ${esc(row.tip || row.valueText)}</title></rect>`;
-      out +=
-        `<text class="value-label" x="${cx.toFixed(1)}" y="${(y - 6).toFixed(1)}" text-anchor="middle">${esc(row.valueText)}</text>`;
-      out +=
-        `<text class="tick-label" x="${cx.toFixed(1)}" y="${padTop + plotH + 15}" text-anchor="middle">${esc(row.label)}</text>`;
-      if (row.note) {
-        out +=
-          `<text class="tick-label" x="${cx.toFixed(1)}" y="${padTop + plotH + 26}" text-anchor="middle" opacity="0.7">${esc(row.note)}</text>`;
-      }
-    });
-
-    return svgWrap(width, height, out, options.label || 'Column chart');
-  }
-
-  function stacked(width, segments, opts) {
-    const options = opts || {};
-    const barH = 30;
-    const legendH = 46;
-    const height = barH + legendH;
-    const total = segments.reduce((n, s) => n + s.value, 0) || 1;
-
-    let out = '';
-    let x = 0;
-
-    segments.forEach((seg) => {
-      const w = (seg.value / total) * width;
-      out +=
-        `<rect class="bar" x="${x.toFixed(1)}" y="0" width="${Math.max(0, w - 1).toFixed(1)}" height="${barH}" ` +
-        `style="fill:${seg.color}"><title>${esc(seg.label)}: ${esc(seg.tip || seg.valueText)}</title></rect>`;
-      if (w > 46) {
-        out +=
-          `<text class="value-label value-label--inverse" x="${(x + w / 2).toFixed(1)}" y="${barH / 2 + 4}" ` +
-          `text-anchor="middle">${esc(seg.shareText)}</text>`;
-      }
-      x += w;
-    });
-
-    // Legend entries are laid out on an even grid rather than at each segment's
-    // left edge, so short segments do not collide with their neighbours.
-    const colW = width / segments.length;
-    segments.forEach((seg, i) => {
-      const lx = i * colW;
-      out +=
-        `<rect x="${lx.toFixed(1)}" y="${barH + 14}" width="9" height="9" style="fill:${seg.color}"/>`;
-      out +=
-        `<text class="tick-label" x="${(lx + 14).toFixed(1)}" y="${barH + 22}">${esc(seg.label)}</text>`;
-      out +=
-        `<text class="tick-label" x="${(lx + 14).toFixed(1)}" y="${barH + 34}" opacity="0.75">${esc(seg.valueText)}</text>`;
-    });
-
-    return svgWrap(width, height, out, options.label || 'Proportion chart');
-  }
-
-  /* --------------------------------------------------------- chart mounting */
-
-  function mountChart(id, draw) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    state.charts.push({ el, draw });
-    const render = () => {
-      const width = Math.floor(el.clientWidth);
-      if (width < 40) return;
-      el.innerHTML = draw(width);
-    };
-    el._render = render;
-    render();
-    if (typeof ResizeObserver !== 'undefined') {
-      const observer = new ResizeObserver(debounceFrame(render));
-      observer.observe(el);
-    }
-  }
-
-  function renderChartsIn(root) {
-    state.charts.forEach((chart) => {
-      if (root.contains(chart.el) && chart.el._render) chart.el._render();
-    });
-  }
-
-  /* ------------------------------------------------------------- rendering */
+  /* ------------------------------------------------------------ findings */
 
   function renderBinds() {
-    const s = state.stats;
-    const values = {
-      total: int(s.total),
-      reachable: int(s.live),
-      unreachable: int(s.offline),
-      reachablePct: `· ${dec(s.reachRate)}%`,
-      acc: dec(s.acc),
-      sec: dec(s.sec),
-      maturity: dec(s.maturity),
-      medianLat: `${int(s.medianLat)} ms`,
-      medianLcp: `${dec(s.medianLcp, 2)} s`,
-      districtShare: `${dec(s.districtShare)}%`,
-      mapMin: dec(Math.min.apply(null, s.states.map((x) => x.maturity))),
-      mapMax: dec(Math.max.apply(null, s.states.map((x) => x.maturity))),
+    const g = state.global;
+    const rows = state.rows;
+    const live = state.live;
+
+    const set = (name, value) => {
+      $$(`[data-bind="${name}"]`).forEach((el) => {
+        el.textContent = value;
+      });
     };
 
-    $$('[data-bind]').forEach((el) => {
-      const key = el.getAttribute('data-bind');
-      if (key in values) el.textContent = values[key];
-    });
+    set('countries', g ? int(g.countries_measured) : '—');
+    set('total', g ? int(g.total_rows) : int(rows.length));
+    const totalRows = g ? g.total_rows : rows.length;
+    const reachRows = g ? Math.round((g.overall_reach_pct / 100) * g.total_rows) : live.length;
+    set('reachable', int(reachRows));
+    set('reachablePct', g ? `${dec(g.overall_reach_pct)}%` : '—');
+    set('unreachable', int(totalRows - reachRows));
+    set('acc', dec(mean(live.map((r) => r.acc_score))));
+    set('sec', dec(mean(live.map((r) => r.sec_score))));
+    set('maturity', dec(mean(live.map((r) => r.maturity_score))));
   }
 
   function renderFindings() {
-    const s = state.stats;
-    const topTier = s.tiers.slice().sort((a, b) => b.acc - a.acc)[0];
-    const worstTier = s.tiers.slice().sort((a, b) => a.sec - b.sec)[0];
-    const perfectShare = pct(s.perfectSec, s.live);
-    const slowShare = pct(s.slowTtfb, s.live);
-    const offlineShare = pct(s.offline, s.total);
+    const host = $('#findings');
+    if (!host) return;
+    const g = state.global;
+    const live = state.live;
+    if (!g || !live.length) {
+      host.innerHTML = '';
+      return;
+    }
 
-    const items = [
-      {
-        title: 'Security headers lag accessibility by a wide margin',
-        body:
-          `Mean accessibility reaches <span class="num">${dec(s.acc)}</span> of 100, but mean security ` +
-          `hardening sits at <span class="num">${dec(s.sec)}</span>. Only ` +
-          `<span class="num">${int(s.perfectSec)}</span> portals ` +
-          `(<span class="num">${dec(perfectShare)}%</span>) set all four headers. ` +
-          `The gap is not capability &mdash; it is that a missing header breaks nothing visible.`,
-      },
-      {
-        title: 'Standardised distribution beats bespoke development',
-        body:
-          `${topTier.label} record the highest mean accessibility at ` +
-          `<span class="num">${dec(topTier.acc)}</span>, ahead of central ministries at ` +
-          `<span class="num">${dec(s.tiers[0].acc)}</span>. The cause is distribution, not budget: ` +
-          `the S3WaaS Drupal template ships accessible markup by default, so every site built on it ` +
-          `inherits the fix.`,
-      },
-      {
-        title: 'Speed is bimodal, not uniformly slow',
-        body:
-          `Median time to first byte is <span class="num">${int(s.medianLat)} ms</span>, which is ` +
-          `respectable. But <span class="num">${int(s.slowTtfb)}</span> portals ` +
-          `(<span class="num">${dec(slowShare)}%</span>) exceed two seconds, and those are the ones ` +
-          `citizens on mobile networks actually feel. The median hides the tail.`,
-      },
-      {
-        title: 'Language coverage outruns the accessibility toolbar',
-        body:
-          `<span class="num">${dec(s.multi)}%</span> of reachable portals publish content in a scheduled ` +
-          `language, yet only <span class="num">${dec(s.gigw)}%</span> ship the GIGW toolbar that lets a ` +
-          `low-vision citizen enlarge the text. Translation was prioritised; the assistive controls were not.`,
-      },
-      {
-        title: 'Offline is mostly deprecation, not outage',
-        body:
-          `<span class="num">${int(s.offline)}</span> domains ` +
-          `(<span class="num">${dec(offlineShare)}%</span>) did not answer. The dominant reason is ` +
-          `<em>${esc(s.topOfflineReason)}</em>, which describes a retired host rather than a failed one. ` +
-          `The weakest tier on security is ${worstTier.label.toLowerCase()} at ` +
-          `<span class="num">${dec(worstTier.sec)}</span>.`,
-      },
-    ];
+    const dom = g.vantage_comparison.find((v) => v.vantage === 'domestic');
+    const near = g.vantage_comparison.find((v) => v.vantage === 'nearest');
+    const worstSec = (g.sectors || [])
+      .filter((s) => s.security != null && s.domains >= 20)
+      .sort((a, b) => a.security - b.security)[0];
+    const bestAcc = (g.sectors || [])
+      .filter((s) => s.accessibility != null && s.domains >= 20)
+      .sort((a, b) => b.accessibility - a.accessibility)[0];
 
-    $('#findings').innerHTML = items
+    const items = [];
+
+    if (dom && near) {
+      items.push({
+        h: 'Distance costs more than the portal does',
+        p: `The same kind of portal measured from inside its country answers in ${int(dom.median_ttfb_ms)} ms; from the nearest foreign region, ${int(near.median_ttfb_ms)} ms. That ${int(near.median_ttfb_ms - dom.median_ttfb_ms)} ms gap is the path, not the portal.`,
+      });
+    }
+
+    items.push({
+      h: 'Reachability is a discovery artefact, not a failure rate',
+      p: `${int(state.rows.length - live.length)} of ${int(state.rows.length)} domains did not answer. Most were found in Certificate Transparency, which logs certificates for hosts that were never public portals.`,
+    });
+
+    if (worstSec) {
+      items.push({
+        h: `${worstSec.sector} is the weakest sector on security`,
+        p: `Across ${int(worstSec.domains)} domains, mean header hardening is ${dec(worstSec.security)} of 100. That is a template-level defect, not individual neglect.`,
+      });
+    }
+
+    if (bestAcc) {
+      items.push({
+        h: `${bestAcc.sector} leads on accessibility`,
+        p: `Mean accessibility is ${dec(bestAcc.accessibility)} of 100 across ${int(bestAcc.domains)} domains, above the ${dec(mean(live.map((r) => r.acc_score)))} national mean.`,
+      });
+    }
+
+    items.push({
+      h: 'Security lags accessibility everywhere',
+      p: `Mean accessibility is ${dec(mean(live.map((r) => r.acc_score)))}; mean header hardening is ${dec(mean(live.map((r) => r.sec_score)))}. Templates ship accessible markup; they cannot ship a content security policy.`,
+    });
+
+    host.innerHTML = items
       .map(
-        (item, i) =>
+        (it, i) =>
           `<li><span class="findings__idx">${String(i + 1).padStart(2, '0')}</span>` +
-          `<div class="findings__body"><h3>${item.title}</h3><p>${item.body}</p></div></li>`
+          `<div class="findings__body"><h3>${esc(it.h)}</h3><p>${esc(it.p)}</p></div></li>`
       )
       .join('');
   }
 
-  function renderTierMatrix() {
-    const body = $('#tier-matrix-body');
-    const s = state.stats;
+  /* ------------------------------------------------------------- tables */
 
-    body.innerHTML = s.tiers
+  function renderVantageTable(sel, data) {
+    const body = $(`${sel} tbody`);
+    if (!body || !data) return;
+    body.innerHTML = data
       .map(
-        (t) =>
-          `<tr>` +
-          `<td><span class="cat-label--strong">${esc(t.label)}</span></td>` +
-          `<td class="ledger__num">${int(t.total)}</td>` +
-          `<td class="ledger__num">${int(t.live)} <span class="ledger__num--muted">${dec(t.reachRate)}%</span></td>` +
-          `<td class="ledger__num">${dec(t.acc)}</td>` +
-          `<td class="ledger__num">${dec(t.sec)}</td>` +
-          `<td class="ledger__num">${dec(t.gigw)}%</td>` +
-          `<td class="ledger__num">${dec(t.multi)}%</td>` +
-          `<td class="ledger__num">${dec(t.mobile)}%</td>` +
-          `</tr>`
+        (v) =>
+          '<tr>' +
+          `<td><b>${esc(v.vantage)}</b></td>` +
+          `<td class="num">${int(v.domains)}</td>` +
+          `<td class="num">${int(v.reachable)} <span class="muted">${dec(v.reach_pct)}%</span></td>` +
+          `<td class="num">${dec(v.accessibility)}</td>` +
+          `<td class="num">${dec(v.security)}</td>` +
+          `<td class="num">${v.median_ttfb_ms == null ? '—' : int(v.median_ttfb_ms) + ' ms'}</td>` +
+          '</tr>'
       )
-      .join('') +
-      `<tr>` +
-      `<td><span class="cat-label--strong">National</span></td>` +
-      `<td class="ledger__num">${int(s.total)}</td>` +
-      `<td class="ledger__num">${int(s.live)} <span class="ledger__num--muted">${dec(s.reachRate)}%</span></td>` +
-      `<td class="ledger__num">${dec(s.acc)}</td>` +
-      `<td class="ledger__num">${dec(s.sec)}</td>` +
-      `<td class="ledger__num">${dec(s.gigw)}%</td>` +
-      `<td class="ledger__num">${dec(s.multi)}%</td>` +
-      `<td class="ledger__num">${dec(s.mobile)}%</td>` +
-      `</tr>`;
+      .join('');
   }
 
-  function renderPillars() {
-    const s = state.stats;
-    const topArch = s.arch[0];
-
-    const pillars = [
-      {
-        no: 'Pillar 1',
-        title: 'Accessibility and usability',
-        std: 'WCAG 2.1 AA · GIGW 3.0',
-        desc:
-          'Structural barriers for disabled citizens: alternative text on images, programmatic labels on ' +
-          'form controls, a declared document language, and a skip link past repeated navigation.',
-        fields: [
-          ['sub_accessibility_score', `${dec(s.acc)} / 100`],
-          ['sub_has_gigw_toolbar', `${dec(s.gigw)}%`],
-        ],
-      },
-      {
-        no: 'Pillar 2',
-        title: 'Performance and latency',
-        std: 'Core Web Vitals',
-        desc:
-          'Time to first byte over domestic peering, and an estimated Largest Contentful Paint derived ' +
-          'from that latency and the document payload. Both are measured in-country.',
-        fields: [
-          ['sub_response_latency_ms', `${int(s.medianLat)} ms`],
-          ['sub_lcp_est_sec', `${dec(s.medianLcp, 2)} s`],
-        ],
-      },
-      {
-        no: 'Pillar 3',
-        title: 'Security and cryptography',
-        std: 'CERT-In hardening',
-        desc:
-          'Whether canonical traffic is forced onto TLS, and whether the response sets HSTS, a content ' +
-          'security policy, frame options and MIME sniffing protection.',
-        fields: [
-          ['sub_https_enforced', `${dec(s.https)}%`],
-          ['sub_security_headers_score', `${dec(s.sec)} / 100`],
-        ],
-      },
-      {
-        no: 'Pillar 4',
-        title: 'Linguistic and mobile reach',
-        std: 'Eighth Schedule · Digital India',
-        desc:
-          'Whether content exists in one of the 22 scheduled languages, and whether the document declares ' +
-          'a mobile viewport rather than assuming a desktop screen.',
-        fields: [
-          ['sub_is_multilingual', `${dec(s.multi)}%`],
-          ['sub_mobile_responsive', `${dec(s.mobile)}%`],
-        ],
-      },
-      {
-        no: 'Pillar 5',
-        title: 'Architecture and services',
-        std: 'Platform fingerprint',
-        desc:
-          'The content management platform behind the portal, and whether it exposes native search and a ' +
-          'grievance route rather than only publishing static notices.',
-        fields: [
-          ['sub_cms_architecture', topArch ? `${dec(pct(topArch.count, s.live))}% ${topArch.label}` : '—'],
-          ['sub_has_citizen_services', `${dec(s.services)}%`],
-        ],
-      },
+  function renderCoverageTable() {
+    const body = $('#overview-coverage tbody');
+    const w = state.world;
+    if (!body || !w) return;
+    const vc = w.vantage_counts || {};
+    const rows = [
+      ['domestic', vc.domestic || 0, 'Probe inside the country. Describes what a citizen sees.'],
+      ['nearest', vc.nearest || 0, 'Probe in the closest region, in another country. Describes a foreign client.'],
+      ['unmeasurable', vc.unmeasurable || 0, 'Nearest region over 6,000 km away. A latency figure would describe the path.'],
     ];
-
-    $('#pillars').innerHTML = pillars
+    body.innerHTML = rows
       .map(
-        (p) =>
-          `<article class="pillar">` +
-          `<div class="pillar__no">${esc(p.no)}</div>` +
-          `<h3 class="pillar__title">${esc(p.title)}</h3>` +
-          `<div class="pillar__std">${esc(p.std)}</div>` +
-          `<p class="pillar__desc">${esc(p.desc)}</p>` +
-          `<div class="pillar__fields">` +
-          p.fields
-            .map(
-              (f) =>
-                `<div class="pillar__field"><code>${esc(f[0])}</code><b>${esc(f[1])}</b></div>`
-            )
-            .join('') +
-          `</div></article>`
+        ([k, n, meaning]) =>
+          `<tr><td><b>${esc(k)}</b></td><td class="num">${int(n)}</td>` +
+          `<td class="muted">${esc(meaning)}</td></tr>`
       )
       .join('');
   }
 
-  function renderSchema() {
-    $('#schema-body').innerHTML = SCHEMA.map(
-      (row) =>
-        `<tr>` +
-        `<td><code style="font-family:var(--font-mono);font-size:var(--fs-xs);color:var(--oxide)">${esc(row[0])}</code></td>` +
-        `<td style="color:var(--ink-3);font-size:var(--fs-xs);white-space:nowrap">${esc(row[1])}</td>` +
-        `<td style="color:var(--ink-2);font-size:var(--fs-xs);white-space:nowrap">${esc(row[2])}</td>` +
-        `<td style="color:var(--ink-2);font-size:var(--fs-xs)">${esc(row[3])}</td>` +
-        `</tr>`
-    ).join('');
-  }
-
-  /* ------------------------------------------------------------------ map */
-
-  function maturityColor(value, min, max) {
-    if (value == null) return 'var(--paper-3)';
-    const span = max - min || 1;
-    const t = Math.max(0, Math.min(1, (value - min) / span));
-    const step = Math.min(4, Math.floor(t * 5));
-    return `var(--data-${step + 1})`;
-  }
-
-  function renderMap() {
-    const svg = $('#india-map');
-    const map = window.INDIA_MAP;
-    if (!svg || !map) return;
-
-    const byName = {};
-    state.stats.states.forEach((s) => {
-      byName[s.name] = s;
-    });
-
-    const values = state.stats.states.map((s) => s.maturity);
-    const min = Math.min.apply(null, values);
-    const max = Math.max.apply(null, values);
-
-    svg.setAttribute('viewBox', `0 0 ${map.width} ${map.height}`);
-
-    const paths = map.states
-      .map((geo) => {
-        const stat = byName[geo.name];
-        if (!stat) {
-          return (
-            `<path class="map-state map-state--empty" d="${geo.d}" ` +
-            `aria-label="${esc(geo.name)}: no registered portal"></path>`
-          );
-        }
-        const fill = maturityColor(stat.maturity, min, max);
-        return (
-          `<path class="map-state" d="${geo.d}" tabindex="0" role="button" ` +
-          `data-state="${esc(geo.name)}" style="fill:${fill}" ` +
-          `aria-label="${esc(geo.name)}: maturity ${dec(stat.maturity)} of 100, ${int(stat.live)} reachable portals"></path>`
-        );
-      })
-      .join('');
-
-    svg.innerHTML = paths + '<path class="map-selected-outline" d="" aria-hidden="true"></path>';
-
-    const ramp = $('#map-legend-ramp');
-    if (ramp) {
-      ramp.innerHTML = [1, 2, 3, 4, 5]
-        .map((n) => `<span class="legend__swatch" style="background:var(--data-${n})"></span>`)
-        .join('');
-    }
-
-    svg.addEventListener('mouseover', (event) => {
-      const path = event.target.closest('.map-state');
-      if (!path || !path.dataset.state) return;
-      const stat = byName[path.dataset.state];
-      showTip(
-        event,
-        `<b>${esc(stat.name)}</b><br>Maturity ${dec(stat.maturity)} · ${int(stat.live)} of ${int(stat.total)} reachable`
-      );
-    });
-
-    svg.addEventListener('mousemove', (event) => {
-      if (event.target.closest('.map-state')) moveTip(event);
-    });
-
-    svg.addEventListener('mouseout', (event) => {
-      if (event.target.closest('.map-state')) hideTip();
-    });
-
-    svg.addEventListener('click', (event) => {
-      const path = event.target.closest('.map-state');
-      if (path && path.dataset.state) selectState(path.dataset.state);
-    });
-
-    svg.addEventListener('keydown', (event) => {
-      const path = event.target.closest('.map-state');
-      if (!path || !path.dataset.state) return;
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        selectState(path.dataset.state);
-      }
-    });
-
-    selectState(state.stats.states[0].name);
-  }
-
-  function selectState(name) {
-    const stat = state.stats.states.find((s) => s.name === name);
-    if (!stat) return;
-    state.selectedState = name;
-
-    $$('.map-state').forEach((path) => {
-      path.setAttribute('aria-pressed', path.dataset.state === name ? 'true' : 'false');
-    });
-
-    // Draw the selection outline as a single overlay path on top of every state,
-    // so shared borders are never clipped by a neighbouring polygon.
-    const outline = $('.map-selected-outline');
-    const selected = $$('.map-state').find((p) => p.dataset.state === name);
-    if (outline && selected) {
-      outline.setAttribute('d', selected.getAttribute('d'));
-      outline.classList.remove('is-drawing');
-      // Force reflow so the draw-on animation restarts on every selection.
-      void outline.getBoundingClientRect();
-      outline.classList.add('is-drawing');
-    }
-
-    $('#dossier-name').textContent = stat.name;
-    $('#dossier-rank').innerHTML = `Rank <b>${stat.rank}</b> of ${state.stats.states.length}`;
-    $('#dossier-portals').textContent = int(stat.total);
-    $('#dossier-reach').innerHTML = `${int(stat.live)} <small>${dec(stat.reachRate)}%</small>`;
-    $('#dossier-maturity').innerHTML = `${dec(stat.maturity)} <small>/ 100</small>`;
-    $('#dossier-acc').innerHTML = `${dec(stat.acc)} <small>/ 100</small>`;
-    $('#dossier-sec').innerHTML = `${dec(stat.sec)} <small>/ 100</small>`;
-    $('#dossier-lat').innerHTML = `${int(stat.lat)} <small>ms</small>`;
-
-    const meters = [
-      ['GIGW accessibility toolbar', stat.gigw],
-      ['Scheduled language content', stat.multi],
-      ['Mobile viewport declared', stat.mobile],
-      ['Citizen services present', stat.services],
-    ];
-
-    $('#dossier-meters').innerHTML = meters
-      .map(
-        (m) =>
-          `<div class="meter">` +
-          `<span class="meter__label">${esc(m[0])}</span>` +
-          `<span class="meter__value">${dec(m[1])}%</span>` +
-          `<div class="meter__track"><div class="meter__fill" style="width:${Math.max(0, Math.min(100, m[1])).toFixed(1)}%"></div></div>` +
-          `</div>`
-      )
-      .join('');
-  }
-
-  function renderStateRank() {
-    $('#state-rank-body').innerHTML = state.stats.states
+  function renderSectorTable(sel, sectors) {
+    const body = $(`${sel} tbody`);
+    if (!body || !sectors) return;
+    body.innerHTML = sectors
       .map(
         (s) =>
-          `<tr data-state="${esc(s.name)}" style="cursor:pointer">` +
-          `<td class="ledger__num ledger__num--muted">${s.rank}</td>` +
-          `<td><span class="ledger__name">${esc(s.name)}</span></td>` +
-          `<td class="ledger__num">${int(s.total)}</td>` +
-          `<td class="ledger__num">${dec(s.maturity)}</td>` +
-          `<td class="ledger__num">${dec(s.acc)}</td>` +
-          `<td class="ledger__num">${dec(s.sec)}</td>` +
-          `<td class="ledger__num">${int(s.lat)} ms</td>` +
-          `</tr>`
+          '<tr>' +
+          `<td><b>${esc(s.sector)}</b></td>` +
+          `<td class="num">${int(s.domains)}</td>` +
+          `<td class="num">${int(s.reachable)} <span class="muted">${dec(s.reach_pct)}%</span></td>` +
+          `<td class="num">${dec(s.accessibility)}</td>` +
+          `<td class="num">${dec(s.security)}</td>` +
+          `<td class="num">${s.median_ttfb_ms == null ? '—' : int(s.median_ttfb_ms) + ' ms'}</td>` +
+          '</tr>'
       )
       .join('');
-
-    $('#state-rank-body').addEventListener('click', (event) => {
-      const row = event.target.closest('tr[data-state]');
-      if (row) selectState(row.dataset.state);
-    });
   }
 
-  /* --------------------------------------------------------------- ledger */
-
-  function populateTierFilter() {
-    const select = $('#ledger-tier');
-    const counts = {};
-    state.rows.forEach((r) => {
-      counts[r.level] = (counts[r.level] || 0) + 1;
-    });
-    select.innerHTML =
-      `<option value="all">All tiers (${int(state.rows.length)})</option>` +
-      TIER_ORDER.map(
-        (key) => `<option value="${key}">${esc(TIER_LABEL[key])} (${int(counts[key] || 0)})</option>`
-      ).join('');
-  }
-
-  function applyLedgerFilters() {
-    const term = $('#ledger-search').value.trim().toLowerCase();
-    const tier = $('#ledger-tier').value;
-    const status = $('#ledger-status').value;
-    const sort = $('#ledger-sort').value;
-
-    let rows = state.rows.filter((r) => {
-      if (tier !== 'all' && r.level !== tier) return false;
-      if (status === 'reachable' && !r.reachable) return false;
-      if (status === 'unreachable' && r.reachable) return false;
-      if (!term) return true;
-      return (
-        (r.domain || '').toLowerCase().includes(term) ||
-        (r.entity || '').toLowerCase().includes(term) ||
-        (r.district || '').toLowerCase().includes(term) ||
-        (r.state || '').toLowerCase().includes(term) ||
-        (r.arch || '').toLowerCase().includes(term)
-      );
-    });
-
-    const numeric = (key, dir) => (a, b) => {
-      const av = a[key];
-      const bv = b[key];
-      if (av == null && bv == null) return 0;
-      if (av == null) return 1;
-      if (bv == null) return -1;
-      return dir * (av - bv);
-    };
-
-    // Ties break on domain so the ledger order is deterministic across runs and
-    // reproducible against the CSV.
-    const byDomain = (a, b) => (a.domain || '').localeCompare(b.domain || '');
-    const tie = (primary) => (a, b) => primary(a, b) || byDomain(a, b);
-
-    const sorters = {
-      maturity: tie(numeric('maturity_score', -1)),
-      'maturity-asc': tie(numeric('maturity_score', 1)),
-      acc: tie(numeric('acc_score', -1)),
-      sec: tie(numeric('sec_score', -1)),
-      latency: tie(numeric('latency_ms', 1)),
-      domain: byDomain,
-    };
-
-    rows.sort(sorters[sort] || sorters.maturity);
-
-    state.ledger.rows = rows;
-    state.ledger.page = 1;
-    state.ledger.sort = sort;
-    renderLedger();
-  }
-
-  function renderLedger() {
-    const rows = state.ledger.rows;
-    const totalPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
-    const page = Math.min(state.ledger.page, totalPages);
-    state.ledger.page = page;
-
-    const start = (page - 1) * PAGE_SIZE;
-    const slice = rows.slice(start, start + PAGE_SIZE);
-
-    $('#ledger-body').innerHTML = slice
-      .map((r) => {
-        const accClass =
-          r.acc_score == null
-            ? 'ledger__num ledger__num--muted'
-            : r.acc_score >= 90
-            ? 'ledger__num'
-            : 'ledger__num';
-
-        const checks = [
-          r.multilingual ? '<span class="tag">Lang</span>' : '',
-          r.mobile_responsive ? '<span class="tag">Mobile</span>' : '',
-          r.has_citizen_services ? '<span class="tag">Services</span>' : '',
-          r.has_gigw_toolbar ? '<span class="tag tag--accent">GIGW</span>' : '',
-        ]
-          .filter(Boolean)
-          .join(' ');
-
-        const status = r.reachable
-          ? `<span class="status status--ok"><span class="status__dot"></span>${esc(r.status_code || 200)}</span>`
-          : `<span class="status status--fail"><span class="status__dot"></span>Offline</span>`;
-
-        return (
-          `<tr>` +
-          `<td><div class="ledger__domain">${esc(r.domain)}</div>` +
-          `<div class="ledger__entity" title="${esc(r.entity)}">${esc(r.entity)}</div></td>` +
-          `<td><span class="tag">${esc(TIER_SHORT[r.level] || r.level)}</span>` +
-          `<div class="ledger__reason" title="${esc(r.state)}">${esc(r.state)}</div></td>` +
-          `<td><span class="ledger__reason" style="max-width:14ch" title="${esc(ARCH_LABEL[r.arch] || r.arch)}">${esc(ARCH_LABEL[r.arch] || r.arch)}</span></td>` +
-          `<td class="${accClass}">${r.acc_score == null ? '—' : dec(r.acc_score)}</td>` +
-          `<td class="ledger__num">${r.sec_score == null ? '—' : dec(r.sec_score)}</td>` +
-          `<td class="ledger__num">${r.latency_ms == null ? '—' : int(r.latency_ms)}</td>` +
-          `<td class="ledger__num">${r.lcp_sec == null ? '—' : dec(r.lcp_sec, 2)}</td>` +
-          `<td>${checks || '<span class="ledger__num--muted">—</span>'}</td>` +
-          `<td>${status}<div class="ledger__reason" title="${esc(r.meas_reason)}">${esc(r.meas_reason)}</div></td>` +
-          `</tr>`
-        );
-      })
-      .join('');
-
-    $('#ledger-count').innerHTML =
-      rows.length === 0
-        ? 'No domains match these filters'
-        : `Showing <b>${int(start + 1)}</b>–<b>${int(Math.min(start + PAGE_SIZE, rows.length))}</b> of <b>${int(rows.length)}</b> domains`;
-
-    $('#ledger-pos').textContent = `Page ${page} of ${totalPages}`;
-    $('#ledger-prev').disabled = page <= 1;
-    $('#ledger-next').disabled = page >= totalPages;
-  }
-
-  function exportCsv() {
-    const rows = state.ledger.rows;
-    if (!rows.length) return;
-
-    const columns = [
-      'domain',
-      'entity',
-      'level',
-      'state',
-      'district',
-      'final_url',
-      'status_code',
-      'reachable',
-      'meas_reason',
-      'acc_score',
-      'has_gigw_toolbar',
-      'latency_ms',
-      'lcp_sec',
-      'has_https',
-      'sec_score',
-      'multilingual',
-      'mobile_responsive',
-      'arch',
-      'has_citizen_services',
-      'maturity_score',
+  function renderSchemaTable() {
+    const body = $('#schema-table tbody');
+    if (!body) return;
+    const cols = [
+      ['domain_name', 'string', 'Registered domain identifier'],
+      ['probe_country', 'string', 'ISO-3166 alpha-2 of the country measured'],
+      ['probe_region', 'string', 'Cloud region that performed the measurement'],
+      ['probe_region_country', 'string', 'Country the probe physically sits in'],
+      ['domestic_probe', 'boolean', 'True when the probe is inside the target country'],
+      ['distance_km', 'integer', 'Great-circle distance from country centroid to probe'],
+      ['is_reachable', 'boolean', 'True when the domain answered with HTTP < 400'],
+      ['measurement_reason', 'string', 'Why a domain was unreachable, or the status code'],
+      ['sub_accessibility_score', 'float', 'axe-core severity-weighted index, 0–100'],
+      ['sub_security_headers_score', 'float', 'OWASP directive score, 0–100'],
+      ['sub_response_latency_ms', 'float', 'Time to first byte, milliseconds'],
+      ['sub_lcp_est_sec', 'float', 'Estimated Largest Contentful Paint, seconds'],
+      ['sub_https_enforced', 'boolean', 'Final URL served over TLS'],
+      ['sub_is_multilingual', 'boolean', 'Non-English lang, hreflang, or Indic script present'],
+      ['sub_mobile_responsive', 'boolean', 'Viewport declared and no overflow at 375 px'],
+      ['sub_cms_architecture', 'string', 'Fingerprinted platform'],
+      ['sub_has_citizen_services', 'boolean', 'Search or grievance affordance present'],
+      ['observatory_maturity_score', 'float', 'Composite index, 0–100'],
+      ['blocked_by_waf', 'boolean', 'A bot filter refused the request'],
+      ['robots_disallowed', 'boolean', 'robots.txt forbade the path'],
     ];
-
-    const cell = (value) => {
-      const text = value == null ? '' : String(value);
-      return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
-    };
-
-    const csv = [columns.join(',')]
-      .concat(rows.map((row) => columns.map((key) => cell(row[key])).join(',')))
-      .join('\n');
-
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `civicweb_observatory_${rows.length}_domains.csv`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  }
-
-  /* -------------------------------------------------------------- tooltip */
-
-  const tip = { el: null };
-
-  function showTip(event, html) {
-    if (!tip.el) tip.el = $('#tip');
-    tip.el.innerHTML = html;
-    tip.el.setAttribute('data-on', 'true');
-    tip.el.setAttribute('aria-hidden', 'false');
-    moveTip(event);
-  }
-
-  function moveTip(event) {
-    if (!tip.el) return;
-    const pad = 14;
-    const rect = tip.el.getBoundingClientRect();
-    let x = event.clientX + pad;
-    let y = event.clientY + pad;
-    if (x + rect.width > window.innerWidth - 8) x = event.clientX - rect.width - pad;
-    if (y + rect.height > window.innerHeight - 8) y = event.clientY - rect.height - pad;
-    tip.el.style.left = `${Math.max(8, x)}px`;
-    tip.el.style.top = `${Math.max(8, y)}px`;
-  }
-
-  function hideTip() {
-    if (!tip.el) return;
-    tip.el.setAttribute('data-on', 'false');
-    tip.el.setAttribute('aria-hidden', 'true');
-  }
-
-  /* ---------------------------------------------------------------- tabs */
-
-  const VIEWS = ['overview', 'atlas', 'ledger', 'standard', 'method', 'future'];
-
-  function activateView(name, focus) {
-    if (VIEWS.indexOf(name) === -1) return;
-
-    VIEWS.forEach((view) => {
-      const panel = document.getElementById(`view-${view}`);
-      const tab = document.getElementById(`tab-${view}`);
-      const active = view === name;
-      if (panel) panel.hidden = !active;
-      if (tab) {
-        tab.setAttribute('aria-selected', active ? 'true' : 'false');
-        tab.tabIndex = active ? 0 : -1;
-        if (active && focus) tab.focus();
-      }
-    });
-
-    const panel = document.getElementById(`view-${name}`);
-    if (panel) renderChartsIn(panel);
-
-    if (name === 'atlas' && state.selectedState) selectState(state.selectedState);
-    if (name === 'future') renderFuture();
-
-    if (history.replaceState) {
-      history.replaceState(null, '', `#${name}`);
-    }
-  }
-
-  function wireTabs() {
-    const tabs = $$('.rail__btn');
-
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => activateView(tab.dataset.view));
-      tab.addEventListener('keydown', (event) => {
-        const index = tabs.indexOf(tab);
-        let next = null;
-        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-        if (event.key === 'Home') next = 0;
-        if (event.key === 'End') next = tabs.length - 1;
-        if (next == null) return;
-        event.preventDefault();
-        activateView(tabs[next].dataset.view, true);
-      });
-    });
-
-    const initial = (location.hash || '').replace('#', '');
-    if (VIEWS.indexOf(initial) !== -1) activateView(initial);
-  }
-
-  /* --------------------------------------------------------------- theme */
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-
-    $$('[data-theme-set]').forEach((button) => {
-      button.setAttribute('aria-pressed', button.dataset.themeSet === theme ? 'true' : 'false');
-    });
-
-    try {
-      localStorage.setItem('bga-theme', theme);
-    } catch (error) {
-      /* storage may be unavailable on file:// — the theme still applies */
-    }
-
-    state.charts.forEach((chart) => chart.el._render && chart.el._render());
-  }
-
-  function currentTheme() {
-    return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-  }
-
-  function wireTheme() {
-    let stored = null;
-    try {
-      stored = localStorage.getItem('bga-theme');
-    } catch (error) {
-      stored = null;
-    }
-
-    const prefersDark =
-      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    applyTheme(stored || (prefersDark ? 'dark' : 'light'));
-
-    $$('[data-theme-set]').forEach((button) => {
-      button.addEventListener('click', () => applyTheme(button.dataset.themeSet));
-    });
-
-    // Follow the OS only while the reader has not made an explicit choice.
-    if (window.matchMedia) {
-      const query = window.matchMedia('(prefers-color-scheme: dark)');
-      const onChange = (event) => {
-        let chosen = null;
-        try {
-          chosen = localStorage.getItem('bga-theme');
-        } catch (error) {
-          chosen = null;
-        }
-        if (!chosen) applyTheme(event.matches ? 'dark' : 'light');
-      };
-      if (query.addEventListener) query.addEventListener('change', onChange);
-    }
-  }
-
-  /* ------------------------------------------------------------- palette */
-
-  function openPalette() {
-    const palette = $('#palette');
-    palette.hidden = false;
-    const input = $('#palette-input');
-    input.value = '';
-    input.focus();
-    state.paletteIndex = 0;
-    searchPalette('');
-  }
-
-  function closePalette() {
-    $('#palette').hidden = true;
-  }
-
-  function searchPalette(term) {
-    const query = term.trim().toLowerCase();
-    let results;
-
-    if (!query) {
-      results = state.stats.states.slice(0, 8).map((s) => ({
-        kind: 'state',
-        label: s.name,
-        meta: `${int(s.live)} reachable · maturity ${dec(s.maturity)}`,
-        value: s.name,
-      }));
-    } else {
-      results = state.rows
-        .filter(
-          (r) =>
-            (r.domain || '').toLowerCase().includes(query) ||
-            (r.entity || '').toLowerCase().includes(query) ||
-            (r.district || '').toLowerCase().includes(query)
-        )
-        .slice(0, 12)
-        .map((r) => ({
-          kind: 'domain',
-          label: r.domain,
-          meta: `${r.entity} · ${r.state}`,
-          value: r.domain,
-        }));
-    }
-
-    state.paletteResults = results;
-    state.paletteIndex = 0;
-
-    const list = $('#palette-list');
-    if (!results.length) {
-      list.innerHTML = `<li class="palette__empty">No domain matches “${esc(term)}”</li>`;
-      return;
-    }
-
-    list.innerHTML = results
+    body.innerHTML = cols
       .map(
-        (item, i) =>
-          `<li class="palette__item" role="option" aria-selected="${i === 0}" data-index="${i}">` +
-          `<span><b style="font-family:var(--font-mono);font-size:var(--fs-xs)">${esc(item.label)}</b>` +
-          `<br><span style="font-size:var(--fs-xs);color:var(--ink-3)">${esc(item.meta)}</span></span>` +
-          `<kbd>${item.kind === 'state' ? 'state' : 'domain'}</kbd></li>`
+        ([name, type, meaning]) =>
+          `<tr><td><code>${esc(name)}</code></td><td class="muted">${esc(type)}</td>` +
+          `<td>${esc(meaning)}</td></tr>`
       )
       .join('');
-  }
-
-  function movePalette(delta) {
-    const items = $$('.palette__item');
-    if (!items.length) return;
-    state.paletteIndex = (state.paletteIndex + delta + items.length) % items.length;
-    items.forEach((item, i) => item.setAttribute('aria-selected', i === state.paletteIndex ? 'true' : 'false'));
-    items[state.paletteIndex].scrollIntoView({ block: 'nearest' });
-  }
-
-  function commitPalette() {
-    const item = state.paletteResults[state.paletteIndex];
-    if (!item) return;
-    closePalette();
-
-    if (item.kind === 'state') {
-      activateView('atlas');
-      selectState(item.value);
-      return;
-    }
-
-    activateView('ledger');
-    $('#ledger-search').value = item.value;
-    $('#ledger-status').value = 'all';
-    $('#ledger-tier').value = 'all';
-    applyLedgerFilters();
-  }
-
-  function wirePalette() {
-    $('#palette-open').addEventListener('click', openPalette);
-
-    $('#palette').addEventListener('click', (event) => {
-      if (event.target.id === 'palette') closePalette();
-    });
-
-    $('#palette-input').addEventListener('input', (event) => searchPalette(event.target.value));
-
-    $('#palette-input').addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowDown') {
-        event.preventDefault();
-        movePalette(1);
-      } else if (event.key === 'ArrowUp') {
-        event.preventDefault();
-        movePalette(-1);
-      } else if (event.key === 'Enter') {
-        event.preventDefault();
-        commitPalette();
-      } else if (event.key === 'Escape') {
-        closePalette();
-      }
-    });
-
-    $('#palette-list').addEventListener('click', (event) => {
-      const item = event.target.closest('.palette__item');
-      if (!item) return;
-      state.paletteIndex = Number(item.dataset.index);
-      commitPalette();
-    });
-  }
-
-  /* ------------------------------------------------------------ shortcuts */
-
-  function wireShortcuts() {
-    document.addEventListener('keydown', (event) => {
-      const tag = (event.target.tagName || '').toLowerCase();
-      const typing = tag === 'input' || tag === 'select' || tag === 'textarea';
-
-      if (event.key === 'Escape') {
-        if (!$('#palette').hidden) closePalette();
-        hideTip();
-        return;
-      }
-
-      if (typing) return;
-
-      if (event.key === '/') {
-        event.preventDefault();
-        openPalette();
-        return;
-      }
-
-      if (event.key === 't' || event.key === 'T') {
-        applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
-        return;
-      }
-
-      const index = Number(event.key);
-      if (index >= 1 && index <= VIEWS.length) {
-        activateView(VIEWS[index - 1]);
-      }
-    });
-  }
-
-  /* ----------------------------------------------------------------- boot */
-
-  function wireLedger() {
-    ['#ledger-search', '#ledger-tier', '#ledger-status', '#ledger-sort'].forEach((sel) => {
-      const el = $(sel);
-      el.addEventListener(sel === '#ledger-search' ? 'input' : 'change', applyLedgerFilters);
-    });
-
-    $('#ledger-prev').addEventListener('click', () => {
-      if (state.ledger.page > 1) {
-        state.ledger.page -= 1;
-        renderLedger();
-        $('#ledger-table').scrollIntoView({ block: 'start', behavior: 'smooth' });
-      }
-    });
-
-    $('#ledger-next').addEventListener('click', () => {
-      const totalPages = Math.ceil(state.ledger.rows.length / PAGE_SIZE);
-      if (state.ledger.page < totalPages) {
-        state.ledger.page += 1;
-        renderLedger();
-        $('#ledger-table').scrollIntoView({ block: 'start', behavior: 'smooth' });
-      }
-    });
-
-    $('#ledger-export').addEventListener('click', exportCsv);
-  }
-
-  function wireDossier() {
-    $('#dossier-open-ledger').addEventListener('click', () => {
-      if (!state.selectedState) return;
-      activateView('ledger');
-      $('#ledger-search').value = state.selectedState;
-      $('#ledger-status').value = 'all';
-      $('#ledger-tier').value = 'all';
-      applyLedgerFilters();
-    });
-
-    $('#dossier-copy').addEventListener('click', async () => {
-      const stat = state.stats.states.find((s) => s.name === state.selectedState);
-      if (!stat) return;
-      const text =
-        `${stat.name} — CivicWeb Observatory\n` +
-        `Portals: ${stat.total} (${stat.live} reachable, ${dec(stat.reachRate)}%)\n` +
-        `Composite maturity: ${dec(stat.maturity)} / 100 (rank ${stat.rank} of ${state.stats.states.length})\n` +
-        `Accessibility: ${dec(stat.acc)} / 100\n` +
-        `Security headers: ${dec(stat.sec)} / 100\n` +
-        `Median TTFB: ${int(stat.lat)} ms\n` +
-        `GIGW toolbar: ${dec(stat.gigw)}% · Scheduled language: ${dec(stat.multi)}% · Mobile viewport: ${dec(stat.mobile)}%`;
-
-      const button = $('#dossier-copy');
-      const original = button.textContent;
-      try {
-        await navigator.clipboard.writeText(text);
-        button.textContent = 'Copied';
-      } catch (error) {
-        button.textContent = 'Copy unavailable';
-      }
-      setTimeout(() => {
-        button.textContent = original;
-      }, 1600);
-    });
-  }
-
-  function mountCharts() {
-    const s = state.stats;
-
-    mountChart('chart-tier', (width) =>
-      hbar(
-        width,
-        s.tiers
-          .slice()
-          .sort((a, b) => b.maturity - a.maturity)
-          .map((t) => ({
-            label: t.label,
-            value: t.maturity,
-            valueText: dec(t.maturity),
-            tip: `${dec(t.maturity)} of 100 · ${int(t.live)} reachable portals`,
-            strong: t.maturity === Math.max.apply(null, s.tiers.map((x) => x.maturity)),
-          })),
-        {
-          max: 100,
-          ref: s.maturity,
-          color: (row) => (row.value >= s.maturity ? 'var(--data-5)' : 'var(--data-3)'),
-          label: `Mean composite maturity by governance tier. National mean ${dec(s.maturity)}.`,
-        }
-      )
-    );
-
-    mountChart('chart-lcp', (width) =>
-      stacked(
-        width,
-        s.lcpBuckets.map((b, i) => ({
-          label: b.label,
-          value: b.count,
-          valueText: `${int(b.count)} · ${dec(pct(b.count, s.live))}%`,
-          tip: `${int(b.count)} portals · ${dec(pct(b.count, s.live))}%`,
-          shareText: `${dec(pct(b.count, s.live), 0)}%`,
-          color: ['var(--data-2)', 'var(--data-4)', 'var(--data-5)'][i],
-        })),
-        { label: 'Estimated Largest Contentful Paint distribution' }
-      )
-    );
-
-    mountChart('chart-latency', (width) =>
-      vbar(
-        width,
-        s.latBuckets.map((b) => ({
-          label: b.label,
-          value: b.count,
-          valueText: int(b.count),
-          tip: `${int(b.count)} portals · ${dec(pct(b.count, s.live))}%`,
-        })),
-        {
-          color: (row, i) => ['var(--data-2)', 'var(--data-3)', 'var(--data-4)', 'var(--data-5)'][i],
-          label: 'Time to first byte distribution over domestic transit',
-        }
-      )
-    );
-
-    mountChart('chart-sec', (width) =>
-      vbar(
-        width,
-        s.secBuckets.map((b) => ({
-          label: b.label,
-          value: b.count,
-          valueText: int(b.count),
-          tip: `${int(b.count)} portals · ${dec(pct(b.count, s.live))}%`,
-        })),
-        {
-          color: (row, i) => ['var(--data-5)', 'var(--data-4)', 'var(--data-3)', 'var(--data-2)', 'var(--data-1)'][i],
-          label: 'Security header score distribution',
-        }
-      )
-    );
-
-    mountChart('chart-arch', (width) =>
-      hbar(
-        width,
-        s.arch.map((a) => ({
-          label: a.label,
-          value: a.count,
-          valueText: `${dec(pct(a.count, s.live))}%`,
-          tip: `${int(a.count)} portals`,
-        })),
-        {
-          labelW: 150,
-          color: (row, i) => `var(--data-${Math.max(1, 5 - i)})`,
-          label: 'Content management platform distribution',
-        }
-      )
-    );
-  }
-
-  /* --------------------------------------------------------------- future */
-
-  let futureData = null;
-  let futureLoading = false;
-
-  function futureBadge(status) {
-    const label = String(status || 'planned').replace(/_/g, ' ');
-    return `<span class="future-badge future-badge--${esc(status)}">${esc(label)}</span>`;
-  }
-
-  function renderFuture() {
-    if (futureData) {
-      paintFuture();
-      return;
-    }
-    // The bundle is a JS global rather than a fetch, so the page works from
-    // file:// as well as over HTTP. This matches how dataset.js is loaded.
-    if (window.FUTURE_DATA) {
-      futureData = window.FUTURE_DATA;
-      paintFuture();
-      return;
-    }
-    if (futureLoading) return;
-    futureLoading = true;
-
-    fetch('static/future.json')
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
-      .then((data) => {
-        futureData = data;
-        paintFuture();
-      })
-      .catch((err) => {
-        const host = $('#future-countries');
-        if (host) {
-          host.innerHTML =
-            '<p class="future-note">The global expansion bundle could not be loaded ' +
-            `(${esc(err.message)}). Serve this page over HTTP so that ` +
-            '<code>static/future.json</code> resolves.</p>';
-        }
-      })
-      .finally(() => {
-        futureLoading = false;
-      });
-  }
-
-  function paintFuture() {
-    const d = futureData;
-    if (!d) return;
-
-    // A. measured vs planned
-    const measured = $('#future-measured');
-    if (measured) {
-      const base = d.india_baseline || {};
-      measured.innerHTML = [
-        `India: ${int(base.discovered)} domains discovered, ${int(base.reachable)} measured`,
-        `Accessibility ${dec(base.mean_accessibility)} / 100 (axe-core)`,
-        `Security ${dec(base.mean_security)} / 100 (OWASP headers)`,
-        `Median TTFB ${int(base.median_ttfb_ms)} ms`,
-        `Mobile ${dec(base.mobile_pct)}% · Language ${dec(base.multilingual_pct)}%`,
-      ]
-        .map((t) => `<li>${esc(t)}</li>`)
-        .join('');
-    }
-
-    const planned = $('#future-planned');
-    if (planned) {
-      const dims = (d.dimensions || []).filter((x) => x.india_status !== 'measured');
-      planned.innerHTML = dims
-        .map((x) => `<li>${esc(x.name)} &mdash; ${esc(x.measures)}</li>`)
-        .join('');
-    }
-
-    // B. countries
-    renderWorldMap();
-    renderCountryCards();
-
-    // C. dimensions
-    renderGlobal();
-
-    // D. dimensions
-    const dims = $('#future-dimensions');
-    if (dims) {
-      dims.innerHTML = (d.dimensions || [])
-        .map(
-          (x) =>
-            '<article class="future-dim">' +
-            '<div class="future-dim__head">' +
-            `<span class="future-dim__name">${esc(x.name)}</span>` +
-            futureBadge(x.india_status === 'measured' ? 'operational' : 'planned') +
-            '</div>' +
-            `<p class="future-dim__body">${esc(x.measures)}</p>` +
-            `<div class="future-dim__tool">${esc(x.tool)}</div>` +
-            '</article>'
-        )
-        .join('');
-    }
-
-    // D. infrastructure
-    const infra = d.infrastructure || {};
-    const stats = $('#future-infra');
-    if (stats) {
-      const cells = [
-        ['Active instances', int(infra.active_instances || 0)],
-        ['Completed jobs', int(infra.completed_jobs || 0)],
-        ['Failed jobs', int(infra.failed_jobs || 0)],
-        ['Actual spend', `$${Number(infra.actual_total_usd || 0).toFixed(4)}`],
-        ['Month spend', `$${Number(infra.month_spend_usd || 0).toFixed(4)}`],
-        ['Monthly cap', `$${Number(infra.monthly_cap_usd || 0).toFixed(2)}`],
-        ['Per-job cap', `$${Number(infra.per_job_cap_usd || 0).toFixed(2)}`],
-      ];
-      stats.innerHTML = cells
-        .map(
-          ([k, v]) =>
-            `<div class="future-stat"><span class="future-stat__k">${esc(k)}</span>` +
-            `<span class="future-stat__v">${v}</span></div>`
-        )
-        .join('');
-    }
-    const note = $('#future-infra-note');
-    if (note && infra.note) note.textContent = infra.note;
-
-    const plans = $('#future-plans tbody');
-    if (plans) {
-      plans.innerHTML = (d.instance_catalogue || [])
-        .map(
-          (p) =>
-            '<tr>' +
-            `<td><code>${esc(p.plan_id)}</code></td>` +
-            `<td class="num">${int(p.vcpu)}</td>` +
-            `<td class="num">${int(p.ram_mb)} MB</td>` +
-            `<td class="num">${int(p.disk_gb)} GB</td>` +
-            `<td class="num">$${Number(p.hourly_usd).toFixed(4)}</td>` +
-            `<td class="num">${dec(p.billed_hours)}</td>` +
-            `<td class="num">$${Number(p.est_batch_usd).toFixed(4)}</td>` +
-            '</tr>'
-        )
-        .join('');
-    }
-
-    // E. roadmap
-    const road = $('#future-roadmap');
-    if (road) {
-      road.innerHTML = (d.roadmap || [])
-        .map(
-          (r) =>
-            `<li class="roadmap__item roadmap__item--${esc(r.status)}">` +
-            `<span class="roadmap__phase">${String(r.phase).padStart(2, '0')}</span>` +
-            '<div>' +
-            `<h4 class="roadmap__title">${esc(r.title)} ${futureBadge(r.status)}</h4>` +
-            `<p class="roadmap__detail">${esc(r.detail)}</p>` +
-            '</div></li>'
-        )
-        .join('');
-    }
   }
 
   /* ---------------------------------------------------------- world map */
 
-  let worldFilter = 'all';
-
-  const WORLD_STATUS_LABEL = {
+  const STATUS_LABEL = {
     operational: 'Domestic, measured',
     domestic_ready: 'Domestic, ready',
     nearest_available: 'Nearest probe',
     unmeasurable: 'Unmeasurable',
-    provisioning: 'Provisioning',
-    temporarily_unavailable: 'Temporarily unavailable',
   };
 
-  function worldStatusOf(code) {
-    const w = window.WORLD_DATA;
-    if (!w) return 'unsupported';
+  let worldFilter = 'all';
+
+  function statusOf(code) {
+    const w = state.world;
+    if (!w) return 'unmeasurable';
     const c = (w.countries || []).find((x) => x.code === code);
-    return c ? c.status : 'unsupported';
+    return c ? c.status : 'unmeasurable';
   }
 
   function renderWorldMap() {
@@ -1586,63 +240,34 @@
     const map = window.WORLD_MAP;
     if (!svg || !map) return;
 
-    const paths = (map.countries || [])
+    svg.innerHTML = (map.countries || [])
       .map((c) => {
-        const status = worldStatusOf(c.code);
+        const status = statusOf(c.code);
         return (
-          `<path class="world-country world-country--${esc(status)}" ` +
-          `d="${c.d}" data-code="${esc(c.code)}" ` +
-          `aria-label="${esc(c.name)}: ${esc(WORLD_STATUS_LABEL[status] || status)}"></path>`
+          `<path class="world-country world-country--${esc(status)}" d="${c.d}" ` +
+          `data-code="${esc(c.code)}" aria-label="${esc(c.name)}: ${esc(STATUS_LABEL[status] || status)}"></path>`
         );
       })
       .join('');
 
-    svg.innerHTML = paths;
-
-    // Legend
     const legend = $('#world-legend');
-    if (legend) {
-      const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
+    if (legend && state.world) {
+      const counts = state.world.status_counts || {};
       legend.innerHTML = ['operational', 'domestic_ready', 'nearest_available', 'unmeasurable']
         .map(
           (s) =>
             `<span class="world-legend__item">` +
             `<span class="world-legend__swatch world-legend__swatch--${s}"></span>` +
-            `${esc(WORLD_STATUS_LABEL[s])} <b>${int(counts[s] || 0)}</b></span>`
+            `${esc(STATUS_LABEL[s])} <b>${int(counts[s] || 0)}</b></span>`
         )
         .join('');
     }
 
-    // Vantage class table
-    const vbody = $('#world-vantages tbody');
-    if (vbody && window.WORLD_DATA) {
-      const vc = window.WORLD_DATA.vantage_counts || {};
-      const rows = [
-        ['domestic', vc.domestic || 0,
-         'Probe inside the country. Supports a claim about what a citizen experiences.'],
-        ['nearest', vc.nearest || 0,
-         'Probe in the closest region, in another country. Real data, but it describes a foreign client\'s view.'],
-        ['unmeasurable', vc.unmeasurable || 0,
-         'Nearest region over 6,000 km away. A latency figure would describe the path, not the portal.'],
-      ];
-      vbody.innerHTML = rows
-        .map(
-          ([cls, n, meaning]) =>
-            '<tr>' +
-            `<td>${futureBadge(cls === 'domestic' ? 'operational' : cls === 'nearest' ? 'nearest_available' : 'unmeasurable')}</td>` +
-            `<td class="num">${int(n)}</td>` +
-            `<td class="muted">${esc(meaning)}</td>` +
-            '</tr>'
-        )
-        .join('');
-    }
-
-    // Filters
     const filters = $('#world-filters');
-    if (filters) {
-      const counts = (window.WORLD_DATA && window.WORLD_DATA.status_counts) || {};
+    if (filters && state.world) {
+      const counts = state.world.status_counts || {};
       const opts = [
-        ['all', 'All countries', window.WORLD_DATA ? window.WORLD_DATA.total_countries : 0],
+        ['all', 'All countries', state.world.total_countries],
         ['operational', 'Domestic, measured', counts.operational || 0],
         ['domestic_ready', 'Domestic, ready', counts.domestic_ready || 0],
         ['nearest_available', 'Nearest probe', counts.nearest_available || 0],
@@ -1650,218 +275,398 @@
       ];
       filters.innerHTML = opts
         .map(
-          ([key, label, n]) =>
-            `<button type="button" class="world-filter${key === worldFilter ? ' is-active' : ''}" ` +
-            `data-filter="${key}" aria-pressed="${key === worldFilter}">` +
-            `${esc(label)} <b>${int(n)}</b></button>`
+          ([k, label, n]) =>
+            `<button type="button" class="world-filter${k === worldFilter ? ' is-active' : ''}" ` +
+            `data-filter="${k}" aria-pressed="${k === worldFilter}">${esc(label)} <b>${int(n)}</b></button>`
         )
         .join('');
-
-      filters.querySelectorAll('.world-filter').forEach((btn) => {
+      $$('.world-filter', filters).forEach((btn) => {
         btn.addEventListener('click', () => {
           worldFilter = btn.dataset.filter;
           renderWorldMap();
-          renderCountryCards();
         });
       });
     }
 
-    // Hover tooltip on the map
-    svg.addEventListener('mouseover', (event) => {
+    svg.addEventListener('click', (event) => {
       const path = event.target.closest('.world-country');
-      if (!path) return;
-      const code = path.dataset.code;
-      const w = window.WORLD_DATA;
-      const c = w && (w.countries || []).find((x) => x.code === code);
-      if (!c) return;
-      const regions = (c.domestic_regions || [])
-        .map((r) => r.city)
-        .join(', ');
-      showTip(
-        event,
-        `<b>${esc(c.name)}</b><br>${esc(WORLD_STATUS_LABEL[c.status] || c.status)}` +
-          (regions ? `<br>${esc(regions)}` : '')
-      );
-    });
-    svg.addEventListener('mousemove', (event) => {
-      if (event.target.closest('.world-country')) moveTip(event);
-    });
-    svg.addEventListener('mouseout', (event) => {
-      if (event.target.closest('.world-country')) hideTip();
+      if (path) selectCountry(path.dataset.code);
     });
   }
 
-  function renderCountryCards() {
-    const host = $('#future-countries');
-    const w = window.WORLD_DATA;
-    if (!host || !w) return;
-
-    let list = w.countries || [];
-    if (worldFilter !== 'all') {
-      list = list.filter((c) => c.status === worldFilter);
-    }
-    // Operational first, then planned, then unsupported; alphabetical within.
-    const order = { operational: 0, domestic_ready: 1, provisioning: 2, nearest_available: 3, temporarily_unavailable: 4, unmeasurable: 5 };
-    list = list.slice().sort((a, b) => {
-      const d = (order[a.status] ?? 9) - (order[b.status] ?? 9);
-      return d !== 0 ? d : a.name.localeCompare(b.name);
-    });
-
-    host.innerHTML = list
-      .map((c) => {
-        const regions = (c.domestic_regions || []).map((r) => r.city).join(', ');
-        return (
-          '<article class="future-country">' +
-          '<div class="future-country__top">' +
-          `<span class="future-country__name">${esc(c.name)}</span>` +
-          `<span class="future-country__code">${esc(c.code)}</span>` +
-          '</div>' +
-          futureBadge(c.status) +
-          (regions ? `<div class="future-country__region">${esc(regions)}</div>` : '') +
-          `<p class="future-country__note">${esc(c.note || '')}</p>` +
-          '</article>'
-        );
-      })
+  function renderWorldVantages() {
+    const body = $('#world-vantages tbody');
+    const w = state.world;
+    if (!body || !w) return;
+    const vc = w.vantage_counts || {};
+    const rows = [
+      ['domestic', vc.domestic || 0, 'Probe inside the country. Describes what a citizen sees.'],
+      ['nearest', vc.nearest || 0, 'Probe in the closest region, in another country. Describes a foreign client.'],
+      ['unmeasurable', vc.unmeasurable || 0, 'Nearest region over 6,000 km away. A latency figure would describe the path.'],
+    ];
+    body.innerHTML = rows
+      .map(
+        ([k, n, meaning]) =>
+          `<tr><td><b>${esc(k)}</b></td><td class="num">${int(n)}</td>` +
+          `<td class="muted">${esc(meaning)}</td></tr>`
+      )
       .join('');
-
-    const count = $('#world-count');
-    if (count) {
-      count.textContent =
-        `Showing ${list.length} of ${w.total_countries} countries. ` +
-        `${w.countries_with_regions} have a domestic cloud region; ` +
-        `${w.status_counts.operational || 0} measured domestically, ` +
-        `${w.status_counts.domestic_ready || 0} domestic and ready, ` +
-        `${w.status_counts.nearest_available || 0} measurable from a nearest probe, ` +
-        `${w.status_counts.unmeasurable || 0} too remote to measure meaningfully.`;
-    }
   }
 
-  function renderGlobal() {
-    const g = window.GLOBAL_DATA;
-    const host = $('#global-table tbody');
-    if (!g || !host) return;
+  function selectCountry(code) {
+    const w = state.world;
+    const g = state.global;
+    if (!w || !g) return;
+    const cov = (w.countries || []).find((c) => c.code === code);
+    const stats = (g.countries || []).find((c) => c.code === code);
+    if (!cov) return;
 
-    const summary = $('#global-summary');
-    if (summary) {
-      const cells = [
-        ['Countries measured', int(g.countries_measured)],
-        ['Domains measured', int(g.total_rows)],
-        ['Overall reachable', `${dec(g.overall_reach_pct)}%`],
-        ['Domestic probes', g.all_domestic ? 'all' : 'mixed'],
-      ];
-      summary.innerHTML = cells
-        .map(
-          ([k, v]) =>
-            `<div class="future-stat"><span class="future-stat__k">${esc(k)}</span>` +
-            `<span class="future-stat__v">${v}</span></div>`
-        )
-        .join('');
+    state.selectedCountry = code;
+
+    const name = $('#country-name');
+    if (name) name.textContent = cov.name;
+
+    const vantage = $('#country-vantage');
+    if (vantage) vantage.textContent = STATUS_LABEL[cov.status] || cov.status;
+
+    const set = (id, value) => {
+      const el = $(id);
+      if (el) el.innerHTML = value;
+    };
+
+    if (stats) {
+      set('#country-domains', int(stats.domains));
+      set('#country-reach', `${int(stats.reachable)} <small>${dec(stats.reach_pct)}%</small>`);
+      set('#country-acc', `${dec(stats.accessibility)} <small>/ 100</small>`);
+      set('#country-sec', `${dec(stats.security)} <small>/ 100</small>`);
+      set('#country-mat', `${dec(stats.maturity)} <small>/ 100</small>`);
+      set('#country-ttfb', `${int(stats.median_ttfb_ms)} <small>ms</small>`);
+    } else {
+      ['#country-domains', '#country-reach', '#country-acc', '#country-sec', '#country-mat', '#country-ttfb']
+        .forEach((id) => set(id, '<span class="muted">not measured</span>'));
     }
 
-    host.innerHTML = (g.countries || [])
-      .map((c) => {
-        const num = (v, suffix = '') =>
-          v === null || v === undefined ? '<span class="muted">not measured</span>' : `${dec(v)}${suffix}`;
-        return (
+    const note = $('#country-note');
+    if (note) note.textContent = cov.note || '';
+  }
+
+  function renderCountryRank() {
+    const body = $('#country-rank-body');
+    const g = state.global;
+    if (!body || !g) return;
+    const rows = (g.countries || []).slice().sort((a, b) => (b.accessibility || 0) - (a.accessibility || 0));
+    body.innerHTML = rows
+      .map(
+        (c, i) =>
           '<tr>' +
-          `<td><b>${esc(c.name)}</b> <span class="future-country__code">${esc(c.code)}</span></td>` +
-          `<td><code>${esc(c.probe_region)}</code> ${esc(c.probe_region_country)}` +
-          (c.domestic_probe ? '' : ' <span class="muted">(foreign)</span>') +
-          '</td>' +
+          `<td class="muted">${i + 1}</td>` +
+          `<td><b>${esc(c.name)}</b> <span class="muted">${esc(c.code)}</span></td>` +
+          `<td class="muted">${c.domestic_probe ? 'domestic' : 'nearest'}</td>` +
           `<td class="num">${int(c.domains)}</td>` +
           `<td class="num">${int(c.reachable)} <span class="muted">${dec(c.reach_pct)}%</span></td>` +
-          `<td class="num">${num(c.accessibility)}</td>` +
-          `<td class="num">${num(c.security)}</td>` +
-          `<td class="num">${num(c.maturity)}</td>` +
-          `<td class="num">${c.median_ttfb_ms === null ? '—' : int(c.median_ttfb_ms) + ' ms'}</td>` +
+          `<td class="num">${dec(c.accessibility)}</td>` +
+          `<td class="num">${dec(c.security)}</td>` +
+          `<td class="num">${c.median_ttfb_ms == null ? '—' : int(c.median_ttfb_ms) + ' ms'}</td>` +
           '</tr>'
-        );
-      })
+      )
+      .join('');
+  }
+
+  /* ------------------------------------------------------------- charts */
+
+  function barChart(host, rows, label) {
+    if (!host) return;
+    const max = Math.max.apply(null, rows.map((r) => r.value)) || 1;
+    host.innerHTML =
+      `<svg viewBox="0 0 400 ${rows.length * 26 + 10}" width="400" height="${rows.length * 26 + 10}" ` +
+      `role="img" aria-label="${esc(label)}" style="width:100%;height:auto">` +
+      rows
+        .map((r, i) => {
+          const w = Math.max(2, (r.value / max) * 250);
+          const y = i * 26 + 6;
+          return (
+            `<text x="0" y="${y + 12}" font-size="11" fill="currentColor">${esc(r.label)}</text>` +
+            `<rect x="120" y="${y}" width="${w}" height="16" fill="var(--data-4)"></rect>` +
+            `<text x="${124 + w}" y="${y + 12}" font-size="11" fill="currentColor">${dec(r.value)}</text>`
+          );
+        })
+        .join('') +
+      '</svg>';
+  }
+
+  function renderCharts() {
+    const g = state.global;
+    if (!g) return;
+    const ranked = (g.countries || []).filter((c) => c.accessibility != null);
+    const top = ranked.slice(0, 8).map((c) => ({ label: c.name, value: c.accessibility }));
+    const bottom = ranked
+      .slice(-8)
+      .reverse()
+      .map((c) => ({ label: c.name, value: c.accessibility }));
+    barChart($('#chart-top-countries'), top, 'Highest mean accessibility by country');
+    barChart($('#chart-bottom-countries'), bottom, 'Lowest mean accessibility by country');
+  }
+
+  /* ----------------------------------------------------------- registry */
+
+  function filteredRows() {
+    const r = state.registry;
+    let rows = state.rows;
+    if (r.query) {
+      const q = r.query.toLowerCase();
+      rows = rows.filter(
+        (x) =>
+          (x.domain || '').toLowerCase().includes(q) ||
+          (x.entity || '').toLowerCase().includes(q) ||
+          (x.state || '').toLowerCase().includes(q) ||
+          (x.country || '').toLowerCase().includes(q)
+      );
+    }
+    if (r.tier !== 'all') rows = rows.filter((x) => x.level === r.tier);
+    if (r.status === 'reachable') rows = rows.filter((x) => x.reachable);
+    if (r.status === 'unreachable') rows = rows.filter((x) => !x.reachable);
+
+    const key = r.sort;
+    rows = rows.slice().sort((a, b) => {
+      if (key === 'domain') return (a.domain || '').localeCompare(b.domain || '');
+      if (key === 'acc') return (b.acc_score || -1) - (a.acc_score || -1);
+      if (key === 'sec') return (b.sec_score || -1) - (a.sec_score || -1);
+      if (key === 'lat') return (a.latency_ms || 1e9) - (b.latency_ms || 1e9);
+      return 0;
+    });
+    return rows;
+  }
+
+  function renderRegistry() {
+    const body = $('#registry-body');
+    if (!body) return;
+    const rows = filteredRows();
+    const r = state.registry;
+    const start = r.page * r.size;
+    const page = rows.slice(start, start + r.size);
+
+    body.innerHTML = page
+      .map(
+        (x) =>
+          '<tr>' +
+          `<td><code>${esc(x.domain)}</code></td>` +
+          `<td>${esc(x.entity || '')}</td>` +
+          `<td class="muted">${esc(x.level || '')}</td>` +
+          `<td class="muted">${esc(x.state || '')}</td>` +
+          `<td class="num">${x.reachable ? 'yes' : 'no'}</td>` +
+          `<td class="num">${dec(x.acc_score)}</td>` +
+          `<td class="num">${dec(x.sec_score)}</td>` +
+          `<td class="num">${x.latency_ms == null ? '—' : int(x.latency_ms) + ' ms'}</td>` +
+          '</tr>'
+      )
       .join('');
 
-    const note = $('#global-note');
-    if (note) {
-      note.textContent =
-        `${g.countries_measured} countries measured from domestic probes, ` +
-        `${g.total_rows} domains total. Each country's sample is small by design: ` +
-        'this is a cross-country comparability check, not a census. The India ' +
-        'census in the other views remains the large sample.';
-    }
+    const count = $('#registry-count');
+    if (count) count.textContent = `${int(rows.length)} domains`;
 
-    // Domestic vs nearest comparison
-    const vbody = $('#global-vantage tbody');
-    if (vbody && g.vantage_comparison) {
-      const num = (v, suffix = '') =>
-        v === null || v === undefined ? '<span class="muted">not measured</span>' : `${dec(v)}${suffix}`;
-      vbody.innerHTML = g.vantage_comparison
-        .map(
-          (v) =>
-            '<tr>' +
-            `<td><b>${esc(v.vantage)}</b></td>` +
-            `<td class="num">${int(v.domains)}</td>` +
-            `<td class="num">${int(v.reachable)} <span class="muted">${dec(v.reach_pct)}%</span></td>` +
-            `<td class="num">${num(v.accessibility)}</td>` +
-            `<td class="num">${num(v.security)}</td>` +
-            `<td class="num">${num(v.maturity)}</td>` +
-            `<td class="num">${v.median_ttfb_ms === null ? '—' : int(v.median_ttfb_ms) + ' ms'}</td>` +
-            '</tr>'
-        )
-        .join('');
-    }
-
-    // Sector breakdown
-    const sbody = $('#global-sectors tbody');
-    if (sbody && g.sectors) {
-      const num = (v, suffix = '') =>
-        v === null || v === undefined ? '<span class="muted">not measured</span>' : `${dec(v)}${suffix}`;
-      sbody.innerHTML = g.sectors
-        .map(
-          (s) =>
-            '<tr>' +
-            `<td><b>${esc(s.sector)}</b></td>` +
-            `<td class="num">${int(s.domains)}</td>` +
-            `<td class="num">${int(s.reachable)} <span class="muted">${dec(s.reach_pct)}%</span></td>` +
-            `<td class="num">${num(s.accessibility)}</td>` +
-            `<td class="num">${num(s.security)}</td>` +
-            `<td class="num">${num(s.maturity)}</td>` +
-            `<td class="num">${s.median_ttfb_ms === null ? '—' : int(s.median_ttfb_ms) + ' ms'}</td>` +
-            '</tr>'
-        )
-        .join('');
+    const pager = $('#registry-page');
+    if (pager) {
+      const pages = Math.max(1, Math.ceil(rows.length / r.size));
+      pager.textContent = `Page ${r.page + 1} of ${pages}`;
     }
   }
+
+  function wireRegistry() {
+    const search = $('#registry-search');
+    if (search) {
+      search.addEventListener('input', () => {
+        state.registry.query = search.value;
+        state.registry.page = 0;
+        // A search should not be silently narrowed by the status filter.
+        if (search.value) {
+          state.registry.status = 'all';
+          const sel = $('#registry-status');
+          if (sel) sel.value = 'all';
+        }
+        renderRegistry();
+      });
+    }
+    const tier = $('#registry-tier');
+    if (tier) {
+      tier.addEventListener('change', () => {
+        state.registry.tier = tier.value;
+        state.registry.page = 0;
+        renderRegistry();
+      });
+    }
+    const status = $('#registry-status');
+    if (status) {
+      status.addEventListener('change', () => {
+        state.registry.status = status.value;
+        state.registry.page = 0;
+        renderRegistry();
+      });
+    }
+    const sort = $('#registry-sort');
+    if (sort) {
+      sort.addEventListener('change', () => {
+        state.registry.sort = sort.value;
+        renderRegistry();
+      });
+    }
+    const prev = $('#registry-prev');
+    if (prev) {
+      prev.addEventListener('click', () => {
+        state.registry.page = Math.max(0, state.registry.page - 1);
+        renderRegistry();
+      });
+    }
+    const next = $('#registry-next');
+    if (next) {
+      next.addEventListener('click', () => {
+        state.registry.page += 1;
+        renderRegistry();
+      });
+    }
+    const exp = $('#registry-export');
+    if (exp) {
+      exp.addEventListener('click', () => {
+        const rows = filteredRows();
+        const head = ['domain', 'entity', 'level', 'state', 'reachable', 'acc', 'sec', 'latency_ms'];
+        const csv = [head.join(',')]
+          .concat(
+            rows.map((x) =>
+              [x.domain, x.entity, x.level, x.state, x.reachable, x.acc_score, x.sec_score, x.latency_ms]
+                .map((v) => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`)
+                .join(',')
+            )
+          )
+          .join('\n');
+        const blob = new Blob([csv], { type: 'text/csv' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'civicweb-registry.csv';
+        a.click();
+      });
+    }
+  }
+
+  /* --------------------------------------------------------------- tabs */
+
+  function activateView(name, focus) {
+    if (VIEWS.indexOf(name) === -1) return;
+    VIEWS.forEach((v) => {
+      const panel = document.getElementById(`view-${v}`);
+      const tab = document.getElementById(`tab-${v}`);
+      const active = v === name;
+      if (panel) panel.hidden = !active;
+      if (tab) {
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+        tab.tabIndex = active ? 0 : -1;
+        if (active && focus) tab.focus();
+      }
+    });
+    if (name === 'world') {
+      renderWorldMap();
+      renderWorldVantages();
+    }
+    if (history.replaceState) history.replaceState(null, '', `#${name}`);
+  }
+
+  function wireTabs() {
+    const tabs = $$('.rail__btn');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => activateView(tab.dataset.view));
+      tab.addEventListener('keydown', (event) => {
+        const i = tabs.indexOf(tab);
+        let next = null;
+        if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next == null) return;
+        event.preventDefault();
+        activateView(tabs[next].dataset.view, true);
+      });
+    });
+    const initial = (location.hash || '').replace('#', '');
+    if (VIEWS.indexOf(initial) !== -1) activateView(initial);
+  }
+
+  /* -------------------------------------------------------------- theme */
+
+  function applyTheme(theme) {
+    state.theme = theme;
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem('civicweb-theme', theme);
+    } catch (e) {}
+    $$('[data-theme-set]').forEach((b) => {
+      b.setAttribute('aria-pressed', b.dataset.themeSet === theme ? 'true' : 'false');
+    });
+  }
+
+  function wireTheme() {
+    let saved = null;
+    try {
+      saved = localStorage.getItem('civicweb-theme');
+    } catch (e) {}
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+    $$('[data-theme-set]').forEach((b) => {
+      b.addEventListener('click', () => applyTheme(b.dataset.themeSet));
+    });
+  }
+
+  /* ---------------------------------------------------------- shortcuts */
+
+  function wireShortcuts() {
+    document.addEventListener('keydown', (event) => {
+      const tag = (event.target.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+      if (event.key === 't') applyTheme(state.theme === 'dark' ? 'light' : 'dark');
+      const n = parseInt(event.key, 10);
+      if (n >= 1 && n <= VIEWS.length) activateView(VIEWS[n - 1]);
+    });
+  }
+
+  /* --------------------------------------------------------------- boot */
 
   function boot() {
     const rows = window.RAW_DATASET;
     if (!Array.isArray(rows) || !rows.length) {
-      document.getElementById('findings').innerHTML =
-        '<li><span class="findings__idx">!</span><div class="findings__body">' +
-        '<h3>Dataset unavailable</h3><p>The census bundle did not load. Open this page from the ' +
-        '<code>dashboard</code> directory so that <code>static/dataset.js</code> resolves.</p></div></li>';
+      const host = $('#findings');
+      if (host) {
+        host.innerHTML =
+          '<li><span class="findings__idx">!</span><div class="findings__body">' +
+          '<h3>Dataset unavailable</h3><p>The bundle did not load. Open this page from the ' +
+          '<code>dashboard</code> directory so that <code>static/dataset.js</code> resolves.</p></div></li>';
+      }
       return;
     }
 
     state.rows = rows;
     state.live = rows.filter((r) => r.reachable);
-    state.stats = computeStats(rows);
+    state.global = window.GLOBAL_DATA || null;
+    state.world = window.WORLD_DATA || null;
 
     renderBinds();
     renderFindings();
-    renderTierMatrix();
-    renderPillars();
-    renderSchema();
-    renderMap();
-    renderStateRank();
-    populateTierFilter();
-    applyLedgerFilters();
-    mountCharts();
+    if (state.global) {
+      renderVantageTable('#overview-vantage', state.global.vantage_comparison);
+      renderSectorTable('#overview-sectors', state.global.sectors);
+      renderCountryRank();
+      renderCharts();
+    }
+    renderCoverageTable();
+    renderSchemaTable();
+    renderWorldMap();
+    renderRegistry();
 
     wireTabs();
     wireTheme();
-    wirePalette();
     wireShortcuts();
-    wireLedger();
-    wireDossier();
+    wireRegistry();
+
+    if (state.world) {
+      const first = (state.world.countries || []).find((c) => c.measured);
+      if (first) selectCountry(first.code);
+    }
 
     document.body.setAttribute('data-ready', 'true');
   }
