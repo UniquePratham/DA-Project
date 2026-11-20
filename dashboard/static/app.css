@@ -2382,3 +2382,40 @@ a:hover {
   color: var(--ink-3);
   font-size: var(--fs-micro);
 }
+
+/* --------------------------------------------------- world map selection */
+
+.world-country {
+  cursor: pointer;
+  transition: opacity 160ms ease, fill 160ms ease;
+}
+
+.world-country:focus-visible {
+  outline: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+}
+
+.world-country.is-dimmed {
+  opacity: 0.18;
+}
+
+.world-country[aria-pressed='true'] {
+  stroke: var(--ink);
+  stroke-width: 1.2;
+}
+
+/* The selection outline is a separate path so it is never clipped by a
+   neighbouring polygon drawn later in document order. */
+.world-selected {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+  pointer-events: none;
+  shape-rendering: geometricPrecision;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world-country { transition: none; }
+}
