@@ -68,14 +68,49 @@ def project(lon: float, lat: float) -> tuple[float, float]:
     return x, y
 
 
+def unwrap_ring(points: list[tuple[float, float]]) -> list[list[tuple[float, float]]]:
+    """Split a ring at the antimeridian so it does not wrap across the map.
+
+    A polygon that crosses 180 degrees (Russia, Fiji, Antarctica) has a jump of
+    roughly 360 degrees between consecutive vertices. Drawn naively, that jump
+    becomes a horizontal band straight across the map.
+
+    The fix is to detect the jump, cut the ring there, and emit each piece as a
+    separate subpath. A piece that ends at the antimeridian is closed along the
+    edge so the fill does not leak.
+    """
+    if len(points) < 3:
+        return [points]
+
+    pieces: list[list[tuple[float, float]]] = []
+    current: list[tuple[float, float]] = [points[0]]
+
+    for prev, cur in zip(points, points[1:]):
+        if abs(cur[0] - prev[0]) > 180.0:
+            # The ring crosses the antimeridian here. Close the current piece at
+            # the edge it reached, then start a new piece at the opposite edge.
+            edge = 180.0 if cur[0] < prev[0] else -180.0
+            current.append((edge, prev[1]))
+            pieces.append(current)
+            current = [(-edge, cur[1]), cur]
+        else:
+            current.append(cur)
+
+    current.append(points[0])
+    pieces.append(current)
+    return [p for p in pieces if len(p) >= 3]
+
+
 def ring_to_path(points: list[tuple[float, float]]) -> str:
+    """Project a ring, splitting it at the antimeridian."""
     if len(points) < 3:
         return ""
     parts = []
-    for i, (lon, lat) in enumerate(points):
-        x, y = project(lon, lat)
-        parts.append(f"{'M' if i == 0 else 'L'}{x:.1f} {y:.1f}")
-    parts.append("Z")
+    for piece in unwrap_ring(points):
+        for i, (lon, lat) in enumerate(piece):
+            x, y = project(lon, lat)
+            parts.append(f"{'M' if i == 0 else 'L'}{x:.1f} {y:.1f}")
+        parts.append("Z")
     return "".join(parts)
 
 
