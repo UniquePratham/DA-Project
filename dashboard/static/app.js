@@ -56,13 +56,21 @@
     set('countries', g ? int(g.countries_measured) : '—');
     set('total', g ? int(g.total_rows) : int(rows.length));
     const totalRows = g ? g.total_rows : rows.length;
-    const reachRows = g ? Math.round((g.overall_reach_pct / 100) * g.total_rows) : live.length;
+    // Count the rows; never derive a count by rounding a percentage.
+    const reachRows = g ? int(g.reachable_rows) : live.length;
     set('reachable', int(reachRows));
     set('reachablePct', g ? `${dec(g.overall_reach_pct)}%` : '—');
     set('unreachable', int(totalRows - reachRows));
     set('acc', dec(mean(live.map((r) => r.acc_score))));
     set('sec', dec(mean(live.map((r) => r.sec_score))));
     set('maturity', dec(mean(live.map((r) => r.maturity_score))));
+
+    const note = $('#world-note');
+    if (note && state.world) {
+      note.textContent =
+        `${int(state.world.total_countries)} countries classified · ` +
+        `${int(g ? g.countries_measured : 0)} measured`;
+    }
   }
 
   function renderFindings() {
@@ -254,9 +262,18 @@
   const STATUS_LABEL = {
     operational: 'Domestic, measured',
     domestic_ready: 'Domestic, ready',
-    nearest_available: 'Nearest probe',
+    nearest_measured: 'Nearest, measured',
+    nearest_available: 'Nearest, ready',
     unmeasurable: 'Unmeasurable',
   };
+
+  const STATUS_ORDER = [
+    'operational',
+    'domestic_ready',
+    'nearest_measured',
+    'nearest_available',
+    'unmeasurable',
+  ];
 
   let worldFilter = 'all';
   let mapWired = false;
@@ -273,6 +290,11 @@
     return w ? (w.countries || []).find((c) => c.code === code) : null;
   }
 
+  function countryName(code) {
+    const c = countryByCode(code);
+    return c ? c.name : code;
+  }
+
   function renderWorldMap() {
     const svg = $('#world-map');
     const map = window.WORLD_MAP;
@@ -282,6 +304,16 @@
     // focus and re-add listeners; instead the paths persist and only their
     // classes change.
     if (!svg.dataset.built) {
+      const markers = (map.markers || [])
+        .map(
+          (m) =>
+            `<circle class="world-marker world-marker--${esc(statusOf(m.code))}" ` +
+            `cx="${m.x}" cy="${m.y}" r="3.4" data-code="${esc(m.code)}" ` +
+            `tabindex="0" role="button" ` +
+            `aria-label="${esc(countryName(m.code))}: ${esc(STATUS_LABEL[statusOf(m.code)] || statusOf(m.code))}"></circle>`
+        )
+        .join('');
+
       svg.innerHTML =
         (map.countries || [])
           .map((c) => {
@@ -293,6 +325,7 @@
             );
           })
           .join('') +
+        markers +
         '<path class="world-selected" d="" aria-hidden="true"></path>';
       svg.dataset.built = '1';
     }
@@ -307,11 +340,11 @@
   function applyFilter() {
     const svg = $('#world-map');
     if (!svg) return;
-    $$('.world-country', svg).forEach((path) => {
-      const status = statusOf(path.dataset.code);
+    $$('.world-country, .world-marker', svg).forEach((el) => {
+      const status = statusOf(el.dataset.code);
       const dim = worldFilter !== 'all' && status !== worldFilter;
-      path.classList.toggle('is-dimmed', dim);
-      path.setAttribute('aria-pressed', path.dataset.code === state.selectedCountry ? 'true' : 'false');
+      el.classList.toggle('is-dimmed', dim);
+      el.setAttribute('aria-pressed', el.dataset.code === state.selectedCountry ? 'true' : 'false');
     });
   }
 
@@ -319,7 +352,7 @@
     const legend = $('#world-legend');
     if (!legend || !state.world) return;
     const counts = state.world.status_counts || {};
-    legend.innerHTML = ['operational', 'domestic_ready', 'nearest_available', 'unmeasurable']
+    legend.innerHTML = STATUS_ORDER
       .map(
         (s) =>
           `<span class="world-legend__item">` +
@@ -335,10 +368,7 @@
     const counts = state.world.status_counts || {};
     const opts = [
       ['all', 'All countries', state.world.total_countries],
-      ['operational', 'Domestic, measured', counts.operational || 0],
-      ['domestic_ready', 'Domestic, ready', counts.domestic_ready || 0],
-      ['nearest_available', 'Nearest probe', counts.nearest_available || 0],
-      ['unmeasurable', 'Unmeasurable', counts.unmeasurable || 0],
+      ...STATUS_ORDER.map((s) => [s, STATUS_LABEL[s], counts[s] || 0]),
     ];
     filters.innerHTML = opts
       .map(
@@ -362,25 +392,27 @@
     if (!svg) return;
     mapWired = true;
 
+    const target = (event) => event.target.closest('.world-country, .world-marker');
+
     // One delegated listener for the life of the page.
     svg.addEventListener('click', (event) => {
-      const path = event.target.closest('.world-country');
-      if (path && path.dataset.code) selectCountry(path.dataset.code);
+      const el = target(event);
+      if (el && el.dataset.code) selectCountry(el.dataset.code);
     });
 
     svg.addEventListener('keydown', (event) => {
-      const path = event.target.closest('.world-country');
-      if (!path || !path.dataset.code) return;
+      const el = target(event);
+      if (!el || !el.dataset.code) return;
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        selectCountry(path.dataset.code);
+        selectCountry(el.dataset.code);
       }
     });
 
     svg.addEventListener('mouseover', (event) => {
-      const path = event.target.closest('.world-country');
-      if (!path) return;
-      const c = countryByCode(path.dataset.code);
+      const el = target(event);
+      if (!el) return;
+      const c = countryByCode(el.dataset.code);
       if (!c) return;
       showTip(
         event,
@@ -389,10 +421,10 @@
       );
     });
     svg.addEventListener('mousemove', (event) => {
-      if (event.target.closest('.world-country')) moveTip(event);
+      if (target(event)) moveTip(event);
     });
     svg.addEventListener('mouseout', (event) => {
-      if (event.target.closest('.world-country')) hideTip();
+      if (target(event)) hideTip();
     });
   }
 
@@ -406,8 +438,8 @@
     if (outline) {
       outline.setAttribute('d', selected ? selected.getAttribute('d') : '');
     }
-    $$('.world-country', svg).forEach((p) => {
-      p.setAttribute('aria-pressed', p.dataset.code === state.selectedCountry ? 'true' : 'false');
+    $$('.world-country, .world-marker', svg).forEach((el) => {
+      el.setAttribute('aria-pressed', el.dataset.code === state.selectedCountry ? 'true' : 'false');
     });
   }
 

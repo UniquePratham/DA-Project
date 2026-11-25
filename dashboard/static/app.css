@@ -2282,6 +2282,7 @@ a:hover {
 
 .world-country--operational { fill: var(--data-5); }
 .world-country--domestic_ready { fill: var(--data-4); }
+.world-country--nearest_measured { fill: var(--data-3); }
 .world-country--nearest_available { fill: var(--data-2); }
 .world-country--unmeasurable { fill: var(--paper-3); }
 .world-country--provisioning { fill: var(--data-3); }
@@ -2326,6 +2327,7 @@ a:hover {
 
 .world-legend__swatch--operational { background: var(--data-5); }
 .world-legend__swatch--domestic_ready { background: var(--data-4); }
+.world-legend__swatch--nearest_measured { background: var(--data-3); }
 .world-legend__swatch--nearest_available { background: var(--data-2); }
 .world-legend__swatch--unmeasurable { background: var(--paper-3); }
 
@@ -2403,6 +2405,37 @@ a:hover {
 .world-country[aria-pressed='true'] {
   stroke: var(--ink);
   stroke-width: 1.2;
+}
+
+/* Countries the 110m topology does not draw (Singapore, Hong Kong, Macau,
+   Bahrain, Mauritius and other small states) get a centroid marker instead of
+   a polygon, so a measured country is never invisible on the map. */
+.world-marker {
+  stroke: var(--paper);
+  stroke-width: 0.8;
+  cursor: pointer;
+  transition: opacity 160ms ease, r 160ms ease;
+}
+
+.world-marker--operational { fill: var(--data-5); }
+.world-marker--domestic_ready { fill: var(--data-4); }
+.world-marker--nearest_measured { fill: var(--data-3); }
+.world-marker--nearest_available { fill: var(--data-2); }
+.world-marker--unmeasurable { fill: var(--paper-3); }
+
+.world-marker:hover { r: 5; stroke: var(--ink); }
+
+.world-marker:focus-visible {
+  outline: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+}
+
+.world-marker.is-dimmed { opacity: 0.18; }
+
+.world-marker[aria-pressed='true'] {
+  stroke: var(--ink);
+  stroke-width: 1.6;
 }
 
 /* The selection outline is a separate path so it is never clipped by a

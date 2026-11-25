@@ -1,8 +1,8 @@
-"""Build the dashboard dataset bundle from the global measurements.
+"""Build the dashboard dataset bundle from the canonical measurements.
 
-The registry was still loading the India-only census (14,489 rows). The site now
-measures 81 countries, so the bundle must come from
-``data/real/global_measurements.csv``, which carries the probe provenance.
+Reads ``data/real/global_measurements_canonical.csv`` — one row per host, latest
+measurement wins, no content score on a body too small to audit — and emits the
+per-domain bundle the dashboard renders.
 
 Output: ``dashboard/static/dataset.js`` and ``dataset.json``.
 """
@@ -14,21 +14,15 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(REPO))
+sys.path.insert(0, str(REPO / "scripts"))
 
-import pandas as pd
+import pandas as pd  # noqa: E402
 
-CSV = REPO / "data" / "real" / "global_measurements.csv"
+from global_dataset import GLOBAL_CSV as CSV  # noqa: E402
+from global_dataset import country_name, read_global  # noqa: E402
+
 OUT_JS = REPO / "dashboard" / "static" / "dataset.js"
 OUT_JSON = REPO / "dashboard" / "static" / "dataset.json"
-
-COUNTRY_NAMES = {
-    "IN": "India", "US": "United States", "GB": "United Kingdom", "CA": "Canada",
-    "AU": "Australia", "DE": "Germany", "FR": "France", "JP": "Japan",
-    "BR": "Brazil", "ZA": "South Africa", "SG": "Singapore", "NL": "Netherlands",
-    "ES": "Spain", "IT": "Italy", "SE": "Sweden", "PL": "Poland",
-    "KR": "South Korea", "MX": "Mexico", "CL": "Chile", "IL": "Israel",
-}
 
 
 def main() -> int:
@@ -36,7 +30,7 @@ def main() -> int:
         print(f"missing {CSV}", file=sys.stderr)
         return 1
 
-    df = pd.read_csv(CSV)
+    df = read_global(CSV)
     print(f"source rows: {len(df)}")
 
     records = []
@@ -47,7 +41,7 @@ def main() -> int:
                 "domain": r["domain_name"],
                 "entity": r["domain_name"],
                 "level": "public_sector",
-                "state": COUNTRY_NAMES.get(code, code),
+                "state": country_name(code),
                 "country": code,
                 "district": "N/A",
                 "final_url": r.get("final_url") if pd.notna(r.get("final_url")) else "",

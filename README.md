@@ -1,13 +1,19 @@
 # CivicWeb Observatory
-### Agentic, Longitudinal Observatory of India's Government Web Infrastructure
+### A Cross-Country Measurement of Public-Sector Web Infrastructure
 
 [![License](https://img.shields.io/badge/License-CC--BY--4.0-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Architecture](https://img.shields.io/badge/Architecture-Hybrid%20Agentic%20%2B%20Deterministic-green.svg)](#system-architecture)
-[![Target Platform](https://img.shields.io/badge/Target-DataHub%20KGP-orange.svg)](#datahub-kgp-dataset-release)
+[![Architecture](https://img.shields.io/badge/Architecture-Hybrid%20Agentic%20%2B%20Deterministic-green.svg)](#3-system-architecture)
+[![Target Platform](https://img.shields.io/badge/Target-DataHub%20KGP-orange.svg)](#9-datahub-kgp-dataset-release)
 [![Live Observatory](https://img.shields.io/badge/Live%20Observatory-uniquepratham.github.io-1f6feb.svg)](https://uniquepratham.github.io/)
 
-**CivicWeb Observatory** is a large-scale, longitudinal, evidence-first observatory and dataset platform characterizing the publicly observable digital infrastructure of Indian government websites across **Central Ministries**, **36 States/UTs**, and **785+ District Administrations**.
+**CivicWeb Observatory** measures the publicly observable web infrastructure of
+governments across **82 countries**: **2,011 domains**, each carrying the vantage
+point that produced it. A cloud provider operates in only 20 countries, so a
+domestic probe is impossible in most of the world. Rather than exclude those
+countries or pretend a foreign probe is domestic, every row records
+`domestic_probe` — true only when the probe's region country equals the target
+country.
 
 **Live observatory:** <https://uniquepratham.github.io/>
 
@@ -15,60 +21,71 @@
 
 ## Install the dataset
 
-The census ships as a pip-installable package, so a reader can query it without cloning the repo:
+The measurement table ships as a pip-installable package, so a reader can query
+it without cloning the repo:
 
 ```bash
 pip install civicweb-observatory
 ```
 
 ```python
-import civicweb_observatory as bga
+import civicweb_observatory as cwo
 
-df = bga.load()                  # 14,489 domains, 20 typed columns
-live = bga.load(reachable=True)  # 7,542 that answered in-country
+df = cwo.load()                    # 2,011 measured domains, 26 typed columns
+live = cwo.load(reachable=True)    # the 573 that answered
 
-bga.tier_summary()               # Table I of the paper
-bga.architecture_summary()       # Table II of the paper
-bga.state_ranking()              # 36 States and UTs, ranked
+cwo.country_summary()              # one row per country
+cwo.sector_summary()               # one row per sector
+cwo.vantage_comparison()           # domestic vs nearest
+cwo.architecture_summary()         # per-platform comparison
 ```
 
 A CLI ships with it:
 
 ```bash
 civicweb info
-civicweb tiers
+civicweb countries --top 10
+civicweb sectors
+civicweb vantage
 civicweb arch
-civicweb states --top 10
-civicweb query --tier district --state Kerala --min-maturity 85
-civicweb export --format csv --out census.csv --reachable-only
+civicweb query --country NL --min-maturity 80
+civicweb export --format csv --out measurements.csv --reachable-only
 ```
 
-The package lives at [`packages/civicweb-observatory/`](packages/civicweb-observatory) and bundles the Parquet release in a 465 KB wheel. Its 14 tests assert the published figures, so a loader regression fails loudly rather than silently changing a paper table.
+The package lives at [`packages/civicweb-observatory/`](packages/civicweb-observatory)
+and bundles the Parquet release. Its 18 tests assert the published figures, so a
+loader regression fails loudly rather than silently changing a paper table.
 
 ---
 
 ## 1. Core Research Question
 
-> **What is the measurable state of India's public-facing government web infrastructure, how does it differ across governance levels, states, departments, and website architectures, and how does it evolve over time?**
+> **What is the measurable state of public-sector web infrastructure across
+> countries, how does it differ by sector and platform, and how much of a
+> measured difference is the portal rather than the path to it?**
+
+The second half of that question is the contribution. A study that measures only
+from inside a country, or only from outside, cannot separate the two.
 
 ---
 
-## 2. The 10 Measurement Dimensions
+## 2. The Measurement Dimensions
 
-Rather than treating digital accessibility in isolation, CivicWeb Observatory captures 10 multi-dimensional measurement families with complete cryptographic SHA-256 raw evidence provenance:
+Rather than treating digital accessibility in isolation, CivicWeb Observatory
+captures five pillars across twelve variables, with SHA-256 provenance on every
+raw response:
 
-| # | Dimension | Deterministic Measurement Signals |
-|---|---|---|
-| **1** | **Digital Accessibility** | Automated WCAG violations (axe-core), critical/serious/moderate/minor breakdown, missing alt text, ARIA attributes, color contrast, and form labels. |
-| **2** | **Web Performance** | Core Web Vitals (LCP, CLS, FCP, TTFB, TBT), Speed Index, total page weight, JS/CSS/image transfer byte breakdowns. |
-| **3** | **Mobile Readiness** | Viewport configuration, mobile layout responsiveness, horizontal overflow detection, touch-target observations. |
-| **4** | **Reliability** | HTTP status codes, response latency, TLS certificate validity, certificate expiry countdown, redirect hop chains. |
-| **5** | **Language & Multilingual** | Primary language, Indian scheduled languages script detection (Hindi, Bengali, Tamil, Telugu, Kannada, etc.), language selector widgets. |
-| **6** | **Web Structure** | Total DOM node count, maximum DOM depth, internal/external link ratios, PDF circular counts, form counts, table layouts. |
-| **7** | **Security & Hygiene** | Publicly observable HTTP headers (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, HTTPS enforcement). |
-| **8** | **Entity Classification** | Grounded classification across governance levels (Central, State, District, Local Body, Statutory Agency). |
-| **9** | **Architecture Profiling** | Framework and CMS marker detection (Angular SPA, React SPA, Next.js, WordPress, Drupal, Legacy Dynamic). |
-| **10**| **Longitudinal Tracking** | Temporal change detection across daily availability, weekly structural shifts, and monthly full multi-page audits. |
+| # | Pillar | Deterministic measurement signals | Tool |
+|---|---|---|---|
+| **1** | **Accessibility** | axe-core violation count and severity-weighted index, missing alt text, ARIA attributes, colour contrast, form labels | axe-core 4.x |
+| **2** | **Performance** | Time to first byte, estimated Largest Contentful Paint, document size | `time.perf_counter` |
+| **3** | **Security** | HTTPS enforcement, real TLS handshake (issuer, protocol, cipher, days to expiry), OWASP header score (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy) | `ssl`, response headers |
+| **4** | **Inclusion** | Non-English `html[lang]`, `hreflang` alternates, non-Latin script detection, responsive viewport, 375 px render without horizontal overflow | DOM inspection, headless Chromium |
+| **5** | **Architecture** | CMS and framework fingerprints, citizen-service affordances (search input, grievance link) | body and header markers |
+
+Every row also carries its **provenance**: `probe_country`, `probe_region`,
+`probe_region_country`, `domestic_probe`, `measured_at`, `job_id`, and the
+SHA-256 of the response body.
 
 ---
 
@@ -77,28 +94,30 @@ Rather than treating digital accessibility in isolation, CivicWeb Observatory ca
 CivicWeb Observatory uses a **5-layer hybrid architecture** that strictly separates adaptive AI reasoning from deterministic network measurements:
 
 ```
-                  Government Domain Registry (10,000+ Domains)
+                  Government Domain Registry (93,365 domains, 93 countries)
                                        │
                                        ▼
                        Discovery & Verification Engine
+              (Certificate Transparency, agency directories,
+                    ministry indexes, sector-targeted CT)
                                        │
                                        ▼
                  ┌───────────────────────────────────────────┐
                  │          Safety Governor (Hard Wall)      │
                  │  - Concurrency = 1/domain                 │
                  │  - Rate Limit <= 1 req/sec/domain         │
-                 │  - robots.txt compliance                  │
+                 │  - RFC 9309 robots.txt compliance         │
                  │  - Prohibited: Form submissions, Auth, Pay│
                  └─────────────────────┬─────────────────────┘
                                        │
                                        ▼
-                      Agent Controller (Local Qwen3 4B)
-                    Adaptive Profiling & Page Selection
+                      Vantage Selector (haversine)
+              domestic region if one exists, else nearest
                                        │
                 ┌──────────────────────┴──────────────────────┐
                 ▼                                             ▼
         Deterministic Auditors                       Headless Browser Pool
-   (axe-core, Lighthouse, TLS)                     (Playwright Chromium)
+   (axe-core, TLS, OWASP headers)                  (Playwright Chromium, 375px)
                 │                                             │
                 └──────────────────────┬──────────────────────┘
                                        │
@@ -117,12 +136,16 @@ CivicWeb Observatory uses a **5-layer hybrid architecture** that strictly separa
 
 ---
 
-## 4. Hardware Optimization (Vultr 24 vCPU / 96 GB RAM)
+## 4. Hardware
 
-The platform is designed to run self-hosted on a dedicated Linux instance (e.g. Vultr `vc2-24c-96gb`):
-- **CPU Workers**: 16 parallel domain workers.
-- **Memory Allocation**: PostgreSQL 16 (8 GB shared buffers, 128 MB work mem), Redis 7 (4 GB LRU cache), MinIO S3 object store, and Ollama local AI container (16 GB allocation for `qwen3:4b`/`qwen3:8b`).
-- **Storage**: 1600 GB NVMe for raw HTML, WebP screenshots, and versioned Parquet releases.
+The measurement worker runs on a single small instance. A `vc2-1c-1gb` at
+$0.007/hour is enough for Chromium plus the auditors, and the whole 82-country
+run cost under a dollar because each probe is destroyed after it uploads its
+results.
+
+- **Workers**: 4–6 parallel domain workers per probe, one request per second per host.
+- **Storage**: results are uploaded and SHA-256 verified, then the instance is destroyed.
+- **No database, no object store, no local model.** The worker writes a CSV.
 
 ---
 
@@ -130,81 +153,66 @@ The platform is designed to run self-hosted on a dedicated Linux instance (e.g. 
 
 ### Prerequisites
 - Python 3.10+
-- Docker & Docker Compose (optional for local mock testing)
+- Playwright Chromium (for the accessibility and mobile measurements)
 
 ### Installation
 ```bash
-# 1. Clone repository
-git clone <REPO_URL> civicweb-observatory
+git clone https://github.com/UniquePratham/DA-Project civicweb-observatory
 cd civicweb-observatory
 
-# 2. Install dependencies
 pip install -r requirements.txt
 playwright install chromium
-
-# 3. Initialize environment and directory trees
-cp .env.example .env
-python -c "from configs.settings import settings; settings.ensure_dirs()"
 ```
 
-### Running Test Suite
+### Running the test suite
 ```bash
-# Run all 28 automated tests
-pytest tests/ -v
+# 86 repo tests plus 18 package tests
+pytest tests/ -q
+PYTHONPATH=packages/civicweb-observatory/src pytest packages/civicweb-observatory/tests -q
+```
+
+### Rebuilding the artefacts
+```bash
+python scripts/build_global_data.py      # dashboard/static/global.js
+python scripts/build_world_coverage.py   # dashboard/static/world.js
+python scripts/build_world_map.py        # dashboard/static/world_map.js
+python scripts/build_dashboard_dataset.py
+python scripts/build_package_data.py     # bundled Parquet
+python scripts/build_deck.py             # deck HTML + PDF
+python scripts/render_paper.py           # paper HTML + PDF
+```
+
+### Verifying the figures
+```bash
+python scripts/verify_paper_figures.py   # every number quoted in the paper
 ```
 
 ---
 
-## 6. Running Pipelines
+## 7. Deployment
 
-### A. Run 10-Site Heterogeneous Pilot
-```bash
-# Dry-run with built-in fixtures
-python scripts/run_pilot.py --dry-run
-
-# Live network collection
-python scripts/run_pilot.py
-```
-
-### B. Run Master Discovery & Observatory Pipeline
-```bash
-# Inspect first 15 government domains and export DataHub release
-python scripts/run_pipeline.py --limit 15 --version 0.1.0
-
-# Live full run
-python scripts/run_pipeline.py --live --limit 100 --version 0.1.0
-```
-
----
-
-## 7. Production Deployment (Vultr VM)
+The observatory is a static site. It is published to GitHub Pages by
+`.github/workflows/pages.yml` on every push to `main`:
 
 ```bash
-# 1. SSH into the server
-ssh root@<YOUR_VM_IP>
-
-# 2. Clone and enter directory
-git clone <REPO_URL> /opt/civicweb-observatory
-cd /opt/civicweb-observatory
-
-# 3. Initialize all infrastructure & pull local AI model
-chmod +x scripts/init_infra.sh
-./scripts/init_infra.sh
-
-# 4. Start production Docker stack
-docker compose up -d
-
-# 5. Execute production collection batch
-python scripts/run_pipeline.py --live --limit 1000 --version 1.0.0
+git push origin main
+# .github/workflows/pages.yml builds and publishes dashboard/
 ```
+
+Live at <https://uniquepratham.github.io/>.
+
+The dashboard reads its data from JS globals (`window.RAW_DATASET`,
+`window.GLOBAL_DATA`, `window.WORLD_DATA`, `window.WORLD_MAP`) rather than
+`fetch()`, so it also works when opened directly as a `file:///` URL with no
+server and no CORS problem.
 
 ---
 
 ## 8. Ephemeral Infrastructure and Global Expansion
 
-The India census is complete. The next phase measures other countries from
-inside those countries, using the same tools and timeouts so the comparison is
-like for like.
+The registry covers 93 countries. Measurement runs from the best vantage
+available for each, using the same tools and timeouts so the comparison is like
+for like.
 
 ### 8.1 Ephemeral compute, persistent data
 
@@ -257,11 +265,15 @@ These are not conventions; they are structural.
 
 ### 8.3 Country coverage
 
-A country is marked **operational** only when a cloud region physically inside
-it exists. Where none exists, the country is **planned** (on the roadmap) or
-**unsupported**. A nearby region is recorded for operational convenience but is
-always labelled with the country it actually sits in, so a foreign probe can
-never be presented as a domestic one.
+Every country is classified by the vantage that can measure it:
+
+- **domestic** — a cloud region physically inside the country exists. Supports a
+  citizen's-eye claim.
+- **nearest** — no domestic region, but a region close enough that the
+  measurement is meaningful. Supports a foreign-client claim, and is the only
+  honest way to cover these countries with one provider.
+- **unmeasurable** — the nearest region is more than 6,000 km away, so a latency
+  figure would describe the path rather than the portal.
 
 Coverage is derived from the live Vultr catalogue, not from a hand-written list:
 
@@ -270,11 +282,10 @@ export VULTR_API_KEY=...          # never commit this
 python scripts/fetch_vultr_catalog.py
 python scripts/build_world_coverage.py
 python scripts/build_world_map.py
-python scripts/build_future_data.py
 ```
 
-Current state: **249 countries** classified, **20** with a domestic region,
-**40** planned, **189** unsupported.
+Current state: **249 countries** classified — **19** domestic, **180** nearest,
+**50** unmeasurable. Of the 180 nearest, **64** were measured in this release.
 
 ### 8.4 Cost
 
@@ -284,17 +295,18 @@ equals the hourly rate. The cheapest plan that can run headless Chromium
 bandwidth overage and backups are modelled separately in `cost.py` because
 destroying an instance does not make every associated charge disappear.
 
-### 8.5 The Future dashboard view
+### 8.5 The World view
 
-`dashboard/index.html` gains a sixth view, **Future — Global Observatory**,
-with five sections: what changes and what does not, a world map of probe
-availability, the eight research dimensions, live infrastructure counters with
-the real instance catalogue, and the research roadmap.
+The World tab is the primary geographic view: a 249-country map coloured by
+vantage class, a country dossier, and a full country ranking. India is one row
+in that ranking rather than the subject of the page.
 
-Every value is either measured or explicitly labelled planned. The
-infrastructure counters read zero because nothing has been provisioned, not
-because the panel is a mock-up.
-
+The map is built once and wired once. Re-rendering on every filter click would
+destroy focus and accumulate listeners. The selection outline is a separate
+`<path>` drawn last, so it is never clipped by a neighbouring polygon. Every
+country is keyboard accessible. Countries the 110m topology does not draw
+(Singapore, Hong Kong, Macau, Bahrain, Mauritius and 27 other small states) get a
+centroid marker, so a measured country is never invisible.
 
 ### 8.6 Region selection
 
@@ -361,11 +373,11 @@ foreign instance is never touched.
 
 `scripts/run_remote_measurement.py` closes the last gap: it provisions an
 instance, injects a throwaway SSH keypair through cloud-init, uploads the same
-`crawl_real.py` used for the India census, runs a real batch, pulls the results
-back, and verifies the SHA-256 before destroying the instance.
+`crawl_real.py` the global run uses, runs a real batch, pulls the results back,
+and verifies the SHA-256 before destroying the instance.
 
-A real run on 2026-11-18, measuring three Indian government domains from a
-Bangalore probe:
+A real run on 2026-11-18, measuring three government domains from a Bangalore
+probe:
 
 | Step | Result |
 | :--- | :--- |
@@ -392,8 +404,8 @@ their response bodies, so the evidence is reproducible.
 
 The keypair is generated per run and exists only in memory, so a leaked
 instance cannot be reached after the job ends. The worker is byte-identical to
-the India one, which is what makes a measurement on an ephemeral probe
-comparable to one on the permanent node.
+the one the global run uses, which is what makes a measurement on an ephemeral
+probe comparable to one on the permanent node.
 
 
 ### 8.10 Cross-country measurements
@@ -406,7 +418,9 @@ Every row records `probe_country`, `probe_region`, `probe_region_country` and
 `domestic_probe`. A row is only marked domestic when the probe's region country
 equals the target country, so the claim can be checked rather than trusted.
 
-**18 countries measured, 72 domains, all from domestic probes, $0.126 total.**
+**The first domestic batch: 18 countries, 72 domains, $0.126 total.** These are
+the pilot figures from that run; the released dataset has since grown to 2,011
+domains across 82 countries.
 
 | Country | Probe | Reachable | Accessibility | Security | Median TTFB |
 | :--- | :--- | ---: | ---: | ---: | ---: |
@@ -434,8 +448,8 @@ Two countries were skipped rather than faked: **Italy** had no plan meeting the
 recorded as skipped, not as zeros.
 
 The sample is four domains per country by design. This is a cross-country
-comparability check, not a census; the India census in the other views remains
-the large sample.
+comparability check, not a census. The released dataset is the larger sample:
+2,011 domains, 82 countries, 573 reachable.
 
 
 ### 8.11 Crawler politeness
@@ -469,31 +483,34 @@ Sector is inferred from the hostname and, where a ministry index supplied it,
 from the link text. It is reliable for dedicated domains (`health.`, `court.`,
 `police.`) and puts general portals in `general`.
 
-Measured breakdown across **1,492 domains**:
+Measured breakdown across **2,011 domains**:
 
 | Sector | Domains | Reachable | Accessibility | Security |
 | :--- | ---: | ---: | ---: | ---: |
-| general | 958 | 31.6% | 87.6 | 49.0 |
-| education | 343 | 32.9% | 86.1 | 28.8 |
-| judiciary | 53 | 47.2% | 80.9 | 32.6 |
-| health | 51 | 19.6% | 90.8 | 56.5 |
-| transport | 34 | 26.5% | 91.6 | 47.8 |
-| finance | 23 | 13.0% | 90.7 | 61.7 |
-| social | 10 | 20.0% | 90.6 | 12.5 |
-| police | 11 | 0.0% | not measured | not measured |
-| agriculture | 5 | 0.0% | not measured | not measured |
-| defence | 3 | 0.0% | not measured | not measured |
+| general | 1,354 | 29.0% | 86.4 | 44.9 |
+| education | 420 | 30.7% | 85.2 | **26.6** |
+| judiciary | 62 | 38.7% | 81.8 | 34.6 |
+| health | 62 | 19.4% | 88.1 | 50.4 |
+| transport | 41 | 22.0% | not reported | not reported |
+| finance | 29 | 10.3% | not reported | not reported |
+| police | 16 | 6.2% | not reported | not reported |
+| social | 11 | 18.2% | not reported | not reported |
+| agriculture | 9 | 0.0% | not measured | not measured |
+| defence | 6 | 0.0% | not measured | not measured |
 | environment | 1 | 0.0% | not measured | not measured |
+
+A sector mean is reported only when at least ten of its domains answered.
+Below that the mean is one or two portals wearing a sector label, which is not a
+sector finding. Those rows show "not reported" rather than a number.
 
 Three findings:
 
-1. **Health scores highest on accessibility (90.8) and second on security
-   (56.5)**, contrary to the assumption that health portals lag.
-2. **Education scores worst on security (28.8)** across 343 domains, the
+1. **Health scores highest on both pillars** at 88.1 accessibility and 50.4
+   security, the only sector above the population mean on both.
+2. **Education scores worst on security (26.6)** across 420 domains, the
    largest single-sector deficit in the study.
-3. **Finance has the lowest reachability (13.0%)** but the highest security
-   (61.7) among sectors with data. Tax and treasury portals are heavily
-   protected, which is why they are hard to reach and well hardened.
+3. **The judiciary is weakest on accessibility (81.8)** and second-weakest on
+   security (34.6). Courts are the one sector near the bottom of both at once.
 
 A sector with no reachable domains shows "not measured" rather than a zero, so
 an empty sample cannot be mistaken for a bad score.
@@ -583,7 +600,11 @@ Every release generated by `services/analytics/exporter.py` produces:
 CivicWeb Observatory adheres to strict responsible crawling standards:
 - $\le 1.0\text{ req/sec}$ per domain with exponential backoff on 429/5xx status codes.
 - Concurrency strictly locked to 1 per domain.
-- `robots.txt` exclusion honored across all domains.
+- `robots.txt` exclusion honored across all domains, using an RFC 9309 parser
+  (Python's `urllib.robotparser` does not implement `*` wildcards or `$` anchors).
+- A robots-disallowed URL is recorded as `robots_disallowed` and a bot-filter
+  refusal as `blocked_by_waf`, both distinct from a failure. In this release,
+  76 domains were robots-disallowed and 46 were WAF-blocked.
 - **Zero intrusive actions**: Prohibits form submissions, account registrations, OTP generation, payment gateways, and authentication bypass.
 
 ---
@@ -594,10 +615,10 @@ Distributed under the **Creative Commons Attribution 4.0 International (CC-BY-4.
 
 ```bibtex
 @misc{civicweb_observatory_2026,
-  title={CivicWeb Observatory: Agentic, Longitudinal Observatory of India's Government Web Infrastructure},
-  author={CivicWeb Observatory Research Team},
+  title={CivicWeb Observatory: A Cross-Country Measurement of Public-Sector Web Infrastructure},
+  author={Agarwal, Pratham and Bairagi, Amit Kumar and Yaduraj, Vishwajeet Nand},
   year={2026},
-  howpublished={\url{https://datahub.kgp/civicweb-observatory}},
-  note={DataHub KGP Research Dataset}
+  howpublished={\url{https://uniquepratham.github.io/}},
+  note={Department of Computer Science and Engineering, IIT Kharagpur. Data Analytics.}
 }
 ```

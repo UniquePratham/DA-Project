@@ -19,10 +19,10 @@ OUT = Path("resources/screenshots")
 
 VIEWS = [
     ("overview", "01-overview"),
-    ("atlas", "02-atlas"),
-    ("ledger", "03-ledger"),
+    ("world", "02-world"),
+    ("registry", "03-registry"),
     ("standard", "04-standard"),
-    ("method", "05-method"),
+    ("developers", "05-developers"),
 ]
 
 

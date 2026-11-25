@@ -38,18 +38,32 @@ def build() -> dict:
     selector = VantageSelector(regions)
 
     measured: set[str] = set()
+    stats: dict[str, dict] = {}
     csv = REPO / "data" / "real" / "global_measurements.csv"
     if csv.exists():
-        import pandas as pd
+        from global_dataset import read_global, reachable
 
-        df = pd.read_csv(csv, usecols=["probe_country"])
+        df = read_global(csv)
         measured = set(df["probe_country"].dropna().unique())
+        for code, group in df.groupby("probe_country"):
+            up = reachable(group)
+            stats[code] = {
+                "domains": int(len(group)),
+                "reachable": int(len(up)),
+                "domestic": bool(group["domestic_probe"].fillna(False).astype(bool).any()),
+                "maturity": (
+                    round(float(up["observatory_maturity_score"].mean()), 1)
+                    if len(up)
+                    else None
+                ),
+            }
 
     countries = []
     for c in pycountry.countries:
         code = c.alpha_2
         v = selector.select(code)
         d = v.as_dict()
+        s = stats.get(code)
 
         if v.vantage_class is VantageClass.DOMESTIC:
             status = "operational" if code in measured else "domestic_ready"
@@ -59,11 +73,14 @@ def build() -> dict:
                 else f"Domestic region in {v.region.city}; not yet measured."
             )
         elif v.vantage_class is VantageClass.NEAREST:
-            status = "nearest_available"
+            status = "nearest_measured" if code in measured else "nearest_available"
             note = (
-                f"No domestic region. Nearest probe is {v.region.city}, "
-                f"{v.region.country}, {d['distance_km']} km away. Measures a "
+                f"No domestic region. Measured from {v.region.city}, "
+                f"{v.region.country}, {d['distance_km']} km away. Describes a "
                 "foreign client's view, not a citizen's."
+                if code in measured
+                else f"No domestic region. Nearest probe would be {v.region.city}, "
+                f"{v.region.country}, {d['distance_km']} km away. Not yet measured."
             )
         else:
             status = "unmeasurable"
@@ -81,6 +98,9 @@ def build() -> dict:
                 "distance_km": d["distance_km"],
                 "can_claim_domestic": d["can_claim_domestic"],
                 "measured": code in measured,
+                "domains": s["domains"] if s else 0,
+                "reachable": s["reachable"] if s else 0,
+                "maturity": s["maturity"] if s else None,
                 "note": note,
             }
         )

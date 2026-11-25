@@ -1,11 +1,12 @@
 """Command-line interface for the CivicWeb Observatory dataset.
 
     civicweb info
-    civicweb tiers
+    civicweb countries --top 10
+    civicweb sectors
+    civicweb vantage
     civicweb arch
-    civicweb states --top 10
-    civicweb export --format csv --out census.csv
-    civicweb query --tier district --state Kerala --min-maturity 85
+    civicweb export --format csv --out measurements.csv
+    civicweb query --country NL --min-maturity 80
 """
 
 from __future__ import annotations
@@ -18,10 +19,11 @@ import pandas as pd
 from . import (
     __version__,
     architecture_summary,
+    country_summary,
     describe_release,
     load,
-    state_ranking,
-    tier_summary,
+    sector_summary,
+    vantage_comparison,
 )
 
 
@@ -29,7 +31,7 @@ def _print_table(df: pd.DataFrame) -> None:
     with pd.option_context(
         "display.max_columns", None,
         "display.width", 200,
-        "display.max_rows", 200,
+        "display.max_rows", 300,
     ):
         print(df.to_string())
 
@@ -47,18 +49,23 @@ def cmd_info(_: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_tiers(_: argparse.Namespace) -> int:
-    _print_table(tier_summary())
+def cmd_countries(args: argparse.Namespace) -> int:
+    _print_table(country_summary().head(args.top))
+    return 0
+
+
+def cmd_sectors(_: argparse.Namespace) -> int:
+    _print_table(sector_summary())
+    return 0
+
+
+def cmd_vantage(_: argparse.Namespace) -> int:
+    _print_table(vantage_comparison())
     return 0
 
 
 def cmd_arch(_: argparse.Namespace) -> int:
     _print_table(architecture_summary())
-    return 0
-
-
-def cmd_states(args: argparse.Namespace) -> int:
-    _print_table(state_ranking(top=args.top))
     return 0
 
 
@@ -82,8 +89,8 @@ def cmd_export(args: argparse.Namespace) -> int:
 def cmd_query(args: argparse.Namespace) -> int:
     df = load(
         reachable=True if args.reachable_only else None,
-        tiers=[args.tier] if args.tier else None,
-        states=[args.state] if args.state else None,
+        countries=[args.country] if args.country else None,
+        domestic_only=args.domestic_only,
     )
 
     if args.min_maturity is not None:
@@ -91,17 +98,12 @@ def cmd_query(args: argparse.Namespace) -> int:
 
     if args.search:
         needle = args.search.lower()
-        mask = (
-            df["domain_name"].str.lower().str.contains(needle, na=False)
-            | df["entity_name"].str.lower().str.contains(needle, na=False)
-            | df["district"].str.lower().str.contains(needle, na=False)
-        )
-        df = df[mask]
+        df = df[df["domain_name"].str.lower().str.contains(needle, na=False)]
 
     columns = [
         "domain_name",
-        "government_level",
-        "state_or_ut",
+        "probe_country",
+        "domestic_probe",
         "sub_accessibility_score",
         "sub_security_headers_score",
         "sub_response_latency_ms",
@@ -117,36 +119,41 @@ def cmd_query(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="civicweb",
-        description="Query the CivicWeb Observatory census of 12,092 Indian government domains.",
+        description=(
+            "Query the CivicWeb Observatory measurement of 2,143 government "
+            "domains across 82 countries."
+        ),
     )
     parser.add_argument("--version", action="version", version=f"civicweb-observatory {__version__}")
 
     sub = parser.add_subparsers(dest="command", required=True)
 
     sub.add_parser("info", help="release summary").set_defaults(func=cmd_info)
-    sub.add_parser("tiers", help="per-tier census table").set_defaults(func=cmd_tiers)
+    sub.add_parser("sectors", help="per-sector table").set_defaults(func=cmd_sectors)
+    sub.add_parser("vantage", help="domestic vs nearest comparison").set_defaults(func=cmd_vantage)
     sub.add_parser("arch", help="per-platform comparison").set_defaults(func=cmd_arch)
 
-    states = sub.add_parser("states", help="state and UT ranking")
-    states.add_argument("--top", type=int, default=None, help="show only the first N")
-    states.set_defaults(func=cmd_states)
+    countries = sub.add_parser("countries", help="country ranking")
+    countries.add_argument("--top", type=int, default=20, help="show only the first N")
+    countries.set_defaults(func=cmd_countries)
 
-    export = sub.add_parser("export", help="write the census to a file")
+    export = sub.add_parser("export", help="write the dataset to a file")
     export.add_argument("--format", choices=["csv", "json", "parquet"], default="csv")
     export.add_argument("--out", required=True)
     export.add_argument("--reachable-only", action="store_true")
     export.set_defaults(func=cmd_export)
 
     query = sub.add_parser("query", help="filter domains")
-    query.add_argument("--tier", choices=[
-        "central", "state_ut", "district", "academic_research",
-        "judiciary", "public_sector", "urban_local_body",
-    ])
-    query.add_argument("--state")
-    query.add_argument("--search")
+    query.add_argument("--country", help="ISO-3166 alpha-2, e.g. NL")
+    query.add_argument("--search", help="substring of the hostname")
     query.add_argument("--min-maturity", type=float)
     query.add_argument("--limit", type=int, default=25)
     query.add_argument("--reachable-only", action="store_true")
+    query.add_argument(
+        "--domestic-only",
+        action="store_true",
+        help="keep only rows measured from inside the target country",
+    )
     query.set_defaults(func=cmd_query)
 
     return parser

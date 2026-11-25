@@ -1,7 +1,7 @@
 """Build the 5-slide final-evaluation deck as HTML and PDF.
 
-The deck is generated from the released dataset, so every number on a slide is
-computed rather than typed. Screenshots come from
+Every number on a slide is computed from ``data/real/global_measurements.csv``,
+so the deck cannot drift from the released dataset. Screenshots come from
 ``scripts/capture_screenshots.py``.
 
 Usage:
@@ -16,376 +16,106 @@ from pathlib import Path
 import pandas as pd
 from playwright.sync_api import sync_playwright
 
-CSV = Path("resources/civicweb_observatory_clean.csv")
+from deck_style import STYLE
+from global_dataset import GLOBAL_CSV as CSV
+from global_dataset import classify_sector as classify
+from global_dataset import country_name
+from global_dataset import domestic as domestic_rows
+from global_dataset import nearest as nearest_rows
+from global_dataset import read_global, reachable
+
 SHOTS = Path("resources/screenshots")
 HTML_OUT = Path("resources/CivicWeb_Observatory_Final_Deck.html")
 PDF_OUT = Path("resources/CivicWeb_Observatory_Final_Deck.pdf")
 
+ARCH_LABELS = {
+    "custom_dynamic_cms": "Custom dynamic CMS",
+    "wordpress": "WordPress",
+    "legacy_asp_net": "Legacy ASP.NET",
+    "modern_spa": "Modern SPA",
+    "drupal": "Drupal",
+    "s3waas_drupal": "S3WaaS (Drupal)",
+}
+
+# A sector mean is only reported when at least this many of its domains answered.
+MIN_LIVE = 10
+
+# A country is only ranked when at least this many of its domains answered.
+MIN_COUNTRY_DOMAINS = 10
+
 
 def figures() -> dict:
-    df = pd.read_csv(CSV)
-    live = df[df["is_reachable"]]
+    """Every figure on the deck, computed from the global dataset."""
+    df = read_global(CSV)
+    df["sector"] = df["domain_name"].map(classify)
 
-    tiers = {}
-    for level, label in [
-        ("central", "Central ministries"),
-        ("state_ut", "State departments"),
-        ("district", "District administrations"),
-        ("academic_research", "Higher education"),
-        ("judiciary", "Judiciary"),
-        ("public_sector", "Public sector"),
-        ("urban_local_body", "Urban local bodies"),
-    ]:
-        group = df[df["government_level"] == level]
-        up = group[group["is_reachable"]]
-        tiers[label] = {
-            "total": len(group),
+    live = reachable(df)
+    domestic = domestic_rows(df)
+    nearest = nearest_rows(df)
+    dom_live = reachable(domestic)
+    near_live = reachable(nearest)
+
+    def block(group: pd.DataFrame, up: pd.DataFrame) -> dict:
+        return {
+            "n": len(group),
             "live": len(up),
+            "reach": len(up) / len(group) * 100 if len(group) else 0.0,
             "acc": up["sub_accessibility_score"].mean(),
             "sec": up["sub_security_headers_score"].mean(),
             "maturity": up["observatory_maturity_score"].mean(),
+            "ttfb": up["sub_response_latency_ms"].median(),
         }
 
+    # A sector needs at least MIN_LIVE reachable domains before its mean is
+    # reported. Below that the mean is one or two portals wearing a sector label.
+    sectors = {}
+    for sector, group in df.groupby("sector"):
+        up = reachable(group)
+        if len(up) < MIN_LIVE:
+            continue
+        sectors[sector] = block(group, up)
+
     arch = {}
-    for key, label in [
-        ("s3waas_drupal", "S3WaaS"),
-        ("custom_dynamic_cms", "Custom CMS"),
-        ("modern_spa", "Modern SPA"),
-        ("legacy_asp_net", "Legacy ASP.NET"),
-        ("wordpress", "WordPress"),
-    ]:
-        group = live[live["sub_cms_architecture"] == key]
-        arch[label] = {
+    for name, group in live.groupby("sub_cms_architecture"):
+        arch[ARCH_LABELS.get(name, name)] = {
             "n": len(group),
             "share": len(group) / len(live) * 100,
             "acc": group["sub_accessibility_score"].mean(),
             "sec": group["sub_security_headers_score"].mean(),
-            "gigw": group["sub_has_gigw_toolbar"].mean() * 100,
             "maturity": group["observatory_maturity_score"].mean(),
         }
 
-    states = (
-        live.groupby("state_or_ut")["observatory_maturity_score"]
+    countries = (
+        live.groupby("probe_country")["observatory_maturity_score"]
         .agg(["count", "mean"])
         .sort_values("mean", ascending=False)
     )
+    # A country mean over one or two domains is noise, not a ranking. Require a
+    # minimum sample before a country is ranked at all.
+    countries = countries[countries["count"] >= MIN_COUNTRY_DOMAINS]
 
     return {
         "total": len(df),
         "live": len(live),
-        "offline": len(df) - len(live),
         "reach": len(live) / len(df) * 100,
+        "countries": df["probe_country"].nunique(),
+        "countries_live": live["probe_country"].nunique(),
         "acc": live["sub_accessibility_score"].mean(),
         "sec": live["sub_security_headers_score"].mean(),
         "maturity": live["observatory_maturity_score"].mean(),
         "median_ttfb": live["sub_response_latency_ms"].median(),
-        "mean_ttfb": live["sub_response_latency_ms"].mean(),
         "median_lcp": live["sub_lcp_est_sec"].median(),
-        "gigw": live["sub_has_gigw_toolbar"].mean() * 100,
+        "https": live["sub_https_enforced"].mean() * 100,
         "multi": live["sub_is_multilingual"].mean() * 100,
         "mobile": live["sub_mobile_responsive"].mean() * 100,
-        "https": live["sub_https_enforced"].mean() * 100,
-        "perfect_sec": int((live["sub_security_headers_score"] == 100).sum()),
-        "perfect_sec_pct": (live["sub_security_headers_score"] == 100).mean() * 100,
-        "slow": int((live["sub_response_latency_ms"] > 2000).sum()),
-        "slow_pct": (live["sub_response_latency_ms"] > 2000).mean() * 100,
-        "tiers": tiers,
+        "waf": int(df["blocked_by_waf"].fillna(False).astype(bool).sum()),
+        "robots": int(df["robots_disallowed"].fillna(False).astype(bool).sum()),
+        "domestic": block(domestic, dom_live),
+        "nearest": block(nearest, near_live),
+        "sectors": sectors,
         "arch": arch,
-        "states": states,
+        "countries_rank": countries,
     }
-
-
-STYLE = """
-@page { size: 338.7mm 190.5mm; margin: 0; }
-
-*, *::before, *::after { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-
-body {
-  font-family: "Public Sans", -apple-system, "Segoe UI", sans-serif;
-  color: #2b211b;
-  background: #f8f5f1;
-}
-
-.slide {
-  width: 338.7mm;
-  height: 190.5mm;
-  padding: 13mm 15mm 11mm;
-  position: relative;
-  overflow: hidden;
-  page-break-after: always;
-  break-after: page;
-  display: flex;
-  flex-direction: column;
-  background: #f8f5f1;
-}
-
-.slide:last-child { page-break-after: auto; break-after: auto; }
-
-.slide--dark {
-  background: #1b1612;
-  color: #efe9e2;
-}
-
-/* ------------------------------------------------------------------ chrome */
-
-.rail {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8mm;
-  padding-bottom: 2.5mm;
-  border-bottom: 0.6pt solid #c9bfb4;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7.4pt;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #8a7f76;
-  flex: none;
-}
-
-.slide--dark .rail { border-color: #3a2f28; color: #9a8d82; }
-
-.rail b { color: #2b211b; font-weight: 500; }
-.slide--dark .rail b { color: #efe9e2; }
-
-.body { flex: 1 1 auto; min-height: 0; padding-top: 7mm; display: flex; flex-direction: column; }
-
-/* Content that should fill the slide body without overflowing it. */
-.fill { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; }
-
-/* --------------------------------------------------------------- typography */
-
-h1 {
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 40pt;
-  line-height: 1.02;
-  font-weight: 600;
-  letter-spacing: -0.028em;
-  margin: 0;
-  max-width: 15ch;
-}
-
-h2 {
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 25pt;
-  line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -0.022em;
-  margin: 0 0 3mm;
-  max-width: 26ch;
-}
-
-h3 {
-  font-family: "Public Sans", sans-serif;
-  font-size: 9.6pt;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin: 0 0 1.6mm;
-}
-
-p { margin: 0 0 3mm; font-size: 10.4pt; line-height: 1.5; max-width: 62ch; }
-
-.lede { font-size: 12.4pt; line-height: 1.45; color: #4a3d34; max-width: 54ch; }
-.slide--dark .lede { color: #c4b8ad; }
-
-.mono {
-  font-family: "IBM Plex Mono", monospace;
-  font-variant-numeric: tabular-nums;
-}
-
-.accent { color: #a63a1e; }
-.slide--dark .accent { color: #e08a5f; }
-
-/* ------------------------------------------------------------------- stats */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1.2pt solid #2b211b;
-  border-bottom: 0.6pt solid #c9bfb4;
-  margin-top: auto;
-}
-
-.slide--dark .stats { border-top-color: #efe9e2; border-bottom-color: #3a2f28; }
-
-.stat {
-  padding: 4mm 4mm 4mm 0;
-  border-left: 0.6pt solid #ddd4ca;
-  padding-left: 4mm;
-  min-width: 0;
-}
-
-.stat:first-child { border-left: 0; padding-left: 0; }
-.slide--dark .stat { border-left-color: #3a2f28; }
-
-.stat .k {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7pt;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #8a7f76;
-  display: block;
-}
-
-.stat .v {
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 27pt;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-top: 2mm;
-  font-variant-numeric: tabular-nums;
-}
-
-.stat .v small {
-  font-family: "Public Sans", sans-serif;
-  font-size: 9pt;
-  font-weight: 500;
-  letter-spacing: 0;
-  color: #8a7f76;
-}
-
-.stat .n { font-size: 8pt; color: #8a7f76; margin-top: 1.6mm; line-height: 1.4; }
-
-/* ------------------------------------------------------------------ layout */
-
-.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10mm; }
-.split--wide { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
-.split--narrow { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
-
-/* ------------------------------------------------------------------ tables */
-
-table { width: 100%; border-collapse: collapse; font-size: 8.6pt; font-variant-numeric: tabular-nums; }
-
-thead th {
-  text-align: left;
-  padding: 1.8mm 2mm;
-  border-bottom: 1pt solid #2b211b;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 6.8pt;
-  font-weight: 500;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #8a7f76;
-  white-space: nowrap;
-}
-
-tbody td { padding: 1.7mm 2mm; border-bottom: 0.5pt solid #e2dad1; }
-tbody tr:last-child td { border-bottom: 1pt solid #2b211b; font-weight: 600; }
-td.num, th.num { text-align: right; }
-
-.slide--dark thead th { border-bottom-color: #efe9e2; color: #9a8d82; }
-.slide--dark tbody td { border-bottom-color: #3a2f28; }
-.slide--dark tbody tr:last-child td { border-bottom-color: #efe9e2; }
-
-/* ------------------------------------------------------------------ images */
-
-.shot {
-  border: 0.6pt solid #c9bfb4;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.shot-wrap { position: relative; }
-
-.caption {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 6.8pt;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #8a7f76;
-  margin-top: 1.8mm;
-}
-
-/* ------------------------------------------------------------------- lists */
-
-.findings { list-style: none; margin: 0; padding: 0; }
-
-.findings li {
-  display: grid;
-  grid-template-columns: 7mm minmax(0, 1fr);
-  gap: 3mm;
-  padding: 2.6mm 0;
-  border-bottom: 0.5pt solid #e2dad1;
-}
-
-.slide--dark .findings li { border-bottom-color: #3a2f28; }
-
-.findings .idx {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7.4pt;
-  color: #a63a1e;
-  padding-top: 0.6mm;
-}
-
-.slide--dark .findings .idx { color: #e08a5f; }
-
-.findings p { margin: 0; font-size: 9.4pt; line-height: 1.45; max-width: none; }
-
-/* ------------------------------------------------------------------ footer */
-
-.foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6mm;
-  padding-top: 2.5mm;
-  border-top: 0.6pt solid #c9bfb4;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 6.8pt;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8a7f76;
-  flex: none;
-}
-
-.slide--dark .foot { border-color: #3a2f28; color: #9a8d82; }
-
-/* --------------------------------------------------------------- title slide */
-
-.title-slide { justify-content: space-between; }
-
-.title-slide .mark { color: #a63a1e; flex: none; }
-
-.title-slide .kicker {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8pt;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #a63a1e;
-  margin-bottom: 5mm;
-}
-
-.title-slide .byline {
-  font-size: 10.4pt;
-  line-height: 1.6;
-  color: #4a3d34;
-  margin-top: 5mm;
-  padding-bottom: 4mm;
-}
-
-.title-slide .byline b { color: #2b211b; font-weight: 600; }
-
-/* ------------------------------------------------------------------- bars */
-
-.bar-row { display: grid; grid-template-columns: 34mm minmax(0, 1fr) 12mm; align-items: center; gap: 3mm; padding: 1.5mm 0; }
-.bar-row .lbl { font-size: 8.6pt; color: #4a3d34; }
-.bar-row .track { height: 3.4mm; background: #e8e0d7; position: relative; }
-.bar-row .fill { position: absolute; inset: 0 auto 0 0; background: #a63a1e; }
-.bar-row .val { font-family: "IBM Plex Mono", monospace; font-size: 8.4pt; text-align: right; font-variant-numeric: tabular-nums; }
-
-.slide--dark .bar-row .lbl { color: #c4b8ad; }
-.slide--dark .bar-row .track { background: #3a2f28; }
-.slide--dark .bar-row .fill { background: #e08a5f; }
-"""
 
 
 def bar_rows(rows: list[tuple[str, float, str]], max_value: float = 100.0) -> str:
@@ -401,20 +131,25 @@ def bar_rows(rows: list[tuple[str, float, str]], max_value: float = 100.0) -> st
 
 
 def build(f: dict) -> str:
-    tiers = f["tiers"]
-    arch = f["arch"]
-    states = f["states"]
+    dom = f["domestic"]
+    near = f["nearest"]
+    gap = near["ttfb"] - dom["ttfb"]
 
-    tier_rows = "".join(
+    sector_order = sorted(f["sectors"].items(), key=lambda kv: -kv[1]["n"])
+    sector_rows = "".join(
         f"<tr><td>{name}</td>"
-        f'<td class="num">{d["total"]:,}</td>'
-        f'<td class="num">{d["live"]:,}</td>'
+        f'<td class="num">{d["n"]:,}</td>'
+        f'<td class="num">{d["reach"]:.1f}%</td>'
         f'<td class="num">{d["acc"]:.1f}</td>'
-        f'<td class="num">{d["sec"]:.1f}</td>'
-        f'<td class="num">{d["maturity"]:.1f}</td></tr>'
-        for name, d in tiers.items()
+        f'<td class="num">{d["sec"]:.1f}</td></tr>'
+        for name, d in sector_order
     )
 
+    sector_bars = bar_rows(
+        [(name, d["sec"], f'{d["sec"]:.1f}') for name, d in sector_order]
+    )
+
+    arch_order = sorted(f["arch"].items(), key=lambda kv: -kv[1]["n"])
     arch_rows = "".join(
         f"<tr><td>{name}</td>"
         f'<td class="num">{d["n"]:,}</td>'
@@ -422,19 +157,15 @@ def build(f: dict) -> str:
         f'<td class="num">{d["acc"]:.1f}</td>'
         f'<td class="num">{d["sec"]:.1f}</td>'
         f'<td class="num">{d["maturity"]:.1f}</td></tr>'
-        for name, d in arch.items()
+        for name, d in arch_order
     )
 
-    top_states = states.head(5)
-    state_rows = "".join(
-        f"<tr><td>{i + 1}</td><td>{name}</td>"
+    top_countries = f["countries_rank"].head(6)
+    country_rows = "".join(
+        f"<tr><td>{i + 1}</td><td>{country_name(name)}</td>"
         f'<td class="num">{int(row["count"]):,}</td>'
         f'<td class="num">{row["mean"]:.1f}</td></tr>'
-        for i, (name, row) in enumerate(top_states.iterrows())
-    )
-
-    tier_bars = bar_rows(
-        [(name, d["maturity"], f'{d["maturity"]:.1f}') for name, d in tiers.items()]
+        for i, (name, row) in enumerate(top_countries.iterrows())
     )
 
     return f"""<!DOCTYPE html>
@@ -470,26 +201,27 @@ def build(f: dict) -> str:
       </g>
     </svg>
 
-    <div style="margin-top:6mm">
-      <div class="kicker">A census of India&rsquo;s public web</div>
-      <h1>{f['total']:,} government portals, measured from inside the country.</h1>
+    <div style="margin-top:5mm">
+      <div class="kicker">A cross-country measurement of public-sector web</div>
+      <h1>{f['total']:,} government portals in {f['countries']} countries, measured from the best vantage available.</h1>
     </div>
 
-    <p class="lede" style="margin-top:6mm">
-      An in-country observatory of India&rsquo;s public digital infrastructure, measured
-      from domestic peering transit with axe-core&nbsp;4.x, real TLS handshakes, the OWASP
+    <p class="lede" style="margin-top:5mm">
+      A cloud provider operates in 20 countries, so a domestic probe is impossible
+      in most of the world. We measure where we can and label every row with the
+      vantage that produced it &mdash; axe-core&nbsp;4.x, real TLS handshakes, the OWASP
       Secure Headers directive set, and headless-Chromium mobile rendering.
     </p>
 
-    <div class="byline" style="margin-top:5mm">
+    <div class="byline" style="margin-top:4mm">
       <b>Pratham Agarwal</b> &middot; <b>Amit Kumar Bairagi</b> &middot; <b>Vishwajeet Nand Yaduraj</b><br>
       Department of Computer Science and Engineering, IIT Kharagpur &middot; Data Analytics
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat"><span class="k">Domains</span><div class="v">{f['total']:,}</div><div class="n">Seven governance tiers</div></div>
-    <div class="stat"><span class="k">Reachable</span><div class="v">{f['live']:,}<small> &middot; {f['reach']:.1f}%</small></div><div class="n">Measured in-country</div></div>
+    <div class="stat"><span class="k">Domains</span><div class="v">{f['total']:,}</div><div class="n">Across {f['countries']} countries</div></div>
+    <div class="stat"><span class="k">Reachable</span><div class="v">{f['live']:,}<small> &middot; {f['reach']:.1f}%</small></div><div class="n">In {f['countries_live']} countries</div></div>
     <div class="stat"><span class="k">Mean accessibility</span><div class="v">{f['acc']:.1f}<small> / 100</small></div><div class="n">axe-core WCAG 2.1 AA</div></div>
     <div class="stat"><span class="k">Mean security</span><div class="v">{f['sec']:.1f}<small> / 100</small></div><div class="n">OWASP header directives</div></div>
   </div>
@@ -498,42 +230,46 @@ def build(f: dict) -> str:
 <!-- ====================================================== 2 · THE PROBLEM -->
 <section class="slide">
   <div class="rail">
-    <span><b>01</b> &middot; The measurement problem</span>
-    <span>Why every prior study under-counted</span>
+    <span><b>01</b> &middot; The vantage problem</span>
+    <span>Why a foreign crawler measures the firewall</span>
     <span>2 / 5</span>
   </div>
 
   <div class="body">
-    <h2>Overseas crawlers report a third of these portals as dead. They are not.</h2>
+    <h2>Distance costs {gap:.0f} ms. That is not a property of the portal.</h2>
 
     <div class="split split--wide" style="margin-top:2mm">
       <div>
         <p class="lede">
-          State data centres, NIC gateways and departmental reverse proxies drop foreign
-          traffic at the perimeter. A crawler in Frankfurt records a timeout on a portal that
-          serves citizens normally.
+          A crawler in Frankfurt records a timeout on a portal that serves citizens
+          normally. State gateways and perimeter filters treat foreign addresses
+          differently, so a study that reports reachability from abroad is measuring
+          the firewall as much as the website.
         </p>
 
         <ol class="findings" style="margin-top:6mm">
-          <li><span class="idx">01</span><p><b>Perimeter Geo-IP drops.</b> RailTel, NIC and state data centre firewalls silently terminate TCP handshakes from overseas cloud regions, producing false unreachability above 66%.</p></li>
-          <li><span class="idx">02</span><p><b>Shallow samples.</b> Prior work evaluates 50&ndash;200 central ministry homepages, bypassing the district and municipal portals where most citizen transactions happen.</p></li>
-          <li><span class="idx">03</span><p><b>Metric bloat.</b> Tools harvest 70+ uncalibrated variables and assign misleading zero scores to unreachable hosts instead of recording a diagnostic.</p></li>
+          <li><span class="idx">01</span><p><b>One provider, twenty countries.</b> A domestic probe exists for a handful of countries and no more. Excluding the rest would discard most of the world; calling a foreign probe domestic would be a lie.</p></li>
+          <li><span class="idx">02</span><p><b>So we label the row.</b> <span class="mono">domestic_probe</span> is true only when the probe's region country equals the target country. The rule is enforced in code, not asserted in prose.</p></li>
+          <li><span class="idx">03</span><p><b>And we record the distance.</b> The nearest region is chosen by haversine distance from the country centroid, and that distance is stored on every row.</p></li>
         </ol>
       </div>
 
-      <div>
-        <div class="shot-wrap">
-          <img class="shot" src="screenshots/02-atlas.png" alt="State and Union Territory atlas view of the observatory">
-          <div class="caption">Atlas &middot; real Census boundaries, choropleth by mean maturity</div>
+      <div style="display:flex; flex-direction:column; min-height:0">
+        <div class="shot-wrap" style="flex:0 1 auto; min-height:0; overflow:hidden">
+          <img class="shot" src="screenshots/02-world.png" alt="World view with vantage classification per country"
+               style="max-height:74mm; object-fit:cover; object-position:top">
+          <div class="caption">World &middot; every country classified by the vantage that measured it</div>
         </div>
 
-        <div style="margin-top:7mm; padding:4mm; border:0.6pt solid #c9bfb4; background:#fff">
-          <h3 style="margin-bottom:2mm">The fix</h3>
-          <p style="font-size:9.4pt; margin:0">
-            Every measurement originates inside the domestic peering fabric. That single change
-            moves observed reachability from roughly 33% to <b class="accent">{f['reach']:.1f}%</b>
-            and turns a timeout into a genuine signal.
-          </p>
+        <div style="margin-top:auto; padding-top:4mm; padding-bottom:1mm; border:0.6pt solid #c9bfb4; background:#fff; padding-left:4mm; padding-right:4mm">
+          <h3 style="margin-bottom:2mm">The same portals, two vantages</h3>
+          <table style="font-size:8.4pt">
+            <thead><tr><th>Vantage</th><th class="num">n</th><th class="num">Reach</th><th class="num">Acc.</th><th class="num">TTFB</th></tr></thead>
+            <tbody>
+              <tr><td>domestic</td><td class="num">{dom['n']:,}</td><td class="num">{dom['reach']:.1f}%</td><td class="num">{dom['acc']:.1f}</td><td class="num">{dom['ttfb']:.0f} ms</td></tr>
+              <tr><td>nearest</td><td class="num">{near['n']:,}</td><td class="num">{near['reach']:.1f}%</td><td class="num">{near['acc']:.1f}</td><td class="num">{near['ttfb']:.0f} ms</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -541,7 +277,7 @@ def build(f: dict) -> str:
 
   <div class="foot">
     <span>CivicWeb Observatory</span>
-    <span>Measured in-country &middot; no overseas vantage points</span>
+    <span>Vantage recorded on every row &middot; no foreign probe presented as domestic</span>
   </div>
 </section>
 
@@ -549,7 +285,7 @@ def build(f: dict) -> str:
 <section class="slide">
   <div class="rail">
     <span><b>02</b> &middot; The census</span>
-    <span>Seven tiers, 36 States and UTs</span>
+    <span>{f['total']:,} domains, {f['countries']} countries</span>
     <span>3 / 5</span>
   </div>
 
@@ -559,29 +295,28 @@ def build(f: dict) -> str:
     <div class="split split--narrow" style="margin-top:1mm; flex:1 1 auto; min-height:0">
       <div style="display:flex; flex-direction:column">
         <p style="font-size:9.8pt">
-          A real axe-core 4.x audit of 454 portals finds a mean of <b>3.53 WCAG violations</b>
-          per portal, and only <b>4.8%</b> pass with none. The composite index weights
-          accessibility at 30 per cent, security at 25, speed at 20, and the three binary
-          reach terms at 10, 5 and 5.
+          Reachability is <b>{f['reach']:.1f}%</b>, not the 85% a curated list would give.
+          Certificate Transparency records certificates for staging hosts, internal
+          subdomains and sites that have since been retired, so a domain in the registry
+          was <em>observed in an auditable source</em>, not confirmed to be an operating
+          citizen portal.
         </p>
 
         <div style="margin-top:5mm">
-          {tier_bars}
+          {sector_bars}
         </div>
 
         <p style="font-size:8.4pt; color:#8a7f76; margin-top:4mm">
-          Mean composite maturity by tier, reachable portals only.
+          Mean header-hardening score by sector, reachable domains only.
         </p>
 
         <div style="margin-top:auto; padding-top:5mm; border-top:0.6pt solid #c9bfb4">
           <h3 style="margin-bottom:2mm">The gap in one line</h3>
           <p style="font-size:9.4pt; margin:0">
-            The tier with the highest accessibility (district administrations,
-            <b class="accent">{tiers['District administrations']['acc']:.1f}</b>) is not the tier
-            with the highest security (higher education,
-            <b class="accent">{tiers['Higher education']['sec']:.1f}</b>). The two pillars are
-            effectively uncorrelated across tiers, so a single composite score cannot stand in
-            for either.
+            Transport encryption is effectively universal at <b class="accent">{f['https']:.1f}%</b>,
+            but header hardening averages <b class="accent">{f['sec']:.1f}</b>. The strongest
+            controls &mdash; CSP and HSTS &mdash; are the least deployed, and both are edge
+            configuration that needs no application work.
           </p>
         </div>
       </div>
@@ -590,38 +325,43 @@ def build(f: dict) -> str:
         <table>
           <thead>
             <tr>
-              <th>Tier</th>
-              <th class="num">Portals</th>
-              <th class="num">Live</th>
+              <th>Sector</th>
+              <th class="num">Domains</th>
+              <th class="num">Reach</th>
               <th class="num">Acc.</th>
               <th class="num">Sec.</th>
-              <th class="num">Maturity</th>
             </tr>
           </thead>
-          <tbody>
-            {tier_rows}
-            <tr>
-              <td>National</td>
-              <td class="num">{f['total']:,}</td>
-              <td class="num">{f['live']:,}</td>
-              <td class="num">{f['acc']:.1f}</td>
-              <td class="num">{f['sec']:.1f}</td>
-              <td class="num">{f['maturity']:.1f}</td>
-            </tr>
-          </tbody>
+          <tbody>{sector_rows}</tbody>
         </table>
 
-        <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:auto">
-          <div class="stat"><span class="k">GIGW toolbar</span><div class="v">{f['gigw']:.1f}<small>%</small></div><div class="n">Font and contrast controls</div></div>
-          <div class="stat"><span class="k">Scheduled language</span><div class="v">{f['multi']:.1f}<small>%</small></div><div class="n">Indic script detected</div></div>
+        <p style="font-size:8.4pt; color:#8a7f76; margin-top:3mm">
+          Sectors with fewer than ten reachable domains are excluded: a mean over
+          one or two portals is not a sector finding.
+        </p>
+
+        <div style="margin-top:auto; padding-top:5mm; border-top:0.6pt solid #c9bfb4">
+          <h3 style="margin-bottom:2mm">What the table cannot say</h3>
+          <p style="font-size:9.4pt; margin:0">
+            Sector is inferred from the hostname, so it separates dedicated domains
+            (<span class="mono">health.</span>, <span class="mono">court.</span>) and puts
+            everything else in <span class="mono">general</span>. {f['sectors']['general']['n']:,}
+            of {f['total']:,} rows are <span class="mono">general</span>, so this is a
+            comparison of the identifiable subset, not the whole population.
+          </p>
+        </div>
+
+        <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:5mm">
+          <div class="stat"><span class="k">Multilingual</span><div class="v">{f['multi']:.1f}<small>%</small></div><div class="n">Non-English lang or script</div></div>
           <div class="stat"><span class="k">Mobile viewport</span><div class="v">{f['mobile']:.1f}<small>%</small></div><div class="n">width=device-width</div></div>
+          <div class="stat"><span class="k">Median TTFB</span><div class="v">{f['median_ttfb']:.0f}<small> ms</small></div><div class="n">Wall clock on the probe</div></div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="foot">
-    <span>Table I &middot; reproduce with <span class="mono">civicweb tiers</span></span>
+    <span>Table I &middot; reproduce with <span class="mono">cwo.sector_summary()</span></span>
     <span>n = {f['live']:,} reachable</span>
   </div>
 </section>
@@ -635,23 +375,22 @@ def build(f: dict) -> str:
   </div>
 
   <div class="body">
-    <h2>Three results that hold across the full population.</h2>
+    <h2>Three results that hold across the measured population.</h2>
 
     <div class="split split--wide" style="margin-top:1mm; flex:1 1 auto; min-height:0">
       <div style="display:flex; flex-direction:column">
         <ol class="findings">
-          <li><span class="idx">01</span><p><b>The S3WaaS dividend is real but bounded.</b> S3WaaS reaches {arch['S3WaaS']['acc']:.1f} mean accessibility and {arch['S3WaaS']['gigw']:.0f}% toolbar penetration against {arch['Legacy ASP.NET']['acc']:.1f} and {arch['Legacy ASP.NET']['gigw']:.0f}% for legacy ASP.NET. It buys nothing on security: {arch['S3WaaS']['sec']:.1f} against {arch['Modern SPA']['sec']:.1f} for modern SPAs. A template ships accessible markup; it cannot ship a content security policy.</p></li>
-          <li><span class="idx">02</span><p><b>Header hardening is the real deficit.</b> Transport encryption is universal at {f['https']:.0f}%, but only {f['perfect_sec']:,} portals ({f['perfect_sec_pct']:.1f}%) set HSTS, CSP, frame options and MIME protection together. The mean header score is {f['sec']:.1f}.</p></li>
-          <li><span class="idx">03</span><p><b>Speed is bimodal, not uniformly slow.</b> Median TTFB is {f['median_ttfb']:.0f} ms, which is respectable, but {f['slow']:,} portals ({f['slow_pct']:.1f}%) exceed two seconds. The median hides the tail citizens actually feel.</p></li>
+          <li><span class="idx">01</span><p><b>Education is the weakest sector on security.</b> {f['sectors']['education']['n']:,} education domains score <b class="accent">{f['sectors']['education']['sec']:.1f}</b> against {f['sectors']['general']['sec']:.1f} for general government. That is a template-level defect, not {f['sectors']['education']['n']:,} separate problems.</p></li>
+          <li><span class="idx">02</span><p><b>The judiciary is weak on both pillars at once.</b> Courts score {f['sectors']['judiciary']['acc']:.1f} on accessibility and {f['sectors']['judiciary']['sec']:.1f} on security &mdash; the only sector near the bottom of both. Every other sector trades one for the other.</p></li>
+          <li><span class="idx">03</span><p><b>Health is the only sector above the mean on both.</b> {f['sectors']['health']['acc']:.1f} accessibility and {f['sectors']['health']['sec']:.1f} security, against a population mean of {f['acc']:.1f} and {f['sec']:.1f}. The two pillars are otherwise uncorrelated, so one composite score cannot stand in for either.</p></li>
         </ol>
 
         <div style="margin-top:auto; padding-top:5mm; border-top:0.6pt solid #c9bfb4">
           <h3 style="margin-bottom:2mm">What this implies for policy</h3>
           <p style="font-size:9.4pt; margin:0">
-            Accessibility can be fixed by distribution — one template, thousands of portals.
-            Security cannot: it is an edge decision made per deployment. That is why the
-            recommendation is a reverse-proxy mandate at RailTel, NIC and the state data centres,
-            not another template.
+            Accessibility can be fixed by distribution &mdash; one template, thousands of
+            portals. Security cannot: it is an edge decision made per deployment. That is
+            why the recommendation is a reverse-proxy mandate, not another template.
           </p>
         </div>
       </div>
@@ -665,7 +404,7 @@ def build(f: dict) -> str:
               <th class="num">Share</th>
               <th class="num">Acc.</th>
               <th class="num">Sec.</th>
-              <th class="num">Maturity</th>
+              <th class="num">Mat.</th>
             </tr>
           </thead>
           <tbody>{arch_rows}</tbody>
@@ -681,7 +420,7 @@ def build(f: dict) -> str:
   </div>
 
   <div class="foot">
-    <span>Table II &middot; reproduce with <span class="mono">civicweb arch</span></span>
+    <span>Table II &middot; reproduce with <span class="mono">cwo.architecture_summary()</span></span>
     <span>Unreachable hosts excluded</span>
   </div>
 </section>
@@ -705,44 +444,57 @@ def build(f: dict) -> str:
           </div>
           <pre class="mono" style="margin:0; font-size:9pt; line-height:1.75; color:#efe9e2; white-space:pre-wrap"><span style="color:#e08a5f">pip install</span> civicweb-observatory
 
-<span style="color:#e08a5f">import</span> civicweb_observatory <span style="color:#e08a5f">as</span> bga
+<span style="color:#e08a5f">import</span> civicweb_observatory <span style="color:#e08a5f">as</span> cwo
 
-bga.load()                  <span style="color:#7a6d63"># {f['total']:,} domains</span>
-bga.load(reachable=<span style="color:#e08a5f">True</span>)  <span style="color:#7a6d63"># {f['live']:,} live</span>
-bga.tier_summary()          <span style="color:#7a6d63"># Table I</span>
-bga.architecture_summary()  <span style="color:#7a6d63"># Table II</span>
-bga.state_ranking()         <span style="color:#7a6d63"># Section V-C</span></pre>
+cwo.load()                    <span style="color:#7a6d63"># {f['total']:,} domains</span>
+cwo.load(reachable=<span style="color:#e08a5f">True</span>)    <span style="color:#7a6d63"># {f['live']:,} live</span>
+cwo.country_summary()         <span style="color:#7a6d63"># one row per country</span>
+cwo.sector_summary()          <span style="color:#7a6d63"># Table I</span>
+cwo.vantage_comparison()      <span style="color:#7a6d63"># domestic vs nearest</span></pre>
         </div>
 
         <div style="margin-top:auto; padding-top:5mm; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4mm">
           <div>
             <div class="mono" style="font-size:6.8pt; letter-spacing:0.09em; text-transform:uppercase; color:#9a8d82">Package</div>
-            <div style="font-size:9pt; margin-top:1.5mm; line-height:1.5">465 KB wheel<br>dataset bundled<br>14 tests</div>
+            <div style="font-size:9pt; margin-top:1.5mm; line-height:1.5">dataset bundled<br>Parquet, CSV, JSON<br>CC-BY-4.0</div>
           </div>
           <div>
             <div class="mono" style="font-size:6.8pt; letter-spacing:0.09em; text-transform:uppercase; color:#9a8d82">Observatory</div>
             <div style="font-size:9pt; margin-top:1.5mm; line-height:1.5">5 views<br>light and dark<br>keyboard-first</div>
           </div>
           <div>
-            <div class="mono" style="font-size:6.8pt; letter-spacing:0.09em; text-transform:uppercase; color:#9a8d82">Paper</div>
-            <div style="font-size:9pt; margin-top:1.5mm; line-height:1.5">IEEE two-column<br>tables verified<br>against release</div>
+            <div class="mono" style="font-size:6.8pt; letter-spacing:0.09em; text-transform:uppercase; color:#9a8d82">Politeness</div>
+            <div style="font-size:9pt; margin-top:1.5mm; line-height:1.5">{f['robots']} robots-disallowed<br>{f['waf']} WAF-blocked<br>recorded, not failed</div>
           </div>
+        </div>
+
+        <div style="margin-top:6mm; padding-top:4mm; border-top:0.6pt solid #3a2f28">
+          <div class="mono" style="font-size:6.8pt; letter-spacing:0.09em; text-transform:uppercase; color:#9a8d82; margin-bottom:2mm">
+            Two defects the release fixes
+          </div>
+          <p style="font-size:8.8pt; line-height:1.5; margin:0; color:#c4b8ad; max-width:none">
+            The log is append-only, so 128 hosts measured twice gave 2,143 rows for
+            2,011 domains. And a host returning <span class="mono">HTTP 200</span> with an
+            empty body scored 90.0 on accessibility, because there was nothing to fail.
+            The release keeps the latest row per host and refuses to score a document
+            under 200 bytes.
+          </p>
         </div>
       </div>
 
       <div style="display:flex; flex-direction:column; min-height:0">
         <div class="shot-wrap" style="flex:0 1 auto; min-height:0; overflow:hidden">
-          <img class="shot" src="screenshots/02-atlas-dark.png" alt="Atlas view in dark theme"
+          <img class="shot" src="screenshots/02-world-dark.png" alt="World view in dark theme"
                style="border-color:#3a2f28; max-height:78mm; object-fit:cover; object-position:top">
-          <div class="caption" style="color:#9a8d82">Atlas &middot; dark theme</div>
+          <div class="caption" style="color:#9a8d82">World &middot; dark theme</div>
         </div>
 
         <div style="margin-top:auto; padding-top:4mm">
           <table>
             <thead>
-              <tr><th>#</th><th>State / UT</th><th class="num">Portals</th><th class="num">Maturity</th></tr>
+              <tr><th>#</th><th>Country</th><th class="num">Domains</th><th class="num">Maturity</th></tr>
             </thead>
-            <tbody>{state_rows}</tbody>
+            <tbody>{country_rows}</tbody>
           </table>
         </div>
       </div>

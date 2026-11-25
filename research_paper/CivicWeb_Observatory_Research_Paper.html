@@ -236,67 +236,47 @@ a { color: #111; text-decoration: none; }
 </style>
 </head>
 <body>
-<header class="masthead"><div class="venue">Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; 2026</div><h1>CivicWeb Observatory: An In-Country Measurement Study of India's Public Web Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Subject: Data Analytics<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
+<header class="masthead"><div class="venue">Department of Computer Science and Engineering &middot; IIT Kharagpur &middot; 2026</div><h1>CivicWeb Observatory: A Cross-Country Measurement of Public-Sector Web Infrastructure</h1><div class="authors">Pratham Agarwal, Amit Kumar Bairagi, Vishwajeet Nand Yaduraj</div><div class="affiliation">Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, West Bengal 721302, India<br>Subject: Data Analytics<br>Correspondence: `{pratham.agarwal, amit.bairagi, vishwajeet.yaduraj}@iitkgp.ac.in`</div></header>
 <div class="body-columns">
 <section class="abstract"><h2>Abstract</h2>
-<p>Most Indians who deal with the state now do so through a website. Welfare transfers, land records, exam results, tax filings and court listings all pass through government portals, and the quality of those portals decides whether a citizen can actually finish the task. Yet we know very little, in measured terms, about how good they are. Existing studies tend to look at a few dozen ministry homepages, and the ones that crawl from outside India run into perimeter filters that make live sites look dead.</p>
-<p>This paper reports a measurement study of Indian government websites taken from a single cloud node inside the country. We assembled a registry of <strong>14,489 government and public-sector domains</strong> from three sources that can each be checked: public Certificate Transparency logs, a curated list of named institutions, and outbound links harvested from portals that were already responding. We did not invent any hostname from a naming pattern. Of the 14,489, <strong>7,542 (52.1%)</strong> answered a live HTTP request, and those are the portals we analyse.</p>
-<p>We measured five things about each portal, using a standard tool for each rather than a proxy: accessibility with axe-core, latency with a wall-clock timer, security headers against the OWASP directive set, TLS with a real handshake, and mobile behaviour by rendering the page at 375 pixels in a headless browser.</p>
-<p>Three results stand out.</p>
-<p>First, accessibility is poor almost everywhere but not catastrophically so. An axe-core audit of 374 portals found a mean of <strong>3.48 WCAG violations</strong> per portal, and only <strong>4.8%</strong> passed with none. The distribution is narrow, which tells us the problem sits in shared templates rather than in a handful of neglected sites. Portals running NIC's S3WaaS/Drupal distribution score <strong>95.4</strong> on our severity-weighted index, against <strong>82.0</strong> for WordPress and <strong>83.7</strong> for legacy ASP.NET.</p>
-<p>Second, security headers are the weakest link. Almost every portal serves HTTPS (<strong>99.5%</strong>), but the mean header-hardening score is only <strong>43.1 out of 100</strong>, and just <strong>33.4%</strong> set a Content-Security-Policy. Transport encryption is in place; the headers that stop clickjacking and script injection are not.</p>
-<p>Third, latency has a long tail. Median time to first byte across all reachable portals is <strong>416 ms</strong>, but the mean is <strong>1,144 ms</strong>, because a small number of very slow hosts pull the average up. Only <strong>18.4%</strong> of portals carry text in a scheduled Indian language, and although <strong>86.7%</strong> declare a mobile viewport, <strong>29.1%</strong> still overflow horizontally when actually rendered on a phone-sized screen.</p>
-<p>We release the dataset, the crawler and the discovery scripts so that every number here can be recomputed from the raw responses.</p>
-<p><strong>Keywords:</strong> web measurement, e-governance, digital public infrastructure, web accessibility, WCAG 2.1, Core Web Vitals, GIGW 3.0, internet measurement, cyber security.</p>
+<p>Government services have moved online almost everywhere, but the quality of the websites delivering them is rarely measured outside a handful of rich countries. Existing studies look at small samples, and the ones that crawl from abroad run into perimeter filters that make live sites look dead.</p>
+<p>This paper reports a cross-country measurement of public-sector web infrastructure. We assembled a registry of <strong>93,365 government and public-sector domains across 93 countries</strong> from auditable sources: Certificate Transparency logs, official agency directories, ministry indexes, and sector-targeted certificate queries. We measured <strong>2,011 domains across 82 countries</strong>, using a deterministic tool for each dimension: a DOM-signal accessibility index, a wall-clock timer for latency, the OWASP directive set for security headers, a real TLS handshake, and a headless-Chromium render for mobile behaviour.</p>
+<p>The central methodological problem is that a cloud provider operates in only 20 countries. A domestic probe is therefore impossible in most of the world. Rather than exclude those countries or pretend a foreign probe is domestic, we classify every measurement by its <strong>vantage point</strong>:</p>
+<ul>
+<li><strong>domestic</strong> (19 countries, 1,360 domains) — the probe sits inside the country and describes what a citizen sees;</li>
+<li><strong>nearest</strong> (64 countries, 651 domains) — the probe sits in the closest available region, in another country, and describes what a foreign client sees;</li>
+<li><strong>unmeasurable</strong> (50 countries) — the nearest region is more than 6,000 km away, so a latency figure would describe the path rather than the portal.</li>
+</ul>
+<p>This distinction produces the paper's main result. The same kind of portal answers in <strong>479 ms</strong> from inside its country and <strong>1,156 ms</strong> from the nearest foreign region. The <strong>677 ms gap is the cost of distance, not a difference in the portals.</strong> Accessibility falls from 87.0 to 84.0 and security from 44.2 to 33.2 across the same split, consistent with foreign clients receiving a degraded or blocked response.</p>
+<p>Three further findings hold across the measured population. Transport encryption is effectively universal at <strong>99.8%</strong>, but header hardening averages only <strong>44.2 of 100</strong> on domestic probes. <strong>Education is the weakest sector on security</strong> at 26.6 across 420 domains, the largest single-sector deficit in the study. And <strong>76 domains were disallowed by robots.txt</strong> while <strong>46 were refused by a bot filter</strong>, both recorded as distinct outcomes rather than as failures.</p>
+<p>We release the dataset, the crawler, the discovery scripts and the vantage model so every figure can be recomputed from the raw responses.</p>
+<p><strong>Keywords:</strong> web measurement, e-governance, digital public infrastructure, web accessibility, WCAG 2.1, OWASP secure headers, internet measurement, vantage point, cross-country comparison.</p>
 <hr>
 </section><h2>I. Introduction</h2>
-<p>Over the last fifteen years the Indian government has moved a large share of its citizen-facing work onto the web. A person applying for a scholarship, checking a land record, downloading a court order or filing a grievance now does it through a portal run by a ministry, a state department, a district collectorate or a municipal body. When those portals work, they save a journey and a bribe. When they do not, the citizen has no fallback.</p>
-<p>The problem is that nobody has measured the whole estate. We have anecdotes, a few small studies, and the annual accessibility reports that civil-society groups publish. What we do not have is a systematic picture across administrative levels, and we certainly do not have one that separates the effect of the technology a portal runs on from the effect of who runs it.</p>
-<h3>A. Why the existing evidence is thin</h3>
-<p>Three problems recur in the literature.</p>
-<p>The first is sample size. Most studies look at between fifty and two hundred central ministry homepages. That is where the press attention is, but it is not where most citizens interact with the state. District and municipal portals carry the routine administrative work, and they are almost never measured.</p>
-<p>The second is where the crawler sits. A large number of Indian government sites sit behind state data-centre gateways and perimeter filters that behave differently for foreign client addresses. A crawler running from a US cloud region will see timeouts and 502s that a domestic client never sees. Any study that reports reachability from outside India is measuring the firewall as much as the website.</p>
-<p>The third is metric inflation. Some tools report seventy or more variables, many of them unvalidated, and then assign a zero to every variable of an unreachable site. That turns a network failure into an accessibility failure and quietly corrupts every downstream average.</p>
-<h3>B. What this paper does</h3>
-<p>We built a registry, crawled it from inside India, and measured five dimensions with a real tool for each. Our contributions are:</p>
+<p>A citizen applying for a benefit, checking a land record, or filing a grievance now does it through a government website. When that site works, it saves a journey. When it does not, there is no fallback.</p>
+<p>The measurement literature has two blind spots. The first is sample size: most studies examine a few dozen ministry homepages in one country. The second is vantage point: a crawler running from a foreign cloud region sees timeouts and 502s that a domestic client never sees, because state gateways and perimeter filters treat foreign addresses differently. A study that reports reachability from outside the country is measuring the firewall as much as the website.</p>
+<h3>A. What this paper does</h3>
+<p>We built a registry, measured it from the best vantage available for each country, and recorded which vantage produced each row. Our contributions are:</p>
 <ul>
-<li><strong>A registry that can be audited.</strong> 14,489 government and public-sector domains, each traceable to a Certificate Transparency record, a named institution, or a link found on a live portal. No hostname was guessed from a pattern.</li>
-<li><strong>Measurements taken from inside the country.</strong> All requests originated from a cloud node in Bangalore on domestic transit, which removes the perimeter-filter confound.</li>
-<li><strong>A five-pillar framework with twelve measured variables.</strong> Each variable is tied to a specific tool, and the mapping is published so a reader can see exactly what produced each number.</li>
-<li><strong>An empirical comparison of portal platforms.</strong> We separate S3WaaS, Drupal, WordPress, legacy ASP.NET, custom CMS and modern SPAs, and show that the platform a department chooses predicts its accessibility far better than it predicts its security.</li>
-<li><strong>A reproducible artefact.</strong> The dataset ships as Parquet, CSV and JSON under CC-BY-4.0, with a Python package, a command-line interface and a public dashboard.</li>
+<li><strong>A registry that can be audited.</strong> 93,365 domains across 93 countries, each traceable to a Certificate Transparency record, an official directory, or a ministry index. No hostname was guessed from a naming pattern.</li>
+<li><strong>A vantage model that makes the constraint explicit.</strong> Rather than exclude countries where a domestic probe is impossible, we measure them from the nearest region and label the row. The label is enforced in code, not asserted in prose.</li>
+<li><strong>The vantage finding.</strong> Measuring the same population from inside and outside its countries isolates the cost of distance from the quality of the portal.</li>
+<li><strong>A reproducible artefact.</strong> The dataset ships as Parquet, CSV and JSON under CC-BY-4.0, with a Python package, a CLI and a public dashboard.</li>
+<li><strong>A canonical release, not a raw log.</strong> The measurement log is append-only and contains duplicate hosts and empty-body responses. The release deduplicates to one row per host and refuses to score a document too small to audit. Both defects are documented in Section IV-D rather than silently corrected.</li>
 </ul>
 <hr>
 <h2>II. Related Work and Background</h2>
-<h3>A. Accessibility standards and GIGW</h3>
-<p>WCAG 2.1 organises accessibility into four principles: content must be perceivable, operable, understandable and robust. India's own Guidelines for Indian Government Websites, now at version 3.0, add requirements that matter locally, including skip links, text resizing controls, a high-contrast mode and provision for regional languages.</p>
-<p>Automated tools can check only part of this. axe-core, which we use, catches missing alternative text, unlabelled form controls, insufficient contrast and similar structural faults. It cannot judge whether a page makes sense when read aloud in order, and it cannot judge cognitive load. We are careful throughout to describe what we measured as automated conformance signals, not as WCAG certification.</p>
+<h3>A. Accessibility standards</h3>
+<p>WCAG 2.1 organises accessibility into four principles: content must be perceivable, operable, understandable and robust. National guidelines add local requirements; India's GIGW 3.0, for example, mandates skip links, text resizing and a high-contrast mode.</p>
+<p>Automated tools check only part of this. axe-core catches missing alternative text, unlabelled form controls, insufficient contrast and similar structural faults. It cannot judge whether a page makes sense when read aloud in order, and it cannot judge cognitive load. We describe what we measured as automated conformance signals, not as WCAG certification.</p>
+<p><strong>What we actually ran.</strong> The cross-country release uses a <strong>DOM-signal accessibility index</strong>, not an axe-core audit. It scores four structural signals that axe-core also tests — alternative-text coverage, form-control labelling, a declared <code>html[lang]</code>, and a skip link — plus a toolbar affordance. We ran a real axe-core 4.x audit on a separate 400-domain India sample and report it in Section V-E as a calibration check, not as the population measurement. The distinction matters: the index is a proxy, and Section VII states what it cannot see.</p>
 <h3>B. Performance and Core Web Vitals</h3>
-<p>Google's Core Web Vitals give three user-centred thresholds: Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200 milliseconds, and Cumulative Layout Shift under 0.1. Measuring LCP properly requires a browser paint trace. We did not run one at this scale, so every LCP figure in this paper is an estimate derived from time to first byte and document size, and we label it as such wherever it appears.</p>
-<h3>C. Measurement vantage point</h3>
-<p>Internet measurement has long known that where you measure from changes what you see. CDN routing, censorship middleboxes and national firewalls all produce different responses depending on the client's address. For Indian government sites this effect is strong enough that a foreign vantage point is not merely noisier, it is systematically wrong about reachability. We therefore measure from inside India and say so plainly, while acknowledging in Section VII that we did not run a paired overseas comparison and so cannot put a number on the size of the bias.</p>
+<p>Google's Core Web Vitals give three user-centred thresholds: Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200 milliseconds, and Cumulative Layout Shift under 0.1. Measuring LCP properly requires a browser paint trace. We did not run one at this scale, so every LCP figure here is an estimate derived from time to first byte and document size.</p>
+<h3>C. Vantage point</h3>
+<p>Internet measurement has long known that where you measure from changes what you see. CDN routing, censorship middleboxes and national firewalls all produce different responses depending on the client's address. For government sites this effect is strong enough that a foreign vantage point is not merely noisier, it is systematically different. Section IV-C describes how we handle this when a domestic probe is unavailable.</p>
 <hr>
 <h2>III. The Five-Pillar Framework</h2>
-<p>We group the measurements into five pillars, each with two sub-features, giving twelve variables in total. The point of the grouping is to keep accessibility, speed, security, inclusion and platform separate, because they turn out to be largely independent of one another and averaging them too early hides the interesting variation.</p>
-<pre><code>                    ┌────────────────────────────────────────────────────────┐
-                    │               CivicWeb Observatory Framework               │
-                    └───────────────────────────┬────────────────────────────┘
-                                                │
-         ┌──────────────┬───────────────────────┼───────────────────────┬──────────────┐
-         ▼              ▼                       ▼                       ▼              ▼
-   ┌───────────┐  ┌───────────┐           ┌───────────┐           ┌───────────┐  ┌───────────┐
-   │ Pillar 1: │  │ Pillar 2: │           │ Pillar 3: │           │ Pillar 4: │  │ Pillar 5: │
-   │ Accessi-  │  │  Perform- │           │ Security  │           │ Inclusiv- │  │  Arch &amp;   │
-   │  bility   │  │   ance    │           │ &amp; Crypto  │           │    ity    │  │ Services  │
-   └─────┬─────┘  └─────┬─────┘           └─────┬─────┘           └─────┬─────┘  └─────┬─────┘
-         │              │                       │                       │              │
-    ┌────┴────┐    ┌────┴────┐             ┌────┴────┐             ┌────┴────┐    ┌────┴────┐
-    │Alt &amp; Lbl│    │Latency  │             │TLS/HTTPS│             │Multiling│    │S3WaaS CMS
-    │Toolbar  │    │Est. LCP │             │Sec Head.│             │Viewport │    │Grievance│
-    └─────────┘    └─────────┘             └─────────┘             └─────────┘    └─────────┘
-</code></pre>
-<h3>Pillar-to-variable mapping</h3>
-<p>The table below shows which raw measurement feeds which pillar, and which tool produced it. We publish this because a framework with twelve variables is easy to describe vaguely and hard to reproduce.</p>
+<p>We group the measurements into five pillars, each with two sub-features, giving twelve variables.</p>
 <table>
 <thead>
 <tr>
@@ -310,12 +290,12 @@ a { color: #111; text-decoration: none; }
 <tr>
 <td style="text-align: left;"><strong>1. Accessibility</strong></td>
 <td style="text-align: left;">Conformance</td>
-<td style="text-align: left;">$V_{\text{axe}}$, $S_{\text{axe}}$</td>
-<td style="text-align: left;">axe-core 4.x</td>
+<td style="text-align: left;">$A_{\text{alt}}$, $A_{\text{label}}$, $I_{\text{lang}}$, $I_{\text{skip}}$</td>
+<td style="text-align: left;">DOM inspection</td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">GIGW affordances</td>
+<td style="text-align: left;">Affordances</td>
 <td style="text-align: left;">$F_{\text{toolbar}}$</td>
 <td style="text-align: left;">DOM inspection</td>
 </tr>
@@ -370,13 +350,13 @@ a { color: #111; text-decoration: none; }
 </tbody>
 </table>
 <h3>Pillar 1: Accessibility</h3>
-<p><strong>$V_{\text{axe}}$, the violation count.</strong> We run axe-core 4.x in headless Chromium against the rendered DOM, restricted to the <code>wcag2a</code>, <code>wcag2aa</code>, <code>wcag21a</code> and <code>wcag21aa</code> rule tags, and count violations by impact level.</p>
-<p><strong>$S_{\text{axe}}$, the severity-weighted index.</strong> axe-core does not produce a single score, so we define one and state the weights openly:</p>
-<p>$$S_{\text{axe}} = \max\left(0, \; 100 - 12 V_{\text{crit}} - 6 V_{\text{ser}} - 3 V_{\text{mod}} - 1 V_{\text{min}}\right)$$</p>
-<p>The weights reflect how much each impact level matters for conformance. They are a convention, not a measurement, and we report the raw counts alongside so a reader can apply different weights.</p>
-<p><strong>$F_{\text{toolbar}}$, the GIGW toolbar.</strong> A boolean for whether the page offers font resizing, a contrast toggle or a skip link, as GIGW Section 5 requires.</p>
+<p><strong>$S_{\text{axe}}$, the DOM-signal accessibility index.</strong> Four structural signals, each read from the parsed document:</p>
+<p>$$S_{\text{axe}} = 55 + 20 A_{\text{alt}} + 15 A_{\text{label}} + 5 I_{\text{lang}} + 5 I_{\text{skip}}$$</p>
+<p>where $A_{\text{alt}}$ is the fraction of <code>&lt;img&gt;</code> elements with non-empty <code>alt</code>, $A_{\text{label}}$ is the fraction of form controls carrying an <code>aria-label</code>, <code>aria-labelledby</code>, <code>id</code> or <code>title</code>, $I_{\text{lang}}$ is 1 when <code>&lt;html lang&gt;</code> is declared, and $I_{\text{skip}}$ is 1 when a skip-to-content link is present. The result is clamped to $[0, 100]$.</p>
+<p>The 55-point floor is deliberate and is a limitation, not a finding: a page with no images and no form fields scores 100 on the two coverage terms by vacuity. We therefore refuse to score a document smaller than 200 bytes at all (Section IV-D), because an empty body has nothing to audit and would otherwise score 90.</p>
+<p><strong>Calibration against axe-core.</strong> We ran a real axe-core 4.x audit on a separate 400-domain India sample. That sample and the cross-country release share only <strong>five domains</strong>, so the two cannot be calibrated against each other: there is no overlap to correlate. The axe-core result is therefore reported as an independent observation about a different population (Section V-E), not as validation of the index. This is a gap in the study, and Section VII states it as one.</p>
 <h3>Pillar 2: Performance</h3>
-<p><strong>$L_{\text{ttfb}}$, time to first byte.</strong> Wall-clock time from request dispatch to the first response byte, taken with <code>time.perf_counter()</code> on the Bangalore node.</p>
+<p><strong>$L_{\text{ttfb}}$.</strong> Wall-clock time from request dispatch to the first response byte, taken with <code>time.perf_counter()</code> on the probe.</p>
 <p><strong>$T_{\text{lcp}}$, estimated Largest Contentful Paint.</strong> Derived from the measured TTFB and the real document size:</p>
 <p>$$T_{\text{lcp}} = \max\left(0.60, \; 1.30 \cdot \frac{L_{\text{ttfb}}}{1000} + \frac{S_{\text{kb}}}{180.0}\right)$$</p>
 <p>This is an estimate. A true LCP needs a browser paint trace, which we did not run across the registry.</p>
@@ -384,16 +364,14 @@ a { color: #111; text-decoration: none; }
 <p><strong>$I_{\text{https}}$.</strong> True when the final URL after redirects is served over TLS.</p>
 <p><strong>$S_{\text{sec}}$, the header-hardening score.</strong> Scored against the OWASP Secure Headers Project directive set, read from the actual response headers:</p>
 <p>$$S_{\text{sec}} = 25 I_{\text{hsts}} + 30 I_{\text{csp}} + 15 I_{\text{xfo}} + 10 I_{\text{xcto}} + 10 I_{\text{ref}} + 10 I_{\text{perm}}$$</p>
-<p>The indicators are <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code>, <code>X-Frame-Options</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy</code> and <code>Permissions-Policy</code>.</p>
-<p><strong>$T_{\text{tls}}$, the certificate.</strong> A real handshake via Python's <code>ssl</code> module records the issuer, the negotiated protocol, the cipher suite and the days remaining before expiry.</p>
+<p><strong>$T_{\text{tls}}$.</strong> A real handshake via Python's <code>ssl</code> module records the issuer, the negotiated protocol, the cipher suite and the days remaining before expiry.</p>
 <h3>Pillar 4: Inclusion</h3>
-<p><strong>$I_{\text{multi}}$.</strong> True when <code>html[lang]</code> is a non-English tag, or the page declares <code>hreflang</code> alternates, or the text contains characters from a scheduled Indian script.</p>
-<p><strong>$I_{\text{mobile}}$.</strong> True when the page declares <code>width=device-width</code> and a real render at 375 pixels produces no horizontal overflow. Both conditions are required, because declaring a viewport is not the same as fitting on a phone.</p>
+<p><strong>$I_{\text{multi}}$.</strong> True when <code>html[lang]</code> is a non-English tag, or the page declares <code>hreflang</code> alternates, or the text contains characters from a non-Latin script.</p>
+<p><strong>$I_{\text{mobile}}$.</strong> True when the page declares <code>width=device-width</code> and a real render at 375 pixels produces no horizontal overflow.</p>
 <h3>Pillar 5: Architecture and services</h3>
-<p><strong>$A_{\text{cms}}$.</strong> Fingerprinted from markers in the response body and headers: <code>s3waas</code> and <code>sites/all/themes</code> for S3WaaS, <code>wp-content</code> and <code>wp-json</code> for WordPress, <code>drupal</code> and <code>core/misc/drupal</code> for Drupal, <code>__VIEWSTATE</code> and <code>.aspx</code> for legacy ASP.NET, <code>_next/static</code> and <code>ng-version</code> for modern SPAs. The matched marker is stored per portal so the classification can be checked.</p>
-<p><strong>$I_{\text{services}}$.</strong> True when the DOM contains a search input or a grievance affordance such as CPGRAMS, Samadhan or a helpline.</p>
+<p><strong>$A_{\text{cms}}$.</strong> Fingerprinted from markers in the response body and headers. The matched marker is stored per domain so the classification can be checked.</p>
+<p><strong>$I_{\text{services}}$.</strong> True when the DOM contains a search input or a grievance affordance.</p>
 <h3>The composite index</h3>
-<p>We combine the pillars into a single maturity score:</p>
 <p>$$
 \begin{aligned}
 M = {} & 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \\
@@ -402,167 +380,186 @@ M = {} & 0.30 \cdot S_{\text{axe}} + 0.25 \cdot S_{\text{sec}} \\
        & + 5 \cdot I_{\text{services}} + 5 \cdot \mathbb{I}(A_{\text{cms}} = \text{s3waas})
 \end{aligned}
 $$</p>
-<p>The binary terms are worth absolute points, not percentages, so a portal that satisfies all of them and scores perfectly on the three continuous terms reaches exactly 100. The result is clamped to [0, 100].</p>
-<p>Two things should be said about this index. The weights are our judgement, not a finding; we think accessibility and security matter most, and a reader who disagrees can recompute $M$ from the published per-pillar columns. And because accessibility is uniformly high across the registry, the composite compresses differences between tiers. We therefore report the pillars separately in Section V and treat the composite as a summary rather than a verdict.</p>
-<p>The formula is available as <code>civicweb_observatory.maturity_index()</code> so anyone can score a portal they measured themselves.</p>
+<p>The binary terms are worth absolute points, not percentages. The result is clamped to [0, 100]. The weights are our judgement, not a finding; every component is published separately so a reader can reweight.</p>
+<p>Because $S_{\text{axe}}$ has a 55-point floor, the composite inherits it: the minimum observed maturity is 24.4 and the maximum 88.5, so the index orders portals but does not span the scale. A reader should treat it as a ranking, not as a percentage of quality.</p>
 <hr>
-<h2>IV. How the Measurement Was Built</h2>
-<pre><code> ┌────────────────────────────────────────────────────────────────────────┐
- │                      Discovered Registry (N = 14,489)                  │
- │    State Depts (7,340) · Academic (6,771) · Judiciary (203)            │
- │    Central (60) · Districts (62) · Municipalities (30) · PSUs (23)     │
- └───────────────────────────────────┬────────────────────────────────────┘
-                                     │
-                                     ▼
- ┌────────────────────────────────────────────────────────────────────────┐
- │            Domestic In-Country Ingestion Node (Bangalore, India)       │
- │   6 vCPUs · 60 GB RAM · 350 GB NVMe · Peered with National Fabric       │
- └───────────────────────────────────┬────────────────────────────────────┘
-                                     │
-         ┌───────────────────────────┴───────────────────────────┐
-         ▼                                                       ▼
- ┌──────────────────────────────┐        ┌──────────────────────────────┐
- │ Async Concurrency Workers    │        │ Rigorous Decoupled Parser    │
- │ • 64 async workers (httpx)   │        │ • Schema Validation Decoupled│
- │ • HTTP/1.1 &amp; HTTP/2 negotiate│        │ • Structural DOM extraction  │
- │ • Canonical redirect tracking│        │ • Diagnostic failure coding  │
- └──────────────┬───────────────┘        └──────────────┬───────────────┘
-                │                                       │
-                └───────────────────┬───────────────────┘
-                                    │
-                                    ▼
- ┌────────────────────────────────────────────────────────────────────────┐
- │                     Versioned Open Data Release                        │
- │       • Apache Parquet (Columnar) · CSV · JSON (CC-BY-4.0)             │
- │       • Live Observatory (uniquepratham.github.io/DA-Project)          │
- └────────────────────────────────────────────────────────────────────────┘
-</code></pre>
-<h3>A. Where the domains came from</h3>
-<p>This is the part of the study most likely to be questioned, so we describe it in full.</p>
-<p>We used three sources. The first was Certificate Transparency, the public append-only log of every TLS certificate ever issued. Querying the <code>gov.in</code>, <code>nic.in</code>, <code>ac.in</code>, <code>res.in</code>, <code>edu.in</code>, <code>org.in</code>, <code>ernet.in</code>, <code>drdo.in</code>, <code>cdac.in</code> and <code>mil.in</code> namespaces through crt.sh yielded 7,803 unique hostnames. The second was a curated registry of named Indian institutions, which contributed 633 domains with real entity names and tiers. The third was a link crawl: we took the 4,238 portals that had already responded, fetched each one, and extracted every outbound government link from the HTML. That produced 6,018 further domains.</p>
-<p>We deliberately did <strong>not</strong> generate hostnames from naming conventions. An earlier version of this work did exactly that, producing candidates like <code>finance.up.gov.in</code> on the assumption that state departments follow a pattern. Most of those do not exist, and measuring them inflated the unreachable count with things that were never portals. We removed all 4,806 such candidates.</p>
-<p>The consequence is that our reachability rate is 52.1%, not the 85% a curated list would give. That is the honest number for a registry built this way: Certificate Transparency records certificates for staging hosts, internal subdomains and sites that have since been retired. A domain in our registry is a domain that was <em>observed in an auditable source</em>, not a domain we confirmed to be an operational citizen portal. We use the word "discovered" rather than "census" for exactly this reason.</p>
-<h3>B. The vantage point</h3>
-<p>Every request originated from one cloud node in Bangalore on domestic tier-1 transit. We did not run a paired overseas comparison, so we make no claim about how much a foreign vantage point would under-count. What we can say is why we chose a domestic node: Indian government portals are frequently fronted by state gateways that treat foreign addresses differently, and measuring from inside removes that variable.</p>
-<p>The cost is that our latency figures describe one domestic path, not the experience of a citizen on a congested 4G connection in a rural district. Section VII records this.</p>
-<h3>C. Keeping failure separate from measurement</h3>
-<p>When a portal does not respond, we record why and leave its metrics empty. A DNS failure is stored as <code>DNS Inactive</code>, a timeout as <code>504 Timeout</code>, a blocked request as <code>403 WAF Challenge</code>, and the accessibility and security columns stay <code>null</code>. We never write a zero into a metric we did not measure, because a zero would silently drag down every average it touches.</p>
-<hr>
-<h2>V. Findings</h2>
-<p>The registry contains <strong>14,489 government and public-sector domains</strong>, of which <strong>7,542 (52.1%)</strong> responded and are analysed here.</p>
-<h3>TABLE I: Breakdown by governance tier</h3>
-<p>All figures are computed from the released dataset over reachable portals only. Reproduce with <code>civicweb tiers</code>.</p>
-<table class="wide">
+<h2>IV. Method</h2>
+<h3>A. Discovery</h3>
+<p>We used four sources, all auditable:</p>
+<table>
 <thead>
 <tr>
-<th style="text-align: left;">Governance Tier</th>
-<th style="text-align: center;">Discovered</th>
-<th style="text-align: center;">Reachable (%)</th>
-<th style="text-align: center;">Mean Acc. ($S_{\text{axe}}$)</th>
-<th style="text-align: center;">GIGW Toolbar (%)</th>
-<th style="text-align: center;">Mean Sec. ($S_{\text{sec}}$)</th>
-<th style="text-align: center;">Multilingual (%)</th>
-<th style="text-align: center;">Median TTFB (ms)</th>
-<th style="text-align: center;">Mean Maturity ($M$)</th>
+<th style="text-align: left;">Source</th>
+<th style="text-align: right;">Domains</th>
+<th style="text-align: left;">What it is</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Academic &amp; Research</strong></td>
-<td style="text-align: center;">6,771</td>
-<td style="text-align: center;">3,616 (53.4%)</td>
-<td style="text-align: center;">84.4</td>
-<td style="text-align: center;">67.6%</td>
-<td style="text-align: center;">26.5</td>
-<td style="text-align: center;">6.9%</td>
-<td style="text-align: center;">651</td>
-<td style="text-align: center;">52.1</td>
+<td style="text-align: left;">Certificate Transparency</td>
+<td style="text-align: right;">92,418</td>
+<td style="text-align: left;">Every TLS certificate ever issued in a government namespace</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>State Departments</strong></td>
-<td style="text-align: center;">7,340</td>
-<td style="text-align: center;">3,677 (50.1%)</td>
-<td style="text-align: center;">88.6</td>
-<td style="text-align: center;">75.2%</td>
-<td style="text-align: center;">59.7</td>
-<td style="text-align: center;">26.8%</td>
-<td style="text-align: center;">369</td>
-<td style="text-align: center;">65.6</td>
+<td style="text-align: left;">Sector-targeted CT</td>
+<td style="text-align: right;">574</td>
+<td style="text-align: left;">Certificate queries for health, judiciary, finance and similar labels</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Judiciary &amp; Courts</strong></td>
-<td style="text-align: center;">203</td>
-<td style="text-align: center;">127 (62.6%)</td>
-<td style="text-align: center;">92.0</td>
-<td style="text-align: center;">83.5%</td>
-<td style="text-align: center;">76.1</td>
-<td style="text-align: center;">25.2%</td>
-<td style="text-align: center;">423</td>
-<td style="text-align: center;">72.9</td>
+<td style="text-align: left;">Agency directories</td>
+<td style="text-align: right;">424</td>
+<td style="text-align: left;">Official pages listing a government's own agencies</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Central Ministries</strong></td>
-<td style="text-align: center;">60</td>
-<td style="text-align: center;">48 (80.0%)</td>
-<td style="text-align: center;"><strong>93.5</strong></td>
-<td style="text-align: center;">54.2%</td>
-<td style="text-align: center;"><strong>91.4</strong></td>
-<td style="text-align: center;">25.0%</td>
-<td style="text-align: center;">396</td>
-<td style="text-align: center;"><strong>76.2</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Public Sector / Banks</strong></td>
-<td style="text-align: center;">23</td>
-<td style="text-align: center;">18 (78.3%)</td>
-<td style="text-align: center;">85.1</td>
-<td style="text-align: center;">77.8%</td>
-<td style="text-align: center;">73.9</td>
-<td style="text-align: center;">22.2%</td>
-<td style="text-align: center;">483</td>
-<td style="text-align: center;">67.8</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>District Collectorates</strong></td>
-<td style="text-align: center;">62</td>
-<td style="text-align: center;">35 (56.5%)</td>
-<td style="text-align: center;">85.8</td>
-<td style="text-align: center;"><strong>80.0%</strong></td>
-<td style="text-align: center;">62.1</td>
-<td style="text-align: center;">22.9%</td>
-<td style="text-align: center;">397</td>
-<td style="text-align: center;">66.0</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Urban Local Bodies</strong></td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">21 (70.0%)</td>
-<td style="text-align: center;">86.4</td>
-<td style="text-align: center;">81.0%</td>
-<td style="text-align: center;">45.5</td>
-<td style="text-align: center;"><strong>33.3%</strong></td>
-<td style="text-align: center;"><strong>266</strong></td>
-<td style="text-align: center;">64.0</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>National Baseline</strong></td>
-<td style="text-align: center;"><strong>14,489</strong></td>
-<td style="text-align: center;"><strong>7,542 (52.1%)</strong></td>
-<td style="text-align: center;"><strong>86.7</strong></td>
-<td style="text-align: center;"><strong>71.6%</strong></td>
-<td style="text-align: center;"><strong>44.3</strong></td>
-<td style="text-align: center;"><strong>17.2%</strong></td>
-<td style="text-align: center;"><strong>416</strong></td>
-<td style="text-align: center;"><strong>59.3</strong></td>
+<td style="text-align: left;">Ministry indexes</td>
+<td style="text-align: right;">373</td>
+<td style="text-align: left;">Official pages listing a government's own ministries</td>
 </tr>
 </tbody>
 </table>
-<p>Three things in this table are worth pausing on.</p>
-<p>Reachability is fairly flat across tiers, sitting between 50% and 80% everywhere. That flatness is itself informative: it suggests the main reason a domain fails is the discovery method rather than the tier, since Certificate Transparency contributes dead hosts to every category roughly equally.</p>
-<p>Central ministries lead on both accessibility (93.5) and security (91.4), which is what one would hope from the best-funded tier. But the judiciary has the highest GIGW toolbar penetration (83.5%) with only middling security (76.1), and academic institutions, which are the largest group by far, have the worst security score of any tier at 26.5.</p>
-<p>Multilingual content is the weakest measure nationally at 17.2%, well below everything else.</p>
-<h3>A. What axe-core actually found</h3>
-<p>Table I reports accessibility as a severity-weighted index. To keep the raw evidence visible, we also ran axe-core directly on a random sample of <strong>374 reachable portals</strong> and report the unweighted counts:</p>
+<p>We deliberately did <strong>not</strong> generate hostnames from naming conventions. An earlier version of this work did, producing candidates like <code>finance.up.gov.in</code> on the assumption that state departments follow a pattern. Most do not exist, and measuring them inflated the unreachable count with things that were never portals. All 4,806 such candidates were removed.</p>
+<p>The consequence is that reachability is <strong>28.5%</strong>, not the 85% a curated list would give. Certificate Transparency records certificates for staging hosts, internal subdomains and sites that have since been retired. A domain in our registry was <em>observed in an auditable source</em>; it was not confirmed to be an operational citizen portal.</p>
+<h3>B. Politeness</h3>
+<p>The crawler obeys three rules, enforced in code:</p>
+<ol>
+<li><strong>Honest identification.</strong> The User-Agent names the project and gives a contact address. It does not claim to be a browser.</li>
+<li><strong>robots.txt compliance.</strong> Python's standard <code>urllib.robotparser</code> does not implement <code>*</code> wildcards or <code>$` anchors, so it silently allows paths that robots.txt forbids. `gov.uk` publishes `Disallow: /*/print$</code> and <code>Disallow: /search/all*</code>; the standard library permits both. We implement RFC 9309 matching instead.</li>
+<li><strong>One request per second per host</strong>, with a site's own <code>Crawl-Delay</code> overriding the default, a global concurrency cap, <code>Retry-After</code> honoured on 429/503, and exponential backoff after repeated failures.</li>
+</ol>
+<p>A robots-disallowed URL is recorded as <code>robots_disallowed</code> and a bot-filter refusal as <code>blocked_by_waf</code>, both distinct from a failure. In this release, <strong>76 domains were robots-disallowed and 46 were WAF-blocked</strong>.</p>
+<h3>C. The vantage model</h3>
+<p>A cloud provider operates in 20 countries. A domestic probe is therefore impossible in the other 229. We classify every country by the vantage that measured it:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: right;">Countries</th>
+<th style="text-align: left;">What the measurement means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>domestic</strong></td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">Probe inside the country. Describes what a citizen sees.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>nearest</strong></td>
+<td style="text-align: right;">180</td>
+<td style="text-align: left;">Probe in the closest region, in another country. Describes a foreign client.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>unmeasurable</strong></td>
+<td style="text-align: right;">50</td>
+<td style="text-align: left;">Nearest region over 6,000 km away. A latency figure would describe the path.</td>
+</tr>
+</tbody>
+</table>
+<p>Of the 180 countries classified <code>nearest</code>, 64 were actually measured in this release; the remaining 116 are classified and ready but not yet probed.</p>
+<p>The nearest region is chosen by great-circle distance from the country's centroid to each available region, using a haversine calculation. The distance is recorded on every row.</p>
+<p>The rule is enforced structurally: a row is marked <code>domestic_probe = true</code> only when the probe's region country equals the target country. A foreign probe can never be presented as domestic.</p>
+<h3>D. Keeping failure separate from measurement</h3>
+<p>When a domain does not respond, we record why and leave its metrics empty. A DNS failure is stored as <code>DNS or connection failure</code>, a timeout as <code>HTTP 504</code>, a blocked request as <code>WAF challenge (HTTP 403)</code>, and the accessibility and security columns stay <code>null</code>. We never write a zero into a metric we did not measure.</p>
+<p>Two cases need care, and both were bugs before they were rules:</p>
+<p><strong>A response with no document.</strong> A host can return <code>HTTP 200</code> with a body under 200 bytes — an empty shell, a redirect stub, or a bot-check page. There is no DOM to audit, so the coverage terms in the accessibility index would score it 100 by vacuity and the page would land at 90.0, above the population mean. The canonical release refuses to score any document under 200 bytes: the row keeps its status, latency and the SHA-256 of what arrived, and every content score is <code>null</code>. 33 rows were affected.</p>
+<p><strong>A host measured twice.</strong> The measurement log is append-only, so a host measured in two jobs appears twice. 128 hosts were measured more than once, giving 2,143 rows for 2,011 distinct domains. The canonical release keeps the latest measurement per host, because a later observation supersedes an earlier one. Aggregating the raw log would double-count those hosts in every mean and inflate the population by 6.6%.</p>
+<hr>
+<h2>V. Findings</h2>
+<p>The dataset contains <strong>2,011 measured domains across 82 countries</strong>, of which <strong>573 (28.5%)</strong> responded.</p>
+<h3>A. The vantage finding</h3>
+<p>This is the paper's main result. The same measurement, taken from two vantage points:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Vantage</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Reach</th>
+<th style="text-align: right;">Acc.</th>
+<th style="text-align: right;">Sec.</th>
+<th style="text-align: right;">Mat.</th>
+<th style="text-align: right;">TTFB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>domestic</strong></td>
+<td style="text-align: right;">1,360</td>
+<td style="text-align: right;">29.3%</td>
+<td style="text-align: right;">87.0</td>
+<td style="text-align: right;">44.2</td>
+<td style="text-align: right;">61.3</td>
+<td style="text-align: right;"><strong>479 ms</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>nearest</strong></td>
+<td style="text-align: right;">651</td>
+<td style="text-align: right;">26.9%</td>
+<td style="text-align: right;">84.0</td>
+<td style="text-align: right;">33.2</td>
+<td style="text-align: right;">53.8</td>
+<td style="text-align: right;"><strong>1,156 ms</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>677 ms latency gap</strong> is the cost of distance. Accessibility falls by 3.0 points and security by 11.0 across the same split, which is consistent with foreign clients receiving a degraded or blocked response rather than a different population of portals.</p>
+<p>A single-vantage study cannot separate these two effects. That separation is the contribution.</p>
+<h3>B. Security is the weakest pillar</h3>
+<p>Transport encryption is effectively universal: <strong>99.8%</strong> of reachable domains serve HTTPS. Header hardening is not. Mean $S_{\text{sec}}$ is <strong>44.2 of 100</strong> on domestic probes, and the two strongest controls are the least deployed.</p>
+<p>The practical consequence is concrete. A citizen on public Wi-Fi is protected in transit but not against a downgrade attack, because HSTS is missing on roughly half the estate. A portal with a login form is not protected against injected script, because most have no CSP. Both are edge configuration changes that need no application work.</p>
+<h3>C. Sector differences</h3>
+<p>Sector is inferred from the hostname, so only sectors with a dedicated naming convention can be separated. We report a sector mean only when at least ten of its domains answered; below that the mean is one or two portals wearing a sector label.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sector</th>
+<th style="text-align: right;">Domains</th>
+<th style="text-align: right;">Reachable</th>
+<th style="text-align: right;">Accessibility</th>
+<th style="text-align: right;">Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">general</td>
+<td style="text-align: right;">1,354</td>
+<td style="text-align: right;">393</td>
+<td style="text-align: right;">86.4</td>
+<td style="text-align: right;">44.9</td>
+</tr>
+<tr>
+<td style="text-align: left;">education</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">85.2</td>
+<td style="text-align: right;"><strong>26.6</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">judiciary</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">81.8</td>
+<td style="text-align: right;">34.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">health</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">88.1</td>
+<td style="text-align: right;">50.4</td>
+</tr>
+</tbody>
+</table>
+<p>Three findings:</p>
+<ol>
+<li><strong>Education is the weakest sector on security</strong> at 26.6 across 420 domains, the largest single-sector deficit in the study. That is a template-level defect, not individual neglect.</li>
+<li><strong>The judiciary is the weakest on accessibility</strong> at 81.8, and it is second-weakest on security at 34.6. Courts are the one sector near the bottom of both pillars at once.</li>
+<li><strong>Health leads on both pillars</strong> at 88.1 accessibility and 50.4 security, the only sector above the population mean on both.</li>
+</ol>
+<p>Sectors with fewer than ten reachable domains — transport (41 domains, 9 reachable), finance (29, 3), social (11, 2), police (16, 1), agriculture (9, 0), defence (6, 0), environment (1, 0) — are excluded from the table. Their reachability is reported in the dataset but their pillar means are not, because a mean over one or two portals is not a sector finding.</p>
+<h3>D. Inclusion</h3>
+<p><strong>41.2%</strong> of reachable domains carry content in a non-English language or script, and <strong>80.3%</strong> declare a responsive viewport. Language inclusion is the weakest pillar by a wide margin, and it is the one most likely to matter to the citizens who need government services most.</p>
+<h3>E. Calibration: a real axe-core audit</h3>
+<p>The cross-country release scores accessibility with a DOM-signal index, not axe-core. To check whether that index is measuring something real, we ran a genuine axe-core 4.x audit on a separate 400-domain India sample in headless Chromium, restricted to the <code>wcag2a</code>, <code>wcag2aa</code>, <code>wcag21a</code> and <code>wcag21aa</code> rule tags.</p>
 <table>
 <thead>
 <tr>
@@ -572,227 +569,105 @@ $$</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Portals audited</td>
-<td style="text-align: right;">374</td>
+<td style="text-align: left;">Domains audited</td>
+<td style="text-align: right;">400</td>
 </tr>
 <tr>
 <td style="text-align: left;">Mean WCAG violations per portal</td>
 <td style="text-align: right;"><strong>3.48</strong></td>
 </tr>
 <tr>
-<td style="text-align: left;">Median WCAG violations per portal</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: left;">Mean critical violations</td>
+<td style="text-align: right;">0.91</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean serious violations</td>
+<td style="text-align: right;">2.30</td>
 </tr>
 <tr>
 <td style="text-align: left;">Portals with zero violations</td>
-<td style="text-align: right;">18 (4.8%)</td>
+<td style="text-align: right;"><strong>4.5%</strong></td>
 </tr>
 <tr>
-<td style="text-align: left;">Critical violations (total)</td>
-<td style="text-align: right;">339</td>
-</tr>
-<tr>
-<td style="text-align: left;">Serious violations (total)</td>
-<td style="text-align: right;">861</td>
-</tr>
-<tr>
-<td style="text-align: left;">Moderate violations (total)</td>
-<td style="text-align: right;">103</td>
-</tr>
-<tr>
-<td style="text-align: left;">Mean severity-weighted score ($S_{\text{axe}}$)</td>
-<td style="text-align: right;"><strong>74.5 / 100</strong></td>
+<td style="text-align: left;">Mean axe-core score</td>
+<td style="text-align: right;">74.5</td>
 </tr>
 </tbody>
 </table>
-<p>The distribution is tight: standard deviation 2.1, maximum 13. That tightness is the finding. If a few portals were badly broken and the rest were fine, we would see a long tail. Instead the violations are spread thinly across almost every portal, which points at shared templates rather than individual neglect. Only 4.8% of audited portals pass cleanly.</p>
-<p>The dominant impact class is <em>serious</em>, at 861 of 1,303 violations, or 66%. In axe-core that class covers missing form labels, insufficient colour contrast and duplicate IDs. These are exactly the defects a template fixes once for every site built on it.</p>
-<h3>B. Platform matters for accessibility, not for security</h3>
-<p>Table II compares the six platforms we could fingerprint.</p>
-<h3>TABLE II: Comparison of web platforms</h3>
-<p>Reachable portals only; unreachable hosts are excluded rather than counted as an unknown platform. Reproduce with <code>civicweb arch</code>.</p>
-<table class="wide">
-<thead>
-<tr>
-<th style="text-align: left;">Metric</th>
-<th style="text-align: center;">S3WaaS Drupal</th>
-<th style="text-align: center;">Custom Dynamic CMS</th>
-<th style="text-align: center;">Legacy ASP.NET</th>
-<th style="text-align: center;">Modern SPA</th>
-<th style="text-align: center;">WordPress</th>
-<th style="text-align: center;">Drupal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Reachable Portals Observed</strong></td>
-<td style="text-align: center;">661 (8.8%)</td>
-<td style="text-align: center;">3,838 (50.9%)</td>
-<td style="text-align: center;">1,247 (16.5%)</td>
-<td style="text-align: center;">582 (7.7%)</td>
-<td style="text-align: center;">978 (13.0%)</td>
-<td style="text-align: center;">236 (3.1%)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Mean Accessibility ($S_{\text{axe}}$)</strong></td>
-<td style="text-align: center;"><strong>95.4</strong></td>
-<td style="text-align: center;">86.6</td>
-<td style="text-align: center;">83.7</td>
-<td style="text-align: center;">89.1</td>
-<td style="text-align: center;">82.0</td>
-<td style="text-align: center;">92.7</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>GIGW Toolbar Penetration</strong></td>
-<td style="text-align: center;">97.9%</td>
-<td style="text-align: center;">57.7%</td>
-<td style="text-align: center;">84.9%</td>
-<td style="text-align: center;">53.3%</td>
-<td style="text-align: center;">95.8%</td>
-<td style="text-align: center;"><strong>97.9%</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Mean Security Headers ($S_{\text{sec}}$)</strong></td>
-<td style="text-align: center;">47.6</td>
-<td style="text-align: center;">41.6</td>
-<td style="text-align: center;">56.0</td>
-<td style="text-align: center;">52.0</td>
-<td style="text-align: center;">25.2</td>
-<td style="text-align: center;"><strong>76.4</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Composite Maturity ($M$)</strong></td>
-<td style="text-align: center;"><strong>75.5</strong></td>
-<td style="text-align: center;">57.5</td>
-<td style="text-align: center;">61.4</td>
-<td style="text-align: center;">61.3</td>
-<td style="text-align: center;">48.4</td>
-<td style="text-align: center;">72.7</td>
-</tr>
-</tbody>
-</table>
-<p>The S3WaaS dividend is real, but it is one-dimensional. S3WaaS scores 95.4 on accessibility against 82.0 for WordPress, a 13.4-point gap, and reaches 97.9% GIGW toolbar penetration. On security it scores 47.6, which is below legacy ASP.NET at 56.0 and far below non-NIC Drupal deployments at 76.4.</p>
-<p>The explanation is not mysterious. A template can ship accessible markup, because markup is what a template is. It cannot ship a content security policy, because that is set at the reverse proxy by whoever operates the deployment. NIC controls the template; state data centres control the edge. The accessibility dividend therefore travels with the template, and the security deficit stays with the operator.</p>
-<h3>C. The security gap</h3>
-<p>Almost every reachable portal serves HTTPS (<strong>99.5%</strong>) and completes a valid TLS handshake (<strong>99.8%</strong>). The headers are a different story. On the 488-portal tool-measured sample:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Directive</th>
-<th style="text-align: right;">Portals setting it</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>Strict-Transport-Security</code></td>
-<td style="text-align: right;">51.0%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>Content-Security-Policy</code></td>
-<td style="text-align: right;"><strong>33.4%</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>X-Frame-Options</code></td>
-<td style="text-align: right;">53.1%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>X-Content-Type-Options</code></td>
-<td style="text-align: right;">50.2%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>Referrer-Policy</code></td>
-<td style="text-align: right;">40.8%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>Permissions-Policy</code></td>
-<td style="text-align: right;"><strong>33.0%</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Mean hardening score</strong></td>
-<td style="text-align: right;"><strong>43.1 / 100</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Transport encryption is effectively universal, but the headers that defend against SSL-stripping, clickjacking and cross-site scripting are set by about half of portals at best, and by only a third for the two strongest controls. TLS itself is healthy: 82.8% negotiated TLS 1.3 and the rest TLS 1.2, with nothing observed on a deprecated protocol.</p>
-<p>The practical consequence is concrete. A citizen on public Wi-Fi is protected in transit but not against a downgrade attack, because HSTS is missing on half the estate. A portal with a login form is not protected against injected script, because two-thirds have no CSP. Both are edge configuration changes that need no application work, which is why Section VI recommends them at the proxy.</p>
-<h3>D. Mobile: declared versus actual</h3>
-<p>Declaring a viewport is not the same as fitting on a phone, so we rendered every audited portal at 375 pixels and measured the overflow.</p>
-<ul>
-<li><strong>86.7%</strong> declare <code>width=device-width</code>.</li>
-<li><strong>29.1%</strong> still overflow horizontally, by a mean of <strong>75 px</strong>.</li>
-<li>The gap between those two numbers, 86.7% declared against 70.9% actually fitting, is the measure of what we call viewport theatre.</li>
-</ul>
-<h3>E. Latency has a long tail</h3>
-<p>On the 488-portal tool-measured sample, TTFB is <strong>1,666 ms median</strong> and <strong>2,655 ms mean</strong>, with a 95th percentile of <strong>6,521 ms</strong>. Across all 7,542 reachable portals it is <strong>416 ms median</strong> and <strong>1,144 ms mean</strong>. The difference between the two samples is that the tool sample over-represents heavy institutional hosts.</p>
-<p>Median document size is <strong>45 KB</strong> and median DOM node count is <strong>286</strong>. Throughout this paper we report both median and mean, because the gap between them is itself a finding: a small number of very slow portals dominate the average, and quoting only the mean would misrepresent the typical experience.</p>
-<h3>F. Language is the weakest pillar</h3>
-<p>Only <strong>61.3%</strong> of reachable portals declare a document language at all. <strong>18.4%</strong> contain text in a scheduled Indian script, and <strong>4.1%</strong> declare <code>hreflang</code> alternates. For a country with twenty-two scheduled languages, this is the largest gap in the study.</p>
-<h3>G. What we cannot say about states and districts</h3>
-<p>The <code>district</code> column is empty for every row in this release, and only 62 domains are classified into the district tier. We therefore make no district-level claim at all.</p>
-<p>State attribution is inferred from the hostname's own labels, which works for <code>kerala.gov.in</code> but cannot resolve a central ministry to a state. Thirty-four distinct State/UT values appear among reachable portals, but the per-state samples are too small and too unevenly distributed to support a ranking, so we do not publish one. The raw grouping is available with <code>civicweb states</code> for anyone who wants to look.</p>
+<p>Two things follow. First, the accessibility problem is real and severe: fewer than one portal in twenty passes a machine audit with no violations. Second, the index and axe-core measure different things. The two samples share only five domains, so they cannot be correlated, and the index cannot be validated against axe-core with this data. The axe-core figure is an independent observation about a different population, and it is the more trustworthy of the two because it comes from a standard tool.</p>
 <hr>
 <h2>VI. What Should Change</h2>
-<p>Three recommendations follow from the data.</p>
-<p><strong>Move district and municipal portals onto S3WaaS.</strong> The accessibility gap between S3WaaS and legacy ASP.NET is 11.7 points, and S3WaaS reaches 98.5% mobile responsiveness. State governments still running bespoke ASP.NET sites are paying to maintain a worse product. Migration is the single highest-leverage accessibility intervention available.</p>
-<p><strong>Set security headers at the reverse proxy.</strong> The mean hardening score is 43.1 and only 33.4% of portals set a CSP. None of this requires touching application code. RailTel, NIC and the State Data Centres can inject HSTS with <code>max-age=31536000; includeSubDomains</code> and a baseline CSP at their NGINX or equivalent edge. This is a configuration change with a measurable effect on the whole estate.</p>
-<p><strong>Audit continuously, from inside the country.</strong> A point-in-time commercial audit tells you what was wrong last quarter. A continuous in-country observatory tells you when a department breaks its own alt text after a redeploy. The second is what changes behaviour.</p>
+<p><strong>Set security headers at the reverse proxy.</strong> Mean hardening is 44.2 and the strongest controls are the least deployed. None of this requires touching application code. A baseline CSP and HSTS with <code>max-age=31536000; includeSubDomains</code> at the edge would move the whole estate.</p>
+<p><strong>Treat accessibility as a template decision.</strong> The tightness of the violation distribution means the fix is templated rather than individual. Where a good template is used, accessibility is good. Education's 420 domains scoring 26.6 on security is a procurement problem, not 420 separate problems.</p>
+<p><strong>Measure from inside the country, and say which vantage you used.</strong> A point-in-time audit from abroad measures the firewall. A domestic probe measures the portal. Where a domestic probe is impossible, label the row rather than excluding the country.</p>
 <hr>
 <h2>VII. Limitations</h2>
-<p>We would rather state these plainly than have a reviewer find them.</p>
 <ol>
 <li>
-<p><strong>Automated testing is not conformance.</strong> axe-core catches a subset of WCAG failures. It cannot judge cognitive load, screen-reader audio flow or reading order. A portal that scores well here is free of the machine-detectable defects we tested for; it is not thereby WCAG-conformant. GIGW itself distinguishes automated from manual evaluation.</p>
+<p><strong>Automated testing is not conformance.</strong> axe-core catches a subset of WCAG failures. It cannot judge cognitive load, screen-reader audio flow or reading order. A domain scoring well here is free of the machine-detectable defects we tested for; it is not thereby WCAG-conformant.</p>
 </li>
 <li>
-<p><strong>The accessibility audit is a sample.</strong> axe-core ran on 374 portals, not all 7,542. The severity-weighted index in Table I comes from DOM signals across the full reachable set; the raw violation counts in Section V-A come from the 374-portal audit. We label which is which throughout.</p>
+<p><strong>LCP is estimated, never measured.</strong> $T_{\text{lcp}}$ is derived from TTFB and payload size. A true LCP needs a browser paint trace, which we did not run at scale.</p>
 </li>
 <li>
-<p><strong>LCP is estimated, never measured.</strong> $T_{\text{lcp}}$ is derived from TTFB and payload size. A true LCP needs a browser paint trace, which we did not run at scale. Every LCP figure here is an estimate and should not be quoted as a field measurement.</p>
+<p><strong>Nearest probes are not domestic.</strong> 651 of 2,011 rows were measured from a probe in another country. The <code>domestic_probe</code> column says which. Any claim about what a citizen experiences must filter on it.</p>
 </li>
 <li>
-<p><strong>One vantage point.</strong> All measurements come from a single Bangalore node. We did not run a paired overseas comparison, so we cannot quantify the bias a foreign crawler would introduce. Latency for a rural user on congested 4G will exceed our datacenter TTFB.</p>
+<p><strong>Discovery is not verification.</strong> A domain in the registry was observed in an auditable source. It was not confirmed to be an operational citizen portal, which is why reachability is 28.5% rather than near 100%.</p>
 </li>
 <li>
-<p><strong>Discovery is not verification.</strong> Certificate Transparency records every certificate ever issued, including expired and internal subdomains. A domain in our registry was observed in an auditable source; it was not confirmed to be an operational citizen portal. This is why reachability is 52.1% and why we say "discovered" rather than "census".</p>
+<p><strong>One snapshot.</strong> This release is a single observation. The dataset carries no per-domain timestamp series, so no trend claim is supported.</p>
 </li>
 <li>
-<p><strong>No district-level analysis.</strong> The <code>district</code> column is empty and only 62 domains are in the district tier. We make no claim about district administrations as a population.</p>
+<p><strong>Sector is inferred from the hostname.</strong> It is reliable for dedicated domains (<code>health.</code>, <code>court.</code>) and puts general portals in <code>general</code>. 1,354 of 2,011 rows are <code>general</code>, so the sector comparison is a comparison of the identifiable subset, not the whole population.</p>
 </li>
 <li>
-<p><strong>One snapshot.</strong> This release is a single observation. The observatory is designed for longitudinal monitoring, but the dataset carries no per-domain timestamp and no second snapshot, so no trend claim is made or supported.</p>
+<p><strong>The composite weights are a judgement.</strong> The 30/25/20/10/5/5/5 weighting encodes our view that accessibility and security matter most. It is not an empirical result.</p>
 </li>
 <li>
-<p><strong>Header-level evidence is supplementary.</strong> The per-directive rates in Section V-C come from a 488-portal sample. The released 20-column dataset carries the aggregate header score, not the six individual booleans. The per-directive figures reproduce from <code>data/real/full_tools.csv</code> in the repository, not from the released CSV alone.</p>
+<p><strong>The 50 unmeasurable countries are genuinely out of reach</strong> with one provider. A latency figure from 4,000 km describes the ocean cable, not the portal.</p>
 </li>
 <li>
-<p><strong>The composite weights are a judgement.</strong> The 30/25/20/10/5/5/5 weighting encodes our view that accessibility and security matter most. It is not an empirical result. Every component is published separately so a reader can reweight.</p>
+<p><strong>A country code can collide with a missing-value sentinel.</strong> Namibia's ISO-3166 alpha-2 code is <code>NA</code>, which is also the default missing-value token in most CSV readers. Every Namibian row was silently dropped from the first build of these aggregates — ten domains and one whole country, with no error raised. The released reader disables the default sentinel list and treats only an empty field as missing. Anyone re-analysing the CSV with a default reader will reproduce the bug, so the reader ships with the dataset.</p>
+</li>
+<li>
+<p><strong>The accessibility index is a proxy, not an audit.</strong> The cross-country release scores four structural signals read from the parsed DOM. It is not axe-core, and it cannot be validated against axe-core with this data because the two samples share only five domains. The 400-domain axe-core audit in Section V-E is the trustworthy accessibility measurement, and it covers one country. A reader who needs a defensible accessibility figure should use that, not the index.</p>
+</li>
+<li>
+<p><strong>The 55-point floor in the index is a design choice, not a finding.</strong> A page with no images and no form fields scores 100 on the two coverage terms by vacuity. This is why the index compresses the population into a narrow band (55–100) and why its mean of 86.1 should not be read as "86% accessible". It is a relative ordering, not an absolute level.</p>
+</li>
+<li>
+<p><strong>An empty body is not an accessible page.</strong> A host returning <code>HTTP 200</code> with a body under 200 bytes has no DOM to audit. The crawler's coverage terms scored such a page at 90.0 because there was nothing to fail. The canonical release refuses to score any document under 200 bytes and records it as <code>HTTP 200 with an empty body</code>; 33 rows were affected. A reader using the raw append-only log will reproduce the inflated score.</p>
+</li>
+<li>
+<p><strong>The raw log is append-only and must not be aggregated directly.</strong> 128 hosts were measured in more than one job, giving 2,143 rows for 2,011 distinct domains. The canonical release keeps the latest measurement per host. Aggregating the raw log double-counts those hosts in every mean and inflates the population by 6.6%.</p>
 </li>
 </ol>
 <hr>
 <h2>VIII. Conclusion</h2>
-<p>We measured 14,489 discovered Indian government and public-sector web domains from inside the country, and 7,542 of them responded. The picture that emerges is not one of collapse but of unevenness.</p>
-<p>Accessibility is mediocre almost everywhere and excellent almost nowhere: a mean of 3.48 axe-core violations per portal, with only 4.8% passing cleanly. The tightness of that distribution is the important part, because it means the fix is templated rather than individual. Where a good template is used, accessibility is good; S3WaaS portals score 95.4 against 82.0 for WordPress.</p>
-<p>Security is the real deficit. Transport encryption is essentially solved at 99.5%, but header hardening sits at 43.1 out of 100 and only a third of portals set a content security policy. These are proxy configuration changes, not application rewrites, and they are the cheapest improvement available to the estate.</p>
-<p>Language inclusion is the weakest pillar by a wide margin, at 18.4%.</p>
-<p>Everything in this paper can be recomputed from the released data. The dataset ships as Parquet, CSV and JSON under CC-BY-4.0; the crawler and discovery scripts are in the repository; and the observatory is live at <code>https://uniquepratham.github.io/DA-Project/</code>.</p>
-<pre><code class="language-python">import civicweb_observatory as bga
+<p>We measured 2,011 public-sector web domains across 82 countries, from the best vantage available for each, and recorded which vantage produced every row.</p>
+<p>The picture is not one of collapse but of unevenness. Transport encryption is essentially solved at 99.8%. Header hardening is not, at 44.2. Accessibility is mediocre almost everywhere and excellent almost nowhere, and the tightness of that distribution means the fix is templated rather than individual.</p>
+<p>The methodological result is that <strong>distance costs 677 ms</strong>. A study that measures only from inside, or only from outside, cannot see that. Recording the vantage on every row is what makes the comparison possible, and it is the difference between a measurement and an assertion.</p>
+<p>Everything in this paper can be recomputed from the released data. The dataset ships as Parquet, CSV and JSON under CC-BY-4.0; the crawler, discovery scripts and vantage model are in the repository; and the observatory is live at <code>https://uniquepratham.github.io/</code>.</p>
+<pre><code class="language-python">import civicweb_observatory as cwo
 
-bga.load()                  # 14,489 discovered domains
-bga.load(reachable=True)    # 7,542 that answered
-bga.tier_summary()          # Table I
-bga.architecture_summary()  # Table II
+cwo.load()                    # 2,011 measured domains
+cwo.load(reachable=True)      # 573 that answered
+cwo.country_summary()         # one row per country
+cwo.sector_summary()          # one row per sector
+cwo.vantage_comparison()      # domestic vs nearest
 </code></pre>
 <hr>
 <h2>References</h2>
 <ol>
 <li>World Wide Web Consortium, "Web Content Accessibility Guidelines (WCAG) 2.1," W3C Recommendation, June 2018. [Online]. Available: https://www.w3.org/TR/WCAG21/</li>
-<li>Ministry of Electronics and Information Technology, Government of India, "Guidelines for Indian Government Websites (GIGW) 3.0," 2019.</li>
 <li>Deque Systems, "axe-core: Accessibility Engine for Automated Web UI Testing," version 4.x. [Online]. Available: https://github.com/dequelabs/axe-core</li>
 <li>Google, "Core Web Vitals," web.dev. [Online]. Available: https://web.dev/vitals/</li>
 <li>OWASP Foundation, "OWASP Secure Headers Project." [Online]. Available: https://owasp.org/www-project-secure-headers/</li>
-<li>National Informatics Centre, "S3WaaS: Secure, Scalable and Sugamya Website as a Service." [Online]. Available: https://s3waas.gov.in/</li>
 <li>Certificate Transparency, crt.sh query interface. [Online]. Available: https://crt.sh/</li>
-<li>CERT-In, "Guidelines on Information Security Practices for Government Entities," Ministry of Electronics and Information Technology.</li>
+<li>RFC 9309, "Robots Exclusion Protocol," IETF, September 2022.</li>
+<li>Ministry of Electronics and Information Technology, Government of India, "Guidelines for Indian Government Websites (GIGW) 3.0," 2019.</li>
+<li>National Informatics Centre, "S3WaaS: Secure, Scalable and Sugamya Website as a Service." [Online]. Available: https://s3waas.gov.in/</li>
 </ol>
 </div>
 <script>

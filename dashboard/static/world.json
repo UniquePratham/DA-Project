@@ -2,7 +2,8 @@
  "generated_from": "Vultr region catalogue + country centroids",
  "total_countries": 249,
  "status_counts": {
-  "nearest_available": 180,
+  "nearest_available": 116,
+  "nearest_measured": 64,
   "unmeasurable": 50,
   "operational": 18,
   "domestic_ready": 1
@@ -24,7 +25,10 @@
    "distance_km": 1263,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 1263 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 1263 km away. Not yet measured."
   },
   {
    "code": "AL",
@@ -37,20 +41,26 @@
    "distance_km": 1006,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 1006 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 1006 km away. Not yet measured."
   },
   {
    "code": "DZ",
    "name": "Algeria",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mad",
    "probe_city": "Madrid",
    "probe_country": "ES",
    "distance_km": 1509,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 1509 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 65.0,
+   "note": "No domestic region. Measured from Madrid, ES, 1509 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "AS",
@@ -63,6 +73,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -76,7 +89,10 @@
    "distance_km": 492,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 492 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 492 km away. Not yet measured."
   },
   {
    "code": "AO",
@@ -89,7 +105,10 @@
    "distance_km": 1819,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 1819 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 1819 km away. Not yet measured."
   },
   {
    "code": "AI",
@@ -102,6 +121,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -115,6 +137,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -128,33 +153,42 @@
    "distance_km": 2133,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2133 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2133 km away. Not yet measured."
   },
   {
    "code": "AR",
    "name": "Argentina",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "scl",
    "probe_city": "Santiago",
    "probe_country": "CL",
    "distance_km": 623,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Santiago, CL, 623 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 6,
+   "maturity": 57.9,
+   "note": "No domestic region. Measured from Santiago, CL, 623 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "AM",
    "name": "Armenia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 2277,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2277 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Warsaw, PL, 2277 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "AW",
@@ -167,7 +201,10 @@
    "distance_km": 1830,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1830 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1830 km away. Not yet measured."
   },
   {
    "code": "AU",
@@ -180,6 +217,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 27,
+   "maturity": 59.3,
    "note": "Measured from Melbourne."
   },
   {
@@ -193,7 +233,10 @@
    "distance_km": 373,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 373 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 373 km away. Not yet measured."
   },
   {
    "code": "AZ",
@@ -206,7 +249,10 @@
    "distance_km": 2393,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2393 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Warsaw, PL, 2393 km away. Not yet measured."
   },
   {
    "code": "BS",
@@ -219,33 +265,42 @@
    "distance_km": 455,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 455 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 455 km away. Not yet measured."
   },
   {
    "code": "BH",
    "name": "Bahrain",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "bom",
    "probe_city": "Mumbai",
    "probe_country": "IN",
    "distance_km": 2421,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2421 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 3,
+   "maturity": 46.2,
+   "note": "No domestic region. Measured from Mumbai, IN, 2421 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "BD",
    "name": "Bangladesh",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "del",
    "probe_city": "Delhi NCR",
    "probe_country": "IN",
    "distance_km": 1374,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 1374 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 18,
+   "reachable": 2,
+   "maturity": 40.0,
+   "note": "No domestic region. Measured from Delhi NCR, IN, 1374 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "BB",
@@ -258,33 +313,42 @@
    "distance_km": 2577,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2577 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2577 km away. Not yet measured."
   },
   {
    "code": "BY",
    "name": "Belarus",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 481,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 481 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 5,
+   "maturity": 60.9,
+   "note": "No domestic region. Measured from Warsaw, PL, 481 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "BE",
    "name": "Belgium",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "ams",
    "probe_city": "Amsterdam",
    "probe_country": "NL",
    "distance_km": 188,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Amsterdam, NL, 188 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 66.7,
+   "note": "No domestic region. Measured from Amsterdam, NL, 188 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "BZ",
@@ -297,7 +361,10 @@
    "distance_km": 1112,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mexico City, MX, 1112 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mexico City, MX, 1112 km away. Not yet measured."
   },
   {
    "code": "BJ",
@@ -310,7 +377,10 @@
    "distance_km": 3487,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3487 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3487 km away. Not yet measured."
   },
   {
    "code": "BM",
@@ -323,6 +393,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -336,7 +409,10 @@
    "distance_km": 1310,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 1310 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 1310 km away. Not yet measured."
   },
   {
    "code": "BO",
@@ -349,7 +425,10 @@
    "distance_km": 1911,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Santiago, CL, 1911 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Santiago, CL, 1911 km away. Not yet measured."
   },
   {
    "code": "BQ",
@@ -362,6 +441,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -375,20 +457,26 @@
    "distance_km": 714,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 714 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 714 km away. Not yet measured."
   },
   {
    "code": "BW",
    "name": "Botswana",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 619,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 619 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 619 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "BV",
@@ -401,6 +489,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -414,6 +505,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 27,
+   "maturity": 64.2,
    "note": "Measured from São Paulo."
   },
   {
@@ -427,6 +521,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -440,20 +537,26 @@
    "distance_km": 1262,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 1262 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Singapore, SG, 1262 km away. Not yet measured."
   },
   {
    "code": "BG",
    "name": "Bulgaria",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 1066,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 1066 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 74.8,
+   "note": "No domestic region. Measured from Warsaw, PL, 1066 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "BF",
@@ -466,7 +569,10 @@
    "distance_km": 3051,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3051 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3051 km away. Not yet measured."
   },
   {
    "code": "BI",
@@ -479,7 +585,10 @@
    "distance_km": 2533,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 2533 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 2533 km away. Not yet measured."
   },
   {
    "code": "CV",
@@ -492,7 +601,10 @@
    "distance_km": 3346,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3346 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3346 km away. Not yet measured."
   },
   {
    "code": "KH",
@@ -505,7 +617,10 @@
    "distance_km": 1308,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 1308 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Singapore, SG, 1308 km away. Not yet measured."
   },
   {
    "code": "CM",
@@ -518,7 +633,10 @@
    "distance_km": 3975,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3975 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3975 km away. Not yet measured."
   },
   {
    "code": "CA",
@@ -531,6 +649,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 22,
+   "maturity": 62.7,
    "note": "Measured from Toronto."
   },
   {
@@ -544,6 +665,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -557,7 +681,10 @@
    "distance_km": 3768,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3768 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3768 km away. Not yet measured."
   },
   {
    "code": "TD",
@@ -570,7 +697,10 @@
    "distance_km": 3513,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 3513 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 3513 km away. Not yet measured."
   },
   {
    "code": "CL",
@@ -583,20 +713,26 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 75,
+   "reachable": 32,
+   "maturity": 65.1,
    "note": "Measured from Santiago."
   },
   {
    "code": "CN",
    "name": "China",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "icn",
    "probe_city": "Seoul",
    "probe_country": "KR",
    "distance_km": 1952,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 1952 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Seoul, KR, 1952 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "CX",
@@ -609,6 +745,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -622,20 +761,26 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "CO",
    "name": "Colombia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mia",
    "probe_city": "Miami",
    "probe_country": "US",
    "distance_km": 2577,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2577 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 3,
+   "maturity": 62.8,
+   "note": "No domestic region. Measured from Miami, US, 2577 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "KM",
@@ -648,7 +793,10 @@
    "distance_km": 2309,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 2309 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 2309 km away. Not yet measured."
   },
   {
    "code": "CG",
@@ -661,7 +809,10 @@
    "distance_km": 3129,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3129 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3129 km away. Not yet measured."
   },
   {
    "code": "CD",
@@ -674,7 +825,10 @@
    "distance_km": 2689,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 2689 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 2689 km away. Not yet measured."
   },
   {
    "code": "CK",
@@ -687,6 +841,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -700,7 +857,10 @@
    "distance_km": 1802,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1802 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1802 km away. Not yet measured."
   },
   {
    "code": "HR",
@@ -713,7 +873,10 @@
    "distance_km": 471,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 471 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 471 km away. Not yet measured."
   },
   {
    "code": "CU",
@@ -726,7 +889,10 @@
    "distance_km": 479,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 479 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 479 km away. Not yet measured."
   },
   {
    "code": "CW",
@@ -739,33 +905,42 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "CY",
    "name": "Cyprus",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 2136,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2136 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 5,
+   "maturity": 51.6,
+   "note": "No domestic region. Measured from Warsaw, PL, 2136 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "CZ",
    "name": "Czechia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 468,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 468 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 3,
+   "maturity": 57.7,
+   "note": "No domestic region. Measured from Warsaw, PL, 468 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "CI",
@@ -778,7 +953,10 @@
    "distance_km": 3605,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3605 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3605 km away. Not yet measured."
   },
   {
    "code": "DK",
@@ -791,7 +969,10 @@
    "distance_km": 520,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Amsterdam, NL, 520 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Amsterdam, NL, 520 km away. Not yet measured."
   },
   {
    "code": "DJ",
@@ -804,7 +985,10 @@
    "distance_km": 3311,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 3311 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mumbai, IN, 3311 km away. Not yet measured."
   },
   {
    "code": "DM",
@@ -817,7 +1001,10 @@
    "distance_km": 2269,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2269 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2269 km away. Not yet measured."
   },
   {
    "code": "DO",
@@ -830,20 +1017,26 @@
    "distance_km": 1234,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1234 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1234 km away. Not yet measured."
   },
   {
    "code": "EC",
    "name": "Ecuador",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mia",
    "probe_city": "Miami",
    "probe_country": "US",
    "distance_km": 3105,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 3105 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 58.6,
+   "note": "No domestic region. Measured from Miami, US, 3105 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "EG",
@@ -856,7 +1049,10 @@
    "distance_km": 2760,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 2760 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 2760 km away. Not yet measured."
   },
   {
    "code": "SV",
@@ -869,7 +1065,10 @@
    "distance_km": 1252,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mexico City, MX, 1252 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mexico City, MX, 1252 km away. Not yet measured."
   },
   {
    "code": "GQ",
@@ -882,7 +1081,10 @@
    "distance_km": 3684,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3684 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3684 km away. Not yet measured."
   },
   {
    "code": "ER",
@@ -895,20 +1097,26 @@
    "distance_km": 3627,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 3627 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mumbai, IN, 3627 km away. Not yet measured."
   },
   {
    "code": "EE",
    "name": "Estonia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sto",
    "probe_city": "Stockholm",
    "probe_country": "SE",
    "distance_km": 451,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Stockholm, SE, 451 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 9,
+   "reachable": 2,
+   "maturity": 79.2,
+   "note": "No domestic region. Measured from Stockholm, SE, 451 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "SZ",
@@ -921,20 +1129,26 @@
    "distance_km": 350,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 350 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 350 km away. Not yet measured."
   },
   {
    "code": "ET",
    "name": "Ethiopia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 3953,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3953 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 55.0,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 3953 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "FK",
@@ -947,6 +1161,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -960,6 +1177,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -973,7 +1193,10 @@
    "distance_km": 3194,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 3194 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 3194 km away. Not yet measured."
   },
   {
    "code": "FI",
@@ -986,7 +1209,10 @@
    "distance_km": 668,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Stockholm, SE, 668 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Stockholm, SE, 668 km away. Not yet measured."
   },
   {
    "code": "FR",
@@ -999,6 +1225,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 17,
+   "maturity": 63.2,
    "note": "Measured from Paris."
   },
   {
@@ -1012,6 +1241,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1025,6 +1257,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1038,6 +1273,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1051,7 +1289,10 @@
    "distance_km": 3295,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3295 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3295 km away. Not yet measured."
   },
   {
    "code": "GM",
@@ -1064,20 +1305,26 @@
    "distance_km": 3204,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3204 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3204 km away. Not yet measured."
   },
   {
    "code": "GE",
    "name": "Georgia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 2033,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2033 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 5,
+   "maturity": 48.7,
+   "note": "No domestic region. Measured from Warsaw, PL, 2033 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "DE",
@@ -1090,20 +1337,26 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 12,
+   "maturity": 76.3,
    "note": "Measured from Frankfurt."
   },
   {
    "code": "GH",
    "name": "Ghana",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mad",
    "probe_city": "Madrid",
    "probe_country": "ES",
    "distance_km": 3607,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3607 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 7,
+   "maturity": 43.2,
+   "note": "No domestic region. Measured from Madrid, ES, 3607 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "GI",
@@ -1116,6 +1369,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1129,7 +1385,10 @@
    "distance_km": 1275,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 1275 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 1275 km away. Not yet measured."
   },
   {
    "code": "GL",
@@ -1142,6 +1401,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1155,7 +1417,10 @@
    "distance_km": 2465,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2465 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2465 km away. Not yet measured."
   },
   {
    "code": "GP",
@@ -1168,6 +1433,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1181,6 +1449,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1194,7 +1465,10 @@
    "distance_km": 1029,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mexico City, MX, 1029 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mexico City, MX, 1029 km away. Not yet measured."
   },
   {
    "code": "GG",
@@ -1207,6 +1481,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1220,7 +1497,10 @@
    "distance_km": 3327,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3327 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3327 km away. Not yet measured."
   },
   {
    "code": "GW",
@@ -1233,7 +1513,10 @@
    "distance_km": 3346,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3346 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3346 km away. Not yet measured."
   },
   {
    "code": "GY",
@@ -1246,7 +1529,10 @@
    "distance_km": 3231,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 3231 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 3231 km away. Not yet measured."
   },
   {
    "code": "HT",
@@ -1259,7 +1545,10 @@
    "distance_km": 1109,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1109 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1109 km away. Not yet measured."
   },
   {
    "code": "HM",
@@ -1272,6 +1561,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1285,7 +1577,10 @@
    "distance_km": 480,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 480 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 480 km away. Not yet measured."
   },
   {
    "code": "HN",
@@ -1298,20 +1593,26 @@
    "distance_km": 1368,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1368 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1368 km away. Not yet measured."
   },
   {
    "code": "HK",
    "name": "Hong Kong",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "icn",
    "probe_city": "Seoul",
    "probe_country": "KR",
    "distance_km": 2066,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 2066 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 6,
+   "maturity": 62.2,
+   "note": "No domestic region. Measured from Seoul, KR, 2066 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "HU",
@@ -1324,7 +1625,10 @@
    "distance_km": 583,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 583 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Warsaw, PL, 583 km away. Not yet measured."
   },
   {
    "code": "IS",
@@ -1337,7 +1641,10 @@
    "distance_km": 1553,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Manchester, GB, 1553 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Manchester, GB, 1553 km away. Not yet measured."
   },
   {
    "code": "IN",
@@ -1350,20 +1657,26 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 109,
+   "reachable": 52,
+   "maturity": 53.1,
    "note": "Measured from Bangalore."
   },
   {
    "code": "ID",
    "name": "Indonesia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sgp",
    "probe_city": "Singapore",
    "probe_country": "SG",
    "distance_km": 1931,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 1931 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 55.5,
+   "note": "No domestic region. Measured from Singapore, SG, 1931 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "IR",
@@ -1376,7 +1689,10 @@
    "distance_km": 2349,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 2349 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 2349 km away. Not yet measured."
   },
   {
    "code": "IQ",
@@ -1389,20 +1705,26 @@
    "distance_km": 2822,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2822 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Warsaw, PL, 2822 km away. Not yet measured."
   },
   {
    "code": "IE",
    "name": "Ireland",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "man",
    "probe_city": "Manchester",
    "probe_country": "GB",
    "distance_km": 390,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Manchester, GB, 390 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 60.4,
+   "note": "No domestic region. Measured from Manchester, GB, 390 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "IM",
@@ -1415,12 +1737,15 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "IL",
    "name": "Israel",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
@@ -1428,7 +1753,10 @@
    "distance_km": 2567,
    "can_claim_domestic": false,
    "measured": true,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2567 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 89,
+   "reachable": 33,
+   "maturity": 55.4,
+   "note": "No domestic region. Measured from Warsaw, PL, 2567 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "IT",
@@ -1441,6 +1769,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "Domestic region in Milan; not yet measured."
   },
   {
@@ -1454,7 +1785,10 @@
    "distance_km": 907,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 907 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 907 km away. Not yet measured."
   },
   {
    "code": "JP",
@@ -1467,6 +1801,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 15,
+   "maturity": 57.0,
    "note": "Measured from Osaka."
   },
   {
@@ -1480,46 +1817,58 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "JO",
    "name": "Jordan",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 2655,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2655 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 59.3,
+   "note": "No domestic region. Measured from Warsaw, PL, 2655 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "KZ",
    "name": "Kazakhstan",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "del",
    "probe_city": "Delhi NCR",
    "probe_country": "IN",
    "distance_km": 2298,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 2298 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Delhi NCR, IN, 2298 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "KE",
    "name": "Kenya",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 3209,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3209 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 31.1,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 3209 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "KI",
@@ -1532,7 +1881,10 @@
    "distance_km": 3852,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Honolulu, US, 3852 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Honolulu, US, 3852 km away. Not yet measured."
   },
   {
    "code": "KP",
@@ -1545,7 +1897,10 @@
    "distance_km": 280,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 280 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Seoul, KR, 280 km away. Not yet measured."
   },
   {
    "code": "KR",
@@ -1558,20 +1913,26 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 27,
+   "maturity": 57.7,
    "note": "Measured from Seoul."
   },
   {
    "code": "KW",
    "name": "Kuwait",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "bom",
    "probe_city": "Mumbai",
    "probe_country": "IN",
    "distance_km": 2970,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2970 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 46.1,
+   "note": "No domestic region. Measured from Mumbai, IN, 2970 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "KG",
@@ -1584,7 +1945,10 @@
    "distance_km": 1393,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 1393 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 1393 km away. Not yet measured."
   },
   {
    "code": "LA",
@@ -1597,33 +1961,42 @@
    "distance_km": 1862,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 1862 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Singapore, SG, 1862 km away. Not yet measured."
   },
   {
    "code": "LV",
    "name": "Latvia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sto",
    "probe_city": "Stockholm",
    "probe_country": "SE",
    "distance_km": 479,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Stockholm, SE, 479 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 71.3,
+   "note": "No domestic region. Measured from Stockholm, SE, 479 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "LB",
    "name": "Lebanon",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 2363,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2363 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 6,
+   "maturity": 46.1,
+   "note": "No domestic region. Measured from Warsaw, PL, 2363 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "LS",
@@ -1636,7 +2009,10 @@
    "distance_km": 370,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 370 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 370 km away. Not yet measured."
   },
   {
    "code": "LR",
@@ -1649,7 +2025,10 @@
    "distance_km": 3814,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3814 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3814 km away. Not yet measured."
   },
   {
    "code": "LY",
@@ -1662,7 +2041,10 @@
    "distance_km": 2170,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 2170 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 2170 km away. Not yet measured."
   },
   {
    "code": "LI",
@@ -1675,46 +2057,58 @@
    "distance_km": 192,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 192 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 192 km away. Not yet measured."
   },
   {
    "code": "LT",
    "name": "Lithuania",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 369,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 369 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 6,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Warsaw, PL, 369 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "LU",
    "name": "Luxembourg",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "fra",
    "probe_city": "Frankfurt",
    "probe_country": "DE",
    "distance_km": 189,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Frankfurt, DE, 189 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 72.3,
+   "note": "No domestic region. Measured from Frankfurt, DE, 189 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "MO",
    "name": "Macao",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "icn",
    "probe_city": "Seoul",
    "probe_country": "KR",
    "distance_km": 2114,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 2114 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 54.9,
+   "note": "No domestic region. Measured from Seoul, KR, 2114 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "MG",
@@ -1727,7 +2121,10 @@
    "distance_km": 2059,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 2059 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 2059 km away. Not yet measured."
   },
   {
    "code": "MW",
@@ -1740,20 +2137,26 @@
    "distance_km": 1545,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 1545 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 1545 km away. Not yet measured."
   },
   {
    "code": "MY",
    "name": "Malaysia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sgp",
    "probe_city": "Singapore",
    "probe_country": "SG",
    "distance_km": 976,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 976 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 48.8,
+   "note": "No domestic region. Measured from Singapore, SG, 976 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "MV",
@@ -1766,7 +2169,10 @@
    "distance_km": 1192,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Bangalore, IN, 1192 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Bangalore, IN, 1192 km away. Not yet measured."
   },
   {
    "code": "ML",
@@ -1779,7 +2185,10 @@
    "distance_km": 2602,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 2602 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 2602 km away. Not yet measured."
   },
   {
    "code": "MT",
@@ -1792,7 +2201,10 @@
    "distance_km": 1153,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 1153 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 1153 km away. Not yet measured."
   },
   {
    "code": "MH",
@@ -1805,7 +2217,10 @@
    "distance_km": 3895,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Honolulu, US, 3895 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Honolulu, US, 3895 km away. Not yet measured."
   },
   {
    "code": "MQ",
@@ -1818,6 +2233,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1831,20 +2249,26 @@
    "distance_km": 2402,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 2402 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 2402 km away. Not yet measured."
   },
   {
    "code": "MU",
    "name": "Mauritius",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 3087,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3087 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 6,
+   "maturity": 48.2,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 3087 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "YT",
@@ -1857,6 +2281,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -1870,6 +2297,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 33,
+   "maturity": 55.5,
    "note": "Measured from Mexico City."
   },
   {
@@ -1883,20 +2313,26 @@
    "distance_km": 3716,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Tokyo, JP, 3716 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Tokyo, JP, 3716 km away. Not yet measured."
   },
   {
    "code": "MD",
    "name": "Moldova, Republic of",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 816,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 816 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 7,
+   "maturity": 60.4,
+   "note": "No domestic region. Measured from Warsaw, PL, 816 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "MC",
@@ -1909,20 +2345,26 @@
    "distance_km": 246,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 246 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 246 km away. Not yet measured."
   },
   {
    "code": "MN",
    "name": "Mongolia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "icn",
    "probe_city": "Seoul",
    "probe_country": "KR",
    "distance_km": 2017,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 2017 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 41.2,
+   "note": "No domestic region. Measured from Seoul, KR, 2017 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "ME",
@@ -1935,7 +2377,10 @@
    "distance_km": 873,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 873 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 873 km away. Not yet measured."
   },
   {
    "code": "MS",
@@ -1948,20 +2393,26 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "MA",
    "name": "Morocco",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mad",
    "probe_city": "Madrid",
    "probe_country": "ES",
    "distance_km": 941,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 941 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 61.9,
+   "note": "No domestic region. Measured from Madrid, ES, 941 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "MZ",
@@ -1974,7 +2425,10 @@
    "distance_km": 1135,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 1135 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 1135 km away. Not yet measured."
   },
   {
    "code": "MM",
@@ -1987,20 +2441,26 @@
    "distance_km": 2212,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 2212 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 2212 km away. Not yet measured."
   },
   {
    "code": "NA",
    "name": "Namibia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 1210,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 1210 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 1210 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "NR",
@@ -2013,20 +2473,26 @@
    "distance_km": 4058,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 4058 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 4058 km away. Not yet measured."
   },
   {
    "code": "NP",
    "name": "Nepal",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "del",
    "probe_city": "Delhi NCR",
    "probe_country": "IN",
    "distance_km": 669,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 669 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 18,
+   "reachable": 8,
+   "maturity": 45.4,
+   "note": "No domestic region. Measured from Delhi NCR, IN, 669 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "NL",
@@ -2039,6 +2505,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 21,
+   "maturity": 79.5,
    "note": "Measured from Amsterdam."
   },
   {
@@ -2052,20 +2521,26 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "NZ",
    "name": "New Zealand",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "syd",
    "probe_city": "Sydney",
    "probe_country": "AU",
    "distance_km": 2154,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 2154 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 3,
+   "maturity": 63.1,
+   "note": "No domestic region. Measured from Sydney, AU, 2154 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "NI",
@@ -2078,7 +2553,10 @@
    "distance_km": 1509,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1509 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1509 km away. Not yet measured."
   },
   {
    "code": "NE",
@@ -2091,20 +2569,26 @@
    "distance_km": 2939,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 2939 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 2939 km away. Not yet measured."
   },
   {
    "code": "NG",
    "name": "Nigeria",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mad",
    "probe_city": "Madrid",
    "probe_country": "ES",
    "distance_km": 3572,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3572 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 46.9,
+   "note": "No domestic region. Measured from Madrid, ES, 3572 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "NU",
@@ -2117,6 +2601,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2130,6 +2617,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2143,7 +2633,10 @@
    "distance_km": 1095,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 1095 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 1095 km away. Not yet measured."
   },
   {
    "code": "MP",
@@ -2156,6 +2649,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2169,33 +2665,42 @@
    "distance_km": 533,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Stockholm, SE, 533 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Stockholm, SE, 533 km away. Not yet measured."
   },
   {
    "code": "OM",
    "name": "Oman",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "bom",
    "probe_city": "Mumbai",
    "probe_country": "IN",
    "distance_km": 1673,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 1673 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Mumbai, IN, 1673 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "PK",
    "name": "Pakistan",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "del",
    "probe_city": "Delhi NCR",
    "probe_country": "IN",
    "distance_km": 715,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 715 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 37.5,
+   "note": "No domestic region. Measured from Delhi NCR, IN, 715 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "PW",
@@ -2208,7 +2713,10 @@
    "distance_km": 3026,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Osaka, JP, 3026 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Osaka, JP, 3026 km away. Not yet measured."
   },
   {
    "code": "PS",
@@ -2221,7 +2729,10 @@
    "distance_km": 2523,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2523 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Warsaw, PL, 2523 km away. Not yet measured."
   },
   {
    "code": "PA",
@@ -2234,7 +2745,10 @@
    "distance_km": 1868,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 1868 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 1868 km away. Not yet measured."
   },
   {
    "code": "PG",
@@ -2247,7 +2761,10 @@
    "distance_km": 3132,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 3132 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 3132 km away. Not yet measured."
   },
   {
    "code": "PY",
@@ -2260,33 +2777,42 @@
    "distance_km": 1166,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is São Paulo, BR, 1166 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be São Paulo, BR, 1166 km away. Not yet measured."
   },
   {
    "code": "PE",
    "name": "Peru",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "scl",
    "probe_city": "Santiago",
    "probe_country": "CL",
    "distance_km": 2658,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Santiago, CL, 2658 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 64.3,
+   "note": "No domestic region. Measured from Santiago, CL, 2658 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "PH",
    "name": "Philippines",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sgp",
    "probe_city": "Singapore",
    "probe_country": "SG",
    "distance_km": 2389,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 2389 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 52.9,
+   "note": "No domestic region. Measured from Singapore, SG, 2389 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "PN",
@@ -2299,6 +2825,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2312,20 +2841,26 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 34,
+   "maturity": 63.3,
    "note": "Measured from Warsaw."
   },
   {
    "code": "PT",
    "name": "Portugal",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "mad",
    "probe_city": "Madrid",
    "probe_country": "ES",
    "distance_km": 380,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 380 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 65.2,
+   "note": "No domestic region. Measured from Madrid, ES, 380 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "PR",
@@ -2338,46 +2873,58 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "QA",
    "name": "Qatar",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "bom",
    "probe_city": "Mumbai",
    "probe_country": "IN",
    "distance_km": 2335,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2335 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 71.3,
+   "note": "No domestic region. Measured from Mumbai, IN, 2335 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "RO",
    "name": "Romania",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 748,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 748 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 49.9,
+   "note": "No domestic region. Measured from Warsaw, PL, 748 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "RU",
    "name": "Russian Federation",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "icn",
    "probe_city": "Seoul",
    "probe_country": "KR",
    "distance_km": 3128,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 3128 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 39.8,
+   "note": "No domestic region. Measured from Seoul, KR, 3128 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "RW",
@@ -2390,7 +2937,10 @@
    "distance_km": 2699,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 2699 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 2699 km away. Not yet measured."
   },
   {
    "code": "RE",
@@ -2403,6 +2953,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2416,6 +2969,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2429,6 +2985,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2442,7 +3001,10 @@
    "distance_km": 2039,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2039 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2039 km away. Not yet measured."
   },
   {
    "code": "LC",
@@ -2455,7 +3017,10 @@
    "distance_km": 2400,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2400 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2400 km away. Not yet measured."
   },
   {
    "code": "MF",
@@ -2468,6 +3033,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2481,6 +3049,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2494,7 +3065,10 @@
    "distance_km": 2430,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2430 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2430 km away. Not yet measured."
   },
   {
    "code": "WS",
@@ -2507,7 +3081,10 @@
    "distance_km": 4200,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Honolulu, US, 4200 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Honolulu, US, 4200 km away. Not yet measured."
   },
   {
    "code": "SM",
@@ -2520,7 +3097,10 @@
    "distance_km": 309,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 309 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 309 km away. Not yet measured."
   },
   {
    "code": "ST",
@@ -2533,20 +3113,26 @@
    "distance_km": 3772,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3772 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3772 km away. Not yet measured."
   },
   {
    "code": "SA",
    "name": "Saudi Arabia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "bom",
    "probe_city": "Mumbai",
    "probe_country": "IN",
    "distance_km": 2943,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2943 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Mumbai, IN, 2943 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "SN",
@@ -2559,20 +3145,26 @@
    "distance_km": 3102,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3102 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3102 km away. Not yet measured."
   },
   {
    "code": "RS",
    "name": "Serbia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 912,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 912 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 5,
+   "maturity": 52.0,
+   "note": "No domestic region. Measured from Warsaw, PL, 912 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "SC",
@@ -2585,7 +3177,10 @@
    "distance_km": 3129,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Bangalore, IN, 3129 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Bangalore, IN, 3129 km away. Not yet measured."
   },
   {
    "code": "SL",
@@ -2598,7 +3193,10 @@
    "distance_km": 3637,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3637 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3637 km away. Not yet measured."
   },
   {
    "code": "SG",
@@ -2611,6 +3209,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 11,
+   "maturity": 59.0,
    "note": "Measured from Singapore."
   },
   {
@@ -2624,20 +3225,26 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "SK",
    "name": "Slovakia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 403,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 403 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 61.0,
+   "note": "No domestic region. Measured from Warsaw, PL, 403 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "SI",
@@ -2650,7 +3257,10 @@
    "distance_km": 439,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 439 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 439 km away. Not yet measured."
   },
   {
    "code": "SB",
@@ -2663,7 +3273,10 @@
    "distance_km": 2989,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 2989 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 2989 km away. Not yet measured."
   },
   {
    "code": "SO",
@@ -2676,7 +3289,10 @@
    "distance_km": 2760,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2760 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mumbai, IN, 2760 km away. Not yet measured."
   },
   {
    "code": "ZA",
@@ -2689,6 +3305,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 23,
+   "maturity": 50.4,
    "note": "Measured from Johannesburg."
   },
   {
@@ -2702,6 +3321,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2715,7 +3337,10 @@
    "distance_km": 3698,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3698 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Johannesburg, ZA, 3698 km away. Not yet measured."
   },
   {
    "code": "ES",
@@ -2728,20 +3353,26 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 79,
+   "reachable": 18,
+   "maturity": 66.1,
    "note": "Measured from Madrid."
   },
   {
    "code": "LK",
    "name": "Sri Lanka",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "blr",
    "probe_city": "Bangalore",
    "probe_country": "IN",
    "distance_km": 764,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Bangalore, IN, 764 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 8,
+   "maturity": 43.9,
+   "note": "No domestic region. Measured from Bangalore, IN, 764 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "SD",
@@ -2754,7 +3385,10 @@
    "distance_km": 3910,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 3910 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 3910 km away. Not yet measured."
   },
   {
    "code": "SR",
@@ -2767,7 +3401,10 @@
    "distance_km": 3223,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is São Paulo, BR, 3223 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be São Paulo, BR, 3223 km away. Not yet measured."
   },
   {
    "code": "SJ",
@@ -2780,6 +3417,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2793,6 +3433,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 4,
+   "reachable": 4,
+   "maturity": 72.2,
    "note": "Measured from Stockholm."
   },
   {
@@ -2806,7 +3449,10 @@
    "distance_km": 191,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 191 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 191 km away. Not yet measured."
   },
   {
    "code": "SY",
@@ -2819,20 +3465,26 @@
    "distance_km": 2339,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 2339 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Warsaw, PL, 2339 km away. Not yet measured."
   },
   {
    "code": "TW",
    "name": "Taiwan, Province of China",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "icn",
    "probe_city": "Seoul",
    "probe_country": "KR",
    "distance_km": 1625,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Seoul, KR, 1625 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Seoul, KR, 1625 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "TJ",
@@ -2845,33 +3497,42 @@
    "distance_km": 1290,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 1290 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 1290 km away. Not yet measured."
   },
   {
    "code": "TZ",
    "name": "Tanzania, United Republic of",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 2366,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 2366 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 53.1,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 2366 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "TH",
    "name": "Thailand",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sgp",
    "probe_city": "Singapore",
    "probe_country": "SG",
    "distance_km": 1554,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 1554 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 1,
+   "maturity": 52.4,
+   "note": "No domestic region. Measured from Singapore, SG, 1554 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "TL",
@@ -2884,7 +3545,10 @@
    "distance_km": 2678,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 2678 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Singapore, SG, 2678 km away. Not yet measured."
   },
   {
    "code": "TG",
@@ -2897,7 +3561,10 @@
    "distance_km": 3635,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Madrid, ES, 3635 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Madrid, ES, 3635 km away. Not yet measured."
   },
   {
    "code": "TK",
@@ -2910,6 +3577,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2923,7 +3593,10 @@
    "distance_km": 3667,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 3667 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 3667 km away. Not yet measured."
   },
   {
    "code": "TT",
@@ -2936,7 +3609,10 @@
    "distance_km": 2610,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2610 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2610 km away. Not yet measured."
   },
   {
    "code": "TN",
@@ -2949,7 +3625,10 @@
    "distance_km": 1279,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Milan, IT, 1279 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Milan, IT, 1279 km away. Not yet measured."
   },
   {
    "code": "TM",
@@ -2962,7 +3641,10 @@
    "distance_km": 2019,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 2019 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Delhi NCR, IN, 2019 km away. Not yet measured."
   },
   {
    "code": "TC",
@@ -2975,6 +3657,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -2988,59 +3673,74 @@
    "distance_km": 3979,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 3979 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 3979 km away. Not yet measured."
   },
   {
    "code": "TR",
    "name": "Türkiye",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 1821,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 1821 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 54.8,
+   "note": "No domestic region. Measured from Warsaw, PL, 1821 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "UG",
    "name": "Uganda",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 3055,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 3055 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 7,
+   "maturity": 54.2,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 3055 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "UA",
    "name": "Ukraine",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "waw",
    "probe_city": "Warsaw",
    "probe_country": "PL",
    "distance_km": 853,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Warsaw, PL, 853 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 3,
+   "maturity": 50.6,
+   "note": "No domestic region. Measured from Warsaw, PL, 853 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "AE",
    "name": "United Arab Emirates",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "bom",
    "probe_city": "Mumbai",
    "probe_country": "IN",
    "distance_km": 2027,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2027 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Measured from Mumbai, IN, 2027 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "GB",
@@ -3053,6 +3753,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 99,
+   "reachable": 20,
+   "maturity": 69.5,
    "note": "Measured from London."
   },
   {
@@ -3066,6 +3769,9 @@
    "distance_km": 0,
    "can_claim_domestic": true,
    "measured": true,
+   "domains": 99,
+   "reachable": 42,
+   "maturity": 57.0,
    "note": "Measured from Atlanta."
   },
   {
@@ -3079,33 +3785,42 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
    "code": "UY",
    "name": "Uruguay",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "scl",
    "probe_city": "Santiago",
    "probe_country": "CL",
    "distance_km": 1367,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Santiago, CL, 1367 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 4,
+   "maturity": 62.8,
+   "note": "No domestic region. Measured from Santiago, CL, 1367 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "UZ",
    "name": "Uzbekistan",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "del",
    "probe_city": "Delhi NCR",
    "probe_country": "IN",
    "distance_km": 1827,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Delhi NCR, IN, 1827 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 64.3,
+   "note": "No domestic region. Measured from Delhi NCR, IN, 1827 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "VU",
@@ -3118,7 +3833,10 @@
    "distance_km": 2542,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Sydney, AU, 2542 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Sydney, AU, 2542 km away. Not yet measured."
   },
   {
    "code": "VE",
@@ -3131,20 +3849,26 @@
    "distance_km": 2485,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Miami, US, 2485 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Miami, US, 2485 km away. Not yet measured."
   },
   {
    "code": "VN",
    "name": "Viet Nam",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "sgp",
    "probe_city": "Singapore",
    "probe_country": "SG",
    "distance_km": 1652,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Singapore, SG, 1652 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 3,
+   "maturity": 44.6,
+   "note": "No domestic region. Measured from Singapore, SG, 1652 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "VG",
@@ -3157,6 +3881,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -3170,6 +3897,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -3183,6 +3913,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -3196,6 +3929,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   },
   {
@@ -3209,33 +3945,42 @@
    "distance_km": 2684,
    "can_claim_domestic": false,
    "measured": false,
-   "note": "No domestic region. Nearest probe is Mumbai, IN, 2684 km away. Measures a foreign client's view, not a citizen's."
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
+   "note": "No domestic region. Nearest probe would be Mumbai, IN, 2684 km away. Not yet measured."
   },
   {
    "code": "ZM",
    "name": "Zambia",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 1263,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 1263 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 2,
+   "maturity": 51.4,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 1263 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "ZW",
    "name": "Zimbabwe",
-   "status": "nearest_available",
+   "status": "nearest_measured",
    "vantage_class": "nearest",
    "probe_region": "jnb",
    "probe_city": "Johannesburg",
    "probe_country": "ZA",
    "distance_km": 719,
    "can_claim_domestic": false,
-   "measured": false,
-   "note": "No domestic region. Nearest probe is Johannesburg, ZA, 719 km away. Measures a foreign client's view, not a citizen's."
+   "measured": true,
+   "domains": 10,
+   "reachable": 6,
+   "maturity": 42.8,
+   "note": "No domestic region. Measured from Johannesburg, ZA, 719 km away. Describes a foreign client's view, not a citizen's."
   },
   {
    "code": "AX",
@@ -3248,6 +3993,9 @@
    "distance_km": null,
    "can_claim_domestic": false,
    "measured": false,
+   "domains": 0,
+   "reachable": 0,
+   "maturity": null,
    "note": "No country centroid on record; cannot pick a nearest probe."
   }
  ],

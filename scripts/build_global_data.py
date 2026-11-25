@@ -19,18 +19,20 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
 import pandas as pd
+import pycountry
 
-CSV = REPO / "data" / "real" / "global_measurements.csv"
+from global_dataset import GLOBAL_CSV as CSV
+from global_dataset import read_global, reachable
+
 OUT = REPO / "dashboard" / "static" / "global.json"
 
-COUNTRY_NAMES = {
-    "IN": "India", "US": "United States", "GB": "United Kingdom",
-    "CA": "Canada", "AU": "Australia", "DE": "Germany", "FR": "France",
-    "JP": "Japan", "BR": "Brazil", "ZA": "South Africa", "SG": "Singapore",
-    "NL": "Netherlands", "ES": "Spain", "IT": "Italy", "SE": "Sweden",
-    "PL": "Poland", "KR": "South Korea", "MX": "Mexico", "CL": "Chile",
-    "IL": "Israel",
-}
+
+def country_name(code: str) -> str:
+    """ISO-3166 alpha-2 to a display name, falling back to the code."""
+    try:
+        return pycountry.countries.get(alpha_2=code).name
+    except AttributeError:
+        return code
 
 #: Sector classification by hostname marker. A domain is assigned to the first
 #: sector whose marker appears, so the order matters: health before education,
@@ -90,16 +92,16 @@ def main() -> int:
         print(f"no global measurements at {CSV}", file=sys.stderr)
         return 1
 
-    df = pd.read_csv(CSV)
-    live = df[df.is_reachable]
+    df = read_global(CSV)
+    live = reachable(df)
 
     countries = []
     for code, g in df.groupby("probe_country"):
-        gl = g[g.is_reachable]
+        gl = reachable(g)
         countries.append(
             {
                 "code": code,
-                "name": COUNTRY_NAMES.get(code, code),
+                "name": country_name(code),
                 "measured": True,
                 "domains": int(len(g)),
                 "reachable": int(len(gl)),
@@ -107,7 +109,7 @@ def main() -> int:
                 "accessibility": round(float(gl.sub_accessibility_score.mean()), 1) if len(gl) else None,
                 "security": round(float(gl.sub_security_headers_score.mean()), 1) if len(gl) else None,
                 "maturity": round(float(gl.observatory_maturity_score.mean()), 1) if len(gl) else None,
-                "median_ttfb_ms": int(gl.sub_response_latency_ms.median()) if len(gl) else None,
+                "median_ttfb_ms": round(float(gl.sub_response_latency_ms.median())) if len(gl) else None,
                 "multilingual_pct": round(float(gl.sub_is_multilingual.mean() * 100), 1) if len(gl) else None,
                 "mobile_pct": round(float(gl.sub_mobile_responsive.mean() * 100), 1) if len(gl) else None,
                 "probe_region": g.probe_region.iloc[0],
@@ -124,7 +126,7 @@ def main() -> int:
     df["sector"] = df["domain_name"].map(classify_sector)
     sectors = []
     for sector, g in df.groupby("sector"):
-        gl = g[g.is_reachable]
+        gl = reachable(g)
         sectors.append(
             {
                 "sector": sector,
@@ -134,7 +136,7 @@ def main() -> int:
                 "accessibility": round(float(gl.sub_accessibility_score.mean()), 1) if len(gl) else None,
                 "security": round(float(gl.sub_security_headers_score.mean()), 1) if len(gl) else None,
                 "maturity": round(float(gl.observatory_maturity_score.mean()), 1) if len(gl) else None,
-                "median_ttfb_ms": int(gl.sub_response_latency_ms.median()) if len(gl) else None,
+                "median_ttfb_ms": round(float(gl.sub_response_latency_ms.median())) if len(gl) else None,
             }
         )
     sectors.sort(key=lambda s: -s["domains"])
@@ -142,8 +144,8 @@ def main() -> int:
     # Domestic vs nearest comparison: the core finding of the vantage model.
     vantage = []
     for label, is_domestic in (("domestic", True), ("nearest", False)):
-        sub = df[df.domestic_probe == is_domestic]
-        sr = sub[sub.is_reachable]
+        sub = df[df.domestic_probe.fillna(False).astype(bool) == is_domestic]
+        sr = reachable(sub)
         if not len(sub):
             continue
         vantage.append(
@@ -155,7 +157,7 @@ def main() -> int:
                 "accessibility": round(float(sr.sub_accessibility_score.mean()), 1) if len(sr) else None,
                 "security": round(float(sr.sub_security_headers_score.mean()), 1) if len(sr) else None,
                 "maturity": round(float(sr.observatory_maturity_score.mean()), 1) if len(sr) else None,
-                "median_ttfb_ms": int(sr.sub_response_latency_ms.median()) if len(sr) else None,
+                "median_ttfb_ms": round(float(sr.sub_response_latency_ms.median())) if len(sr) else None,
             }
         )
 
@@ -163,8 +165,9 @@ def main() -> int:
         "generated_from": "data/real/global_measurements.csv",
         "vantage_comparison": vantage,
         "total_rows": int(len(df)),
+        "reachable_rows": int(len(live)),
         "countries_measured": len(countries),
-        "all_domestic": bool(df.domestic_probe.all()),
+        "all_domestic": bool(df.domestic_probe.fillna(False).astype(bool).all()),
         "overall_reach_pct": round(len(live) / len(df) * 100, 1),
         "countries": countries,
         "sectors": sectors,

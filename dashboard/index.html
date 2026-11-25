@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CivicWeb Observatory — Global Public Web Infrastructure Observatory</title>
-<meta name="description" content="A cross-country measurement of public-sector web infrastructure across 81 countries, using axe-core 4.x, real TLS handshakes, the OWASP Secure Headers directive set, and headless-Chromium mobile rendering.">
+<meta name="description" content="A cross-country measurement of public-sector web infrastructure, using axe-core 4.x, real TLS handshakes, the OWASP Secure Headers directive set, and headless-Chromium mobile rendering. Every row records the vantage point that produced it.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="static/app.css">
 <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
@@ -231,7 +231,7 @@
       <div class="section" style="border-top:0; padding-top:0">
         <div class="section__head">
           <h2 class="section__title">World coverage</h2>
-          <span class="section__note">249 countries &middot; 81 measured</span>
+          <span class="section__note" id="world-note">249 countries classified</span>
         </div>
         <p class="section__lede">
           Every country is classified by the vantage point that measured it. A
@@ -646,14 +646,14 @@ live = df[df[<span class="s">"is_reachable"</span>]]
           <li><span data-bind="total">&mdash;</span> domains</li>
           <li><span data-bind="reachable">&mdash;</span> reachable</li>
           <li><span data-bind="unreachable">&mdash;</span> offline</li>
-          <li>81 countries</li>
+          <li><span data-bind="countries">&mdash;</span> countries</li>
         </ul>
       </div>
       <div>
         <h3 class="colophon__h">Standards</h3>
         <ul class="colophon__list">
           <li>WCAG 2.1 AA</li>
-          <li>WCAG 2.1 AA</li>
+          <li>RFC 9309 robots</li>
           <li>OWASP Secure Headers</li>
           <li>Core Web Vitals</li>
         </ul>

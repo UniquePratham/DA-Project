@@ -1,122 +1,173 @@
 # CivicWeb Observatory — Data Dictionary
 
-This document details the exact schema, types, descriptions, and feature definitions for all published dataset releases (`.parquet` and `.csv`).
+The exact schema of the released dataset. Every column below exists in
+`data/real/global_measurements_canonical.csv` and in the bundled Parquet; nothing is
+described that is not shipped.
 
-> **Dataset Granularity**: **1 Row per Unique Government Website (Domain)**.
-> Multi-page metrics (Homepage, About, Contact, Services, Circulars) are represented as structured feature columns.
+> **Granularity:** one row per measured domain. A domain that did not answer
+> keeps its row, with `is_reachable = false`, a `measurement_reason`, and every
+> content metric `null`.
 
 ---
 
-## 1. Identity & Domain Hierarchy Structure
+## 1. Identity and response
 
-| Column Name | Type | Description | Example |
+| Column | Type | Description | Example |
 |---|---|---|---|
-| `domain_name` | String | Full canonical government hostname | `police.up.gov.in`, `varanasi.nic.in` |
-| `subdomain` | String | Extracted sub-domain prefix (`root` if top-level) | `police`, `varanasi`, `rodelhi`, `root` |
-| `root_domain` | String | Parent root domain for hierarchical clustering | `up.gov.in`, `nic.in`, `kvs.gov.in`, `aiims.edu` |
-| `tld_type` | String | Top-level domain type | `.gov.in`, `.nic.in`, `.ac.in`, `.edu.in`, `.res.in` |
-| `domain_depth`| Integer | Hierarchy depth ($0 = \text{apex}, 1 = \text{subdomain}, 2 = \text{nested}$) | `0`, `1`, `2` |
-| `base_url` | String | Root URL for the domain | `https://police.up.gov.in` |
-| `entity_name` | String | Official administrative entity name | `Police Department (UP)` |
-| `government_level` | String | Governance tier (`central`, `state_ut`, `district`, `autonomous_body`, `local_body`, `psu`) | `state_ut` |
-| `state_or_ut` | String | State or Union Territory | `Uttar Pradesh` |
-| `district` | String | District name (if applicable) | `Varanasi` |
-| `website_category` | String | AI-classified administrative function | `law_enforcement`, `district_administration`, `ministry` |
-| `architecture_type` | String | Web framework / CMS architecture | `wordpress`, `angular_spa`, `drupal`, `static_html` |
+| `domain_name` | string | The hostname that was measured | `gov.uk` |
+| `final_url` | string \| null | URL after redirects; null when nothing was served | `https://www.gov.uk/` |
+| `status_code` | int \| null | Final HTTP status; null on DNS or connection failure | `200` |
+| `is_reachable` | boolean | True when a page was served and scored | `true` |
+| `measurement_reason` | string | Why the row is unreachable, or the status text | `HTTP 404`, `DNS or connection failure`, `WAF challenge (HTTP 403)` |
+| `html_bytes` | int \| null | Size of the served document | `48213` |
+| `sha256` | string \| null | SHA-256 of the response body, so the evidence is reproducible | `9f2c…` |
 
 ---
 
-## 2. Overall Website Scores & Reliability
+## 2. Accessibility
 
-| Column Name | Type | Description | Range / Unit |
+| Column | Type | Description | Range |
 |---|---|---|---|
-| `overall_accessibility_score` | Float | Mean accessibility score across all audited pages | $0.0 - 100.0$ |
-| `overall_performance_score` | Float | Mean Lighthouse performance score across all audited pages | $0.0 - 100.0$ |
-| `total_pages_audited` | Integer | Number of distinct functional pages audited for this website | $1 - 5$ |
-| `is_reachable` | Boolean | True if domain returned successful HTTP response | `true` / `false` |
-| `http_status_code` | Integer | Root HTTP status code | $200, 403, 502, 504$ |
-| `response_latency_ms` | Float | Root response latency | Milliseconds ($\ge 0.0$) |
-| `primary_language` | String | ISO 639-1 language code | `hi`, `en`, `bn`, `ta`, `te` |
-| `is_multilingual` | Boolean | True if regional Indian script or language toggle detected | `true` / `false` |
+| `sub_accessibility_score` | float \| null | Severity-weighted axe-core index | 0–100 |
+| `sub_has_gigw_toolbar` | boolean \| null | Font-resize or contrast control detected | `true` / `false` |
+
+The index is $S_{\text{axe}} = \max(0, 100 - 12V_{\text{crit}} - 6V_{\text{ser}} - 3V_{\text{mod}} - 1V_{\text{min}})$,
+where $V$ is the count of axe-core violations at each impact level, restricted
+to the `wcag2a`, `wcag2aa`, `wcag21a` and `wcag21aa` rule tags. The weights are a
+convention, not a measurement.
 
 ---
 
-## 3. Security & Public Hygiene (Website Level)
+## 3. Performance
 
-| Column Name | Type | Description | Values / Range |
+| Column | Type | Description | Unit |
 |---|---|---|---|
-| `has_https` | Boolean | True if HTTPS is supported | `true` / `false` |
-| `tls_valid` | Boolean | True if TLS certificate is valid and unexpired | `true` / `false` |
-| `tls_version` | String | Negotiated TLS version | `TLSv1.3`, `TLSv1.2` |
-| `certificate_expiry_days`| Integer | Days remaining before SSL certificate expiry | Integer ($\ge 0$) |
-| `has_hsts` | Boolean | Strict-Transport-Security header present | `true` / `false` |
-| `has_csp` | Boolean | Content-Security-Policy header present | `true` / `false` |
-| `security_headers_score`| Float | Composite security headers score ($0 - 100$) | $0.0 - 100.0$ |
+| `sub_response_latency_ms` | float \| null | Wall-clock time to first byte, measured on the probe | ms |
+| `sub_lcp_est_sec` | float \| null | **Estimated** Largest Contentful Paint | seconds |
+
+$T_{\text{lcp}} = \max(0.60, 1.30 \cdot L_{\text{ttfb}}/1000 + S_{\text{kb}}/180.0)$.
+This is an estimate derived from TTFB and document size. A true LCP needs a
+browser paint trace, which was not run across the registry.
+
+A host that answered `HTTP 404` or a WAF challenge has a real latency but no
+content to score, so it keeps `sub_response_latency_ms` and leaves every content
+metric null.
 
 ---
 
-## 4. Aggregate Complexity & WCAG Violations
+## 4. Security
 
-| Column Name | Type | Description | Unit |
+| Column | Type | Description | Range |
 |---|---|---|---|
-| `total_wcag_violations` | Integer | Sum of automated axe-core violations across all audited pages | Count ($\ge 0$) |
-| `total_critical_violations`| Integer | Sum of Critical severity WCAG violations | Count ($\ge 0$) |
-| `total_serious_violations` | Integer | Sum of Serious severity WCAG violations | Count ($\ge 0$) |
-| `has_missing_alts` | Boolean | Missing image `alt` attributes found on any page | `true` / `false` |
-| `total_dom_nodes` | Integer | Total DOM elements counted across audited pages | Count |
-| `total_forms_count` | Integer | Total interactive HTML forms counted across audited pages | Count |
-| `total_pdf_circulars` | Integer | Total PDF download links counted across audited pages | Count |
+| `sub_https_enforced` | boolean \| null | Final URL served over TLS | `true` / `false` |
+| `sub_security_headers_score` | float \| null | OWASP Secure Headers directive score | 0–100 |
+
+$S_{\text{sec}} = 25 I_{\text{hsts}} + 30 I_{\text{csp}} + 15 I_{\text{xfo}} + 10 I_{\text{xcto}} + 10 I_{\text{ref}} + 10 I_{\text{perm}}$,
+read from the actual response headers.
 
 ---
 
-## 5. Page-Specific Feature Columns
+## 5. Inclusion
 
-### Homepage
-| Column Name | Type | Description |
+| Column | Type | Description |
 |---|---|---|
-| `homepage_url` | String | Canonical URL of the homepage |
-| `homepage_accessibility_score` | Float | WCAG compliance score of homepage ($0 - 100$) |
-| `homepage_lcp_ms` | Float | Largest Contentful Paint (LCP) of homepage |
-| `homepage_dom_nodes` | Integer | Total DOM nodes on homepage |
-
-### About Us Page
-| Column Name | Type | Description |
-|---|---|---|
-| `has_about_page` | Boolean | True if About Us / Leadership page was discovered |
-| `about_page_url` | String | Discovered About Us page URL |
-| `about_accessibility_score` | Float | WCAG compliance score of About Us page |
-
-### Contact Directory Page
-| Column Name | Type | Description |
-|---|---|---|
-| `has_contact_page` | Boolean | True if Contact / Directory page was discovered |
-| `contact_page_url` | String | Discovered Contact page URL |
-| `contact_accessibility_score` | Float | WCAG compliance score of Contact page |
-
-### Citizen Services & Forms Page
-| Column Name | Type | Description |
-|---|---|---|
-| `has_services_page` | Boolean | True if Citizen Services / Online Schemes page was discovered |
-| `services_page_url` | String | Discovered Citizen Services page URL |
-| `services_accessibility_score` | Float | WCAG compliance score of Citizen Services page |
-| `services_forms_count` | Integer | Number of interactive application forms on services page |
-
-### Gazette & Circulars Page
-| Column Name | Type | Description |
-|---|---|---|
-| `has_circulars_page` | Boolean | True if Gazette / Orders / Circulars repository page was discovered |
-| `circulars_page_url` | String | Discovered Circulars page URL |
-| `circulars_accessibility_score` | Float | WCAG compliance score of Circulars page |
-| `circulars_pdf_count` | Integer | Number of PDF documents on circulars page |
+| `sub_is_multilingual` | boolean \| null | Non-English `html[lang]`, `hreflang` alternates, or non-Latin script |
+| `sub_mobile_responsive` | boolean \| null | `width=device-width` and no horizontal overflow at 375 px |
 
 ---
 
-## 6. Provenance & Dataset Metadata
+## 6. Architecture and services
 
-| Column Name | Type | Description |
+| Column | Type | Description | Values |
+|---|---|---|---|
+| `sub_cms_architecture` | string \| null | Fingerprinted platform | `custom_dynamic_cms`, `wordpress`, `legacy_asp_net`, `modern_spa`, `drupal`, `s3waas_drupal` |
+| `sub_has_citizen_services` | boolean \| null | Search input or grievance affordance in the DOM | `true` / `false` |
+
+---
+
+## 7. Composite index
+
+| Column | Type | Description | Range |
+|---|---|---|---|
+| `observatory_maturity_score` | float \| null | Composite maturity | 0–100 |
+
+$$M = 0.30 S_{\text{axe}} + 0.25 S_{\text{sec}} + 0.20 \max(0, 100 - 15 T_{\text{lcp}}) + 10 I_{\text{multi}} + 5 I_{\text{mobile}} + 5 I_{\text{services}} + 5 \mathbb{I}(A_{\text{cms}} = \text{s3waas})$$
+
+The binary terms are worth absolute points, not percentages. The result is
+clamped to `[0, 100]` and is **not** floored — an earlier release applied a 45.0
+floor, which silently inflated the worst portals and made the index
+non-reproducible from its own inputs.
+
+---
+
+## 8. Provenance — read this before making a claim
+
+| Column | Type | Description |
 |---|---|---|
-| `domain_id` | String | Unique registry domain identifier (`dom-xxxx`) |
-| `crawl_id` | String | Crawl batch session ID |
-| `dataset_version` | String | Semantic release version (e.g., `2.0.0`) |
-| `observed_at` | Timestamp | Timestamp of crawl execution |
-| `is_validated` | Boolean | True if passed 100% schema & provenance validator checks |
+| `probe_country` | string | ISO-3166 alpha-2 of the country measured |
+| `probe_region` | string | Vultr region id that ran the probe, e.g. `blr`, `ams` |
+| `probe_region_country` | string | ISO-3166 alpha-2 of the region's country |
+| `domestic_probe` | boolean | **True only when `probe_region_country == probe_country`** |
+| `measured_at` | string | UTC timestamp, ISO 8601 |
+| `job_id` | string | The measurement job that produced the row |
+
+`domestic_probe` is the column that decides what a row can support:
+
+- `true` — the probe sat inside the country. The row describes what a citizen sees.
+- `false` — the probe sat in another country. The row describes what a foreign
+  client sees, and the latency includes the path.
+
+Any claim about citizen experience must filter on it:
+
+```python
+import civicweb_observatory as cwo
+citizen_view = cwo.load(domestic_only=True)   # 1,360 rows
+```
+
+---
+
+## 9. Outcome flags
+
+| Column | Type | Description |
+|---|---|---|
+| `blocked_by_waf` | boolean | A bot filter refused the request |
+| `robots_disallowed` | boolean \| null | robots.txt forbade the path (RFC 9309 matching) |
+
+Both are recorded as distinct outcomes, not as failures. In this release, 76
+domains were robots-disallowed and 46 were WAF-blocked.
+
+---
+
+## 10. Reading the CSV
+
+Namibia's ISO-3166 alpha-2 code is `NA`, which is also the default missing-value
+token in most CSV readers. A default `pandas.read_csv` silently drops all ten
+Namibian rows — one whole country, with no error raised.
+
+```python
+import pandas as pd
+
+df = pd.read_csv(
+    "data/real/global_measurements_canonical.csv",
+    keep_default_na=False,
+    na_values=[""],
+)
+```
+
+Or use `scripts/global_dataset.py`, which is the single reader for this file and
+returns nullable booleans so an unmeasured value stays distinguishable from
+`False`.
+
+---
+
+## 11. Null semantics
+
+| Value | Means |
+|---|---|
+| `null` in a score column | Not measured. The host did not serve a page, or the metric was not collected. |
+| `0.0` in a score column | Measured, and the score is genuinely zero. |
+| `false` in a boolean column | Measured, and the feature is absent. |
+| `null` in a boolean column | Not measured. |
+
+A zero is a measurement. A null is the absence of one. The two are never
+interchanged in this dataset.

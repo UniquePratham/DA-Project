@@ -124,6 +124,27 @@ def numeric_to_alpha2() -> dict[str, str]:
     return out
 
 
+def markers_for_missing(codes: set[str]) -> list[dict]:
+    """Point markers for countries the 110m topology does not draw.
+
+    Natural Earth 110m omits small states and city-states entirely: Singapore,
+    Hong Kong, Macau, Bahrain and Mauritius have no polygon at this scale. They
+    are still measured countries, so dropping them from the map would hide real
+    data. Each gets a small circle at its centroid instead.
+    """
+    from services.infrastructure.vantage import CENTROIDS
+
+    out = []
+    for code in sorted(codes):
+        centroid = CENTROIDS.get(code)
+        if not centroid:
+            continue
+        lat, lon = centroid
+        x, y = project(lon, lat)
+        out.append({"code": code, "x": round(x, 1), "y": round(y, 1)})
+    return out
+
+
 def main() -> int:
     topology = json.loads(TOPO.read_text(encoding="utf-8"))
     arcs = decode_arcs(topology)
@@ -167,12 +188,17 @@ def main() -> int:
 
     countries.sort(key=lambda c: c["code"])
 
+    drawn = {c["code"] for c in countries}
+    wanted = {c.alpha_2 for c in pycountry.countries}
+    markers = markers_for_missing(wanted - drawn)
+
     payload = {
         "width": WIDTH,
         "height": HEIGHT,
         "projection": "equirectangular",
         "source": "Natural Earth 110m via world-atlas (public domain)",
         "countries": countries,
+        "markers": markers,
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -183,6 +209,7 @@ def main() -> int:
 
     print(f"wrote {OUT} ({OUT.stat().st_size / 1024:.0f} KB)")
     print(f"  countries with geometry: {len(countries)}")
+    print(f"  centroid markers: {len(markers)}")
     return 0
 
 

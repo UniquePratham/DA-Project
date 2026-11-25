@@ -1,6 +1,31 @@
-# CivicWeb Observatory — Production VM Deployment & Setup Guide
+# CivicWeb Observatory — Deployment & Setup Guide
 
-This guide provides step-by-step instructions for deploying and running **CivicWeb Observatory** on your **Vultr VM (24 vCPU / 96 GB RAM / 1600 GB Storage)**.
+Two paths: the **static observatory** (what is live), and the **full self-hosted
+stack** (the original design, still runnable).
+
+The live site is a static bundle published to GitHub Pages by
+`.github/workflows/pages.yml` on every push to `main`. It needs no server.
+
+---
+
+## 0. Static observatory (what is live)
+
+```bash
+git clone https://github.com/UniquePratham/DA-Project.git
+cd DA-Project
+
+# Rebuild the data bundles the dashboard reads
+python scripts/build_global_data.py
+python scripts/build_world_coverage.py
+python scripts/build_world_map.py
+python scripts/build_dashboard_dataset.py
+
+# Open it — no server needed, the data is in JS globals
+start dashboard/index.html
+```
+
+Push to `main` and GitHub Pages publishes it. Live at
+<https://uniquepratham.github.io/>.
 
 ---
 
@@ -97,9 +122,43 @@ playwright install-deps chromium
 Verify that all modules, Safety Governor, auditors, and validator engines pass:
 
 ```bash
-pytest tests/ -v
+pytest tests/ -q
+PYTHONPATH=packages/civicweb-observatory/src pytest packages/civicweb-observatory/tests -q
 ```
-*(All 28 tests should pass).*
+*(86 repo tests plus 18 package tests should pass.)*
+
+---
+
+## 6a. The measurement path actually used
+
+The full stack above is the original self-hosted design. The released dataset
+was produced by a much smaller path: an ephemeral `vc2-1c-1gb` probe per country,
+destroyed after it uploads its results.
+
+```bash
+# One country, domestic probe
+VULTR_API_KEY=... python scripts/run_global_batch.py --countries NL
+
+# Many countries from the nearest available region
+VULTR_API_KEY=... python scripts/measure_nearest.py --per-country 10
+```
+
+No database, no object store, no local model. The worker writes a CSV, the
+results are SHA-256 verified, and the instance is destroyed. The whole 82-country
+run cost under a dollar.
+
+Rebuild the artefacts from the released CSV:
+
+```bash
+python scripts/build_global_data.py
+python scripts/build_world_coverage.py
+python scripts/build_world_map.py
+python scripts/build_dashboard_dataset.py
+python scripts/build_package_data.py
+python scripts/build_deck.py
+python scripts/render_paper.py
+python scripts/verify_paper_figures.py
+```
 
 ---
 

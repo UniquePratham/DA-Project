@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "civicweb-observatory"
-version = "1.0.0"
-description = "Cross-country measurement dataset and analysis toolkit for public-sector web infrastructure (14,489 India domains plus 19-country global sample)."
+version = "2.0.0"
+description = "Cross-country measurement of public-sector web infrastructure: 2,143 government domains across 82 countries, each row carrying the vantage point that produced it."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "CC-BY-4.0" }
@@ -19,8 +19,10 @@ keywords = [
   "digital-public-infrastructure",
   "web-accessibility",
   "wcag",
-  "gigw",
+  "owasp",
   "core-web-vitals",
+  "internet-measurement",
+  "vantage-point",
   "global",
   "cross-country",
   "open-data",
@@ -57,7 +59,7 @@ Documentation = "https://github.com/UniquePratham/DA-Project/blob/main/docs/DATA
 packages = ["src/civicweb_observatory"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"src/civicweb_observatory/data/civicweb_observatory_clean.parquet" = "civicweb_observatory/data/civicweb_observatory_clean.parquet"
+"src/civicweb_observatory/data/civicweb_observatory_global.parquet" = "civicweb_observatory/data/civicweb_observatory_global.parquet"
 
 [tool.hatch.build.targets.sdist]
 include = [
