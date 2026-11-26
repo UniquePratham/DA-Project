@@ -36,7 +36,9 @@ jobs:
           test -f _site/static/app.css
           test -f _site/static/app.js
           test -f _site/static/dataset.js
-          test -f _site/static/india_map.js
+          test -f _site/static/global.js
+          test -f _site/static/world.js
+          test -f _site/static/world_map.js
           du -sh _site
 
       - uses: actions/configure-pages@v5
